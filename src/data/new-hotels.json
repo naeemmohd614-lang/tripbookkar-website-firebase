@@ -3,10 +3,86 @@
   {
     "name": "The Ritz-Carlton Bangalore",
     "brand": "The Ritz-Carlton",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "99, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025",
+    "about": "The Ritz-Carlton, Bangalore, located in the heart of the city, offers luxurious accommodations, fine dining, and a tranquil spa. Experience legendary service in a sophisticated setting.",
+    "basePrice": 22000,
+    "rating": 4.8,
     "images": [
-      "1.jpg",
-      "lobby.png",
-      { "src": "https://example.com/pool.jpg", "caption": "Swimming Pool" }
-    ]
+      { "src": "https://picsum.photos/seed/ritz-bangalore-1/1080/720", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
+      { "src": "https://picsum.photos/seed/ritz-bangalore-2/1080/720", "caption": "Lobby area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 100, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "downtown"]
+  },
+  {
+    "name": "The Oberoi, New Delhi",
+    "brand": "Oberoi",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Dr. Zakir Hussain Marg, New Delhi, Delhi 110003",
+    "about": "A landmark hotel in the heart of the capital, The Oberoi, New Delhi offers breathtaking views of Delhi Golf Course and Humayun's Tomb. It's a perfect blend of tradition and contemporary sophistication.",
+    "basePrice": 25000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-delhi-1/1080/720", "caption": "The Oberoi New Delhi Exterior" },
+      { "src": "https://picsum.photos/seed/oberoi-delhi-2/1080/720", "caption": "Luxurious Hotel Lobby" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 220, "size": "550 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["iconic", "luxury", "new delhi"]
+  },
+  {
+    "name": "Taj Lake Palace, Udaipur",
+    "brand": "Taj",
+    "city": "Udaipur",
+    "state": "Rajasthan",
+    "address": "Pichola, Udaipur, Rajasthan 313001",
+    "about": "Appearing like a mirage in the middle of Lake Pichola, the Taj Lake Palace is one of the most romantic hotels in the world. This heritage hotel features majestic architecture and offers breathtaking views.",
+    "basePrice": 45000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-udaipur-1/1080/720", "caption": "Taj Lake Palace in Lake Pichola" },
+      { "src": "https://picsum.photos/seed/taj-udaipur-2/1080/720", "caption": "Royal Suite Interior" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 66, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "romantic", "lake view", "udaipur"]
+  },
+  {
+    "name": "Grand Hyatt Mumbai",
+    "brand": "Hyatt",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Bandra Kurla Complex Vicinity, Off Western Express Highway, Santacruz East, Mumbai, Maharashtra 400055",
+    "about": "A multi-dimensional lifestyle complex, Grand Hyatt Mumbai offers a modern and luxurious retreat in the heart of the city, with award-winning dining, an international shopping plaza, and expansive rooms.",
+    "basePrice": 16000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-mumbai-1/1080/720", "caption": "Grand Hyatt Mumbai exterior facade" },
+      { "src": "https://picsum.photos/seed/hyatt-mumbai-2/1080/720", "caption": "Spacious hotel lobby and lounge" }
+    ],
+    "roomCategories": [{ "name": "Grand King Room", "count": 547, "size": "430 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "mumbai", "luxury", "pet friendly"]
+  },
+  {
+    "name": "The Leela Palace Chennai",
+    "brand": "The Leela",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "Adyar Seaface, MRC Nagar, Chennai, Tamil Nadu 600028",
+    "about": "The Leela Palace Chennai is a modern palace hotel overlooking the Bay of Bengal. It offers luxurious guestrooms, a world-class spa, and a collection of fine dining restaurants.",
+    "basePrice": 14000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/leela-chennai-1/1080/720", "caption": "Sea view from the hotel" },
+      { "src": "https://picsum.photos/seed/leela-chennai-2/1080/720", "caption": "The grand lobby of The Leela Palace" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Sea View", "count": 326, "size": "540 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["sea view", "chennai", "luxury"]
   }
 ]
