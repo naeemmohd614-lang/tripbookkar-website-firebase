@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import SearchForm from "@/components/search-form";
 import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
-import { popularDestinations, featuredPackages, destinationsByMonth } from "@/lib/data";
+import { states, featuredPackages, destinationsByMonth } from "@/lib/data";
 
 export default function Home() {
   const heroImage = {
@@ -46,36 +46,35 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
-              Popular Destinations
+              Explore Our States
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
-              Explore hotels in these top-rated cities.
+              Discover hotels and experiences across India.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {popularDestinations.map((dest) => {
-              const destImage = {
-                  "src": `https://picsum.photos/seed/${dest.imageId}/1080/720`,
-                  "caption": `${dest.city} view`
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+            {states.map((state) => {
+              const stateImage = {
+                  "src": `https://picsum.photos/seed/${state.stateId}/400/300`,
+                  "caption": `landscape of ${state.name}`
               };
               return (
-                <Link href={`/search?q=${dest.city}`} key={dest.city}>
+                <Link href={`/states/${state.stateId}`} key={state.stateId}>
                   <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="p-0">
-                      <div className="relative h-64">
-                         {destImage && (
+                      <div className="relative h-40">
+                         {stateImage && (
                           <Image
-                            src={destImage.src}
-                            alt={`View of ${dest.city}`}
+                            src={stateImage.src}
+                            alt={`View of ${state.name}`}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            data-ai-hint={destImage.caption}
+                            data-ai-hint={stateImage.caption}
                           />
                         )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                        <div className="absolute bottom-0 left-0 p-4">
-                          <h3 className="font-bold text-xl text-white font-headline">{dest.city}</h3>
-                          <p className="text-sm text-gray-200">{dest.state}</p>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-3">
+                          <h3 className="font-bold text-lg text-white font-headline">{state.name}</h3>
                         </div>
                       </div>
                     </CardContent>
