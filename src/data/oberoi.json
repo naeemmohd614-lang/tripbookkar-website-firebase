@@ -13,7 +13,17 @@
       { "src": "https://picsum.photos/seed/oberoi-delhi-1/1080/720", "caption": "The Oberoi New Delhi Exterior" },
       { "src": "https://picsum.photos/seed/oberoi-delhi-2/1080/720", "caption": "Luxurious Hotel Lobby" }
     ],
-    "roomCategories": [{ "name": "Luxury Room", "count": 220, "size": "550 sqft" }],
+    "roomCategories": [
+      { "name": "Luxury Room", "count": 220, "size": "550 sqft" },
+      { "name": "Premier Suite", "count": 30, "size": "1100 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Threesixty°", "type": "Multi-Cuisine" },
+      { "name": "Omya", "type": "Indian Specialty" },
+      { "name": "Baoshuan", "type": "Chinese Rooftop" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Indoor and Outdoor Pools", "Cigar Lounge" ],
+    "weddingVenues": [ "The Ballroom", "Himalaya and Aravalli Rooms" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["iconic", "luxury", "new delhi"]
   }

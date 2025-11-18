@@ -14,9 +14,9 @@
       { "src": "https://picsum.photos/seed/ritz-bangalore-2/1080/720", "caption": "Lobby area" }
     ],
     "roomCategories": [
-      { "name": "Deluxe Rooms", "count": 200 },
-      { "name": "Executive Suites", "count": 50 },
-      { "name": "The Ritz-Carlton Suite", "count": 1 }
+      { "name": "Deluxe Rooms", "count": 200, "size": "450 sqft" },
+      { "name": "Executive Suites", "count": 50, "size": "800 sqft" },
+      { "name": "The Ritz-Carlton Suite", "count": 1, "size": "3000 sqft" }
     ],
     "diningExperiences": [
       { "name": "The Lantern", "type": "Chinese" },
@@ -52,7 +52,16 @@
       { "src": "https://picsum.photos/seed/jw-delhi-1/1080/720", "caption": "Hotel exterior at Aerocity" },
       { "src": "https://picsum.photos/seed/jw-delhi-2/1080/720", "caption": "Swimming pool area" }
     ],
-    "roomCategories": [{ "name": "Deluxe Room", "count": 250, "size": "452 sqft" }],
+    "roomCategories": [
+      { "name": "Deluxe Room", "count": 250, "size": "452 sqft" },
+      { "name": "Executive Club Level", "count": 100, "size": "452 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "K3", "type": "International Buffet" },
+      { "name": "Delhi Baking Company", "type": "Cafe & Bakery" }
+    ],
+    "experiencesAndActivities": [ "Quan Spa", "Fitness Center", "Outdoor Heated Pool" ],
+    "weddingVenues": [ "Grand Crystal Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "luxury", "new delhi"]
   },
@@ -69,7 +78,16 @@
       { "src": "https://picsum.photos/seed/marriott-goa-1/1080/720", "caption": "View of the resort from the bay" },
       { "src": "https://picsum.photos/seed/marriott-goa-2/1080/720", "caption": "Outdoor pool and garden" }
     ],
-    "roomCategories": [{ "name": "Garden View Room", "count": 180, "size": "388 sqft" }],
+    "roomCategories": [
+      { "name": "Garden View Room", "count": 180, "size": "388 sqft" },
+      { "name": "Bay View Room", "count": 90, "size": "388 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Waterfront Terrace & Bar", "type": "All-Day Dining" },
+      { "name": "Wan Hao", "type": "Chinese" }
+    ],
+    "experiencesAndActivities": [ "Casino Carnival", "Quan Spa", "Yoga Sessions" ],
+    "weddingVenues": [ "Grand Ballroom", "Lawn Venues" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach resort", "goa", "casino"]
   },
@@ -86,7 +104,16 @@
       { "src": "https://picsum.photos/seed/jw-mumbai-1/1080/720", "caption": "Hotel overlooking Juhu beach" },
       { "src": "https://picsum.photos/seed/jw-mumbai-2/1080/720", "caption": "Lotus pond at the hotel" }
     ],
-    "roomCategories": [{ "name": "Deluxe Sea View Room", "count": 200, "size": "431 sqft" }],
+    "roomCategories": [
+      { "name": "Deluxe Sea View Room", "count": 200, "size": "431 sqft" },
+      { "name": "Juhu Beach Suite", "count": 20, "size": "861 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Lotus Cafe", "type": "Multi-Cuisine" },
+      { "name": "Dashanzi", "type": "Asian" }
+    ],
+    "experiencesAndActivities": [ "Quan Spa", "Saltwater Pool", "Beach Access" ],
+    "weddingVenues": [ "Sagar Ocean-Facing Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["sea view", "luxury", "mumbai"]
   },
@@ -103,7 +130,16 @@
       { "src": "https://picsum.photos/seed/marriott-jaipur-1/1080/720", "caption": "Front facade of Jaipur Marriott" },
       { "src": "https://picsum.photos/seed/marriott-jaipur-2/1080/720", "caption": "Grand lobby interior" }
     ],
-    "roomCategories": [{ "name": "Deluxe Room", "count": 300, "size": "452 sqft" }],
+    "roomCategories": [
+      { "name": "Deluxe Room", "count": 300, "size": "452 sqft" },
+      { "name": "Terrace Suite", "count": 15, "size": "900 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Okra", "type": "All-Day Dining" },
+      { "name": "Saffron", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Quan Spa", "Rooftop Pool", "Cooking Classes" ],
+    "weddingVenues": [ "Amber Ballroom", "Outdoor Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["jaipur", "wedding hotel", "modern"]
   },
@@ -120,7 +156,16 @@
       { "src": "https://picsum.photos/seed/westin-pune-1/1080/720", "caption": "Hotel exterior and landscape" },
       { "src": "https://picsum.photos/seed/westin-pune-2/1080/720", "caption": "Rooftop lounge view" }
     ],
-    "roomCategories": [{ "name": "Premium Room", "count": 250, "size": "430 sqft" }],
+    "roomCategories": [
+      { "name": "Premium Room", "count": 250, "size": "430 sqft" },
+      { "name": "Club Suite", "count": 25, "size": "860 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "The Market", "type": "Asian" },
+      { "name": "House of Medici", "type": "Lounge & Nightclub" }
+    ],
+    "experiencesAndActivities": [ "Heavenly Spa by Westin", "WestinWORKOUT Fitness Studio", "Rooftop Pool" ],
+    "weddingVenues": [ "Grand Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "pune", "pet friendly"]
   }

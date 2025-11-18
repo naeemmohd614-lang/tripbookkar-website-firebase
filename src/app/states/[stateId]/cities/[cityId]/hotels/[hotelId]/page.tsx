@@ -6,7 +6,7 @@ import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Star, MapPin, Check, X, Sun, Moon, Utensils, Zap, GlassWater, Mic2, Dumbbell, Wifi, Waves, ParkingCircle, Dog } from 'lucide-react';
+import { Check, Dumbbell, Dog, GlassWater, MapPin, Mic2, ParkingCircle, Sun, Utensils, Waves, Wifi, Zap } from 'lucide-react';
 
 export default function HotelDetailPage() {
   const params = useParams();
@@ -35,7 +35,7 @@ export default function HotelDetailPage() {
             <Card className="overflow-hidden">
                 <CardHeader className="p-0">
                     <div className="relative h-64 md:h-96">
-                        {mainImage && mainImage.src && (
+                        {mainImage && (
                             <Image
                             src={mainImage.src}
                             alt={`Main image for ${hotel.name}`}
@@ -97,8 +97,9 @@ export default function HotelDetailPage() {
                                   <CardContent className="p-4 flex justify-between items-center">
                                       <div>
                                           <p className="font-semibold">{room.name}</p>
-                                          <p className="text-sm text-muted-foreground">{room.count} rooms</p>
+                                          <p className="text-sm text-muted-foreground">{room.count} rooms available</p>
                                       </div>
+                                       {room.size && <p className="text-sm font-semibold">{room.size}</p>}
                                   </CardContent>
                               </Card>
                           ))}

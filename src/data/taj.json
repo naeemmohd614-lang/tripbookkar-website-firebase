@@ -13,7 +13,16 @@
       { "src": "https://picsum.photos/seed/taj-udaipur-1/1080/720", "caption": "Taj Lake Palace in Lake Pichola" },
       { "src": "https://picsum.photos/seed/taj-udaipur-2/1080/720", "caption": "Royal Suite Interior" }
     ],
-    "roomCategories": [{ "name": "Palace Room", "count": 66, "size": "350 sqft" }],
+    "roomCategories": [
+      { "name": "Palace Room", "count": 66, "size": "350 sqft" },
+      { "name": "Royal Suite", "count": 10, "size": "700 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Neel Kamal", "type": "Indian" },
+      { "name": "Bhairo", "type": "Rooftop European" }
+    ],
+    "experiencesAndActivities": [ "Jiva Spa", "Heritage Walks", "Sunset Boat Cruise" ],
+    "weddingVenues": [ "Lily Pond Courtyard", "Mewar Terrace" ],
     "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "romantic", "lake view", "udaipur"]
   },
@@ -30,7 +39,16 @@
       { "src": "https://picsum.photos/seed/taj-mumbai-1/1080/720", "caption": "The Taj Mahal Palace hotel exterior" },
       { "src": "https://picsum.photos/seed/taj-mumbai-2/1080/720", "caption": "Grand staircase inside the hotel" }
     ],
-    "roomCategories": [{ "name": "Luxury Grande Room", "count": 285, "size": "500 sqft" }],
+    "roomCategories": [
+      { "name": "Luxury Grande Room", "count": 285, "size": "500 sqft" },
+      { "name": "Taj Club Room", "count": 100, "size": "550 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Wasabi by Morimoto", "type": "Japanese" },
+      { "name": "Golden Dragon", "type": "Sichuan Chinese" }
+    ],
+    "experiencesAndActivities": [ "Jiva Spa", "Art Gallery Tour", "Luxury Yacht Experience" ],
+    "weddingVenues": [ "The Ballroom", "Crystal Room" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["iconic", "sea view", "luxury", "mumbai"]
   },
@@ -47,7 +65,16 @@
       { "src": "https://picsum.photos/seed/taj-jaipur-1/1080/720", "caption": "Rambagh Palace exterior and gardens" },
       { "src": "https://picsum.photos/seed/taj-jaipur-2/1080/720", "caption": "Royal dining hall" }
     ],
-    "roomCategories": [{ "name": "Palace Room", "count": 78, "size": "475 sqft" }],
+    "roomCategories": [
+      { "name": "Palace Room", "count": 78, "size": "475 sqft" },
+      { "name": "Historical Suite", "count": 20, "size": "750 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Suvarna Mahal", "type": "Royal Indian" },
+      { "name": "Steam", "type": "Lounge Bar" }
+    ],
+    "experiencesAndActivities": [ "Jiva Grande Spa", "Vintage Car Ride", "Peacock Feeding" ],
+    "weddingVenues": [ "Jaigarh Hall", "Mubarak Mahal" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "palace", "luxury", "jaipur"]
   },
@@ -64,7 +91,16 @@
       { "src": "https://picsum.photos/seed/taj-hyderabad-1/1080/720", "caption": "Taj Falaknuma Palace exterior" },
       { "src": "https://picsum.photos/seed/taj-hyderabad-2/1080/720", "caption": "The grand 101-seater dining hall" }
     ],
-    "roomCategories": [{ "name": "Palace Room", "count": 60, "size": "550 sqft" }],
+    "roomCategories": [
+      { "name": "Palace Room", "count": 60, "size": "550 sqft" },
+      { "name": "Nizam Suite", "count": 1, "size": "1938 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Celeste", "type": "Italian & Mediterranean" },
+      { "name": "Adaa", "type": "Hyderabadi" }
+    ],
+    "experiencesAndActivities": [ "Jiva Spa", "Carriage Ride Arrival", "Palace History Tour" ],
+    "weddingVenues": [ "101 Dining Hall", "Durbar Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["palace", "heritage", "luxury", "hyderabad"]
   },
@@ -81,7 +117,16 @@
       { "src": "https://picsum.photos/seed/taj-goa-1/1080/720", "caption": "Aerial view of Taj Exotica Goa" },
       { "src": "https://picsum.photos/seed/taj-goa-2/1080/720", "caption": "Private pool villa" }
     ],
-    "roomCategories": [{ "name": "Garden Villa", "count": 140, "size": "612 sqft" }],
+    "roomCategories": [
+      { "name": "Garden Villa", "count": 140, "size": "612 sqft" },
+      { "name": "Sea View Villa", "count": 50, "size": "612 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "Miguel Arcanjo", "type": "Goan & Portuguese" },
+      { "name": "Lobster Shack", "type": "Seafood Grill" }
+    ],
+    "experiencesAndActivities": [ "Jiva Spa", "Golf Course", "Water Sports" ],
+    "weddingVenues": [ "Seaside Lawns", "Sala Grande Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach resort", "goa", "luxury", "family friendly"]
   }
