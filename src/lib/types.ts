@@ -119,3 +119,16 @@ export interface City {
     description: string;
     totalHotels: number;
 }
+
+export interface UserProfile {
+  name: string;
+  phone: string;
+  email: string;
+  city: string;
+  state: string;
+  wishlist: string[];
+  bookings: string[];
+  lastVisit: string;
+  createdAt: string;
+  updatedAt: string;
+}
