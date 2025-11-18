@@ -12,7 +12,7 @@ interface HotelCardProps {
 }
 
 export default function HotelCard({ hotel }: HotelCardProps) {
-  const hotelImage = PlaceHolderImages.find(p => p.id === hotel.images[0]);
+  const hotelImage = hotel.images[0];
 
   return (
     <Card className="overflow-hidden group w-full flex flex-col">
@@ -20,11 +20,11 @@ export default function HotelCard({ hotel }: HotelCardProps) {
         <div className="relative h-48">
           {hotelImage && (
             <Image
-              src={hotelImage.imageUrl}
+              src={hotelImage.src}
               alt={hotel.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
-              data-ai-hint={hotelImage.imageHint}
+              data-ai-hint={hotelImage.caption}
             />
           )}
         </div>
@@ -42,9 +42,9 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           {hotel.city}, {hotel.state}
         </CardDescription>
         <div className="mt-3 flex flex-wrap gap-2">
-          {hotel.facilities.slice(0, 3).map(facility => (
-            <Badge key={facility} variant="secondary">{facility}</Badge>
-          ))}
+            {hotel.facilities.pool && <Badge variant="secondary">Pool</Badge>}
+            {hotel.facilities.spa && <Badge variant="secondary">Spa</Badge>}
+            {hotel.facilities.gym && <Badge variant="secondary">Gym</Badge>}
         </div>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center bg-secondary/30">

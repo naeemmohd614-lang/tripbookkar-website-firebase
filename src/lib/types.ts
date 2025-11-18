@@ -6,11 +6,26 @@ export interface Hotel {
   state: string;
   city: string;
   address: string;
-  images: string[];
-  facilities: string[];
-  roomCategories: { name: string; size: string }[];
+  images: {
+    src: string;
+    thumb: string;
+    caption: string;
+    hash: string;
+  }[];
+  roomCategories: { name: string; size: string, count: number }[];
   priceBase: number;
   rating: number;
+  about: string;
+  facilities: {
+    pool: boolean;
+    spa: boolean;
+    gym: boolean;
+    wifi: boolean;
+    parking: boolean;
+    petFriendly: boolean;
+    checkIn: string;
+    checkOut: string;
+  };
 }
 
 export interface Package {

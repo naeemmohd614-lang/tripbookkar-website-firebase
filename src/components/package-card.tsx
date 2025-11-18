@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Calendar, Tag } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Package } from '@/lib/types';
 
 interface PackageCardProps {
@@ -11,7 +10,10 @@ interface PackageCardProps {
 }
 
 export default function PackageCard({ pkg }: PackageCardProps) {
-  const packageImage = PlaceHolderImages.find(p => p.id === pkg.images[0]);
+    const packageImage = {
+      "src": `https://picsum.photos/seed/${pkg.images[0]}/1080/720`,
+      "caption": `image for ${pkg.name}`
+    };
 
   return (
     <Card className="overflow-hidden group w-full flex flex-col hover:shadow-xl transition-shadow duration-300">
@@ -19,11 +21,11 @@ export default function PackageCard({ pkg }: PackageCardProps) {
         <div className="relative h-48">
           {packageImage && (
             <Image
-              src={packageImage.imageUrl}
+              src={packageImage.src}
               alt={pkg.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
-              data-ai-hint={packageImage.imageHint}
+              data-ai-hint={packageImage.caption}
             />
           )}
         </div>

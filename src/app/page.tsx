@@ -8,22 +8,24 @@ import SearchForm from "@/components/search-form";
 import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
 import { popularDestinations, featuredPackages } from "@/lib/data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === "hero");
+  const heroImage = {
+      "src": "https://images.unsplash.com/photo-1672841828271-54340a6fbcd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cm9waWNhbCUyMGJlYWNofGVufDB8fHx8MTc2MzM3MzAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "tropical beach"
+    };
 
   return (
     <div className="flex flex-col">
       <section className="relative w-full h-[60vh] md:h-[70vh] text-white">
         {heroImage && (
           <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
+            src={heroImage.src}
+            alt="A stunning view of a tropical beach with clear blue water and palm trees, representing a dream vacation."
             fill
             className="object-cover"
             priority
-            data-ai-hint={heroImage.imageHint}
+            data-ai-hint={heroImage.caption}
           />
         )}
         <div className="absolute inset-0 bg-black/50" />
@@ -52,7 +54,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {popularDestinations.map((dest) => {
-              const destImage = PlaceHolderImages.find(p => p.id === dest.imageId);
+              const destImage = {
+                  "src": `https://picsum.photos/seed/${dest.imageId}/1080/720`,
+                  "caption": `${dest.city} view`
+              };
               return (
                 <Link href={`/search?q=${dest.city}`} key={dest.city}>
                   <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
@@ -60,11 +65,11 @@ export default function Home() {
                       <div className="relative h-64">
                          {destImage && (
                           <Image
-                            src={destImage.imageUrl}
+                            src={destImage.src}
                             alt={`View of ${dest.city}`}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            data-ai-hint={destImage.imageHint}
+                            data-ai-hint={destImage.caption}
                           />
                         )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

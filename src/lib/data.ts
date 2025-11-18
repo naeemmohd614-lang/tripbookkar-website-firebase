@@ -8,14 +8,29 @@ export const hotels: Hotel[] = [
     state: 'Rajasthan',
     city: 'Jaipur',
     address: '123 Palace Road, Jaipur',
-    images: ['hotel-4'],
-    facilities: ['Pool', 'Spa', 'WiFi', 'Gym'],
+    images: [{
+      "src": "https://picsum.photos/seed/hotel-4/1080/720",
+      "thumb": "https://picsum.photos/seed/hotel-4/300/200",
+      "caption": "Hotel Exterior",
+      "hash": "hotel-4"
+    }],
     roomCategories: [
-      { name: 'Deluxe', size: '35 m2' },
-      { name: 'Suite', size: '60 m2' },
+      { name: 'Deluxe', size: '35 m2', count: 20 },
+      { name: 'Suite', size: '60 m2', count: 5 },
     ],
     priceBase: 8000,
     rating: 4.8,
+    facilities: {
+      pool: true,
+      spa: true,
+      wifi: true,
+      gym: true,
+      parking: true,
+      petFriendly: false,
+      checkIn: "14:00",
+      checkOut: "12:00"
+    },
+    about: "A luxurious palace hotel offering a glimpse into royal life.",
   },
   {
     id: '2',
@@ -24,14 +39,29 @@ export const hotels: Hotel[] = [
     state: 'Goa',
     city: 'Goa',
     address: '456 Beach Avenue, North Goa',
-    images: ['hotel-3'],
-    facilities: ['Pool', 'Beach Access', 'WiFi', 'Bar'],
+    images: [{
+      "src": "https://picsum.photos/seed/hotel-3/1080/720",
+      "thumb": "https://picsum.photos/seed/hotel-3/300/200",
+      "caption": "Beachfront view",
+      "hash": "hotel-3"
+    }],
     roomCategories: [
-        { name: 'Standard', size: '30 m2' },
-        { name: 'Sea View', size: '35 m2' },
+        { name: 'Standard', size: '30 m2', count: 50 },
+        { name: 'Sea View', size: '35 m2', count: 25 },
     ],
     priceBase: 5500,
     rating: 4.5,
+    facilities: {
+      pool: true,
+      spa: false,
+      wifi: true,
+      gym: false,
+      parking: true,
+      petFriendly: true,
+      checkIn: "15:00",
+      checkOut: "11:00"
+    },
+    about: "A beautiful resort right on the shores of the Arabian Sea."
   },
   {
     id: '3',
@@ -40,14 +70,29 @@ export const hotels: Hotel[] = [
     state: 'Maharashtra',
     city: 'Mumbai',
     address: '789 Business District, Mumbai',
-    images: ['hotel-2'],
-    facilities: ['WiFi', 'Gym', 'Conference Room'],
+    images: [{
+      "src": "https://picsum.photos/seed/hotel-2/1080/720",
+      "thumb": "https://picsum.photos/seed/hotel-2/300/200",
+      "caption": "Cityscape from room",
+      "hash": "hotel-2"
+    }],
     roomCategories: [
-        { name: 'Business', size: '32 m2' },
-        { name: 'Executive', size: '45 m2' },
+        { name: 'Business', size: '32 m2', count: 100 },
+        { name: 'Executive', size: '45 m2', count: 30 },
     ],
     priceBase: 7000,
     rating: 4.6,
+    facilities: {
+      pool: false,
+      spa: false,
+      wifi: true,
+      gym: true,
+      parking: true,
+      petFriendly: false,
+      checkIn: "14:00",
+      checkOut: "12:00"
+    },
+    about: "A contemporary hotel in the heart of Mumbai's bustling business hub."
   },
   {
     id: '4',
@@ -56,14 +101,29 @@ export const hotels: Hotel[] = [
     state: 'Kerala',
     city: 'Alleppey',
     address: '101 Backwater Point, Alleppey',
-    images: ['hotel-1'],
-    facilities: ['Pool', 'Spa', 'WiFi', 'Boating'],
+    images: [{
+      "src": "https://picsum.photos/seed/hotel-1/1080/720",
+      "thumb": "https://picsum.photos/seed/hotel-1/300/200",
+      "caption": "Backwater view from cottage",
+      "hash": "hotel-1"
+    }],
     roomCategories: [
-        { name: 'Cottage', size: '40 m2' },
-        { name: 'Villa', size: '70 m2' },
+        { name: 'Cottage', size: '40 m2', count: 15 },
+        { name: 'Villa', size: '70 m2', count: 5 },
     ],
     priceBase: 6500,
     rating: 4.7,
+    facilities: {
+      pool: true,
+      spa: true,
+      wifi: true,
+      gym: false,
+      parking: true,
+      petFriendly: false,
+      checkIn: "13:00",
+      checkOut: "11:00"
+    },
+    about: "Experience tranquility amidst the serene backwaters of Kerala."
   },
    {
     id: '5',
@@ -72,14 +132,29 @@ export const hotels: Hotel[] = [
     state: 'Rajasthan',
     city: 'Jaipur',
     address: '22 Old City, Jaipur',
-    images: ['hotel-5'],
-    facilities: ['WiFi', 'Restaurant', 'Cultural Shows'],
+    images: [{
+      "src": "https://picsum.photos/seed/hotel-5/1080/720",
+      "thumb": "https://picsum.photos/seed/hotel-5/300/200",
+      "caption": "Courtyard",
+      "hash": "hotel-5"
+    }],
     roomCategories: [
-        { name: 'Standard', size: '28 m2' },
-        { name: 'Heritage Suite', size: '50 m2' },
+        { name: 'Standard', size: '28 m2', count: 30 },
+        { name: 'Heritage Suite', size: '50 m2', count: 10 },
     ],
     priceBase: 4500,
     rating: 4.4,
+     facilities: {
+      pool: false,
+      spa: false,
+      wifi: true,
+      gym: false,
+      parking: true,
+      petFriendly: true,
+      checkIn: "12:00",
+      checkOut: "11:00"
+    },
+    about: "A charming inn that captures the essence of old Jaipur."
   },
   {
     id: '6',
@@ -88,14 +163,29 @@ export const hotels: Hotel[] = [
     state: 'Goa',
     city: 'Goa',
     address: '33 Serene Beach, South Goa',
-    images: ['hotel-6'],
-    facilities: ['Pool', 'Spa', 'Private Beach', 'Yoga Center'],
+    images: [{
+      "src": "https://picsum.photos/seed/hotel-6/1080/720",
+      "thumb": "https://picsum.photos/seed/hotel-6/300/200",
+      "caption": "Private beach access",
+      "hash": "hotel-6"
+    }],
     roomCategories: [
-        { name: 'Deluxe Villa', size: '80 m2' },
-        { name: 'Oceanfront Bungalow', size: '100 m2' },
+        { name: 'Deluxe Villa', size: '80 m2', count: 10 },
+        { name: 'Oceanfront Bungalow', size: '100 m2', count: 4 },
     ],
     priceBase: 9500,
     rating: 4.9,
+    facilities: {
+      pool: true,
+      spa: true,
+      wifi: true,
+      gym: true,
+      parking: true,
+      petFriendly: false,
+      checkIn: "15:00",
+      checkOut: "12:00"
+    },
+    about: "An exclusive resort for a peaceful and luxurious beach getaway."
   },
 ];
 
