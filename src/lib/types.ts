@@ -52,6 +52,10 @@ export interface Hotel {
     agoda: string;
     expedia: string;
     tripadvisor: string;
+    makemytrip: string;
+    redbus: string;
+    uber: string;
+    ola: string;
   };
   seo: {
     title: string;

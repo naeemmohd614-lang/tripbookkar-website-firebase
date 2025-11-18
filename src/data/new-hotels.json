@@ -38,10 +38,12 @@
     "roomCategories": [
       {
         "name": "Deluxe Room",
+        "count": 200,
         "size": "35 m²"
       },
       {
         "name": "Executive Suite",
+        "count": 50,
         "size": "60 m²"
       }
     ],
@@ -65,7 +67,11 @@
       "booking": "",
       "agoda": "",
       "expedia": "",
-      "tripadvisor": ""
+      "tripadvisor": "",
+      "makemytrip": "",
+      "redbus": "",
+      "uber": "",
+      "ola": ""
     },
     "seo": {
       "title": "The Ritz-Carlton, Bangalore - Best 5-Star Hotel in Bangalore",
