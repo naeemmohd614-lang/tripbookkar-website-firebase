@@ -18,7 +18,7 @@ export default function HotelDetailPage() {
     notFound();
   }
 
-  const mainImage = hotel.images[0];
+  const mainImage = hotel.images && hotel.images[0] && hotel.images[0].src ? hotel.images[0] : null;
 
   return (
     <div className="bg-secondary/30">
