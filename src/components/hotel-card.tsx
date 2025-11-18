@@ -54,10 +54,14 @@ export default function HotelCard({ hotel }: HotelCardProps) {
       <CardFooter className="p-4 flex justify-between items-center bg-secondary/30">
         <div>
           <p className="text-sm text-muted-foreground">Starting from</p>
-          <p className="font-bold text-lg text-brand-blue">
-            ₹{hotel.basePrice.toLocaleString()}
-            <span className="text-sm font-normal text-muted-foreground">/night</span>
-          </p>
+          {typeof hotel.basePrice === 'number' ? (
+            <p className="font-bold text-lg text-brand-blue">
+                ₹{hotel.basePrice.toLocaleString()}
+                <span className="text-sm font-normal text-muted-foreground">/night</span>
+            </p>
+          ) : (
+            <p className="font-bold text-lg text-brand-blue">Price not available</p>
+          )}
         </div>
         <Button asChild>
           <Link href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.hotelId}`}>View Details</Link>
