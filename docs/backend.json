@@ -281,6 +281,13 @@
     "providers": [
       "password",
       "anonymous"
+    ],
+    "customClaims": [
+      {
+        "name": "admin",
+        "type": "boolean",
+        "description": "Indicates whether the user has administrative privileges."
+      }
     ]
   },
   "firestore": {
@@ -382,22 +389,22 @@
         }
       },
       {
-        "path": "/admin_roles/{adminUid}",
+        "path": "/admin/{uid}",
         "definition": {
-          "entityName": "admin_role",
+          "entityName": "Admin",
           "schema": {
-            "$ref": "#/backend/entities/Lead"
+             "$ref": "#/backend/entities/Admin"
           },
-          "description": "Stores UIDs of admin users.",
+          "description": "Stores admin user information and roles. Access is restricted to users with an 'admin' custom claim.",
           "params": [
             {
-              "name": "adminUid",
-              "description": "UID of the admin user."
+              "name": "uid",
+              "description": "The user's unique ID."
             }
           ]
         }
       }
     ],
-    "reasoning": "This Firestore structure is designed to support the TripBookKar admin dashboard application. It prioritizes authorization independence, clarity, and scalability. All collections are designed with a homogeneous security posture in mind.\n\nAuthorization Independence:\n\n*   The structure avoids hierarchical authorization dependencies (`get()` calls in security rules) by storing all necessary authorization data directly within each document or using dedicated collections for global roles.\n*   Since this application is an Admin Dashboard, authorization is based on the authenticated user. In a production environment, an additional collection such as `/admin_roles/{uid}` should be created. The existence of a document for a given user in this collection determines admin status. The Firebase rules will then only check that such a document exists.\n\nQAPs (Rules are not Filters):\n\n*   The data is segregated into collections based on entity type (hotels, packages, etc.). This simplifies security rules, as each collection has a consistent access model. List operations are secured by ensuring that only authorized users (admins) can access the data.\n\n\nAdditional Considerations:\n\n*   The structure is designed to support the core features of the app: Hotel Data Storage, Package Management, Dynamic Pricing, Image Processing, Location Search, and SEO Page Generation.\n*   Timestamp fields (`createdAt`, `updatedAt`) can be used to track creation and modification times."
+    "reasoning": "This Firestore structure is designed to support the TripBookKar admin dashboard application. It prioritizes authorization independence, clarity, and scalability. All collections are designed with a homogeneous security posture in mind.\n\nAuthorization Independence:\n\n*   The structure uses custom claims for authorization, avoiding the need for `get()` calls in security rules.\n*   Admin status is determined by checking for `request.auth.token.admin == true`, which is set by a trusted server process.\n\nQAPs (Rules are not Filters):\n\n*   The data is segregated into collections based on entity type (hotels, packages, etc.). This simplifies security rules, as each collection has a consistent access model. List operations are secured by ensuring that only authorized users (admins) can access the data.\n\n\nAdditional Considerations:\n\n*   The structure is designed to support the core features of the app: Hotel Data Storage, Package Management, Dynamic Pricing, Image Processing, Location Search, and SEO Page Generation.\n*   Timestamp fields (`createdAt`, `updatedAt`) can be used to track creation and modification times."
   }
 }

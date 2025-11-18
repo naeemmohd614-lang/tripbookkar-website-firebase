@@ -3,17 +3,16 @@
  *
  * Core Philosophy:
  * This ruleset enforces a role-based access control model where only authenticated administrators
- * can read and write data. The `admin_roles` collection is used to determine admin status.
+ * with a custom claim `admin: true` can read and write data.
  *
  * Data Structure:
  * The Firestore database is organized into several top-level collections: `hotels`, `packages`,
- * `affiliates`, `pricingRules`, `seoPages`, `leads`, and `admin_roles`. Each collection stores
- * data related to its respective entity.
+ * `affiliates`, `pricingRules`, `seoPages`, `leads`, and `admin`.
  *
  * Key Security Decisions:
  * - **Admin-Only Access:** All read and write operations are restricted to authenticated admins.
  * - **No Public Listing:** List operations are secured to prevent unauthorized data access.
- * - **Data Denormalization for Authorization:** The `admin_roles` collection stores admin UIDs. The rules check for the existence of a document in this collection to grant admin privileges, avoiding `get()` calls on protected documents.
+ * - **Custom Claims for Authorization:** The rules check for `request.auth.token.admin == true` to grant admin privileges.
  */
 rules_version = '2';
 service cloud.firestore {
@@ -28,138 +27,87 @@ service cloud.firestore {
     }
 
     /**
-     * @description Checks if the user is an admin by verifying the existence of a document in the `admin_roles` collection.
+     * @description Checks if the user is an admin by verifying the `admin` custom claim.
      * @principle Role-Based Access Control: Only admins can modify data.
      */
     function isAdmin() {
-      return isSignedIn() && exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid));
-    }
-
-    /**
-     * @description Determines if the user is signed in AND the user's record exists in the admin_roles collection
-     * @principle Robustness for State-Changing Operations: Prevents accidental access on update or delete
-     */
-    function isExistingAdmin() {
-      return (isSignedIn() && resource != null) && exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid));
+      return isSignedIn() && request.auth.token.admin == true;
     }
 
     /**
      * @description Rules for the /hotels collection.
      * @path /hotels/{hotelId}
-     * @allow (create) If the user is an admin, they can create a hotel.
-     * @deny (create) If the user is not an admin, they cannot create a hotel.
-     * @allow (get) If the user is an admin, they can get a hotel.
-     * @deny (get) If the user is not an admin, they cannot get a hotel.
+     * @allow (read, write) If the user is an admin.
+     * @deny (read, write) If the user is not an admin.
      * @principle Admin-Only Access: Only admins can manage hotel data.
      */
     match /hotels/{hotelId} {
-      allow create: if isAdmin();
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow update: if isExistingAdmin();
-      allow delete: if isExistingAdmin();
+      allow read, write: if isAdmin();
     }
 
     /**
      * @description Rules for the /packages collection.
      * @path /packages/{packageId}
-     * @allow (create) If the user is an admin, they can create a package.
-     * @deny (create) If the user is not an admin, they cannot create a package.
-     * @allow (get) If the user is an admin, they can get a package.
-     * @deny (get) If the user is not an admin, they cannot get a package.
+     * @allow (read, write) If the user is an admin.
+     * @deny (read, write) If the user is not an admin.
      * @principle Admin-Only Access: Only admins can manage package data.
      */
     match /packages/{packageId} {
-      allow create: if isAdmin();
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow update: if isExistingAdmin();
-      allow delete: if isExistingAdmin();
+      allow read, write: if isAdmin();
     }
 
     /**
      * @description Rules for the /affiliates collection.
      * @path /affiliates/{affiliateId}
-     * @allow (create) If the user is an admin, they can create an affiliate.
-     * @deny (create) If the user is not an admin, they cannot create an affiliate.
-     * @allow (get) If the user is an admin, they can get an affiliate.
-     * @deny (get) If the user is not an admin, they cannot get an affiliate.
+     * @allow (read, write) If the user is an admin.
+     * @deny (read, write) If the user is not an admin.
      * @principle Admin-Only Access: Only admins can manage affiliate data.
      */
     match /affiliates/{affiliateId} {
-      allow create: if isAdmin();
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow update: if isExistingAdmin();
-      allow delete: if isExistingAdmin();
+      allow read, write: if isAdmin();
     }
 
     /**
      * @description Rules for the /pricingRules collection.
      * @path /pricingRules/{pricingRuleId}
-     * @allow (create) If the user is an admin, they can create a pricing rule.
-     * @deny (create) If the user is not an admin, they cannot create a pricing rule.
-     * @allow (get) If the user is an admin, they can get a pricing rule.
-     * @deny (get) If the user is not an admin, they cannot get a pricing rule.
+     * @allow (read, write) If the user is an admin.
+     * @deny (read, write) If the user is not an admin.
      * @principle Admin-Only Access: Only admins can manage pricing rule data.
      */
     match /pricingRules/{pricingRuleId} {
-      allow create: if isAdmin();
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow update: if isExistingAdmin();
-      allow delete: if isExistingAdmin();
+      allow read, write: if isAdmin();
     }
 
     /**
      * @description Rules for the /seoPages collection.
      * @path /seoPages/{seoPageId}
-     * @allow (create) If the user is an admin, they can create an SEO page.
-     * @deny (create) If the user is not an admin, they cannot create an SEO page.
-     * @allow (get) If the user is an admin, they can get an SEO page.
-     * @deny (get) If the user is not an admin, they cannot get an SEO page.
+     * @allow (read, write) If the user is an admin.
+     * @deny (read, write) If the user is not an admin.
      * @principle Admin-Only Access: Only admins can manage SEO page data.
      */
     match /seoPages/{seoPageId} {
-      allow create: if isAdmin();
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow update: if isExistingAdmin();
-      allow delete: if isExistingAdmin();
+      allow read, write: if isAdmin();
     }
 
     /**
      * @description Rules for the /leads collection.
      * @path /leads/{leadId}
-     * @allow (create) If the user is an admin, they can create a lead.
-     * @deny (create) If the user is not an admin, they cannot create a lead.
-     * @allow (get) If the user is an admin, they can get a lead.
-     * @deny (get) If the user is not an admin, they cannot get a lead.
+     * @allow (read, write) If the user is an admin.
+     * @deny (read, write) If the user is not an admin.
      * @principle Admin-Only Access: Only admins can manage lead data.
      */
     match /leads/{leadId} {
-      allow create: if isAdmin();
-      allow get: if isAdmin();
-      allow list: if isAdmin();
-      allow update: if isExistingAdmin();
-      allow delete: if isExistingAdmin();
+      allow read, write: if isAdmin();
     }
-
+    
     /**
-     * @description Rules for the /admin_roles collection.
-     * @path /admin_roles/{adminUid}
-     * @allow create: if isSignedIn() && request.auth.uid == adminUid;
-     * @allow get: if isSignedIn() && request.auth.uid == adminUid;
-     * @allow list: if false;
-     * @allow update: if false;
-     * @allow delete: if false;
+     * @description Rules for the /admin collection.
+     * @path /admin/{uid}
+     * @allow (read, write) If the user is an admin.
+     * @deny (read, write) If the user is not an admin.
      */
-    match /admin_roles/{adminUid} {
-      allow create: if isSignedIn() && request.auth.uid == adminUid;
-      allow get: if isSignedIn() && request.auth.uid == adminUid;
-      allow list: if false;
-      allow update: if false;
-      allow delete: if false;
+    match /admin/{uid} {
+      allow read, write: if request.auth.token.admin == true;
     }
   }
 }
