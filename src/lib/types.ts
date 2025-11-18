@@ -2,13 +2,16 @@
 
 
 
+
 export interface Hotel {
   hotelId: string;
   name: string;
   brand: string;
   brandSlug: string;
   state: string;
+  stateId: string;
   city: string;
+  cityId: string;
   location: {
     lat: number;
     lng: number;
@@ -29,7 +32,6 @@ export interface Hotel {
   }[];
   roomCategories: {
     name: string;
-    count: number;
     size: string;
   }[];
   facilities: {

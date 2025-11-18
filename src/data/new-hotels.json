@@ -6,7 +6,9 @@
     "brand": "The Ritz-Carlton",
     "brandSlug": "the-ritz-carlton",
     "state": "Karnataka",
+    "stateId": "karnataka",
     "city": "Bengaluru",
+    "cityId": "bengaluru",
     "location": {
       "lat": 12.9716,
       "lng": 77.5946
@@ -36,12 +38,10 @@
     "roomCategories": [
       {
         "name": "Deluxe Room",
-        "count": 200,
         "size": "35 m²"
       },
       {
         "name": "Executive Suite",
-        "count": 50,
         "size": "60 m²"
       }
     ],
