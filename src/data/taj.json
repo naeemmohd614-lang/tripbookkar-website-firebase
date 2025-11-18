@@ -16,5 +16,73 @@
     "roomCategories": [{ "name": "Palace Room", "count": 66, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "romantic", "lake view", "udaipur"]
+  },
+  {
+    "name": "The Taj Mahal Palace, Mumbai",
+    "brand": "Taj",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Apollo Bandar, Colaba, Mumbai, Maharashtra 400001",
+    "about": "The iconic sea-facing landmark in Colaba, south Mumbai. It is the city's first harbour landmark and a world leader in hospitality.",
+    "basePrice": 28000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-mumbai-1/1080/720", "caption": "The Taj Mahal Palace hotel exterior" },
+      { "src": "https://picsum.photos/seed/taj-mumbai-2/1080/720", "caption": "Grand staircase inside the hotel" }
+    ],
+    "roomCategories": [{ "name": "Luxury Grande Room", "count": 285, "size": "500 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["iconic", "sea view", "luxury", "mumbai"]
+  },
+  {
+    "name": "Rambagh Palace, Jaipur",
+    "brand": "Taj",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "Bhawani Singh Rd, Rambagh, Jaipur, Rajasthan 302005",
+    "about": "Originally built in 1835, Rambagh Palace has stepped gracefully through many royal transitions. Today, it's a jewel in the Taj's crown, offering a glimpse into the lifestyle of Jaipur's royalty.",
+    "basePrice": 40000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-jaipur-1/1080/720", "caption": "Rambagh Palace exterior and gardens" },
+      { "src": "https://picsum.photos/seed/taj-jaipur-2/1080/720", "caption": "Royal dining hall" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 78, "size": "475 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "palace", "luxury", "jaipur"]
+  },
+  {
+    "name": "Taj Falaknuma Palace, Hyderabad",
+    "brand": "Taj",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "address": "Engine Bowli, Falaknuma, Hyderabad, Telangana 500053",
+    "about": "Perched 2,000 feet above Hyderabad, Taj Falaknuma Palace is the former palace of the Nizam, rumored to be the richest man in the world at one time. Experience the Nizams' hospitality and grandeur.",
+    "basePrice": 42000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-hyderabad-1/1080/720", "caption": "Taj Falaknuma Palace exterior" },
+      { "src": "https://picsum.photos/seed/taj-hyderabad-2/1080/720", "caption": "The grand 101-seater dining hall" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 60, "size": "550 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["palace", "heritage", "luxury", "hyderabad"]
+  },
+  {
+    "name": "Taj Exotica Resort & Spa, Goa",
+    "brand": "Taj",
+    "city": "Benaulim",
+    "state": "Goa",
+    "address": "Calwaddo, Benaulim, Salcete, Goa 403716",
+    "about": "A Mediterranean-inspired resort sprawling over 56 acres of lush greenery, offering a serene refuge of calm and luxury. It is located on the southwest coast of Goa, overlooking the Arabian Sea.",
+    "basePrice": 20000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-goa-1/1080/720", "caption": "Aerial view of Taj Exotica Goa" },
+      { "src": "https://picsum.photos/seed/taj-goa-2/1080/720", "caption": "Private pool villa" }
+    ],
+    "roomCategories": [{ "name": "Garden Villa", "count": 140, "size": "612 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beach resort", "goa", "luxury", "family friendly"]
   }
 ]
