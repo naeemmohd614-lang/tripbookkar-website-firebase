@@ -1,6 +1,4 @@
 
-
-
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -18,9 +16,7 @@ export interface Hotel {
   pincode: string;
   about: string;
   distance: {
-    airport: string;
-    railway: string;
-    bus: string;
+    [key: string]: string;
   };
   images: {
     src: string;
@@ -31,7 +27,7 @@ export interface Hotel {
   roomCategories: {
     name: string;
     count: number;
-    size: string;
+    size?: string;
   }[];
   facilities: {
     pool: boolean;
@@ -43,6 +39,9 @@ export interface Hotel {
     checkIn: string;
     checkOut: string;
   };
+  diningExperiences?: { name: string; type: string }[];
+  experiencesAndActivities?: string[];
+  weddingVenues?: string[];
   diningCount: number;
   banquetCount: number;
   basePrice: number;

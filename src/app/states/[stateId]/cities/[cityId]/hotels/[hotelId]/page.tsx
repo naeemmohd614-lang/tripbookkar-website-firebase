@@ -6,7 +6,7 @@ import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Star, MapPin, Check, X, Sun, Moon } from 'lucide-react';
+import { Star, MapPin, Check, X, Sun, Moon, Utensils, Zap, GlassWater, Mic2 } from 'lucide-react';
 
 export default function HotelDetailPage() {
   const params = useParams();
@@ -53,32 +53,78 @@ export default function HotelDetailPage() {
 
                     <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mb-4">About this hotel</h2>
                     <p className="text-foreground/80 leading-relaxed">{hotel.about}</p>
-
-                    <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mt-8 mb-4">Facilities</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Wi-Fi</div>
-                        <div className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Pool</div>
-                        <div className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Spa</div>
-                        <div className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Gym</div>
-                        <div className="flex items-center gap-2"><Check className="w-5 h-5 text-green-500" /> Parking</div>
-                        <div className="flex items-center gap-2"><X className="w-5 h-5 text-red-500" /> Pet Friendly</div>
-                    </div>
-
-                    <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mt-8 mb-4">Room Categories</h2>
-                    <div className="space-y-4">
-                        {hotel.roomCategories && hotel.roomCategories.map(room => (
-                            <Card key={room.name} className="bg-secondary/50">
-                                <CardContent className="p-4 flex justify-between items-center">
-                                    <div>
-                                        <p className="font-semibold">{room.name}</p>
-                                        <p className="text-sm text-muted-foreground">{room.count} rooms available</p>
-                                    </div>
-                                    <p className="text-sm font-medium bg-background px-3 py-1 rounded-full">{room.size}</p>
-                                </CardContent>
-                            </Card>
+                    
+                    {hotel.distance && Object.keys(hotel.distance).length > 0 &&
+                      <div className="mt-4 text-sm text-muted-foreground">
+                        {Object.entries(hotel.distance).map(([key, value]) => (
+                          <p key={key}><strong>{value}</strong> from {key}</p>
                         ))}
-                    </div>
+                      </div>
+                    }
 
+
+                    {hotel.roomCategories && hotel.roomCategories.length > 0 && (
+                      <div className="mt-8">
+                        <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mb-4 flex items-center gap-2"><GlassWater />Room Categories</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {hotel.roomCategories.map(room => (
+                              <Card key={room.name} className="bg-secondary/50">
+                                  <CardContent className="p-4 flex justify-between items-center">
+                                      <div>
+                                          <p className="font-semibold">{room.name}</p>
+                                          <p className="text-sm text-muted-foreground">{room.count} rooms</p>
+                                      </div>
+                                  </CardContent>
+                              </Card>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {hotel.diningExperiences && hotel.diningExperiences.length > 0 && (
+                      <div className="mt-8">
+                        <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mb-4 flex items-center gap-2"><Utensils />Dining Experiences</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {hotel.diningExperiences.map(dining => (
+                                <div key={dining.name} className="flex items-start gap-3">
+                                  <Check className="w-5 h-5 text-green-500 mt-1 shrink-0" />
+                                  <div>
+                                    <p className="font-semibold">{dining.name}</p>
+                                    <p className="text-sm text-muted-foreground">{dining.type}</p>
+                                  </div>
+                                </div>
+                            ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {hotel.experiencesAndActivities && hotel.experiencesAndActivities.length > 0 && (
+                      <div className="mt-8">
+                        <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mb-4 flex items-center gap-2"><Zap />Experiences & Activities</h2>
+                        <ul className="space-y-2">
+                          {hotel.experiencesAndActivities.map(activity => (
+                              <li key={activity} className="flex items-center gap-3">
+                                <Check className="w-5 h-5 text-green-500" />
+                                <span>{activity}</span>
+                              </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {hotel.weddingVenues && hotel.weddingVenues.length > 0 && (
+                      <div className="mt-8">
+                        <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mb-4 flex items-center gap-2"><Mic2 />Wedding Venues</h2>
+                        <ul className="space-y-2">
+                          {hotel.weddingVenues.map(venue => (
+                              <li key={venue} className="flex items-center gap-3">
+                                <Check className="w-5 h-5 text-green-500" />
+                                <span>{venue}</span>
+                              </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                 </CardContent>
             </Card>
           </div>

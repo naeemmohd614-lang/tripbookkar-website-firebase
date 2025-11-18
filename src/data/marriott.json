@@ -1,19 +1,41 @@
 
 [
   {
-    "name": "The Ritz-Carlton Bangalore",
+    "name": "The Ritz-Carlton, Bangalore",
     "brand": "The Ritz-Carlton",
     "city": "Bengaluru",
     "state": "Karnataka",
     "address": "99, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025",
-    "about": "The Ritz-Carlton, Bangalore, located in the heart of the city, offers luxurious accommodations, fine dining, and a tranquil spa. Experience legendary service in a sophisticated setting.",
+    "about": "Experience unparalleled luxury with sophisticated interiors, a serene spa, and award-winning dining in the heart of the city.",
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
       { "src": "https://picsum.photos/seed/ritz-bangalore-1/1080/720", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
       { "src": "https://picsum.photos/seed/ritz-bangalore-2/1080/720", "caption": "Lobby area" }
     ],
-    "roomCategories": [{ "name": "Deluxe Room", "count": 100, "size": "450 sqft" }],
+    "roomCategories": [
+      { "name": "Deluxe Rooms", "count": 200 },
+      { "name": "Executive Suites", "count": 50 },
+      { "name": "The Ritz-Carlton Suite", "count": 1 }
+    ],
+    "diningExperiences": [
+      { "name": "The Lantern", "type": "Chinese" },
+      { "name": "Riwaz", "type": "North Indian" },
+      { "name": "The Market", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [
+      "The Ritz-Carlton Spa",
+      "Rooftop Pool",
+      "State-of-the-art Fitness Center"
+    ],
+    "weddingVenues": [
+      "Grand Ballroom",
+      "Multiple boardrooms",
+      "Outdoor event spaces"
+    ],
+    "distance": {
+      "Kempegowda International Airport": "35 km"
+    },
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "downtown"]
   },
