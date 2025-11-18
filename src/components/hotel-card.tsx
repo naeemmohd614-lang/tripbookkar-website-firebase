@@ -46,7 +46,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           {hotel.city}, {hotel.state}
         </CardDescription>
         <div className="mt-3 flex flex-wrap gap-2">
-            {hotel.tags.slice(0, 3).map(tag => (
+            {hotel.tags && hotel.tags.slice(0, 3).map(tag => (
                 <Badge key={tag} variant="outline" className="font-normal">{tag}</Badge>
             ))}
         </div>
