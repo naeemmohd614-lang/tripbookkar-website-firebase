@@ -27,7 +27,7 @@ export default function StatePage() {
   const stateHotels = (hotels as Hotel[]).filter(hotel => hotel.stateId === stateId);
   const stateImage = {
       "src": `https://picsum.photos/seed/${state.stateId}/1280/300`,
-      "caption": `image of ${state.name}`
+      "caption": `landscape ${state.name}`
   };
 
   const rajasthanHighlights = [
@@ -38,11 +38,12 @@ export default function StatePage() {
 
   const rajasthanCities = ['Jaipur', 'Jodhpur', 'Udaipur', 'Jaisalmer'].map(cityName => {
     const city = (allCities as City[]).find(c => c.name === cityName);
+    const citySlug = slugify(cityName);
     return {
       name: cityName,
-      slug: slugify(cityName),
-      image: `https://picsum.photos/seed/city-${slugify(cityName)}/400/500`,
-      caption: `A view of ${cityName}`
+      slug: citySlug,
+      image: `https://picsum.photos/seed/city-${citySlug}/400/500`,
+      caption: `${cityName} city`
     };
   });
   
@@ -51,21 +52,21 @@ export default function StatePage() {
       name: 'Amer Fort', 
       location: 'Jaipur',
       image: 'https://picsum.photos/seed/amer-fort/600/400',
-      caption: 'Amer Fort Jaipur',
+      caption: 'amer fort',
       description: "Perched on a hilltop overlooking Maota Lake, Amer Fort is a stunning example of Rajput architecture. Explore its intricate network of courtyards, palaces, and halls, including the breathtaking Sheesh Mahal (Mirror Palace)."
     },
     { 
       name: 'Mehrangarh Fort', 
       location: 'Jodhpur',
       image: 'https://picsum.photos/seed/mehrangarh-fort/600/400',
-      caption: 'Mehrangarh Fort Jodhpur',
+      caption: 'mehrangarh fort',
       description: "One of India's largest and most magnificent forts, Mehrangarh Fort rises from a rocky hill 125m above Jodhpur's skyline. Its thick, imposing walls enclose a complex of beautiful palaces, courtyards, and a museum."
     },
     { 
       name: 'City Palace', 
       location: 'Udaipur',
       image: 'https://picsum.photos/seed/city-palace-udaipur/600/400',
-      caption: 'City Palace Udaipur',
+      caption: 'udaipur palace',
       description: "A majestic palace-complex on the banks of Lake Pichola, the City Palace is a fusion of Rajasthani and Mughal architecture. It houses a museum showcasing royal artifacts and offers breathtaking views of the lake and city."
     },
   ];
