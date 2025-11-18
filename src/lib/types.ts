@@ -1,8 +1,4 @@
 
-
-
-
-
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -32,6 +28,7 @@ export interface Hotel {
   }[];
   roomCategories: {
     name: string;
+    count: number;
     size: string;
   }[];
   facilities: {
@@ -72,10 +69,24 @@ export interface Package {
   name: string;
   days: number;
   nights: number;
+  state: string[];
+  city: string[];
   price: number;
-  itinerary: { day: number; description: string }[];
+  dynamicPrice: number;
+  itinerary: {
+    day: number;
+    title: string;
+    description: string;
+  }[];
   images: string[];
-  description: string;
+  tags: string[];
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+  };
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface Destination {

@@ -1,1 +1,54 @@
-[]
+
+[
+  {
+    "id": "kerala-honeymoon-5n-6d",
+    "name": "Kerala Honeymoon Package 5 Nights 6 Days",
+    "days": 6,
+    "nights": 5,
+    "state": ["Kerala"],
+    "city": ["Munnar", "Alleppey", "Kochi"],
+    "price": 25000,
+    "dynamicPrice": 29000,
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Kochi & Transfer to Munnar",
+        "description": "Upon arrival at Cochin airport or railway station, you will be greeted by our representative and transferred to the picturesque hill station of Munnar. Check into your hotel and spend the rest of the day at leisure. Overnight stay in Munnar."
+      },
+      {
+        "day": 2,
+        "title": "Munnar Sightseeing",
+        "description": "After breakfast, proceed for a full day of sightseeing in Munnar. Visit Mattupetty Dam, Echo Point, Kundala Lake, and the Tea Museum. Enjoy the lush green tea plantations and misty mountains. Return to the hotel for an overnight stay."
+      },
+      {
+        "day": 3,
+        "title": "Munnar to Thekkady",
+        "description": "After breakfast, check out from the hotel and drive to Thekkady, home to the Periyar National Park. Check into your hotel and later, go for a spice plantation tour to see various species of spices. In the evening, you can opt for a boat ride on Periyar Lake to spot wildlife. Overnight stay in Thekkady."
+      },
+      {
+        "day": 4,
+        "title": "Thekkady to Alleppey (Houseboat)",
+        "description": "After breakfast, drive to Alleppey, the 'Venice of the East'. Check into a traditional Kerala houseboat and enjoy a cruise through the serene backwaters. All meals will be served on board. Overnight stay on the houseboat."
+      },
+      {
+        "day": 5,
+        "title": "Alleppey to Kochi",
+        "description": "After breakfast on the houseboat, disembark and drive to Kochi. Check into your hotel and proceed for a half-day city tour of Fort Kochi, visiting the Chinese Fishing Nets, St. Francis Church, and the Dutch Palace. In the evening, you can enjoy a Kathakali dance performance. Overnight stay in Kochi."
+      },
+      {
+        "day": 6,
+        "title": "Departure from Kochi",
+        "description": "After breakfast, check out from the hotel and you will be transferred to Cochin airport or railway station for your onward journey, with sweet memories of your Kerala honeymoon."
+      }
+    ],
+    "images": ["kerala-honeymoon-package"],
+    "tags": ["honeymoon", "romantic", "kerala", "backwaters"],
+    "seo": {
+      "title": "Kerala Honeymoon Package | 5 Nights 6 Days",
+      "description": "Book a romantic 5 nights 6 days Kerala honeymoon package. Explore Munnar, Thekkady, and Alleppey backwaters. Best deals on Kerala tours.",
+      "keywords": ["kerala honeymoon", "munnar package", "alleppey houseboat", "kerala tours"]
+    },
+    "createdAt": "2023-11-01T12:00:00Z",
+    "updatedAt": "2023-11-01T12:00:00Z"
+  }
+]
