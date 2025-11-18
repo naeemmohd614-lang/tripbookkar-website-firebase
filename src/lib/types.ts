@@ -184,3 +184,14 @@ export interface Payment {
   response: object;
   createdAt: string;
 }
+
+export interface Analytics {
+    date: string;
+    totalVisitors: number;
+    hotelClicks: number;
+    packageClicks: number;
+    affiliateClicks: number;
+    topStates: string[];
+    topHotels: string[];
+    createdAt: string;
+}
