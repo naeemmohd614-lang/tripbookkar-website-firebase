@@ -81,7 +81,7 @@ export default function StatePage() {
     {
       src: 'https://picsum.photos/seed/rajasthan-carousel-2/1200/600',
       caption: 'Hawa Mahal, Jaipur',
-      'data-ai-hint': 'jaipur palace'
+      'data-ai-hint': 'hawa mahal'
     },
     {
       src: 'https://picsum.photos/seed/rajasthan-carousel-3/1200/600',
