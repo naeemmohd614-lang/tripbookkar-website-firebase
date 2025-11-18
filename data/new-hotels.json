@@ -1,20 +1,12 @@
 
 [
   {
-    "id": "ritz-carlton-bangalore",
-    "name": "The Ritz-Carlton, Bangalore",
+    "name": "The Ritz-Carlton Bangalore",
     "brand": "The Ritz-Carlton",
-    "state": "Karnataka",
-    "city": "Bengaluru",
-    "location": { "lat": 12.9716, "lng": 77.5946 },
-    "address": "99, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru",
-    "about": "Luxury 5-star hotel located ...",
-    "images": [ "https://cdn.example.com/ritz1.webp", "https://cdn.example.com/ritz2.webp" ],
-    "distance": { "airport": "35 km", "railway": "6 km", "bus": "3 km" },
-    "roomCategories": [ { "name": "Deluxe Room", "count": 200, "size": "35 m2" } ],
-    "facilities": { "pool": true, "spa": true, "petFriendly": false, "checkIn": "14:00", "checkOut": "12:00" },
-    "tags": ["luxury", "5 star"],
-    "interests": ["honeymoon", "luxury"],
-    "availableMonths": ["December", "January"]
+    "images": [
+      "1.jpg",
+      "lobby.png",
+      { "src": "https://example.com/pool.jpg", "caption": "Swimming Pool" }
+    ]
   }
 ]
