@@ -14,6 +14,14 @@ interface HotelCardProps {
 export default function HotelCard({ hotel }: HotelCardProps) {
   const hotelImage = hotel.images && hotel.images[0] ? hotel.images[0] : null;
 
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      minimumFractionDigits: 0,
+    }).format(price);
+  };
+
   return (
     <Card className="overflow-hidden group w-full flex flex-col">
       <CardHeader className="p-0">
@@ -57,7 +65,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           <p className="text-sm text-muted-foreground">Starting from</p>
           {typeof hotel.basePrice === 'number' ? (
             <p className="font-bold text-lg text-brand-blue">
-                ₹{hotel.basePrice.toLocaleString()}
+                {formatPrice(hotel.basePrice)}
                 <span className="text-sm font-normal text-muted-foreground">/night</span>
             </p>
           ) : (
