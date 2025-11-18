@@ -1,9 +1,10 @@
+
 [
   {
     "stateId": "karnataka",
     "name": "Karnataka",
     "image": "",
-    "description": "Top tourist state in South India.",
+    "description": "Top tourist state in South India, known for its tech hub, palaces, and national parks.",
     "totalCities": 35,
     "totalHotels": 500
   },
@@ -38,5 +39,85 @@
     "description": "Home to the bustling metropolis of Mumbai and the serene Western Ghats.",
     "totalCities": 36,
     "totalHotels": 1200
+  },
+  {
+    "stateId": "himachal-pradesh",
+    "name": "Himachal Pradesh",
+    "image": "",
+    "description": "'Land of the Gods', known for its Himalayan landscapes and popular hill-stations.",
+    "totalCities": 12,
+    "totalHotels": 450
+  },
+  {
+    "stateId": "uttarakhand",
+    "name": "Uttarakhand",
+    "image": "",
+    "description": "'Devbhumi' or the 'Land of the Gods', famous for pilgrimage sites and trekking.",
+    "totalCities": 13,
+    "totalHotels": 400
+  },
+  {
+    "stateId": "jammu-and-kashmir",
+    "name": "Jammu and Kashmir",
+    "image": "",
+    "description": "'Paradise on Earth', known for its scenic splendor and snow-capped mountains.",
+    "totalCities": 20,
+    "totalHotels": 300
+  },
+  {
+    "stateId": "sikkim",
+    "name": "Sikkim",
+    "image": "",
+    "description": "A jewel in the Himalayas, known for its pristine beauty and stunning views of Kanchenjunga.",
+    "totalCities": 4,
+    "totalHotels": 150
+  },
+  {
+    "stateId": "west-bengal",
+    "name": "West Bengal",
+    "image": "",
+    "description": "Rich in culture and heritage, home to Kolkata, Darjeeling, and the Sundarbans.",
+    "totalCities": 23,
+    "totalHotels": 350
+  },
+  {
+    "stateId": "tamil-nadu",
+    "name": "Tamil Nadu",
+    "image": "",
+    "description": "Known for its Dravidian-style Hindu temples, classical dance, and beautiful coastline.",
+    "totalCities": 38,
+    "totalHotels": 550
+  },
+  {
+    "stateId": "uttar-pradesh",
+    "name": "Uttar Pradesh",
+    "image": "",
+    "description": "The heartland of India, home to the Taj Mahal, Varanasi, and ancient cities.",
+    "totalCities": 75,
+    "totalHotels": 750
+  },
+  {
+    "stateId": "madhya-pradesh",
+    "name": "Madhya Pradesh",
+    "image": "",
+    "description": "'The Heart of India', known for its national parks, wildlife, and historical sites.",
+    "totalCities": 52,
+    "totalHotels": 300
+  },
+  {
+    "stateId": "gujarat",
+    "name": "Gujarat",
+    "image": "",
+    "description": "Famous for its vibrant culture, Rann of Kutch, and being the land of Mahatma Gandhi.",
+    "totalCities": 33,
+    "totalHotels": 480
+  },
+  {
+    "stateId": "delhi",
+    "name": "Delhi",
+    "image": "",
+    "description": "The national capital, a vast metropolitan area with a rich history and Mughal-era monuments.",
+    "totalCities": 1,
+    "totalHotels": 900
   }
 ]
