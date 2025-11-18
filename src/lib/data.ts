@@ -8,10 +8,22 @@ import states from '@/data/states.json';
 import cities from '@/data/cities.json';
 import featuredPackages from '@/data/packages.json';
 
+// Helper to create a slug from a string
+function slugify(text: string) {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
 // We need to cast this because the JSON import is not typed
-const hotels: Hotel[] = (rawHotels as any[]).map(hotel => ({
+const hotels: Hotel[] = (rawHotels as any[]).map((hotel, index) => ({
   ...hotel,
-  hotelId: hotel.id,
+  hotelId: hotel.id || `${slugify(hotel.name)}-${index}`,
 }));
 
 
