@@ -1,4 +1,5 @@
 
+
 'use client';
 import { states, hotels, cities as allCities } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
@@ -217,7 +218,7 @@ export default function StatePage() {
             </h2>
             {stateHotels.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {stateHotels.filter(h => h.stateId === 'rajasthan').slice(0, 10).map((hotel) => (
+                {stateHotels.slice(0, 10).map((hotel) => (
                   <HotelCard key={hotel.hotelId} hotel={hotel} />
                 ))}
               </div>
