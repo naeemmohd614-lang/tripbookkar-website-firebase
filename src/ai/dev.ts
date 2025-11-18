@@ -1,1 +1,5 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/personalized-hotel-recommendations.ts';
+import '@/ai/flows/generate-seo-pages.ts';

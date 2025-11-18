@@ -10,11 +10,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['"PT Sans"', 'sans-serif'],
+        headline: ['"Playfair Display"', 'serif'],
         code: ['monospace'],
       },
       colors: {
+        'brand-blue': '#1E3A8A',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
