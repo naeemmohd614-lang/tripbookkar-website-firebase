@@ -1,3 +1,4 @@
+
 'use client';
 import { hotels } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
@@ -65,7 +66,7 @@ export default function HotelDetailPage() {
 
                     <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mt-8 mb-4">Room Categories</h2>
                     <div className="space-y-4">
-                        {hotel.roomCategories.map(room => (
+                        {hotel.roomCategories && hotel.roomCategories.map(room => (
                             <Card key={room.name} className="bg-secondary/50">
                                 <CardContent className="p-4 flex justify-between items-center">
                                     <div>
