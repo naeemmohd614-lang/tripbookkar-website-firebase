@@ -129,7 +129,7 @@ export default function Header() {
     <>
       {navLinks.map(({ href, label }) => (
         <NavigationMenuItem key={href}>
-          <Link href={href} legacyBehavior passHref>
+          <Link href={href} legacyBehavior={false}>
             <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), pathname.startsWith(href) ? "bg-accent" : "")}>
               {label}
             </NavigationMenuLink>
