@@ -1,0 +1,42 @@
+[
+  {
+    "stateId": "karnataka",
+    "name": "Karnataka",
+    "image": "",
+    "description": "Top tourist state in South India.",
+    "totalCities": 35,
+    "totalHotels": 500
+  },
+  {
+    "stateId": "goa",
+    "name": "Goa",
+    "image": "",
+    "description": "Famous for its beaches, nightlife, and places of worship.",
+    "totalCities": 2,
+    "totalHotels": 800
+  },
+  {
+    "stateId": "rajasthan",
+    "name": "Rajasthan",
+    "image": "",
+    "description": "Known for its magnificent forts, palaces, and rich cultural heritage.",
+    "totalCities": 33,
+    "totalHotels": 600
+  },
+  {
+    "stateId": "kerala",
+    "name": "Kerala",
+    "image": "",
+    "description": "God's Own Country, famous for its backwaters, beaches, and Ayurvedic treatments.",
+    "totalCities": 14,
+    "totalHotels": 700
+  },
+  {
+    "stateId": "maharashtra",
+    "name": "Maharashtra",
+    "image": "",
+    "description": "Home to the bustling metropolis of Mumbai and the serene Western Ghats.",
+    "totalCities": 36,
+    "totalHotels": 1200
+  }
+]
