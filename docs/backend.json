@@ -1,0 +1,386 @@
+{
+  "entities": {
+    "Hotel": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Hotel",
+      "type": "object",
+      "description": "Represents a hotel with its details.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Hotel entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the hotel."
+        },
+        "brand": {
+          "type": "string",
+          "description": "Brand of the hotel."
+        },
+        "state": {
+          "type": "string",
+          "description": "State where the hotel is located."
+        },
+        "city": {
+          "type": "string",
+          "description": "City where the hotel is located."
+        },
+        "address": {
+          "type": "string",
+          "description": "Full address of the hotel."
+        },
+        "coordinates": {
+          "type": "string",
+          "description": "GPS coordinates (latitude and longitude) of the hotel."
+        },
+        "distance": {
+          "type": "string",
+          "description": "Distances to nearby important locations like airport, railway, and bus station."
+        },
+        "images": {
+          "type": "array",
+          "description": "Array of URLs pointing to hotel images.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "thumbnails": {
+          "type": "array",
+          "description": "Array of URLs pointing to hotel thumbnail images.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "facilities": {
+          "type": "string",
+          "description": "Object containing hotel facilities (e.g., pool, gym, wifi)."
+        },
+        "roomCategories": {
+          "type": "array",
+          "description": "Array of room category objects.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "priceBase": {
+          "type": "number",
+          "description": "Base price of the hotel."
+        },
+        "dynamicPrice": {
+          "type": "number",
+          "description": "Dynamically adjusted price of the hotel."
+        },
+        "seo": {
+          "type": "string",
+          "description": "SEO metadata for the hotel page (title, description, keywords)."
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp of the last update.",
+          "format": "date-time"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp of when the hotel was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "brand",
+        "state",
+        "city"
+      ]
+    },
+    "Package": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Package",
+      "type": "object",
+      "description": "Represents a travel package with itinerary and pricing.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Package entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the travel package."
+        },
+        "days": {
+          "type": "number",
+          "description": "Number of days of the package."
+        },
+        "nights": {
+          "type": "number",
+          "description": "Number of nights of the package."
+        },
+        "price": {
+          "type": "number",
+          "description": "Price of the travel package."
+        },
+        "itinerary": {
+          "type": "array",
+          "description": "Array of itinerary items for the package.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "images": {
+          "type": "array",
+          "description": "Array of image URLs for the package.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "days",
+        "nights",
+        "price"
+      ]
+    },
+    "Affiliate": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Affiliate",
+      "type": "object",
+      "description": "Represents affiliate links and IDs for booking platforms.",
+      "properties": {
+        "affiliateId": {
+          "type": "string",
+          "description": "Unique identifier for the Affiliate entity."
+        },
+        "bookingId": {
+          "type": "string",
+          "description": "Affiliate ID for Booking.com."
+        },
+        "tripadvisorId": {
+          "type": "string",
+          "description": "Affiliate ID for TripAdvisor."
+        },
+        "agodaId": {
+          "type": "string",
+          "description": "Affiliate ID for Agoda."
+        },
+        "expediaId": {
+          "type": "string",
+          "description": "Affiliate ID for Expedia."
+        }
+      },
+      "required": [
+        "affiliateId"
+      ]
+    },
+    "PricingRule": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "PricingRule",
+      "type": "object",
+      "description": "Represents rules for dynamic pricing adjustments.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the PricingRule entity."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of pricing rule (e.g., peak season, weekend)."
+        },
+        "factor": {
+          "type": "number",
+          "description": "Factor to apply for the pricing rule."
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "factor"
+      ]
+    },
+    "SeoPage": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SeoPage",
+      "type": "object",
+      "description": "Represents SEO-optimized pages.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the SeoPage entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the SEO page."
+        },
+        "slug": {
+          "type": "string",
+          "description": "Slug of the SEO page."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug"
+      ]
+    },
+    "Lead": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Lead",
+      "type": "object",
+      "description": "Represents a lead from a user.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Lead entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the lead."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the lead."
+        },
+        "message": {
+          "type": "string",
+          "description": "Message from the lead."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp of when the lead was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "phone",
+        "message"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/hotels/{hotelId}",
+        "definition": {
+          "entityName": "Hotel",
+          "schema": {
+            "$ref": "#/backend/entities/Hotel"
+          },
+          "description": "Stores hotel details. Includes fields for name, brand, location, images, facilities, pricing, and SEO metadata.",
+          "params": [
+            {
+              "name": "hotelId",
+              "description": "Unique identifier for the hotel."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/packages/{packageId}",
+        "definition": {
+          "entityName": "Package",
+          "schema": {
+            "$ref": "#/backend/entities/Package"
+          },
+          "description": "Stores travel package details. Includes fields for name, days, nights, price, itinerary, and images.",
+          "params": [
+            {
+              "name": "packageId",
+              "description": "Unique identifier for the travel package."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/affiliates/{affiliateId}",
+        "definition": {
+          "entityName": "Affiliate",
+          "schema": {
+            "$ref": "#/backend/entities/Affiliate"
+          },
+          "description": "Stores affiliate links and IDs for booking platforms.",
+          "params": [
+            {
+              "name": "affiliateId",
+              "description": "Unique identifier for the affiliate."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/pricingRules/{pricingRuleId}",
+        "definition": {
+          "entityName": "PricingRule",
+          "schema": {
+            "$ref": "#/backend/entities/PricingRule"
+          },
+          "description": "Stores rules for dynamic pricing adjustments.",
+          "params": [
+            {
+              "name": "pricingRuleId",
+              "description": "Unique identifier for the pricing rule."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/seoPages/{seoPageId}",
+        "definition": {
+          "entityName": "SeoPage",
+          "schema": {
+            "$ref": "#/backend/entities/SeoPage"
+          },
+          "description": "Stores SEO-optimized pages.",
+          "params": [
+            {
+              "name": "seoPageId",
+              "description": "Unique identifier for the SEO page."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/leads/{leadId}",
+        "definition": {
+          "entityName": "Lead",
+          "schema": {
+            "$ref": "#/backend/entities/Lead"
+          },
+          "description": "Stores lead information from users.",
+          "params": [
+            {
+              "name": "leadId",
+              "description": "Unique identifier for the lead."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/admin_roles/{adminUid}",
+        "definition": {
+          "entityName": "admin_role",
+          "schema": {
+            "$ref": "#/backend/entities/Lead"
+          },
+          "description": "Stores UIDs of admin users.",
+          "params": [
+            {
+              "name": "adminUid",
+              "description": "UID of the admin user."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "This Firestore structure is designed to support the TripBookKar admin dashboard application. It prioritizes authorization independence, clarity, and scalability. All collections are designed with a homogeneous security posture in mind.\n\nAuthorization Independence:\n\n*   The structure avoids hierarchical authorization dependencies (`get()` calls in security rules) by storing all necessary authorization data directly within each document or using dedicated collections for global roles.\n*   Since this application is an Admin Dashboard, authorization is based on the authenticated user. In a production environment, an additional collection such as `/admin_roles/{uid}` should be created. The existence of a document for a given user in this collection determines admin status. The Firebase rules will then only check that such a document exists.\n\nQAPs (Rules are not Filters):\n\n*   The data is segregated into collections based on entity type (hotels, packages, etc.). This simplifies security rules, as each collection has a consistent access model. List operations are secured by ensuring that only authorized users (admins) can access the data.\n\n\nAdditional Considerations:\n\n*   The structure is designed to support the core features of the app: Hotel Data Storage, Package Management, Dynamic Pricing, Image Processing, Location Search, and SEO Page Generation.\n*   Timestamp fields (`createdAt`, `updatedAt`) can be used to track creation and modification times."
+  }
+}

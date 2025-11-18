@@ -1,9 +1,165 @@
+/**
+ * @fileoverview Firestore Security Rules for TripBookKar Admin Dashboard.
+ *
+ * Core Philosophy:
+ * This ruleset enforces a role-based access control model where only authenticated administrators
+ * can read and write data. The `admin_roles` collection is used to determine admin status.
+ *
+ * Data Structure:
+ * The Firestore database is organized into several top-level collections: `hotels`, `packages`,
+ * `affiliates`, `pricingRules`, `seoPages`, `leads`, and `admin_roles`. Each collection stores
+ * data related to its respective entity.
+ *
+ * Key Security Decisions:
+ * - **Admin-Only Access:** All read and write operations are restricted to authenticated admins.
+ * - **No Public Listing:** List operations are secured to prevent unauthorized data access.
+ * - **Data Denormalization for Authorization:** The `admin_roles` collection stores admin UIDs. The rules check for the existence of a document in this collection to grant admin privileges, avoiding `get()` calls on protected documents.
+ */
 rules_version = '2';
-
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if false;
+
+    /**
+     * @description Checks if the user is signed in.
+     * @principle Verified Identity: Only signed-in users can be admins.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * @description Checks if the user is an admin by verifying the existence of a document in the `admin_roles` collection.
+     * @principle Role-Based Access Control: Only admins can modify data.
+     */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid));
+    }
+
+    /**
+     * @description Determines if the user is signed in AND the user's record exists in the admin_roles collection
+     * @principle Robustness for State-Changing Operations: Prevents accidental access on update or delete
+     */
+    function isExistingAdmin() {
+      return (isSignedIn() && resource != null) && exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid));
+    }
+
+    /**
+     * @description Rules for the /hotels collection.
+     * @path /hotels/{hotelId}
+     * @allow (create) If the user is an admin, they can create a hotel.
+     * @deny (create) If the user is not an admin, they cannot create a hotel.
+     * @allow (get) If the user is an admin, they can get a hotel.
+     * @deny (get) If the user is not an admin, they cannot get a hotel.
+     * @principle Admin-Only Access: Only admins can manage hotel data.
+     */
+    match /hotels/{hotelId} {
+      allow create: if isAdmin();
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Rules for the /packages collection.
+     * @path /packages/{packageId}
+     * @allow (create) If the user is an admin, they can create a package.
+     * @deny (create) If the user is not an admin, they cannot create a package.
+     * @allow (get) If the user is an admin, they can get a package.
+     * @deny (get) If the user is not an admin, they cannot get a package.
+     * @principle Admin-Only Access: Only admins can manage package data.
+     */
+    match /packages/{packageId} {
+      allow create: if isAdmin();
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Rules for the /affiliates collection.
+     * @path /affiliates/{affiliateId}
+     * @allow (create) If the user is an admin, they can create an affiliate.
+     * @deny (create) If the user is not an admin, they cannot create an affiliate.
+     * @allow (get) If the user is an admin, they can get an affiliate.
+     * @deny (get) If the user is not an admin, they cannot get an affiliate.
+     * @principle Admin-Only Access: Only admins can manage affiliate data.
+     */
+    match /affiliates/{affiliateId} {
+      allow create: if isAdmin();
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Rules for the /pricingRules collection.
+     * @path /pricingRules/{pricingRuleId}
+     * @allow (create) If the user is an admin, they can create a pricing rule.
+     * @deny (create) If the user is not an admin, they cannot create a pricing rule.
+     * @allow (get) If the user is an admin, they can get a pricing rule.
+     * @deny (get) If the user is not an admin, they cannot get a pricing rule.
+     * @principle Admin-Only Access: Only admins can manage pricing rule data.
+     */
+    match /pricingRules/{pricingRuleId} {
+      allow create: if isAdmin();
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Rules for the /seoPages collection.
+     * @path /seoPages/{seoPageId}
+     * @allow (create) If the user is an admin, they can create an SEO page.
+     * @deny (create) If the user is not an admin, they cannot create an SEO page.
+     * @allow (get) If the user is an admin, they can get an SEO page.
+     * @deny (get) If the user is not an admin, they cannot get an SEO page.
+     * @principle Admin-Only Access: Only admins can manage SEO page data.
+     */
+    match /seoPages/{seoPageId} {
+      allow create: if isAdmin();
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Rules for the /leads collection.
+     * @path /leads/{leadId}
+     * @allow (create) If the user is an admin, they can create a lead.
+     * @deny (create) If the user is not an admin, they cannot create a lead.
+     * @allow (get) If the user is an admin, they can get a lead.
+     * @deny (get) If the user is not an admin, they cannot get a lead.
+     * @principle Admin-Only Access: Only admins can manage lead data.
+     */
+    match /leads/{leadId} {
+      allow create: if isAdmin();
+      allow get: if isAdmin();
+      allow list: if isAdmin();
+      allow update: if isExistingAdmin();
+      allow delete: if isExistingAdmin();
+    }
+
+    /**
+     * @description Rules for the /admin_roles collection.
+     * @path /admin_roles/{adminUid}
+     * @allow create: if isSignedIn() && request.auth.uid == adminUid;
+     * @allow get: if isSignedIn() && request.auth.uid == adminUid;
+     * @allow list: if false;
+     * @allow update: if false;
+     * @allow delete: if false;
+     */
+    match /admin_roles/{adminUid} {
+      allow create: if isSignedIn() && request.auth.uid == adminUid;
+      allow get: if isSignedIn() && request.auth.uid == adminUid;
+      allow list: if false;
+      allow update: if false;
+      allow delete: if false;
     }
   }
 }
