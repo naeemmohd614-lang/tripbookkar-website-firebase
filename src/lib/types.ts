@@ -1,3 +1,4 @@
+
 export interface Hotel {
   id: string;
   name: string;
@@ -7,7 +8,7 @@ export interface Hotel {
   address: string;
   images: string[];
   facilities: string[];
-  roomCategories: string[];
+  roomCategories: { name: string; size: string }[];
   priceBase: number;
   rating: number;
 }
