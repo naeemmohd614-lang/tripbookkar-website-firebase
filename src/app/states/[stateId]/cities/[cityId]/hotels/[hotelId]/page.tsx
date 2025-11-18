@@ -6,7 +6,7 @@ import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Star, MapPin, Check, X, Sun, Moon, Utensils, Zap, GlassWater, Mic2 } from 'lucide-react';
+import { Star, MapPin, Check, X, Sun, Moon, Utensils, Zap, GlassWater, Mic2, Dumbbell, Wifi, Waves, ParkingCircle, Dog } from 'lucide-react';
 
 export default function HotelDetailPage() {
   const params = useParams();
@@ -20,6 +20,13 @@ export default function HotelDetailPage() {
 
   const mainImage = hotel.images && hotel.images[0] && hotel.images[0].src ? hotel.images[0] : null;
 
+  const FacilityItem = ({ icon: Icon, label, available }: { icon: React.ElementType, label: string, available: boolean }) => (
+    <div className="flex items-center gap-3">
+        <Icon className={`w-5 h-5 ${available ? 'text-green-500' : 'text-red-500'}`} />
+        <span>{label}</span>
+    </div>
+  );
+
   return (
     <div className="bg-secondary/30">
       <div className="container mx-auto px-4 py-12">
@@ -28,7 +35,7 @@ export default function HotelDetailPage() {
             <Card className="overflow-hidden">
                 <CardHeader className="p-0">
                     <div className="relative h-64 md:h-96">
-                        {mainImage && (
+                        {mainImage && mainImage.src && (
                             <Image
                             src={mainImage.src}
                             alt={`Main image for ${hotel.name}`}
@@ -61,6 +68,24 @@ export default function HotelDetailPage() {
                         ))}
                       </div>
                     }
+
+                    {hotel.facilities && (
+                        <div className="mt-8">
+                            <h2 className="text-2xl font-headline text-brand-blue border-b pb-2 mb-4">Facilities</h2>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <FacilityItem icon={Waves} label="Pool" available={hotel.facilities.pool} />
+                                <FacilityItem icon={Sun} label="Spa" available={hotel.facilities.spa} />
+                                <FacilityItem icon={Dumbbell} label="Gym" available={hotel.facilities.gym} />
+                                <FacilityItem icon={Wifi} label="Wi-Fi" available={hotel.facilities.wifi} />
+                                <FacilityItem icon={ParkingCircle} label="Parking" available={hotel.facilities.parking} />
+                                <FacilityItem icon={Dog} label="Pet Friendly" available={hotel.facilities.petFriendly} />
+                            </div>
+                            <div className="mt-4 text-sm text-muted-foreground grid grid-cols-2 gap-x-4">
+                                <p><strong>Check-in:</strong> {hotel.facilities.checkIn}</p>
+                                <p><strong>Check-out:</strong> {hotel.facilities.checkOut}</p>
+                            </div>
+                        </div>
+                    )}
 
 
                     {hotel.roomCategories && hotel.roomCategories.length > 0 && (
