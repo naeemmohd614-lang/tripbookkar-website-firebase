@@ -4,7 +4,7 @@ import { cities, hotels, states } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import type { City, Hotel, State } from '@/lib/types';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin } from 'lucide-react';
 import Link from 'next/link';
@@ -65,6 +65,20 @@ export default function CityPage() {
           image: 'https://picsum.photos/seed/city-palace-jaipur/600/400',
           caption: 'jaipur city palace',
           description: "A sprawling complex of palaces, courtyards, and gardens, the City Palace is a beautiful blend of Rajasthani and Mughal architecture. It is still home to the former royal family of Jaipur."
+        },
+        { 
+          name: 'Jantar Mantar', 
+          location: 'Jaipur',
+          image: 'https://picsum.photos/seed/jantar-mantar-jaipur/600/400',
+          caption: 'jantar mantar observatory',
+          description: "A UNESCO World Heritage site, Jantar Mantar is an astronomical observatory featuring the world's largest stone sundial. It consists of 19 large-scale instruments for observing celestial positions."
+        },
+        { 
+          name: 'Nahargarh Fort', 
+          location: 'Jaipur',
+          image: 'https://picsum.photos/seed/nahargarh-fort-jaipur/600/400',
+          caption: 'nahargarh fort view',
+          description: "Standing on the edge of the Aravalli Hills, Nahargarh Fort offers breathtaking panoramic views of the entire city. It once formed a strong defense ring for Jaipur along with Amer Fort and Jaigarh Fort."
         },
       ];
 
