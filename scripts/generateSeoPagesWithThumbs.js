@@ -136,11 +136,20 @@ function hotelHtml(h, heroThumb, thumbs) {
   const desc = (h.seo && h.seo.description) || (h.about || '').slice(0,160);
   const hero = heroThumb || (h.images && (typeof h.images[0] === 'string' ? h.images[0] : (h.images[0] && (h.images[0].src || h.images[0])))) || DEFAULT_IMAGE;
 
+  const amenityFeature = [];
+  if (h.facilities) {
+    if (h.facilities.pool) amenityFeature.push({ "@type": "LocationFeatureSpecification", "name": "Swimming Pool" });
+    if (h.facilities.spa) amenityFeature.push({ "@type": "LocationFeatureSpecification", "name": "Spa" });
+    if (h.facilities.gym) amenityFeature.push({ "@type": "LocationFeatureSpecification", "name": "Gym" });
+    if (h.facilities.wifi) amenityFeature.push({ "@type": "LocationFeatureSpecification", "name": "Free Wifi" });
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Hotel",
     "name": h.name,
     "image": hero,
+    "description": desc,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": h.city || '',
@@ -152,7 +161,8 @@ function hotelHtml(h, heroThumb, thumbs) {
       "latitude": (h.location && h.location.lat) || '',
       "longitude": (h.location && h.location.lng) || ''
     },
-    "description": desc
+    ...(h.starRating && { "starRating": { "@type": "Rating", "ratingValue": h.starRating } }),
+    ...(amenityFeature.length > 0 && { amenityFeature })
   };
 
   const imagesHtml = (thumbs || []).map(u => `<figure style="display:inline-block;margin:8px"><img loading="lazy" src="${u}" alt="${escapeHtml(h.name)}" style="width:240px;height:auto;border-radius:6px"/></figure>`).join('\n');
@@ -402,5 +412,3 @@ ${sitemapEntries.map(e => {
 
   console.log('✅ Done. Generated pages are in public/generated-pages/ and thumbnails in public/generated-pages/assets/hotels/');
 })().catch(e => { console.error('Fatal error', e); process.exit(1); });
-
-    
