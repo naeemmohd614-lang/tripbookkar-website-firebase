@@ -1,11 +1,12 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { getRecommendations, RecommendationsState } from '@/app/actions';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Wand2, Loader2 } from 'lucide-react';
 
 const initialState: RecommendationsState = {};
@@ -30,7 +31,7 @@ function SubmitButton() {
 }
 
 export default function Recommendations() {
-  const [state, formAction] = useFormState(getRecommendations, initialState);
+  const [state, formAction] = useActionState(getRecommendations, initialState);
 
   return (
     <Card className="bg-secondary/30 border-dashed border-2">

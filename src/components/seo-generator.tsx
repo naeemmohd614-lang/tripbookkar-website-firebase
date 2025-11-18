@@ -1,5 +1,6 @@
 'use client';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { generateSeoContent, SeoGeneratorState } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -32,7 +33,7 @@ function SubmitButton() {
 }
 
 export default function SeoGenerator() {
-  const [state, formAction] = useFormState(generateSeoContent, initialState);
+  const [state, formAction] = useActionState(generateSeoContent, initialState);
   const [pageType, setPageType] = useState<'city' | 'state' | 'hotelType' | undefined>(state.input?.pageType);
 
   useEffect(() => {
