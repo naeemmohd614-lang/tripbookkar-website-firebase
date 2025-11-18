@@ -4,7 +4,7 @@
 import { states, hotels, cities as allCities } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Surf } from 'lucide-react';
 import type { State, Hotel, City } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -215,6 +215,204 @@ export default function StatePage() {
           <div className="my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">
               Top 10 Hotels in Rajasthan
+            </h2>
+            {stateHotels.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {stateHotels.slice(0, 10).map((hotel) => (
+                  <HotelCard key={hotel.hotelId} hotel={hotel} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this state yet.</h3>
+                <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const goaCarouselImages = [
+    {
+      src: 'https://picsum.photos/seed/goa-carousel-1/1200/600',
+      caption: 'Palolem Beach, Goa',
+      'data-ai-hint': 'palolem beach'
+    },
+    {
+      src: 'https://picsum.photos/seed/goa-carousel-2/1200/600',
+      caption: 'A beach party in Goa',
+      'data-ai-hint': 'goa nightlife'
+    },
+    {
+      src: 'https://picsum.photos/seed/goa-carousel-3/1200/600',
+      caption: 'Basilica of Bom Jesus, Old Goa',
+      'data-ai-hint': 'goa church'
+    }
+  ];
+
+  const goaHighlights = [
+    { icon: Waves, text: 'Pristine Beaches', color: 'text-sky-500' },
+    { icon: Martini, text: 'Vibrant Nightlife', color: 'text-pink-500' },
+    { icon: Surf, text: 'Water Sports', color: 'text-orange-500' },
+  ];
+
+  const goaMajorAreas = [
+    {
+      name: 'North Goa',
+      image: 'https://picsum.photos/seed/city-north-goa/400/500',
+      caption: 'North Goa beach'
+    },
+    {
+      name: 'South Goa',
+      image: 'https://picsum.photos/seed/city-south-goa/400/500',
+      caption: 'South Goa peaceful beach'
+    },
+  ];
+
+  const goaAttractions = [
+    { 
+      name: 'Baga Beach', 
+      location: 'North Goa',
+      image: 'https://picsum.photos/seed/baga-beach/600/400',
+      caption: 'baga beach crowd',
+      description: "One of the most famous beaches in North Goa, Baga is known for its lively atmosphere, beach shacks, water sports, and electrifying nightlife. It's the perfect spot for fun and excitement."
+    },
+    { 
+      name: 'Dudhsagar Falls', 
+      location: 'Goa-Karnataka Border',
+      image: 'https://picsum.photos/seed/dudhsagar-falls/600/400',
+      caption: 'dudhsagar falls',
+      description: "Literally meaning 'Sea of Milk', this four-tiered waterfall is one of India's tallest. Located on the Mandovi River, its majestic cascade amidst lush green forests is a breathtaking sight, especially during the monsoon."
+    },
+    { 
+      name: 'Old Goa (Velha Goa)', 
+      location: 'North Goa',
+      image: 'https://picsum.photos/seed/old-goa-church/600/400',
+      caption: 'old goa church',
+      description: "The former capital of Portuguese India, Old Goa is a UNESCO World Heritage site. It's renowned for its magnificent colonial-era churches and cathedrals, including the Basilica of Bom Jesus and Se Cathedral."
+    },
+  ];
+
+
+  if (stateId === 'goa') {
+    return (
+      <div>
+        <div className="w-full mb-12">
+          <Carousel className="w-full" opts={{ loop: true }}>
+            <CarouselContent>
+              {goaCarouselImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative aspect-[16/7]">
+                    <Image 
+                      src={image.src} 
+                      alt={image.caption} 
+                      fill 
+                      className="object-cover"
+                      data-ai-hint={image['data-ai-hint']}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+          </Carousel>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Goa</h1>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              India's pocket-sized paradise, Goa is a coastal state famous for its endless beaches, vibrant nightlife, delicious seafood, and Portuguese-influenced architecture. From the bustling parties of the north to the tranquil shores of the south, Goa offers a perfect holiday for every kind of traveler.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
+            <Card className="text-center">
+              <CardContent className="p-4">
+                <Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" />
+                <h3 className="font-semibold">Best Time to Visit</h3>
+                <p className="text-sm text-muted-foreground">October to March</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-4">
+                <Clock className="mx-auto mb-2 h-8 w-8 text-green-500" />
+                <h3 className="font-semibold">Ideal Duration</h3>
+                <p className="text-sm text-muted-foreground">4-5 Days</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-4">
+                <PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" />
+                <h3 className="font-semibold">Holiday Packages</h3>
+                <p className="text-sm text-muted-foreground">View Packages</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-4">
+                <HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" />
+                <h3 className="font-semibold">Top Hotels</h3>
+                <p className="text-sm text-muted-foreground">Find Hotels</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center my-16">
+              <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8">Highlights</h2>
+              <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+                  {goaHighlights.map(highlight => {
+                      const Icon = highlight.icon;
+                      return (
+                          <div key={highlight.text} className="flex flex-col items-center gap-2">
+                              <div className="bg-primary/10 p-4 rounded-full">
+                                  <Icon className={`h-8 w-8 ${highlight.color}`} />
+                              </div>
+                              <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                          </div>
+                      );
+                  })}
+              </div>
+          </div>
+
+          <div className="text-center my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Areas</h2>
+            <p className="mt-2 text-muted-foreground">Experience the distinct vibes of North and South Goa.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
+              {goaMajorAreas.map(area => (
+                <Card key={area.name} className="overflow-hidden group relative">
+                  <Image src={area.image} alt={area.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={area.caption} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{area.name}</h3>
+                </Card>
+              ))}
+            </div>
+          </div>
+          
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Goa</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {goaAttractions.map(attraction => (
+                <Card key={attraction.name} className="overflow-hidden">
+                  <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48" data-ai-hint={attraction.caption} />
+                  <CardContent className="p-4">
+                    <h3 className="font-bold text-lg">{attraction.name}</h3>
+                    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+                      <MapPin className="w-3 h-3" />
+                      {attraction.location}
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-2">{attraction.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">
+              Top 10 Hotels in Goa
             </h2>
             {stateHotels.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
