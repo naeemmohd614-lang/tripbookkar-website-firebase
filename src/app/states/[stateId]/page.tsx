@@ -32,9 +32,9 @@ export default function StatePage() {
   };
 
   const rajasthanHighlights = [
-    { icon: Castle, text: 'Majestic Forts' },
-    { icon: Landmark, text: 'Royal Palaces' },
-    { icon: Sun, text: 'Desert Safari' },
+    { icon: Castle, text: 'Majestic Forts', color: 'text-sky-500' },
+    { icon: Landmark, text: 'Royal Palaces', color: 'text-green-500' },
+    { icon: Sun, text: 'Desert Safari', color: 'text-orange-500' },
   ];
 
   const rajasthanCities = ['Jaipur', 'Jodhpur', 'Udaipur', 'Jaisalmer'].map(cityName => {
@@ -166,7 +166,7 @@ export default function StatePage() {
                       return (
                           <div key={highlight.text} className="flex flex-col items-center gap-2">
                               <div className="bg-primary/10 p-4 rounded-full">
-                                  <Icon className="h-8 w-8 text-primary" />
+                                  <Icon className={`h-8 w-8 ${highlight.color}`} />
                               </div>
                               <p className="font-semibold text-muted-foreground">{highlight.text}</p>
                           </div>
