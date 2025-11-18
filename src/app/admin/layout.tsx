@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { useAuth, useUser } from '@/firebase';
 import Link from 'next/link';
-import { FiHome, FiMap, FiPackage, FiDollarSign, FiSearch, FiUsers } from 'react-icons/fi';
+import { FiHome, FiMap, FiPackage, FiDollarSign, FiSearch, FiUsers, FiLink } from 'react-icons/fi';
 import { Button } from '@/components/ui/button';
 
 function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -50,6 +50,7 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
           <Link href="/admin/dashboard" className={`flex items-center gap-3 p-2 rounded ${pathname === '/admin/dashboard' ? 'bg-indigo-50 text-indigo-600' : 'text-gray-700'}`}><FiHome/> Dashboard</Link>
           <Link href="/admin/hotels" className={`flex items-center gap-3 p-2 rounded ${pathname.startsWith('/admin/hotels') ? 'bg-indigo-50 text-indigo-600':'text-gray-700'}`}><FiMap/> Hotels</Link>
           <Link href="/admin/packages" className={`flex items-center gap-3 p-2 rounded ${pathname.startsWith('/admin/packages') ? 'bg-indigo-50 text-indigo-600':'text-gray-700'}`}><FiPackage/> Packages</Link>
+          <Link href="/admin/affiliates" className={`flex items-center gap-3 p-2 rounded ${pathname.startsWith('/admin/affiliates') ? 'bg-indigo-50 text-indigo-600':'text-gray-700'}`}><FiLink/> Affiliates</Link>
           <Link href="/admin/pricing" className={`flex items-center gap-3 p-2 rounded ${pathname.startsWith('/admin/pricing') ? 'bg-indigo-50 text-indigo-600':'text-gray-700'}`}><FiDollarSign/> Pricing</Link>
           <Link href="/admin/seo" className={`flex items-center gap-3 p-2 rounded ${pathname.startsWith('/admin/seo') ? 'bg-indigo-50 text-indigo-600':'text-gray-700'}`}><FiSearch/> SEO</Link>
           <Link href="/admin/leads" className={`flex items-center gap-3 p-2 rounded ${pathname.startsWith('/admin/leads') ? 'bg-indigo-50 text-indigo-600':'text-gray-700'}`}><FiUsers/> Leads</Link>

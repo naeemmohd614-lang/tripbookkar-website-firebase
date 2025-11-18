@@ -169,6 +169,22 @@
         "expediaId": {
           "type": "string",
           "description": "Affiliate ID for Expedia."
+        },
+        "makeMyTripId": {
+            "type": "string",
+            "description": "Affiliate ID for MakeMyTrip."
+        },
+        "redBusId": {
+            "type": "string",
+            "description": "Affiliate ID for RedBus."
+        },
+        "uberId": {
+            "type": "string",
+            "description": "Affiliate ID for Uber."
+        },
+        "airbnbId": {
+            "type": "string",
+            "description": "Affiliate ID for Airbnb."
         }
       },
       "required": [
