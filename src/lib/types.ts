@@ -1,4 +1,5 @@
 
+
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -170,4 +171,16 @@ export interface DynamicPricingRule {
   hotelId?: string;
   factor: number;
   active: boolean;
+}
+
+export interface Payment {
+  orderId: string;
+  gateway: 'Razorpay' | 'Stripe';
+  amount: number;
+  userId: string;
+  hotelId?: string;
+  packageId?: string;
+  status: 'success' | 'failed';
+  response: object;
+  createdAt: string;
 }
