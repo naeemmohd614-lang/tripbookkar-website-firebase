@@ -13,10 +13,10 @@ export default function SearchPage({
   const filteredHotels = query
     ? (hotels as Hotel[]).filter(
         (hotel: Hotel) =>
-          hotel.name.toLowerCase().includes(query) ||
-          hotel.city.toLowerCase().includes(query) ||
-          hotel.state.toLowerCase().includes(query) ||
-          hotel.brand.toLowerCase().includes(query)
+          (hotel.name && hotel.name.toLowerCase().includes(query)) ||
+          (hotel.city && hotel.city.toLowerCase().includes(query)) ||
+          (hotel.state && hotel.state.toLowerCase().includes(query)) ||
+          (hotel.brand && hotel.brand.toLowerCase().includes(query))
       )
     : (hotels as Hotel[]);
 
