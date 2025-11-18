@@ -1,11 +1,12 @@
+
 'use client';
 import { cities, hotels, states } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import type { City, Hotel, State } from '@/lib/types';
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 
@@ -42,6 +43,30 @@ export default function CityPage() {
         { icon: ShoppingBag, text: 'Vibrant Bazaars', color: 'text-sky-500' },
         { icon: Utensils, text: 'Rich Culinary Heritage', color: 'text-green-500' },
     ];
+
+    const jaipurAttractions = [
+        { 
+          name: 'Amer Fort', 
+          location: 'Jaipur',
+          image: 'https://picsum.photos/seed/amer-fort/600/400',
+          caption: 'amer fort',
+          description: "A stunning example of Rajput architecture, Amer Fort is a majestic fortress-palace overlooking Maota Lake. Explore its intricate courtyards, halls, and the breathtaking Sheesh Mahal (Mirror Palace)."
+        },
+        { 
+          name: 'Hawa Mahal', 
+          location: 'Jaipur',
+          image: 'https://picsum.photos/seed/hawa-mahal/600/400',
+          caption: 'hawa mahal',
+          description: "The 'Palace of Winds', Hawa Mahal is an iconic five-story honeycomb-like structure with 953 windows. It allowed royal women to observe street festivities unseen from the outside."
+        },
+        { 
+          name: 'City Palace', 
+          location: 'Jaipur',
+          image: 'https://picsum.photos/seed/city-palace-jaipur/600/400',
+          caption: 'jaipur city palace',
+          description: "A sprawling complex of palaces, courtyards, and gardens, the City Palace is a beautiful blend of Rajasthani and Mughal architecture. It is still home to the former royal family of Jaipur."
+        },
+      ];
 
     return (
         <div>
@@ -95,6 +120,28 @@ export default function CityPage() {
                     </div>
                 </div>
 
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Jaipur</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {jaipurAttractions.map(attraction => (
+                            <Card key={attraction.name} className="overflow-hidden">
+                                <CardHeader className="p-0">
+                                    <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48" data-ai-hint={attraction.caption} />
+                                </CardHeader>
+                                <CardContent className="p-4">
+                                    <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+                                    <MapPin className="w-3 h-3" />
+                                    {attraction.location}
+                                    </div>
+                                    <p className="text-sm text-muted-foreground mt-2">{attraction.description}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+
+
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
                      {cityHotels.length > 0 ? (
@@ -134,19 +181,17 @@ export default function CityPage() {
         </div>
         <div className="container mx-auto px-4 py-12">
             <Card className="mb-12 shadow-lg -mt-24 relative z-10 max-w-4xl mx-auto">
-                <CardContent className="p-6">
-                    <div className="flex justify-between items-center">
-                         <div>
-                            <CardContent className="font-headline text-3xl text-brand-blue">{city.name}, {state.name}</CardContent>
-                            <p className="text-muted-foreground pl-6">{city.description}</p>
-                        </div>
-                        <Button asChild variant="outline">
-                            <Link href={`/states/${stateId}`}>
-                                <ArrowLeft className="mr-2 h-4 w-4" />
-                                Back to {state.name}
-                            </Link>
-                        </Button>
+                <CardContent className="p-6 flex justify-between items-center">
+                    <div>
+                        <CardTitle className="font-headline text-3xl text-brand-blue">{city.name}, {state.name}</CardTitle>
+                        <CardDescription className="text-base pt-2">{city.description}</CardDescription>
                     </div>
+                    <Button asChild variant="outline">
+                        <Link href={`/states/${stateId}`}>
+                            <ArrowLeft className="mr-2 h-4 w-4" />
+                            Back to {state.name}
+                        </Link>
+                    </Button>
                 </CardContent>
             </Card>
 
