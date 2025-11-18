@@ -43,19 +43,13 @@ export default function SeoGenerator() {
   }, [state.input]);
 
   return (
-    <Card className="max-w-4xl mx-auto shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline text-2xl text-brand-blue">SEO Page Generator</CardTitle>
-        <CardDescription>
-          Automatically generate SEO-optimized content for cities, states, or hotel types.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
+    <Card className="max-w-4xl mx-auto shadow-sm bg-white">
+      <CardContent className="pt-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
             <form action={formAction} className="space-y-6">
               <div>
-                <Label className="font-bold">Page Type</Label>
+                <Label className="font-semibold">Page Type</Label>
                 <RadioGroup 
                   name="pageType" 
                   defaultValue={pageType} 
@@ -79,14 +73,14 @@ export default function SeoGenerator() {
 
               { (pageType === 'city' || pageType === 'state') && (
                 <div>
-                  <Label htmlFor="location" className="font-bold">Location</Label>
+                  <Label htmlFor="location" className="font-semibold">Location</Label>
                   <Input id="location" name="location" placeholder={pageType === 'city' ? "e.g., Jaipur" : "e.g., Rajasthan"} className="mt-2" defaultValue={state.input?.location}/>
                 </div>
               )}
               
               { pageType === 'hotelType' && (
                 <div>
-                  <Label htmlFor="hotelType" className="font-bold">Hotel Type</Label>
+                  <Label htmlFor="hotelType" className="font-semibold">Hotel Type</Label>
                   <Input id="hotelType" name="hotelType" placeholder="e.g., Beach Resort" className="mt-2" defaultValue={state.input?.hotelType}/>
                 </div>
               )}
@@ -101,7 +95,7 @@ export default function SeoGenerator() {
             </form>
           </div>
           <div className="md:col-span-2">
-            <h3 className="font-headline text-xl text-brand-blue border-b pb-2 mb-4">Generated Content</h3>
+            <h3 className="font-semibold text-lg border-b pb-2 mb-4">Generated Content</h3>
             <div className="space-y-6">
                 {state.title || state.description || state.content ? (
                     <>
