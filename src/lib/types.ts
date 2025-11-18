@@ -1,5 +1,6 @@
 
 
+
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -208,4 +209,13 @@ export interface SeoPage {
   city: string;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface Itinerary {
+  day: number;
+  title: string;
+  description: string;
+  stay?: string;
+  meals?: string[];
+  activities: string[];
 }
