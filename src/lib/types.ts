@@ -195,3 +195,17 @@ export interface Analytics {
     topHotels: string[];
     createdAt: string;
 }
+
+export interface SeoPage {
+  slug: string;
+  title: string;
+  description: string;
+  keywords: string[];
+  type: 'state-hotels' | 'city-hotels' | 'interest' | 'month' | 'package';
+  contentHtml: string;
+  image: string;
+  state: string;
+  city: string;
+  createdAt: string;
+  updatedAt: string;
+}
