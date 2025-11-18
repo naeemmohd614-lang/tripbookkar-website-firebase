@@ -1,85 +1,12 @@
 
 [
   {
-    "hotelId": "ritz-carlton-bangalore",
-    "name": "The Ritz-Carlton, Bangalore",
+    "name": "The Ritz-Carlton Bangalore",
     "brand": "The Ritz-Carlton",
-    "brandSlug": "the-ritz-carlton",
-    "state": "Karnataka",
-    "stateId": "karnataka",
-    "city": "Bengaluru",
-    "cityId": "bengaluru",
-    "location": {
-      "lat": 12.9716,
-      "lng": 77.5946
-    },
-    "address": "99, Residency Rd, Ashok Nagar, Bengaluru",
-    "pincode": "560025",
-    "about": "Experience 5-star luxury at The Ritz-Carlton, Bangalore. Located in the heart of the city, our hotel offers world-class dining, a serene spa, and elegantly appointed rooms and suites. Perfect for business and leisure travelers seeking unparalleled service and comfort.",
-    "distance": {
-      "airport": "35 km",
-      "railway": "6 km",
-      "bus": "3 km"
-    },
     "images": [
-      {
-        "src": "https://picsum.photos/seed/ritz-carlton-1/1080/720",
-        "thumb": "https://picsum.photos/seed/ritz-carlton-1/300/200",
-        "caption": "luxury hotel entrance",
-        "hash": "sha256-hash-value-1"
-      },
-      {
-        "src": "https://picsum.photos/seed/ritz-carlton-2/1080/720",
-        "thumb": "https://picsum.photos/seed/ritz-carlton-2/300/200",
-        "caption": "hotel lobby interior",
-        "hash": "sha256-hash-value-2"
-      }
-    ],
-    "roomCategories": [
-      {
-        "name": "Deluxe Room",
-        "count": 200,
-        "size": "35 m²"
-      },
-      {
-        "name": "Executive Suite",
-        "count": 50,
-        "size": "60 m²"
-      }
-    ],
-    "facilities": {
-      "pool": true,
-      "spa": true,
-      "gym": true,
-      "wifi": true,
-      "parking": true,
-      "petFriendly": false,
-      "checkIn": "14:00",
-      "checkOut": "12:00"
-    },
-    "diningCount": 3,
-    "banquetCount": 2,
-    "basePrice": 12000,
-    "dynamicPrice": 15500,
-    "rating": 4.9,
-    "tags": ["luxury", "5 star", "city center"],
-    "affiliate": {
-      "booking": "",
-      "agoda": "",
-      "expedia": "",
-      "tripadvisor": "",
-      "makemytrip": "",
-      "redbus": "",
-      "uber": "",
-      "ola": ""
-    },
-    "seo": {
-      "title": "The Ritz-Carlton, Bangalore - Best 5-Star Hotel in Bangalore",
-      "description": "Book your stay at The Ritz-Carlton, Bangalore. A luxury hotel in the heart of the city offering a spa, pool, and fine dining.",
-      "keywords": ["5 star hotel bangalore", "luxury hotel bangalore", "ritz-carlton"],
-      "slug": "ritz-carlton-bangalore"
-    },
-    "createdAt": "2023-10-26T10:00:00Z",
-    "updatedAt": "2023-10-26T10:00:00Z"
+      "1.jpg",
+      "lobby.png",
+      { "src": "https://example.com/pool.jpg", "caption": "Swimming Pool" }
+    ]
   }
 ]
