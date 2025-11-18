@@ -162,3 +162,12 @@ export interface Lead {
   status: 'new' | 'contacted' | 'converted' | 'lost';
   createdAt: string;
 }
+
+export interface DynamicPricingRule {
+  type: 'season' | 'weekend' | 'demand' | 'margin';
+  state?: string;
+  city?: string;
+  hotelId?: string;
+  factor: number;
+  active: boolean;
+}
