@@ -3,7 +3,7 @@
 import { states, hotels, cities as allCities } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Palaces, Sun, Landmark } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Palace, Sun, Landmark } from 'lucide-react';
 import type { State, Hotel, City } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -32,7 +32,7 @@ export default function StatePage() {
 
   const rajasthanHighlights = [
     { icon: Castle, text: 'Majestic Forts' },
-    { icon: Palaces, text: 'Royal Palaces' },
+    { icon: Palace, text: 'Royal Palaces' },
     { icon: Sun, text: 'Desert Safari' },
   ];
 
@@ -244,5 +244,3 @@ export default function StatePage() {
     </div>
   );
 }
-
-    
