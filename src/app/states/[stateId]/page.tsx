@@ -129,28 +129,28 @@ export default function StatePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
             <Card className="text-center">
               <CardContent className="p-4">
-                <Calendar className="mx-auto mb-2 h-8 w-8 text-primary" />
+                <Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" />
                 <h3 className="font-semibold">Best Time to Visit</h3>
                 <p className="text-sm text-muted-foreground">October to March</p>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="p-4">
-                <Clock className="mx-auto mb-2 h-8 w-8 text-primary" />
+                <Clock className="mx-auto mb-2 h-8 w-8 text-green-500" />
                 <h3 className="font-semibold">Ideal Duration</h3>
                 <p className="text-sm text-muted-foreground">7-8 Days</p>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="p-4">
-                <PackageIcon className="mx-auto mb-2 h-8 w-8 text-primary" />
+                <PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" />
                 <h3 className="font-semibold">Holiday Packages</h3>
                 <p className="text-sm text-muted-foreground">View Packages</p>
               </CardContent>
             </Card>
             <Card className="text-center">
               <CardContent className="p-4">
-                <HotelIcon className="mx-auto mb-2 h-8 w-8 text-primary" />
+                <HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" />
                 <h3 className="font-semibold">Top Hotels</h3>
                 <p className="text-sm text-muted-foreground">Find Hotels</p>
               </CardContent>
