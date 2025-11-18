@@ -1,0 +1,31 @@
+
+[
+  {
+    "cityId": "bengaluru",
+    "name": "Bengaluru",
+    "image": "",
+    "description": "The Silicon Valley of India, a bustling metropolis with a vibrant culture and pleasant climate.",
+    "totalHotels": 90
+  },
+  {
+    "cityId": "jaipur",
+    "name": "Jaipur",
+    "image": "",
+    "description": "The Pink City, famous for its stunning forts, palaces, and rich Rajput history.",
+    "totalHotels": 75
+  },
+  {
+    "cityId": "goa",
+    "name": "Goa",
+    "image": "",
+    "description": "India's beach paradise, known for its lively nightlife, golden sands, and Portuguese heritage.",
+    "totalHotels": 250
+  },
+    {
+    "cityId": "mumbai",
+    "name": "Mumbai",
+    "image": "",
+    "description": "The city of dreams, a financial powerhouse and the heart of the Bollywood film industry.",
+    "totalHotels": 300
+  }
+]

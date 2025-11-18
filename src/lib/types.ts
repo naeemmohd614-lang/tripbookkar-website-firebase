@@ -1,6 +1,7 @@
 
 
 
+
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -96,4 +97,12 @@ export interface State {
   description: string;
   totalCities: number;
   totalHotels: number;
+}
+
+export interface City {
+    cityId: string;
+    name: string;
+    image: string;
+    description: string;
+    totalHotels: number;
 }

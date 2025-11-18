@@ -1,14 +1,16 @@
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
-import type { Package, Destination, Brand, State } from './types';
+import type { Package, Destination, Brand, State, City } from './types';
 import hotels from '@/data/new-hotels.json';
 import brands from '@/data/brands.json';
 import states from '@/data/states.json';
+import cities from '@/data/cities.json';
 
 // We need to cast this because the JSON import is not typed
 export { hotels };
 export { brands };
 export { states };
+export { cities };
 
 
 export const featuredPackages: Package[] = [
