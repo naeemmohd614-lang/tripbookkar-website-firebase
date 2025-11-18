@@ -3,7 +3,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Package, Hotel, Shield, Menu, Mountain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -56,9 +62,12 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-               <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue mb-6">
-                 <Mountain className="h-6 w-6" />
-                 <span className="font-headline">Tripify</span>
+              <SheetHeader>
+                <SheetTitle className="sr-only">Menu</SheetTitle>
+              </SheetHeader>
+              <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue mb-6">
+                <Mountain className="h-6 w-6" />
+                <span className="font-headline">Tripify</span>
               </Link>
               <NavLinks isMobile={true} />
             </SheetContent>
