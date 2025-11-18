@@ -11,7 +11,7 @@ interface HotelCardProps {
 }
 
 export default function HotelCard({ hotel }: HotelCardProps) {
-  const hotelImage = hotel.images[0];
+  const hotelImage = hotel.images && hotel.images[0] ? hotel.images[0] : null;
 
   return (
     <Card className="overflow-hidden group w-full flex flex-col">
