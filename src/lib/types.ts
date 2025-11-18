@@ -1,4 +1,5 @@
 
+
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -43,6 +44,7 @@ export interface Hotel {
   banquetCount: number;
   basePrice: number;
   dynamicPrice: number;
+  rating: number;
   tags: string[];
   affiliate: {
     booking: string;
@@ -76,4 +78,12 @@ export interface Destination {
   city: string;
   state: string;
   imageId: string;
+}
+
+export interface Brand {
+  brandSlug: string;
+  name: string;
+  logo: string;
+  description: string;
+  totalHotels: number;
 }
