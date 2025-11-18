@@ -1,0 +1,20 @@
+
+[
+  {
+    "name": "The Leela Palace Chennai",
+    "brand": "The Leela",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "Adyar Seaface, MRC Nagar, Chennai, Tamil Nadu 600028",
+    "about": "The Leela Palace Chennai is a modern palace hotel overlooking the Bay of Bengal. It offers luxurious guestrooms, a world-class spa, and a collection of fine dining restaurants.",
+    "basePrice": 14000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/leela-chennai-1/1080/720", "caption": "Sea view from the hotel" },
+      { "src": "https://picsum.photos/seed/leela-chennai-2/1080/720", "caption": "The grand lobby of The Leela Palace" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Sea View", "count": 326, "size": "540 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["sea view", "chennai", "luxury"]
+  }
+]

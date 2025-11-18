@@ -1,0 +1,20 @@
+
+[
+  {
+    "name": "The Oberoi, New Delhi",
+    "brand": "Oberoi",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Dr. Zakir Hussain Marg, New Delhi, Delhi 110003",
+    "about": "A landmark hotel in the heart of the capital, The Oberoi, New Delhi offers breathtaking views of Delhi Golf Course and Humayun's Tomb. It's a perfect blend of tradition and contemporary sophistication.",
+    "basePrice": 25000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-delhi-1/1080/720", "caption": "The Oberoi New Delhi Exterior" },
+      { "src": "https://picsum.photos/seed/oberoi-delhi-2/1080/720", "caption": "Luxurious Hotel Lobby" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 220, "size": "550 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["iconic", "luxury", "new delhi"]
+  }
+]

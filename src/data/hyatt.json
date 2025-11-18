@@ -1,0 +1,20 @@
+
+[
+  {
+    "name": "Grand Hyatt Mumbai",
+    "brand": "Hyatt",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Bandra Kurla Complex Vicinity, Off Western Express Highway, Santacruz East, Mumbai, Maharashtra 400055",
+    "about": "A multi-dimensional lifestyle complex, Grand Hyatt Mumbai offers a modern and luxurious retreat in the heart of the city, with award-winning dining, an international shopping plaza, and expansive rooms.",
+    "basePrice": 16000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-mumbai-1/1080/720", "caption": "Grand Hyatt Mumbai exterior facade" },
+      { "src": "https://picsum.photos/seed/hyatt-mumbai-2/1080/720", "caption": "Spacious hotel lobby and lounge" }
+    ],
+    "roomCategories": [{ "name": "Grand King Room", "count": 547, "size": "430 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "mumbai", "luxury", "pet friendly"]
+  }
+]
