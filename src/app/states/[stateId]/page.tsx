@@ -93,16 +93,8 @@ export default function StatePage() {
   if (stateId === 'rajasthan') {
     return (
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Description */}
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Rajasthan</h1>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            The 'Land of Kings', Rajasthan is India's most vibrant and colorful state, a land of epic tales of valor, majestic forts, and opulent palaces. Journey through its golden Thar Desert on a camel safari, explore the bustling markets of the Pink City of Jaipur, the Blue City of Jodhpur, and the Golden City of Jaisalmer. Rajasthan is a living museum of rich history, folk culture, and royal grandeur that will leave you spellbound.
-          </p>
-        </div>
-
         {/* Image Carousel */}
-        <div className="max-w-4xl mx-auto my-12">
+        <div className="max-w-4xl mx-auto mb-12">
           <Carousel className="w-full">
             <CarouselContent>
               {rajasthanCarouselImages.map((image, index) => (
@@ -124,6 +116,14 @@ export default function StatePage() {
             <CarouselPrevious className="left-[-50px]" />
             <CarouselNext className="right-[-50px]" />
           </Carousel>
+        </div>
+
+        {/* Hero Description */}
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Rajasthan</h1>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            The 'Land of Kings', Rajasthan is India's most vibrant and colorful state, a land of epic tales of valor, majestic forts, and opulent palaces. Journey through its golden Thar Desert on a camel safari, explore the bustling markets of the Pink City of Jaipur, the Blue City of Jodhpur, and the Golden City of Jaisalmer. Rajasthan is a living museum of rich history, folk culture, and royal grandeur that will leave you spellbound.
+          </p>
         </div>
 
         {/* Info Cards */}
