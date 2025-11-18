@@ -44,11 +44,11 @@ export default function StatePage() {
 
   const rajasthanCities = ['Jaipur', 'Jodhpur', 'Udaipur', 'Jaisalmer'].map(cityName => {
     const city = (allCities as City[]).find(c => c.name === cityName);
-    const citySlug = slugify(cityName);
+    const cityId = city ? city.cityId : slugify(cityName);
     return {
       name: cityName,
-      slug: citySlug,
-      image: `https://picsum.photos/seed/city-${citySlug}/400/500`,
+      cityId: cityId,
+      image: `https://picsum.photos/seed/city-${cityId}/400/500`,
       caption: `${cityName} city`
     };
   });
@@ -186,11 +186,13 @@ export default function StatePage() {
             <p className="mt-2 text-muted-foreground">Discover the unique charm of each city within Rajasthan.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
               {rajasthanCities.map(city => (
-                <Card key={city.name} className="overflow-hidden group relative">
-                  <Image src={city.image} alt={city.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={city.caption} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                  <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{city.name}</h3>
-                </Card>
+                <Link href={`/states/rajasthan/cities/${city.cityId}`} key={city.name}>
+                  <Card className="overflow-hidden group relative">
+                    <Image src={city.image} alt={city.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={city.caption} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{city.name}</h3>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
