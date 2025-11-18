@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Star, MapPin } from 'lucide-react';
@@ -17,7 +18,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
     <Card className="overflow-hidden group w-full flex flex-col">
       <CardHeader className="p-0">
         <div className="relative h-48">
-          {hotelImage && (
+          {hotelImage && hotelImage.src && (
             <Image
               src={hotelImage.src}
               alt={hotel.name}
