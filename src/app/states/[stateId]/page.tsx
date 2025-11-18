@@ -8,6 +8,7 @@ import type { State, Hotel, City } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 // Helper function to create a slug
 function slugify(text: string) {
@@ -71,6 +72,24 @@ export default function StatePage() {
     },
   ];
 
+  const rajasthanCarouselImages = [
+    {
+      src: 'https://picsum.photos/seed/rajasthan-carousel-1/1200/600',
+      caption: 'Jaisalmer Fort',
+      'data-ai-hint': 'jaisalmer fort'
+    },
+    {
+      src: 'https://picsum.photos/seed/rajasthan-carousel-2/1200/600',
+      caption: 'Hawa Mahal, Jaipur',
+      'data-ai-hint': 'jaipur palace'
+    },
+    {
+      src: 'https://picsum.photos/seed/rajasthan-carousel-3/1200/600',
+      caption: 'Lake Pichola, Udaipur',
+      'data-ai-hint': 'udaipur lake'
+    }
+  ];
+
   if (stateId === 'rajasthan') {
     return (
       <div className="container mx-auto px-4 py-12">
@@ -80,6 +99,31 @@ export default function StatePage() {
           <p className="mt-4 text-muted-foreground leading-relaxed">
             The 'Land of Kings', Rajasthan is India's most vibrant and colorful state, a land of epic tales of valor, majestic forts, and opulent palaces. Journey through its golden Thar Desert on a camel safari, explore the bustling markets of the Pink City of Jaipur, the Blue City of Jodhpur, and the Golden City of Jaisalmer. Rajasthan is a living museum of rich history, folk culture, and royal grandeur that will leave you spellbound.
           </p>
+        </div>
+
+        {/* Image Carousel */}
+        <div className="max-w-4xl mx-auto my-12">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {rajasthanCarouselImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <Card>
+                    <CardContent className="relative aspect-video p-0">
+                      <Image 
+                        src={image.src} 
+                        alt={image.caption} 
+                        fill 
+                        className="object-cover rounded-lg"
+                        data-ai-hint={image['data-ai-hint']} 
+                      />
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-[-50px]" />
+            <CarouselNext className="right-[-50px]" />
+          </Carousel>
         </div>
 
         {/* Info Cards */}
@@ -174,7 +218,7 @@ export default function StatePage() {
           </h2>
           {stateHotels.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {stateHotels.slice(0, 10).map((hotel) => (
+              {stateHotels.filter(h => h.stateId === 'rajasthan').slice(0, 10).map((hotel) => (
                 <HotelCard key={hotel.hotelId} hotel={hotel} />
               ))}
             </div>
