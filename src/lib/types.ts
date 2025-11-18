@@ -132,3 +132,17 @@ export interface UserProfile {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface AdminProfile {
+  name: string;
+  email: string;
+  role: 'superadmin' | 'admin' | 'editor';
+  permissions: {
+    manageHotels: boolean;
+    managePackages: boolean;
+    manageSEO: boolean;
+    manageAffiliates: boolean;
+    managePricing: boolean;
+    manageLeads: boolean;
+  };
+}
