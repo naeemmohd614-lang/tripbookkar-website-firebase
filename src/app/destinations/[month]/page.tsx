@@ -1,6 +1,8 @@
+
 'use client';
 import { useParams, notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { hotels } from '@/lib/data';
 import type { Hotel } from '@/lib/types';
