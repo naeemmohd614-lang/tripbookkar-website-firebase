@@ -150,3 +150,15 @@ export interface AdminProfile {
     manageLeads: boolean;
   };
 }
+
+export interface Lead {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  hotelId?: string;
+  packageId?: string;
+  source: string;
+  status: 'new' | 'contacted' | 'converted' | 'lost';
+  createdAt: string;
+}
