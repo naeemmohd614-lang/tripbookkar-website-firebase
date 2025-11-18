@@ -1,3 +1,4 @@
+
 {
   "entities": {
     "Hotel": {
@@ -190,7 +191,7 @@
         },
         "factor": {
           "type": "number",
-          "description": "Factor to apply for the pricing rule."
+          "description": "Multiplier factor to apply for the pricing rule (e.g., 1.2 for a 20% increase)."
         }
       },
       "required": [
