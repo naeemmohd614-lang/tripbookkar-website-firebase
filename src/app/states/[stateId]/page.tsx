@@ -3,7 +3,7 @@
 import { states, hotels, cities as allCities } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin } from 'lucide-react';
 import type { State, Hotel, City } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
