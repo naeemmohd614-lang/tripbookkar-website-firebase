@@ -4,7 +4,6 @@ import { Star, MapPin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Hotel } from '@/lib/types';
 
 interface HotelCardProps {
@@ -31,32 +30,37 @@ export default function HotelCard({ hotel }: HotelCardProps) {
       </CardHeader>
       <CardContent className="p-4 flex-grow">
         <div className="flex justify-between items-start">
-            <CardTitle className="text-lg font-headline mb-1">{hotel.name}</CardTitle>
-            <div className="flex items-center gap-1 bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold">
-                <Star className="w-4 h-4 fill-white" />
-                <span>{hotel.rating.toFixed(1)}</span>
+            <div className="flex-1">
+                <Badge variant="secondary" className="mb-1">{hotel.brand}</Badge>
+                <CardTitle className="text-lg font-headline mb-1 leading-tight">{hotel.name}</CardTitle>
             </div>
+            {hotel.rating &&
+                <div className="flex items-center gap-1 bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold ml-2">
+                    <Star className="w-4 h-4 fill-white" />
+                    <span>{hotel.rating.toFixed(1)}</span>
+                </div>
+            }
         </div>
-        <CardDescription className="flex items-center gap-1 text-sm">
+        <CardDescription className="flex items-center gap-1 text-sm mt-1">
           <MapPin className="w-4 h-4" />
           {hotel.city}, {hotel.state}
         </CardDescription>
         <div className="mt-3 flex flex-wrap gap-2">
-            {hotel.facilities.pool && <Badge variant="secondary">Pool</Badge>}
-            {hotel.facilities.spa && <Badge variant="secondary">Spa</Badge>}
-            {hotel.facilities.gym && <Badge variant="secondary">Gym</Badge>}
+            {hotel.tags.slice(0, 3).map(tag => (
+                <Badge key={tag} variant="outline" className="font-normal">{tag}</Badge>
+            ))}
         </div>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center bg-secondary/30">
         <div>
           <p className="text-sm text-muted-foreground">Starting from</p>
           <p className="font-bold text-lg text-brand-blue">
-            ₹{hotel.priceBase.toLocaleString()}
+            ₹{hotel.basePrice.toLocaleString()}
             <span className="text-sm font-normal text-muted-foreground">/night</span>
           </p>
         </div>
         <Button asChild>
-          <Link href={`/hotels/${hotel.id}`}>View Details</Link>
+          <Link href={`/hotels/${hotel.hotelId}`}>View Details</Link>
         </Button>
       </CardFooter>
     </Card>

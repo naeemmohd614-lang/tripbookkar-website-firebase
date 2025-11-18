@@ -1,5 +1,6 @@
 import { hotels } from '@/lib/data';
 import HotelCard from '@/components/hotel-card';
+import { Hotel } from '@/lib/types';
 
 export default function HotelsPage() {
   return (
@@ -14,8 +15,8 @@ export default function HotelsPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {hotels.map((hotel) => (
-          <HotelCard key={hotel.id} hotel={hotel} />
+        {(hotels as Hotel[]).map((hotel) => (
+          <HotelCard key={hotel.hotelId} hotel={hotel} />
         ))}
       </div>
     </div>

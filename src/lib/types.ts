@@ -1,21 +1,34 @@
 
 export interface Hotel {
-  id: string;
+  hotelId: string;
   name: string;
   brand: string;
+  brandSlug: string;
   state: string;
   city: string;
+  location: {
+    lat: number;
+    lng: number;
+  };
   address: string;
+  pincode: string;
+  about: string;
+  distance: {
+    airport: string;
+    railway: string;
+    bus: string;
+  };
   images: {
     src: string;
     thumb: string;
     caption: string;
     hash: string;
   }[];
-  roomCategories: { name: string; size: string, count: number }[];
-  priceBase: number;
-  rating: number;
-  about: string;
+  roomCategories: {
+    name: string;
+    count: number;
+    size: string;
+  }[];
   facilities: {
     pool: boolean;
     spa: boolean;
@@ -26,7 +39,27 @@ export interface Hotel {
     checkIn: string;
     checkOut: string;
   };
+  diningCount: number;
+  banquetCount: number;
+  basePrice: number;
+  dynamicPrice: number;
+  tags: string[];
+  affiliate: {
+    booking: string;
+    agoda: string;
+    expedia: string;
+    tripadvisor: string;
+  };
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+    slug: string;
+  };
+  createdAt: string;
+  updatedAt: string;
 }
+
 
 export interface Package {
   id: string;

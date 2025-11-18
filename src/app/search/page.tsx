@@ -11,14 +11,14 @@ export default function SearchPage({
   const query = searchParams?.q?.toLowerCase() || '';
 
   const filteredHotels = query
-    ? hotels.filter(
+    ? (hotels as Hotel[]).filter(
         (hotel: Hotel) =>
           hotel.name.toLowerCase().includes(query) ||
           hotel.city.toLowerCase().includes(query) ||
           hotel.state.toLowerCase().includes(query) ||
           hotel.brand.toLowerCase().includes(query)
       )
-    : hotels;
+    : (hotels as Hotel[]);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -36,7 +36,7 @@ export default function SearchPage({
       {filteredHotels.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredHotels.map((hotel) => (
-            <HotelCard key={hotel.id} hotel={hotel} />
+            <HotelCard key={hotel.hotelId} hotel={hotel} />
           ))}
         </div>
       ) : (

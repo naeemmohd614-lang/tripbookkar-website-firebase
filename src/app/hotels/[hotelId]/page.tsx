@@ -2,11 +2,12 @@
 import { hotels } from '@/lib/data';
 import Image from 'next/image';
 import { useParams, notFound } from 'next/navigation';
-import { Star, MapPin, Wifi, Dumbbell, Utensils, Sprout, Ruler, ParkingCircle, Dog, Clock, CheckCircle, XCircle } from 'lucide-react';
+import { Star, MapPin, Wifi, Dumbbell, Sprout, Ruler, ParkingCircle, Dog, Clock, CheckCircle, XCircle, Building, Award } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Hotel } from '@/lib/types';
 
 const facilityIcons: { [key: string]: React.ReactNode } = {
     pool: <svg className="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5.42 12.63 2 16.05h5.5l-3.52-3.52a.78.78 0 0 1 1.1-1.1L8.6 15.05V10h.5a2.5 2.5 0 0 1 2.5 2.5v.5a2.5 2.5 0 0 1-2.5 2.5H3"/><path d="M18.58 12.63 15 16.05h5.5l-3.52-3.52a.78.78 0 0 1 1.1-1.1L21.6 15.05V10h.5a2.5 2.5 0 0 1 2.5 2.5v.5a2.5 2.5 0 0 1-2.5 2.5H16"/><path d="M10 6.5a2.5 2.5 0 0 1 5 0v11a2.5 2.5 0 0 1-5 0v-11Z"/></svg>,
@@ -20,7 +21,7 @@ const facilityIcons: { [key: string]: React.ReactNode } = {
 export default function HotelDetailPage() {
   const params = useParams();
   const hotelId = params.hotelId as string;
-  const hotel = hotels.find((h) => h.id === hotelId);
+  const hotel = (hotels as Hotel[]).find((h) => h.hotelId === hotelId);
 
   if (!hotel) {
     notFound();
@@ -58,10 +59,12 @@ export default function HotelDetailPage() {
                                         {hotel.address}
                                     </CardDescription>
                                 </div>
-                                <div className="flex items-center gap-1 bg-green-600 text-white px-3 py-1.5 rounded-lg text-lg font-bold">
-                                    <Star className="w-5 h-5 fill-white" />
-                                    <span>{hotel.rating.toFixed(1)}</span>
-                                </div>
+                                {hotel.rating && (
+                                    <div className="flex items-center gap-1 bg-green-600 text-white px-3 py-1.5 rounded-lg text-lg font-bold">
+                                        <Star className="w-5 h-5 fill-white" />
+                                        <span>{hotel.rating.toFixed(1)}</span>
+                                    </div>
+                                )}
                             </div>
                             
                              <Separator className="my-6" />
@@ -72,6 +75,18 @@ export default function HotelDetailPage() {
                             </div>
 
                             <Separator className="my-6" />
+                             <div className="grid grid-cols-2 gap-4 text-muted-foreground">
+                                <div className="flex items-center">
+                                    <Building className="w-5 h-5 mr-2" />
+                                    <span>{hotel.diningCount} Dining Options</span>
+                                </div>
+                                <div className="flex items-center">
+                                    <Award className="w-5 h-5 mr-2" />
+                                    <span>{hotel.banquetCount} Banquet Halls</span>
+                                </div>
+                            </div>
+                            <Separator className="my-6" />
+
 
                             <div>
                                 <h3 className="text-xl font-headline font-bold text-brand-blue mb-4">Room Categories</h3>
@@ -108,7 +123,7 @@ export default function HotelDetailPage() {
                                                     {icon}
                                                     <span>{facilityName}</span>
                                                 </div>
-                                            )
+val                                            )
                                         }
                                         return null;
                                     })}
@@ -138,7 +153,7 @@ export default function HotelDetailPage() {
                                 <div>
                                     <p className="text-muted-foreground">Starting from</p>
                                     <p className="font-bold text-3xl text-primary">
-                                        ₹{hotel.priceBase.toLocaleString()}
+                                        ₹{hotel.basePrice.toLocaleString()}
                                         <span className="text-lg font-normal text-muted-foreground">/night</span>
                                     </p>
                                 </div>
