@@ -1,104 +1,207 @@
-// This script is intended to be run in a Node.js environment.
-// It simulates reading hotel data, finding corresponding local images,
-// and preparing them for upload to Firebase Storage and Firestore.
+// =============================================
+// TRIPBOOKKAR IMAGE PIPELINE
+// WebP + Thumbnail + Hash Dedupe + Firestore Sync
+// =============================================
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
+const fetch = require("node-fetch");
+const crypto = require("crypto");
+const sharp = require("sharp");
+const pLimit = require("p-limit");
 
-// In a real implementation, you would use the Firebase Admin SDK
-// const admin = require('firebase-admin');
-//
-// admin.initializeApp({
-//   credential: admin.credential.applicationDefault(),
-//   storageBucket: 'your-project-id.appspot.com'
-// });
-//
-// const db = admin.firestore();
-// const bucket = admin.storage().bucket();
+const admin = require("firebase-admin");
 
-const dataPath = path.join(__dirname, '../src/data');
-const hotelsFilePath = path.join(dataPath, 'new-hotels.json');
-const imagesBasePath = path.join(dataPath, 'images');
+// ------------------------------
+// Firebase Admin Setup
+// ------------------------------
+const SERVICE_ACCOUNT = path.join(__dirname, "..", "serviceAccountKey.json");
 
-/**
- * Simulates uploading a file to Firebase Storage.
- * @param {string} filePath The local path to the file.
- * @param {string} destination The destination path in the storage bucket.
- * @returns {Promise<string>} The simulated public URL of the uploaded file.
- */
-async function uploadImage(filePath, destination) {
-  console.log(`Uploading ${filePath} to ${destination}...`);
-  // In a real implementation:
-  // await bucket.upload(filePath, { destination });
-  // const publicUrl = `https://storage.googleapis.com/${bucket.name}/${destination}`;
-  // return publicUrl;
-
-  // Simulate public URL
-  const publicUrl = `https://storage.googleapis.com/your-bucket/${destination}`;
-  console.log(`  > Uploaded. Public URL: ${publicUrl}`);
-  return publicUrl;
+if (!fs.existsSync(SERVICE_ACCOUNT)) {
+  console.error("❌ ERROR: serviceAccountKey.json missing in root directory.");
+  process.exit(1);
 }
 
-/**
- * Simulates adding or updating a document in Firestore.
- * @param {string} collectionPath The path to the Firestore collection.
- * @param {string} docId The ID of the document.
- * @param {object} data The data to set on the document.
- */
-async function syncHotelToFirestore(collectionPath, docId, data) {
-  console.log(`\nSyncing hotel ${docId} to Firestore collection '${collectionPath}'...`);
-  // In a real implementation:
-  // const docRef = db.collection(collectionPath).doc(docId);
-  // await docRef.set(data, { merge: true });
-  console.log(`  > Synced ${docId} successfully.`);
+admin.initializeApp({
+  credential: admin.credential.cert(require(SERVICE_ACCOUNT)),
+  storageBucket: process.env.FIREBASE_PROJECT_ID + ".appspot.com",
+});
+
+const db = admin.firestore();
+const bucket = admin.storage().bucket();
+
+// ------------------------------
+// Paths
+// ------------------------------
+const ROOT = path.join(__dirname, "..");
+const IMAGES_ROOT = path.join(ROOT, "data", "images");
+const INPUT_JSON = path.join(ROOT, "data", "new-hotels.json");
+
+// ------------------------------
+// Settings
+// ------------------------------
+const CONCURRENCY = 5;
+const WEBP_QUALITY = 80;
+const RETRY_COUNT = 3;
+
+// ------------------------------
+// Helper Functions
+// ------------------------------
+function slugify(s) {
+  return s.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-");
 }
+
+function sha256(buffer) {
+  return crypto.createHash("sha256").update(buffer).digest("hex");
+}
+
+async function downloadImage(url) {
+  for (let attempt = 1; attempt <= RETRY_COUNT; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.buffer();
+    } catch (err) {
+      console.log(`Retry ${attempt} failed: ${url}`);
+      if (attempt === RETRY_COUNT) return null;
+    }
+  }
+}
+
+// ------------------------------
+// Storage Upload
+// ------------------------------
+async function uploadToStorage(buffer, destPath) {
+  const file = bucket.file(destPath);
+
+  await file.save(buffer, {
+    metadata: { contentType: "image/webp" },
+    public: true,
+  });
+
+  await file.makePublic();
+
+  return `https://storage.googleapis.com/${bucket.name}/${destPath}`;
+}
+
+// ------------------------------
+// Main Image Processor
+// ------------------------------
+async function processImage(hotel, imgPath, caption = "") {
+  let buffer;
+
+  const isURL = imgPath.startsWith("http");
+  const hotelFolder = path.join(IMAGES_ROOT, hotel.id);
+
+  if (isURL) {
+    buffer = await downloadImage(imgPath);
+  } else {
+    const localPath = path.join(hotelFolder, imgPath);
+    if (!fs.existsSync(localPath)) return null;
+    buffer = fs.readFileSync(localPath);
+  }
+
+  if (!buffer) return null;
+
+  // Compute SHA256 hash
+  const hash = sha256(buffer);
+
+  // Check Firestore if image hash exists
+  const hashRef = db.collection("image_hashes").doc(hash);
+  const hashDoc = await hashRef.get();
+  if (hashDoc.exists) {
+    console.log(`⚠ Duplicate skipped: ${imgPath}`);
+    return {
+      src: hashDoc.data().src,
+      thumb: hashDoc.data().thumb,
+      caption,
+      hash
+    };
+  }
+
+  // Convert to WebP + Thumbnail
+  const webpBuffer = await sharp(buffer).webp({ quality: WEBP_QUALITY }).toBuffer();
+  const thumbBuffer = await sharp(buffer).resize(400).webp({ quality: WEBP_QUALITY - 20 }).toBuffer();
+
+  // Upload Paths
+  const brandSlug = slugify(hotel.brand);
+  const basePath = `hotels/${brandSlug}/${hotel.id}/${Date.now()}-${slugify(caption) || "img"}`;
+
+  const webpPath = `${basePath}.webp`;
+  const thumbPath = `${basePath}-thumb.webp`;
+
+  const srcUrl = await uploadToStorage(webpBuffer, webpPath);
+  const thumbUrl = await uploadToStorage(thumbBuffer, thumbPath);
+
+  // Save hash
+  await hashRef.set({
+    hotelId: hotel.id,
+    brand: hotel.brand,
+    src: srcUrl,
+    thumb: thumbUrl,
+    createdAt: new Date(),
+  });
+
+  return {
+    src: srcUrl,
+    thumb: thumbUrl,
+    caption,
+    hash
+  };
+}
+
+// ------------------------------
+// Process Hotel
+// ------------------------------
+async function processHotel(hotel) {
+  console.log(`\n🏨 Processing hotel: ${hotel.name}`);
+
+  const hotelImages = [];
+
+  const images = hotel.images || [];
+
+  const limit = pLimit(CONCURRENCY);
+
+  const jobs = images.map(img =>
+    limit(() => processImage(hotel, img.src || img, img.caption || ""))
+  );
+
+  const processed = await Promise.all(jobs);
+
+  processed.forEach(p => {
+    if (p) hotelImages.push(p);
+  });
+
+  // Save to Firestore
+  await db.collection("hotels").doc(hotel.id).set(
+    {
+      images: hotelImages,
+      updatedAt: new Date(),
+    },
+    { merge: true }
+  );
+
+  console.log(`✔ Done: ${hotelImages.length} images for → ${hotel.name}`);
+}
+
+// ------------------------------
+// ENTRY POINT
+// ------------------------------
 
 async function main() {
-  console.log('Starting image upload and data sync process...');
-
-  if (!fs.existsSync(hotelsFilePath)) {
-    console.error(`Error: Hotel data file not found at ${hotelsFilePath}`);
+  if (!fs.existsSync(INPUT_JSON)) {
+    console.log("❌ new-hotels.json missing");
     return;
   }
 
-  const hotels = JSON.parse(fs.readFileSync(hotelsFilePath, 'utf-8'));
+  const hotels = JSON.parse(fs.readFileSync(INPUT_JSON, "utf8"));
 
   for (const hotel of hotels) {
-    console.log(`\nProcessing hotel: ${hotel.name} (${hotel.hotelId})`);
-    const hotelImageDir = path.join(imagesBasePath, hotel.hotelId);
-
-    if (!fs.existsSync(hotelImageDir)) {
-      console.warn(`  > Warning: Image directory not found for hotel '${hotel.name}' at ${hotelImageDir}. Skipping image processing.`);
-    } else {
-        const imageFiles = fs.readdirSync(hotelImageDir);
-        const updatedImages = [];
-
-        for (const imageFile of imageFiles) {
-            const localImagePath = path.join(hotelImageDir, imageFile);
-            const storageDestination = `hotels/${hotel.hotelId}/${imageFile}`;
-            
-            // This is where the upload would happen
-            const publicUrl = await uploadImage(localImagePath, storageDestination);
-            
-            updatedImages.push({
-                src: publicUrl,
-                thumb: publicUrl.replace(/(\.[\w\d_-]+)$/i, '_thumb$1'), // Placeholder for thumb
-                caption: path.parse(imageFile).name.replace(/[-_]/g, ' '),
-                hash: 'sha256-placeholder-hash',
-            });
-        }
-        
-        if (updatedImages.length > 0) {
-            hotel.images = updatedImages;
-            console.log(`  > Updated image data for ${hotel.name}.`);
-        }
-    }
-
-    // After processing images, sync the entire hotel object to Firestore
-    await syncHotelToFirestore('hotels', hotel.hotelId, hotel);
+    hotel.id = slugify(hotel.name);
+    await processHotel(hotel);
   }
 
-  console.log('\nProcess finished.');
+  console.log("\n🎉 IMAGE PIPELINE COMPLETED SUCCESSFULLY!");
 }
 
-main().catch(console.error);
+main();
