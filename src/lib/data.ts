@@ -1,8 +1,9 @@
 
 
+
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
-import type { Destination, Brand, State, City, Hotel, MonthDestination } from './types';
+import type { Destination, Brand, State, City, Hotel, MonthDestination, Attraction } from './types';
 
 import marriottHotels from '@/data/marriott.json';
 import oberoiHotels from '@/data/oberoi.json';
@@ -14,6 +15,7 @@ import brands from '@/data/brands.json';
 import states from '@/data/states.json';
 import cities from '@/data/cities.json';
 import featuredPackages from '@/data/packages.json';
+import { attractions as attractionsData } from '@/data/attractions';
 
 // Helper to create a slug from a string
 function slugify(text: string) {
@@ -50,6 +52,7 @@ export { brands };
 export { states };
 export { cities };
 export { featuredPackages };
+export const attractions: Attraction[] = attractionsData;
 
 
 export const popularDestinations: Destination[] = [

@@ -132,6 +132,29 @@ export interface City {
     totalHotels: number;
 }
 
+export interface Attraction {
+    attractionId: string;
+    name: string;
+    city: string;
+    cityId: string;
+    image: {
+        src: string;
+        caption: string;
+    };
+    description: string;
+    timing: string;
+    fees: {
+        type: string;
+        amount: string;
+    }[];
+    bestTimeToVisit: string;
+    distances: {
+        from: string;
+        distance: string;
+    }[];
+    notes?: string[];
+}
+
 export interface UserProfile {
   name: string;
   phone: string;

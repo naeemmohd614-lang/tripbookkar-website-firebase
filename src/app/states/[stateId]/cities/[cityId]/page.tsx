@@ -1,14 +1,19 @@
 
 'use client';
-import { cities, hotels, states } from '@/lib/data';
+import { cities, hotels, states, attractions } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
-import type { City, Hotel, State } from '@/lib/types';
+import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
+
+// Helper function to create a slug
+function slugify(text: string) {
+    return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+}
 
 export default function CityPage() {
   const params = useParams();
@@ -44,43 +49,7 @@ export default function CityPage() {
         { icon: Utensils, text: 'Rich Culinary Heritage', color: 'text-green-500' },
     ];
 
-    const jaipurAttractions = [
-        { 
-          name: 'Amer Fort', 
-          location: 'Jaipur',
-          image: 'https://picsum.photos/seed/amer-fort/600/400',
-          caption: 'amer fort',
-          description: "A stunning example of Rajput architecture, Amer Fort is a majestic fortress-palace overlooking Maota Lake. Explore its intricate courtyards, halls, and the breathtaking Sheesh Mahal (Mirror Palace)."
-        },
-        { 
-          name: 'Hawa Mahal', 
-          location: 'Jaipur',
-          image: 'https://picsum.photos/seed/hawa-mahal/600/400',
-          caption: 'hawa mahal',
-          description: "The 'Palace of Winds', Hawa Mahal is an iconic five-story honeycomb-like structure with 953 windows. It allowed royal women to observe street festivities unseen from the outside."
-        },
-        { 
-          name: 'City Palace', 
-          location: 'Jaipur',
-          image: 'https://picsum.photos/seed/city-palace-jaipur/600/400',
-          caption: 'jaipur city palace',
-          description: "A sprawling complex of palaces, courtyards, and gardens, the City Palace is a beautiful blend of Rajasthani and Mughal architecture. It is still home to the former royal family of Jaipur."
-        },
-        { 
-          name: 'Jantar Mantar', 
-          location: 'Jaipur',
-          image: 'https://picsum.photos/seed/jantar-mantar-jaipur/600/400',
-          caption: 'jantar mantar observatory',
-          description: "A UNESCO World Heritage site, Jantar Mantar is an astronomical observatory featuring the world's largest stone sundial. It consists of 19 large-scale instruments for observing celestial positions."
-        },
-        { 
-          name: 'Nahargarh Fort', 
-          location: 'Jaipur',
-          image: 'https://picsum.photos/seed/nahargarh-fort-jaipur/600/400',
-          caption: 'nahargarh fort view',
-          description: "Standing on the edge of the Aravalli Hills, Nahargarh Fort offers breathtaking panoramic views of the entire city. It once formed a strong defense ring for Jaipur along with Amer Fort and Jaigarh Fort."
-        },
-      ];
+    const jaipurAttractions: Attraction[] = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'jaipur');
 
     return (
         <div>
@@ -138,19 +107,21 @@ export default function CityPage() {
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Jaipur</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {jaipurAttractions.map(attraction => (
-                            <Card key={attraction.name} className="overflow-hidden">
-                                <CardHeader className="p-0">
-                                    <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48" data-ai-hint={attraction.caption} />
-                                </CardHeader>
-                                <CardContent className="p-4">
-                                    <h3 className="font-bold text-lg">{attraction.name}</h3>
-                                    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
-                                    <MapPin className="w-3 h-3" />
-                                    {attraction.location}
-                                    </div>
-                                    <p className="text-sm text-muted-foreground mt-2">{attraction.description}</p>
-                                </CardContent>
-                            </Card>
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.name}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+                                            <MapPin className="w-3 h-3" />
+                                            {attraction.city}
+                                        </div>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         ))}
                     </div>
                 </div>
