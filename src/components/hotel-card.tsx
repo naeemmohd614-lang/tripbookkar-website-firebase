@@ -60,7 +60,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           </p>
         </div>
         <Button asChild>
-          <Link href={`/hotels/${hotel.hotelId}`}>View Details</Link>
+          <Link href={`/brands/${hotel.brandSlug}/hotels/${hotel.hotelId}`}>View Details</Link>
         </Button>
       </CardFooter>
     </Card>
