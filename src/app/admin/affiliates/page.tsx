@@ -1,16 +1,19 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useFirestore } from '@/firebase';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot, doc } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useForm } from 'react-hook-form';
+import { setDocumentNonBlocking } from '@/firebase';
+import { useToast } from '@/hooks/use-toast';
 
 export default function AdminAffiliatesPage() {
     const [affiliates, setAffiliates] = useState<any[]>([]);
     const firestore = useFirestore();
     const { register, handleSubmit, reset } = useForm();
+    const { toast } = useToast();
 
     useEffect(() => {
         if (!firestore) return;
@@ -25,9 +28,24 @@ export default function AdminAffiliatesPage() {
     }, [firestore, reset]);
 
     const onSubmit = (data: any) => {
-        console.log("Saving affiliate data...", data);
-        // Here you would typically save the data to Firestore
-        // For example: setDoc(doc(firestore, 'affiliates', data.id), data, { merge: true });
+        if (!firestore || affiliates.length === 0) return;
+        const affiliateId = affiliates[0].id;
+        if (!affiliateId) {
+            toast({
+                variant: 'destructive',
+                title: 'Error',
+                description: 'No affiliate document ID found.',
+            });
+            return;
+        }
+        const docRef = doc(firestore, 'affiliates', affiliateId);
+        // We are not awaiting this, just firing and forgetting
+        setDocumentNonBlocking(docRef, data, { merge: true });
+        
+        toast({
+            title: 'Affiliates Updated',
+            description: 'Your affiliate IDs have been saved.',
+        });
     };
 
     return (
