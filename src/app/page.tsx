@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import SearchForm from "@/components/search-form";
 import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
-import { popularDestinations, featuredPackages } from "@/lib/data";
+import { popularDestinations, featuredPackages, destinationsByMonth } from "@/lib/data";
 
 export default function Home() {
   const heroImage = {
@@ -86,6 +86,58 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="destinations-by-month" className="py-16 md:py-24 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
+              Destinations By Month
+            </h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Find the perfect place to travel for every month of the year.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {destinationsByMonth.map((month) => {
+              const monthImageHints = {
+                'January': 'winter snow',
+                'February': 'northern lights',
+                'March': 'cherry blossom',
+                'April': 'tulip field',
+                'May': 'venice canal',
+                'June': 'tropical beach',
+                'July': 'savannah elephant',
+                'August': 'bali temple',
+                'September': 'jungle elephant',
+                'October': 'autumn lake',
+                'November': 'vietnam rice',
+                'December': 'skiing mountain',
+              };
+              const destImage = {
+                  "src": `https://picsum.photos/seed/${month.imageId}/1080/400`,
+                  "caption": monthImageHints[month.name as keyof typeof monthImageHints] || "travel destination"
+              };
+              return (
+                <Link href={`/destinations/${month.slug}`} key={month.name}>
+                  <Card className="overflow-hidden group relative h-24 hover:shadow-xl transition-shadow duration-300">
+                    <Image
+                      src={destImage.src}
+                      alt={month.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-ai-hint={destImage.caption}
+                    />
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                      <h3 className="font-bold text-xl text-white font-headline tracking-wider">{month.name}</h3>
+                    </div>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
 
       <Separator />
 

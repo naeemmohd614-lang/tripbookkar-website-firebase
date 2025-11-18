@@ -1,4 +1,5 @@
 
+
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -98,6 +99,12 @@ export interface Destination {
   city: string;
   state: string;
   imageId: string;
+}
+
+export interface MonthDestination {
+    name: string;
+    imageId: string;
+    slug: string;
 }
 
 export interface Brand {

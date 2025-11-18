@@ -2,7 +2,7 @@
 
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
-import type { Destination, Brand, State, City, Hotel } from './types';
+import type { Destination, Brand, State, City, Hotel, MonthDestination } from './types';
 
 import marriottHotels from '@/data/marriott.json';
 import oberoiHotels from '@/data/oberoi.json';
@@ -57,4 +57,19 @@ export const popularDestinations: Destination[] = [
   { city: 'Jaipur', state: 'Rajasthan', imageId: 'dest-jaipur' },
   { city: 'Alleppey', state: 'Kerala', imageId: 'dest-kerala' },
   { city: 'Mumbai', state: 'Maharashtra', imageId: 'dest-mumbai' },
+];
+
+export const destinationsByMonth: MonthDestination[] = [
+    { name: 'January', imageId: 'month-jan', slug: 'january' },
+    { name: 'February', imageId: 'month-feb', slug: 'february' },
+    { name: 'March', imageId: 'month-mar', slug: 'march' },
+    { name: 'April', imageId:- 'month-apr', slug: 'april' },
+    { name: 'May', imageId: 'month-may', slug: 'may' },
+    { name: 'June', imageId: 'month-jun', slug: 'june' },
+    { name: 'July', imageId: 'month-jul', slug: 'july' },
+    { name: 'August', imageId: 'month-aug', slug: 'august' },
+    { name: 'September', imageId: 'month-sep', slug: 'september' },
+    { name: 'October', imageId: 'month-oct', slug: 'october' },
+    { name: 'November', imageId: 'month-nov', slug: 'november' },
+    { name: 'December', imageId: 'month-dec', slug: 'december' },
 ];
