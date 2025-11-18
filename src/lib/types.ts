@@ -1,5 +1,4 @@
 
-
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -153,6 +152,7 @@ export interface Attraction {
         distance: string;
     }[];
     notes?: string[];
+    nearbyHotels?: string[];
 }
 
 export interface UserProfile {

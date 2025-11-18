@@ -3,11 +3,12 @@
 
 import { useParams, notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { attractions } from '@/lib/data';
-import type { Attraction } from '@/lib/types';
+import Link from 'next/link';
+import { attractions, hotels } from '@/lib/data';
+import type { Attraction, Hotel } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Clock, Ticket, CalendarCheck, MapPin, Bus, Train, Plane, Info } from 'lucide-react';
+import { ArrowLeft, Clock, Ticket, CalendarCheck, MapPin, Bus, Train, Plane, Info, Hotel as HotelIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 export default function AttractionPage() {
@@ -74,6 +75,33 @@ export default function AttractionPage() {
                                 )}
                             </CardContent>
                         </Card>
+                        
+                        {attraction.nearbyHotels && attraction.nearbyHotels.length > 0 && (
+                            <Card className="mt-8">
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-2">
+                                        <HotelIcon className="w-6 h-6 text-primary" />
+                                        Nearby Hotels
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {attraction.nearbyHotels.map(hotelName => {
+                                            const hotel = (hotels as Hotel[]).find(h => h.name === hotelName);
+                                            if (!hotel) return null;
+                                            return (
+                                                <Link key={hotel.hotelId} href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.hotelId}`}>
+                                                    <div className="p-3 rounded-md border hover:bg-accent transition-colors">
+                                                        <h4 className="font-semibold text-primary">{hotel.name}</h4>
+                                                        <p className="text-sm text-muted-foreground">{hotel.brand}</p>
+                                                    </div>
+                                                </Link>
+                                            )
+                                        })}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        )}
                     </div>
 
                     <div className="lg:col-span-1">

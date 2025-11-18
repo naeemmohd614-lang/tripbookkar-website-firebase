@@ -26,12 +26,12 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
             { from: "Jaipur International Airport", distance: "22 km" },
             { from: "Jaipur Railway Station", distance: "13 km" },
             { from: "Sindhi Camp Bus Stand", distance: "12 km" },
-            { from: "Rambagh Palace", distance: "14 km" },
         ],
         notes: [
             "Elephant rides are available to ascend the fort, but have specific timings.",
             "It's advisable to hire a guide to understand the rich history.",
-        ]
+        ],
+        nearbyHotels: ["Rambagh Palace, Jaipur", "Jaipur Marriott Hotel"]
     },
     {
         name: 'Hawa Mahal',
@@ -56,7 +56,8 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         notes: [
             "Best viewed from the cafes across the road for a perfect photograph.",
             "It is part of the City Palace complex, so a composite ticket can be purchased.",
-        ]
+        ],
+        nearbyHotels: ["Rambagh Palace, Jaipur", "Jaipur Marriott Hotel", "The Raj Palace"]
     },
     {
         name: 'City Palace',
@@ -79,6 +80,7 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
             { from: "Jaipur Railway Station", distance: "5 km" },
             { from: "Sindhi Camp Bus Stand", distance: "4 km" },
         ],
+        nearbyHotels: ["Rambagh Palace, Jaipur", "Jaipur Marriott Hotel", "The Raj Palace"]
     },
     {
         name: 'Jantar Mantar',
@@ -100,7 +102,8 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
             { from: "Jaipur Railway Station", distance: "5 km" },
             { from: "Sindhi Camp Bus Stand", distance: "4 km" },
         ],
-        notes: [ "Hiring a guide is highly recommended to understand how each instrument works." ]
+        notes: [ "Hiring a guide is highly recommended to understand how each instrument works." ],
+        nearbyHotels: ["Rambagh Palace, Jaipur", "Jaipur Marriott Hotel", "The Raj Palace"]
     },
     {
         name: 'Nahargarh Fort',
@@ -125,7 +128,8 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         notes: [
             "The road to the fort is steep and winding.",
             "The fort has a restaurant and a wax museum inside.",
-        ]
+        ],
+        nearbyHotels: ["Rambagh Palace, Jaipur", "Jaipur Marriott Hotel"]
     },
 ];
 
