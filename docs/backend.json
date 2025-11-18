@@ -144,6 +144,37 @@
         "price"
       ]
     },
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Represents a public user's profile.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the UserProfile, same as Firebase Auth UID."
+        },
+        "name": {
+          "type": "string",
+          "description": "User's display name."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp of when the user account was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "createdAt"
+      ]
+    },
     "Affiliate": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Affiliate",
@@ -280,7 +311,8 @@
   "auth": {
     "providers": [
       "password",
-      "anonymous"
+      "anonymous",
+      "google.com"
     ],
     "customClaims": [
       {
@@ -320,6 +352,22 @@
             {
               "name": "packageId",
               "description": "Unique identifier for the travel package."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores public user profile information.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The user's unique ID from Firebase Authentication."
             }
           ]
         }
