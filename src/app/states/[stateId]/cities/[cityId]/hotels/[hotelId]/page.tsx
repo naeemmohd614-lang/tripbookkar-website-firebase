@@ -84,34 +84,17 @@ export default function HotelDetailPage() {
           <div className="lg:col-span-1">
             <Card className="sticky top-24 shadow-lg">
               <CardHeader>
-                <CardTitle>Book Your Stay</CardTitle>
-                <CardDescription>Prices start from</CardDescription>
-                <p className="text-3xl font-bold text-brand-blue">₹{hotel.basePrice.toLocaleString()}<span className="text-sm font-normal text-muted-foreground">/night</span></p>
+                <CardTitle>Contact Hotel</CardTitle>
+                <CardDescription>For inquiries and bookings</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                        <span className="text-muted-foreground flex items-center gap-2"><Sun className="w-5 h-5"/> Check-in time</span>
-                        <span className="font-semibold">{hotel.facilities.checkIn}</span>
-                    </div>
-                     <div className="flex items-center justify-between">
-                        <span className="text-muted-foreground flex items-center gap-2"><Moon className="w-5 h-5"/> Check-out time</span>
-                        <span className="font-semibold">{hotel.facilities.checkOut}</span>
-                    </div>
-                    {hotel.rating && (
-                         <div className="flex items-center justify-between">
-                            <span className="text-muted-foreground">Rating</span>
-                            <div className="flex items-center gap-1 bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold">
-                                <Star className="w-4 h-4 fill-white" />
-                                <span>{hotel.rating.toFixed(1)}</span>
-                            </div>
-                        </div>
-                    )}
-                </div>
+                <p className="text-sm text-muted-foreground">
+                    To get the best price or to know more about this property, please contact us.
+                </p>
               </CardContent>
               <CardFooter className="flex-col gap-2">
-                <Button size="lg" className="w-full">Book Now</Button>
-                <Button size="lg" variant="secondary" className="w-full">Contact Hotel</Button>
+                <Button size="lg" className="w-full">Enquire Now</Button>
+                <Button size="lg" variant="secondary" className="w-full">Call Now</Button>
               </CardFooter>
             </Card>
           </div>

@@ -3,14 +3,16 @@
  *
  * Core Philosophy:
  * This ruleset enforces a role-based access control model where only authenticated administrators
- * with a custom claim `admin: true` can read and write data.
+ * with a custom claim `admin: true` can read and write most data.
+ * Leads can be created by anyone, but only read by admins.
  *
  * Data Structure:
  * The Firestore database is organized into several top-level collections: `hotels`, `packages`,
  * `affiliates`, `pricingRules`, `seoPages`, `leads`, and `admin`.
  *
  * Key Security Decisions:
- * - **Admin-Only Access:** All read and write operations are restricted to authenticated admins.
+ * - **Admin-Only Access:** Most read and write operations are restricted to authenticated admins.
+ * - **Public Lead Creation:** Anyone can create a document in the 'leads' collection.
  * - **No Public Listing:** List operations are secured to prevent unauthorized data access.
  * - **Custom Claims for Authorization:** The rules check for `request.auth.token.admin == true` to grant admin privileges.
  */
@@ -92,12 +94,12 @@ service cloud.firestore {
     /**
      * @description Rules for the /leads collection.
      * @path /leads/{leadId}
-     * @allow (read, write) If the user is an admin.
-     * @deny (read, write) If the user is not an admin.
-     * @principle Admin-Only Access: Only admins can manage lead data.
+     * @allow create: if true; // Anyone can create a lead
+     * @allow read, update, delete: if isAdmin(); // Only admins can manage leads
      */
     match /leads/{leadId} {
-      allow read, write: if isAdmin();
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
     }
     
     /**
