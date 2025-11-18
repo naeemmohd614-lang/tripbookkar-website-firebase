@@ -4,7 +4,7 @@
 import { states, hotels, cities as allCities } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Surf } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap } from 'lucide-react';
 import type { State, Hotel, City } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -75,17 +75,17 @@ export default function StatePage() {
 
   const rajasthanCarouselImages = [
     {
-      src: 'https://picsum.photos/seed/rajasthan-carousel-1/1200/600',
+      src: 'https://picsum.photos/seed/jaisalmer-fort/1200/600',
       caption: 'Jaisalmer Fort',
       'data-ai-hint': 'jaisalmer fort'
     },
     {
-      src: 'https://picsum.photos/seed/rajasthan-carousel-2/1200/600',
+      src: 'https://picsum.photos/seed/hawa-mahal/1200/600',
       caption: 'Hawa Mahal, Jaipur',
       'data-ai-hint': 'hawa mahal'
     },
     {
-      src: 'https://picsum.photos/seed/rajasthan-carousel-3/1200/600',
+      src: 'https://picsum.photos/seed/udaipur-lake/1200/600',
       caption: 'Lake Pichola, Udaipur',
       'data-ai-hint': 'udaipur lake'
     }
@@ -255,7 +255,7 @@ export default function StatePage() {
   const goaHighlights = [
     { icon: Waves, text: 'Pristine Beaches', color: 'text-sky-500' },
     { icon: Martini, text: 'Vibrant Nightlife', color: 'text-pink-500' },
-    { icon: Surf, text: 'Water Sports', color: 'text-orange-500' },
+    { icon: Zap, text: 'Water Sports', color: 'text-orange-500' },
   ];
 
   const goaMajorAreas = [
