@@ -391,5 +391,13 @@
     "image": "",
     "description": "Home to the revered Somnath Temple, one of the twelve Jyotirlinga shrines of Lord Shiva.",
     "totalHotels": 30
+  },
+  {
+    "cityId": "kevadia",
+    "stateId": "gujarat",
+    "name": "Kevadia",
+    "image": "",
+    "description": "Home to the Statue of Unity, the world's tallest statue.",
+    "totalHotels": 20
   }
 ]
