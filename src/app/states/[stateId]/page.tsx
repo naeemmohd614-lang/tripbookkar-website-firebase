@@ -4,7 +4,7 @@
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Star, ShoppingBag, Paintbrush, Music, HeartPulse, SwatchBook, Bell, Hand, Flower, CableCar, Sprout, BookOpen, Cat } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Star, ShoppingBag, Paintbrush, Music, HeartPulse, SwatchBook, Bell, Hand, Flower, CableCar, Sprout, BookOpen, Cat, Clapperboard, Drama, CookingPot } from 'lucide-react';
 import type { State, Hotel, City, Attraction } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -35,6 +35,139 @@ export default function StatePage() {
       "caption": `landscape ${state.name}`
   };
 
+  if (stateId === 'gujarat') {
+    const gujaratCarouselImages = [
+        { src: 'https://picsum.photos/seed/gujarat-carousel-1/1200/600', caption: 'Rann of Kutch', 'data-ai-hint': 'rann of kutch white desert' },
+        { src: 'https://picsum.photos/seed/gujarat-carousel-2/1200/600', caption: 'Somnath Temple', 'data-ai-hint': 'somnath temple india' },
+        { src: 'https://picsum.photos/seed/gujarat-carousel-3/1200/600', caption: 'Statue of Unity', 'data-ai-hint': 'statue of unity' }
+    ];
+
+    const gujaratHighlights = [
+        { icon: Drama, text: 'Vibrant Culture', color: 'text-orange-500' },
+        { icon: Castle, text: 'Historical Sites', color: 'text-amber-600' },
+        { icon: CookingPot, text: 'Rich Cuisine', color: 'text-red-500' },
+    ];
+    
+    const gujaratCities = ['Ahmedabad', 'Kutch', 'Dwarka', 'Somnath'].map(cityName => {
+      const city = (allCities as City[]).find(c => c.name === cityName);
+      const cityId = city ? city.cityId : slugify(cityName);
+      return {
+        name: cityName,
+        cityId: cityId,
+        image: `https://picsum.photos/seed/city-${cityId}/400/500`,
+        caption: `${cityName} city`
+      };
+    });
+
+    const gujaratAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'gujarat');
+    
+    return (
+      <div>
+        <div className="w-full mb-12">
+          <Carousel className="w-full" opts={{ loop: true }}>
+            <CarouselContent>
+              {gujaratCarouselImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative aspect-[16/7]">
+                    <Image 
+                      src={image.src} 
+                      alt={image.caption} 
+                      fill 
+                      className="object-cover"
+                      data-ai-hint={image['data-ai-hint']}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+          </Carousel>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Gujarat</h1>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Known as the 'Jewel of Western India', Gujarat is a land of vibrant culture, rich history, and diverse landscapes. From the white salt desert of the Rann of Kutch and the sacred temples of Dwarka and Somnath to the bustling city of Ahmedabad and the world's tallest statue, the Statue of Unity, Gujarat offers a kaleidoscope of experiences.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
+            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">October to March</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><Clock className="mx-auto mb-2 h-8 w-8 text-green-500" /><h3 className="font-semibold">Ideal Duration</h3><p className="text-sm text-muted-foreground">6-8 Days</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" /><h3 className="font-semibold">Holiday Packages</h3><p className="text-sm text-muted-foreground">View Packages</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" /><h3 className="font-semibold">Top Hotels</h3><p className="text-sm text-muted-foreground">Find Hotels</p></CardContent></Card>
+          </div>
+
+          <div className="text-center my-16">
+              <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8">Highlights</h2>
+              <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+                  {gujaratHighlights.map(highlight => (
+                      <div key={highlight.text} className="flex flex-col items-center gap-2">
+                          <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                          <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                      </div>
+                  ))}
+              </div>
+          </div>
+
+          <div className="text-center my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Destinations</h2>
+            <p className="mt-2 text-muted-foreground">From ancient temples to modern marvels.</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+              {gujaratCities.map(city => (
+                <Link href={`/states/gujarat/cities/${city.cityId}`} key={city.name}>
+                  <Card className="overflow-hidden group relative">
+                    <Image src={city.image} alt={city.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={city.caption} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{city.name}</h3>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Gujarat</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {gujaratAttractions.map(attraction => (
+                 <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                    <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-40 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                        <CardContent className="p-4">
+                            <h3 className="font-bold text-lg">{attraction.name}</h3>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
+                            <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{attraction.description}</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">
+              Top Hotels in Gujarat
+            </h2>
+            {stateHotels.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {stateHotels.map((hotel) => (
+                  <HotelCard key={hotel.hotelId} hotel={hotel} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this state yet.</h3>
+                <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (stateId === 'madhya-pradesh') {
     const mpCarouselImages = [
         { src: 'https://picsum.photos/seed/mp-carousel-1/1200/600', caption: 'Khajuraho Temples', 'data-ai-hint': 'khajuraho temple sculpture' },
@@ -59,7 +192,7 @@ export default function StatePage() {
       };
     });
 
-    const mpAttractions = (attractions as Attraction[]).filter(a => a.city === 'Khajuraho' || a.city === 'Bandhavgarh' || a.city === 'Pachmarhi' || a.city === 'Gwalior' || a.city === 'Bhopal' || a.city === 'Mandu');
+    const mpAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'madhya-pradesh');
     
     return (
       <div>
@@ -192,7 +325,7 @@ export default function StatePage() {
       };
     });
 
-    const tnAttractions = (attractions as Attraction[]).filter(a => a.city === 'Chennai' || a.city === 'Madurai' || a.city === 'Ooty' || a.city === 'Kanyakumari' || a.city === 'Kodaikanal');
+    const tnAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'tamil-nadu');
     
     return (
       <div>
@@ -325,7 +458,7 @@ export default function StatePage() {
       };
     });
 
-    const wbAttractions = (attractions as Attraction[]).filter(a => a.city === 'Kolkata' || a.city === 'Darjeeling');
+    const wbAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'west-bengal');
     
     return (
       <div>
@@ -458,7 +591,7 @@ export default function StatePage() {
       };
     });
 
-    const sikkimAttractions = (attractions as Attraction[]).filter(a => a.city === 'Gangtok' || a.city === 'Pelling' || a.city === 'Namchi');
+    const sikkimAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'sikkim');
     
     return (
       <div>
@@ -591,7 +724,7 @@ export default function StatePage() {
       };
     });
 
-    const jnkAttractions = (attractions as Attraction[]).filter(a => a.city === 'Srinagar' || a.city === 'Gulmarg');
+    const jnkAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'jammu-and-kashmir');
     
     return (
       <div>
@@ -724,7 +857,7 @@ export default function StatePage() {
       };
     });
 
-    const uttarakhandAttractions = (attractions as Attraction[]).filter(a => a.city === 'Rishikesh' || a.city === 'Nainital' || a.city === 'Mussoorie' || a.city === 'Dehradun');
+    const uttarakhandAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'uttarakhand');
     
     return (
       <div>
@@ -857,7 +990,7 @@ export default function StatePage() {
       };
     });
 
-    const himachalAttractions = (attractions as Attraction[]).filter(a => a.city === 'Shimla' || a.city === 'Manali' || a.city === 'Dharamshala' || a.city === 'Dalhousie');
+    const himachalAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'himachal-pradesh');
     
     return (
       <div>
@@ -990,7 +1123,7 @@ export default function StatePage() {
       };
     });
 
-    const upAttractions = (attractions as Attraction[]).filter(a => a.city === 'Agra' || a.city === 'Varanasi' || a.city === 'Lucknow' || a.city === 'Prayagraj' || a.city === 'Mathura');
+    const upAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'uttar-pradesh');
     
     return (
       <div>
@@ -1116,7 +1249,7 @@ export default function StatePage() {
     };
   });
   
-  const rajasthanAttractions = (attractions as Attraction[]).filter(a => a.city === 'Jaipur' || a.city === 'Jodhpur' || a.city === 'Udaipur');
+  const rajasthanAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'rajasthan');
 
 
   const rajasthanCarouselImages = [
@@ -1323,7 +1456,7 @@ export default function StatePage() {
     },
   ];
 
-  const goaAttractions = (attractions as Attraction[]).filter(a => a.city === "North Goa" || a.city === "South Goa");
+  const goaAttractions = (attractions as Attraction[]).filter(a => a.stateId === 'goa');
 
   if (stateId === 'goa') {
     return (
@@ -1563,3 +1696,4 @@ export default function StatePage() {
     </div>
   );
 }
+

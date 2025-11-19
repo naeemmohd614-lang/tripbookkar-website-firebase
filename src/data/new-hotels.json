@@ -1022,5 +1022,37 @@
     "roomCategories": [{ "name": "Luxury Room", "count": 40, "size": "400 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "palace", "luxury", "gwalior"]
+  },
+  {
+    "name": "Hyatt Regency Ahmedabad",
+    "brand": "Hyatt",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "17/A, Ashram Road, Ahmedabad, Gujarat 380014",
+    "about": "Centrally located, this hotel offers easy access to the business district and cultural sites. It features contemporary rooms, diverse dining options, and views of the Sabarmati river.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-ahmedabad-1/1080/720", "caption": "Hyatt Regency Ahmedabad exterior" }
+    ],
+    "roomCategories": [{ "name": "Regency King Room", "count": 210, "size": "387 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "ahmedabad"]
+  },
+  {
+    "name": "The Fern Residency, Somnath",
+    "brand": "The Fern",
+    "city": "Somnath",
+    "state": "Gujarat",
+    "address": "Near Somnath Bypass, Veraval, Gujarat 362266",
+    "about": "An environmentally sensitive hotel, offering a comfortable stay close to the Somnath Temple. It's a great base for pilgrims and leisure travelers.",
+    "basePrice": 5000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/fern-somnath-1/1080/720", "caption": "The Fern Residency exterior" }
+    ],
+    "roomCategories": [{ "name": "Winter Green Room", "count": 56, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["pilgrimage", "somnath", "eco-friendly"]
   }
 ]

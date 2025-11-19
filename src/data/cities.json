@@ -359,5 +359,37 @@
     "image": "",
     "description": "The city of joy, known for its fine Afghan architecture and historic fort.",
     "totalHotels": 20
+  },
+  {
+    "cityId": "ahmedabad",
+    "stateId": "gujarat",
+    "name": "Ahmedabad",
+    "image": "",
+    "description": "A UNESCO World Heritage City, known for its rich history, architecture, and vibrant culture.",
+    "totalHotels": 150
+  },
+  {
+    "cityId": "kutch",
+    "stateId": "gujarat",
+    "name": "Kutch",
+    "image": "",
+    "description": "Famous for the white salt desert of the Rann of Kutch and its vibrant handicrafts.",
+    "totalHotels": 60
+  },
+  {
+    "cityId": "dwarka",
+    "stateId": "gujarat",
+    "name": "Dwarka",
+    "image": "",
+    "description": "An ancient city and a major Hindu pilgrimage site, home to the Dwarkadhish Temple.",
+    "totalHotels": 40
+  },
+  {
+    "cityId": "somnath",
+    "stateId": "gujarat",
+    "name": "Somnath",
+    "image": "",
+    "description": "Home to the revered Somnath Temple, one of the twelve Jyotirlinga shrines of Lord Shiva.",
+    "totalHotels": 30
   }
 ]

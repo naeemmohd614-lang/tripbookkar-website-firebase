@@ -138,6 +138,7 @@ export interface Attraction {
     name: string;
     city: string;
     cityId: string;
+    stateId: string;
     image: {
         src: string;
         caption: string;
