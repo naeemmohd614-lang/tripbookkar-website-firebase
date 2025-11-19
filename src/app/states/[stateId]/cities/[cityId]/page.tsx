@@ -7,7 +7,7 @@ import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Palette, Sun, Sailboat, Music } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Palette, Sun, Sailboat, Music, Zap } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 
@@ -204,7 +204,7 @@ export default function CityPage() {
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Jodhpur</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {jodhpurAttractions.map(attraction => (
-                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.name}>
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
                                 <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
                                     <CardHeader className="p-0">
                                         <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
@@ -295,7 +295,7 @@ export default function CityPage() {
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Udaipur</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {udaipurAttractions.map(attraction => (
-                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.name}>
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
                                 <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
                                     <CardHeader className="p-0">
                                         <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
@@ -385,7 +385,7 @@ export default function CityPage() {
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Jaisalmer</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {jaisalmerAttractions.map(attraction => (
-                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.name}>
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
                                 <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
                                     <CardHeader className="p-0">
                                         <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
