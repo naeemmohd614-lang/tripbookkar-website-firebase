@@ -512,6 +512,30 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         nearbyHotels: ["The Roseate Ganges", "Taj Rishikesh Resort & Spa, Uttarakhand"]
     },
     {
+        name: 'Laxman Jhula',
+        city: 'Rishikesh',
+        cityId: 'rishikesh',
+        image: { src: 'https://picsum.photos/seed/laxman-jhula/1200/600', caption: 'laxman jhula rishikesh' },
+        description: "Similar to Ram Jhula, this is another major suspension bridge across the Ganges. It is said that Laxman, the brother of Lord Ram, crossed the Ganges on jute ropes where this bridge is built.",
+        timing: "5:00 AM - 10:00 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Ram Jhula", distance: "2 km" } ],
+        nearbyHotels: ["The Roseate Ganges", "Aloha on the Ganges"]
+    },
+    {
+        name: 'Triveni Ghat',
+        city: 'Rishikesh',
+        cityId: 'rishikesh',
+        image: { src: 'https://picsum.photos/seed/triveni-ghat/1200/600', caption: 'triveni ghat rishikesh' },
+        description: "The biggest and most famous ghat in Rishikesh, Triveni Ghat is a confluence of three holy rivers: Ganga, Yamuna, and Saraswati. It is a revered place for bathing and for the evening 'Maha Aarti'.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Evening for the Ganga Aarti",
+        distances: [ { from: "Rishikesh Railway Station", distance: "1.5 km" } ],
+        nearbyHotels: ["Hotel Ganga Kinare", "Holy River Hotel"]
+    },
+    {
         name: 'Naini Lake',
         city: 'Nainital',
         cityId: 'nainital',
@@ -522,6 +546,30 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "March to June and October to November",
         distances: [ { from: "Pantnagar Airport", distance: "65 km" } ],
         nearbyHotels: ["The Naini Retreat, by Leisure Hotels", "The Manu Maharani"]
+    },
+    {
+        name: 'Snow View Point',
+        city: 'Nainital',
+        cityId: 'nainital',
+        image: { src: 'https://picsum.photos/seed/snow-view-point/1200/600', caption: 'snow view point nainital' },
+        description: "Accessible by a scenic cable car ride, Snow View Point offers mesmerizing panoramic views of the snow-capped Himalayan peaks like Nanda Devi, Trishul, and Nanda Kot.",
+        timing: "10:30 AM to 5:00 PM (Closed on Saturdays)",
+        fees: [ { type: "Cable Car (two-way)", amount: "₹300 for Adults" } ],
+        bestTimeToVisit: "October to February for clear views",
+        distances: [ { from: "Mallital, Nainital", distance: "2.5 km" } ],
+        nearbyHotels: ["The Naini Retreat", "Shervani Hilltop"]
+    },
+    {
+        name: 'The Mall Road, Nainital',
+        city: 'Nainital',
+        cityId: 'nainital',
+        image: { src: 'https://picsum.photos/seed/nainital-mall-road/1200/600', caption: 'mall road nainital' },
+        description: "A bustling promenade running parallel to the Naini Lake, the Mall Road is the main commercial and cultural hub of Nainital, lined with shops, cafes, and hotels.",
+        timing: "Vehicle entry restricted during peak hours (6 PM - 9 PM)",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Evenings for a lively stroll",
+        distances: [ { from: "Tallital Bus Stand", distance: "1 km" } ],
+        nearbyHotels: ["The Manu Maharani", "Hotel Chevron Fairhavens"]
     },
     {
         name: 'Kempty Falls',
@@ -535,6 +583,18 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         distances: [ { from: "Mussoorie Library Bus Stand", distance: "15 km" } ],
         nearbyHotels: ["JW Marriott Mussoorie Walnut Grove Resort & Spa", "Jaypee Residency Manor"]
     },
+     {
+        name: 'Gun Hill',
+        city: 'Mussoorie',
+        cityId: 'mussoorie',
+        image: { src: 'https://picsum.photos/seed/gun-hill/1200/600', caption: 'gun hill mussoorie' },
+        description: "The second highest peak of Mussoorie, Gun Hill offers a breathtaking 360-degree view of the Himalayan ranges and the Doon Valley. It is accessible by a thrilling cable car ride.",
+        timing: "10:00 AM - 6:00 PM",
+        fees: [ { type: "Cable Car (two-way)", amount: "₹75" } ],
+        bestTimeToVisit: "March to June for clear views",
+        distances: [ { from: "Mall Road, Mussoorie", distance: "400m walk to cable car" } ],
+        nearbyHotels: ["Jaypee Residency Manor", "Welcomhotel by ITC Hotels, The Savoy"]
+    },
     {
         name: 'Robber\'s Cave',
         city: 'Dehradun',
@@ -546,6 +606,18 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "All year round, except monsoons",
         distances: [ { from: "Dehradun Railway Station", distance: "8 km" } ],
         nearbyHotels: ["Hyatt Regency Dehradun", "Four Points by Sheraton Dehradun"]
+    },
+    {
+        name: 'Forest Research Institute',
+        city: 'Dehradun',
+        cityId: 'dehradun',
+        image: { src: 'https://picsum.photos/seed/fri-dehradun/1200/600', caption: 'fri dehradun' },
+        description: "A premier institution in the field of forestry research, the Forest Research Institute (FRI) is also an architectural marvel. Its Greco-Roman style building and vast campus are a popular tourist attraction.",
+        timing: "9:00 AM - 5:30 PM",
+        fees: [ { type: "Entry", amount: "₹10" } ],
+        bestTimeToVisit: "Anytime",
+        distances: [ { from: "Dehradun Railway Station", distance: "6 km" } ],
+        nearbyHotels: ["Hyatt Regency Dehradun", "Lemon Tree Hotel, Dehradun"]
     }
 ];
 
