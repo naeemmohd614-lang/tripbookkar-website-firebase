@@ -910,5 +910,53 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "hill station", "pachmarhi"]
+  },
+  {
+    "name": "Radisson Gwalior",
+    "brand": "Radisson",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "address": "Plot No 13-14, City Centre, Gwalior, Madhya Pradesh 474011",
+    "about": "A modern hotel located in the city center, offering comfortable accommodations and a range of amenities for business and leisure travelers. It's a great base for exploring Gwalior Fort.",
+    "basePrice": 7000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-gwalior/1080/720", "caption": "Radisson Gwalior exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 89, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city hotel", "gwalior"]
+  },
+  {
+    "name": "Jehan Numa Palace Hotel, Bhopal",
+    "brand": "Jehan Numa",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "address": "157, Shamla Hills, Bhopal, Madhya Pradesh 462013",
+    "about": "A 19th-century palace converted into a heritage hotel, Jehan Numa Palace exudes colonial charm and royal hospitality. Set on the slope of Shamla Hill, it offers a tranquil retreat.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/jehan-numa-bhopal/1080/720", "caption": "Jehan Numa Palace exterior" }
+    ],
+    "roomCategories": [{ "name": "Regal Room", "count": 100, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "palace", "bhopal"]
+  },
+  {
+    "name": "Taj Lakefront, Bhopal",
+    "brand": "Taj",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "address": "Link Road No 3, Prempura, Bhopal, Madhya Pradesh 462003",
+    "about": "A luxury hotel offering stunning views of the Upper Lake. With its contemporary design and signature Taj hospitality, it's a perfect destination for both business and leisure.",
+    "basePrice": 12000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-bhopal/1080/720", "caption": "Taj Lakefront hotel with lake view" }
+    ],
+    "roomCategories": [{ "name": "Luxury Lake View Room", "count": 152, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "lake view", "bhopal"]
   }
 ]

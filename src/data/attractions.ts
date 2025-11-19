@@ -1011,6 +1011,43 @@ const madhyaPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "October to April",
         distances: [ { from: "Pachmarhi Bus Stand", distance: "10 km" } ],
         nearbyHotels: ["Welcomheritage Golf View", "MPT Amaltas"]
+    },
+    {
+        name: 'Gwalior Fort',
+        city: 'Gwalior',
+        cityId: 'gwalior',
+        image: { src: 'https://picsum.photos/seed/gwalior-fort/1200/600', caption: 'gwalior fort view' },
+        description: "A majestic hill fort that dominates the city's skyline. Described as 'the pearl amongst the fortresses of Hind', it's a vast complex of palaces, temples, and water tanks.",
+        timing: "9:00 AM - 5:00 PM",
+        fees: [ { type: "Indian", amount: "₹75" }, { type: "Foreigner", amount: "₹250" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Gwalior Airport", distance: "14 km" } ],
+        nearbyHotels: ["Radisson Gwalior", "Taj Usha Kiran Palace"]
+    },
+    {
+        name: 'Sanchi Stupa',
+        city: 'Bhopal',
+        cityId: 'bhopal',
+        image: { src: 'https://picsum.photos/seed/sanchi-stupa/1200/600', caption: 'great stupa sanchi' },
+        description: "A UNESCO World Heritage site, the Great Stupa at Sanchi is one of the oldest stone structures in India. It's an important monument of Indian Architecture and a major Buddhist pilgrimage site.",
+        timing: "8:30 AM - 5:30 PM",
+        fees: [ { type: "Indian", amount: "₹40" }, { type: "Foreigner", amount: "₹600" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Bhopal Airport", distance: "46 km" } ],
+        notes: ["Sanchi is a day trip from Bhopal."],
+        nearbyHotels: ["Jehan Numa Palace Hotel, Bhopal", "Taj Lakefront, Bhopal"]
+    },
+    {
+        name: 'Jahaz Mahal',
+        city: 'Mandu',
+        cityId: 'mandu',
+        image: { src: 'https://picsum.photos/seed/jahaz-mahal-mandu/1200/600', caption: 'jahaz mahal mandu' },
+        description: "The 'Ship Palace' is an elegant two-storied palace built between two artificial lakes, giving it the appearance of a ship. It's a fine example of Afghan architecture in India.",
+        timing: "8:00 AM - 6:00 PM",
+        fees: [ { type: "Indian", amount: "₹25" }, { type: "Foreigner", amount: "₹300" } ],
+        bestTimeToVisit: "July to March (especially beautiful during monsoon)",
+        distances: [ { from: "Indore Airport", distance: "95 km" } ],
+        nearbyHotels: []
     }
 ];
 
