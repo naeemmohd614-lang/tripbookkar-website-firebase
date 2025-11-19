@@ -1070,5 +1070,38 @@
     "roomCategories": [{ "name": "Grand Suite", "count": 38, "size": "600 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "boutique", "ahmedabad", "cultural"]
+  },
+  {
+    "name": "Courtyard by Marriott, Ahmedabad",
+    "brand": "Marriott",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "Ramdev Nagar Cross Road, Satellite Road, Ahmedabad, Gujarat 380015",
+    "about": "A contemporary hotel in the heart of Ahmedabad's commercial district, offering stylish rooms, a rooftop pool, and excellent business facilities.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/courtyard-ahmedabad-1/1080/720", "caption": "Hotel exterior at night" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "323 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "ahmedabad"]
+  },
+  {
+    "name": "ITC Narmada, a Luxury Collection Hotel, Ahmedabad",
+    "brand": "ITC",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "Judges Bungalow Road, Vastrapur, Ahmedabad, Gujarat 380015",
+    "about": "Inspired by Gujarat's architectural marvels, ITC Narmada is a tribute to the region's rich heritage. It offers luxurious accommodations and a range of exquisite dining experiences.",
+    "basePrice": 15000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-narmada-1/1080/720", "caption": "Grand facade of ITC Narmada" }
+    ],
+    "roomCategories": [{ "name": "Tower Room", "count": 291, "size": "475 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "palatial", "ahmedabad"]
   }
 ]
+

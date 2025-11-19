@@ -1256,6 +1256,34 @@ const gujaratAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         distances: [ { from: "Vadodara Airport", distance: "90 km" } ],
         notes: ["Tickets are best booked online in advance.", "The complex includes a museum, zoo, and several other attractions."],
         nearbyHotels: ["Ramada Encore by Wyndham Statue of Unity", "Tent City Narmada"]
+    },
+    {
+        name: 'Adalaj Stepwell',
+        city: 'Ahmedabad',
+        cityId: 'ahmedabad',
+        stateId: 'gujarat',
+        image: { src: 'https://picsum.photos/seed/adalaj-stepwell/1200/600', caption: 'adalaj stepwell ahmedabad' },
+        description: "An architectural marvel, this five-story deep stepwell was built in 1498. It's an exquisite example of Indo-Islamic architecture, with intricate carvings on its walls and pillars.",
+        timing: "9:00 AM - 5:00 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Ahmedabad Airport", distance: "15 km" } ],
+        notes: ["The temperature inside the stepwell is a few degrees cooler than outside."],
+        nearbyHotels: ["Hyatt Regency Ahmedabad", "ITC Narmada, a Luxury Collection Hotel, Ahmedabad"]
+    },
+    {
+        name: 'Jama Masjid',
+        city: 'Ahmedabad',
+        cityId: 'ahmedabad',
+        stateId: 'gujarat',
+        image: { src: 'https://picsum.photos/seed/jama-masjid-ahmedabad/1200/600', caption: 'jama masjid ahmedabad' },
+        description: "Built in 1424 during the reign of Ahmed Shah I, this historic mosque is one of the finest examples of Indo-Saracenic architecture. It's known for its spacious courtyard and beautiful latticework.",
+        timing: "6:00 AM to 8:00 PM (Closed during prayer times for non-Muslims)",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Anytime",
+        distances: [ { from: "Ahmedabad Railway Station", distance: "3 km" } ],
+        notes: ["Visitors are expected to dress modestly.","Located in the old city, which is a bustling area."],
+        nearbyHotels: ["The House of MG", "Four Points by Sheraton Ahmedabad"]
     }
 ];
 
@@ -1318,5 +1346,6 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
 ];
+
 
 
