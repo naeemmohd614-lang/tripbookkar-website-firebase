@@ -621,6 +621,47 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const jammuAndKashmirAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Dal Lake',
+        city: 'Srinagar',
+        cityId: 'srinagar',
+        image: { src: 'https://picsum.photos/seed/dal-lake/1200/600', caption: 'shikara ride dal lake' },
+        description: "The jewel of Srinagar, Dal Lake is famous for its houseboats (shikaras), floating gardens, and scenic beauty. A shikara ride is a must-do experience.",
+        timing: "All day",
+        fees: [ { type: "Shikara Ride", amount: "Approx. ₹500-700 per hour" } ],
+        bestTimeToVisit: "May to November",
+        distances: [ { from: "Srinagar International Airport", distance: "22 km" } ],
+        nearbyHotels: ["The Lalit Grand Palace Srinagar", "Vivanta Dal View, Srinagar"]
+    },
+    {
+        name: 'Gulmarg Gondola',
+        city: 'Gulmarg',
+        cityId: 'gulmarg',
+        image: { src: 'https://picsum.photos/seed/gulmarg-gondola/1200/600', caption: 'gulmarg gondola view' },
+        description: "One of the highest cable cars in the world, the Gulmarg Gondola offers breathtaking views of the snow-capped Himalayas. It has two phases, with the second phase taking you to Apharwat Peak.",
+        timing: "10:00 AM - 4:00 PM (Varies with weather)",
+        fees: [ { type: "Phase 1", amount: "₹740" }, { type: "Phase 2", amount: "₹950" } ],
+        bestTimeToVisit: "December to March for snow, May to September for green landscapes",
+        distances: [ { from: "Srinagar", distance: "50 km" } ],
+        notes: ["Booking tickets online in advance is highly recommended.", "The gondola operation is subject to weather conditions."],
+        nearbyHotels: ["The Khyber Himalayan Resort & Spa"]
+    },
+    {
+        name: 'Shankaracharya Temple',
+        city: 'Srinagar',
+        cityId: 'srinagar',
+        image: { src: 'https://picsum.photos/seed/shankaracharya-temple/1200/600', caption: 'shankaracharya temple srinagar' },
+        description: "Perched on a hilltop, this ancient temple dedicated to Lord Shiva offers panoramic views of Srinagar and the Dal Lake. It's a significant pilgrimage site and a historical monument.",
+        timing: "8:00 AM - 5:00 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Anytime",
+        distances: [ { from: "Srinagar City Center", distance: "6 km" } ],
+        notes: ["You need to climb about 243 steps to reach the temple.", "Vehicles are allowed only up to a certain point."],
+        nearbyHotels: ["Vivanta Dal View, Srinagar", "The Lalit Grand Palace Srinagar"]
+    }
+];
+
 
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
@@ -652,6 +693,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...uttarakhandAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...jammuAndKashmirAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),

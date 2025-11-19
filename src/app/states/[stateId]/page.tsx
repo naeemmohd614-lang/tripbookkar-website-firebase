@@ -1,11 +1,12 @@
 
 
 
+
 'use client';
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Star, ShoppingBag, Paintbrush, Music, HeartPulse, SwatchBook, Bell, Hand, Flower } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Star, ShoppingBag, Paintbrush, Music, HeartPulse, SwatchBook, Bell, Hand, Flower, CableCar } from 'lucide-react';
 import type { State, Hotel, City, Attraction } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -36,6 +37,139 @@ export default function StatePage() {
       "caption": `landscape ${state.name}`
   };
 
+  if (stateId === 'jammu-and-kashmir') {
+    const jnkCarouselImages = [
+        { src: 'https://picsum.photos/seed/jnk-carousel-1/1200/600', caption: 'Dal Lake, Srinagar', 'data-ai-hint': 'srinagar dal lake' },
+        { src: 'https://picsum.photos/seed/jnk-carousel-2/1200/600', caption: 'Gulmarg in snow', 'data-ai-hint': 'gulmarg snow mountains' },
+        { src: 'https://picsum.photos/seed/jnk-carousel-3/1200/600', caption: 'Pahalgam Valley', 'data-ai-hint': 'pahalgam valley river' }
+    ];
+
+    const jnkHighlights = [
+        { icon: Sailboat, text: 'Shikara Rides', color: 'text-sky-500' },
+        { icon: Mountain, text: 'Snow-clad Peaks', color: 'text-blue-500' },
+        { icon: Flower, text: 'Lush Valleys', color: 'text-green-500' },
+    ];
+    
+    const jnkCities = ['Srinagar', 'Gulmarg', 'Pahalgam'].map(cityName => {
+      const city = (allCities as City[]).find(c => c.name === cityName);
+      const cityId = city ? city.cityId : slugify(cityName);
+      return {
+        name: cityName,
+        cityId: cityId,
+        image: `https://picsum.photos/seed/city-${cityId}/400/500`,
+        caption: `${cityName} city`
+      };
+    });
+
+    const jnkAttractions = (attractions as Attraction[]).filter(a => a.city === 'Srinagar' || a.city === 'Gulmarg');
+    
+    return (
+      <div>
+        <div className="w-full mb-12">
+          <Carousel className="w-full" opts={{ loop: true }}>
+            <CarouselContent>
+              {jnkCarouselImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative aspect-[16/7]">
+                    <Image 
+                      src={image.src} 
+                      alt={image.caption} 
+                      fill 
+                      className="object-cover"
+                      data-ai-hint={image['data-ai-hint']}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+          </Carousel>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Jammu &amp; Kashmir</h1>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Often called 'Paradise on Earth', Jammu &amp; Kashmir is renowned for its breathtaking landscapes, snow-capped mountains, serene lakes, and lush valleys. From the iconic Dal Lake in Srinagar to the world-class ski slopes of Gulmarg, it's a destination that captivates every traveler.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
+            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">April to October</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><Clock className="mx-auto mb-2 h-8 w-8 text-green-500" /><h3 className="font-semibold">Ideal Duration</h3><p className="text-sm text-muted-foreground">6-7 Days</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" /><h3 className="font-semibold">Holiday Packages</h3><p className="text-sm text-muted-foreground">View Packages</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" /><h3 className="font-semibold">Top Hotels</h3><p className="text-sm text-muted-foreground">Find Hotels</p></CardContent></Card>
+          </div>
+
+          <div className="text-center my-16">
+              <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8">Highlights</h2>
+              <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+                  {jnkHighlights.map(highlight => (
+                      <div key={highlight.text} className="flex flex-col items-center gap-2">
+                          <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                          <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                      </div>
+                  ))}
+              </div>
+          </div>
+
+          <div className="text-center my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Destinations</h2>
+            <p className="mt-2 text-muted-foreground">From the jewel of Srinagar to the meadows of Gulmarg.</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              {jnkCities.map(city => (
+                <Link href={`/states/jammu-and-kashmir/cities/${city.cityId}`} key={city.name}>
+                  <Card className="overflow-hidden group relative">
+                    <Image src={city.image} alt={city.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={city.caption} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{city.name}</h3>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Jammu &amp; Kashmir</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {jnkAttractions.map(attraction => (
+                 <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                    <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                        <CardContent className="p-4">
+                            <h3 className="font-bold text-lg">{attraction.name}</h3>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
+                            <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{attraction.description}</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">
+              Top Hotels in Jammu &amp; Kashmir
+            </h2>
+            {stateHotels.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {stateHotels.map((hotel) => (
+                  <HotelCard key={hotel.hotelId} hotel={hotel} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this state yet.</h3>
+                <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (stateId === 'uttarakhand') {
     const uttarakhandCarouselImages = [
         { src: 'https://picsum.photos/seed/uttarakhand-carousel-1/1200/600', caption: 'Rishikesh, Uttarakhand', 'data-ai-hint': 'rishikesh ganges river' },
@@ -45,7 +179,7 @@ export default function StatePage() {
 
     const uttarakhandHighlights = [
         { icon: Hand, text: 'Pilgrimage Sites', color: 'text-orange-500' },
-        { icon: Flower, text: 'Yoga & Wellness', color: 'text-green-500' },
+        { icon: Flower, text: 'Yoga &amp; Wellness', color: 'text-green-500' },
         { icon: Mountain, text: 'Himalayan Treks', color: 'text-sky-600' },
     ];
     
@@ -95,7 +229,7 @@ export default function StatePage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
-            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">March-April & Sep-Oct</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">March-April &amp; Sep-Oct</p></CardContent></Card>
             <Card className="text-center"><CardContent className="p-4"><Clock className="mx-auto mb-2 h-8 w-8 text-green-500" /><h3 className="font-semibold">Ideal Duration</h3><p className="text-sm text-muted-foreground">5-7 Days</p></CardContent></Card>
             <Card className="text-center"><CardContent className="p-4"><PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" /><h3 className="font-semibold">Holiday Packages</h3><p className="text-sm text-muted-foreground">View Packages</p></CardContent></Card>
             <Card className="text-center"><CardContent className="p-4"><HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" /><h3 className="font-semibold">Top Hotels</h3><p className="text-sm text-muted-foreground">Find Hotels</p></CardContent></Card>
@@ -228,7 +362,7 @@ export default function StatePage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
-            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">April to June & Sept to Nov</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">April to June &amp; Sept to Nov</p></CardContent></Card>
             <Card className="text-center"><CardContent className="p-4"><Clock className="mx-auto mb-2 h-8 w-8 text-green-500" /><h3 className="font-semibold">Ideal Duration</h3><p className="text-sm text-muted-foreground">5-6 Days</p></CardContent></Card>
             <Card className="text-center"><CardContent className="p-4"><PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" /><h3 className="font-semibold">Holiday Packages</h3><p className="text-sm text-muted-foreground">View Packages</p></CardContent></Card>
             <Card className="text-center"><CardContent className="p-4"><HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" /><h3 className="font-semibold">Top Hotels</h3><p className="text-sm text-muted-foreground">Find Hotels</p></CardContent></Card>

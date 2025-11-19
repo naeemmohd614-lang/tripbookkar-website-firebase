@@ -373,5 +373,56 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "dehradun", "city hotel"]
+  },
+  {
+    "name": "The Lalit Grand Palace Srinagar",
+    "brand": "The Lalit",
+    "city": "Srinagar",
+    "state": "Jammu and Kashmir",
+    "address": "Gupkar Rd, Srinagar, Jammu and Kashmir 190001",
+    "about": "A former royal palace, this hotel offers stunning views of the Dal Lake and is surrounded by meticulously manicured gardens. Experience the grandeur of Kashmiri royalty.",
+    "basePrice": 25000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/lalit-srinagar-1/1080/720", "caption": "View of the palace hotel and gardens" },
+      { "src": "https://picsum.photos/seed/lalit-srinagar-2/1080/720", "caption": "Luxurious suite interior" }
+    ],
+    "roomCategories": [{ "name": "Palace Garden View", "count": 113, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "luxury", "lake view", "srinagar"]
+  },
+  {
+    "name": "Vivanta Dal View, Srinagar",
+    "brand": "Vivanta",
+    "city": "Srinagar",
+    "state": "Jammu and Kashmir",
+    "address": "Kralsangri, Brein, Srinagar, Jammu and Kashmir 191121",
+    "about": "Perched on a hilltop, Vivanta Dal View offers panoramic views of the Dal Lake and the surrounding mountains. It's a modern hotel with a touch of Kashmiri charm.",
+    "basePrice": 18000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-srinagar-1/1080/720", "caption": "Hotel exterior with Dal Lake view" },
+      { "src": "https://picsum.photos/seed/vivanta-srinagar-2/1080/720", "caption": "Infinity pool overlooking the lake" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 82, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["lake view", "srinagar", "modern", "luxury"]
+  },
+  {
+    "name": "The Khyber Himalayan Resort & Spa",
+    "brand": "The Khyber",
+    "city": "Gulmarg",
+    "state": "Jammu and Kashmir",
+    "address": "Hotel Khyber Rd, Forest Block, Gulmarg, Jammu and Kashmir 193403",
+    "about": "A world-class resort located at an altitude of 8,825 feet in the Pir Panjal range of the Himalayas. It offers breathtaking views of the Apharwat peaks and is a stone's throw away from the Gulmarg Gondola.",
+    "basePrice": 30000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/khyber-gulmarg-1/1080/720", "caption": "Resort exterior in snow" },
+      { "src": "https://picsum.photos/seed/khyber-gulmarg-2/1080/720", "caption": "Heated indoor pool with a view" }
+    ],
+    "roomCategories": [{ "name": "Premier Valley View Room", "count": 85, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["ski resort", "luxury", "mountain view", "gulmarg"]
   }
 ]

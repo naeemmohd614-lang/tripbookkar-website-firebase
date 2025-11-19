@@ -159,5 +159,29 @@
     "image": "",
     "description": "The capital of Uttarakhand, nestled in the Doon Valley, known for its pleasant climate and prestigious schools.",
     "totalHotels": 80
+  },
+  {
+    "cityId": "srinagar",
+    "stateId": "jammu-and-kashmir",
+    "name": "Srinagar",
+    "image": "",
+    "description": "The summer capital of Jammu and Kashmir, famous for Dal Lake, houseboats, and Mughal gardens.",
+    "totalHotels": 150
+  },
+  {
+    "cityId": "gulmarg",
+    "stateId": "jammu-and-kashmir",
+    "name": "Gulmarg",
+    "image": "",
+    "description": "A popular skiing destination and home to the world's highest gondola.",
+    "totalHotels": 30
+  },
+  {
+    "cityId": "pahalgam",
+    "stateId": "jammu-and-kashmir",
+    "name": "Pahalgam",
+    "image": "",
+    "description": "Known as the 'Valley of Shepherds', famous for its pristine rivers and lush meadows.",
+    "totalHotels": 40
   }
 ]
