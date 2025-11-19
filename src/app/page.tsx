@@ -17,12 +17,12 @@ export default function Home() {
     };
 
   const interests = [
-    { name: 'Beaches', imageId: 'interest-beaches', hint: 'beach sunset' },
-    { name: 'Mountains', imageId: 'interest-mountains', hint: 'mountain range' },
-    { name: 'Heritage', imageId: 'interest-heritage', hint: 'ancient temple' },
-    { name: 'Wildlife', imageId: 'interest-wildlife', hint: 'tiger wildlife' },
-    { name: 'Adventure', imageId: 'interest-adventure', hint: 'mountain climbing' },
-    { name: 'Spiritual', imageId: 'interest-spiritual', hint: 'yoga meditation' },
+    { name: 'Beaches', imageId: 'interest-beaches', hint: 'beach sunset', href: '/interests/beaches' },
+    { name: 'Mountains', imageId: 'interest-mountains', hint: 'mountain range', href: '#' },
+    { name: 'Heritage', imageId: 'interest-heritage', hint: 'ancient temple', href: '#' },
+    { name: 'Wildlife', imageId: 'interest-wildlife', hint: 'tiger wildlife', href: '#' },
+    { name: 'Adventure', imageId: 'interest-adventure', hint: 'mountain climbing', href: '#' },
+    { name: 'Spiritual', imageId: 'interest-spiritual', hint: 'yoga meditation', href: '#' },
   ];
 
   return (
@@ -69,7 +69,7 @@ export default function Home() {
                   "caption": interest.hint
               };
               return (
-                <Link href="#" key={interest.name}>
+                <Link href={interest.href} key={interest.name}>
                   <Card className="overflow-hidden group relative h-48 hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src={interestImage.src}
