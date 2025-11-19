@@ -47,7 +47,7 @@ export default function StatePage() {
         { icon: Cat, text: 'Royal Bengal Tiger', color: 'text-orange-500' },
     ];
     
-    const wbCities = ['Kolkata', 'Darjeeling'].map(cityName => {
+    const wbCities = ['Kolkata', 'Darjeeling', 'Siliguri', 'Kalimpong'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
       return {
@@ -114,7 +114,7 @@ export default function StatePage() {
           <div className="text-center my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Destinations</h2>
             <p className="mt-2 text-muted-foreground">From the City of Joy to the Queen of the Hills.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
               {wbCities.map(city => (
                 <Link href={`/states/west-bengal/cities/${city.cityId}`} key={city.name}>
                   <Card className="overflow-hidden group relative">

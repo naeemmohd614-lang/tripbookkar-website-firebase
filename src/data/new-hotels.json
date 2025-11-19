@@ -526,5 +526,73 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 44, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "mountain view", "darjeeling"]
+  },
+  {
+    "name": "Sinclairs Siliguri",
+    "brand": "Sinclairs",
+    "city": "Siliguri",
+    "state": "West Bengal",
+    "address": "Pradhan Nagar, Mallaguri, Siliguri, West Bengal 734003",
+    "about": "A premier hotel in Siliguri, offering excellent connectivity to the Himalayan region. It features spacious rooms, a beautiful swimming pool, and extensive banqueting facilities.",
+    "basePrice": 6000,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/sinclairs-siliguri-1/1080/720", "caption": "Hotel exterior and gardens" },
+      { "src": "https://picsum.photos/seed/sinclairs-siliguri-2/1080/720", "caption": "Swimming pool area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 41, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "gateway", "siliguri"]
+  },
+  {
+    "name": "The Elgin Silver Oaks, Kalimpong",
+    "brand": "The Elgin",
+    "city": "Kalimpong",
+    "state": "West Bengal",
+    "address": "Rinking Pong Road, Kalimpong, West Bengal 734301",
+    "about": "A luxury heritage hotel built in 1932, formerly the home of a wealthy British jute magnate. It offers stunning views of the Himalayas and a charming colonial ambience.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/elgin-kalimpong-1/1080/720", "caption": "Colonial exterior of the hotel" },
+      { "src": "https://picsum.photos/seed/elgin-kalimpong-2/1080/720", "caption": "Lush gardens and sitting area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 25, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "mountain view", "kalimpong", "romantic"]
+  },
+  {
+    "name": "ITC Royal Bengal, a Luxury Collection Hotel, Kolkata",
+    "brand": "ITC",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "address": "1, JBS Haldane Ave, Tangra, Kolkata, West Bengal 700046",
+    "about": "A tribute to the cultural heritage of Bengal, this luxury hotel celebrates the region's spirit. It features grand architecture, exquisite dining, and state-of-the-art facilities.",
+    "basePrice": 16000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-kolkata-1/1080/720", "caption": "Grand exterior of ITC Royal Bengal" },
+      { "src": "https://picsum.photos/seed/itc-kolkata-2/1080/720", "caption": "Lavish hotel lobby" }
+    ],
+    "roomCategories": [{ "name": "Tower Room", "count": 456, "size": "527 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "kolkata"]
+  },
+  {
+    "name": "The Windamere Hotel",
+    "brand": "Windamere",
+    "city": "Darjeeling",
+    "state": "West Bengal",
+    "address": "Observatory Hill, Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "about": "One of the original heritage hotels of the Himalayas, Windamere has been a Darjeeling landmark since the 19th century. Experience the charm of the British Raj and stunning mountain views.",
+    "basePrice": 14000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/windamere-darjeeling-1/1080/720", "caption": "Colonial architecture of Windamere" },
+      { "src": "https://picsum.photos/seed/windamere-darjeeling-2/1080/720", "caption": "View from the hotel terrace" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 38, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "colonial", "darjeeling"]
   }
 ]

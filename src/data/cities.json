@@ -231,5 +231,21 @@
     "image": "",
     "description": "Famous for its tea plantations, Himalayan railway, and stunning views of Kanchenjunga.",
     "totalHotels": 90
+  },
+  {
+    "cityId": "siliguri",
+    "stateId": "west-bengal",
+    "name": "Siliguri",
+    "image": "",
+    "description": "A bustling city at the foothills of the Himalayas, serving as a gateway to Darjeeling, Sikkim, and Northeast India.",
+    "totalHotels": 60
+  },
+  {
+    "cityId": "kalimpong",
+    "stateId": "west-bengal",
+    "name": "Kalimpong",
+    "image": "",
+    "description": "A serene hill station known for its colonial architecture, Buddhist monasteries, and panoramic valley views.",
+    "totalHotels": 40
   }
 ]
