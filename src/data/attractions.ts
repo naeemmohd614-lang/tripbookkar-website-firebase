@@ -723,6 +723,19 @@ const sikkimAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "October to May",
         distances: [ { from: "Gangtok", distance: "78 km" } ],
         nearbyHotels: ["My Vibe, Namchi", "Hotel Summit Sobralia"]
+    },
+    {
+        name: 'Yumthang Valley',
+        city: 'Lachung',
+        cityId: 'lachung',
+        image: { src: 'https://picsum.photos/seed/yumthang-valley/1200/600', caption: 'yumthang valley sikkim' },
+        description: "Known as the 'Valley of Flowers' of Sikkim, Yumthang Valley is a stunning landscape filled with rhododendrons, hot springs, yaks, and rolling meadows, set against a backdrop of Himalayan peaks.",
+        timing: "Permit required, typically daytime visits",
+        fees: [ { type: "Permit & vehicle", amount: "Varies, arranged via tour operators" } ],
+        bestTimeToVisit: "Late February to June for flowers, September to December for clear skies.",
+        distances: [ { from: "Lachung", distance: "26 km" } ],
+        notes: ["A protected area permit is required.", "The valley is snow-covered in deep winter."],
+        nearbyHotels: ["Yarlam, Lachung"]
     }
 ];
 
