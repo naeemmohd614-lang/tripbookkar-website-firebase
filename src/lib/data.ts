@@ -4,11 +4,7 @@
 // For now, we are using the JSON file.
 import type { Destination, Brand, State, City, Hotel, MonthDestination, Attraction } from './types';
 
-import marriottHotels from '@/data/marriott.json';
-import oberoiHotels from '@/data/oberoi.json';
-import tajHotels from '@/data/taj.json';
-import hyattHotels from '@/data/hyatt.json';
-import leelaHotels from '@/data/the-leela.json';
+import allHotelsData from '@/data/new-hotels.json';
 
 import brands from '@/data/brands.json';
 import states from '@/data/states.json';
@@ -18,6 +14,7 @@ import { attractions as attractionsData } from '@/data/attractions';
 
 // Helper to create a slug from a string
 function slugify(text: string) {
+  if (!text) return '';
   return text
     .toString()
     .toLowerCase()
@@ -28,13 +25,7 @@ function slugify(text: string) {
     .replace(/-+$/, '');
 }
 
-const allHotels = [
-  ...marriottHotels,
-  ...oberoiHotels,
-  ...tajHotels,
-  ...hyattHotels,
-  ...leelaHotels,
-];
+const allHotels = allHotelsData;
 
 // We need to cast this because the JSON import is not typed
 const hotels: Hotel[] = (allHotels as any[]).map((hotel, index) => ({

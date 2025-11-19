@@ -135,5 +135,39 @@
     "roomCategories": [{ "name": "Varuna Burj", "count": 32, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "ghat view", "spiritual", "varanasi"]
+  },
+  {
+    "name": "Taj Ganges, Varanasi",
+    "brand": "Taj",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "Nadesar Palace Grounds, Varanasi, Uttar Pradesh 221002",
+    "about": "Set amidst 40 acres of lush greenery, Taj Ganges offers a tranquil escape in the ancient city of Varanasi. Enjoy modern comforts, a large swimming pool, and serene gardens.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-ganges-1/1080/720", "caption": "Hotel exterior and gardens" },
+      { "src": "https://picsum.photos/seed/taj-ganges-2/1080/720", "caption": "Poolside view" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 130, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "varanasi"]
+  },
+  {
+    "name": "Renaissance Lucknow Hotel",
+    "brand": "Marriott",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "address": "Vipin Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+    "about": "A luxury hotel in the heart of Lucknow, offering stunning panoramic views of the city skyline from its rooftop infinity pool. Experience modern design and exceptional service.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/renaissance-lucknow-1/1080/720", "caption": "Rooftop infinity pool" },
+      { "src": "https://picsum.photos/seed/renaissance-lucknow-2/1080/720", "caption": "Hotel exterior at night" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 112, "size": "377 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "city view", "lucknow"]
   }
 ]
