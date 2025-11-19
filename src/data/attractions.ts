@@ -804,6 +804,18 @@ const tamilNaduAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         nearbyHotels: ["The Leela Palace Chennai", "Taj Connemara, Chennai"]
     },
     {
+        name: 'Kapaleeshwarar Temple',
+        city: 'Chennai',
+        cityId: 'chennai',
+        image: { src: 'https://picsum.photos/seed/kapaleeshwarar-temple/1200/600', caption: 'kapaleeshwarar temple chennai' },
+        description: "A classic example of Dravidian architecture, this temple dedicated to Lord Shiva is one of the most prominent landmarks of Chennai, with a towering gopuram.",
+        timing: "5:30 AM - 12:00 PM, 4:00 PM - 9:30 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "During festival times like Panguni Peruvizha",
+        distances: [ { from: "Chennai Central Railway Station", distance: "7 km" } ],
+        nearbyHotels: ["The Leela Palace Chennai", "ITC Grand Chola"]
+    },
+    {
         name: 'Meenakshi Amman Temple',
         city: 'Madurai',
         cityId: 'madurai',
@@ -814,7 +826,19 @@ const tamilNaduAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "October to March",
         distances: [ { from: "Madurai Airport", distance: "12 km" } ],
         notes: ["A strict dress code is enforced; legs and shoulders must be covered.","Electronic gadgets are not allowed inside."],
-        nearbyHotels: ["Heritage Madurai"]
+        nearbyHotels: ["Heritage Madurai", "Courtyard by Marriott Madurai"]
+    },
+    {
+        name: 'Thirumalai Nayakkar Palace',
+        city: 'Madurai',
+        cityId: 'madurai',
+        image: { src: 'https://picsum.photos/seed/thirumalai-nayakkar-palace/1200/600', caption: 'thirumalai nayakkar palace madurai' },
+        description: "A 17th-century palace erected by King Thirumalai Nayak. The palace is a classic fusion of Dravidian and Islamic architectural styles. The light and sound show is a major attraction.",
+        timing: "9:00 AM - 5:00 PM",
+        fees: [ { type: "Indian", amount: "₹10" }, { type: "Foreigner", amount: "₹50" } ],
+        bestTimeToVisit: "Evening for the light and sound show",
+        distances: [ { from: "Meenakshi Amman Temple", distance: "2 km" } ],
+        nearbyHotels: ["Heritage Madurai", "Courtyard by Marriott Madurai"]
     },
     {
         name: 'Vivekananda Rock Memorial',
@@ -829,6 +853,18 @@ const tamilNaduAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         nearbyHotels: []
     },
     {
+        name: 'Thiruvalluvar Statue',
+        city: 'Kanyakumari',
+        cityId: 'kanyakumari',
+        image: { src: 'https://picsum.photos/seed/thiruvalluvar-statue/1200/600', caption: 'thiruvalluvar statue kanyakumari' },
+        description: "A towering 133-feet tall stone sculpture of the Tamil poet and philosopher Valluvar, author of the Tirukkural. It stands on a small island near the town of Kanyakumari.",
+        timing: "8:00 AM - 4:00 PM",
+        fees: [ { type: "Ferry", amount: "₹50 (combined with Vivekananda Memorial)" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Kanyakumari Bus Stand", distance: "1 km" } ],
+        nearbyHotels: []
+    },
+    {
         name: 'Ooty Lake',
         city: 'Ooty',
         cityId: 'ooty',
@@ -838,7 +874,43 @@ const tamilNaduAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         fees: [ { type: "Entry", amount: "₹13" }, { type: "Boating", amount: "Starting from ₹240" } ],
         bestTimeToVisit: "Throughout the year",
         distances: [ { from: "Ooty Bus Stand", distance: "2 km" } ],
-        nearbyHotels: ["Sterling Ooty Fern Hill"]
+        nearbyHotels: ["Sterling Ooty Fern Hill", "Taj Savoy Hotel, Ooty"]
+    },
+    {
+        name: 'Doddabetta Peak',
+        city: 'Ooty',
+        cityId: 'ooty',
+        image: { src: 'https://picsum.photos/seed/doddabetta-peak/1200/600', caption: 'doddabetta peak ooty' },
+        description: "The highest mountain in the Nilgiri Hills at 2,637 metres. There is a reserved forest area around the peak. It is a popular tourist attraction with a telescope house at the top.",
+        timing: "7:00 AM - 6:00 PM",
+        fees: [ { type: "Entry", amount: "₹6" } ],
+        bestTimeToVisit: "October to January for clear views",
+        distances: [ { from: "Ooty Bus Stand", distance: "9 km" } ],
+        nearbyHotels: ["Sterling Ooty Fern Hill", "Taj Savoy Hotel, Ooty"]
+    },
+     {
+        name: 'Coaker\'s Walk',
+        city: 'Kodaikanal',
+        cityId: 'kodaikanal',
+        image: { src: 'https://picsum.photos/seed/coakers-walk/1200/600', caption: 'coakers walk kodaikanal' },
+        description: "A beautiful 1-kilometre paved pedestrian path along the steep slopes of Kodaikanal. It offers stunning panoramic views of the plains and the surrounding valleys.",
+        timing: "7:00 AM - 7:00 PM",
+        fees: [ { type: "Entry", amount: "₹10" } ],
+        bestTimeToVisit: "Early mornings or late afternoons for clear views",
+        distances: [ { from: "Kodaikanal Bus Stand", distance: "1 km" } ],
+        nearbyHotels: ["The Carlton Kodaikanal", "Sterling Kodai Lake"]
+    },
+    {
+        name: 'Pillar Rocks',
+        city: 'Kodaikanal',
+        cityId: 'kodaikanal',
+        image: { src: 'https://picsum.photos/seed/pillar-rocks/1200/600', caption: 'pillar rocks kodaikanal' },
+        description: "A set of three giant rock pillars which stand 122 meters high. It's a magnificent viewpoint that offers breathtaking views of the surrounding landscape, especially when the clouds and mist clear.",
+        timing: "9:00 AM - 4:00 PM",
+        fees: [ { type: "Entry", amount: "₹5" } ],
+        bestTimeToVisit: "During clear weather, avoiding monsoon and heavy mist",
+        distances: [ { from: "Kodaikanal Bus Stand", distance: "7 km" } ],
+        nearbyHotels: ["The Carlton Kodaikanal", "Sterling Kodai Lake"]
     }
 ];
 

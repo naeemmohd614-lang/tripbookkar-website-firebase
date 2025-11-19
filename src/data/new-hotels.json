@@ -658,5 +658,73 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 91, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["lake view", "kodaikanal", "luxury"]
+  },
+  {
+    "name": "ITC Grand Chola, a Luxury Collection Hotel, Chennai",
+    "brand": "ITC",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "63, Mount Rd, Guindy, Chennai, Tamil Nadu 600032",
+    "about": "Inspired by the magnificent Chola Dynasty, this hotel is a palatial tribute to Southern India's greatest emperors. It embodies the grandeur of a bygone era with modern luxury.",
+    "basePrice": 18000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-chola-1/1080/720", "caption": "Grand facade of ITC Grand Chola" },
+      { "src": "https://picsum.photos/seed/itc-chola-2/1080/720", "caption": "Luxurious lobby interior" }
+    ],
+    "roomCategories": [{ "name": "Executive Club", "count": 600, "size": "615 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "chennai", "palatial"]
+  },
+  {
+    "name": "Courtyard by Marriott Madurai",
+    "brand": "Marriott",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "address": "No 168, Alagar Kovil Main Road, Madurai, Tamil Nadu 625002",
+    "about": "A modern hotel offering smart, intuitive service and comfortable accommodations. It's located near the city center, providing easy access to the Meenakshi Amman Temple.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/courtyard-madurai-1/1080/720", "caption": "Hotel exterior" },
+      { "src": "https://picsum.photos/seed/courtyard-madurai-2/1080/720", "caption": "Modern room interior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "323 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "business", "madurai"]
+  },
+  {
+    "name": "Taj Savoy Hotel, Ooty",
+    "brand": "Taj",
+    "city": "Ooty",
+    "state": "Tamil Nadu",
+    "address": "77, Sylks Rd, Ooty, Tamil Nadu 643001",
+    "about": "A colonial-style heritage hotel that dates back to 1829. Set amidst rolling hills and landscaped gardens, it offers a charming and tranquil escape in Ooty.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-ooty-1/1080/720", "caption": "Colonial facade of the hotel" },
+      { "src": "https://picsum.photos/seed/taj-ooty-2/1080/720", "caption": "Garden and lawn area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 40, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "colonial", "ooty"]
+  },
+  {
+    "name": "Sterling Kodai Lake",
+    "brand": "Sterling",
+    "city": "Kodaikanal",
+    "state": "Tamil Nadu",
+    "address": "44, Gymkhana Road, Lake Road, Kodaikanal, Tamil Nadu 624101",
+    "about": "A beautiful resort overlooking the serene Kodai Lake. The resort's design is inspired by English country homes, offering a cozy and comfortable stay.",
+    "basePrice": 6000,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/sterling-kodai-1/1080/720", "caption": "View of the resort" },
+      { "src": "https://picsum.photos/seed/sterling-kodai-2/1080/720", "caption": "Room with a view of the lake" }
+    ],
+    "roomCategories": [{ "name": "Classic Room", "count": 102, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
+    "tags": ["lake view", "resort", "kodaikanal"]
   }
 ]
