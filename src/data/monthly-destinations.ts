@@ -34,13 +34,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Auli, Uttarakhand",
         reason: "January transforms Auli into a premier skiing destination. The snow-covered meadows, panoramic views of the Himalayas, and the crisp mountain air make it perfect for winter sports enthusiasts and nature lovers.",
-        hotels: (hotels as Hotel[]).filter(h => ['The Royal Village', 'Himalayan High, Auli', 'The Tattva Resort', 'Cliff Top Club', 'Blue Poppy Resorts'].includes(h.name)),
+        hotels: (hotels as Hotel[]).filter(h => ["The Royal Village", "Himalayan High, Auli", "The Tattva Resort", "Cliff Top Club", "Blue Poppy Resorts"].includes(h.name)),
         image: { src: "https://picsum.photos/seed/auli-january/1200/400", caption: "snowy mountains auli" }
       },
       {
         name: "Jaipur, Rajasthan",
         reason: "The weather in January is pleasantly cool and ideal for sightseeing. You can explore majestic forts, vibrant markets, and attend the Jaipur Literature Festival, which often takes place this month.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'Jaipur').slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'jaipur'),
         image: { src: "https://picsum.photos/seed/jaipur-january/1200/400", caption: "amber fort jaipur" }
       },
       {
@@ -75,7 +75,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       },
       {
         name: "Pondicherry",
-        reason: "The weather is cool and perfect for exploring the charming French Quarter on foot or bicycle. The spiritual vibes of Auroville and the serene beaches make it a unique winter getaway.",
+        reason: "The weather is cool and perfect for exploring the charming French Quarter on foot or by bicycle. The spiritual vibes of Auroville and the serene beaches make it a unique winter getaway.",
         hotels: ["Palais de Mahe - CGH Earth", "La Villa", "The Promenade", "Le Dupleix", "Villa Shanti"],
         image: { src: "https://picsum.photos/seed/pondy-january/1200/400", caption: "pondicherry french colony" }
       },
