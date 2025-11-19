@@ -1,11 +1,11 @@
 
 
 'use client';
-import { states, hotels, cities as allCities } from '@/lib/data';
+import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap } from 'lucide-react';
-import type { State, Hotel, City } from '@/lib/types';
+import type { State, Hotel, City, Attraction } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -71,7 +71,7 @@ export default function StatePage() {
       description: "One of India's largest and most magnificent forts, Mehrangarh Fort rises from a rocky hill 125m above Jodhpur's skyline. Its thick, imposing walls enclose a complex of beautiful palaces, courtyards, and a museum."
     },
     { 
-      id: 'city-palace',
+      id: 'city-palace-udaipur',
       name: 'City Palace, Udaipur', 
       location: 'Udaipur',
       image: 'https://picsum.photos/seed/city-palace-udaipur/600/400',
@@ -204,15 +204,15 @@ export default function StatePage() {
           <div className="my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Rajasthan</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {rajasthanAttractions.map(attraction => (
-                <Link href={`/attractions/${attraction.id}`} key={attraction.name}>
+              {(attractions as Attraction[]).filter(a => a.cityId === 'jaipur' || a.cityId === 'jodhpur' || a.cityId === 'udaipur').slice(0,3).map(attraction => (
+                <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
                     <Card className="overflow-hidden group h-full hover:shadow-lg transition-shadow">
-                        <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.caption} />
+                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
                         <CardContent className="p-4">
                             <h3 className="font-bold text-lg">{attraction.name}</h3>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
                             <MapPin className="w-3 h-3" />
-                            {attraction.location}
+                            {attraction.city}
                             </div>
                             <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
                         </CardContent>
@@ -272,40 +272,19 @@ export default function StatePage() {
   const goaMajorAreas = [
     {
       name: 'North Goa',
+      slug: 'north-goa',
       image: 'https://picsum.photos/seed/city-north-goa/400/500',
       caption: 'North Goa beach'
     },
     {
       name: 'South Goa',
+      slug: 'south-goa',
       image: 'https://picsum.photos/seed/city-south-goa/400/500',
       caption: 'South Goa peaceful beach'
     },
   ];
 
-  const goaAttractions = [
-    { 
-      name: 'Baga Beach', 
-      location: 'North Goa',
-      image: 'https://picsum.photos/seed/baga-beach/600/400',
-      caption: 'baga beach crowd',
-      description: "One of the most famous beaches in North Goa, Baga is known for its lively atmosphere, beach shacks, water sports, and electrifying nightlife. It's the perfect spot for fun and excitement."
-    },
-    { 
-      name: 'Dudhsagar Falls', 
-      location: 'Goa-Karnataka Border',
-      image: 'https://picsum.photos/seed/dudhsagar-falls/600/400',
-      caption: 'dudhsagar falls',
-      description: "Literally meaning 'Sea of Milk', this four-tiered waterfall is one of India's tallest. Located on the Mandovi River, its majestic cascade amidst lush green forests is a breathtaking sight, especially during the monsoon."
-    },
-    { 
-      name: 'Old Goa (Velha Goa)', 
-      location: 'North Goa',
-      image: 'https://picsum.photos/seed/old-goa-church/600/400',
-      caption: 'old goa church',
-      description: "The former capital of Portuguese India, Old Goa is a UNESCO World Heritage site. It's renowned for its magnificent colonial-era churches and cathedrals, including the Basilica of Bom Jesus and Se Cathedral."
-    },
-  ];
-
+  const goaAttractions = (attractions as Attraction[]).filter(a => a.city === "North Goa" || a.city === "South Goa");
 
   if (stateId === 'goa') {
     return (
@@ -393,11 +372,13 @@ export default function StatePage() {
             <p className="mt-2 text-muted-foreground">Experience the distinct vibes of North and South Goa.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
               {goaMajorAreas.map(area => (
-                <Card key={area.name} className="overflow-hidden group relative">
-                  <Image src={area.image} alt={area.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={area.caption} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                  <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{area.name}</h3>
-                </Card>
+                 <Link href={`/states/goa/${area.slug}`} key={area.name}>
+                    <Card className="overflow-hidden group relative">
+                        <Image src={area.image} alt={area.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={area.caption} />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                        <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{area.name}</h3>
+                    </Card>
+                 </Link>
               ))}
             </div>
           </div>
@@ -405,18 +386,20 @@ export default function StatePage() {
           <div className="my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Goa</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {goaAttractions.map(attraction => (
-                <Card key={attraction.name} className="overflow-hidden">
-                  <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48" data-ai-hint={attraction.caption} />
-                  <CardContent className="p-4">
-                    <h3 className="font-bold text-lg">{attraction.name}</h3>
-                    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
-                      <MapPin className="w-3 h-3" />
-                      {attraction.location}
-                    </div>
-                    <p className="text-sm text-muted-foreground mt-2">{attraction.description}</p>
-                  </CardContent>
-                </Card>
+              {goaAttractions.slice(0,3).map(attraction => (
+                 <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                    <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                        <CardContent className="p-4">
+                            <h3 className="font-bold text-lg">{attraction.name}</h3>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+                            <MapPin className="w-3 h-3" />
+                            {attraction.city}
+                            </div>
+                            <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                        </CardContent>
+                    </Card>
+                </Link>
               ))}
             </div>
           </div>

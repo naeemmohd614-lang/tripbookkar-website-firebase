@@ -1,6 +1,5 @@
 
 
-
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
 import type { Destination, Brand, State, City, Hotel, MonthDestination, Attraction } from './types';
@@ -66,7 +65,7 @@ export const destinationsByMonth: MonthDestination[] = [
     { name: 'January', imageId: 'month-jan', slug: 'january' },
     { name: 'February', imageId: 'month-feb', slug: 'february' },
     { name: 'March', imageId: 'month-mar', slug: 'march' },
-    { name: 'April', imageId:- 'month-apr', slug: 'april' },
+    { name: 'April', imageId: 'month-apr', slug: 'april' },
     { name: 'May', imageId: 'month-may', slug: 'may' },
     { name: 'June', imageId: 'month-jun', slug: 'june' },
     { name: 'July', imageId: 'month-jul', slug: 'july' },

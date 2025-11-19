@@ -60,7 +60,7 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         nearbyHotels: ["Rambagh Palace, Jaipur", "Jaipur Marriott Hotel", "The Raj Palace"]
     },
     {
-        name: 'City Palace',
+        name: 'City Palace, Jaipur',
         city: 'Jaipur',
         cityId: 'jaipur',
         image: {
@@ -270,6 +270,66 @@ const jaisalmerAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     },
 ];
 
+const goaAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Baga Beach',
+        city: 'North Goa',
+        cityId: 'north-goa',
+        image: {
+            src: 'https://picsum.photos/seed/baga-beach/1200/600',
+            caption: 'Baga Beach shacks and crowd',
+        },
+        description: "One of the most famous beaches in North Goa, Baga is known for its lively atmosphere, beach shacks, water sports, and electrifying nightlife. It's the perfect spot for fun and excitement.",
+        timing: "Open 24 hours",
+        fees: [
+            { type: "Entry", amount: "Free" },
+        ],
+        bestTimeToVisit: "October to March",
+        distances: [
+            { from: "Goa International Airport", distance: "40 km" },
+            { from: "Panaji", distance: "16 km" },
+        ],
+        nearbyHotels: ["Goa Marriott Resort & Spa", "The Westin Goa"]
+    },
+    {
+        name: 'Dudhsagar Falls',
+        city: 'South Goa',
+        cityId: 'south-goa',
+        image: {
+            src: 'https://picsum.photos/seed/dudhsagar-falls/1200/600',
+            caption: 'dudhsagar falls in monsoon',
+        },
+        description: "Literally meaning 'Sea of Milk', this four-tiered waterfall is one of India's tallest. Located on the Mandovi River, its majestic cascade amidst lush green forests is a breathtaking sight, especially during the monsoon.",
+        timing: "7:00 AM - 5:00 PM",
+        fees: [
+            { type: "Jeep Safari", amount: "Approx. ₹400-500 per person" },
+        ],
+        bestTimeToVisit: "June to September",
+        distances: [
+            { from: "Panaji", distance: "60 km" },
+        ],
+        notes: ["Accessible via a thrilling jeep safari through the forest.", "Swimming is allowed at the base of the falls."]
+    },
+    {
+        name: 'Old Goa (Velha Goa)',
+        city: 'North Goa',
+        cityId: 'north-goa',
+        image: {
+            src: 'https://picsum.photos/seed/old-goa-church/1200/600',
+            caption: 'Basilica of Bom Jesus in Old Goa',
+        },
+        description: "The former capital of Portuguese India, Old Goa is a UNESCO World Heritage site. It's renowned for its magnificent colonial-era churches and cathedrals, including the Basilica of Bom Jesus and Se Cathedral.",
+        timing: "9:00 AM - 6:30 PM",
+        fees: [
+            { type: "Entry", amount: "Free for most churches" },
+        ],
+        bestTimeToVisit: "November to February",
+        distances: [
+            { from: "Panaji", distance: "10 km" },
+        ],
+        nearbyHotels: ["Goa Marriott Resort & Spa"]
+    },
+];
 
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
@@ -285,6 +345,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...jaisalmerAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...goaAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),
