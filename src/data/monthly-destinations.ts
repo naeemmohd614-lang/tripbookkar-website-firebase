@@ -70,7 +70,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Rann of Kutch, Gujarat",
         reason: "January is when the Rann Utsav is in full swing. Experience the vast white salt desert under the full moon, enjoy cultural performances, and witness the region's vibrant heritage.",
-        hotels: ["The Fern Residency, Bhuj", "Regenta Resort Bhuj", "Rann Riders, Dasada", "Rann Kandhi Resort", "White Rann Resort"],
+        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'kutch' || h.cityId === 'bhuj').map(h => h.name),
         image: { src: "https://picsum.photos/seed/kutch-january/1200/400", caption: "rann of kutch" }
       },
       {
@@ -88,7 +88,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Khajuraho, Madhya Pradesh",
         reason: "The pleasant daytime temperatures in January are perfect for exploring the intricate and world-famous temple sculptures. The annual Khajuraho Dance Festival often begins towards the end of the month.",
-        hotels: ["The Lalit Temple View Khajuraho", "Radisson Jass Khajuraho", "Ramada by Wyndham Khajuraho", "Hotel Isabel Palace", "Syna Heritage Hotel"],
+        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'khajuraho').map(h => h.name),
         image: { src: "https://picsum.photos/seed/khajuraho-january/1200/400", caption: "khajuraho temple" }
       }
     ]
@@ -125,7 +125,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Agra, Uttar Pradesh",
         reason: "Visit during the Taj Mahotsav, a 10-day cultural festival celebrating arts, crafts, and cuisines of India, with the magnificent Taj Mahal as the backdrop.",
-        hotels: ["The Oberoi Amarvilas", "ITC Mughal", "Taj Hotel & Convention Centre Agra", "Courtyard by Marriott Agra", "Trident, Agra"],
+        hotels: ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra", "Taj Hotel & Convention Centre, Agra", "Courtyard by Marriott Agra", "Trident, Agra"],
         image: { src: "https://picsum.photos/seed/agra-feb/1200/400", caption: "taj mahal agra" }
       },
       {
@@ -155,7 +155,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Kolkata, West Bengal",
         reason: "The weather is cool and pleasant, ideal for sightseeing. It's also the time for the Kolkata International Book Fair, a paradise for literature lovers.",
-        hotels: ["The Oberoi Grand", "Taj Bengal", "ITC Sonar", "Hyatt Regency Kolkata", "The Park Kolkata"],
+        hotels: ["The Oberoi Grand, Kolkata", "Taj Bengal", "ITC Sonar", "Hyatt Regency Kolkata", "The Park Kolkata"],
         image: { src: "https://picsum.photos/seed/kolkata-feb/1200/400", caption: "victoria memorial kolkata" }
       }
     ]
@@ -168,13 +168,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Vrindavan & Mathura, Uttar Pradesh",
         reason: "Experience the unique and vibrant celebrations of Holi. From Lathmar Holi in Barsana to the flower-filled Phoolon ki Holi in Vrindavan, it's a spectacle of colors and traditions.",
-        hotels: ["Nidhivan Sarovar Portico", "The Radha Ashok", "Hotel Brijwasi Royal", "Krishna Residency", "Anandam Clarks Inn Suites"],
+        hotels: ["Nidhivan Sarovar Portico, Vrindavan", "The Radha Ashok", "Hotel Brijwasi Royal", "Krishna Residency", "Anandam Clarks Inn Suites"],
         image: { src: "https://picsum.photos/seed/vrindavan-mar/1200/400", caption: "holi festival vrindavan" }
       },
       {
         name: "Rishikesh, Uttarakhand",
         reason: "The weather is perfect for yoga, meditation, and adventure sports like white-water rafting before the summer heat sets in. The International Yoga Festival is also held in March.",
-        hotels: ["Ananda in the Himalayas", "The Roseate Ganges", "Aloha on the Ganges", "Taj Rishikesh Resort & Spa", "EllBee Ganga View"],
+        hotels: ["The Westin Resort & Spa, Himalayas", "The Roseate Ganges", "Aloha on the Ganges", "Taj Rishikesh Resort & Spa, Uttarakhand", "EllBee Ganga View"],
         image: { src: "https://picsum.photos/seed/rishikesh-mar/1200/400", caption: "rishikesh bridge" }
       },
       {
@@ -235,7 +235,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         {
             name: "Srinagar, Kashmir",
             reason: "Visit during the Tulip Festival at Asia's largest tulip garden. The valley is in full bloom, with pleasant weather perfect for shikara rides on Dal Lake and exploring Mughal gardens.",
-            hotels: ["The Lalit Grand Palace", "Vivanta Dal View", "Four Points by Sheraton Srinagar", "The Orchard Retreat & Spa", "Batra Hotel"],
+            hotels: ["The Lalit Grand Palace Srinagar", "Vivanta Dal View, Srinagar", "Four Points by Sheraton Srinagar", "The Orchard Retreat & Spa", "Batra Hotel"],
             image: { src: "https://picsum.photos/seed/srinagar-apr/1200/400", caption: "srinagar tulip garden" }
         },
         {
@@ -253,19 +253,19 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         {
             name: "Pachmarhi, Madhya Pradesh",
             reason: "Known as the 'Queen of Satpura', this hill station is a cool retreat. Explore its waterfalls, ancient caves, and dense forests in pleasant pre-summer weather.",
-            hotels: ["Welcomheritage Golf View", "MPT Amaltas", "Pachmarhi", "Hotel Highlands", "Rock End Manor"],
+            hotels: ["Welcomheritage Golf View", "MPT Amaltas, Pachmarhi", "Pachmarhi", "Hotel Highlands", "Rock End Manor"],
             image: { src: "https://picsum.photos/seed/pachmarhi-apr/1200/400", caption: "pachmarhi waterfall" }
         },
         {
             name: "Ooty, Tamil Nadu",
             reason: "The 'Queen of Nilgiris' is in full bloom. Visit the Government Botanical Garden for its annual flower show and enjoy the pleasant climate and scenic toy train rides.",
-            hotels: ["Taj Savoy Hotel", "Sterling Ooty Fern Hill", "Gem Park Ooty", "Fortune Resort Sullivan Court", "Sinclairs Retreat Ooty"],
+            hotels: ["Taj Savoy Hotel, Ooty", "Sterling Ooty Fern Hill", "Gem Park Ooty", "Fortune Resort Sullivan Court", "Sinclairs Retreat Ooty"],
             image: { src: "https://picsum.photos/seed/ooty-apr/1200/400", caption: "ooty botanical garden" }
         },
         {
             name: "Kalimpong, West Bengal",
             reason: "A quieter alternative to Darjeeling, Kalimpong is beautiful in April with blooming orchids and gladioli. Enjoy stunning views of Kanchenjunga from Deolo Hill.",
-            hotels: ["Mayfair Himalayan Spa Resort", "The Elgin Silver Oaks", "Sinclairs Retreat Kalimpong", "Holumba Haven", "Summit Barsana Resort & Spa"],
+            hotels: ["Mayfair Himalayan Spa Resort", "The Elgin Silver Oaks, Kalimpong", "Sinclairs Retreat Kalimpong", "Holumba Haven", "Summit Barsana Resort & Spa"],
             image: { src: "https://picsum.photos/seed/kalimpong-apr/1200/400", caption: "kalimpong town" }
         },
         {
@@ -302,13 +302,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         {
             name: "Shimla, Himachal Pradesh",
             reason: "Escape the scorching summer heat of the plains. Shimla offers a cool climate, colonial architecture, and stunning Himalayan views. The Mall Road is perfect for evening strolls.",
-            hotels: ["The Oberoi Cecil", "Wildflower Hall, An Oberoi Resort", "Radisson Jass Shimla", "Clarkes Hotel", "Snow Valley Resorts"],
+            hotels: ["The Oberoi Cecil, Shimla", "Wildflower Hall, An Oberoi Resort, Shimla", "Radisson Jass Shimla", "Clarkes Hotel", "Snow Valley Resorts"],
             image: { src: "https://picsum.photos/seed/shimla-may/1200/400", caption: "shimla town view" }
         },
         {
             name: "Manali, Himachal Pradesh",
             reason: "A haven for adventure seekers. With pleasant weather, it's the perfect time for paragliding in Solang Valley, trekking, and visiting Rohtang Pass as it opens up.",
-            hotels: ["The Himalayan", "Manuallaya - The Resort Spa", "Span Resort & Spa", "Baragarh Resort", "Solang Valley Resort"],
+            hotels: ["The Himalayan", "Manuallaya - The Resort Spa in the Himalayas", "Span Resort & Spa", "Baragarh Resort", "Solang Valley Resort"],
             image: { src: "https://picsum.photos/seed/manali-may/1200/400", caption: "manali valley" }
         },
         {
@@ -387,7 +387,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Sikkim",
         reason: "Visit before the heavy monsoon sets in. The weather is pleasant, and the rhododendrons are still in bloom at higher altitudes. It's great for sightseeing in Gangtok and Pelling.",
-        hotels: ["Mayfair Spa Resort & Casino", "The Elgin Mount Pandim", "Tashiling Residency Hotel & Spa", "Summit Denzong Hotel", "Lemon Tree Hotel, Gangtok"],
+        hotels: ["Mayfair Spa Resort & Casino", "The Elgin Mount Pandim, Pelling", "Tashiling Residency Hotel & Spa", "Summit Denzong Hotel", "Lemon Tree Hotel, Gangtok"],
         image: { src: "https://picsum.photos/seed/sikkim-june/1200/400", caption: "sikkim mountains" }
       },
       {
@@ -576,7 +576,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Lachen, Sikkim",
         reason: "As the monsoon recedes, the skies clear up, offering breathtaking views of the Himalayas. Gurudongmar Lake is accessible and looks stunning in this season.",
-        hotels: ["The Apple Orchard Resort", "Jain Group Hotel Sonam Palgey", "Yarlam", "Himalayan Residency", "Magpie Nest"],
+        hotels: ["The Apple Orchard Resort", "Jain Group Hotel Sonam Palgey", "Yarlam, Lachung", "Himalayan Residency", "Magpie Nest"],
         image: { src: "https://picsum.photos/seed/lachen-sep/1200/400", caption: "gurudongmar lake sikkim" }
       },
       {
@@ -606,7 +606,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Dooars, West Bengal",
         reason: "The forests of the Dooars region reopen after the monsoon. The landscape is incredibly lush, and it's a great time for wildlife safaris in Gorumara and Jaldapara National Parks.",
-        hotels: ["Sinclairs Retreat Dooars", "The Riverwood Forest Retreat", "Aranya Jungle Resort", "Resort Murti", "Gorumara Jungle Resort"],
+        hotels: ["Sinclairs Siliguri", "The Riverwood Forest Retreat", "Aranya Jungle Resort", "Resort Murti", "Gorumara Jungle Resort"],
         image: { src: "https://picsum.photos/seed/dooars-sep/1200/400", caption: "dooars tea garden" }
       },
       {
@@ -637,7 +637,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Kolkata, West Bengal",
         reason: "Immerse yourself in the grand festivities of Durga Puja. The city turns into a massive art gallery with beautifully crafted pandals and idols, accompanied by delicious food.",
-        hotels: ["The Oberoi Grand", "Taj Bengal", "ITC Sonar", "Hyatt Regency Kolkata", "The Park Kolkata"],
+        hotels: ["The Oberoi Grand, Kolkata", "Taj Bengal", "ITC Sonar, Kolkata", "Hyatt Regency Kolkata", "The Park Kolkata"],
         image: { src: "https://picsum.photos/seed/kolkata-oct/1200/400", caption: "durga puja kolkata" }
       },
       {
@@ -661,19 +661,19 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Pachmarhi, Madhya Pradesh",
         reason: "The 'Queen of Satpura' is at its scenic best with lush greenery and active waterfalls after the rains. The pleasant weather is ideal for trekking and sightseeing.",
-        hotels: ["Welcomheritage Golf View", "MPT Amaltas", "Pachmarhi", "Hotel Highlands", "Rock End Manor"],
+        hotels: ["Welcomheritage Golf View", "MPT Amaltas, Pachmarhi", "Pachmarhi", "Hotel Highlands", "Rock End Manor"],
         image: { src: "https://picsum.photos/seed/pachmarhi-oct/1200/400", caption: "pachmarhi landscape" }
       },
        {
         name: "Jodhpur, Rajasthan",
         reason: "The weather is perfect for exploring the Blue City. The world-renowned Rajasthan International Folk Festival (RIFF) takes place at Mehrangarh Fort in October.",
-        hotels: ["Umaid Bhawan Palace", "RAAS Jodhpur", "Taj Hari Mahal Jodhpur", "Ajit Bhawan", "The Ummed Jodhpur Palace"],
+        hotels: ["Umaid Bhawan Palace, Jodhpur", "RAAS Jodhpur", "Taj Hari Mahal Jodhpur", "Ajit Bhawan", "The Ummed Jodhpur Palace"],
         image: { src: "https://picsum.photos/seed/jodhpur-oct/1200/400", caption: "mehrangarh fort jodhpur night" }
       },
       {
         name: "Rishikesh, Uttarakhand",
         reason: "The post-monsoon river has a great flow for white-water rafting, and the weather is ideal for yoga, meditation, and camping by the Ganges.",
-        hotels: ["Ananda in the Himalayas", "The Roseate Ganges", "Aloha on the Ganges", "Taj Rishikesh Resort & Spa", "EllBee Ganga View"],
+        hotels: ["The Westin Resort & Spa, Himalayas", "The Roseate Ganges", "Aloha on the Ganges", "Taj Rishikesh Resort & Spa, Uttarakhand", "EllBee Ganga View"],
         image: { src: "https://picsum.photos/seed/rishikesh-oct/1200/400", caption: "rafting in rishikesh" }
       },
       {
@@ -691,7 +691,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Nainital, Uttarakhand",
         reason: "The autumn season brings a crispness to the air and clear skies. Enjoy boating on Naini Lake and get panoramic Himalayan views from Snow View Point.",
-        hotels: ["The Naini Retreat", "Shervani Hilltop", "The Manu Maharani", "Vikram Vintage Inn", "The Pavilion"],
+        hotels: ["The Naini Retreat, by Leisure Hotels", "Shervani Hilltop", "The Manu Maharani", "Vikram Vintage Inn", "The Pavilion"],
         image: { src: "https://picsum.photos/seed/nainital-oct/1200/400", caption: "nainital lake" }
       }
     ]
@@ -704,7 +704,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Varanasi, Uttar Pradesh",
         reason: "Witness the ethereal beauty of Dev Deepawali, when thousands of diyas (earthen lamps) are lit on the ghats of the Ganges. It's a truly magical and spiritual experience.",
-        hotels: ["BrijRama Palace", "Taj Ganges, Varanasi", "The Clarks, Varanasi", "Hotel Madin", "Ramada Plaza by Wyndham JHV Varanasi"],
+        hotels: ["BrijRama Palace, Varanasi", "Taj Ganges, Varanasi", "The Clarks, Varanasi", "Hotel Madin", "Ramada Plaza by Wyndham JHV Varanasi"],
         image: { src: "https://picsum.photos/seed/varanasi-nov/1200/400", caption: "dev deepawali varanasi" }
       },
       {
@@ -777,13 +777,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Rann of Kutch, Gujarat",
         reason: "The Rann Utsav is in full swing under the cool winter sky. Experience the magical white desert under the full moon, enjoy cultural programs, and shop for local handicrafts.",
-        hotels: ["The Fern Residency, Bhuj", "Regenta Resort Bhuj", "Rann Riders, Dasada", "Rann Kandhi Resort", "White Rann Resort"],
+        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'kutch' || h.cityId === 'bhuj').map(h => h.name),
         image: { src: "https://picsum.photos/seed/kutch-dec/1200/400", caption: "rann utsav kutch" }
       },
       {
         name: "Manali, Himachal Pradesh",
         reason: "For those who love snow, December is the time to visit Manali. The town is covered in a blanket of snow, perfect for skiing, snowboarding, and enjoying a white Christmas.",
-        hotels: ["The Himalayan", "Manuallaya - The Resort Spa", "Span Resort & Spa", "Baragarh Resort", "Solang Valley Resort"],
+        hotels: ["The Himalayan", "Manuallaya - The Resort Spa in the Himalayas", "Span Resort & Spa", "Baragarh Resort", "Solang Valley Resort"],
         image: { src: "https://picsum.photos/seed/manali-dec/1200/400", caption: "snowfall in manali" }
       },
       {
@@ -795,7 +795,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Jodhpur, Rajasthan",
         reason: "The pleasant winter sun is perfect for exploring the majestic Mehrangarh Fort and the blue city. The cool evenings are great for enjoying Rajasthani cuisine.",
-        hotels: ["Umaid Bhawan Palace", "RAAS Jodhpur", "Taj Hari Mahal Jodhpur", "Ajit Bhawan", "The Ummed Jodhpur Palace"],
+        hotels: ["Umaid Bhawan Palace, Jodhpur", "RAAS Jodhpur", "Taj Hari Mahal Jodhpur", "Ajit Bhawan", "The Ummed Jodhpur Palace"],
         image: { src: "https://picsum.photos/seed/jodhpur-dec/1200/400", caption: "mehrangarh fort jodhpur" }
       },
       {
@@ -831,5 +831,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
+
+    
 
     
