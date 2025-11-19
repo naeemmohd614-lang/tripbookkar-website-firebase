@@ -36,7 +36,7 @@ export default function StatePage() {
 
   if (stateId === 'uttar-pradesh') {
     const upCarouselImages = [
-        { src: 'https://picsum.photos/seed/up-carousel-1/1200/600', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
+        { src: 'https://images.unsplash.com/photo-1599661046223-140c147242da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWwlMjBtYWhhbCUyMGphaXB1cnxlbnwwfHx8fDE3NjM0NTU2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
         { src: 'https://picsum.photos/seed/up-carousel-2/1200/600', caption: 'Ghats of Varanasi', 'data-ai-hint': 'varanasi ghats' },
         { src: 'https://picsum.photos/seed/up-carousel-3/1200/600', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' }
     ];
