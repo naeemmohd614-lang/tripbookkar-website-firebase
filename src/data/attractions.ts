@@ -873,7 +873,7 @@ const tamilNaduAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         fees: [ { type: "Entry", amount: "Free" } ],
         bestTimeToVisit: "During festival times like Panguni Peruvizha",
         distances: [ { from: "Chennai Central Railway Station", distance: "7 km" } ],
-        nearbyHotels: ["The Leela Palace Chennai", "ITC Grand Chola"]
+        nearbyHotels: ["The Leela Palace Chennai", "ITC Grand Chola, a Luxury Collection Hotel, Chennai"]
     },
     {
         name: 'Meenakshi Amman Temple',
@@ -1048,6 +1048,31 @@ const madhyaPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "July to March (especially beautiful during monsoon)",
         distances: [ { from: "Indore Airport", distance: "95 km" } ],
         nearbyHotels: []
+    },
+    {
+        name: 'Rajwada Palace',
+        city: 'Indore',
+        cityId: 'indore',
+        image: { src: 'https://picsum.photos/seed/rajwada-palace/1200/600', caption: 'rajwada palace indore' },
+        description: "A historical palace in Indore, Rajwada is a fine example of Maratha architecture with French, Mughal, and Maratha styles. It's a seven-storied structure located near the Chhatris.",
+        timing: "10:00 AM - 5:00 PM",
+        fees: [ { type: "Indian", amount: "₹10" }, { type: "Foreigner", amount: "₹250" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Indore Airport", distance: "7 km" } ],
+        nearbyHotels: ["Indore Marriott Hotel", "Radisson Blu Hotel Indore"]
+    },
+    {
+        name: 'Sarafa Bazaar',
+        city: 'Indore',
+        cityId: 'indore',
+        image: { src: 'https://picsum.photos/seed/sarafa-bazaar/1200/600', caption: 'indore sarafa bazaar night food' },
+        description: "A jewelry market by day and a bustling street food court by night. Sarafa Bazaar is a food lover's paradise, offering a wide variety of local Indori delicacies and sweets.",
+        timing: "8:00 PM - 2:00 AM (for food)",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Night, after 8 PM",
+        distances: [ { from: "Indore Railway Station", distance: "2 km" } ],
+        notes: ["Come with an empty stomach to try a variety of dishes."],
+        nearbyHotels: ["Indore Marriott Hotel", "Sayaji Hotel Indore"]
     }
 ];
 

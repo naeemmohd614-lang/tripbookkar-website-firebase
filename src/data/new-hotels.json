@@ -958,5 +958,37 @@
     "roomCategories": [{ "name": "Luxury Lake View Room", "count": 152, "size": "400 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "lake view", "bhopal"]
+  },
+  {
+    "name": "Radisson Blu Hotel Indore",
+    "brand": "Radisson",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "address": "12, Scheme 94C, Ring Road, Indore, Madhya Pradesh 452010",
+    "about": "A stylish hotel offering upscale amenities, including a rooftop pool and fine dining restaurants. It's a popular choice for business and leisure travelers in Indore.",
+    "basePrice": 11000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-indore/1080/720", "caption": "Rooftop pool area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 200, "size": "377 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "indore"]
+  },
+  {
+    "name": "Indore Marriott Hotel",
+    "brand": "Marriott",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "address": "H-2, Scheme No 54, Meghdoot Garden, Vijay Nagar, Indore, Madhya Pradesh 452010",
+    "about": "A 5-star hotel known for its sophisticated style and intuitive service. It offers a resort-like feel with its expansive pool area and multiple dining venues.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/marriott-indore/1080/720", "caption": "Indore Marriott Hotel poolside" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 218, "size": "344 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "indore"]
   }
 ]
