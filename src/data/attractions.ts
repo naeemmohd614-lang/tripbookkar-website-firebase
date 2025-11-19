@@ -711,6 +711,18 @@ const sikkimAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "February to May and October to December",
         distances: [ { from: "Pelling", distance: "34 km" } ],
         nearbyHotels: ["The Elgin Mount Pandim", "Hotel Dubdi"]
+    },
+    {
+        name: 'Char Dham, Namchi',
+        city: 'Namchi',
+        cityId: 'namchi',
+        image: { src: 'https://picsum.photos/seed/char-dham-namchi/1200/600', caption: 'char dham namchi' },
+        description: "A vast pilgrimage and cultural complex featuring a massive 108-ft statue of Lord Shiva and replicas of the twelve Jyotirlingas and four Dhams.",
+        timing: "8:00 AM - 7:00 PM",
+        fees: [ { type: "Entry", amount: "₹50" } ],
+        bestTimeToVisit: "October to May",
+        distances: [ { from: "Gangtok", distance: "78 km" } ],
+        nearbyHotels: ["My Vibe, Namchi", "Hotel Summit Sobralia"]
     }
 ];
 

@@ -199,5 +199,21 @@
     "image": "",
     "description": "A small town in West Sikkim, famous for its magnificent views of the Kanchenjunga.",
     "totalHotels": 50
+  },
+  {
+    "cityId": "lachung",
+    "stateId": "sikkim",
+    "name": "Lachung",
+    "image": "",
+    "description": "A scenic mountain village close to the Tibetan border, known for the Yumthang Valley.",
+    "totalHotels": 30
+  },
+  {
+    "cityId": "namchi",
+    "stateId": "sikkim",
+    "name": "Namchi",
+    "image": "",
+    "description": "The cultural capital of Sikkim, known for its large statues and religious sites.",
+    "totalHotels": 20
   }
 ]

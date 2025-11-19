@@ -3,6 +3,7 @@
 
 
 
+
 'use client';
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
@@ -51,7 +52,7 @@ export default function StatePage() {
         { icon: Zap, text: 'Trekking & Adventure', color: 'text-green-500' },
     ];
     
-    const sikkimCities = ['Gangtok', 'Pelling'].map(cityName => {
+    const sikkimCities = ['Gangtok', 'Pelling', 'Lachung', 'Namchi'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
       return {
@@ -62,7 +63,7 @@ export default function StatePage() {
       };
     });
 
-    const sikkimAttractions = (attractions as Attraction[]).filter(a => a.city === 'Gangtok' || a.city === 'Pelling');
+    const sikkimAttractions = (attractions as Attraction[]).filter(a => a.city === 'Gangtok' || a.city === 'Pelling' || a.city === 'Namchi');
     
     return (
       <div>
@@ -117,8 +118,8 @@ export default function StatePage() {
 
           <div className="text-center my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Destinations</h2>
-            <p className="mt-2 text-muted-foreground">Discover the charm of Gangtok and Pelling.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
+            <p className="mt-2 text-muted-foreground">Discover the charm of Sikkim's beautiful towns.</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
               {sikkimCities.map(city => (
                 <Link href={`/states/sikkim/cities/${city.cityId}`} key={city.name}>
                   <Card className="overflow-hidden group relative">

@@ -458,5 +458,39 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "350 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "mountain view", "pelling", "romantic"]
+  },
+  {
+    "name": "Yarlam, Lachung",
+    "brand": "Yarlam",
+    "city": "Lachung",
+    "state": "Sikkim",
+    "address": "Near Lachung Monastery, Lachung, North Sikkim, Sikkim 737120",
+    "about": "A luxurious hotel in the remote and beautiful valley of Lachung. It offers modern comforts amidst pristine Himalayan landscapes, close to Yumthang Valley.",
+    "basePrice": 10000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/yarlam-lachung-1/1080/720", "caption": "Hotel exterior in Lachung valley" },
+      { "src": "https://picsum.photos/seed/yarlam-lachung-2/1080/720", "caption": "Comfortable room interior" }
+    ],
+    "roomCategories": [{ "name": "Super Deluxe", "count": 38, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["remote", "mountain view", "lachung", "valley"]
+  },
+  {
+    "name": "Hotel Summit Sobralia",
+    "brand": "Summit",
+    "city": "Namchi",
+    "state": "Sikkim",
+    "address": "Helipad Road, Upper Ghurpisey, Namchi, Sikkim 737126",
+    "about": "A modern hotel offering panoramic views of the Kanchenjunga range and the Samdruptse statue. It provides a comfortable base to explore the cultural attractions of South Sikkim.",
+    "basePrice": 8000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/summit-namchi-1/1080/720", "caption": "Hotel exterior and view" },
+      { "src": "https://picsum.photos/seed/summit-namchi-2/1080/720", "caption": "Restaurant area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 50, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["cultural", "mountain view", "namchi"]
   }
 ]
