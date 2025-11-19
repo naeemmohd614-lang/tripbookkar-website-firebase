@@ -234,5 +234,629 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 209, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "surat"]
+  },
+  {
+    "name": "The St. Regis Mumbai",
+    "brand": "Marriott",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "462, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013",
+    "about": "India’s tallest hotel, offering panoramic views of the cityscape and the Arabian Sea. Experience bespoke St. Regis Butler Service and exquisite dining at this iconic address.",
+    "basePrice": 24000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/stregis-mumbai-1/1080/720", "caption": "Panoramic city view from the hotel" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 395, "size": "484 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "city view", "mumbai"]
+  },
+  {
+    "name": "ITC Maurya, a Luxury Collection Hotel, New Delhi",
+    "brand": "Marriott",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Sardar Patel Marg, Akhaura Block, Diplomatic Enclave, Chanakyapuri, New Delhi, Delhi 110021",
+    "about": "A landmark hotel in the diplomatic enclave of New Delhi, preferred by heads of state and global icons. Famed for its award-winning restaurants like Bukhara and Dum Pukht.",
+    "basePrice": 18000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-maurya-1/1080/720", "caption": "The grand facade of ITC Maurya" }
+    ],
+    "roomCategories": [{ "name": "Executive Club", "count": 437, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "diplomatic enclave", "new delhi"]
+  },
+  {
+    "name": "The Ritz-Carlton, Pune",
+    "brand": "Marriott",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "address": "Golf Course Square, Airport Road, Yerawada, Pune, Maharashtra 411006",
+    "about": "An epitome of luxury, The Ritz-Carlton, Pune offers stunning views of the golf course, sophisticated event spaces, and an array of fine dining experiences, set in a modern architectural marvel.",
+    "basePrice": 17000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/ritz-pune-1/1080/720", "caption": "The Ritz-Carlton, Pune exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Golf View Room", "count": 198, "size": "538 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "golf view", "pune"]
+  },
+  {
+    "name": "W Goa",
+    "brand": "Marriott",
+    "city": "Vagator",
+    "state": "Goa",
+    "address": "Vagator Beach, Bardez, Goa 403509",
+    "about": "A stylish and vibrant luxury resort overlooking Vagator Beach. W Goa offers a unique blend of bohemian vibes and chic luxury, with stunning design, a lively pool scene, and eclectic dining.",
+    "basePrice": 25000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/w-goa-1/1080/720", "caption": "Stylish pool area at W Goa" }
+    ],
+    "roomCategories": [{ "name": "Wonderful Room", "count": 121, "size": "650 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "beachfront", "party", "goa", "pet friendly"]
+  },
+  {
+    "name": "Sheraton Grand Bangalore Hotel at Brigade Gateway",
+    "brand": "Marriott",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "26/1 Dr. Rajkumar Road, Malleswaram-Rajajinagar, Bengaluru, Karnataka 560055",
+    "about": "Connected to the World Trade Center and Orion Mall, this hotel is a hub of activity. It offers luxurious rooms, a rooftop pool, and extensive event spaces, perfect for business travelers.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/sheraton-bangalore-1/1080/720", "caption": "Sheraton Grand Bangalore exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 230, "size": "387 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "bengaluru"]
+  },
+  {
+    "name": "The Westin Chennai Velachery",
+    "brand": "Marriott",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "154, Velachery Main Rd, Velachery, Chennai, Tamil Nadu 600042",
+    "about": "A contemporary hotel focused on wellness, offering the signature Westin Heavenly Bed and Heavenly Bath. It's located close to business hubs and features a large outdoor pool.",
+    "basePrice": 10000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-chennai-1/1080/720", "caption": "The Westin Chennai exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 215, "size": "431 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "business", "chennai"]
+  },
+  {
+    "name": "Le Méridien Hyderabad",
+    "brand": "Marriott",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "address": "Gachibowli - Miyapur Rd, Jayabheri Enclave, Gachibowli, Hyderabad, Telangana 500032",
+    "about": "A stylish hotel in the heart of Hyderabad's IT hub, Gachibowli. It features chic design, modern art, and offers a unique, culturally-infused experience for the creative traveler.",
+    "basePrice": 9000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/lemeridien-hyd-1/1080/720", "caption": "Le Méridien Hyderabad facade" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 241, "size": "344 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "design", "hyderabad"]
+  },
+  {
+    "name": "Fairfield by Marriott Visakhapatnam",
+    "brand": "Marriott",
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "address": "KSR Prime, R&B Junction, Visakhapatnam, Andhra Pradesh 530002",
+    "about": "Offering a blend of comfort and convenience, this hotel is ideal for business and leisure travelers. Enjoy modern rooms and friendly service in the heart of the city.",
+    "basePrice": 5500,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/fairfield-vizag-1/1080/720", "caption": "Fairfield by Marriott Visakhapatnam exterior" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 121, "size": "258 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city hotel", "visakhapatnam"]
+  },
+  {
+    "name": "JW Marriott Hotel Kolkata",
+    "brand": "JW Marriott",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "address": "4A, J.B.S Haldane Avenue, Kolkata, West Bengal 700105",
+    "about": "A landmark of luxury in Kolkata, offering sophisticated accommodations, an award-winning spa, and a range of exquisite dining options. It features a stunning infinity pool.",
+    "basePrice": 14000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-kolkata-1/1080/720", "caption": "JW Marriott Hotel Kolkata exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 281, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "kolkata"]
+  },
+  {
+    "name": "The Westin Hyderabad Mindspace",
+    "brand": "Marriott",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "address": "Raheja IT Park, Hitec City, Madhapur, Hyderabad, Telangana 500081",
+    "about": "Located in the heart of the HITEC City, this hotel is an oasis of wellness and luxury. It features spacious rooms, a lagoon-style pool, and is known for its focus on well-being.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-hyd-1/1080/720", "caption": "The Westin Hyderabad Mindspace pool area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 427, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "business", "hyderabad"]
+  },
+  {
+    "name": "ITC Gardenia, a Luxury Collection Hotel, Bengaluru",
+    "brand": "Marriott",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "1, Residency Road, Bengaluru, Karnataka 560025",
+    "about": "Inspired by the gardens of Bangalore, this hotel is a tribute to nature with its vertical gardens and open-to-sky design. It embodies the concept of 'Responsible Luxury'.",
+    "basePrice": 16000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-gardenia-1/1080/720", "caption": "Lobby with vertical gardens" }
+    ],
+    "roomCategories": [{ "name": "Tower Room", "count": 292, "size": "530 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "eco-friendly", "bengaluru"]
+  },
+  {
+    "name": "JW Marriott Hotel Bengaluru",
+    "brand": "JW Marriott",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "24/1, Vittal Mallya Rd, KG Halli, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001",
+    "about": "Overlooking the lush Cubbon Park, this hotel offers a luxurious retreat in the city center. It features an exclusive spa, a rooftop pool, and award-winning dining.",
+    "basePrice": 19000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-bengaluru-1/1080/720", "caption": "JW Marriott Hotel Bengaluru exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 270, "size": "485 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "park view", "bengaluru"]
+  },
+  {
+    "name": "The Ritz-Carlton, Bangalore",
+    "brand": "Marriott",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "99, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025",
+    "about": "Experience legendary service and opulent luxury at this downtown hotel. The Ritz-Carlton, Bangalore offers exquisite dining, a tranquil spa, and sophisticated event spaces.",
+    "basePrice": 22000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/ritz-bangalore-1/1080/720", "caption": "Exterior view of The Ritz-Carlton Bangalore" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 277, "size": "532 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "bengaluru"]
+  },
+  {
+    "name": "Aloft New Delhi Aerocity",
+    "brand": "Marriott",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "5B, IGI T3 Road, Delhi Aerocity, New Delhi, Delhi 110037",
+    "about": "A modern, tech-savvy hotel with a vibrant social scene. Aloft offers loft-inspired rooms, a lively bar, and is conveniently located in the Aerocity hospitality district.",
+    "basePrice": 9000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/aloft-delhi-1/1080/720", "caption": "Aloft New Delhi Aerocity lobby" }
+    ],
+    "roomCategories": [{ "name": "Aloft Room", "count": 253, "size": "333 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "airport hotel", "new delhi", "pet friendly"]
+  },
+  {
+    "name": "Courtyard by Marriott Siliguri",
+    "brand": "Marriott",
+    "city": "Siliguri",
+    "state": "West Bengal",
+    "address": "Mallaguri, Siliguri, West Bengal 734003",
+    "about": "Located in the heart of Siliguri, this hotel offers modern accommodations and is a perfect gateway to the Northeast. It features a rooftop pool with panoramic city views.",
+    "basePrice": 7500,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/courtyard-siliguri-1/1080/720", "caption": "Rooftop pool at Courtyard Siliguri" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 130, "size": "323 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city view", "siliguri"]
+  },
+  {
+    "name": "Sheraton Grand Chennai Resort & Spa",
+    "brand": "Marriott",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "280, ECR, Vedanamelli, Chennai, Tamil Nadu 603104",
+    "about": "A stunning beach resort on the scenic East Coast Road. It features stylish villas, a beautiful infinity pool, and direct access to the beach, offering a perfect coastal retreat.",
+    "basePrice": 15000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/sheraton-chennai-1/1080/720", "caption": "Beachfront view of the resort" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 125, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beachfront", "resort", "chennai"]
+  },
+  {
+    "name": "Four Points by Sheraton Mahabalipuram Resort & Convention Center",
+    "brand": "Marriott",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "ECR-OMR Junction, Poonjeri, Mahabalipuram, Chennai, Tamil Nadu 603104",
+    "about": "A tranquil resort offering spacious chalets, a sprawling swimming pool, and easy access to the UNESCO World Heritage sites of Mahabalipuram. Ideal for a family getaway.",
+    "basePrice": 8000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/fourpoints-mah-1/1080/720", "caption": "Resort pool area" }
+    ],
+    "roomCategories": [{ "name": "Chalet", "count": 90, "size": "500 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "family friendly", "mahabalipuram"]
+  },
+  {
+    "name": "JW Marriott Hotel Chandigarh",
+    "brand": "JW Marriott",
+    "city": "Chandigarh",
+    "state": "Punjab",
+    "address": "Plot no: 6, Dakshin Marg, 35B, Sector 35, Chandigarh, 160035",
+    "about": "A luxury hotel in the heart of Chandigarh, offering sophisticated style, plush rooms, and a range of international dining options. It features a rooftop pool and a lavish spa.",
+    "basePrice": 13000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-chandigarh-1/1080/720", "caption": "JW Marriott Chandigarh exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "chandigarh"]
+  },
+  {
+    "name": "Courtyard by Marriott Amritsar",
+    "brand": "Marriott",
+    "city": "Amritsar",
+    "state": "Punjab",
+    "address": "Lane Number 2, Sehaj Avenue, Amritsar, Punjab 143001",
+    "about": "A contemporary hotel located close to the airport and a short drive from the Golden Temple. It offers modern rooms, an outdoor pool, and thoughtful amenities.",
+    "basePrice": 7000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/courtyard-amritsar-1/1080/720", "caption": "Courtyard by Marriott Amritsar facade" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "301 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "business", "amritsar"]
+  },
+  {
+    "name": "Renaissance Ahmedabad Hotel",
+    "brand": "Marriott",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "Behind Ganesh Meridian Complex, Sola, Ahmedabad, Gujarat 380060",
+    "about": "A stylish hotel with a prime location, offering contemporary rooms, a rooftop pool, and vibrant dining experiences. It's designed to help you discover the unexpected.",
+    "basePrice": 9500,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/renaissance-ahmedabad-1/1080/720", "caption": "Rooftop pool at Renaissance Ahmedabad" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 155, "size": "387 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["design", "business", "ahmedabad"]
+  },
+  {
+    "name": "The Westin Sohna Resort & Spa",
+    "brand": "Marriott",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "address": "Vatika Complex, Karanki Road, Dhaulah, Sohna, Gurugram, Haryana 122103",
+    "about": "A sprawling wellness resort set amidst green landscapes, offering a tranquil escape from the city. It features luxurious villas, a serene spa, and focuses on rejuvenation.",
+    "basePrice": 15000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-sohna-1/1080/720", "caption": "Villas at The Westin Sohna Resort" }
+    ],
+    "roomCategories": [{ "name": "Premier Villa", "count": 97, "size": "645 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "wellness", "gurugram", "pet friendly"]
+  },
+  {
+    "name": "The Westin Pushkar Resort & Spa",
+    "brand": "Marriott",
+    "city": "Pushkar",
+    "state": "Rajasthan",
+    "address": "Village Surajkund, Motisar Road, Pushkar, Rajasthan 305022",
+    "about": "Set against the backdrop of the Aravalli hills, this resort offers a luxurious and tranquil experience. It features villas with private pools and is a perfect base to explore Pushkar.",
+    "basePrice": 13000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-pushkar-1/1080/720", "caption": "The Westin Pushkar Resort aerial view" }
+    ],
+    "roomCategories": [{ "name": "Luxury Villa", "count": 98, "size": "785 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "luxury", "pushkar"]
+  },
+  {
+    "name": "JW Marriott Jaipur Resort & Spa",
+    "brand": "JW Marriott",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "Jaipur-Delhi Highway, NH-11, Kukas, Jaipur, Rajasthan 302028",
+    "about": "A stunning resort inspired by the palaces of Rajasthan. It features intricate architecture, luxurious rooms, and a range of royal experiences, offering a taste of Rajput grandeur.",
+    "basePrice": 19000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-jaipur-1/1080/720", "caption": "Architectural detail of JW Marriott Jaipur" }
+    ],
+    "roomCategories": [{ "name": "Royal Room", "count": 200, "size": "550 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "jaipur"]
+  },
+  {
+    "name": "Le Méridien Mahabaleshwar Resort & Spa",
+    "brand": "Marriott",
+    "city": "Mahabaleshwar",
+    "state": "Maharashtra",
+    "address": "211, 212, Satara-Medha-Mahabaleshwar Rd, Mahabaleshwar, Maharashtra 412806",
+    "about": "Nestled in the evergreen forests of the Western Ghats, this resort offers a tranquil and luxurious retreat. It's a perfect destination for nature lovers and those seeking relaxation.",
+    "basePrice": 16000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/lemeridien-maha-1/1080/720", "caption": "Le Méridien Mahabaleshwar Resort exterior" }
+    ],
+    "roomCategories": [{ "name": "Classic Forest King Room", "count": 122, "size": "441 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "forest", "mahabaleshwar"]
+  },
+  {
+    "name": "Fairfield by Marriott Goa Anjuna",
+    "brand": "Marriott",
+    "city": "Anjuna",
+    "state": "Goa",
+    "address": "1/204/A, Survey No. 13/1, Anjuna, Goa 403509",
+    "about": "Located near the famous Anjuna flea market, this hotel offers comfortable accommodations and easy access to North Goa's vibrant beaches and nightlife.",
+    "basePrice": 6500,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/fairfield-anjuna-1/1080/720", "caption": "Pool area at Fairfield Anjuna" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 130, "size": "280 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "goa", "anjuna"]
+  },
+  {
+    "name": "The Westin Mumbai Garden City",
+    "brand": "Marriott",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "International Business Park, Oberoi Garden City, Goregaon East, Mumbai, Maharashtra 400063",
+    "about": "Located in the business district of Goregaon, this hotel offers panoramic city views, rejuvenating amenities, and direct access to a premium shopping mall.",
+    "basePrice": 13000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-mumbai-1/1080/720", "caption": "The Westin Mumbai Garden City exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 268, "size": "409 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city view", "mumbai"]
+  },
+  {
+    "name": "JW Marriott Mumbai Sahar",
+    "brand": "JW Marriott",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "IA Project Rd, Chhatrapati Shivaji International Airport, Andheri, Mumbai, Maharashtra 400099",
+    "about": "A luxury hotel located near Mumbai's international airport, offering a perfect blend of comfort and convenience. It features opulent rooms, a luxurious spa, and multiple award-winning restaurants.",
+    "basePrice": 17000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-sahar-1/1080/720", "caption": "JW Marriott Mumbai Sahar lobby" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 588, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "airport hotel", "mumbai"]
+  },
+  {
+    "name": "ITC Grand Chola, a Luxury Collection Hotel, Chennai",
+    "brand": "Marriott",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "63, Mount Road, Guindy, Chennai, Tamil Nadu 600032",
+    "about": "Inspired by the grand Chola dynasty, this magnificent hotel is an architectural marvel. It embodies 'Responsible Luxury' and offers opulent rooms, a world-class spa, and a range of gourmet dining experiences.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-chola-1/1080/720", "caption": "Grand facade of ITC Grand Chola" }
+    ],
+    "roomCategories": [{ "name": "Executive Club", "count": 600, "size": "615 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "architecture", "chennai"]
+  },
+  {
+    "name": "The Westin Gurgaon, New Delhi",
+    "brand": "Marriott",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "address": "Number 1, Mehrauli-Gurgaon Rd, Sector 29, Gurugram, Haryana 122002",
+    "about": "A modern hotel in the heart of Gurugram with a focus on wellness. It offers spacious rooms, the signature Heavenly Bed, and is located close to major corporate offices and entertainment hubs.",
+    "basePrice": 12000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-gurgaon-1/1080/720", "caption": "The Westin Gurgaon exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 313, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "business", "gurugram"]
+  },
+  {
+    "name": "The St. Regis Goa Resort",
+    "brand": "Marriott",
+    "city": "Cavelossim",
+    "state": "Goa",
+    "address": "Mobor, Cavelossim, Goa 403731",
+    "about": "Nestled on the serene Mobor beach, this resort offers a luxurious escape with its private beach access, sprawling lagoons, a golf course, and the signature St. Regis Butler Service.",
+    "basePrice": 28000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/stregis-goa-1/1080/720", "caption": "The St. Regis Goa Resort lagoon view" }
+    ],
+    "roomCategories": [{ "name": "Lagoon View Room", "count": 206, "size": "600 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beachfront", "luxury", "resort", "goa"]
+  },
+  {
+    "name": "The Westin Goa",
+    "brand": "Marriott",
+    "city": "Anjuna",
+    "state": "Goa",
+    "address": "Survey No 204/1, Dmello Vaddo, Anjuna, Goa 403509",
+    "about": "Located in the vibrant area of Anjuna, this hotel offers a rejuvenating stay with its focus on wellness. Enjoy easy access to North Goa's famous beaches and nightlife.",
+    "basePrice": 14000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-goa-1/1080/720", "caption": "The Westin Goa pool area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 171, "size": "420 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "modern", "goa"]
+  },
+  {
+    "name": "JW Marriott Hotel Pune",
+    "brand": "JW Marriott",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "address": "Senapati Bapat Rd, Laxmi Society, Model Colony, Shivajinagar, Pune, Maharashtra 411016",
+    "about": "An icon of luxury in Pune, this hotel offers spacious rooms, multiple dining options including a rooftop lounge, and is connected to a premium shopping mall.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-pune-1/1080/720", "caption": "JW Marriott Hotel Pune exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 414, "size": "441 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "pune"]
+  },
+  {
+    "name": "Courtyard by Marriott Kochi Airport",
+    "brand": "Marriott",
+    "city": "Kochi",
+    "state": "Kerala",
+    "address": "Vip Road Opposite Cochin International Airport, Nedumbassery, Kerala 683572",
+    "about": "A contemporary hotel located just minutes from Cochin International Airport. It's a perfect choice for business travelers and those in transit, offering modern comforts and convenience.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/courtyard-kochi-1/1080/720", "caption": "Courtyard by Marriott Kochi Airport exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 107, "size": "323 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["airport hotel", "business", "kochi"]
+  },
+  {
+    "name": "Kochi Marriott Hotel",
+    "brand": "Marriott",
+    "city": "Kochi",
+    "state": "Kerala",
+    "address": "Lulu International Shopping Mall, 34/1111 N. H. 47, Edappally, Kochi, Kerala 682024",
+    "about": "Located within the campus of Lulu Mall, this hotel offers a perfect blend of business and leisure. It features modern rooms, a rooftop pool, and direct access to shopping and entertainment.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/marriott-kochi-1/1080/720", "caption": "Kochi Marriott Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 274, "size": "366 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["shopping", "business", "kochi"]
+  },
+  {
+    "name": "ITC Kohenur, a Luxury Collection Hotel, Hyderabad",
+    "brand": "Marriott",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "address": "Plot No. 5, Survey No. 83/1, Hyderabad Knowledge City, Madhapur, Hyderabad, Telangana 500081",
+    "about": "Overlooking the Durgam Cheruvu lake, this hotel is a tribute to the Koh-i-Noor diamond. It offers exquisite design, luxurious rooms, and a range of gourmet dining experiences in the heart of HITEC City.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-kohenur-1/1080/720", "caption": "ITC Kohenur exterior view" }
+    ],
+    "roomCategories": [{ "name": "Executive Club", "count": 271, "size": "474 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "lake view", "hyderabad"]
+  },
+  {
+    "name": "Fairfield by Marriott Coimbatore",
+    "brand": "Marriott",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "address": "469/2B, Airport Rd, Avanashi Road, Coimbatore, Tamil Nadu 641014",
+    "about": "A modern and comfortable hotel located near Coimbatore International Airport. It offers smart, functional rooms and is ideal for business travelers.",
+    "basePrice": 5000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/fairfield-coimbatore-1/1080/720", "caption": "Fairfield by Marriott Coimbatore exterior" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 128, "size": "215 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "airport hotel", "coimbatore"]
+  },
+  {
+    "name": "Fairfield by Marriott Jodhpur",
+    "brand": "Marriott",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "address": "Opposite New High Court, Circuit House Rd, Jodhpur, Rajasthan 342006",
+    "about": "This hotel offers a comfortable and convenient stay in Jodhpur. It's a great base to explore the city's majestic forts and palaces, with modern amenities and reliable service.",
+    "basePrice": 5000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/fairfield-jodhpur-1/1080/720", "caption": "Fairfield by Marriott Jodhpur exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 136, "size": "269 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "business", "jodhpur"]
+  },
+  {
+    "name": "Jaisalmer Marriott Resort & Spa",
+    "brand": "Marriott",
+    "city": "Jaisalmer",
+    "state": "Rajasthan",
+    "address": "Jaisalmer-Sam-Dhanana Road, Police Line, Jaisalmer, Rajasthan 345001",
+    "about": "A beautiful resort that reflects the golden beauty of Jaisalmer. It offers stunning views of the Jaisalmer Fort, luxurious rooms, and a range of experiences to explore the desert city.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/marriott-jaisalmer-1/1080/720", "caption": "Jaisalmer Marriott Resort & Spa exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 135, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "fort view", "jaisalmer"]
+  },
+  {
+    "name": "Four Points by Sheraton, Agra",
+    "brand": "Marriott",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "C-1, C-2, Fatehabad Rd, Tajganj, Agra, Uttar Pradesh 282001",
+    "about": "Located a short distance from the Taj Mahal, this hotel offers comfortable stays and modern amenities, making it a great choice for travelers exploring Agra's historic wonders.",
+    "basePrice": 6000,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/fourpoints-agra-1/1080/720", "caption": "Rooftop pool with Taj Mahal view" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 165, "size": "301 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "taj mahal view", "agra"]
   }
 ]
