@@ -1,5 +1,6 @@
 
 
+
 'use client';
 import { cities, hotels, states, attractions } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
@@ -1429,6 +1430,261 @@ export default function CityPage() {
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
                             <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
                             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  // J&K Pages
+  if (cityId === 'srinagar') {
+    const heroImage = {
+       src: 'https://picsum.photos/seed/srinagar-hero/1920/600',
+       caption: 'dal lake shikara'
+    };
+
+    const highlights = [
+        { icon: Sailboat, text: 'Dal Lake', color: 'text-sky-500' },
+        { icon: Flower, text: 'Mughal Gardens', color: 'text-pink-500' },
+        { icon: ShoppingBag, text: 'Floating Markets', color: 'text-green-500' },
+    ];
+
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'srinagar');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Shikara boats on Dal Lake, Srinagar" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Srinagar</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Jewel of Kashmir</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Srinagar</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Srinagar, the summer capital of Jammu and Kashmir, lies on the banks of the Jhelum River. It is famous for the serene Dal Lake, charming houseboats, and magnificent Mughal gardens. A city of unparalleled beauty, it's often referred to as 'Paradise on Earth'.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Srinagar</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {cityAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+  
+  if (cityId === 'gulmarg') {
+    const heroImage = {
+       src: 'https://picsum.photos/seed/gulmarg-hero/1920/600',
+       caption: 'gulmarg gondola snow'
+    };
+
+    const highlights = [
+        { icon: CableCar, text: 'Gondola Ride', color: 'text-sky-500' },
+        { icon: Mountain, text: 'Skiing & Snowboarding', color: 'text-blue-500' },
+        { icon: Flower, text: 'Meadow of Flowers', color: 'text-green-500' },
+    ];
+
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'gulmarg');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="View from Gulmarg Gondola" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Gulmarg</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Meadow of Flowers</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Gulmarg</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Gulmarg, meaning 'Meadow of Flowers', is a cup-shaped valley in the Pir Panjal Range. It's a premier hill resort and India’s top skiing destination. Famous for the Gulmarg Gondola, the highest cable car in the world, it offers unparalleled views and adventure.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Gulmarg</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {cityAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+  
+  if (cityId === 'pahalgam') {
+    const heroImage = {
+       src: 'https://picsum.photos/seed/pahalgam-hero/1920/600',
+       caption: 'pahalgam betab valley'
+    };
+
+    const highlights = [
+        { icon: Leaf, text: 'Valley of Shepherds', color: 'text-green-500' },
+        { icon: Mountain, text: 'Pristine Landscapes', color: 'text-sky-500' },
+        { icon: Hand, text: 'Base for Amarnath Yatra', color: 'text-orange-500' },
+    ];
+
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'pahalgam');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="View of Betaab Valley, Pahalgam" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Pahalgam</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Valley of Shepherds</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Pahalgam</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Pahalgam, the 'Valley of Shepherds', is a serene town on the banks of the Lidder River. Known for its pristine and untouched beauty, it's a paradise for nature lovers, trekkers, and those seeking tranquility. It also serves as the base for the annual Amarnath Yatra pilgrimage.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">Hotels coming soon.</h3>
+                            <p className="mt-2 text-muted-foreground">We are curating the best stays in Pahalgam. Check back later!</p>
                         </div>
                     )}
                 </div>
