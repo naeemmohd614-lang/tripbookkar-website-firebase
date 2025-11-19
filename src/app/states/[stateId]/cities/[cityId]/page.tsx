@@ -3,6 +3,7 @@
 
 
 
+
 'use client';
 import { cities, hotels, states, attractions } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
@@ -10,7 +11,7 @@ import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 
@@ -2012,6 +2013,203 @@ export default function CityPage() {
     );
   }
 
+  // Tamil Nadu Cities
+  if (cityId === 'chennai') {
+    const heroImage = { src: 'https://picsum.photos/seed/chennai-hero/1920/600', caption: 'chennai kapaleeshwarar temple' };
+    const highlights = [ { icon: Landmark, text: 'Cultural Hub', color: 'text-orange-500' }, { icon: Waves, text: 'Urban Beaches', color: 'text-sky-500' }, { icon: Utensils, text: 'South Indian Cuisine', color: 'text-red-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'chennai');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Kapaleeshwarar Temple, Chennai" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Chennai</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Gateway to South India</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Chennai</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Chennai, the capital of Tamil Nadu, is a vibrant metropolis that blends rich traditions with modern dynamism. Known for its Dravidian-style temples, long sandy beaches, colonial-era architecture, and a thriving culinary scene, Chennai offers a diverse and engaging urban experience.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Chennai</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'madurai') {
+    const heroImage = { src: 'https://picsum.photos/seed/madurai-hero/1920/600', caption: 'meenakshi temple gopuram' };
+    const highlights = [ { icon: Landmark, text: 'Temple City', color: 'text-amber-500' }, { icon: ShoppingBag, text: 'Bustling Markets', color: 'text-purple-500' }, { icon: Utensils, text: 'Authentic Cuisine', color: 'text-red-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'madurai');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Meenakshi Amman Temple Gopuram, Madurai" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Madurai</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Athens of the East</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Madurai</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">One of India's oldest continuously inhabited cities, Madurai is a cultural hotspot famous for the magnificent Meenakshi Amman Temple. The city is a celebration of Tamil culture, with a rich history, vibrant markets, and mouth-watering Chettinad cuisine.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Madurai</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+  
+  if (cityId === 'kanyakumari') {
+    const heroImage = { src: 'https://picsum.photos/seed/kanyakumari-hero/1920/600', caption: 'kanyakumari sunrise' };
+    const highlights = [ { icon: Sun, text: 'Sunrise & Sunset', color: 'text-orange-500' }, { icon: Ship, text: 'Ferry Rides', color: 'text-sky-500' }, { icon: Wind, text: 'Windy Beaches', color: 'text-blue-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'kanyakumari');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Sunrise at Kanyakumari" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Kanyakumari</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Southernmost Tip of India</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Kanyakumari</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Located at the southernmost tip of the Indian peninsula, Kanyakumari is a unique destination where the Bay of Bengal, the Arabian Sea, and the Indian Ocean meet. It's renowned for its spectacular sunrises and sunsets, the Vivekananda Rock Memorial, and the towering Thiruvalluvar Statue.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Kanyakumari</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'ooty') {
+    const heroImage = { src: 'https://picsum.photos/seed/ooty-hero/1920/600', caption: 'ooty tea plantation' };
+    const highlights = [ { icon: Mountain, text: 'Nilgiri Hills', color: 'text-green-500' }, { icon: Train, text: 'Toy Train', color: 'text-sky-500' }, { icon: Leaf, text: 'Tea Gardens', color: 'text-teal-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'ooty');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Tea plantations in Ooty" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Ooty</h1>
+                    <p className="text-lg text-gray-200 mt-2">Queen of the Nilgiris</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Ooty</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Ooty, the 'Queen of Hill Stations', is a popular destination in the Nilgiri Hills. Known for its rolling hills covered in tea plantations, colonial-era architecture, serene lakes, and the charming Nilgiri Mountain Railway, Ooty offers a refreshing escape into nature.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Ooty</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'kodaikanal') {
+    const heroImage = { src: 'https://picsum.photos/seed/kodaikanal-hero/1920/600', caption: 'kodaikanal lake view' };
+    const highlights = [ { icon: Star, text: 'Star-shaped Lake', color: 'text-blue-500' }, { icon: TreePine, text: 'Lush Forests', color: 'text-green-500' }, { icon: Flower, text: 'Kurinji Flower', color: 'text-purple-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'kodaikanal');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Kodaikanal Lake" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Kodaikanal</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Princess of Hill Stations</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Kodaikanal</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Kodaikanal, known as the 'Princess of Hill Stations', is a misty hill town in Tamil Nadu. Centered around the man-made, star-shaped Kodaikanal Lake, it's a place of serene natural beauty with its rolling hills, lush forests, and gushing waterfalls.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                {cityAttractions.length > 0 &&
+                  <div className="my-16">
+                      <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Kodaikanal</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                  </div>
+                }
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
 
   // Fallback for other cities
   return (
