@@ -4,7 +4,7 @@
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf } from 'lucide-react';
 import type { State, Hotel, City, Attraction } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -204,15 +204,15 @@ export default function StatePage() {
           <div className="my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Rajasthan</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {(attractions as Attraction[]).filter(a => a.cityId === 'jaipur' || a.cityId === 'jodhpur' || a.cityId === 'udaipur').slice(0,3).map(attraction => (
-                <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+              {rajasthanAttractions.map(attraction => (
+                 <Link href={`/attractions/${attraction.id}`} key={attraction.id}>
                     <Card className="overflow-hidden group h-full hover:shadow-lg transition-shadow">
-                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                        <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.caption} />
                         <CardContent className="p-4">
                             <h3 className="font-bold text-lg">{attraction.name}</h3>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
                             <MapPin className="w-3 h-3" />
-                            {attraction.city}
+                            {attraction.location}
                             </div>
                             <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
                         </CardContent>

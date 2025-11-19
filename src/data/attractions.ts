@@ -329,6 +329,44 @@ const goaAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         ],
         nearbyHotels: ["Goa Marriott Resort & Spa"]
     },
+    {
+        name: 'Palolem Beach',
+        city: 'South Goa',
+        cityId: 'south-goa',
+        image: {
+            src: 'https://picsum.photos/seed/palolem-beach/1200/600',
+            caption: 'crescent-shaped Palolem beach',
+        },
+        description: "A picturesque crescent-shaped beach known for its calm waters and serene atmosphere. It's lined with palm trees and colorful beach huts, offering a perfect escape from the crowds.",
+        timing: "Open 24 hours",
+        fees: [{ type: "Entry", amount: "Free" }],
+        bestTimeToVisit: "November to February",
+        distances: [
+            { from: "Goa International Airport", distance: "60 km" },
+            { from: "Margao Railway Station", distance: "37 km" },
+        ],
+        notes: ["Famous for 'Silent Noise' headphone parties.", "Ideal for kayaking and swimming."],
+        nearbyHotels: ["The LaLiT Golf & Spa Resort Goa", "Sobit Sarovar Portico"]
+    },
+    {
+        name: 'Agonda Beach',
+        city: 'South Goa',
+        cityId: 'south-goa',
+        image: {
+            src: 'https://picsum.photos/seed/agonda-beach/1200/600',
+            caption: 'pristine Agonda beach',
+        },
+        description: "A quiet and pristine beach, perfect for relaxing, swimming, and sunbathing. Agonda is also a designated turtle nesting site, making it a haven for nature lovers.",
+        timing: "Open 24 hours",
+        fees: [{ type: "Entry", amount: "Free" }],
+        bestTimeToVisit: "October to April",
+        distances: [
+            { from: "Goa International Airport", distance: "60 km" },
+            { from: "Margao Railway Station", distance: "36 km" },
+        ],
+        notes: ["It's a protected turtle nesting site, so be mindful of the rules.", "Less commercialized than other beaches, offering a peaceful experience."],
+        nearbyHotels: ["The LaLiT Golf & Spa Resort Goa", "Agonda White Sand"]
+    },
 ];
 
 export const attractions: Attraction[] = [
