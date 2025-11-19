@@ -7,7 +7,7 @@ import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, TreePine, Church } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 
@@ -1037,6 +1037,371 @@ export default function CityPage() {
 
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Dalhousie</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {cityAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  // Uttarakhand Pages
+  if (cityId === 'rishikesh') {
+    const heroImage = {
+       src: 'https://picsum.photos/seed/rishikesh-hero/1920/600',
+       caption: 'laxman jhula bridge rishikesh'
+    };
+
+    const highlights = [
+        { icon: Leaf, text: 'Yoga Capital', color: 'text-green-500' },
+        { icon: Waves, text: 'River Rafting', color: 'text-sky-500' },
+        { icon: Hand, text: 'Spiritual Hub', color: 'text-orange-500' },
+    ];
+
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'rishikesh');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Laxman Jhula bridge in Rishikesh" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Rishikesh</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Yoga Capital of the World</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Rishikesh</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                       Situated on the banks of the holy Ganges river, Rishikesh is a world-renowned center for yoga and meditation. This spiritual town is also a hub for adventure sports like white-water rafting, bungee jumping, and trekking, offering a unique blend of peace and thrill.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Rishikesh</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {cityAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'nainital') {
+    const heroImage = {
+       src: 'https://picsum.photos/seed/nainital-hero/1920/600',
+       caption: 'nainital lake aerial view'
+    };
+
+    const highlights = [
+        { icon: Sailboat, text: 'Boating on Naini Lake', color: 'text-blue-500' },
+        { icon: CableCar, text: 'Snow View Point Ropeway', color: 'text-sky-500' },
+        { icon: ShoppingBag, text: 'Tibetan Market', color: 'text-purple-500' },
+    ];
+
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'nainital');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Aerial view of Naini Lake in Nainital" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Nainital</h1>
+                    <p className="text-lg text-gray-200 mt-2">The City of Lakes</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Nainital</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      A charming Himalayan lake town, Nainital is a popular hill station in the Kumaon region. Built around the emerald-green, crescent-shaped Naini Lake, it's a perfect destination for boating, trekking, and enjoying the cool mountain air.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Nainital</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {cityAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'mussoorie') {
+    const heroImage = {
+       src: 'https://picsum.photos/seed/mussoorie-hero/1920/600',
+       caption: 'mussoorie valley view'
+    };
+
+    const highlights = [
+        { icon: Mountain, text: 'Himalayan Views', color: 'text-sky-500' },
+        { icon: CableCar, text: 'Gun Hill Ropeway', color: 'text-purple-500' },
+        { icon: Droplets, text: 'Kempty Falls', color: 'text-blue-500' },
+    ];
+
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'mussoorie');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Valley view from Mussoorie" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Mussoorie</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Queen of the Hills</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Mussoorie</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Perched in the Garhwal Himalayan range, Mussoorie is a picturesque hill station that offers stunning views of the snow-capped peaks and the verdant Doon Valley. Its colonial-era charm, bustling Mall Road, and cascading waterfalls make it a timeless destination.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Mussoorie</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {cityAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'dehradun') {
+    const heroImage = {
+       src: 'https://picsum.photos/seed/dehradun-hero/1920/600',
+       caption: 'forest research institute dehradun'
+    };
+
+    const highlights = [
+        { icon: School, text: 'Educational Hub', color: 'text-amber-600' },
+        { icon: BookOpen, text: 'Institutes & Museums', color: 'text-sky-500' },
+        { icon: FerrisWheel, text: 'Gateway to Hills', color: 'text-green-500' },
+    ];
+
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'dehradun');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Forest Research Institute, Dehradun" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Dehradun</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Doon Valley</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Dehradun</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      Nestled in the Doon Valley, Dehradun is the capital of Uttarakhand and a gateway to popular hill stations like Mussoorie. The city is renowned for its pleasant climate, picturesque setting, and as a center for prestigious educational and research institutions.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Dehradun</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {cityAttractions.map(attraction => (
                             <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>

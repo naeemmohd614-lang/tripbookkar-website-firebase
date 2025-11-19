@@ -271,5 +271,39 @@
     "roomCategories": [{ "name": "Superior Room", "count": 52, "size": "350 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
     "tags": ["heritage", "lake view", "nainital"]
+  },
+  {
+    "name": "JW Marriott Mussoorie Walnut Grove Resort & Spa",
+    "brand": "JW Marriott",
+    "city": "Mussoorie",
+    "state": "Uttarakhand",
+    "address": "Village - Siya, Kempty Fall Road, Tehri Garhwal, Mussoorie, Uttarakhand 248179",
+    "about": "Nestled amidst the serene Himalayan ranges, this resort is a perfect blend of luxury and nature. It offers stunning valley views, a range of recreational activities, and an award-winning spa.",
+    "basePrice": 28000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-mussoorie-1/1080/720", "caption": "Resort with valley view" },
+      { "src": "https://picsum.photos/seed/jw-mussoorie-2/1080/720", "caption": "Indoor swimming pool" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "valley view", "mussoorie", "resort"]
+  },
+  {
+    "name": "Hyatt Regency Dehradun",
+    "brand": "Hyatt",
+    "city": "Dehradun",
+    "state": "Uttarakhand",
+    "address": "Mussoorie Rd, Salan Gaon, Dehradun, Uttarakhand 248009",
+    "about": "Situated at the foothills of the Himalayas, this hotel offers a scenic and refreshing experience. It's an ideal destination for both leisure and business travelers, with modern amenities and large event spaces.",
+    "basePrice": 16000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-dehradun-1/1080/720", "caption": "Hotel exterior view" },
+      { "src": "https://picsum.photos/seed/hyatt-dehradun-2/1080/720", "caption": "Rooftop pool and lounge" }
+    ],
+    "roomCategories": [{ "name": "King Room with Garden View", "count": 263, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "dehradun", "business"]
   }
 ]

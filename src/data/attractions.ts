@@ -522,6 +522,30 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         bestTimeToVisit: "March to June and October to November",
         distances: [ { from: "Pantnagar Airport", distance: "65 km" } ],
         nearbyHotels: ["The Naini Retreat, by Leisure Hotels", "The Manu Maharani"]
+    },
+    {
+        name: 'Kempty Falls',
+        city: 'Mussoorie',
+        cityId: 'mussoorie',
+        image: { src: 'https://picsum.photos/seed/kempty-falls/1200/600', caption: 'kempty falls mussoorie' },
+        description: "One of the most famous waterfalls in Uttarakhand, Kempty Falls is a popular tourist spot. Visitors can enjoy the refreshing water and the scenic beauty of the surroundings.",
+        timing: "8:00 AM - 5:00 PM",
+        fees: [ { type: "Entry", amount: "Free (charges for activities)" } ],
+        bestTimeToVisit: "March to June",
+        distances: [ { from: "Mussoorie Library Bus Stand", distance: "15 km" } ],
+        nearbyHotels: ["JW Marriott Mussoorie Walnut Grove Resort & Spa", "Jaypee Residency Manor"]
+    },
+    {
+        name: 'Robber\'s Cave',
+        city: 'Dehradun',
+        cityId: 'dehradun',
+        image: { src: 'https://picsum.photos/seed/robbers-cave/1200/600', caption: 'robbers cave dehradun' },
+        description: "Locally known as Guchu Pani, Robber's Cave is a river cave formation. It's a popular picnic spot where you can walk through the cold stream flowing inside the cave.",
+        timing: "7:00 AM - 6:00 PM",
+        fees: [ { type: "Entry", amount: "₹25" } ],
+        bestTimeToVisit: "All year round, except monsoons",
+        distances: [ { from: "Dehradun Railway Station", distance: "8 km" } ],
+        nearbyHotels: ["Hyatt Regency Dehradun", "Four Points by Sheraton Dehradun"]
     }
 ];
 
