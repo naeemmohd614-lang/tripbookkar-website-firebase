@@ -1160,5 +1160,77 @@
     "weddingVenues": [ "Grand Crystal Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "luxury", "new delhi"]
+  },
+  {
+    "name": "The Royal Village",
+    "brand": "The Royal Village",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "A cozy stay with views of the Himalayas.",
+    "basePrice": 6000,
+    "rating": 4.2,
+    "images": [{ "src": "https://picsum.photos/seed/royal-village-auli/1080/720", "caption": "hotel exterior" }],
+    "roomCategories": [{ "name": "Standard Room", "count": 20, "size": "250 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
+    "tags": ["budget", "auli", "mountain view"]
+  },
+  {
+    "name": "Himalayan High, Auli",
+    "brand": "Himalayan High",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "Experience the high mountains of Auli.",
+    "basePrice": 7500,
+    "rating": 4.4,
+    "images": [{ "src": "https://picsum.photos/seed/himalayan-high-auli/1080/720", "caption": "mountain view from hotel" }],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 15, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["mountain view", "auli"]
+  },
+  {
+    "name": "The Tattva Resort",
+    "brand": "The Tattva",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Joshimath-Auli Road, Auli",
+    "about": "A luxury resort with premium amenities.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [{ "src": "https://picsum.photos/seed/tattva-auli/1080/720", "caption": "resort exterior" }],
+    "roomCategories": [{ "name": "Premium Room", "count": 30, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "auli"]
+  },
+  {
+    "name": "Cliff Top Club",
+    "brand": "Cliff Top Club",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "A ski resort offering stunning views.",
+    "basePrice": 15000,
+    "rating": 4.6,
+    "images": [{ "src": "https://picsum.photos/seed/clifftop-auli/1080/720", "caption": "view from resort" }],
+    "roomCategories": [{ "name": "Suite", "count": 25, "size": "450 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["ski resort", "luxury", "auli"]
+  },
+  {
+    "name": "Blue Poppy Resorts",
+    "brand": "Blue Poppy",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "Cottages with great views and comfort.",
+    "basePrice": 8000,
+    "rating": 4.3,
+    "images": [{ "src": "https://picsum.photos/seed/blue-poppy-auli/1080/720", "caption": "cottage exterior" }],
+    "roomCategories": [{ "name": "Cottage", "count": 10, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "12:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["cottage", "pet friendly", "auli"]
   }
 ]
+
+    

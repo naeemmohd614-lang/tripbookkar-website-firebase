@@ -61,16 +61,16 @@ export default function MonthPage() {
                                     
                                     <h3 className="font-bold text-lg mb-3">Top Hotels in {dest.name.split(',')[0]}:</h3>
                                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-sm">
-                                        {dest.hotels.map(hotelName => {
-                                            const hotel = (hotels as Hotel[]).find(h => h.name === hotelName);
+                                        {dest.hotels.map(hotelOrName => {
+                                            const hotel = typeof hotelOrName === 'string' ? (hotels as Hotel[]).find(h => h.name === hotelOrName) : hotelOrName;
                                             return (
-                                                <div key={hotelName}>
+                                                <div key={hotel ? hotel.hotelId : hotelOrName as string}>
                                                 {hotel ? (
                                                     <Link href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.hotelId}`} className="text-primary hover:underline">
                                                         {hotel.name}
                                                     </Link>
                                                 ) : (
-                                                    <span className="text-muted-foreground">{hotelName}</span>
+                                                    <span className="text-muted-foreground">{hotelOrName as string}</span>
                                                 )}
                                                 </div>
                                             )
@@ -92,3 +92,5 @@ export default function MonthPage() {
         </div>
     );
 }
+
+    

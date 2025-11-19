@@ -5,7 +5,7 @@ import { hotels } from '@/lib/data';
 interface MonthlyDestination {
   name: string;
   reason: string;
-  hotels: string[];
+  hotels: (Hotel | string)[];
   image: {
     src: string;
     caption: string;
@@ -34,19 +34,19 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Auli, Uttarakhand",
         reason: "January transforms Auli into a premier skiing destination. The snow-covered meadows, panoramic views of the Himalayas, and the crisp mountain air make it perfect for winter sports enthusiasts and nature lovers.",
-        hotels: ["The Royal Village", "Himalayan High, Auli", "The Tattva Resort", "Cliff Top Club", "Blue Poppy Resorts"],
+        hotels: (hotels as Hotel[]).filter(h => ['The Royal Village', 'Himalayan High, Auli', 'The Tattva Resort', 'Cliff Top Club', 'Blue Poppy Resorts'].includes(h.name)),
         image: { src: "https://picsum.photos/seed/auli-january/1200/400", caption: "snowy mountains auli" }
       },
       {
         name: "Jaipur, Rajasthan",
         reason: "The weather in January is pleasantly cool and ideal for sightseeing. You can explore majestic forts, vibrant markets, and attend the Jaipur Literature Festival, which often takes place this month.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'Jaipur').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'Jaipur').slice(0, 10),
         image: { src: "https://picsum.photos/seed/jaipur-january/1200/400", caption: "amber fort jaipur" }
       },
       {
         name: "Goa",
         reason: "After the peak season rush of December, January in Goa is more relaxed but still vibrant. The weather is perfect for beach hopping, water sports, and enjoying the lively shacks and nightlife.",
-        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
         image: { src: "https://picsum.photos/seed/goa-january/1200/400", caption: "goa beach" }
       },
       {
@@ -64,13 +64,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Delhi",
         reason: "The pleasant winter of January is ideal for exploring the historical monuments of Delhi. The month culminates with the grand Republic Day Parade on January 26th, a spectacular event to witness.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'New Delhi').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'New Delhi').slice(0, 10),
         image: { src: "https://picsum.photos/seed/delhi-january/1200/400", caption: "india gate delhi" }
       },
       {
         name: "Rann of Kutch, Gujarat",
         reason: "January is when the Rann Utsav is in full swing. Experience the vast white salt desert under the full moon, enjoy cultural performances, and witness the region's vibrant heritage.",
-        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'kutch' || h.cityId === 'bhuj').map(h => h.name),
+        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'kutch' || h.cityId === 'bhuj'),
         image: { src: "https://picsum.photos/seed/kutch-january/1200/400", caption: "rann of kutch" }
       },
       {
@@ -82,13 +82,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Udaipur, Rajasthan",
         reason: "Known as the 'City of Lakes', Udaipur's beauty is enhanced by the pleasant January weather. Enjoy boat rides on Lake Pichola and explore the majestic City Palace without the scorching heat.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').slice(0, 10),
         image: { src: "https://picsum.photos/seed/udaipur-january/1200/400", caption: "udaipur lake palace" }
       },
       {
         name: "Khajuraho, Madhya Pradesh",
         reason: "The pleasant daytime temperatures in January are perfect for exploring the intricate and world-famous temple sculptures. The annual Khajuraho Dance Festival often begins towards the end of the month.",
-        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'khajuraho').map(h => h.name),
+        hotels: (hotels as Hotel[]).filter(h => h.cityId === 'khajuraho'),
         image: { src: "https://picsum.photos/seed/khajuraho-january/1200/400", caption: "khajuraho temple" }
       }
     ]
@@ -137,7 +137,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Goa",
         reason: "The famous Goa Carnival usually takes place in February, filling the streets with colorful parades, music, and dancing. It's a unique cultural experience.",
-        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
         image: { src: "https://picsum.photos/seed/goa-carnival-feb/1200/400", caption: "goa carnival" }
       },
       {
@@ -405,7 +405,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Goa",
         reason: "Experience the unique Sao Joao festival, where locals jump into wells and streams. The monsoon begins, turning Goa lush and green, with fewer crowds.",
-        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
         image: { src: "https://picsum.photos/seed/goa-june/1200/400", caption: "goa monsoon" }
       },
       {
@@ -442,13 +442,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Goa",
         reason: "Experience the 'other side' of Goa. The monsoon season means fewer crowds, lush green scenery, and overflowing waterfalls like Dudhsagar. It's ideal for a peaceful, romantic getaway.",
-        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
         image: { src: "https://picsum.photos/seed/goa-july/1200/400", caption: "dudhsagar falls goa" }
       },
       {
         name: "Udaipur, Rajasthan",
         reason: "The city of lakes becomes even more enchanting with the arrival of monsoons. The lakes fill up, the temperature drops, and the Aravalli hills turn green. Enjoy the romantic boat rides.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').slice(0, 10),
         image: { src: "https://picsum.photos/seed/udaipur-july/1200/400", caption: "monsoon palace udaipur" }
       },
       {
@@ -527,7 +527,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Delhi",
         reason: "Experience the patriotic fervor of Independence Day on August 15th at the Red Fort. The weather is relatively cooler after the monsoon showers, making it good for sightseeing.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'New Delhi').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'New Delhi').slice(0, 10),
         image: { src: "https://picsum.photos/seed/delhi-aug/1200/400", caption: "red fort delhi" }
       },
       {
@@ -594,7 +594,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Mumbai, Maharashtra",
         reason: "Experience the grand celebrations of Ganesh Chaturthi which often continues into early September. The city is filled with artistic pandals and massive idols, culminating in an energetic immersion procession.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'Mumbai').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'Mumbai').slice(0, 10),
         image: { src: "https://picsum.photos/seed/mumbai-sep/1200/400", caption: "ganesh chaturthi mumbai" }
       },
        {
@@ -618,7 +618,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Pune, Maharashtra",
         reason: "The city hosts grand Ganesh Chaturthi celebrations. The weather is also very pleasant for exploring the city's forts, cafes, and Osho Ashram.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'Pune').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'Pune').slice(0, 10),
         image: { src: "https://picsum.photos/seed/pune-sep/1200/400", caption: "shaniwar wada pune" }
       },
       {
@@ -722,7 +722,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Goa",
         reason: "November marks the beginning of the tourist season. The weather is perfect, the shacks are open, and the vibe is energetic, but it's less crowded than December.",
-        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
         image: { src: "https://picsum.photos/seed/goa-nov/1200/400", caption: "goa beach shack" }
       },
       {
@@ -734,7 +734,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Udaipur, Rajasthan",
         reason: "The cool and pleasant weather is ideal for sightseeing and boat rides on Lake Pichola. The city is beautifully lit up for Diwali if it falls in November.",
-        hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').slice(0, 10),
         image: { src: "https://picsum.photos/seed/udaipur-nov/1200/400", caption: "udaipur city palace" }
       },
       {
@@ -771,7 +771,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Goa",
         reason: "December is the peak party season. From Christmas celebrations to New Year's Eve bashes, the atmosphere is electric. Enjoy the beaches, nightlife, and music festivals.",
-        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').map(h => h.name).slice(0, 10),
+        hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
         image: { src: "https://picsum.photos/seed/goa-dec/1200/400", caption: "goa new year party" }
       },
       {
@@ -831,6 +831,8 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
+
+    
 
     
 
