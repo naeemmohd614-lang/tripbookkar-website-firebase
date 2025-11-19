@@ -1,6 +1,71 @@
 
 [
   {
+    "name": "The Taj Mahal Palace, Mumbai",
+    "brand": "Taj",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Apollo Bandar, Colaba, Mumbai, Maharashtra 400001",
+    "about": "India's first luxury hotel, an iconic landmark overlooking the Gateway of India. A blend of Moorish, Oriental, and Florentine styles, offering unparalleled service and luxury.",
+    "basePrice": 30000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-mumbai-1/1080/720", "caption": "The iconic Taj Mahal Palace facade" },
+      { "src": "https://picsum.photos/seed/taj-mumbai-2/1080/720", "caption": "The grand hotel lobby" }
+    ],
+    "roomCategories": [{ "name": "Luxury Grand Room", "count": 285, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["iconic", "heritage", "sea view", "mumbai", "luxury"]
+  },
+  {
+    "name": "Taj Lands End, Mumbai",
+    "brand": "Taj",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Bandstand, BJ Road, Mount Mary, Bandra West, Mumbai, Maharashtra 400050",
+    "about": "A luxury hotel in the heart of Bandra, offering breathtaking views of the Arabian Sea and the Bandra-Worli Sea Link. Known for its world-class service and dining.",
+    "basePrice": 20000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-landsend-1/1080/720", "caption": "Taj Lands End with sea view" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Sea View Room", "count": 493, "size": "390 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["sea view", "luxury", "mumbai", "business"]
+  },
+  {
+    "name": "Taj Falaknuma Palace, Hyderabad",
+    "brand": "Taj",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "address": "Engine Bowli, Falaknuma, Hyderabad, Telangana 500053",
+    "about": "The former palace of the Nizam of Hyderabad, now a grand heritage hotel. Perched 2,000 feet above Hyderabad, it offers a glimpse into the opulent life of Indian royalty.",
+    "basePrice": 40000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-falaknuma-1/1080/720", "caption": "The grand facade of Falaknuma Palace" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 60, "size": "550 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["palace", "heritage", "luxury", "hyderabad", "romantic"]
+  },
+  {
+    "name": "Rambagh Palace, Jaipur",
+    "brand": "Taj",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "Bhawani Singh Rd, Rambagh, Jaipur, Rajasthan 302005",
+    "about": "The former residence of the Maharaja of Jaipur, Rambagh Palace is a jewel of heritage hospitality. Experience the royal lifestyle amidst manicured gardens and opulent interiors.",
+    "basePrice": 42000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/rambagh-palace-1/1080/720", "caption": "Rambagh Palace exterior and gardens" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 78, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["palace", "heritage", "jaipur", "luxury"]
+  },
+  {
     "name": "Taj Lake Palace, Udaipur",
     "brand": "Taj",
     "city": "Udaipur",
@@ -192,5 +257,645 @@
     "roomCategories": [{ "name": "Luxury Lake View Room", "count": 152, "size": "400 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "lake view", "bhopal"]
+  },
+  {
+    "name": "Umaid Bhawan Palace, Jodhpur",
+    "brand": "Taj",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "address": "Circuit House Rd, Cantt Area, Jodhpur, Rajasthan 342006",
+    "about": "Perched high above the desert capital of Jodhpur, Umaid Bhawan Palace is one of the world's largest private residences. A part of the palace is managed by Taj Hotels. It is a golden-hued desert sandstone monument set amidst 26 acres of lush gardens.",
+    "basePrice": 55000,
+    "rating": 5,
+    "images": [
+      { "src": "https://picsum.photos/seed/umaid-bhawan-1/1080/720", "caption": "Aerial view of Umaid Bhawan Palace" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 64, "size": "700 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["palace", "heritage", "jodhpur", "luxury"]
+  },
+  {
+    "name": "Taj West End, Bengaluru",
+    "brand": "Taj",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "25, Race Course Rd, High Grounds, Bengaluru, Karnataka 560001",
+    "about": "Nestled amidst 20 acres of magnificent gardens, Taj West End is a lush, tropical paradise in the heart of Bengaluru. This heritage hotel offers colonial-era charm and luxurious tranquility.",
+    "basePrice": 18000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-westend-1/1080/720", "caption": "Lush gardens of Taj West End" }
+    ],
+    "roomCategories": [{ "name": "Luxury Grande Room", "count": 117, "size": "500 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "luxury", "bengaluru", "gardens"]
+  },
+  {
+    "name": "Taj Coromandel, Chennai",
+    "brand": "Taj",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "37, Mahatma Gandhi Rd, Nungambakkam, Chennai, Tamil Nadu 600034",
+    "about": "A landmark of luxury in Chennai's city center. Known for its rich history and South Indian hospitality, it offers a blend of classic elegance and modern comforts.",
+    "basePrice": 16000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-coromandel-1/1080/720", "caption": "The grand lobby of Taj Coromandel" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 212, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "chennai"]
+  },
+  {
+    "name": "Taj Bengal, Kolkata",
+    "brand": "Taj",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "address": "34B, Belvedere Road, Alipore, Kolkata, West Bengal 700027",
+    "about": "A landmark hotel in the upscale Alipore area, Taj Bengal offers a tranquil retreat with its beautiful gardens and atrium lobby. Experience the city's cultural heritage with signature Taj hospitality.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-bengal-1/1080/720", "caption": "Exterior of Taj Bengal" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 229, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "kolkata", "business"]
+  },
+  {
+    "name": "The Taj Mahal Hotel, New Delhi",
+    "brand": "Taj",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "1, Man Singh Rd, South Block, Man Singh Road Area, New Delhi, Delhi 110011",
+    "about": "An iconic hotel in the heart of Lutyens' Delhi, reflecting the heritage of Mughal Delhi. It offers a blend of timeless grace and contemporary luxury.",
+    "basePrice": 22000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-mansingh-1/1080/720", "caption": "The Taj Mahal Hotel facade" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 292, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["iconic", "luxury", "new delhi"]
+  },
+  {
+    "name": "Taj Krishna, Hyderabad",
+    "brand": "Taj",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "address": "Road No. 1, Mada Manzil, Banjara Hills, Hyderabad, Telangana 500034",
+    "about": "Located in the prime Banjara Hills area, Taj Krishna offers panoramic views of the Hussain Sagar lake. A symbol of opulence and warm hospitality.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-krishna-1/1080/720", "caption": "Exterior of Taj Krishna" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 260, "size": "330 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "hyderabad"]
+  },
+  {
+    "name": "Taj Fort Aguada Resort & Spa, Goa",
+    "brand": "Taj",
+    "city": "Candolim",
+    "state": "Goa",
+    "address": "Sinquerim, Candolim, Goa 403515",
+    "about": "Built on the ramparts of a 16th-century Portuguese fort, this resort offers panoramic views of the Arabian Sea. A perfect blend of scenic beauty and Goan-Portuguese heritage.",
+    "basePrice": 20000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-aguada-1/1080/720", "caption": "View from Taj Fort Aguada" }
+    ],
+    "roomCategories": [{ "name": "Superior Room Garden View", "count": 145, "size": "310 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beachfront", "resort", "goa", "heritage"]
+  },
+  {
+    "name": "Taj Exotica Resort & Spa, Goa",
+    "brand": "Taj",
+    "city": "Benaulim",
+    "state": "Goa",
+    "address": "Calwaddo, Benaulim, Goa 403716",
+    "about": "A Mediterranean-inspired resort set amidst 56 acres of lush greenery, overlooking the pristine Benaulim beach. It offers a tranquil and luxurious escape in South Goa.",
+    "basePrice": 24000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-exotica-goa-1/1080/720", "caption": "Lobby of Taj Exotica Goa" }
+    ],
+    "roomCategories": [{ "name": "Garden Villa", "count": 140, "size": "612 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beach resort", "luxury", "south goa"]
+  },
+  {
+    "name": "Taj Swarna, Amritsar",
+    "brand": "Taj",
+    "city": "Amritsar",
+    "state": "Punjab",
+    "address": "Plot No. C-3, Outer Circular Road, Amritsar, Punjab 143001",
+    "about": "A stylish and contemporary hotel that captures the spirit of Amritsar. It offers modern luxury, expansive rooms, and is a short drive from the Golden Temple.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-swarna-1/1080/720", "caption": "Exterior of Taj Swarna Amritsar" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 157, "size": "375 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "amritsar", "business"]
+  },
+  {
+    "name": "Vivanta Bengaluru, Whitefield",
+    "brand": "Vivanta",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "ITPL, Whitefield, Bengaluru, Karnataka 560066",
+    "about": "Located in the heart of Bengaluru's IT hub, this hotel is a perfect blend of work and play. It features contemporary design, a rooftop pool, and vibrant dining options.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-whitefield-1/1080/720", "caption": "Vivanta Bengaluru, Whitefield exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Charm Room", "count": 199, "size": "340 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "it hub", "bengaluru"]
+  },
+  {
+    "name": "Taj Madikeri Resort & Spa, Coorg",
+    "brand": "Taj",
+    "city": "Madikeri",
+    "state": "Karnataka",
+    "address": "1st Monnangeri, Galibeedu, Madikeri, Karnataka 571201",
+    "about": "Nestled in the rainforests of Coorg, this resort offers a serene and luxurious escape. It's built in traditional Kodagu style and provides breathtaking views of the valley.",
+    "basePrice": 28000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-coorg-1/1080/720", "caption": "Cottages amidst the rainforest" }
+    ],
+    "roomCategories": [{ "name": "Superior Cottage", "count": 63, "size": "900 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["rainforest", "luxury", "coorg", "resort"]
+  },
+  {
+    "name": "Vivanta Bhubaneswar, DN Square",
+    "brand": "Vivanta",
+    "city": "Bhubaneswar",
+    "state": "Odisha",
+    "address": "DN Regalia, DN Square, Kalinga Vihar, Patrapada, Bhubaneswar, Odisha 751019",
+    "about": "A modern and stylish hotel in the temple city of Bhubaneswar. It features contemporary design, smart rooms, and is well-connected to the city's business and tourist hubs.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-bhubaneswar-1/1080/720", "caption": "Vivanta Bhubaneswar exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 136, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "business", "bhubaneswar"]
+  },
+  {
+    "name": "Taj Santacruz, Mumbai",
+    "brand": "Taj",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Chhatrapati Shivaji Maharaj International Airport (Domestic Terminal), Off, Western Express Hwy, Santacruz East, Mumbai, Maharashtra 400099",
+    "about": "A luxury hotel located right at the domestic terminal of the Mumbai airport. It offers opulent interiors, runway-facing rooms, and seamless convenience for travelers.",
+    "basePrice": 18000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-santacruz-1/1080/720", "caption": "Runway view from the hotel room" }
+    ],
+    "roomCategories": [{ "name": "Luxury Runway View Room", "count": 279, "size": "420 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["airport hotel", "luxury", "mumbai"]
+  },
+  {
+    "name": "Vivanta Surajkund, NCR",
+    "brand": "Vivanta",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "address": "Shooting Range Rd, Surajkund, Faridabad, Haryana 121009",
+    "about": "An urban oasis that offers a refreshing retreat from the city's hustle. Inspired by the concept of a stepwell, it features stunning architecture, a large central courtyard, and a rejuvenating spa.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-surajkund-1/1080/720", "caption": "Stepwell-inspired architecture" }
+    ],
+    "roomCategories": [{ "name": "Superior Charm Room", "count": 287, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "design", "ncr", "wellness"]
+  },
+  {
+    "name": "Jai Mahal Palace, Jaipur",
+    "brand": "Taj",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "Jacob Rd, Civil Lines, Jaipur, Rajasthan 302006",
+    "about": "A magnificent heritage hotel dating back to 1745. Set amidst 18 acres of Mughal gardens, this palace offers a unique blend of royal history, Indo-Saracenic architecture, and modern luxury.",
+    "basePrice": 22000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/jai-mahal-1/1080/720", "caption": "Jai Mahal Palace at night" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 100, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["palace", "heritage", "jaipur"]
+  },
+  {
+    "name": "Vivanta Guwahati, Assam",
+    "brand": "Vivanta",
+    "city": "Guwahati",
+    "state": "Assam",
+    "address": "Mahapurush Srimanta Sankardeva Rd, Khanapara, Guwahati, Assam 781022",
+    "about": "A stylish and contemporary hotel in the gateway to Northeast India. It offers modern comforts, expansive lawns, and is a perfect base to explore the region.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-guwahati-1/1080/720", "caption": "Vivanta Guwahati exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Charm Room", "count": 150, "size": "330 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "modern", "guwahati"]
+  },
+  {
+    "name": "The Gateway Hotel, Nashik",
+    "brand": "The Gateway Hotel",
+    "city": "Nashik",
+    "state": "Maharashtra",
+    "address": "P-17, Midc, Ambad, Mumbai Agra Road, Nashik, Maharashtra 422010",
+    "about": "Set in a tranquil oasis, this hotel is a perfect escape in the wine capital of India. It offers lush green landscapes, a large pool, and is close to the industrial hub.",
+    "basePrice": 7000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/gateway-nashik-1/1080/720", "caption": "Poolside at The Gateway Hotel, Nashik" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 148, "size": "280 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "resort", "nashik"]
+  },
+  {
+    "name": "Vivanta Pune, Hinjawadi",
+    "brand": "Vivanta",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "address": "Xion Complex, Hinjawadi Rd, Hinjawadi, Pune, Maharashtra 411057",
+    "about": "A contemporary hotel located in Pune's IT hub. It's designed for the modern traveler with smart spaces, a rooftop pool, and vibrant social areas.",
+    "basePrice": 9000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-pune-1/1080/720", "caption": "Vivanta Pune exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Charm Room", "count": 150, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "it hub", "pune"]
+  },
+  {
+    "name": "Taj Aravali Resort & Spa, Udaipur",
+    "brand": "Taj",
+    "city": "Udaipur",
+    "state": "Rajasthan",
+    "address": "1, Kheemach Kheda, Village, Bhujra, Udaipur, Rajasthan 313001",
+    "about": "Nestled in the Aravalli hills, this sprawling resort offers a contemporary take on Rajasthani architecture. It features luxurious rooms, a large pool, and a range of outdoor activities.",
+    "basePrice": 22000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-aravali-1/1080/720", "caption": "Taj Aravali Resort & Spa" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 176, "size": "550 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "luxury", "udaipur"]
+  },
+  {
+    "name": "The Gateway Hotel, Jodhpur",
+    "brand": "The Gateway Hotel",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "address": "Banar Rd, P.W.D. Colony, Jodhpur, Rajasthan 342001",
+    "about": "Set against the backdrop of the majestic Mehrangarh Fort, this hotel offers a tranquil retreat with its blend of traditional Rajasthani architecture and modern amenities.",
+    "basePrice": 9000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/gateway-jodhpur-1/1080/720", "caption": "Exterior of The Gateway Hotel, Jodhpur" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 88, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "jodhpur"]
+  },
+  {
+    "name": "Taj Malabar Resort & Spa, Cochin",
+    "brand": "Taj",
+    "city": "Kochi",
+    "state": "Kerala",
+    "address": "Willingdon Island, Kochi, Kerala 682009",
+    "about": "Located on Willingdon Island with stunning views of the Cochin harbour and backwaters, this heritage hotel is a beautiful blend of old-world charm and modern luxury.",
+    "basePrice": 16000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-malabar-1/1080/720", "caption": "View from Taj Malabar" }
+    ],
+    "roomCategories": [{ "name": "Heritage Wing Room", "count": 94, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "harbour view", "kochi", "luxury"]
+  },
+  {
+    "name": "Vivanta Goa, Panaji",
+    "brand": "Vivanta",
+    "city": "Panaji",
+    "state": "Goa",
+    "address": "Dr D B Bandodkar Road, Panaji, Goa 403001",
+    "about": "A stylish hotel in the heart of Panaji, offering panoramic views of the Mandovi River and the city. It's a great base to explore both North and South Goa.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-panaji-1/1080/720", "caption": "Vivanta Goa, Panaji exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Charm Room", "count": 170, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["city hotel", "panaji", "business", "goa"]
+  },
+  {
+    "name": "Taj Chandigarh",
+    "brand": "Taj",
+    "city": "Chandigarh",
+    "state": "Punjab",
+    "address": "Block No. 9, Sector 17-A, Chandigarh, 160017",
+    "about": "Located in the city's prime business and shopping hub, Sector 17, Taj Chandigarh celebrates the modern and progressive spirit of the city with its contemporary design and warm hospitality.",
+    "basePrice": 13000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-chandigarh-1/1080/720", "caption": "Exterior of Taj Chandigarh" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 149, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "chandigarh"]
+  },
+  {
+    "name": "Taj Exotica Resort & Spa, Andamans",
+    "brand": "Taj",
+    "city": "Havelock Island",
+    "state": "Andaman and Nicobar Islands",
+    "address": "Radhanagar Beach, Havelock Island, Andaman and Nicobar Islands 744211",
+    "about": "A luxurious eco-resort set on the pristine Radhanagar Beach. It features stilted villas inspired by Jarawa huts, offering a unique and sustainable experience in paradise.",
+    "basePrice": 40000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-andaman-1/1080/720", "caption": "Villas at Taj Exotica Andamans" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Villa", "count": 72, "size": "1550 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beachfront", "luxury", "eco-friendly", "andaman"]
+  },
+  {
+    "name": "Taj Kumarakom Resort & Spa, Kerala",
+    "brand": "Taj",
+    "city": "Kumarakom",
+    "state": "Kerala",
+    "address": "1/404, Kumarakom, Kottayam, Kerala 686563",
+    "about": "A charming resort on the banks of Vembanad Lake, offering a serene backwater experience. Housed in a colonial-era bungalow, it provides a blend of heritage and modern luxury.",
+    "basePrice": 18000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-kumarakom-1/1080/720", "caption": "View of the backwaters from the resort" }
+    ],
+    "roomCategories": [{ "name": "Luxury Villa with Private Pool", "count": 28, "size": "650 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["backwaters", "heritage", "kerala", "resort"]
+  },
+  {
+    "name": "Taj Bekal Resort & Spa, Kerala",
+    "brand": "Taj",
+    "city": "Bekal",
+    "state": "Kerala",
+    "address": "Kappil Beach, Bekal, Kerala 671319",
+    "about": "A stunning resort inspired by Kettuvallam houseboats, set amidst the serene backwaters and a pristine beach. It's a perfect destination for wellness and relaxation.",
+    "basePrice": 20000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-bekal-1/1080/720", "caption": "Villas at Taj Bekal" }
+    ],
+    "roomCategories": [{ "name": "Superior Room with Balcony", "count": 70, "size": "500 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beach resort", "backwaters", "kerala", "wellness"]
+  },
+  {
+    "name": "Taj Corbett Resort & Spa, Uttarakhand",
+    "brand": "Taj",
+    "city": "Ramnagar",
+    "state": "Uttarakhand",
+    "address": "Zero Garjia, Dhikuli, Ramnagar, Uttarakhand 244715",
+    "about": "Located on the banks of the river Kosi, this resort offers a wild and adventurous escape in the foothills of the Himalayas, close to the Corbett National Park.",
+    "basePrice": 16000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-corbett-1/1080/720", "caption": "Cottages at Taj Corbett" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Cottage", "count": 61, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wildlife", "jungle resort", "corbett", "uttarakhand"]
+  },
+  {
+    "name": "Vivanta Navi Mumbai, Turbhe",
+    "brand": "Vivanta",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "address": "Thane - Belapur Rd, Turbhe, Navi Mumbai, Maharashtra 400705",
+    "about": "A stylish hotel in the business district of Navi Mumbai. It offers modern amenities, a rooftop pool, and easy connectivity to both Mumbai and Pune.",
+    "basePrice": 9000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-navi-mumbai-1/1080/720", "caption": "Vivanta Navi Mumbai exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 100, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "navi mumbai"]
+  },
+  {
+    "name": "Taj Theog Resort & Spa, Shimla",
+    "brand": "Taj",
+    "city": "Theog",
+    "state": "Himachal Pradesh",
+    "address": "Tehsil, Theog, Himachal Pradesh 171201",
+    "about": "A picturesque resort nestled in the Himalayan forests, offering stunning views of the Churdhar peak. It's a perfect escape for those seeking peace and luxury away from the bustle of Shimla.",
+    "basePrice": 20000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-theog-1/1080/720", "caption": "View from the resort" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 99, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "luxury", "shimla", "resort"]
+  },
+  {
+    "name": "Vivanta Coimbatore",
+    "brand": "Vivanta",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "address": "105, Race Course Rd, Gopalapuram, Coimbatore, Tamil Nadu 641018",
+    "about": "A chic and contemporary hotel in the heart of Coimbatore. It offers stylish rooms, a rooftop pool, and is known for its vibrant ambience and excellent service.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-coimbatore-1/1080/720", "caption": "Vivanta Coimbatore facade" }
+    ],
+    "roomCategories": [{ "name": "Superior Charm Room", "count": 178, "size": "330 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "coimbatore"]
+  },
+  {
+    "name": "The Gateway Hotel, Madurai",
+    "brand": "The Gateway Hotel",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "address": "No. 4, Pasumalai Hills, Madurai, Tamil Nadu 625004",
+    "about": "Perched atop the Pasumalai hill, this colonial-era hotel offers panoramic views of the city and the Meenakshi Temple. It's a peaceful retreat with lush gardens and heritage charm.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/gateway-madurai-1/1080/720", "caption": "View from the hotel" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 63, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "city view", "madurai"]
+  },
+  {
+    "name": "Vivanta Sikkim, Pakyong",
+    "brand": "Vivanta",
+    "city": "Pakyong",
+    "state": "Sikkim",
+    "address": "Pakyong, Sikkim 737106",
+    "about": "A modern hotel offering stunning views of the surrounding hills, located near the Pakyong Airport. It's a great starting point to explore the beauty of Sikkim.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-sikkim-1/1080/720", "caption": "Vivanta Sikkim exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 50, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "sikkim"]
+  },
+  {
+    "name": "Taj Hari Mahal, Jodhpur",
+    "brand": "Taj",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "address": "5, Residency Rd, Jodhpur, Rajasthan 342001",
+    "about": "A modern hotel built in the style of a Marwari palace. Set in 6 acres of landscaped gardens, it offers a blend of royal charm and contemporary luxury.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-hari-mahal-1/1080/720", "caption": "Exterior of Taj Hari Mahal" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 93, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["palace", "jodhpur"]
+  },
+  {
+    "name": "The Gateway Hotel, Visakhapatnam",
+    "brand": "The Gateway Hotel",
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "address": "Beach Rd, Pandurangapuram, Visakhapatnam, Andhra Pradesh 530002",
+    "about": "Offering stunning views of the Bay of Bengal, this hotel is a perfect blend of business and leisure. It's located on the beach road, close to the city center.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/gateway-vizag-1/1080/720", "caption": "Sea view from the hotel" }
+    ],
+    "roomCategories": [{ "name": "Standard Room Sea View", "count": 96, "size": "280 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["sea view", "visakhapatnam", "business"]
+  },
+  {
+    "name": "Vivanta Thiruvananthapuram",
+    "brand": "Vivanta",
+    "city": "Thiruvananthapuram",
+    "state": "Kerala",
+    "address": "CV Raman Pillai Rd, Thycaud, Thiruvananthapuram, Kerala 695014",
+    "about": "A stylish and contemporary hotel in the heart of Kerala's capital. It's a great base for both business travelers and those looking to explore the city's temples and beaches.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-tvm-1/1080/720", "caption": "Vivanta Thiruvananthapuram exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Charm Room", "count": 137, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city hotel", "thiruvananthapuram"]
+  },
+  {
+    "name": "Taj Club House, Chennai",
+    "brand": "Taj",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "No. 2, Club House Rd, Express Estate, Royapettah, Chennai, Tamil Nadu 600002",
+    "about": "A chic and contemporary hotel in the city center. Known for its trendy design, rooftop restaurant, and sophisticated atmosphere.",
+    "basePrice": 11000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-clubhouse-1/1080/720", "caption": "Rooftop pool at Taj Club House" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 220, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "business", "chennai"]
+  },
+  {
+    "name": "Devi Ratn, Jaipur - IHCL SeleQtions",
+    "brand": "SeleQtions",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "Jamdoli, Agra Rd, Ballupura, Jaipur, Rajasthan 302031",
+    "about": "A stunning architectural marvel inspired by the Jantar Mantar observatory. This resort offers a unique and futuristic take on Rajasthani design, with spacious rooms and panoramic Aravalli views.",
+    "basePrice": 18000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/devi-ratn-1/1080/720", "caption": "Futuristic architecture of Devi Ratn" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 145, "size": "600 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["design", "luxury", "jaipur", "resort"]
+  },
+  {
+    "name": "The Connaught, New Delhi - IHCL SeleQtions",
+    "brand": "SeleQtions",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "37, Shaheed Bhagat Singh Marg, Connaught Place, New Delhi, Delhi 110001",
+    "about": "A stylish hotel located in the heart of Connaught Place. It blends classic Georgian architecture with contemporary design, offering a vibrant and chic experience.",
+    "basePrice": 15000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/connaught-delhi-1/1080/720", "caption": "The Connaught hotel facade" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 104, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["design", "business", "new delhi"]
+  },
+  {
+    "name": "President, Mumbai - IHCL SeleQtions",
+    "brand": "SeleQtions",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "90, Cuffe Parade, Mumbai, Maharashtra 400005",
+    "about": "An iconic hotel in South Mumbai, known for its vibrant dining scene, including the famous Thai Pavilion. It offers panoramic views of the city and the sea.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/president-mumbai-1/1080/720", "caption": "Exterior of President, Mumbai" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 287, "size": "250 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "mumbai", "pet friendly"]
+  },
+  {
+    "name": "Ginger Mumbai, Airport",
+    "brand": "Ginger",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Opp. Aghadi Nagar, Military Rd, Bhavani Nagar, Marol, Andheri East, Mumbai, Maharashtra 400059",
+    "about": "A smart and stylish hotel designed for the modern traveler. Located close to the airport, it offers a comfortable and hassle-free stay with lean-luxe amenities.",
+    "basePrice": 6000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/ginger-mumbai-1/1080/720", "caption": "Ginger Mumbai exterior" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 142, "size": "200 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["budget", "airport hotel", "mumbai"]
   }
 ]
