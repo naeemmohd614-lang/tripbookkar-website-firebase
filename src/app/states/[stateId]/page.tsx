@@ -1,6 +1,5 @@
 
 
-
 'use client';
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
@@ -49,7 +48,7 @@ export default function StatePage() {
         { icon: TreePine, text: 'Pine Forests', color: 'text-green-600' },
     ];
     
-    const himachalCities = ['Shimla', 'Manali'].map(cityName => {
+    const himachalCities = ['Shimla', 'Manali', 'Dharamshala', 'Dalhousie'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
       return {
@@ -116,7 +115,7 @@ export default function StatePage() {
           <div className="text-center my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Cities</h2>
             <p className="mt-2 text-muted-foreground">From the Queen of Hills to the Valley of Gods.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
               {himachalCities.map(city => (
                 <Link href={`/states/himachal-pradesh/cities/${city.cityId}`} key={city.name}>
                   <Card className="overflow-hidden group relative">
@@ -337,7 +336,7 @@ export default function StatePage() {
       description: "One of India's largest and most magnificent forts, Mehrangarh Fort rises from a rocky hill 125m above Jodhpur's skyline. Its thick, imposing walls enclose a complex of beautiful palaces, courtyards, and a museum."
     },
     { 
-      id: 'city-palace-udaipur',
+      id: 'city-palace',
       name: 'City Palace, Udaipur', 
       location: 'Udaipur',
       image: 'https://picsum.photos/seed/city-palace-udaipur/600/400',

@@ -111,5 +111,21 @@
     "image": "",
     "description": "A popular destination for adventure sports, surrounded by snow-capped peaks.",
     "totalHotels": 120
+  },
+  {
+    "cityId": "dharamshala",
+    "stateId": "himachal-pradesh",
+    "name": "Dharamshala",
+    "image": "",
+    "description": "Home to the Dalai Lama, a spiritual center with a blend of Tibetan and Kangra culture.",
+    "totalHotels": 60
+  },
+  {
+    "cityId": "dalhousie",
+    "stateId": "himachal-pradesh",
+    "name": "Dalhousie",
+    "image": "",
+    "description": "A quiet hill station with colonial-era architecture and panoramic views of the Dhauladhar range.",
+    "totalHotels": 40
   }
 ]

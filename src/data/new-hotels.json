@@ -203,5 +203,39 @@
     "roomCategories": [{ "name": "Garden Room", "count": 55, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "mountain view", "manali"]
+  },
+  {
+    "name": "Hyatt Regency Dharamshala Resort",
+    "brand": "Hyatt",
+    "city": "Dharamshala",
+    "state": "Himachal Pradesh",
+    "address": "Village Dharamkot, McLeod Ganj, Dharamshala, Himachal Pradesh 176219",
+    "about": "Nestled in the scenic Dhauladhar range, this resort offers a tranquil retreat with luxurious rooms, a spa, and stunning mountain views. It's a perfect base to explore the spiritual and natural beauty of Dharamshala.",
+    "basePrice": 18000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-dharamshala-1/1080/720", "caption": "Resort view with mountains" },
+      { "src": "https://picsum.photos/seed/hyatt-dharamshala-2/1080/720", "caption": "Elegant room interior" }
+    ],
+    "roomCategories": [{ "name": "Regency King Room", "count": 89, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "mountain view", "dharamshala", "resort"]
+  },
+  {
+    "name": "Fortune Park Dalhousie",
+    "brand": "Fortune",
+    "city": "Dalhousie",
+    "state": "Himachal Pradesh",
+    "address": "Near Gandhi Chowk, Dalhousie, Himachal Pradesh 176304",
+    "about": "Overlooking the picturesque Pir Panjal range, Fortune Park Dalhousie offers a comfortable and elegant stay with modern amenities and warm hospitality, reflecting the charm of the colonial era.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/fortune-dalhousie-1/1080/720", "caption": "Hotel exterior view" },
+      { "src": "https://picsum.photos/seed/fortune-dalhousie-2/1080/720", "caption": "Restaurant with a view" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 57, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "dalhousie", "colonial"]
   }
 ]

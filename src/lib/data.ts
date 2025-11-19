@@ -6,9 +6,9 @@ import type { Destination, Brand, State, City, Hotel, MonthDestination, Attracti
 
 import allHotelsData from '@/data/new-hotels.json';
 
-import brands from '@/data/brands.json';
-import states from '@/data/states.json';
-import cities from '@/data/cities.json';
+import brandsData from '@/data/brands.json';
+import statesData from '@/data/states.json';
+import citiesData from '@/data/cities.json';
 import featuredPackages from '@/data/packages.json';
 import { attractions as attractionsData } from '@/data/attractions';
 
@@ -36,6 +36,19 @@ const hotels: Hotel[] = (allHotels as any[]).map((hotel, index) => ({
   brandSlug: slugify(hotel.brand),
 }));
 
+const brands: Brand[] = (brandsData as Brand[]).map(brand => ({
+    ...brand,
+    brandSlug: slugify(brand.name),
+}));
+const states: State[] = (statesData as State[]).map(state => ({
+    ...state,
+    stateId: slugify(state.name),
+}));
+const cities: City[] = (citiesData as City[]).map(city => ({
+    ...city,
+    cityId: slugify(city.name),
+    stateId: slugify(city.stateId),
+}));
 
 export { hotels };
 export { brands };
