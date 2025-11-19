@@ -65,25 +65,25 @@ const navLinks = [
 ];
 
 const experiences = [
-  { title: "Adults-Only Resorts", href: "/experiences/adults-only", icon: CircleUserRound },
-  { title: "All-inclusive Resorts", href: "/experiences/all-inclusive", icon: Palmtree },
-  { title: "Around Delhi NCR", href: "/experiences/around-delhi-ncr", icon: MapPin },
-  { title: "Beachfront Resorts", href: "/experiences/beachfront", icon: Umbrella },
-  { title: "Boutique Hotels", href: "/experiences/boutique", icon: Building2 },
-  { title: "Desert Experiences", href: "/experiences/desert", icon: Sun },
-  { title: "Exclusive Offers", href: "/experiences/exclusive-offers", icon: Percent },
-  { title: "Family-Friendly Resorts", href: "/experiences/family-friendly", icon: Users },
-  { title: "Heritage & Palaces", href: "/experiences/heritage-palaces", icon: Landmark },
-  { title: "Luxury Hotels", href: "/experiences/luxury-hotels", icon: Gem },
-  { title: "Luxury Tents", href: "/experiences/luxury-tents", icon: Tent },
-  { title: "Luxury Villas", href: "/experiences/luxury-villas", icon: Home },
-  { title: "Milestone Celebrations", href: "/experiences/milestone-celebrations", icon: Sparkles },
-  { title: "Mountain Lodges", href: "/experiences/mountain-lodges", icon: Mountain },
-  { title: "Train Journeys", href: "/experiences/train-journeys", icon: Train },
-  { title: "Ultra Luxury", href: "/experiences/ultra-luxury", icon: Diamond },
-  { title: "Weddings", href: "/experiences/weddings", icon: Cake },
-  { title: "Wellness Resorts", href: "/experiences/wellness", icon: HeartPulse },
-  { title: "Wildlife Resorts", href: "/experiences/wildlife", icon: Briefcase },
+  { title: "Adults-Only Resorts", href: "/experiences/adults-only", icon: CircleUserRound, description: "Unwind in serene, adults-only environments." },
+  { title: "All-inclusive Resorts", href: "/experiences/all-inclusive", icon: Palmtree, description: "Enjoy worry-free vacations with everything included." },
+  { title: "Around Delhi NCR", href: "/experiences/around-delhi-ncr", icon: MapPin, description: "Quick getaways and stays near the capital city." },
+  { title: "Beachfront Resorts", href: "/experiences/beachfront", icon: Umbrella, description: "Wake up to the sound of waves at stunning beachfront properties." },
+  { title: "Boutique Hotels", href: "/experiences/boutique", icon: Building2, description: "Unique and intimate hotels with personalized service." },
+  { title: "Desert Experiences", href: "/experiences/desert", icon: Sun, description: "Explore the magic and majesty of the desert." },
+  { title: "Exclusive Offers", href: "/experiences/exclusive-offers", icon: Percent, description: "Find special deals and packages for your next trip." },
+  { title: "Family-Friendly Resorts", href: "/experiences/family-friendly", icon: Users, description: "Fun for all ages with activities and amenities for families." },
+  { title: "Heritage & Palaces", href: "/experiences/heritage-palaces", icon: Landmark, description: "Stay in historic palaces and heritage properties." },
+  { title: "Luxury Hotels", href: "/experiences/luxury-hotels", icon: Gem, description: "Indulge in the finest hospitality and world-class amenities." },
+  { title: "Luxury Tents", href: "/experiences/luxury-tents", icon: Tent, description: "Experience glamorous camping with all the comforts." },
+  { title: "Luxury Villas", href: "/experiences/luxury-villas", icon: Home, description: "Enjoy privacy and space in your own luxury villa." },
+  { title: "Milestone Celebrations", href: "/experiences/milestone-celebrations", icon: Sparkles, description: "Celebrate special occasions in memorable settings." },
+  { title: "Mountain Lodges", href: "/experiences/mountain-lodges", icon: Mountain, description: "Cozy lodges with breathtaking mountain views." },
+  { title: "Train Journeys", href: "/experiences/train-journeys", icon: Train, description: "Experience the romance of luxury train travel." },
+  { title: "Ultra Luxury", href: "/experiences/ultra-luxury", icon: Diamond, description: "The pinnacle of opulence and bespoke service." },
+  { title: "Weddings", href: "/experiences/weddings", icon: Cake, description: "Find the perfect venue for your dream wedding." },
+  { title: "Wellness Resorts", href: "/experiences/wellness", icon: HeartPulse, description: "Rejuvenate your mind, body, and soul." },
+  { title: "Wildlife Resorts", href: "/experiences/wildlife", icon: Briefcase, description: "Stay close to nature and experience wildlife." },
 ];
 
 
@@ -106,6 +106,9 @@ const ListItem = React.forwardRef<
             {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
             {title}
           </div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
         </a>
       </NavigationMenuLink>
     </li>
@@ -146,6 +149,7 @@ export default function Header() {
                 href={component.href}
                 icon={component.icon}
               >
+                {component.description}
               </ListItem>
             ))}
           </ul>
