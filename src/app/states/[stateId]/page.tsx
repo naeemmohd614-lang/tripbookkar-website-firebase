@@ -55,6 +55,7 @@ export default function StatePage() {
   
   const rajasthanAttractions = [
     { 
+      id: 'amer-fort',
       name: 'Amer Fort', 
       location: 'Jaipur',
       image: 'https://picsum.photos/seed/amer-fort/600/400',
@@ -62,6 +63,7 @@ export default function StatePage() {
       description: "Perched on a hilltop overlooking Maota Lake, Amer Fort is a stunning example of Rajput architecture. Explore its intricate network of courtyards, palaces, and halls, including the breathtaking Sheesh Mahal (Mirror Palace)."
     },
     { 
+      id: 'mehrangarh-fort',
       name: 'Mehrangarh Fort', 
       location: 'Jodhpur',
       image: 'https://picsum.photos/seed/mehrangarh-fort/600/400',
@@ -69,6 +71,7 @@ export default function StatePage() {
       description: "One of India's largest and most magnificent forts, Mehrangarh Fort rises from a rocky hill 125m above Jodhpur's skyline. Its thick, imposing walls enclose a complex of beautiful palaces, courtyards, and a museum."
     },
     { 
+      id: 'city-palace-udaipur',
       name: 'City Palace', 
       location: 'Udaipur',
       image: 'https://picsum.photos/seed/city-palace-udaipur/600/400',
@@ -202,17 +205,19 @@ export default function StatePage() {
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Rajasthan</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {rajasthanAttractions.map(attraction => (
-                <Card key={attraction.name} className="overflow-hidden">
-                  <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48" data-ai-hint={attraction.caption} />
-                  <CardContent className="p-4">
-                    <h3 className="font-bold text-lg">{attraction.name}</h3>
-                    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
-                      <MapPin className="w-3 h-3" />
-                      {attraction.location}
-                    </div>
-                    <p className="text-sm text-muted-foreground mt-2">{attraction.description}</p>
-                  </CardContent>
-                </Card>
+                <Link href={`/attractions/${attraction.id}`} key={attraction.name}>
+                    <Card className="overflow-hidden group h-full hover:shadow-lg transition-shadow">
+                        <Image src={attraction.image} alt={attraction.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.caption} />
+                        <CardContent className="p-4">
+                            <h3 className="font-bold text-lg">{attraction.name}</h3>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+                            <MapPin className="w-3 h-3" />
+                            {attraction.location}
+                            </div>
+                            <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                        </CardContent>
+                    </Card>
+                </Link>
               ))}
             </div>
           </div>
