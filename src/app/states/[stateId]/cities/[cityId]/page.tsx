@@ -7,7 +7,7 @@ import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Users2, ShieldCheck, HeartPulse, Drama, CookingPot, Diamond, ShoppingBasket } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Users2, ShieldCheck, HeartPulse, Drama, CookingPot, Diamond, ShoppingBasket, Anchor, Compass } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 
@@ -79,7 +79,7 @@ export default function CityPage() {
 
   if (cityId === 'ahmedabad') {
     const heroImage = { src: 'https://picsum.photos/seed/ahmedabad-hero/1920/600', caption: 'sabarmati riverfront ahmedabad' };
-    const highlights = [ { icon: Landmark, text: 'Heritage City', color: 'text-orange-500' }, { icon: Book, text: 'Textile Hub', color: 'text-sky-500' }, { icon: Utensils, text: 'Foodie Paradise', color: 'text-red-500' }];
+    const highlights = [ { icon: Landmark, text: 'Heritage City', color: 'text-orange-500' }, { icon: BookOpen, text: 'Textile Hub', color: 'text-sky-500' }, { icon: Utensils, text: 'Foodie Paradise', color: 'text-red-500' }];
     const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'ahmedabad');
     return (
         <div>
