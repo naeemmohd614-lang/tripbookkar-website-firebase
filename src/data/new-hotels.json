@@ -1054,5 +1054,21 @@
     "roomCategories": [{ "name": "Winter Green Room", "count": 56, "size": "280 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["pilgrimage", "somnath", "eco-friendly"]
+  },
+  {
+    "name": "The House of MG, Ahmedabad",
+    "brand": "The House of MG",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "Opposite Sidi Saiyed Jali, Lal Darwaja, Ahmedabad, Gujarat 380001",
+    "about": "A premier heritage hotel in Ahmedabad, offering a unique blend of traditional Gujarati architecture and modern luxury. It features a textile gallery, a boutique, and authentic dining experiences.",
+    "basePrice": 10000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/house-of-mg-1/1080/720", "caption": "Courtyard of The House of MG" }
+    ],
+    "roomCategories": [{ "name": "Grand Suite", "count": 38, "size": "600 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "boutique", "ahmedabad", "cultural"]
   }
 ]
