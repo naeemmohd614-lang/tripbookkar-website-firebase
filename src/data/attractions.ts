@@ -739,6 +739,57 @@ const sikkimAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const westBengalAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Victoria Memorial',
+        city: 'Kolkata',
+        cityId: 'kolkata',
+        image: { src: 'https://picsum.photos/seed/victoria-memorial/1200/600', caption: 'victoria memorial kolkata' },
+        description: "A large marble building in Kolkata, which was built between 1906 and 1921. It is dedicated to the memory of Queen Victoria and is now a museum and popular tourist destination.",
+        timing: "10:00 AM - 6:00 PM (Museum), 5:30 AM - 6:15 PM (Gardens)",
+        fees: [ { type: "Indian", amount: "₹30" }, { type: "Foreigner", amount: "₹500" } ],
+        bestTimeToVisit: "October to February",
+        distances: [ { from: "Netaji Subhas Chandra Bose International Airport", distance: "22 km" } ],
+        nearbyHotels: ["The Oberoi Grand, Kolkata", "The Park Kolkata"]
+    },
+    {
+        name: 'Howrah Bridge',
+        city: 'Kolkata',
+        cityId: 'kolkata',
+        image: { src: 'https://picsum.photos/seed/howrah-bridge/1200/600', caption: 'howrah bridge kolkata' },
+        description: "A cantilever bridge over the Hooghly River. It is one of the most iconic landmarks of Kolkata and is considered to be one of the busiest bridges in the world.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Evening for a stunning view",
+        distances: [ { from: "Howrah Railway Station", distance: "2 km" } ],
+        nearbyHotels: ["The Oberoi Grand, Kolkata", "The Peerless Inn Kolkata"]
+    },
+    {
+        name: 'Tiger Hill',
+        city: 'Darjeeling',
+        cityId: 'darjeeling',
+        image: { src: 'https://picsum.photos/seed/tiger-hill/1200/600', caption: 'tiger hill darjeeling sunrise' },
+        description: "Famous for its panoramic views of Mount Everest and Kanchenjunga at sunrise. It is the highest point in Darjeeling.",
+        timing: "4:00 AM to 6:00 PM",
+        fees: [ { type: "Entry", amount: "Free (Vehicle charges apply)" } ],
+        bestTimeToVisit: "October to December and March to April",
+        distances: [ { from: "Darjeeling Town", distance: "11 km" } ],
+        nearbyHotels: ["Mayfair Darjeeling", "Windamere Hotel"]
+    },
+    {
+        name: 'Batasia Loop',
+        city: 'Darjeeling',
+        cityId: 'darjeeling',
+        image: { src: 'https://picsum.photos/seed/batasia-loop/1200/600', caption: 'batasia loop toy train' },
+        description: "A spiral railway track where the Darjeeling Himalayan Railway makes a 360-degree turn. It offers a panoramic view of Darjeeling town and the snow-capped Kanchenjunga.",
+        timing: "5:00 AM - 4:30 PM",
+        fees: [ { type: "Entry", amount: "₹15" } ],
+        bestTimeToVisit: "Anytime",
+        distances: [ { from: "Darjeeling Town", distance: "5 km" } ],
+        nearbyHotels: ["Mayfair Darjeeling", "Cedar Inn"]
+    }
+];
+
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
         ...attraction,
@@ -777,6 +828,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...sikkimAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...westBengalAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),

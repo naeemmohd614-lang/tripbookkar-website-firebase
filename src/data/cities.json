@@ -215,5 +215,21 @@
     "image": "",
     "description": "The cultural capital of Sikkim, known for its large statues and religious sites.",
     "totalHotels": 20
+  },
+  {
+    "cityId": "kolkata",
+    "stateId": "west-bengal",
+    "name": "Kolkata",
+    "image": "",
+    "description": "The cultural capital of India, known for its colonial architecture, art galleries and festivals.",
+    "totalHotels": 200
+  },
+  {
+    "cityId": "darjeeling",
+    "stateId": "west-bengal",
+    "name": "Darjeeling",
+    "image": "",
+    "description": "Famous for its tea plantations, Himalayan railway, and stunning views of Kanchenjunga.",
+    "totalHotels": 90
   }
 ]

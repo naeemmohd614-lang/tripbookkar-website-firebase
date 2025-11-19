@@ -492,5 +492,39 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 50, "size": "280 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["cultural", "mountain view", "namchi"]
+  },
+  {
+    "name": "The Oberoi Grand, Kolkata",
+    "brand": "Oberoi",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "address": "15, Jawaharlal Nehru Rd, New Market Area, Dharmatala, Taltala, Kolkata, West Bengal 700013",
+    "about": "Affectionately known as the 'Grande Dame of Chowringhee', this iconic hotel offers a blend of classic Victorian architecture and modern amenities. A true oasis in the heart of the city.",
+    "basePrice": 18000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-kolkata-1/1080/720", "caption": "The Oberoi Grand exterior" },
+      { "src": "https://picsum.photos/seed/oberoi-kolkata-2/1080/720", "caption": "Courtyard pool" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 209, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "luxury", "kolkata", "downtown"]
+  },
+  {
+    "name": "Mayfair Darjeeling",
+    "brand": "Mayfair",
+    "city": "Darjeeling",
+    "state": "West Bengal",
+    "address": "The Mall, Opposite Governor House, Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "about": "A heritage hotel that exudes old-world charm and elegance. It offers stunning views of the valley and the Kanchenjunga range, coupled with warm hospitality.",
+    "basePrice": 13000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/mayfair-darjeeling-1/1080/720", "caption": "Hotel exterior view" },
+      { "src": "https://picsum.photos/seed/mayfair-darjeeling-2/1080/720", "caption": "Lounge with a fireplace" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 44, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "mountain view", "darjeeling"]
   }
 ]
