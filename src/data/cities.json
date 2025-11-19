@@ -97,6 +97,22 @@
     "totalHotels": 30
   },
   {
+    "cityId": "prayagraj",
+    "stateId": "uttar-pradesh",
+    "name": "Prayagraj",
+    "image": "",
+    "description": "A holy city known for the Triveni Sangam, the confluence of three sacred rivers.",
+    "totalHotels": 25
+  },
+  {
+    "cityId": "mathura",
+    "stateId": "uttar-pradesh",
+    "name": "Mathura",
+    "image": "",
+    "description": "The birthplace of Lord Krishna, a major pilgrimage site for Hindus.",
+    "totalHotels": 35
+  },
+  {
     "cityId": "shimla",
     "stateId": "himachal-pradesh",
     "name": "Shimla",

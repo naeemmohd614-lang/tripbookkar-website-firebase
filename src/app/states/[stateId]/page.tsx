@@ -59,7 +59,7 @@ export default function StatePage() {
       };
     });
 
-    const tnAttractions = (attractions as Attraction[]).filter(a => a.city === 'Chennai' || a.city === 'Madurai' || a.city === 'Ooty');
+    const tnAttractions = (attractions as Attraction[]).filter(a => a.city === 'Chennai' || a.city === 'Madurai' || a.city === 'Ooty' || a.city === 'Kanyakumari' || a.city === 'Kodaikanal');
     
     return (
       <div>
@@ -591,7 +591,7 @@ export default function StatePage() {
       };
     });
 
-    const uttarakhandAttractions = (attractions as Attraction[]).filter(a => a.city === 'Rishikesh' || a.city === 'Nainital');
+    const uttarakhandAttractions = (attractions as Attraction[]).filter(a => a.city === 'Rishikesh' || a.city === 'Nainital' || a.city === 'Mussoorie' || a.city === 'Dehradun');
     
     return (
       <div>
@@ -724,7 +724,7 @@ export default function StatePage() {
       };
     });
 
-    const himachalAttractions = (attractions as Attraction[]).filter(a => a.city === 'Shimla' || a.city === 'Manali');
+    const himachalAttractions = (attractions as Attraction[]).filter(a => a.city === 'Shimla' || a.city === 'Manali' || a.city === 'Dharamshala' || a.city === 'Dalhousie');
     
     return (
       <div>
@@ -846,7 +846,7 @@ export default function StatePage() {
         { icon: Utensils, text: 'Mughal Cuisine', color: 'text-green-500' },
     ];
     
-    const upCities = ['Agra', 'Varanasi', 'Lucknow'].map(cityName => {
+    const upCities = ['Agra', 'Varanasi', 'Lucknow', 'Prayagraj', 'Mathura'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
       return {
@@ -913,7 +913,7 @@ export default function StatePage() {
           <div className="text-center my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Cities</h2>
             <p className="mt-2 text-muted-foreground">From the romance of Agra to the spirituality of Varanasi.</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8">
               {upCities.map(city => (
                 <Link href={`/states/uttar-pradesh/cities/${city.cityId}`} key={city.name}>
                   <Card className="overflow-hidden group relative">
