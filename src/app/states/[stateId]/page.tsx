@@ -1,10 +1,11 @@
 
 
+
 'use client';
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine } from 'lucide-react';
 import type { State, Hotel, City, Attraction } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -13,6 +14,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 // Helper function to create a slug
 function slugify(text: string) {
+  if (!text) return '';
   return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 }
 
@@ -34,11 +36,144 @@ export default function StatePage() {
       "caption": `landscape ${state.name}`
   };
 
+  if (stateId === 'himachal-pradesh') {
+    const himachalCarouselImages = [
+        { src: 'https://picsum.photos/seed/himachal-carousel-1/1200/600', caption: 'Shimla, Himachal Pradesh', 'data-ai-hint': 'shimla city' },
+        { src: 'https://picsum.photos/seed/himachal-carousel-2/1200/600', caption: 'Solang Valley, Manali', 'data-ai-hint': 'manali valley snow' },
+        { src: 'https://picsum.photos/seed/himachal-carousel-3/1200/600', caption: 'Rohtang Pass', 'data-ai-hint': 'rohtang pass mountains' }
+    ];
+
+    const himachalHighlights = [
+        { icon: Mountain, text: 'Himalayan Views', color: 'text-sky-500' },
+        { icon: Zap, text: 'Adventure Sports', color: 'text-orange-500' },
+        { icon: TreePine, text: 'Pine Forests', color: 'text-green-600' },
+    ];
+    
+    const himachalCities = ['Shimla', 'Manali'].map(cityName => {
+      const city = (allCities as City[]).find(c => c.name === cityName);
+      const cityId = city ? city.cityId : slugify(cityName);
+      return {
+        name: cityName,
+        cityId: cityId,
+        image: `https://picsum.photos/seed/city-${cityId}/400/500`,
+        caption: `${cityName} city`
+      };
+    });
+
+    const himachalAttractions = (attractions as Attraction[]).filter(a => a.city === 'Shimla' || a.city === 'Manali');
+    
+    return (
+      <div>
+        <div className="w-full mb-12">
+          <Carousel className="w-full" opts={{ loop: true }}>
+            <CarouselContent>
+              {himachalCarouselImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative aspect-[16/7]">
+                    <Image 
+                      src={image.src} 
+                      alt={image.caption} 
+                      fill 
+                      className="object-cover"
+                      data-ai-hint={image['data-ai-hint']}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+          </Carousel>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Himachal Pradesh</h1>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Nestled in the Himalayas, Himachal Pradesh is a paradise for nature lovers, adventurers, and peace seekers. From the colonial charm of Shimla to the adventurous hub of Manali, the state offers snow-capped mountains, lush valleys, and serene monasteries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
+            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">April to June & Sept to Nov</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><Clock className="mx-auto mb-2 h-8 w-8 text-green-500" /><h3 className="font-semibold">Ideal Duration</h3><p className="text-sm text-muted-foreground">5-6 Days</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" /><h3 className="font-semibold">Holiday Packages</h3><p className="text-sm text-muted-foreground">View Packages</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" /><h3 className="font-semibold">Top Hotels</h3><p className="text-sm text-muted-foreground">Find Hotels</p></CardContent></Card>
+          </div>
+
+          <div className="text-center my-16">
+              <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8">Highlights</h2>
+              <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+                  {himachalHighlights.map(highlight => (
+                      <div key={highlight.text} className="flex flex-col items-center gap-2">
+                          <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                          <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                      </div>
+                  ))}
+              </div>
+          </div>
+
+          <div className="text-center my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Cities</h2>
+            <p className="mt-2 text-muted-foreground">From the Queen of Hills to the Valley of Gods.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
+              {himachalCities.map(city => (
+                <Link href={`/states/himachal-pradesh/cities/${city.cityId}`} key={city.name}>
+                  <Card className="overflow-hidden group relative">
+                    <Image src={city.image} alt={city.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={city.caption} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{city.name}</h3>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Himachal Pradesh</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {himachalAttractions.map(attraction => (
+                 <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                    <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-40 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                        <CardContent className="p-4">
+                            <h3 className="font-bold text-lg">{attraction.name}</h3>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
+                            <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{attraction.description}</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">
+              Top Hotels in Himachal Pradesh
+            </h2>
+            {stateHotels.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {stateHotels.map((hotel) => (
+                  <HotelCard key={hotel.hotelId} hotel={hotel} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this state yet.</h3>
+                <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (stateId === 'uttar-pradesh') {
     const upCarouselImages = [
-        { src: 'https://images.unsplash.com/photo-1599661046223-140c147242da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWwlMjBtYWhhbCUyMGphaXB1cnxlbnwwfHx8fDE3NjM0NTU2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
+        { src: 'https://images.unsplash.com/photo-1654057892249-c2cf38a50ab7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8THVja25vdyUyMHxlbnwwfHx8fDE3NjM1MjgyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' },
         { src: 'https://picsum.photos/seed/up-carousel-2/1200/600', caption: 'Ghats of Varanasi', 'data-ai-hint': 'varanasi ghats' },
-        { src: 'https://picsum.photos/seed/up-carousel-3/1200/600', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' }
+        { src: 'https://picsum.photos/seed/up-carousel-3/1200/600', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
     ];
 
     const upHighlights = [
@@ -202,7 +337,7 @@ export default function StatePage() {
       description: "One of India's largest and most magnificent forts, Mehrangarh Fort rises from a rocky hill 125m above Jodhpur's skyline. Its thick, imposing walls enclose a complex of beautiful palaces, courtyards, and a museum."
     },
     { 
-      id: 'city-palace',
+      id: 'city-palace-udaipur',
       name: 'City Palace, Udaipur', 
       location: 'Udaipur',
       image: 'https://picsum.photos/seed/city-palace-udaipur/600/400',

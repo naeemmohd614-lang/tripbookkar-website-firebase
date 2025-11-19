@@ -420,6 +420,58 @@ const uttarPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const himachalAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'The Ridge',
+        city: 'Shimla',
+        cityId: 'shimla',
+        image: { src: 'https://picsum.photos/seed/shimla-ridge/1200/600', caption: 'the ridge shimla' },
+        description: "The Ridge is a large open space in the heart of Shimla, offering spectacular views of the mountain ranges. It is a hub of all cultural activities of Shimla.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "April to August and December to January",
+        distances: [ { from: "Shimla Airport", distance: "20 km" } ],
+        nearbyHotels: ["Wildflower Hall, An Oberoi Resort, Shimla", "The Oberoi Cecil, Shimla"]
+    },
+    {
+        name: 'Mall Road',
+        city: 'Shimla',
+        cityId: 'shimla',
+        image: { src: 'https://picsum.photos/seed/shimla-mall-road/1200/600', caption: 'mall road shimla' },
+        description: "The main street in Shimla, lined with showrooms, department stores, shops, restaurants and cafes. A stroll on The Mall Road is a must-do activity.",
+        timing: "9:00 AM - 9:00 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "All year round",
+        distances: [ { from: "Shimla Railway Station", distance: "1 km" } ],
+        nearbyHotels: ["Wildflower Hall, An Oberoi Resort, Shimla", "The Oberoi Cecil, Shimla"]
+    },
+    {
+        name: 'Solang Valley',
+        city: 'Manali',
+        cityId: 'manali',
+        image: { src: 'https://picsum.photos/seed/solang-valley/1200/600', caption: 'solang valley manali' },
+        description: "A picturesque valley famous for its summer and winter sport conditions. You can enjoy paragliding, zorbing, and skiing here.",
+        timing: "10:00 AM - 6:00 PM",
+        fees: [ { type: "Entry", amount: "Free (charges for activities)" } ],
+        bestTimeToVisit: "For snow, December to February. For other activities, May to November.",
+        distances: [ { from: "Manali Bus Stand", distance: "14 km" } ],
+        nearbyHotels: ["Manuallaya - The Resort Spa in the Himalayas"]
+    },
+    {
+        name: 'Rohtang Pass',
+        city: 'Manali',
+        cityId: 'manali',
+        image: { src: 'https://picsum.photos/seed/rohtang-pass/1200/600', caption: 'rohtang pass snow' },
+        description: "A high mountain pass that connects the Kullu Valley with the Lahaul and Spiti Valleys. It offers stunning views and is a gateway to more adventures. Open from May to November.",
+        timing: "Varies, depends on weather",
+        fees: [ { type: "Permit required", amount: "₹550 (approx)" } ],
+        bestTimeToVisit: "June to October",
+        distances: [ { from: "Manali", distance: "51 km" } ],
+        notes: ["A permit is required to visit Rohtang Pass.", "The pass is closed during winter due to heavy snowfall."],
+        nearbyHotels: ["Manuallaya - The Resort Spa in the Himalayas"]
+    }
+];
+
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
         ...attraction,
@@ -442,6 +494,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...uttarPradeshAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...himachalAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),

@@ -17,12 +17,52 @@
     "totalHotels": 75
   },
   {
+    "cityId": "jodhpur",
+    "stateId": "rajasthan",
+    "name": "Jodhpur",
+    "image": "",
+    "description": "The Blue City, dominated by the majestic Mehrangarh Fort.",
+    "totalHotels": 45
+  },
+  {
+    "cityId": "udaipur",
+    "stateId": "rajasthan",
+    "name": "Udaipur",
+    "image": "",
+    "description": "The City of Lakes, known for its romantic palaces and beautiful lakes.",
+    "totalHotels": 60
+  },
+  {
+    "cityId": "jaisalmer",
+    "stateId": "rajasthan",
+    "name": "Jaisalmer",
+    "image": "",
+    "description": "The Golden City, rising from the Thar Desert with its magnificent fort.",
+    "totalHotels": 40
+  },
+  {
     "cityId": "goa",
     "stateId": "goa",
     "name": "Goa",
     "image": "",
     "description": "India's beach paradise, known for its lively nightlife, golden sands, and Portuguese heritage.",
     "totalHotels": 250
+  },
+  {
+    "cityId": "north-goa",
+    "stateId": "goa",
+    "name": "North Goa",
+    "image": "",
+    "description": "The vibrant and energetic part of Goa, famous for parties and markets.",
+    "totalHotels": 150
+  },
+  {
+    "cityId": "south-goa",
+    "stateId": "goa",
+    "name": "South Goa",
+    "image": "",
+    "description": "The serene and peaceful part of Goa, known for luxury resorts and pristine beaches.",
+    "totalHotels": 100
   },
   {
     "cityId": "mumbai",
@@ -55,5 +95,21 @@
     "image": "",
     "description": "The city of Nawabs, known for its politeness, beautiful gardens, and Mughal cuisine.",
     "totalHotels": 30
+  },
+  {
+    "cityId": "shimla",
+    "stateId": "himachal-pradesh",
+    "name": "Shimla",
+    "image": "",
+    "description": "The Queen of Hills, a charming colonial hill station with stunning Himalayan views.",
+    "totalHotels": 80
+  },
+  {
+    "cityId": "manali",
+    "stateId": "himachal-pradesh",
+    "name": "Manali",
+    "image": "",
+    "description": "A popular destination for adventure sports, surrounded by snow-capped peaks.",
+    "totalHotels": 120
   }
 ]

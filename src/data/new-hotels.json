@@ -169,5 +169,39 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 112, "size": "377 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "city view", "lucknow"]
+  },
+  {
+    "name": "Wildflower Hall, An Oberoi Resort, Shimla",
+    "brand": "Oberoi",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "address": "Chharabra, Shimla, Himachal Pradesh 171012",
+    "about": "Set in 22 acres of virgin woods of pine and cedar, the former residence of Lord Kitchener is a fairytale luxury resort. It offers spectacular views of the Himalayas.",
+    "basePrice": 35000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/wildflower-shimla-1/1080/720", "caption": "Wildflower Hall exterior" },
+      { "src": "https://picsum.photos/seed/wildflower-shimla-2/1080/720", "caption": "Indoor heated pool" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Garden View Room", "count": 85, "size": "430 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "mountain view", "shimla", "romantic"]
+  },
+  {
+    "name": "Manuallaya - The Resort Spa in the Himalayas",
+    "brand": "Manuallaya",
+    "city": "Manali",
+    "state": "Himachal Pradesh",
+    "address": "Sunny Side, Chadiyari, Manali, Himachal Pradesh 175131",
+    "about": "A magnificent resort in Manali with breathtaking views of the snow-capped Himalayas and the Beas river. It combines traditional Himachali architecture with modern luxury.",
+    "basePrice": 12000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/manuallaya-manali-1/1080/720", "caption": "Resort exterior with mountain background" },
+      { "src": "https://picsum.photos/seed/manuallaya-manali-2/1080/720", "caption": "Cozy room interior" }
+    ],
+    "roomCategories": [{ "name": "Garden Room", "count": 55, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "mountain view", "manali"]
   }
 ]
