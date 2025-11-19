@@ -1,4 +1,5 @@
 
+
 export interface Hotel {
   hotelId: string;
   name: string;
@@ -125,6 +126,7 @@ export interface State {
 
 export interface City {
     cityId: string;
+    stateId: string;
     name: string;
     image: string;
     description: string;

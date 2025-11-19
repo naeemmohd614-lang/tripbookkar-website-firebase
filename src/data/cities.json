@@ -2,6 +2,7 @@
 [
   {
     "cityId": "bengaluru",
+    "stateId": "karnataka",
     "name": "Bengaluru",
     "image": "",
     "description": "The Silicon Valley of India, a bustling metropolis with a vibrant culture and pleasant climate.",
@@ -9,6 +10,7 @@
   },
   {
     "cityId": "jaipur",
+    "stateId": "rajasthan",
     "name": "Jaipur",
     "image": "",
     "description": "The Pink City, famous for its stunning forts, palaces, and rich Rajput history.",
@@ -16,16 +18,42 @@
   },
   {
     "cityId": "goa",
+    "stateId": "goa",
     "name": "Goa",
     "image": "",
     "description": "India's beach paradise, known for its lively nightlife, golden sands, and Portuguese heritage.",
     "totalHotels": 250
   },
-    {
+  {
     "cityId": "mumbai",
+    "stateId": "maharashtra",
     "name": "Mumbai",
     "image": "",
     "description": "The city of dreams, a financial powerhouse and the heart of the Bollywood film industry.",
     "totalHotels": 300
+  },
+  {
+    "cityId": "agra",
+    "stateId": "uttar-pradesh",
+    "name": "Agra",
+    "image": "",
+    "description": "Home to the iconic Taj Mahal, a city steeped in Mughal history.",
+    "totalHotels": 50
+  },
+  {
+    "cityId": "varanasi",
+    "stateId": "uttar-pradesh",
+    "name": "Varanasi",
+    "image": "",
+    "description": "The spiritual capital of India, with its sacred ghats along the river Ganges.",
+    "totalHotels": 40
+  },
+  {
+    "cityId": "lucknow",
+    "stateId": "uttar-pradesh",
+    "name": "Lucknow",
+    "image": "",
+    "description": "The city of Nawabs, known for its politeness, beautiful gardens, and Mughal cuisine.",
+    "totalHotels": 30
   }
 ]

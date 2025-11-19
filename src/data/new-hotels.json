@@ -84,5 +84,56 @@
     "roomCategories": [{ "name": "Deluxe Sea View", "count": 326, "size": "540 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["sea view", "chennai", "luxury"]
+  },
+  {
+    "name": "The Oberoi Amarvilas, Agra",
+    "brand": "Oberoi",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "Taj East Gate Rd, Paktola, Tajganj, Agra, Uttar Pradesh 282001",
+    "about": "Located just 600 meters from the Taj Mahal, this luxury hotel offers uninterrupted views of the monument from every room. Experience Mughal-inspired architecture and royal hospitality.",
+    "basePrice": 50000,
+    "rating": 5.0,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-agra-1/1080/720", "caption": "View of Taj Mahal from the hotel" },
+      { "src": "https://picsum.photos/seed/oberoi-agra-2/1080/720", "caption": "Poolside with arches" }
+    ],
+    "roomCategories": [{ "name": "Premier Room with Balcony", "count": 102, "size": "480 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["taj mahal view", "luxury", "romantic", "agra"]
+  },
+  {
+    "name": "ITC Mughal, Agra",
+    "brand": "ITC",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "Taj Ganj, Agra, Uttar Pradesh 282001",
+    "about": "A tribute to Mughal architecture, this sprawling resort is set amidst 23 acres of lush gardens. It's a recipient of the prestigious Aga Khan Award for its Mughal-inspired design.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-agra-1/1080/720", "caption": "ITC Mughal architecture" },
+      { "src": "https://picsum.photos/seed/itc-agra-2/1080/720", "caption": "Gardens and pool area" }
+    ],
+    "roomCategories": [{ "name": "Mughal Room", "count": 233, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "mughal architecture", "agra"]
+  },
+  {
+    "name": "BrijRama Palace, Varanasi",
+    "brand": "Brij",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "Darbhanga Ghat, Dashashwamedh, Varanasi, Uttar Pradesh 221001",
+    "about": "One of the oldest structures in Varanasi, this palace hotel on the banks of the Ganges offers a unique heritage experience. It features traditional decor and stunning river views.",
+    "basePrice": 25000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/brijrama-1/1080/720", "caption": "BrijRama Palace on the ghats" },
+      { "src": "https://picsum.photos/seed/brijrama-2/1080/720", "caption": "Interior courtyard" }
+    ],
+    "roomCategories": [{ "name": "Varuna Burj", "count": 32, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "ghat view", "spiritual", "varanasi"]
   }
 ]

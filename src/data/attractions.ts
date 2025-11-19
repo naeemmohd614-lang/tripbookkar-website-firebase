@@ -369,6 +369,57 @@ const goaAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     },
 ];
 
+const uttarPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Taj Mahal',
+        city: 'Agra',
+        cityId: 'agra',
+        image: { src: 'https://picsum.photos/seed/taj-mahal/1200/600', caption: 'taj mahal agra' },
+        description: "An ivory-white marble mausoleum on the south bank of the Yamuna river. It was commissioned in 1632 by the Mughal emperor, Shah Jahan, to house the tomb of his favourite wife, Mumtaz Mahal.",
+        timing: "Sunrise to Sunset (Closed on Fridays)",
+        fees: [ { type: "Indian", amount: "₹50" }, { type: "Foreigner", amount: "₹1100" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Agra Cantt Railway Station", distance: "6 km" } ],
+        nearbyHotels: ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra"]
+    },
+    {
+        name: 'Agra Fort',
+        city: 'Agra',
+        cityId: 'agra',
+        image: { src: 'https://picsum.photos/seed/agra-fort/1200/600', caption: 'agra fort' },
+        description: "A historical fort in the city of Agra. It was the main residence of the emperors of the Mughal Dynasty until 1638. A UNESCO World Heritage site.",
+        timing: "Sunrise to Sunset",
+        fees: [ { type: "Indian", amount: "₹40" }, { type: "Foreigner", amount: "₹550" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Agra Cantt Railway Station", distance: "5 km" } ],
+        nearbyHotels: ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra"]
+    },
+    {
+        name: 'Ghats of Varanasi',
+        city: 'Varanasi',
+        cityId: 'varanasi',
+        image: { src: 'https://picsum.photos/seed/varanasi-ghats/1200/600', caption: 'varanasi ghats evening' },
+        description: "The riverfront steps leading to the banks of the River Ganges. The city has 88 ghats. Most of the ghats are bathing and puja ceremony ghats, while two ghats are used exclusively as cremation sites.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Varanasi Junction Railway Station", distance: "4 km" } ],
+        nearbyHotels: ["BrijRama Palace, Varanasi", "Taj Ganges, Varanasi"]
+    },
+    {
+        name: 'Kashi Vishwanath Temple',
+        city: 'Varanasi',
+        cityId: 'varanasi',
+        image: { src: 'https://picsum.photos/seed/kashi-temple/1200/600', caption: 'kashi vishwanath temple' },
+        description: "One of the most famous Hindu temples dedicated to Lord Shiva. It is located in Varanasi, Uttar Pradesh, India. The temple stands on the western bank of the holy river Ganga, and is one of the twelve Jyotirlingas.",
+        timing: "3:00 AM - 11:00 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Varanasi Junction Railway Station", distance: "4 km" } ],
+        nearbyHotels: ["BrijRama Palace, Varanasi", "Taj Ganges, Varanasi"]
+    }
+];
+
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
         ...attraction,
@@ -387,6 +438,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...goaAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...uttarPradeshAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),
