@@ -424,5 +424,39 @@
     "roomCategories": [{ "name": "Premier Valley View Room", "count": 85, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["ski resort", "luxury", "mountain view", "gulmarg"]
+  },
+  {
+    "name": "Mayfair Spa Resort & Casino",
+    "brand": "Mayfair",
+    "city": "Gangtok",
+    "state": "Sikkim",
+    "address": "Lower Samdur Block, Ranipool, Gangtok, Sikkim 737135",
+    "about": "A luxurious resort offering stunning views of the surrounding hills and valley. It features a world-class spa, a casino, and beautifully appointed rooms.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/mayfair-gangtok-1/1080/720", "caption": "Resort exterior and pool" },
+      { "src": "https://picsum.photos/seed/mayfair-gangtok-2/1080/720", "caption": "Lobby with traditional decor" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 68, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["casino", "luxury", "mountain view", "gangtok"]
+  },
+  {
+    "name": "The Elgin Mount Pandim, Pelling",
+    "brand": "The Elgin",
+    "city": "Pelling",
+    "state": "Sikkim",
+    "address": "Monastery Rd, Pelling, Sikkim 737113",
+    "about": "The former residence of the royal family of Sikkim, this heritage hotel offers magnificent views of the Kanchenjunga range. Experience old-world charm and warm hospitality.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/elgin-pelling-1/1080/720", "caption": "View of Kanchenjunga from the hotel" },
+      { "src": "https://picsum.photos/seed/elgin-pelling-2/1080/720", "caption": "Colonial-style hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "mountain view", "pelling", "romantic"]
   }
 ]

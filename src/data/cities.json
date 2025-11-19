@@ -183,5 +183,21 @@
     "image": "",
     "description": "Known as the 'Valley of Shepherds', famous for its pristine rivers and lush meadows.",
     "totalHotels": 40
+  },
+   {
+    "cityId": "gangtok",
+    "stateId": "sikkim",
+    "name": "Gangtok",
+    "image": "",
+    "description": "The capital of Sikkim, a vibrant hill station with a blend of tradition and modernity.",
+    "totalHotels": 70
+  },
+  {
+    "cityId": "pelling",
+    "stateId": "sikkim",
+    "name": "Pelling",
+    "image": "",
+    "description": "A small town in West Sikkim, famous for its magnificent views of the Kanchenjunga.",
+    "totalHotels": 50
   }
 ]

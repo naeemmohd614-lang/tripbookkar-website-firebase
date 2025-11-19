@@ -662,6 +662,57 @@ const jammuAndKashmirAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const sikkimAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Tsomgo Lake',
+        city: 'Gangtok',
+        cityId: 'gangtok',
+        image: { src: 'https://picsum.photos/seed/tsomgo-lake/1200/600', caption: 'tsomgo lake gangtok' },
+        description: "A glacial lake located at an altitude of 12,313 ft. The lake is highly revered by the local Sikkimese people. It remains frozen during the winter season.",
+        timing: "All day, but permits are checked between 7 AM to 3 PM",
+        fees: [ { type: "Permit required", amount: "Shared vehicle approx. ₹700-1000 per person" } ],
+        bestTimeToVisit: "May to October for pleasant weather, January to March for snow.",
+        distances: [ { from: "Gangtok", distance: "40 km" } ],
+        notes: ["A protected area permit is required for all tourists.", "The lake is prone to heavy snowfall in winter, which can cause road closures."],
+        nearbyHotels: ["Mayfair Spa Resort & Casino", "The Elgin Nor-Khill"]
+    },
+    {
+        name: 'Rumtek Monastery',
+        city: 'Gangtok',
+        cityId: 'gangtok',
+        image: { src: 'https://picsum.photos/seed/rumtek-monastery/1200/600', caption: 'rumtek monastery gangtok' },
+        description: "One of the largest and most significant monasteries in Sikkim, Rumtek Monastery is the seat of the Karmapa Lama. The monastery complex is a beautiful example of Tibetan architecture.",
+        timing: "6:00 AM - 6:00 PM",
+        fees: [ { type: "Entry", amount: "₹10" } ],
+        bestTimeToVisit: "October to December",
+        distances: [ { from: "Gangtok", distance: "24 km" } ],
+        nearbyHotels: ["Mayfair Spa Resort & Casino", "The Elgin Nor-Khill"]
+    },
+    {
+        name: 'Pelling Skywalk',
+        city: 'Pelling',
+        cityId: 'pelling',
+        image: { src: 'https://picsum.photos/seed/pelling-skywalk/1200/600', caption: 'pelling skywalk' },
+        description: "India's first glass skywalk, offering stunning views of the 137-feet tall statue of Chenrezig (Avalokiteshvara) and the surrounding Himalayan peaks.",
+        timing: "8:00 AM - 5:00 PM",
+        fees: [ { type: "Entry", amount: "₹50" } ],
+        bestTimeToVisit: "October to May",
+        distances: [ { from: "Pelling Town", distance: "3 km" } ],
+        nearbyHotels: ["The Elgin Mount Pandim", "Summit Newa Regency"]
+    },
+    {
+        name: 'Khecheopalri Lake',
+        city: 'Pelling',
+        cityId: 'pelling',
+        image: { src: 'https://picsum.photos/seed/khecheopalri-lake/1200/600', caption: 'khecheopalri lake pelling' },
+        description: "A sacred lake for both Buddhists and Hindus, believed to be a wish-fulfilling lake. It is known for its serene beauty and the fact that leaves are not allowed to float on the lake surface.",
+        timing: "6:00 AM - 6:00 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "February to May and October to December",
+        distances: [ { from: "Pelling", distance: "34 km" } ],
+        nearbyHotels: ["The Elgin Mount Pandim", "Hotel Dubdi"]
+    }
+];
 
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
@@ -697,6 +748,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...jammuAndKashmirAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...sikkimAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),
