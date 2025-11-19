@@ -71,8 +71,8 @@ export default function StatePage() {
       description: "One of India's largest and most magnificent forts, Mehrangarh Fort rises from a rocky hill 125m above Jodhpur's skyline. Its thick, imposing walls enclose a complex of beautiful palaces, courtyards, and a museum."
     },
     { 
-      id: 'city-palace-udaipur',
-      name: 'City Palace', 
+      id: 'city-palace',
+      name: 'City Palace, Udaipur', 
       location: 'Udaipur',
       image: 'https://picsum.photos/seed/city-palace-udaipur/600/400',
       caption: 'udaipur palace',
