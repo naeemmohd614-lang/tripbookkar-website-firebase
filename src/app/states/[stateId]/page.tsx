@@ -1,4 +1,5 @@
 
+
 'use client';
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
@@ -33,6 +34,139 @@ export default function StatePage() {
       "src": `https://picsum.photos/seed/${state.stateId}/1280/400`,
       "caption": `landscape ${state.name}`
   };
+
+  if (stateId === 'tamil-nadu') {
+    const tnCarouselImages = [
+        { src: 'https://picsum.photos/seed/tn-carousel-1/1200/600', caption: 'Meenakshi Temple, Madurai', 'data-ai-hint': 'madurai meenakshi temple' },
+        { src: 'https://picsum.photos/seed/tn-carousel-2/1200/600', caption: 'Nilgiri Mountain Railway, Ooty', 'data-ai-hint': 'ooty toy train' },
+        { src: 'https://picsum.photos/seed/tn-carousel-3/1200/600', caption: 'Vivekananda Rock Memorial, Kanyakumari', 'data-ai-hint': 'kanyakumari memorial' }
+    ];
+
+    const tnHighlights = [
+        { icon: Landmark, text: 'Ancient Temples', color: 'text-orange-500' },
+        { icon: SwatchBook, text: 'Rich Culture', color: 'text-purple-500' },
+        { icon: Waves, text: 'Beautiful Coastline', color: 'text-sky-500' },
+    ];
+    
+    const tnCities = ['Chennai', 'Madurai', 'Kanyakumari', 'Ooty', 'Kodaikanal'].map(cityName => {
+      const city = (allCities as City[]).find(c => c.name === cityName);
+      const cityId = city ? city.cityId : slugify(cityName);
+      return {
+        name: cityName,
+        cityId: cityId,
+        image: `https://picsum.photos/seed/city-${cityId}/400/500`,
+        caption: `${cityName} city`
+      };
+    });
+
+    const tnAttractions = (attractions as Attraction[]).filter(a => a.city === 'Chennai' || a.city === 'Madurai' || a.city === 'Ooty');
+    
+    return (
+      <div>
+        <div className="w-full mb-12">
+          <Carousel className="w-full" opts={{ loop: true }}>
+            <CarouselContent>
+              {tnCarouselImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative aspect-[16/7]">
+                    <Image 
+                      src={image.src} 
+                      alt={image.caption} 
+                      fill 
+                      className="object-cover"
+                      data-ai-hint={image['data-ai-hint']}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+          </Carousel>
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Tamil Nadu</h1>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Known as the 'Land of Temples', Tamil Nadu is a state rich in history, culture, and natural beauty. From the ancient temples of Madurai and Thanjavur to the scenic hill stations of Ooty and Kodaikanal, and the beautiful coastline of the Bay of Bengal, Tamil Nadu offers a diverse range of experiences.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
+            <Card className="text-center"><CardContent className="p-4"><Calendar className="mx-auto mb-2 h-8 w-8 text-sky-500" /><h3 className="font-semibold">Best Time to Visit</h3><p className="text-sm text-muted-foreground">November to February</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><Clock className="mx-auto mb-2 h-8 w-8 text-green-500" /><h3 className="font-semibold">Ideal Duration</h3><p className="text-sm text-muted-foreground">7-10 Days</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><PackageIcon className="mx-auto mb-2 h-8 w-8 text-orange-500" /><h3 className="font-semibold">Holiday Packages</h3><p className="text-sm text-muted-foreground">View Packages</p></CardContent></Card>
+            <Card className="text-center"><CardContent className="p-4"><HotelIcon className="mx-auto mb-2 h-8 w-8 text-red-500" /><h3 className="font-semibold">Top Hotels</h3><p className="text-sm text-muted-foreground">Find Hotels</p></CardContent></Card>
+          </div>
+
+          <div className="text-center my-16">
+              <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8">Highlights</h2>
+              <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+                  {tnHighlights.map(highlight => (
+                      <div key={highlight.text} className="flex flex-col items-center gap-2">
+                          <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                          <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                      </div>
+                  ))}
+              </div>
+          </div>
+
+          <div className="text-center my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Destinations</h2>
+            <p className="mt-2 text-muted-foreground">From bustling cities to serene hill stations.</p>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8">
+              {tnCities.map(city => (
+                <Link href={`/states/tamil-nadu/cities/${city.cityId}`} key={city.name}>
+                  <Card className="overflow-hidden group relative">
+                    <Image src={city.image} alt={city.caption} width={400} height={500} className="object-cover h-full w-full group-hover:scale-105 transition-transform duration-300" data-ai-hint={city.caption} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <h3 className="absolute bottom-4 left-4 font-headline text-2xl font-bold text-white">{city.name}</h3>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Tamil Nadu</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {tnAttractions.map(attraction => (
+                 <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                    <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-40 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                        <CardContent className="p-4">
+                            <h3 className="font-bold text-lg">{attraction.name}</h3>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
+                            <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{attraction.description}</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="my-16">
+            <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">
+              Top Hotels in Tamil Nadu
+            </h2>
+            {stateHotels.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {stateHotels.map((hotel) => (
+                  <HotelCard key={hotel.hotelId} hotel={hotel} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this state yet.</h3>
+                <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (stateId === 'west-bengal') {
     const wbCarouselImages = [

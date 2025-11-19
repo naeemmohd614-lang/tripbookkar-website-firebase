@@ -790,6 +790,59 @@ const westBengalAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const tamilNaduAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Marina Beach',
+        city: 'Chennai',
+        cityId: 'chennai',
+        image: { src: 'https://picsum.photos/seed/marina-beach/1200/600', caption: 'marina beach chennai sunset' },
+        description: "India's longest urban beach, stretching for about 13 km. It's a popular spot for locals and tourists to enjoy the sea breeze, food stalls, and evening walks.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Early morning or evening",
+        distances: [ { from: "Chennai Central Railway Station", distance: "5 km" } ],
+        nearbyHotels: ["The Leela Palace Chennai", "Taj Connemara, Chennai"]
+    },
+    {
+        name: 'Meenakshi Amman Temple',
+        city: 'Madurai',
+        cityId: 'madurai',
+        image: { src: 'https://picsum.photos/seed/meenakshi-temple/1200/600', caption: 'meenakshi amman temple madurai' },
+        description: "A historic Hindu temple dedicated to Goddess Meenakshi. It's renowned for its stunning Dravidian architecture, with towering gopurams (gateway towers) covered in colorful figures.",
+        timing: "5:00 AM - 12:30 PM, 4:00 PM - 9:30 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Madurai Airport", distance: "12 km" } ],
+        notes: ["A strict dress code is enforced; legs and shoulders must be covered.","Electronic gadgets are not allowed inside."],
+        nearbyHotels: ["Heritage Madurai"]
+    },
+    {
+        name: 'Vivekananda Rock Memorial',
+        city: 'Kanyakumari',
+        cityId: 'kanyakumari',
+        image: { src: 'https://picsum.photos/seed/vivekananda-rock/1200/600', caption: 'vivekananda rock kanyakumari' },
+        description: "A popular tourist monument in Vavathurai, Kanyakumari, India. It was built in 1970 in honour of Swami Vivekananda who is said to have attained enlightenment on the rock.",
+        timing: "8:00 AM - 4:00 PM",
+        fees: [ { type: "Entry", amount: "₹20" }, { type: "Ferry", amount: "₹50" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Kanyakumari Bus Stand", distance: "1 km" } ],
+        nearbyHotels: []
+    },
+    {
+        name: 'Ooty Lake',
+        city: 'Ooty',
+        cityId: 'ooty',
+        image: { src: 'https://picsum.photos/seed/ooty-lake/1200/600', caption: 'ooty lake boating' },
+        description: "An artificial lake built by John Sullivan in 1824. Boating is the major attraction at the lake. The lake is surrounded by groves of Eucalyptus trees.",
+        timing: "9:00 AM - 6:00 PM",
+        fees: [ { type: "Entry", amount: "₹13" }, { type: "Boating", amount: "Starting from ₹240" } ],
+        bestTimeToVisit: "Throughout the year",
+        distances: [ { from: "Ooty Bus Stand", distance: "2 km" } ],
+        nearbyHotels: ["Sterling Ooty Fern Hill"]
+    }
+];
+
+
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
         ...attraction,
@@ -832,6 +885,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...westBengalAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...tamilNaduAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),

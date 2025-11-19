@@ -247,5 +247,45 @@
     "image": "",
     "description": "A serene hill station known for its colonial architecture, Buddhist monasteries, and panoramic valley views.",
     "totalHotels": 40
+  },
+  {
+    "cityId": "chennai",
+    "stateId": "tamil-nadu",
+    "name": "Chennai",
+    "image": "",
+    "description": "The vibrant capital of Tamil Nadu, known for its beaches, temples, and rich cultural heritage.",
+    "totalHotels": 250
+  },
+  {
+    "cityId": "madurai",
+    "stateId": "tamil-nadu",
+    "name": "Madurai",
+    "image": "",
+    "description": "An ancient city famed for its Meenakshi Amman Temple and rich Tamil culture.",
+    "totalHotels": 80
+  },
+  {
+    "cityId": "kanyakumari",
+    "stateId": "tamil-nadu",
+    "name": "Kanyakumari",
+    "image": "",
+    "description": "The southernmost tip of mainland India, famous for its spectacular sunrises and sunsets.",
+    "totalHotels": 50
+  },
+  {
+    "cityId": "ooty",
+    "stateId": "tamil-nadu",
+    "name": "Ooty",
+    "image": "",
+    "description": "The 'Queen of Hill Stations', known for its rolling hills, tea gardens, and colonial charm.",
+    "totalHotels": 120
+  },
+  {
+    "cityId": "kodaikanal",
+    "stateId": "tamil-nadu",
+    "name": "Kodaikanal",
+    "image": "",
+    "description": "The 'Princess of Hill Stations', famous for its star-shaped lake, forests, and pleasant climate.",
+    "totalHotels": 100
   }
 ]

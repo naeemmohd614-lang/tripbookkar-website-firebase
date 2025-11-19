@@ -594,5 +594,69 @@
     "roomCategories": [{ "name": "Superior Room", "count": 38, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "colonial", "darjeeling"]
+  },
+  {
+    "name": "Taj Connemara, Chennai",
+    "brand": "Taj",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "Binny Rd, Anna Salai, Chennai, Tamil Nadu 600002",
+    "about": "Chennai's oldest hotel, beautifully restored. A unique blend of colonial charm and modern amenities in the heart of the city.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-connemara/1080/720", "caption": "Heritage facade" }
+    ],
+    "roomCategories": [{ "name": "Heritage Room", "count": 147, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "chennai", "luxury"]
+  },
+  {
+    "name": "Heritage Madurai",
+    "brand": "Heritage",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "address": "11, Melakkal Rd, Kochadai, Madurai, Tamil Nadu 625016",
+    "about": "Designed by the famed architect Geoffrey Bawa, this resort offers a unique blend of history and luxury, with temple-inspired design elements.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/heritage-madurai/1080/720", "caption": "Temple-style pool" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Club", "count": 72, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "resort", "madurai"]
+  },
+  {
+    "name": "Sterling Ooty Fern Hill",
+    "brand": "Sterling",
+    "city": "Ooty",
+    "state": "Tamil Nadu",
+    "address": "No. 73, Kundah House Road, Fern Hill, Ooty, Tamil Nadu 643004",
+    "about": "Perched on a hilltop, this resort offers panoramic views of the Nilgiri mountains and valleys. A perfect retreat for nature lovers.",
+    "basePrice": 7000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/sterling-ooty/1080/720", "caption": "View from the resort" }
+    ],
+    "roomCategories": [{ "name": "Classic Room", "count": 175, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
+    "tags": ["mountain view", "ooty", "resort"]
+  },
+  {
+    "name": "The Carlton Kodaikanal",
+    "brand": "Carlton",
+    "city": "Kodaikanal",
+    "state": "Tamil Nadu",
+    "address": "Lake Rd, Kodaikanal, Tamil Nadu 624101",
+    "about": "The only 5-star hotel in Kodaikanal located on the banks of the scenic Kodai Lake. It offers colonial charm and a range of activities.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/carlton-kodai/1080/720", "caption": "Hotel overlooking Kodai Lake" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 91, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["lake view", "kodaikanal", "luxury"]
   }
 ]
