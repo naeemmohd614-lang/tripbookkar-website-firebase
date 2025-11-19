@@ -351,5 +351,13 @@
     "image": "",
     "description": "The 'Queen of Satpura', a serene hill station with waterfalls, caves, and viewpoints.",
     "totalHotels": 50
+  },
+  {
+    "cityId": "mandu",
+    "stateId": "madhya-pradesh",
+    "name": "Mandu",
+    "image": "",
+    "description": "The city of joy, known for its fine Afghan architecture and historic fort.",
+    "totalHotels": 20
   }
 ]

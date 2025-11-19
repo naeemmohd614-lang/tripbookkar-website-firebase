@@ -4,6 +4,7 @@
 
 
 
+
 'use client';
 import { cities, hotels, states, attractions } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
@@ -2296,6 +2297,241 @@ export default function CityPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
                   </div>
                 }
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  // Madhya Pradesh Cities
+  if (cityId === 'bhopal') {
+    const heroImage = { src: 'https://picsum.photos/seed/bhopal-hero/1920/600', caption: 'bhopal upper lake' };
+    const highlights = [ { icon: Waves, text: 'City of Lakes', color: 'text-sky-500' }, { icon: Landmark, text: 'Historical Mosques', color: 'text-green-500' }, { icon: Leaf, text: 'Greenest City', color: 'text-teal-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'bhopal');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Upper Lake, Bhopal" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Bhopal</h1>
+                    <p className="text-lg text-gray-200 mt-2">The City of Lakes</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Bhopal</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Bhopal, the capital of Madhya Pradesh, is known as the 'City of Lakes' for its various natural and artificial lakes. It's a city that beautifully blends scenic beauty, history, and modern urban planning.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Bhopal</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'indore') {
+    const heroImage = { src: 'https://picsum.photos/seed/indore-hero/1920/600', caption: 'rajwada palace indore' };
+    const highlights = [ { icon: Utensils, text: 'Street Food Capital', color: 'text-red-500' }, { icon: Landmark, text: 'Historical Palaces', color: 'text-amber-600' }, { icon: ShoppingBag, text: 'Vibrant Markets', color: 'text-sky-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'indore');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Rajwada Palace, Indore" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Indore</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Commercial Capital of MP</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Indore</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Indore, the largest city in Madhya Pradesh, is a bustling hub of commerce and culture. Famous for its vibrant street food at Sarafa Bazaar, majestic Rajwada Palace, and lively markets, Indore is a city that never sleeps.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Indore</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'gwalior') {
+    const heroImage = { src: 'https://picsum.photos/seed/gwalior-hero/1920/600', caption: 'gwalior fort' };
+    const highlights = [ { icon: Castle, text: 'Majestic Fort', color: 'text-amber-600' }, { icon: Music, text: 'City of Music', color: 'text-red-500' }, { icon: Landmark, text: 'Royal Palaces', color: 'text-sky-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'gwalior');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Gwalior Fort" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Gwalior</h1>
+                    <p className="text-lg text-gray-200 mt-2">A City Steeped in History</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Gwalior</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Gwalior is a historic city known for its magnificent hilltop fort, often described as 'the pearl amongst the fortresses of Hind'. It's a city rich in musical heritage and royal history, with grand palaces and ancient temples.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Gwalior</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'khajuraho') {
+    const heroImage = { src: 'https://picsum.photos/seed/khajuraho-hero/1920/600', caption: 'khajuraho temple sculpture' };
+    const highlights = [ { icon: Landmark, text: 'UNESCO Temples', color: 'text-amber-600' }, { icon: Paintbrush, text: 'Erotic Sculptures', color: 'text-red-500' }, { icon: Hand, text: 'Spiritual Heritage', color: 'text-sky-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'khajuraho');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Khajuraho Temples" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Khajuraho</h1>
+                    <p className="text-lg text-gray-200 mt-2">A Symphony in Stone</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Khajuraho</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Famous for its stunning temples adorned with intricate and erotic sculptures, Khajuraho is a UNESCO World Heritage site that showcases a masterpiece of Indian art and architecture. A testament to a rich cultural past.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Khajuraho</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+  
+  if (cityId === 'pachmarhi') {
+    const heroImage = { src: 'https://picsum.photos/seed/pachmarhi-hero/1920/600', caption: 'pachmarhi hills' };
+    const highlights = [ { icon: Leaf, text: 'Satpura Queen', color: 'text-green-500' }, { icon: Droplets, text: 'Waterfalls', color: 'text-sky-500' }, { icon: Hand, text: 'Ancient Caves', color: 'text-orange-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'pachmarhi');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Pachmarhi Hills" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Pachmarhi</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Queen of Satpura</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Pachmarhi</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Pachmarhi, the only hill station in Madhya Pradesh, is a serene destination known for its lush greenery, cascading waterfalls, and ancient Pandava caves. It's a perfect escape for nature lovers and history buffs.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Pachmarhi</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link>))}</div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'mandu') {
+    const heroImage = { src: 'https://picsum.photos/seed/mandu-hero/1920/600', caption: 'jahaz mahal mandu' };
+    const highlights = [ { icon: Landmark, text: 'Afghan Architecture', color: 'text-amber-600' }, { icon: HeartPulse, text: 'Romantic History', color: 'text-red-500' }, { icon: Castle, text: 'Historic Fort', color: 'text-sky-500' }];
+    const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'mandu');
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={heroImage.src} alt="Jahaz Mahal, Mandu" fill className="object-cover" priority data-ai-hint={heroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Mandu</h1>
+                    <p className="text-lg text-gray-200 mt-2">The City of Joy</p>
+                </div>
+            </div>
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12"><Button asChild variant="outline" size="sm"><Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link></Button></div>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Mandu</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">Mandu, or Mandavgarh, is an ancient fort city celebrated for its fine Afghan architecture and the legendary love story of Prince Baz Bahadur and Rani Roopmati. Perched on a hilltop, this city is dotted with magnificent palaces, mosques, and tombs.</p>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+                        {highlights.map(highlight => ( <div key={highlight.text} className="flex flex-col items-center text-center gap-3"><div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div><p className="font-semibold text-muted-foreground">{highlight.text}</p></div> ))}
+                    </div>
+                </div>
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Mandu</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
+                </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
                     {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}

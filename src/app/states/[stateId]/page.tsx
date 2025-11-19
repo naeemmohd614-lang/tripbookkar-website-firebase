@@ -48,7 +48,7 @@ export default function StatePage() {
         { icon: Hand, text: 'Spiritual Sites', color: 'text-sky-500' },
     ];
     
-    const mpCities = ['Bhopal', 'Indore', 'Gwalior', 'Khajuraho', 'Pachmarhi'].map(cityName => {
+    const mpCities = ['Bhopal', 'Indore', 'Gwalior', 'Khajuraho', 'Pachmarhi', 'Mandu'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
       return {
@@ -59,7 +59,7 @@ export default function StatePage() {
       };
     });
 
-    const mpAttractions = (attractions as Attraction[]).filter(a => a.city === 'Khajuraho' || a.city === 'Bandhavgarh' || a.city === 'Pachmarhi');
+    const mpAttractions = (attractions as Attraction[]).filter(a => a.city === 'Khajuraho' || a.city === 'Bandhavgarh' || a.city === 'Pachmarhi' || a.city === 'Gwalior' || a.city === 'Bhopal' || a.city === 'Mandu');
     
     return (
       <div>
@@ -115,7 +115,7 @@ export default function StatePage() {
           <div className="text-center my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Destinations</h2>
             <p className="mt-2 text-muted-foreground">Discover the diverse landscapes and cities of Madhya Pradesh.</p>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-8">
               {mpCities.map(city => (
                 <Link href={`/states/madhya-pradesh/cities/${city.cityId}`} key={city.name}>
                   <Card className="overflow-hidden group relative">
@@ -990,7 +990,7 @@ export default function StatePage() {
       };
     });
 
-    const upAttractions = (attractions as Attraction[]).filter(a => a.city === 'Agra' || a.city === 'Varanasi');
+    const upAttractions = (attractions as Attraction[]).filter(a => a.city === 'Agra' || a.city === 'Varanasi' || a.city === 'Lucknow' || a.city === 'Prayagraj' || a.city === 'Mathura');
     
     return (
       <div>
