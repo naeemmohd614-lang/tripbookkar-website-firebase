@@ -1,41 +1,19 @@
 
 [
   {
-    "name": "The Ritz-Carlton, Bangalore",
+    "name": "The Ritz-Carlton Bangalore",
     "brand": "The Ritz-Carlton",
     "city": "Bengaluru",
     "state": "Karnataka",
     "address": "99, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025",
-    "about": "Experience unparalleled luxury with sophisticated interiors, a serene spa, and award-winning dining in the heart of the city.",
+    "about": "The Ritz-Carlton, Bangalore, located in the heart of the city, offers luxurious accommodations, fine dining, and a tranquil spa. Experience legendary service in a sophisticated setting.",
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
       { "src": "https://picsum.photos/seed/ritz-bangalore-1/1080/720", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
       { "src": "https://picsum.photos/seed/ritz-bangalore-2/1080/720", "caption": "Lobby area" }
     ],
-    "roomCategories": [
-      { "name": "Deluxe Rooms", "count": 200, "size": "450 sqft" },
-      { "name": "Executive Suites", "count": 50, "size": "800 sqft" },
-      { "name": "The Ritz-Carlton Suite", "count": 1, "size": "3000 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "The Lantern", "type": "Chinese" },
-      { "name": "Riwaz", "type": "North Indian" },
-      { "name": "The Market", "type": "All-day dining" }
-    ],
-    "experiencesAndActivities": [
-      "The Ritz-Carlton Spa",
-      "Rooftop Pool",
-      "State-of-the-art Fitness Center"
-    ],
-    "weddingVenues": [
-      "Grand Ballroom",
-      "Multiple boardrooms",
-      "Outdoor event spaces"
-    ],
-    "distance": {
-      "Kempegowda International Airport": "35 km"
-    },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 100, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "downtown"]
   },
@@ -52,16 +30,7 @@
       { "src": "https://picsum.photos/seed/jw-delhi-1/1080/720", "caption": "Hotel exterior at Aerocity" },
       { "src": "https://picsum.photos/seed/jw-delhi-2/1080/720", "caption": "Swimming pool area" }
     ],
-    "roomCategories": [
-      { "name": "Deluxe Room", "count": 250, "size": "452 sqft" },
-      { "name": "Executive Club Level", "count": 100, "size": "452 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "K3", "type": "International Buffet" },
-      { "name": "Delhi Baking Company", "type": "Cafe & Bakery" }
-    ],
-    "experiencesAndActivities": [ "Quan Spa", "Fitness Center", "Outdoor Heated Pool" ],
-    "weddingVenues": [ "Grand Crystal Ballroom" ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 250, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "luxury", "new delhi"]
   },
@@ -78,16 +47,7 @@
       { "src": "https://picsum.photos/seed/marriott-goa-1/1080/720", "caption": "View of the resort from the bay" },
       { "src": "https://picsum.photos/seed/marriott-goa-2/1080/720", "caption": "Outdoor pool and garden" }
     ],
-    "roomCategories": [
-      { "name": "Garden View Room", "count": 180, "size": "388 sqft" },
-      { "name": "Bay View Room", "count": 90, "size": "388 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Waterfront Terrace & Bar", "type": "All-Day Dining" },
-      { "name": "Wan Hao", "type": "Chinese" }
-    ],
-    "experiencesAndActivities": [ "Casino Carnival", "Quan Spa", "Yoga Sessions" ],
-    "weddingVenues": [ "Grand Ballroom", "Lawn Venues" ],
+    "roomCategories": [{ "name": "Garden View Room", "count": 180, "size": "388 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach resort", "goa", "casino"]
   },
@@ -104,16 +64,7 @@
       { "src": "https://picsum.photos/seed/jw-mumbai-1/1080/720", "caption": "Hotel overlooking Juhu beach" },
       { "src": "https://picsum.photos/seed/jw-mumbai-2/1080/720", "caption": "Lotus pond at the hotel" }
     ],
-    "roomCategories": [
-      { "name": "Deluxe Sea View Room", "count": 200, "size": "431 sqft" },
-      { "name": "Juhu Beach Suite", "count": 20, "size": "861 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Lotus Cafe", "type": "Multi-Cuisine" },
-      { "name": "Dashanzi", "type": "Asian" }
-    ],
-    "experiencesAndActivities": [ "Quan Spa", "Saltwater Pool", "Beach Access" ],
-    "weddingVenues": [ "Sagar Ocean-Facing Ballroom" ],
+    "roomCategories": [{ "name": "Deluxe Sea View Room", "count": 200, "size": "431 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["sea view", "luxury", "mumbai"]
   },
@@ -130,16 +81,7 @@
       { "src": "https://picsum.photos/seed/marriott-jaipur-1/1080/720", "caption": "Front facade of Jaipur Marriott" },
       { "src": "https://picsum.photos/seed/marriott-jaipur-2/1080/720", "caption": "Grand lobby interior" }
     ],
-    "roomCategories": [
-      { "name": "Deluxe Room", "count": 300, "size": "452 sqft" },
-      { "name": "Terrace Suite", "count": 15, "size": "900 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Okra", "type": "All-Day Dining" },
-      { "name": "Saffron", "type": "Indian" }
-    ],
-    "experiencesAndActivities": [ "Quan Spa", "Rooftop Pool", "Cooking Classes" ],
-    "weddingVenues": [ "Amber Ballroom", "Outdoor Lawns" ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 300, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["jaipur", "wedding hotel", "modern"]
   },
@@ -156,17 +98,141 @@
       { "src": "https://picsum.photos/seed/westin-pune-1/1080/720", "caption": "Hotel exterior and landscape" },
       { "src": "https://picsum.photos/seed/westin-pune-2/1080/720", "caption": "Rooftop lounge view" }
     ],
-    "roomCategories": [
-      { "name": "Premium Room", "count": 250, "size": "430 sqft" },
-      { "name": "Club Suite", "count": 25, "size": "860 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "The Market", "type": "Asian" },
-      { "name": "House of Medici", "type": "Lounge & Nightclub" }
-    ],
-    "experiencesAndActivities": [ "Heavenly Spa by Westin", "WestinWORKOUT Fitness Studio", "Rooftop Pool" ],
-    "weddingVenues": [ "Grand Ballroom" ],
+    "roomCategories": [{ "name": "Premium Room", "count": 250, "size": "430 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "pune", "pet friendly"]
+  },
+  {
+    "name": "Renaissance Lucknow Hotel",
+    "brand": "Marriott",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "address": "Vipin Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+    "about": "A luxury hotel in the heart of Lucknow, offering stunning panoramic views of the city skyline from its rooftop infinity pool. Experience modern design and exceptional service.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/renaissance-lucknow-1/1080/720", "caption": "Rooftop infinity pool" },
+      { "src": "https://picsum.photos/seed/renaissance-lucknow-2/1080/720", "caption": "Hotel exterior at night" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 112, "size": "377 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "city view", "lucknow"]
+  },
+  {
+    "name": "Four Points by Sheraton Dehradun",
+    "brand": "Marriott",
+    "city": "Dehradun",
+    "state": "Uttarakhand",
+    "address": "152/4, Jakhan, Rajpur Road, Dehradun, Uttarakhand 248001",
+    "about": "Located on the main Rajpur Road, this hotel offers a convenient stay for both business and leisure travelers. Enjoy modern amenities, comfortable rooms, and easy access to the city's attractions.",
+    "basePrice": 8000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/fourpoints-dehradun-1/1080/720", "caption": "Hotel exterior" },
+      { "src": "https://picsum.photos/seed/fourpoints-dehradun-2/1080/720", "caption": "Modern hotel lobby" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "dehradun", "city hotel"]
+  },
+  {
+    "name": "JW Marriott Mussoorie Walnut Grove Resort & Spa",
+    "brand": "JW Marriott",
+    "city": "Mussoorie",
+    "state": "Uttarakhand",
+    "address": "Village - Siya, Kempty Fall Road, Tehri Garhwal, Mussoorie, Uttarakhand 248179",
+    "about": "Nestled amidst the serene Himalayan ranges, this resort is a perfect blend of luxury and nature. It offers stunning valley views, a range of recreational activities, and an award-winning spa.",
+    "basePrice": 28000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-mussoorie-1/1080/720", "caption": "Resort with valley view" },
+      { "src": "https://picsum.photos/seed/jw-mussoorie-2/1080/720", "caption": "Indoor swimming pool" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "valley view", "mussoorie", "resort"]
+  },
+  {
+    "name": "The Westin Resort & Spa, Himalayas",
+    "brand": "The Westin",
+    "city": "Rishikesh",
+    "state": "Uttarakhand",
+    "address": "Khasra No. 605, Narendranagar, Rishikesh, Uttarakhand, 249175",
+    "about": "Nestled in the tranquil Himalayan foothills, this resort offers a rejuvenating escape with its wellness programs, serene atmosphere, and stunning views of the valley.",
+    "basePrice": 22000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/westin-himalayas-1/1080/720", "caption": "Resort nestled in the hills" },
+      { "src": "https://picsum.photos/seed/westin-himalayas-2/1080/720", "caption": "Infinity pool overlooking the valley" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "luxury", "mountain view", "rishikesh"]
+  },
+  {
+    "name": "Courtyard by Marriott Madurai",
+    "brand": "Marriott",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "address": "No 168, Alagar Kovil Main Road, Madurai, Tamil Nadu 625002",
+    "about": "A modern hotel offering smart, intuitive service and comfortable accommodations. It's located near the city center, providing easy access to the Meenakshi Amman Temple.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/courtyard-madurai-1/1080/720", "caption": "Hotel exterior" },
+      { "src": "https://picsum.photos/seed/courtyard-madurai-2/1080/720", "caption": "Modern room interior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "323 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["modern", "business", "madurai"]
+  },
+  {
+    "name": "Indore Marriott Hotel",
+    "brand": "Marriott",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "address": "H-2, Scheme No 54, Meghdoot Garden, Vijay Nagar, Indore, Madhya Pradesh 452010",
+    "about": "A 5-star hotel known for its sophisticated style and intuitive service. It offers a resort-like feel with its expansive pool area and multiple dining venues.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/marriott-indore/1080/720", "caption": "Indore Marriott Hotel poolside" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 218, "size": "344 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "indore"]
+  },
+  {
+    "name": "Courtyard by Marriott, Ahmedabad",
+    "brand": "Marriott",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "Ramdev Nagar Cross Road, Satellite Road, Ahmedabad, Gujarat 380015",
+    "about": "A contemporary hotel in the heart of Ahmedabad's commercial district, offering stylish rooms, a rooftop pool, and excellent business facilities.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/courtyard-ahmedabad-1/1080/720", "caption": "Hotel exterior at night" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "323 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "ahmedabad"]
+  },
+  {
+    "name": "Surat Marriott Hotel",
+    "brand": "Marriott",
+    "city": "Surat",
+    "state": "Gujarat",
+    "address": "Ambika Niketan Road, Athwalines, Surat, Gujarat 395007",
+    "about": "Located on the banks of the Tapi River, Surat Marriott Hotel offers modern luxury with spacious rooms, multiple dining options, and extensive event spaces, catering to both business and leisure travelers.",
+    "basePrice": 9000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/marriott-surat-1/1080/720", "caption": "Surat Marriott Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 209, "size": "344 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "surat"]
   }
 ]

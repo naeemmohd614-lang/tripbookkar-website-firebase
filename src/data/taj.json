@@ -27,107 +27,170 @@
     "tags": ["heritage", "romantic", "lake view", "udaipur"]
   },
   {
-    "name": "The Taj Mahal Palace, Mumbai",
+    "name": "Taj Ganges, Varanasi",
     "brand": "Taj",
-    "city": "Mumbai",
-    "state": "Maharashtra",
-    "address": "Apollo Bandar, Colaba, Mumbai, Maharashtra 400001",
-    "about": "The iconic sea-facing landmark in Colaba, south Mumbai. It is the city's first harbour landmark and a world leader in hospitality.",
-    "basePrice": 28000,
-    "rating": 4.8,
-    "images": [
-      { "src": "https://picsum.photos/seed/taj-mumbai-1/1080/720", "caption": "The Taj Mahal Palace hotel exterior" },
-      { "src": "https://picsum.photos/seed/taj-mumbai-2/1080/720", "caption": "Grand staircase inside the hotel" }
-    ],
-    "roomCategories": [
-      { "name": "Luxury Grande Room", "count": 285, "size": "500 sqft" },
-      { "name": "Taj Club Room", "count": 100, "size": "550 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Wasabi by Morimoto", "type": "Japanese" },
-      { "name": "Golden Dragon", "type": "Sichuan Chinese" }
-    ],
-    "experiencesAndActivities": [ "Jiva Spa", "Art Gallery Tour", "Luxury Yacht Experience" ],
-    "weddingVenues": [ "The Ballroom", "Crystal Room" ],
-    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["iconic", "sea view", "luxury", "mumbai"]
-  },
-  {
-    "name": "Rambagh Palace, Jaipur",
-    "brand": "Taj",
-    "city": "Jaipur",
-    "state": "Rajasthan",
-    "address": "Bhawani Singh Rd, Rambagh, Jaipur, Rajasthan 302005",
-    "about": "Originally built in 1835, Rambagh Palace has stepped gracefully through many royal transitions. Today, it's a jewel in the Taj's crown, offering a glimpse into the lifestyle of Jaipur's royalty.",
-    "basePrice": 40000,
-    "rating": 4.9,
-    "images": [
-      { "src": "https://picsum.photos/seed/taj-jaipur-1/1080/720", "caption": "Rambagh Palace exterior and gardens" },
-      { "src": "https://picsum.photos/seed/taj-jaipur-2/1080/720", "caption": "Royal dining hall" }
-    ],
-    "roomCategories": [
-      { "name": "Palace Room", "count": 78, "size": "475 sqft" },
-      { "name": "Historical Suite", "count": 20, "size": "750 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Suvarna Mahal", "type": "Royal Indian" },
-      { "name": "Steam", "type": "Lounge Bar" }
-    ],
-    "experiencesAndActivities": [ "Jiva Grande Spa", "Vintage Car Ride", "Peacock Feeding" ],
-    "weddingVenues": [ "Jaigarh Hall", "Mubarak Mahal" ],
-    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "palace", "luxury", "jaipur"]
-  },
-  {
-    "name": "Taj Falaknuma Palace, Hyderabad",
-    "brand": "Taj",
-    "city": "Hyderabad",
-    "state": "Telangana",
-    "address": "Engine Bowli, Falaknuma, Hyderabad, Telangana 500053",
-    "about": "Perched 2,000 feet above Hyderabad, Taj Falaknuma Palace is the former palace of the Nizam, rumored to be the richest man in the world at one time. Experience the Nizams' hospitality and grandeur.",
-    "basePrice": 42000,
-    "rating": 4.9,
-    "images": [
-      { "src": "https://picsum.photos/seed/taj-hyderabad-1/1080/720", "caption": "Taj Falaknuma Palace exterior" },
-      { "src": "https://picsum.photos/seed/taj-hyderabad-2/1080/720", "caption": "The grand 101-seater dining hall" }
-    ],
-    "roomCategories": [
-      { "name": "Palace Room", "count": 60, "size": "550 sqft" },
-      { "name": "Nizam Suite", "count": 1, "size": "1938 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Celeste", "type": "Italian & Mediterranean" },
-      { "name": "Adaa", "type": "Hyderabadi" }
-    ],
-    "experiencesAndActivities": [ "Jiva Spa", "Carriage Ride Arrival", "Palace History Tour" ],
-    "weddingVenues": [ "101 Dining Hall", "Durbar Hall" ],
-    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "heritage", "luxury", "hyderabad"]
-  },
-  {
-    "name": "Taj Exotica Resort & Spa, Goa",
-    "brand": "Taj",
-    "city": "Benaulim",
-    "state": "Goa",
-    "address": "Calwaddo, Benaulim, Salcete, Goa 403716",
-    "about": "A Mediterranean-inspired resort sprawling over 56 acres of lush greenery, offering a serene refuge of calm and luxury. It is located on the southwest coast of Goa, overlooking the Arabian Sea.",
-    "basePrice": 20000,
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "Nadesar Palace Grounds, Varanasi, Uttar Pradesh 221002",
+    "about": "Set amidst 40 acres of lush greenery, Taj Ganges offers a tranquil escape in the ancient city of Varanasi. Enjoy modern comforts, a large swimming pool, and serene gardens.",
+    "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/taj-goa-1/1080/720", "caption": "Aerial view of Taj Exotica Goa" },
-      { "src": "https://picsum.photos/seed/taj-goa-2/1080/720", "caption": "Private pool villa" }
+      { "src": "https://picsum.photos/seed/taj-ganges-1/1080/720", "caption": "Hotel exterior and gardens" },
+      { "src": "https://picsum.photos/seed/taj-ganges-2/1080/720", "caption": "Poolside view" }
     ],
-    "roomCategories": [
-      { "name": "Garden Villa", "count": 140, "size": "612 sqft" },
-      { "name": "Sea View Villa", "count": 50, "size": "612 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Miguel Arcanjo", "type": "Goan & Portuguese" },
-      { "name": "Lobster Shack", "type": "Seafood Grill" }
-    ],
-    "experiencesAndActivities": [ "Jiva Spa", "Golf Course", "Water Sports" ],
-    "weddingVenues": [ "Seaside Lawns", "Sala Grande Ballroom" ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 130, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "goa", "luxury", "family friendly"]
+    "tags": ["luxury", "resort", "varanasi"]
+  },
+  {
+    "name": "Taj Hotel & Convention Centre, Agra",
+    "brand": "Taj",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "Taj East Gate Rd, Taj Nagari, Phase-1, Agra, Uttar Pradesh 282001",
+    "about": "A contemporary hotel offering views of the Taj Mahal from select rooms. It features a stunning rooftop infinity pool, multiple dining options, and is a short walk from the monument.",
+    "basePrice": 13000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-agra-1/1080/720", "caption": "Rooftop pool with Taj Mahal view" },
+      { "src": "https://picsum.photos/seed/taj-agra-2/1080/720", "caption": "Modern hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 239, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["taj mahal view", "modern", "luxury", "agra"]
+  },
+  {
+    "name": "Taj Nadesar Palace, Varanasi",
+    "brand": "Taj",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "Nadesar Palace Grounds, Varanasi, Uttar Pradesh 221002",
+    "about": "A beautifully restored 19th-century palace that has hosted royalty and statesmen. Set amidst lush gardens, it offers an atmosphere of serene luxury and personalized service.",
+    "basePrice": 35000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/nadesar-varanasi-1/1080/720", "caption": "Nadesar Palace exterior" },
+      { "src": "https://picsum.photos/seed/nadesar-varanasi-2/1080/720", "caption": "Royal suite bedroom" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 10, "size": "600 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "palace", "luxury", "varanasi"]
+  },
+  {
+    "name": "Taj Mahal, Lucknow",
+    "brand": "Taj",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "address": "Vipin Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+    "about": "Set amidst 20 acres of landscaped gardens, this majestic hotel offers a tranquil retreat in the city of Nawabs. Its architecture is inspired by Mughal designs.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-lucknow-1/1080/720", "caption": "Hotel exterior with gardens" },
+      { "src": "https://picsum.photos/seed/taj-lucknow-2/1080/720", "caption": "Elegant lobby interior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 110, "size": "380 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "lucknow"]
+  },
+  {
+    "name": "Taj Rishikesh Resort & Spa, Uttarakhand",
+    "brand": "Taj",
+    "city": "Rishikesh",
+    "state": "Uttarakhand",
+    "address": "Singthali, Rishikesh, Uttarakhand 249192",
+    "about": "A serene hideaway on the banks of the river Ganges, this resort offers a spiritual and wellness retreat. With its Himalayan architecture and spectacular views, it's a perfect escape.",
+    "basePrice": 30000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-rishikesh-1/1080/720", "caption": "View of Ganges from the resort" },
+      { "src": "https://picsum.photos/seed/taj-rishikesh-2/1080/720", "caption": "Yoga session by the river" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 79, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "spiritual", "river view", "rishikesh", "luxury"]
+  },
+   {
+    "name": "Vivanta Dal View, Srinagar",
+    "brand": "Vivanta",
+    "city": "Srinagar",
+    "state": "Jammu and Kashmir",
+    "address": "Kralsangri, Brein, Srinagar, Jammu and Kashmir 191121",
+    "about": "Perched on a hilltop, Vivanta Dal View offers panoramic views of the Dal Lake and the surrounding mountains. It's a modern hotel with a touch of Kashmiri charm.",
+    "basePrice": 18000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/vivanta-srinagar-1/1080/720", "caption": "Hotel exterior with Dal Lake view" },
+      { "src": "https://picsum.photos/seed/vivanta-srinagar-2/1080/720", "caption": "Infinity pool overlooking the lake" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 82, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["lake view", "srinagar", "modern", "luxury"]
+  },
+  {
+    "name": "Taj Connemara, Chennai",
+    "brand": "Taj",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "Binny Rd, Anna Salai, Chennai, Tamil Nadu 600002",
+    "about": "Chennai's oldest hotel, beautifully restored. A unique blend of colonial charm and modern amenities in the heart of the city.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-connemara/1080/720", "caption": "Heritage facade" }
+    ],
+    "roomCategories": [{ "name": "Heritage Room", "count": 147, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "chennai", "luxury"]
+  },
+  {
+    "name": "Taj Savoy Hotel, Ooty",
+    "brand": "Taj",
+    "city": "Ooty",
+    "state": "Tamil Nadu",
+    "address": "77, Sylks Rd, Ooty, Tamil Nadu 643001",
+    "about": "A colonial-style heritage hotel that dates back to 1829. Set amidst rolling hills and landscaped gardens, it offers a charming and tranquil escape in Ooty.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-ooty-1/1080/720", "caption": "Colonial facade of the hotel" },
+      { "src": "https://picsum.photos/seed/taj-ooty-2/1080/720", "caption": "Garden and lawn area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 40, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "colonial", "ooty"]
+  },
+   {
+    "name": "Taj Usha Kiran Palace, Gwalior",
+    "brand": "Taj",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "address": "Jayendraganj, Lashkar, Gwalior, Madhya Pradesh 474009",
+    "about": "A 120-year-old palace, this heritage hotel offers a regal experience with its Victorian architecture, antique furnishings, and royal suites. Indulge in the Jiva Spa and royal cuisine.",
+    "basePrice": 14000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-gwalior/1080/720", "caption": "Exterior of Taj Usha Kiran Palace" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 40, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "palace", "luxury", "gwalior"]
+  },
+  {
+    "name": "Taj Lakefront, Bhopal",
+    "brand": "Taj",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "address": "Link Road No 3, Prempura, Bhopal, Madhya Pradesh 462003",
+    "about": "A luxury hotel offering stunning views of the Upper Lake. With its contemporary design and signature Taj hospitality, it's a perfect destination for both business and leisure.",
+    "basePrice": 12000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-bhopal/1080/720", "caption": "Taj Lakefront hotel with lake view" }
+    ],
+    "roomCategories": [{ "name": "Luxury Lake View Room", "count": 152, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "lake view", "bhopal"]
   }
 ]

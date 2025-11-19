@@ -13,18 +13,58 @@
       { "src": "https://picsum.photos/seed/hyatt-mumbai-1/1080/720", "caption": "Grand Hyatt Mumbai exterior facade" },
       { "src": "https://picsum.photos/seed/hyatt-mumbai-2/1080/720", "caption": "Spacious hotel lobby and lounge" }
     ],
-    "roomCategories": [
-      { "name": "Grand King Room", "count": 547, "size": "430 sqft" },
-      { "name": "Grand Suite", "count": 50, "size": "860 sqft" }
-    ],
-    "diningExperiences": [
-      { "name": "Celini", "type": "Italian" },
-      { "name": "China House Restaurant", "type": "Sichuan" },
-      { "name": "Soma", "type": "Indian" }
-    ],
-    "experiencesAndActivities": [ "Club Oasis Spa & Fitness Centre", "Outdoor swimming pools", "Art tour" ],
-    "weddingVenues": [ "Grand Ballroom", "Mahogany", "Tamarind" ],
+    "roomCategories": [{ "name": "Grand King Room", "count": 547, "size": "430 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "mumbai", "luxury", "pet friendly"]
+  },
+  {
+    "name": "Hyatt Regency Dharamshala Resort",
+    "brand": "Hyatt",
+    "city": "Dharamshala",
+    "state": "Himachal Pradesh",
+    "address": "Village Dharamkot, McLeod Ganj, Dharamshala, Himachal Pradesh 176219",
+    "about": "Nestled in the scenic Dhauladhar range, this resort offers a tranquil retreat with luxurious rooms, a spa, and stunning mountain views. It's a perfect base to explore the spiritual and natural beauty of Dharamshala.",
+    "basePrice": 18000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-dharamshala-1/1080/720", "caption": "Resort view with mountains" },
+      { "src": "https://picsum.photos/seed/hyatt-dharamshala-2/1080/720", "caption": "Elegant room interior" }
+    ],
+    "roomCategories": [{ "name": "Regency King Room", "count": 89, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "mountain view", "dharamshala", "resort"]
+  },
+  {
+    "name": "Hyatt Regency Dehradun",
+    "brand": "Hyatt",
+    "city": "Dehradun",
+    "state": "Uttarakhand",
+    "address": "Mussoorie Rd, Salan Gaon, Dehradun, Uttarakhand 248009",
+    "about": "Situated at the foothills of the Himalayas, this hotel offers a scenic and refreshing experience. It's an ideal destination for both leisure and business travelers, with modern amenities and large event spaces.",
+    "basePrice": 16000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-dehradun-1/1080/720", "caption": "Hotel exterior view" },
+      { "src": "https://picsum.photos/seed/hyatt-dehradun-2/1080/720", "caption": "Rooftop pool and lounge" }
+    ],
+    "roomCategories": [{ "name": "King Room with Garden View", "count": 263, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "dehradun", "business"]
+  },
+  {
+    "name": "Hyatt Regency Ahmedabad",
+    "brand": "Hyatt",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "17/A, Ashram Road, Ahmedabad, Gujarat 380014",
+    "about": "Centrally located, this hotel offers easy access to the business district and cultural sites. It features contemporary rooms, diverse dining options, and views of the Sabarmati river.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-ahmedabad-1/1080/720", "caption": "Hyatt Regency Ahmedabad exterior" }
+    ],
+    "roomCategories": [{ "name": "Regency King Room", "count": 210, "size": "387 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "ahmedabad"]
   }
 ]

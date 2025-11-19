@@ -1,0 +1,689 @@
+
+[
+  {
+    "name": "ITC Mughal, Agra",
+    "brand": "ITC",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "Taj Ganj, Agra, Uttar Pradesh 282001",
+    "about": "A tribute to Mughal architecture, this sprawling resort is set amidst 23 acres of lush gardens. It's a recipient of the prestigious Aga Khan Award for its Mughal-inspired design.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-agra-1/1080/720", "caption": "ITC Mughal architecture" },
+      { "src": "https://picsum.photos/seed/itc-agra-2/1080/720", "caption": "Gardens and pool area" }
+    ],
+    "roomCategories": [{ "name": "Mughal Room", "count": 233, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "mughal architecture", "agra"]
+  },
+  {
+    "name": "BrijRama Palace, Varanasi",
+    "brand": "Brij",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "Darbhanga Ghat, Dashashwamedh, Varanasi, Uttar Pradesh 221001",
+    "about": "One of the oldest structures in Varanasi, this palace hotel on the banks of the Ganges offers a unique heritage experience. It features traditional decor and stunning river views.",
+    "basePrice": 25000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/brijrama-1/1080/720", "caption": "BrijRama Palace on the ghats" },
+      { "src": "https://picsum.photos/seed/brijrama-2/1080/720", "caption": "Interior courtyard" }
+    ],
+    "roomCategories": [{ "name": "Varuna Burj", "count": 32, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "ghat view", "spiritual", "varanasi"]
+  },
+  {
+    "name": "Hotel Clarks Shiraz, Agra",
+    "brand": "Clarks",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "54, Taj Rd, Agra Cantt, Agra, Uttar Pradesh 282001",
+    "about": "One of Agra's oldest and most well-known hotels, Clarks Shiraz offers a classic hospitality experience with views of the Taj Mahal from its revolving rooftop restaurant.",
+    "basePrice": 7000,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/clarks-agra-1/1080/720", "caption": "Hotel exterior and lawn" },
+      { "src": "https://picsum.photos/seed/clarks-agra-2/1080/720", "caption": "Revolving restaurant view" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 237, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["family friendly", "agra", "taj mahal view"]
+  },
+  {
+    "name": "The Clarks, Varanasi",
+    "brand": "Clarks",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "The Mall Rd, Cantonment, Varanasi, Uttar Pradesh 221002",
+    "about": "A landmark hotel in the Cantonment area, The Clarks offers a blend of modern amenities and traditional hospitality, providing a comfortable base to explore the ancient city.",
+    "basePrice": 8000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/clarks-varanasi-1/1080/720", "caption": "Hotel exterior and garden" },
+      { "src": "https://picsum.photos/seed/clarks-varanasi-2/1080/720", "caption": "Swimming pool area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 104, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["city hotel", "business", "varanasi"]
+  },
+  {
+    "name": "Lebua Lucknow",
+    "brand": "Lebua",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "address": "19, Sarva Palli, Saraca Estate, The Mall Avenue, Lucknow, Uttar Pradesh 226001",
+    "about": "Housed in a beautifully restored 1936 Art Deco bungalow, Lebua Lucknow offers a unique heritage experience that reflects the city's old-world charm and courtesy.",
+    "basePrice": 9000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/lebua-lucknow-1/1080/720", "caption": "Art Deco facade of the hotel" },
+      { "src": "https://picsum.photos/seed/lebua-lucknow-2/1080/720", "caption": "Courtyard dining area" }
+    ],
+    "roomCategories": [{ "name": "Executive Room", "count": 41, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "boutique", "lucknow"]
+  },
+  {
+    "name": "Hotel Kanha Shyam, Prayagraj",
+    "brand": "Kanha Shyam",
+    "city": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "address": "Civil Lines, Prayagraj, Uttar Pradesh 211001",
+    "about": "A prominent hotel in the heart of Prayagraj, Hotel Kanha Shyam offers modern amenities and comfortable accommodation for pilgrims and business travelers alike.",
+    "basePrice": 5000,
+    "rating": 4.2,
+    "images": [
+      { "src": "https://picsum.photos/seed/kanha-prayagraj-1/1080/720", "caption": "Hotel exterior" },
+      { "src": "https://picsum.photos/seed/kanha-prayagraj-2/1080/720", "caption": "Lobby area" }
+    ],
+    "roomCategories": [{ "name": "Executive Room", "count": 94, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["city hotel", "pilgrimage", "prayagraj"]
+  },
+  {
+    "name": "Nidhivan Sarovar Portico, Vrindavan",
+    "brand": "Sarovar Portico",
+    "city": "Mathura",
+    "state": "Uttar Pradesh",
+    "address": "Khasra No. 797, Gopalgarh Tehra Road, Vrindavan, Mathura, Uttar Pradesh 281121",
+    "about": "Located in the holy town of Vrindavan, this hotel offers a serene and spiritual retreat. It's a modern hotel with traditional hospitality, ideal for pilgrims visiting the temples of Mathura and Vrindavan.",
+    "basePrice": 6000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/nidhivan-vrindavan-1/1080/720", "caption": "Hotel garden area" },
+      { "src": "https://picsum.photos/seed/nidhivan-vrindavan-2/1080/720", "caption": "Restaurant interior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 68, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["pilgrimage", "spiritual", "mathura", "vrindavan"]
+  },
+  {
+    "name": "Manuallaya - The Resort Spa in the Himalayas",
+    "brand": "Manuallaya",
+    "city": "Manali",
+    "state": "Himachal Pradesh",
+    "address": "Sunny Side, Chadiyari, Manali, Himachal Pradesh 175131",
+    "about": "A magnificent resort in Manali with breathtaking views of the snow-capped Himalayas and the Beas river. It combines traditional Himachali architecture with modern luxury.",
+    "basePrice": 12000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/manuallaya-manali-1/1080/720", "caption": "Resort exterior with mountain background" },
+      { "src": "https://picsum.photos/seed/manuallaya-manali-2/1080/720", "caption": "Cozy room interior" }
+    ],
+    "roomCategories": [{ "name": "Garden Room", "count": 55, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "mountain view", "manali"]
+  },
+  {
+    "name": "Fortune Park Dalhousie",
+    "brand": "Fortune",
+    "city": "Dalhousie",
+    "state": "Himachal Pradesh",
+    "address": "Near Gandhi Chowk, Dalhousie, Himachal Pradesh 176304",
+    "about": "Overlooking the picturesque Pir Panjal range, Fortune Park Dalhousie offers a comfortable and elegant stay with modern amenities and warm hospitality, reflecting the charm of the colonial era.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/fortune-dalhousie-1/1080/720", "caption": "Hotel exterior view" },
+      { "src": "https://picsum.photos/seed/fortune-dalhousie-2/1080/720", "caption": "Restaurant with a view" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 57, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "dalhousie", "colonial"]
+  },
+  {
+    "name": "The Naini Retreat, by Leisure Hotels",
+    "brand": "Leisure Hotels",
+    "city": "Nainital",
+    "state": "Uttarakhand",
+    "address": "Ayarpatta, Mallital, Nainital, Uttarakhand 263001",
+    "about": "The former residence of the Maharaja of Pilibhit, this heritage hotel offers a panoramic view of the Naini Lake and the surrounding hills. It's a blend of colonial charm and modern comforts.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/naini-retreat-1/1080/720", "caption": "Hotel exterior with a view" },
+      { "src": "https://picsum.photos/seed/naini-retreat-2/1080/720", "caption": "Room with lake view" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 52, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["heritage", "lake view", "nainital"]
+  },
+  {
+    "name": "The Manu Maharani",
+    "brand": "Leisure Hotels",
+    "city": "Nainital",
+    "state": "Uttarakhand",
+    "address": "Grassmere Estate, Mallital, Nainital, Uttarakhand 263001",
+    "about": "A premium hotel in Nainital offering breathtaking views of the Naini Lake and the surrounding mountains. It combines modern luxury with old-world charm.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/manu-maharani-1/1080/720", "caption": "Hotel facade" },
+      { "src": "https://picsum.photos/seed/manu-maharani-2/1080/720", "caption": "Room overlooking the lake" }
+    ],
+    "roomCategories": [{ "name": "Premium Lake View Room", "count": 67, "size": "380 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["lake view", "nainital", "luxury"]
+  },
+  {
+    "name": "Jaypee Residency Manor",
+    "brand": "Jaypee",
+    "city": "Mussoorie",
+    "state": "Uttarakhand",
+    "address": "Barlowganj, Mussoorie, Uttarakhand 248122",
+    "about": "Perched on a hilltop, this hotel offers a 360-degree panoramic view of the mighty Himalayas. It's a perfect blend of luxury, comfort, and scenic beauty.",
+    "basePrice": 13000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/jaypee-mussoorie-1/1080/720", "caption": "Hotel with panoramic Himalayan view" },
+      { "src": "https://picsum.photos/seed/jaypee-mussoorie-2/1080/720", "caption": "Indoor heated swimming pool" }
+    ],
+    "roomCategories": [{ "name": "Manor Room", "count": 90, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "mussoorie", "family friendly"]
+  },
+  {
+    "name": "The Lalit Grand Palace Srinagar",
+    "brand": "The Lalit",
+    "city": "Srinagar",
+    "state": "Jammu and Kashmir",
+    "address": "Gupkar Rd, Srinagar, Jammu and Kashmir 190001",
+    "about": "A former royal palace, this hotel offers stunning views of the Dal Lake and is surrounded by meticulously manicured gardens. Experience the grandeur of Kashmiri royalty.",
+    "basePrice": 25000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/lalit-srinagar-1/1080/720", "caption": "View of the palace hotel and gardens" },
+      { "src": "https://picsum.photos/seed/lalit-srinagar-2/1080/720", "caption": "Luxurious suite interior" }
+    ],
+    "roomCategories": [{ "name": "Palace Garden View", "count": 113, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "luxury", "lake view", "srinagar"]
+  },
+  {
+    "name": "The Khyber Himalayan Resort & Spa",
+    "brand": "The Khyber",
+    "city": "Gulmarg",
+    "state": "Jammu and Kashmir",
+    "address": "Hotel Khyber Rd, Forest Block, Gulmarg, Jammu and Kashmir 193403",
+    "about": "A world-class resort located at an altitude of 8,825 feet in the Pir Panjal range of the Himalayas. It offers breathtaking views of the Apharwat peaks and is a stone's throw away from the Gulmarg Gondola.",
+    "basePrice": 30000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/khyber-gulmarg-1/1080/720", "caption": "Resort exterior in snow" },
+      { "src": "https://picsum.photos/seed/khyber-gulmarg-2/1080/720", "caption": "Heated indoor pool with a view" }
+    ],
+    "roomCategories": [{ "name": "Premier Valley View Room", "count": 85, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["ski resort", "luxury", "mountain view", "gulmarg"]
+  },
+  {
+    "name": "Mayfair Spa Resort & Casino",
+    "brand": "Mayfair",
+    "city": "Gangtok",
+    "state": "Sikkim",
+    "address": "Lower Samdur Block, Ranipool, Gangtok, Sikkim 737135",
+    "about": "A luxurious resort offering stunning views of the surrounding hills and valley. It features a world-class spa, a casino, and beautifully appointed rooms.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/mayfair-gangtok-1/1080/720", "caption": "Resort exterior and pool" },
+      { "src": "https://picsum.photos/seed/mayfair-gangtok-2/1080/720", "caption": "Lobby with traditional decor" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 68, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["casino", "luxury", "mountain view", "gangtok"]
+  },
+  {
+    "name": "The Elgin Mount Pandim, Pelling",
+    "brand": "The Elgin",
+    "city": "Pelling",
+    "state": "Sikkim",
+    "address": "Monastery Rd, Pelling, Sikkim 737113",
+    "about": "The former residence of the royal family of Sikkim, this heritage hotel offers magnificent views of the Kanchenjunga range. Experience old-world charm and warm hospitality.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/elgin-pelling-1/1080/720", "caption": "View of Kanchenjunga from the hotel" },
+      { "src": "https://picsum.photos/seed/elgin-pelling-2/1080/720", "caption": "Colonial-style hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "mountain view", "pelling", "romantic"]
+  },
+  {
+    "name": "Yarlam, Lachung",
+    "brand": "Yarlam",
+    "city": "Lachung",
+    "state": "Sikkim",
+    "address": "Near Lachung Monastery, Lachung, North Sikkim, Sikkim 737120",
+    "about": "A luxurious hotel in the remote and beautiful valley of Lachung. It offers modern comforts amidst pristine Himalayan landscapes, close to Yumthang Valley.",
+    "basePrice": 10000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/yarlam-lachung-1/1080/720", "caption": "Hotel exterior in Lachung valley" },
+      { "src": "https://picsum.photos/seed/yarlam-lachung-2/1080/720", "caption": "Comfortable room interior" }
+    ],
+    "roomCategories": [{ "name": "Super Deluxe", "count": 38, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["remote", "mountain view", "lachung", "valley"]
+  },
+  {
+    "name": "Hotel Summit Sobralia",
+    "brand": "Summit",
+    "city": "Namchi",
+    "state": "Sikkim",
+    "address": "Helipad Road, Upper Ghurpisey, Namchi, Sikkim 737126",
+    "about": "A modern hotel offering panoramic views of the Kanchenjunga range and the Samdruptse statue. It provides a comfortable base to explore the cultural attractions of South Sikkim.",
+    "basePrice": 8000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/summit-namchi-1/1080/720", "caption": "Hotel exterior and view" },
+      { "src": "https://picsum.photos/seed/summit-namchi-2/1080/720", "caption": "Restaurant area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 50, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["cultural", "mountain view", "namchi"]
+  },
+  {
+    "name": "Mayfair Darjeeling",
+    "brand": "Mayfair",
+    "city": "Darjeeling",
+    "state": "West Bengal",
+    "address": "The Mall, Opposite Governor House, Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "about": "A heritage hotel that exudes old-world charm and elegance. It offers stunning views of the valley and the Kanchenjunga range, coupled with warm hospitality.",
+    "basePrice": 13000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/mayfair-darjeeling-1/1080/720", "caption": "Hotel exterior view" },
+      { "src": "https://picsum.photos/seed/mayfair-darjeeling-2/1080/720", "caption": "Lounge with a fireplace" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 44, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "mountain view", "darjeeling"]
+  },
+  {
+    "name": "Sinclairs Siliguri",
+    "brand": "Sinclairs",
+    "city": "Siliguri",
+    "state": "West Bengal",
+    "address": "Pradhan Nagar, Mallaguri, Siliguri, West Bengal 734003",
+    "about": "A premier hotel in Siliguri, offering excellent connectivity to the Himalayan region. It features spacious rooms, a beautiful swimming pool, and extensive banqueting facilities.",
+    "basePrice": 6000,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/sinclairs-siliguri-1/1080/720", "caption": "Hotel exterior and gardens" },
+      { "src": "https://picsum.photos/seed/sinclairs-siliguri-2/1080/720", "caption": "Swimming pool area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 41, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "gateway", "siliguri"]
+  },
+  {
+    "name": "The Elgin Silver Oaks, Kalimpong",
+    "brand": "The Elgin",
+    "city": "Kalimpong",
+    "state": "West Bengal",
+    "address": "Rinking Pong Road, Kalimpong, West Bengal 734301",
+    "about": "A luxury heritage hotel built in 1932, formerly the home of a wealthy British jute magnate. It offers stunning views of the Himalayas and a charming colonial ambience.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/elgin-kalimpong-1/1080/720", "caption": "Colonial exterior of the hotel" },
+      { "src": "https://picsum.photos/seed/elgin-kalimpong-2/1080/720", "caption": "Lush gardens and sitting area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 25, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "mountain view", "kalimpong", "romantic"]
+  },
+  {
+    "name": "ITC Royal Bengal, a Luxury Collection Hotel, Kolkata",
+    "brand": "ITC",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "address": "1, JBS Haldane Ave, Tangra, Kolkata, West Bengal 700046",
+    "about": "A tribute to the cultural heritage of Bengal, this luxury hotel celebrates the region's spirit. It features grand architecture, exquisite dining, and state-of-the-art facilities.",
+    "basePrice": 16000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/itc-kolkata-1/1080/720", "caption": "Grand facade of ITC Royal Bengal" },
+      { "src": "https://picsum.photos/seed/itc-kolkata-2/1080/720", "caption": "Lavish hotel lobby" }
+    ],
+    "roomCategories": [{ "name": "Tower Room", "count": 456, "size": "527 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "kolkata"]
+  },
+  {
+    "name": "The Windamere Hotel",
+    "brand": "Windamere",
+    "city": "Darjeeling",
+    "state": "West Bengal",
+    "address": "Observatory Hill, Chauk Bazaar, Darjeeling, West Bengal 734101",
+    "about": "One of the original heritage hotels of the Himalayas, Windamere has been a Darjeeling landmark since the 19th century. Experience the charm of the British Raj and stunning mountain views.",
+    "basePrice": 14000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/windamere-darjeeling-1/1080/720", "caption": "Colonial architecture of Windamere" },
+      { "src": "https://picsum.photos/seed/windamere-darjeeling-2/1080/720", "caption": "View from the hotel terrace" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 38, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "colonial", "darjeeling"]
+  },
+  {
+    "name": "Heritage Madurai",
+    "brand": "Heritage",
+    "city": "Madurai",
+    "state": "Tamil Nadu",
+    "address": "11, Melakkal Rd, Kochadai, Madurai, Tamil Nadu 625016",
+    "about": "Designed by the famed architect Geoffrey Bawa, this resort offers a unique blend of history and luxury, with temple-inspired design elements.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/heritage-madurai/1080/720", "caption": "Temple-style pool" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Club", "count": 72, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "resort", "madurai"]
+  },
+  {
+    "name": "Sterling Ooty Fern Hill",
+    "brand": "Sterling",
+    "city": "Ooty",
+    "state": "Tamil Nadu",
+    "address": "No. 73, Kundah House Road, Fern Hill, Ooty, Tamil Nadu 643004",
+    "about": "Perched on a hilltop, this resort offers panoramic views of the Nilgiri mountains and valleys. A perfect retreat for nature lovers.",
+    "basePrice": 7000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/sterling-ooty/1080/720", "caption": "View from the resort" }
+    ],
+    "roomCategories": [{ "name": "Classic Room", "count": 175, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
+    "tags": ["mountain view", "ooty", "resort"]
+  },
+  {
+    "name": "The Carlton Kodaikanal",
+    "brand": "Carlton",
+    "city": "Kodaikanal",
+    "state": "Tamil Nadu",
+    "address": "Lake Rd, Kodaikanal, Tamil Nadu 624101",
+    "about": "The only 5-star hotel in Kodaikanal located on the banks of the scenic Kodai Lake. It offers colonial charm and a range of activities.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/carlton-kodai/1080/720", "caption": "Hotel overlooking Kodai Lake" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 91, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["lake view", "kodaikanal", "luxury"]
+  },
+  {
+    "name": "Sterling Kodai Lake",
+    "brand": "Sterling",
+    "city": "Kodaikanal",
+    "state": "Tamil Nadu",
+    "address": "44, Gymkhana Road, Lake Road, Kodaikanal, Tamil Nadu 624101",
+    "about": "A beautiful resort overlooking the serene Kodai Lake. The resort's design is inspired by English country homes, offering a cozy and comfortable stay.",
+    "basePrice": 6000,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/sterling-kodai-1/1080/720", "caption": "View of the resort" },
+      { "src": "https://picsum.photos/seed/sterling-kodai-2/1080/720", "caption": "Room with a view of the lake" }
+    ],
+    "roomCategories": [{ "name": "Classic Room", "count": 102, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
+    "tags": ["lake view", "resort", "kodaikanal"]
+  },
+  {
+    "name": "The Lalit Temple View Khajuraho",
+    "brand": "The Lalit",
+    "city": "Khajuraho",
+    "state": "Madhya Pradesh",
+    "address": "Opposite Circuit House, Khajuraho, Madhya Pradesh 471606",
+    "about": "Overlooking the Western Group of Temples, this luxury hotel offers a serene retreat with modern amenities and stunning views of the UNESCO World Heritage site.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/lalit-khajuraho-1/1080/720", "caption": "Hotel exterior with temple view" }
+    ],
+    "roomCategories": [{ "name": "Garden View Room", "count": 47, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["temple view", "luxury", "khajuraho"]
+  },
+  {
+    "name": "Syna Tiger Resort",
+    "brand": "Syna",
+    "city": "Bandhavgarh",
+    "state": "Madhya Pradesh",
+    "address": "Village-Tala, Bandhavgarh National Park, Umaria, Madhya Pradesh 484661",
+    "about": "A luxury wildlife resort on the edge of Bandhavgarh National Park, offering an immersive jungle experience with cottages, machans, and personalized safari services.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/syna-bandhavgarh-1/1080/720", "caption": "Cottage exterior in the jungle" }
+    ],
+    "roomCategories": [{ "name": "Luxury Cottage", "count": 20, "size": "500 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["wildlife", "jungle resort", "bandhavgarh"]
+  },
+  {
+    "name": "Welcomheritage Golf View",
+    "brand": "Welcomheritage",
+    "city": "Pachmarhi",
+    "state": "Madhya Pradesh",
+    "address": "Pachmarhi, Madhya Pradesh 461881",
+    "about": "A heritage hotel that exudes colonial charm, set amidst lush green lawns. It offers a tranquil retreat in the heart of the Satpura hills.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/golf-view-pachmarhi-1/1080/720", "caption": "Colonial-style hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "hill station", "pachmarhi"]
+  },
+  {
+    "name": "Radisson Gwalior",
+    "brand": "Radisson",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "address": "Plot No 13-14, City Centre, Gwalior, Madhya Pradesh 474011",
+    "about": "A modern hotel located in the city center, offering comfortable accommodations and a range of amenities for business and leisure travelers. It's a great base for exploring Gwalior Fort.",
+    "basePrice": 7000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-gwalior/1080/720", "caption": "Radisson Gwalior exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 89, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city hotel", "gwalior"]
+  },
+  {
+    "name": "Jehan Numa Palace Hotel, Bhopal",
+    "brand": "Jehan Numa",
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "address": "157, Shamla Hills, Bhopal, Madhya Pradesh 462013",
+    "about": "A 19th-century palace converted into a heritage hotel, Jehan Numa Palace exudes colonial charm and royal hospitality. Set on the slope of Shamla Hill, it offers a tranquil retreat.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/jehan-numa-bhopal/1080/720", "caption": "Jehan Numa Palace exterior" }
+    ],
+    "roomCategories": [{ "name": "Regal Room", "count": 100, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "palace", "bhopal"]
+  },
+  {
+    "name": "Radisson Blu Hotel Indore",
+    "brand": "Radisson",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "address": "12, Scheme 94C, Ring Road, Indore, Madhya Pradesh 452010",
+    "about": "A stylish hotel offering upscale amenities, including a rooftop pool and fine dining restaurants. It's a popular choice for business and leisure travelers in Indore.",
+    "basePrice": 11000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-indore/1080/720", "caption": "Rooftop pool area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 200, "size": "377 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "indore"]
+  },
+  {
+    "name": "MPT Amaltas, Pachmarhi",
+    "brand": "MPT",
+    "city": "Pachmarhi",
+    "state": "Madhya Pradesh",
+    "address": "Near Bus Stand, Pachmarhi, Madhya Pradesh 461881",
+    "about": "A comfortable and well-located hotel by MP Tourism, offering easy access to the main market and tourist spots. It's a great budget-friendly option for families.",
+    "basePrice": 3500,
+    "rating": 4.1,
+    "images": [
+      { "src": "https://picsum.photos/seed/amaltas-pachmarhi/1080/720", "caption": "Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "AC Room", "count": 25, "size": "250 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["budget", "family", "pachmarhi"]
+  },
+  {
+    "name": "The Fern Residency, Somnath",
+    "brand": "The Fern",
+    "city": "Somnath",
+    "state": "Gujarat",
+    "address": "Near Somnath Bypass, Veraval, Gujarat 362266",
+    "about": "An environmentally sensitive hotel, offering a comfortable stay close to the Somnath Temple. It's a great base for pilgrims and leisure travelers.",
+    "basePrice": 5000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/fern-somnath-1/1080/720", "caption": "The Fern Residency exterior" }
+    ],
+    "roomCategories": [{ "name": "Winter Green Room", "count": 56, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["pilgrimage", "somnath", "eco-friendly"]
+  },
+  {
+    "name": "The House of MG, Ahmedabad",
+    "brand": "The House of MG",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "address": "Opposite Sidi Saiyed Jali, Lal Darwaja, Ahmedabad, Gujarat 380001",
+    "about": "A premier heritage hotel in Ahmedabad, offering a unique blend of traditional Gujarati architecture and modern luxury. It features a textile gallery, a boutique, and authentic dining experiences.",
+    "basePrice": 10000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/house-of-mg-1/1080/720", "caption": "Courtyard of The House of MG" }
+    ],
+    "roomCategories": [{ "name": "Grand Suite", "count": 38, "size": "600 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "boutique", "ahmedabad", "cultural"]
+  },
+  {
+    "name": "The Grand Bhagwati, Surat",
+    "brand": "TGB",
+    "city": "Surat",
+    "state": "Gujarat",
+    "address": "Magdalla Circle, Dumas Road, Surat, Gujarat 395007",
+    "about": "A landmark of luxury in Surat, The Grand Bhagwati (TGB) is known for its opulent design, expansive event venues, and a range of culinary experiences. Ideal for grand weddings and business events.",
+    "basePrice": 7500,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/tgb-surat-1/1080/720", "caption": "The Grand Bhagwati hotel facade" }
+    ],
+    "roomCategories": [{ "name": "Executive Room", "count": 170, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wedding", "business", "surat"]
+  },
+  {
+    "name": "The Royal Village",
+    "brand": "The Royal Village",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "A cozy stay with views of the Himalayas.",
+    "basePrice": 6000,
+    "rating": 4.2,
+    "images": [{ "src": "https://picsum.photos/seed/royal-village-auli/1080/720", "caption": "hotel exterior" }],
+    "roomCategories": [{ "name": "Standard Room", "count": 20, "size": "250 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
+    "tags": ["budget", "auli", "mountain view"]
+  },
+  {
+    "name": "Himalayan High, Auli",
+    "brand": "Himalayan High",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "Experience the high mountains of Auli.",
+    "basePrice": 7500,
+    "rating": 4.4,
+    "images": [{ "src": "https://picsum.photos/seed/himalayan-high-auli/1080/720", "caption": "mountain view from hotel" }],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 15, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["mountain view", "auli"]
+  },
+  {
+    "name": "The Tattva Resort",
+    "brand": "The Tattva",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Joshimath-Auli Road, Auli",
+    "about": "A luxury resort with premium amenities.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [{ "src": "https://picsum.photos/seed/tattva-auli/1080/720", "caption": "resort exterior" }],
+    "roomCategories": [{ "name": "Premium Room", "count": 30, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "auli"]
+  },
+  {
+    "name": "Cliff Top Club",
+    "brand": "Cliff Top Club",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "A ski resort offering stunning views.",
+    "basePrice": 15000,
+    "rating": 4.6,
+    "images": [{ "src": "https://picsum.photos/seed/clifftop-auli/1080/720", "caption": "view from resort" }],
+    "roomCategories": [{ "name": "Suite", "count": 25, "size": "450 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["ski resort", "luxury", "auli"]
+  },
+  {
+    "name": "Blue Poppy Resorts",
+    "brand": "Blue Poppy",
+    "city": "Auli",
+    "state": "Uttarakhand",
+    "address": "Auli, Uttarakhand",
+    "about": "Cottages with great views and comfort.",
+    "basePrice": 8000,
+    "rating": 4.3,
+    "images": [{ "src": "https://picsum.photos/seed/blue-poppy-auli/1080/720", "caption": "cottage exterior" }],
+    "roomCategories": [{ "name": "Cottage", "count": 10, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "12:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["cottage", "pet friendly", "auli"]
+  }
+]
