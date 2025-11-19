@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, Package } from "lucide-react";
@@ -14,6 +15,15 @@ export default function Home() {
       "src": "https://images.unsplash.com/photo-1672841828271-54340a6fbcd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cm9waWNhbCUyMGJlYWNofGVufDB8fHx8MTc2MzM3MzAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "tropical beach"
     };
+
+  const interests = [
+    { name: 'Beaches', imageId: 'interest-beaches', hint: 'beach sunset' },
+    { name: 'Mountains', imageId: 'interest-mountains', hint: 'mountain range' },
+    { name: 'Heritage', imageId: 'interest-heritage', hint: 'ancient temple' },
+    { name: 'Wildlife', imageId: 'interest-wildlife', hint: 'tiger wildlife' },
+    { name: 'Adventure', imageId: 'interest-adventure', hint: 'mountain climbing' },
+    { name: 'Spiritual', imageId: 'interest-spiritual', hint: 'yoga meditation' },
+  ];
 
   return (
     <div className="flex flex-col">
@@ -38,6 +48,43 @@ export default function Home() {
           </p>
           <div className="mt-8 w-full max-w-3xl">
             <SearchForm />
+          </div>
+        </div>
+      </section>
+
+      <section id="travel-by-interest" className="py-16 md:py-24 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
+              Travel by Interest
+            </h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Find the perfect trip based on what you love to do.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            {interests.map((interest) => {
+              const interestImage = {
+                  "src": `https://picsum.photos/seed/${interest.imageId}/600/400`,
+                  "caption": interest.hint
+              };
+              return (
+                <Link href="#" key={interest.name}>
+                  <Card className="overflow-hidden group relative h-48 hover:shadow-xl transition-shadow duration-300">
+                    <Image
+                      src={interestImage.src}
+                      alt={interest.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-ai-hint={interestImage.caption}
+                    />
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                      <h3 className="font-bold text-2xl text-white font-headline tracking-wider">{interest.name}</h3>
+                    </div>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
