@@ -171,6 +171,142 @@
     "tags": ["luxury", "city view", "lucknow"]
   },
   {
+    "name": "Taj Hotel & Convention Centre, Agra",
+    "brand": "Taj",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "Taj East Gate Rd, Taj Nagari, Phase-1, Agra, Uttar Pradesh 282001",
+    "about": "A contemporary hotel offering views of the Taj Mahal from select rooms. It features a stunning rooftop infinity pool, multiple dining options, and is a short walk from the monument.",
+    "basePrice": 13000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-agra-1/1080/720", "caption": "Rooftop pool with Taj Mahal view" },
+      { "src": "https://picsum.photos/seed/taj-agra-2/1080/720", "caption": "Modern hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 239, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["taj mahal view", "modern", "luxury", "agra"]
+  },
+  {
+    "name": "Hotel Clarks Shiraz, Agra",
+    "brand": "Clarks",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "54, Taj Rd, Agra Cantt, Agra, Uttar Pradesh 282001",
+    "about": "One of Agra's oldest and most well-known hotels, Clarks Shiraz offers a classic hospitality experience with views of the Taj Mahal from its revolving rooftop restaurant.",
+    "basePrice": 7000,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/clarks-agra-1/1080/720", "caption": "Hotel exterior and lawn" },
+      { "src": "https://picsum.photos/seed/clarks-agra-2/1080/720", "caption": "Revolving restaurant view" }
+    ],
+    "roomCategories": [{ "name": "Standard Room", "count": 237, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["family friendly", "agra", "taj mahal view"]
+  },
+  {
+    "name": "Taj Nadesar Palace, Varanasi",
+    "brand": "Taj",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "Nadesar Palace Grounds, Varanasi, Uttar Pradesh 221002",
+    "about": "A beautifully restored 19th-century palace that has hosted royalty and statesmen. Set amidst lush gardens, it offers an atmosphere of serene luxury and personalized service.",
+    "basePrice": 35000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/nadesar-varanasi-1/1080/720", "caption": "Nadesar Palace exterior" },
+      { "src": "https://picsum.photos/seed/nadesar-varanasi-2/1080/720", "caption": "Royal suite bedroom" }
+    ],
+    "roomCategories": [{ "name": "Palace Room", "count": 10, "size": "600 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "palace", "luxury", "varanasi"]
+  },
+  {
+    "name": "The Clarks, Varanasi",
+    "brand": "Clarks",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "address": "The Mall Rd, Cantonment, Varanasi, Uttar Pradesh 221002",
+    "about": "A landmark hotel in the Cantonment area, The Clarks offers a blend of modern amenities and traditional hospitality, providing a comfortable base to explore the ancient city.",
+    "basePrice": 8000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/clarks-varanasi-1/1080/720", "caption": "Hotel exterior and garden" },
+      { "src": "https://picsum.photos/seed/clarks-varanasi-2/1080/720", "caption": "Swimming pool area" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 104, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["city hotel", "business", "varanasi"]
+  },
+  {
+    "name": "Lebua Lucknow",
+    "brand": "Lebua",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "address": "19, Sarva Palli, Saraca Estate, The Mall Avenue, Lucknow, Uttar Pradesh 226001",
+    "about": "Housed in a beautifully restored 1936 Art Deco bungalow, Lebua Lucknow offers a unique heritage experience that reflects the city's old-world charm and courtesy.",
+    "basePrice": 9000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/lebua-lucknow-1/1080/720", "caption": "Art Deco facade of the hotel" },
+      { "src": "https://picsum.photos/seed/lebua-lucknow-2/1080/720", "caption": "Courtyard dining area" }
+    ],
+    "roomCategories": [{ "name": "Executive Room", "count": 41, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "boutique", "lucknow"]
+  },
+  {
+    "name": "Taj Mahal, Lucknow",
+    "brand": "Taj",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "address": "Vipin Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+    "about": "Set amidst 20 acres of landscaped gardens, this majestic hotel offers a tranquil retreat in the city of Nawabs. Its architecture is inspired by Mughal designs.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-lucknow-1/1080/720", "caption": "Hotel exterior with gardens" },
+      { "src": "https://picsum.photos/seed/taj-lucknow-2/1080/720", "caption": "Elegant lobby interior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 110, "size": "380 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "resort", "lucknow"]
+  },
+  {
+    "name": "Hotel Kanha Shyam, Prayagraj",
+    "brand": "Kanha Shyam",
+    "city": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "address": "Civil Lines, Prayagraj, Uttar Pradesh 211001",
+    "about": "A prominent hotel in the heart of Prayagraj, Hotel Kanha Shyam offers modern amenities and comfortable accommodation for pilgrims and business travelers alike.",
+    "basePrice": 5000,
+    "rating": 4.2,
+    "images": [
+      { "src": "https://picsum.photos/seed/kanha-prayagraj-1/1080/720", "caption": "Hotel exterior" },
+      { "src": "https://picsum.photos/seed/kanha-prayagraj-2/1080/720", "caption": "Lobby area" }
+    ],
+    "roomCategories": [{ "name": "Executive Room", "count": 94, "size": "280 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["city hotel", "pilgrimage", "prayagraj"]
+  },
+  {
+    "name": "Nidhivan Sarovar Portico, Vrindavan",
+    "brand": "Sarovar Portico",
+    "city": "Mathura",
+    "state": "Uttar Pradesh",
+    "address": "Khasra No. 797, Gopalgarh Tehra Road, Vrindavan, Mathura, Uttar Pradesh 281121",
+    "about": "Located in the holy town of Vrindavan, this hotel offers a serene and spiritual retreat. It's a modern hotel with traditional hospitality, ideal for pilgrims visiting the temples of Mathura and Vrindavan.",
+    "basePrice": 6000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/nidhivan-vrindavan-1/1080/720", "caption": "Hotel garden area" },
+      { "src": "https://picsum.photos/seed/nidhivan-vrindavan-2/1080/720", "caption": "Restaurant interior" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 68, "size": "300 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["pilgrimage", "spiritual", "mathura", "vrindavan"]
+  },
+  {
     "name": "Wildflower Hall, An Oberoi Resort, Shimla",
     "brand": "Oberoi",
     "city": "Shimla",

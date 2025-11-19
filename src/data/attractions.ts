@@ -380,7 +380,7 @@ const uttarPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         fees: [ { type: "Indian", amount: "₹50" }, { type: "Foreigner", amount: "₹1100" } ],
         bestTimeToVisit: "October to March",
         distances: [ { from: "Agra Cantt Railway Station", distance: "6 km" } ],
-        nearbyHotels: ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra"]
+        nearbyHotels: ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra", "Taj Hotel & Convention Centre, Agra"]
     },
     {
         name: 'Agra Fort',
@@ -392,7 +392,19 @@ const uttarPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         fees: [ { type: "Indian", amount: "₹40" }, { type: "Foreigner", amount: "₹550" } ],
         bestTimeToVisit: "October to March",
         distances: [ { from: "Agra Cantt Railway Station", distance: "5 km" } ],
-        nearbyHotels: ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra"]
+        nearbyHotels: ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra", "Hotel Clarks Shiraz, Agra"]
+    },
+    {
+        name: 'Fatehpur Sikri',
+        city: 'Agra',
+        cityId: 'agra',
+        image: { src: 'https://picsum.photos/seed/fatehpur-sikri/1200/600', caption: 'fatehpur sikri agra' },
+        description: "A magnificent fortified ancient city, it was the short-lived capital of the Mughal empire. A UNESCO World Heritage site, it's known for its stunning Indo-Islamic architecture.",
+        timing: "Sunrise to Sunset",
+        fees: [ { type: "Indian", amount: "₹35" }, { type: "Foreigner", amount: "₹550" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Agra City", distance: "36 km" } ],
+        nearbyHotels: ["Hotel Goverdhan Tourist Complex", "Wyndham Grand Agra"]
     },
     {
         name: 'Ghats of Varanasi',
@@ -416,7 +428,55 @@ const uttarPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         fees: [ { type: "Entry", amount: "Free" } ],
         bestTimeToVisit: "October to March",
         distances: [ { from: "Varanasi Junction Railway Station", distance: "4 km" } ],
-        nearbyHotels: ["BrijRama Palace, Varanasi", "Taj Ganges, Varanasi"]
+        nearbyHotels: ["BrijRama Palace, Varanasi", "The Clarks, Varanasi", "Taj Nadesar Palace, Varanasi"]
+    },
+    {
+        name: 'Sarnath',
+        city: 'Varanasi',
+        cityId: 'varanasi',
+        image: { src: 'https://picsum.photos/seed/sarnath-stupa/1200/600', caption: 'sarnath stupa varanasi' },
+        description: "A major Buddhist pilgrimage site, Sarnath is where Gautama Buddha first taught the Dharma after his enlightenment. The Dhamek Stupa is an impressive structure marking the spot.",
+        timing: "Sunrise to Sunset",
+        fees: [ { type: "Indian", amount: "₹25" }, { type: "Foreigner", amount: "₹300" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Varanasi City", distance: "10 km" } ],
+        nearbyHotels: ["Taj Ganges, Varanasi", "The Clarks, Varanasi"]
+    },
+    {
+        name: 'Bara Imambara',
+        city: 'Lucknow',
+        cityId: 'lucknow',
+        image: { src: 'https://picsum.photos/seed/bara-imambara/1200/600', caption: 'bara imambara lucknow' },
+        description: "An imposing Shia shrine and monument built by Asaf-ud-Daula, Nawab of Awadh, in 1784. The complex includes the large Asfi mosque, the Bhul-bhulaiya (the labyrinth), and a stepwell with running water.",
+        timing: "Sunrise to Sunset",
+        fees: [ { type: "Indian", amount: "₹50" }, { type: "Foreigner", amount: "₹500" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Lucknow Railway Station", distance: "6 km" } ],
+        nearbyHotels: ["Renaissance Lucknow Hotel", "Lebua Lucknow", "Taj Mahal, Lucknow"]
+    },
+    {
+        name: 'Triveni Sangam',
+        city: 'Prayagraj',
+        cityId: 'prayagraj',
+        image: { src: 'https://picsum.photos/seed/triveni-sangam/1200/600', caption: 'triveni sangam prayagraj' },
+        description: "The confluence of three sacred rivers: the Ganga, the Yamuna, and the mythical Saraswati. It's a holy place for Hindus and the site of the Kumbh Mela, held every twelve years.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Boating", amount: "Varies" } ],
+        bestTimeToVisit: "January to March during the Magh Mela",
+        distances: [ { from: "Prayagraj Junction", distance: "7 km" } ],
+        nearbyHotels: ["Hotel Kanha Shyam, Prayagraj"]
+    },
+    {
+        name: 'Shri Krishna Janmabhoomi Temple',
+        city: 'Mathura',
+        cityId: 'mathura',
+        image: { src: 'https://picsum.photos/seed/krishna-janmabhoomi/1200/600', caption: 'shri krishna janmabhoomi temple mathura' },
+        description: "The temple is built around the prison cell where Lord Krishna is said to have been born. It's one of the most sacred sites for Hindus.",
+        timing: "5:00 AM - 12:00 PM, 4:00 PM - 9:30 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "August (Janmashtami) and March (Holi)",
+        distances: [ { from: "Mathura Junction", distance: "3 km" } ],
+        nearbyHotels: ["Nidhivan Sarovar Portico, Vrindavan"]
     }
 ];
 
