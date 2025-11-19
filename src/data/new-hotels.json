@@ -237,5 +237,39 @@
     "roomCategories": [{ "name": "Standard Room", "count": 57, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["mountain view", "dalhousie", "colonial"]
+  },
+  {
+    "name": "Taj Rishikesh Resort & Spa, Uttarakhand",
+    "brand": "Taj",
+    "city": "Rishikesh",
+    "state": "Uttarakhand",
+    "address": "Singthali, Rishikesh, Uttarakhand 249192",
+    "about": "A serene hideaway on the banks of the river Ganges, this resort offers a spiritual and wellness retreat. With its Himalayan architecture and spectacular views, it's a perfect escape.",
+    "basePrice": 30000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-rishikesh-1/1080/720", "caption": "View of Ganges from the resort" },
+      { "src": "https://picsum.photos/seed/taj-rishikesh-2/1080/720", "caption": "Yoga session by the river" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 79, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "spiritual", "river view", "rishikesh", "luxury"]
+  },
+  {
+    "name": "The Naini Retreat, by Leisure Hotels",
+    "brand": "Leisure Hotels",
+    "city": "Nainital",
+    "state": "Uttarakhand",
+    "address": "Ayarpatta, Mallital, Nainital, Uttarakhand 263001",
+    "about": "The former residence of the Maharaja of Pilibhit, this heritage hotel offers a panoramic view of the Naini Lake and the surrounding hills. It's a blend of colonial charm and modern comforts.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/naini-retreat-1/1080/720", "caption": "Hotel exterior with a view" },
+      { "src": "https://picsum.photos/seed/naini-retreat-2/1080/720", "caption": "Room with lake view" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 52, "size": "350 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["heritage", "lake view", "nainital"]
   }
 ]

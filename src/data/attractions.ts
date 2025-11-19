@@ -498,6 +498,34 @@ const himachalAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Ram Jhula',
+        city: 'Rishikesh',
+        cityId: 'rishikesh',
+        image: { src: 'https://picsum.photos/seed/ram-jhula/1200/600', caption: 'ram jhula bridge rishikesh' },
+        description: "An iconic iron suspension bridge across the river Ganges in Rishikesh. It connects Sivananda Nagar area of Muni Ki Reti to Swargashram. It offers panoramic views of the river and the surrounding temples.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Dehradun Airport (Jolly Grant)", distance: "20 km" } ],
+        nearbyHotels: ["The Roseate Ganges", "Taj Rishikesh Resort & Spa, Uttarakhand"]
+    },
+    {
+        name: 'Naini Lake',
+        city: 'Nainital',
+        cityId: 'nainital',
+        image: { src: 'https://picsum.photos/seed/naini-lake/1200/600', caption: 'naini lake boating' },
+        description: "The heart of Nainital, this natural freshwater lake is a beautiful crescent-shaped body of water. Boating on the lake is a popular activity, offering serene views of the surrounding hills.",
+        timing: "6:00 AM to 6:00 PM for boating",
+        fees: [ { type: "Boating", amount: "Starting from ₹160" } ],
+        bestTimeToVisit: "March to June and October to November",
+        distances: [ { from: "Pantnagar Airport", distance: "65 km" } ],
+        nearbyHotels: ["The Naini Retreat, by Leisure Hotels", "The Manu Maharani"]
+    }
+];
+
+
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
         ...attraction,
@@ -524,6 +552,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...himachalAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...uttarakhandAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),

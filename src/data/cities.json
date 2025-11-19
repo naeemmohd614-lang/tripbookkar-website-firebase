@@ -127,5 +127,37 @@
     "image": "",
     "description": "A quiet hill station with colonial-era architecture and panoramic views of the Dhauladhar range.",
     "totalHotels": 40
+  },
+  {
+    "cityId": "rishikesh",
+    "stateId": "uttarakhand",
+    "name": "Rishikesh",
+    "image": "",
+    "description": "The 'Yoga Capital of the World', a spiritual town on the banks of the Ganges.",
+    "totalHotels": 90
+  },
+  {
+    "cityId": "nainital",
+    "stateId": "uttarakhand",
+    "name": "Nainital",
+    "image": "",
+    "description": "A charming hill station known for its emerald-colored Naini Lake and colonial architecture.",
+    "totalHotels": 100
+  },
+  {
+    "cityId": "mussoorie",
+    "stateId": "uttarakhand",
+    "name": "Mussoorie",
+    "image": "",
+    "description": "The 'Queen of the Hills', offering stunning views of the Himalayas and lush green valleys.",
+    "totalHotels": 110
+  },
+  {
+    "cityId": "dehradun",
+    "stateId": "uttarakhand",
+    "name": "Dehradun",
+    "image": "",
+    "description": "The capital of Uttarakhand, nestled in the Doon Valley, known for its pleasant climate and prestigious schools.",
+    "totalHotels": 80
   }
 ]
