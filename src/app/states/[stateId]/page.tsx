@@ -4,7 +4,7 @@
 import { states, hotels, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Star, ShoppingBag, Paintbrush, Music, HeartPulse, SwatchBook, Bell, Hand, Flower, CableCar, Sprout, BookOpen, Cat, Clapperboard, Drama, CookingPot } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Star, ShoppingBag, Paintbrush, Music, HeartPulse, SwatchBook, Bell, Hand, Flower, CableCar, Sprout, BookOpen, Cat, Clapperboard, Drama, CookingPot, Diamond, ShoppingBasket } from 'lucide-react';
 import type { State, Hotel, City, Attraction } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -48,7 +48,7 @@ export default function StatePage() {
         { icon: CookingPot, text: 'Rich Cuisine', color: 'text-red-500' },
     ];
     
-    const gujaratCities = ['Ahmedabad', 'Kutch', 'Dwarka', 'Somnath'].map(cityName => {
+    const gujaratCities = ['Ahmedabad', 'Kutch', 'Dwarka', 'Somnath', 'Surat'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
       return {
@@ -115,7 +115,7 @@ export default function StatePage() {
           <div className="text-center my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Destinations</h2>
             <p className="mt-2 text-muted-foreground">From ancient temples to modern marvels.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8">
               {gujaratCities.map(city => (
                 <Link href={`/states/gujarat/cities/${city.cityId}`} key={city.name}>
                   <Card className="overflow-hidden group relative">
@@ -1696,4 +1696,3 @@ export default function StatePage() {
     </div>
   );
 }
-

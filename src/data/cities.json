@@ -399,5 +399,13 @@
     "image": "",
     "description": "Home to the Statue of Unity, the world's tallest statue.",
     "totalHotels": 20
+  },
+  {
+    "cityId": "surat",
+    "stateId": "gujarat",
+    "name": "Surat",
+    "image": "",
+    "description": "The Diamond City, a major commercial hub known for its textiles and diamond industry.",
+    "totalHotels": 120
   }
 ]

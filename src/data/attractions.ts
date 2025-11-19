@@ -1284,6 +1284,33 @@ const gujaratAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         distances: [ { from: "Ahmedabad Railway Station", distance: "3 km" } ],
         notes: ["Visitors are expected to dress modestly.","Located in the old city, which is a bustling area."],
         nearbyHotels: ["The House of MG", "Four Points by Sheraton Ahmedabad"]
+    },
+    {
+        name: 'Dumas Beach',
+        city: 'Surat',
+        cityId: 'surat',
+        stateId: 'gujarat',
+        image: { src: 'https://picsum.photos/seed/dumas-beach-surat/1200/600', caption: 'dumas beach surat' },
+        description: "An urban beach along the Arabian Sea, known for its black sand and as a popular recreational spot. It is also famous for its mysterious and haunted stories.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Evenings",
+        distances: [ { from: "Surat Airport", distance: "6 km" } ],
+        notes: ["The beach is famous for its local snacks like 'Bhajiya'.", "It is advised to leave the beach before late night due to local beliefs about paranormal activities."],
+        nearbyHotels: ["Surat Marriott Hotel", "The Grand Bhagwati, Surat"]
+    },
+    {
+        name: 'Sarthana Nature Park & Zoo',
+        city: 'Surat',
+        cityId: 'surat',
+        stateId: 'gujarat',
+        image: { src: 'https://picsum.photos/seed/sarthana-zoo-surat/1200/600', caption: 'sarthana nature park surat' },
+        description: "Spread over 81 acres, Sarthana Nature Park is a zoological park and a major attraction in Surat. It's home to a variety of animals, including lions, tigers, and various species of deer.",
+        timing: "10:00 AM - 5:00 PM (Closed on Mondays)",
+        fees: [ { type: "Adult", amount: "₹30" } ],
+        bestTimeToVisit: "Winter months (October to February)",
+        distances: [ { from: "Surat Railway Station", distance: "10 km" } ],
+        nearbyHotels: ["Lords Plaza Surat", "Orange International"]
     }
 ];
 
@@ -1346,6 +1373,3 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
 ];
-
-
-

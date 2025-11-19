@@ -1102,6 +1102,37 @@
     "roomCategories": [{ "name": "Tower Room", "count": 291, "size": "475 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "palatial", "ahmedabad"]
+  },
+   {
+    "name": "Surat Marriott Hotel",
+    "brand": "Marriott",
+    "city": "Surat",
+    "state": "Gujarat",
+    "address": "Ambika Niketan Road, Athwalines, Surat, Gujarat 395007",
+    "about": "Located on the banks of the Tapi River, Surat Marriott Hotel offers modern luxury with spacious rooms, multiple dining options, and extensive event spaces, catering to both business and leisure travelers.",
+    "basePrice": 9000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/marriott-surat-1/1080/720", "caption": "Surat Marriott Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 209, "size": "344 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "luxury", "surat"]
+  },
+  {
+    "name": "The Grand Bhagwati, Surat",
+    "brand": "TGB",
+    "city": "Surat",
+    "state": "Gujarat",
+    "address": "Magdalla Circle, Dumas Road, Surat, Gujarat 395007",
+    "about": "A landmark of luxury in Surat, The Grand Bhagwati (TGB) is known for its opulent design, expansive event venues, and a range of culinary experiences. Ideal for grand weddings and business events.",
+    "basePrice": 7500,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/tgb-surat-1/1080/720", "caption": "The Grand Bhagwati hotel facade" }
+    ],
+    "roomCategories": [{ "name": "Executive Room", "count": 170, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wedding", "business", "surat"]
   }
 ]
-
