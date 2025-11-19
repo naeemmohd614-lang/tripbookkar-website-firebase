@@ -72,6 +72,14 @@
     "description": "The city of dreams, a financial powerhouse and the heart of the Bollywood film industry.",
     "totalHotels": 300
   },
+   {
+    "cityId": "pune",
+    "stateId": "maharashtra",
+    "name": "Pune",
+    "image": "",
+    "description": "The cultural capital of Maharashtra, known for its educational institutions and pleasant weather.",
+    "totalHotels": 200
+  },
   {
     "cityId": "agra",
     "stateId": "uttar-pradesh",
@@ -303,5 +311,45 @@
     "image": "",
     "description": "The 'Princess of Hill Stations', famous for its star-shaped lake, forests, and pleasant climate.",
     "totalHotels": 100
+  },
+  {
+    "cityId": "bhopal",
+    "stateId": "madhya-pradesh",
+    "name": "Bhopal",
+    "image": "",
+    "description": "The 'City of Lakes', known for its two main lakes, Upper Lake and Lower Lake.",
+    "totalHotels": 80
+  },
+  {
+    "cityId": "indore",
+    "stateId": "madhya-pradesh",
+    "name": "Indore",
+    "image": "",
+    "description": "The largest city in Madhya Pradesh, known for its street food, history, and vibrant bazaars.",
+    "totalHotels": 120
+  },
+  {
+    "cityId": "gwalior",
+    "stateId": "madhya-pradesh",
+    "name": "Gwalior",
+    "image": "",
+    "description": "A historic city known for the magnificent Gwalior Fort, palaces, and ancient temples.",
+    "totalHotels": 60
+  },
+  {
+    "cityId": "khajuraho",
+    "stateId": "madhya-pradesh",
+    "name": "Khajuraho",
+    "image": "",
+    "description": "Famous for its stunning temples adorned with intricate and erotic sculptures, a UNESCO World Heritage site.",
+    "totalHotels": 40
+  },
+  {
+    "cityId": "pachmarhi",
+    "stateId": "madhya-pradesh",
+    "name": "Pachmarhi",
+    "image": "",
+    "description": "The 'Queen of Satpura', a serene hill station with waterfalls, caves, and viewpoints.",
+    "totalHotels": 50
   }
 ]

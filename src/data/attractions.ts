@@ -974,6 +974,46 @@ const tamilNaduAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const madhyaPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Khajuraho Group of Monuments',
+        city: 'Khajuraho',
+        cityId: 'khajuraho',
+        image: { src: 'https://picsum.photos/seed/khajuraho-temples/1200/600', caption: 'khajuraho temples' },
+        description: "A group of Hindu and Jain temples famous for their nagara-style architectural symbolism and their erotic sculptures. A UNESCO World Heritage Site.",
+        timing: "8:00 AM - 6:00 PM",
+        fees: [ { type: "Indian", amount: "₹40" }, { type: "Foreigner", amount: "₹600" } ],
+        bestTimeToVisit: "October to February",
+        distances: [ { from: "Khajuraho Airport", distance: "5 km" } ],
+        nearbyHotels: ["The Lalit Temple View Khajuraho", "Radisson Jass Khajuraho"]
+    },
+    {
+        name: 'Bandhavgarh National Park',
+        city: 'Bandhavgarh',
+        cityId: 'bandhavgarh',
+        image: { src: 'https://picsum.photos/seed/bandhavgarh-tiger/1200/600', caption: 'bandhavgarh tiger safari' },
+        description: "Known for its large population of royal Bengal tigers, especially in the central Tala zone. Other animals include white tigers, leopards and deer.",
+        timing: "Sunrise to Sunset (Varies)",
+        fees: [ { type: "Safari (varies)", amount: "Approx. ₹2500-4500 per jeep" } ],
+        bestTimeToVisit: "October to June",
+        distances: [ { from: "Jabalpur Airport", distance: "160 km" } ],
+        notes: ["Park is closed during the monsoon season (July to September).", "Book safaris well in advance."],
+        nearbyHotels: ["Syna Tiger Resort", "Mahua Kothi, A Taj Safari"]
+    },
+    {
+        name: 'Dhoopgarh',
+        city: 'Pachmarhi',
+        cityId: 'pachmarhi',
+        image: { src: 'https://picsum.photos/seed/dhoopgarh-pachmarhi/1200/600', caption: 'dhoopgarh sunset pachmarhi' },
+        description: "The highest point in the Satpura range, Dhoopgarh is a popular spot to witness a spectacular sunrise and sunset.",
+        timing: "Open all day",
+        fees: [ { type: "Entry", amount: "Free (Jeep charges apply)" } ],
+        bestTimeToVisit: "October to April",
+        distances: [ { from: "Pachmarhi Bus Stand", distance: "10 km" } ],
+        nearbyHotels: ["Welcomheritage Golf View", "MPT Amaltas"]
+    }
+];
+
 
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
@@ -1021,6 +1061,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...tamilNaduAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...madhyaPradeshAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),

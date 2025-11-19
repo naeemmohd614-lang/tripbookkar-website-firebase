@@ -93,7 +93,7 @@
     "address": "Taj East Gate Rd, Paktola, Tajganj, Agra, Uttar Pradesh 282001",
     "about": "Located just 600 meters from the Taj Mahal, this luxury hotel offers uninterrupted views of the monument from every room. Experience Mughal-inspired architecture and royal hospitality.",
     "basePrice": 50000,
-    "rating": 5.0,
+    "rating": 5,
     "images": [
       { "src": "https://picsum.photos/seed/oberoi-agra-1/1080/720", "caption": "View of Taj Mahal from the hotel" },
       { "src": "https://picsum.photos/seed/oberoi-agra-2/1080/720", "caption": "Poolside with arches" }
@@ -707,7 +707,7 @@
     "basePrice": 16000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/itc-kolkata-1/1080/720", "caption": "Grand exterior of ITC Royal Bengal" },
+      { "src": "https://picsum.photos/seed/itc-kolkata-1/1080/720", "caption": "Grand facade of ITC Royal Bengal" },
       { "src": "https://picsum.photos/seed/itc-kolkata-2/1080/720", "caption": "Lavish hotel lobby" }
     ],
     "roomCategories": [{ "name": "Tower Room", "count": 456, "size": "527 sqft" }],
@@ -862,5 +862,53 @@
     "roomCategories": [{ "name": "Classic Room", "count": 102, "size": "280 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
     "tags": ["lake view", "resort", "kodaikanal"]
+  },
+  {
+    "name": "The Lalit Temple View Khajuraho",
+    "brand": "The Lalit",
+    "city": "Khajuraho",
+    "state": "Madhya Pradesh",
+    "address": "Opposite Circuit House, Khajuraho, Madhya Pradesh 471606",
+    "about": "Overlooking the Western Group of Temples, this luxury hotel offers a serene retreat with modern amenities and stunning views of the UNESCO World Heritage site.",
+    "basePrice": 9000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/lalit-khajuraho-1/1080/720", "caption": "Hotel exterior with temple view" }
+    ],
+    "roomCategories": [{ "name": "Garden View Room", "count": 47, "size": "350 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["temple view", "luxury", "khajuraho"]
+  },
+  {
+    "name": "Syna Tiger Resort",
+    "brand": "Syna",
+    "city": "Bandhavgarh",
+    "state": "Madhya Pradesh",
+    "address": "Village-Tala, Bandhavgarh National Park, Umaria, Madhya Pradesh 484661",
+    "about": "A luxury wildlife resort on the edge of Bandhavgarh National Park, offering an immersive jungle experience with cottages, machans, and personalized safari services.",
+    "basePrice": 12000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/syna-bandhavgarh-1/1080/720", "caption": "Cottage exterior in the jungle" }
+    ],
+    "roomCategories": [{ "name": "Luxury Cottage", "count": 20, "size": "500 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["wildlife", "jungle resort", "bandhavgarh"]
+  },
+  {
+    "name": "Welcomheritage Golf View",
+    "brand": "Welcomheritage",
+    "city": "Pachmarhi",
+    "state": "Madhya Pradesh",
+    "address": "Pachmarhi, Madhya Pradesh 461881",
+    "about": "A heritage hotel that exudes colonial charm, set amidst lush green lawns. It offers a tranquil retreat in the heart of the Satpura hills.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/golf-view-pachmarhi-1/1080/720", "caption": "Colonial-style hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "320 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "hill station", "pachmarhi"]
   }
 ]
