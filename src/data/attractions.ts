@@ -469,6 +469,32 @@ const himachalAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         distances: [ { from: "Manali", distance: "51 km" } ],
         notes: ["A permit is required to visit Rohtang Pass.", "The pass is closed during winter due to heavy snowfall."],
         nearbyHotels: ["Manuallaya - The Resort Spa in the Himalayas"]
+    },
+    {
+        name: 'Dalai Lama Temple Complex',
+        city: 'Dharamshala',
+        cityId: 'dharamshala',
+        image: { src: 'https://picsum.photos/seed/dalai-lama-temple/1200/600', caption: 'dalai lama temple complex' },
+        description: "The official residence of the Dalai Lama, Tsuglagkhang Complex is a spiritual center for Tibetan Buddhism. The complex includes the Photang (Dalai Lama's residence), Tibet Museum, and the Tsuglagkhang Temple.",
+        timing: "5:00 AM - 8:00 PM (Summer), 6:00 AM - 6:00 PM (Winter)",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "March to June and September to November",
+        distances: [ { from: "Gaggal Airport", distance: "15 km" } ],
+        notes: ["Maintain silence and respect the serene atmosphere. Photography might be restricted in some areas."],
+        nearbyHotels: ["Hyatt Regency Dharamshala Resort", "Fortune Park Moksha"]
+    },
+    {
+        name: 'Khajjiar Lake',
+        city: 'Dalhousie',
+        cityId: 'dalhousie',
+        image: { src: 'https://picsum.photos/seed/khajjiar-lake/1200/600', caption: 'khajjiar lake dalhousie' },
+        description: "Often referred to as the 'Mini Switzerland of India', Khajjiar is a small plateau with a small stream-fed lake in the middle that is surrounded by a meadow and forests. It's a picturesque spot for picnics and horse riding.",
+        timing: "All day",
+        fees: [ { type: "Entry", amount: "Free (charges for activities)" } ],
+        bestTimeToVisit: "April to July",
+        distances: [ { from: "Dalhousie", distance: "24 km" } ],
+        notes: ["Zorbing and horse riding are popular activities here."],
+        nearbyHotels: ["Fortune Park Dalhousie", "Grand View Hotel"]
     }
 ];
 
