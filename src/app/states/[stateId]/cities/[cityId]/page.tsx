@@ -192,12 +192,15 @@ export default function CityPage() {
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-                        {jodhpurHighlights.map(highlight => (
-                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
-                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
-                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
-                            </div>
-                        ))}
+                        {jodhpurHighlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -283,12 +286,15 @@ export default function CityPage() {
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-                        {udaipurHighlights.map(highlight => (
-                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
-                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
-                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
-                            </div>
-                        ))}
+                        {udaipurHighlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -373,12 +379,15 @@ export default function CityPage() {
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-                        {jaisalmerHighlights.map(highlight => (
-                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
-                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
-                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
-                            </div>
-                        ))}
+                        {jaisalmerHighlights.map(highlight => {
+                             const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -462,12 +471,15 @@ export default function CityPage() {
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
                     <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
-                        {highlights.map(highlight => (
-                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
-                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
-                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
-                            </div>
-                        ))}
+                        {highlights.map(highlight => {
+                             const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -551,12 +563,15 @@ export default function CityPage() {
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
                     <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
-                        {highlights.map(highlight => (
-                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
-                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
-                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
-                            </div>
-                        ))}
+                        {highlights.map(highlight => {
+                             const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -640,12 +655,15 @@ export default function CityPage() {
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
                     <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
-                        {highlights.map(highlight => (
-                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
-                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
-                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
-                            </div>
-                        ))}
+                        {highlights.map(highlight => {
+                            const Icon = highlight.icon;
+                            return (
+                                <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full"><Icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 
