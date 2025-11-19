@@ -1134,5 +1134,31 @@
     "roomCategories": [{ "name": "Executive Room", "count": 170, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wedding", "business", "surat"]
+  },
+  {
+    "name": "JW Marriott Hotel New Delhi Aerocity",
+    "brand": "JW Marriott",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Asset Area 4 - Hospitality District, Delhi Aerocity, New Delhi, Delhi 110037",
+    "about": "Located near the airport, JW Marriott Hotel New Delhi Aerocity offers a perfect blend of convenience and luxury with spacious rooms, an outdoor pool, and multiple dining options.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/jw-delhi-1/1080/720", "caption": "Hotel exterior at Aerocity" },
+      { "src": "https://picsum.photos/seed/jw-delhi-2/1080/720", "caption": "Swimming pool area" }
+    ],
+    "roomCategories": [
+      { "name": "Deluxe Room", "count": 250, "size": "452 sqft" },
+      { "name": "Executive Club Level", "count": 100, "size": "452 sqft" }
+    ],
+    "diningExperiences": [
+      { "name": "K3", "type": "International Buffet" },
+      { "name": "Delhi Baking Company", "type": "Cafe & Bakery" }
+    ],
+    "experiencesAndActivities": [ "Quan Spa", "Fitness Center", "Outdoor Heated Pool" ],
+    "weddingVenues": [ "Grand Crystal Ballroom" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["airport hotel", "luxury", "new delhi"]
   }
 ]
