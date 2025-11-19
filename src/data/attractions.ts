@@ -1073,6 +1073,43 @@ const madhyaPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         distances: [ { from: "Indore Railway Station", distance: "2 km" } ],
         notes: ["Come with an empty stomach to try a variety of dishes."],
         nearbyHotels: ["Indore Marriott Hotel", "Sayaji Hotel Indore"]
+    },
+    {
+        name: 'Van Vihar National Park',
+        city: 'Bhopal',
+        cityId: 'bhopal',
+        image: { src: 'https://picsum.photos/seed/van-vihar-bhopal/1200/600', caption: 'deer van vihar bhopal' },
+        description: "Located adjacent to the Upper Lake, Van Vihar is a national park and zoo. It's a green oasis in the city, home to a variety of herbivores and carnivores in near-natural habitats.",
+        timing: "7:00 AM - 7:00 PM (Closed on Fridays)",
+        fees: [ { type: "Entry", amount: "₹15" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Bhopal Railway Station", distance: "8 km" } ],
+        notes: ["Bicycles are available for rent to explore the park."],
+        nearbyHotels: ["Jehan Numa Palace Hotel, Bhopal", "Taj Lakefront, Bhopal"]
+    },
+    {
+        name: 'Jai Vilas Palace Museum',
+        city: 'Gwalior',
+        cityId: 'gwalior',
+        image: { src: 'https://picsum.photos/seed/jai-vilas-gwalior/1200/600', caption: 'jai vilas palace gwalior' },
+        description: "A 19th-century palace, a portion of which is now a museum. It's known for its European architecture and a spectacular Durbar Hall, which houses two of the world's largest chandeliers.",
+        timing: "10:00 AM - 4:45 PM (Closed on Mondays)",
+        fees: [ { type: "Indian", amount: "₹100" }, { type: "Foreigner", amount: "₹600" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Gwalior Railway Station", distance: "4 km" } ],
+        nearbyHotels: ["Radisson Gwalior", "Taj Usha Kiran Palace, Gwalior"]
+    },
+    {
+        name: 'Jata Shankar Caves',
+        city: 'Pachmarhi',
+        cityId: 'pachmarhi',
+        image: { src: 'https://picsum.photos/seed/jata-shankar-pachmarhi/1200/600', caption: 'jata shankar caves pachmarhi' },
+        description: "A natural cave and a revered shrine, as it is believed to be the place where Lord Shiva concealed himself from the demon Bhasmasur. The cave has a natural lingam under the shadow of a massive rock.",
+        timing: "7:00 AM - 7:00 PM",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to April",
+        distances: [ { from: "Pachmarhi Bus Stand", distance: "1.5 km" } ],
+        nearbyHotels: ["Welcomheritage Golf View", "MPT Amaltas"]
     }
 ];
 

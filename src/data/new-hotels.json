@@ -990,5 +990,37 @@
     "roomCategories": [{ "name": "Deluxe Room", "count": 218, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "resort", "indore"]
+  },
+  {
+    "name": "MPT Amaltas, Pachmarhi",
+    "brand": "MPT",
+    "city": "Pachmarhi",
+    "state": "Madhya Pradesh",
+    "address": "Near Bus Stand, Pachmarhi, Madhya Pradesh 461881",
+    "about": "A comfortable and well-located hotel by MP Tourism, offering easy access to the main market and tourist spots. It's a great budget-friendly option for families.",
+    "basePrice": 3500,
+    "rating": 4.1,
+    "images": [
+      { "src": "https://picsum.photos/seed/amaltas-pachmarhi/1080/720", "caption": "Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "AC Room", "count": 25, "size": "250 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "11:00 AM" },
+    "tags": ["budget", "family", "pachmarhi"]
+  },
+  {
+    "name": "Taj Usha Kiran Palace, Gwalior",
+    "brand": "Taj",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "address": "Jayendraganj, Lashkar, Gwalior, Madhya Pradesh 474009",
+    "about": "A 120-year-old palace, this heritage hotel offers a regal experience with its Victorian architecture, antique furnishings, and royal suites. Indulge in the Jiva Spa and royal cuisine.",
+    "basePrice": 14000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/taj-gwalior/1080/720", "caption": "Exterior of Taj Usha Kiran Palace" }
+    ],
+    "roomCategories": [{ "name": "Luxury Room", "count": 40, "size": "400 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "palace", "luxury", "gwalior"]
   }
 ]
