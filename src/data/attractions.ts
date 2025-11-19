@@ -1314,6 +1314,74 @@ const gujaratAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     }
 ];
 
+const delhiAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'India Gate',
+        city: 'New Delhi',
+        cityId: 'new-delhi',
+        stateId: 'delhi',
+        image: { src: 'https://picsum.photos/seed/india-gate-delhi/1200/600', caption: 'india gate delhi' },
+        description: "A war memorial located astride the Rajpath. It is a memorial to 84,000 soldiers of the British Indian Army who died in the period 1914–21 in the First World War.",
+        timing: "Open 24 hours",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "Evenings",
+        distances: [ { from: "Indira Gandhi International Airport", distance: "14 km" } ],
+        nearbyHotels: ["The Oberoi, New Delhi", "Taj Mahal Hotel, New Delhi"]
+    },
+    {
+        name: 'Qutub Minar',
+        city: 'New Delhi',
+        cityId: 'new-delhi',
+        stateId: 'delhi',
+        image: { src: 'https://picsum.photos/seed/qutub-minar-delhi/1200/600', caption: 'qutub minar delhi' },
+        description: "A UNESCO World Heritage Site, Qutub Minar is a towering 73-meter high minaret built by Qutab-ud-din Aibak in 1193. The complex has several other historical monuments.",
+        timing: "7:00 AM - 5:00 PM",
+        fees: [ { type: "Indian", amount: "₹35" }, { type: "Foreigner", amount: "₹550" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Indira Gandhi International Airport", distance: "14 km" } ],
+        nearbyHotels: ["The Roseate New Delhi", "JW Marriott Hotel New Delhi Aerocity"]
+    },
+    {
+        name: 'Humayun\'s Tomb',
+        city: 'New Delhi',
+        cityId: 'new-delhi',
+        stateId: 'delhi',
+        image: { src: 'https://picsum.photos/seed/humayuns-tomb-delhi/1200/600', caption: 'humayuns tomb delhi' },
+        description: "The tomb of the Mughal Emperor Humayun, it was the first garden-tomb on the Indian subcontinent. It inspired several major architectural innovations, culminating in the construction of the Taj Mahal.",
+        timing: "6:00 AM - 6:00 PM",
+        fees: [ { type: "Indian", amount: "₹35" }, { type: "Foreigner", amount: "₹550" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Indira Gandhi International Airport", distance: "17 km" } ],
+        nearbyHotels: ["The Oberoi, New Delhi", "The Lodhi"]
+    },
+    {
+        name: 'Red Fort',
+        city: 'New Delhi',
+        cityId: 'new-delhi',
+        stateId: 'delhi',
+        image: { src: 'https://picsum.photos/seed/red-fort-delhi/1200/600', caption: 'red fort delhi' },
+        description: "A historic fort that served as the main residence of the Mughal Emperors. Every year on India's Independence Day (15 August), the Prime Minister hoists the national flag at the main gate of the fort.",
+        timing: "9:30 AM - 4:30 PM (Closed on Mondays)",
+        fees: [ { type: "Indian", amount: "₹35" }, { type: "Foreigner", amount: "₹500" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Indira Gandhi International Airport", distance: "20 km" } ],
+        nearbyHotels: ["The Haveli Dharampura", "Maidens Hotel"]
+    },
+    {
+        name: 'Lotus Temple',
+        city: 'New Delhi',
+        cityId: 'new-delhi',
+        stateId: 'delhi',
+        image: { src: 'https://picsum.photos/seed/lotus-temple-delhi/1200/600', caption: 'lotus temple delhi' },
+        description: "A Baháʼí House of Worship notable for its flowerlike shape, it has become a prominent attraction in the city. The temple is open to all, regardless of religion or any other qualification.",
+        timing: "9:00 AM - 5:30 PM (Closed on Mondays)",
+        fees: [ { type: "Entry", amount: "Free" } ],
+        bestTimeToVisit: "October to March",
+        distances: [ { from: "Indira Gandhi International Airport", distance: "18 km" } ],
+        nearbyHotels: ["The Suryaa New Delhi", "Eros Hotel New Delhi"]
+    }
+];
+
 
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
@@ -1369,6 +1437,10 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
     ...gujaratAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...delhiAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),
