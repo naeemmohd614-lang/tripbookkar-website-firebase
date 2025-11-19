@@ -1,4 +1,5 @@
 
+
 'use client';
 import { cities, hotels, states, attractions } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
@@ -6,7 +7,7 @@ import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Palette, Sun, Sailboat, Music } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 
@@ -138,6 +139,277 @@ export default function CityPage() {
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
                             <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this city yet.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'jodhpur') {
+    const jodhpurHeroImage = {
+       src: 'https://picsum.photos/seed/jodhpur-hero/1920/600',
+       caption: 'mehrangarh fort jodhpur'
+    };
+
+    const jodhpurHighlights = [
+        { icon: Palette, text: 'The Blue City', color: 'text-blue-500' },
+        { icon: Castle, text: 'Majestic Fort', color: 'text-orange-500' },
+        { icon: ShoppingBag, text: 'Antique Markets', color: 'text-sky-500' },
+        { icon: Utensils, text: 'Spicy Delicacies', color: 'text-red-500' },
+    ];
+
+    const jodhpurAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'jodhpur');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={jodhpurHeroImage.src} alt="Panoramic view of Jodhpur, the Blue City" fill className="object-cover" priority data-ai-hint={jodhpurHeroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Jodhpur</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Sun City of Rajasthan</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Jodhpur</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                        Jodhpur, famously known as the 'Blue City', is a historic city in Rajasthan. It's dominated by the mighty Mehrangarh Fort, which looms over the city's blue-painted houses. Jodhpur offers a rich tapestry of history, culture, and cuisine, from its bustling old city bazaars to its magnificent palaces.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+                        {jodhpurHighlights.map(highlight => (
+                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Jodhpur</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {jodhpurAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.name}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'udaipur') {
+    const udaipurHeroImage = {
+       src: 'https://picsum.photos/seed/udaipur-hero/1920/600',
+       caption: 'udaipur lake palace'
+    };
+
+    const udaipurHighlights = [
+        { icon: Waves, text: 'City of Lakes', color: 'text-cyan-500' },
+        { icon: Castle, text: 'Grand Palaces', color: 'text-amber-500' },
+        { icon: Sailboat, text: 'Romantic Boat Rides', color: 'text-blue-500' },
+        { icon: Palette, text: 'Art & Culture', color: 'text-purple-500' },
+    ];
+
+    const udaipurAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'udaipur');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={udaipurHeroImage.src} alt="Udaipur Lake Palace view" fill className="object-cover" priority data-ai-hint={udaipurHeroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Udaipur</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Venice of the East</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Udaipur</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                        Often called the 'Venice of the East', Udaipur is renowned for its beautiful lakes, grand palaces, and romantic ambiance. Set around a series of artificial lakes and known for its lavish royal residences, the city is a jewel of Rajasthan.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+                        {udaipurHighlights.map(highlight => (
+                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Udaipur</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {udaipurAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.name}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  if (cityId === 'jaisalmer') {
+    const jaisalmerHeroImage = {
+       src: 'https://picsum.photos/seed/jaisalmer-hero/1920/600',
+       caption: 'camel safari jaisalmer'
+    };
+
+    const jaisalmerHighlights = [
+        { icon: Castle, text: 'The Golden Fort', color: 'text-yellow-500' },
+        { icon: Sun, text: 'Desert Safari', color: 'text-orange-500' },
+        { icon: Building, text: 'Ornate Havelis', color: 'text-amber-600' },
+        { icon: Music, text: 'Folk Culture', color: 'text-red-500' },
+    ];
+
+    const jaisalmerAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'jaisalmer');
+
+    return (
+        <div>
+             <div className="relative h-[50vh] w-full">
+                <Image src={jaisalmerHeroImage.src} alt="Camel safari in the Thar Desert near Jaisalmer" fill className="object-cover" priority data-ai-hint={jaisalmerHeroImage.caption} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                 <div className="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h1 className="text-4xl md:text-6xl font-headline font-bold text-white drop-shadow-lg">Explore Jaisalmer</h1>
+                    <p className="text-lg text-gray-200 mt-2">The Golden City</p>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="mb-12">
+                    <Button asChild variant="outline" size="sm">
+                        <Link href={`/states/${stateId}`}><ArrowLeft className="mr-2 h-4 w-4" /> Back to {state.name}</Link>
+                    </Button>
+                </div>
+                
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue">Welcome to Jaisalmer</h2>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                        Jaisalmer, the 'Golden City', is an exotic desert destination that seems to rise from the sands of the Thar Desert. Its centerpiece is the magnificent Jaisalmer Fort, a living fort with a bustling community within its walls. Discover ornate havelis, venture into the desert for a camel safari, and immerse yourself in the rich folk traditions of Rajasthan.
+                    </p>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Key Highlights</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+                        {jaisalmerHighlights.map(highlight => (
+                            <div key={highlight.text} className="flex flex-col items-center text-center gap-3">
+                                <div className="bg-primary/10 p-4 rounded-full"><highlight.icon className={`h-8 w-8 ${highlight.color}`} /></div>
+                                <p className="font-semibold text-muted-foreground">{highlight.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Jaisalmer</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {jaisalmerAttractions.map(attraction => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.name}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                    <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
+                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                 <div className="my-16">
+                    <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
+                     {cityHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3>
                             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
                         </div>
                     )}

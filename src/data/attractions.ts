@@ -133,8 +133,158 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
     },
 ];
 
+const jodhpurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'Mehrangarh Fort',
+        city: 'Jodhpur',
+        cityId: 'jodhpur',
+        image: {
+            src: 'https://picsum.photos/seed/mehrangarh-fort/1200/600',
+            caption: 'mehrangarh fort jodhpur',
+        },
+        description: "One of India's largest and most magnificent forts, Mehrangarh Fort towers 400 feet above the city. Its thick, imposing walls enclose a complex of palaces and courtyards that are breathtaking in their beauty and detail.",
+        timing: "9:00 AM - 5:00 PM (Daily)",
+        fees: [
+            { type: "Indian Tourist", amount: "₹120" },
+            { type: "Foreign Tourist", amount: "₹600" },
+        ],
+        bestTimeToVisit: "October to March",
+        distances: [
+            { from: "Jodhpur Airport", distance: "6 km" },
+            { from: "Jodhpur Railway Station", distance: "5 km" },
+        ],
+        notes: ["Audio guides are available and highly recommended.", "The fort has a museum with an impressive collection of royal artifacts."],
+        nearbyHotels: ["Umaid Bhawan Palace, Jodhpur", "RAAS Jodhpur"]
+    },
+    {
+        name: 'Jaswant Thada',
+        city: 'Jodhpur',
+        cityId: 'jodhpur',
+        image: {
+            src: 'https://picsum.photos/seed/jaswant-thada/1200/600',
+            caption: 'jaswant thada monument',
+        },
+        description: "This milky-white marble memorial to Maharaja Jaswant Singh II is a masterpiece of Rajputana architecture. Often called the 'Taj Mahal of Marwar', its intricate carvings and peaceful setting by a lake make it a must-visit.",
+        timing: "9:00 AM - 6:00 PM (Daily)",
+        fees: [
+            { type: "Indian Tourist", amount: "₹30" },
+            { type: "Foreign Tourist", amount: "₹50" },
+        ],
+        bestTimeToVisit: "Morning or late afternoon",
+        distances: [
+            { from: "Jodhpur Airport", distance: "7 km" },
+            { from: "Mehrangarh Fort", distance: "1 km" },
+        ],
+        nearbyHotels: ["Umaid Bhawan Palace, Jodhpur", "RAAS Jodhpur"]
+    },
+];
+
+const udaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+    {
+        name: 'City Palace, Udaipur',
+        city: 'Udaipur',
+        cityId: 'udaipur',
+        image: {
+            src: 'https://picsum.photos/seed/city-palace-udaipur/1200/600',
+            caption: 'udaipur city palace view',
+        },
+        description: "A majestic architectural marvel on the banks of Lake Pichola, the City Palace of Udaipur is a grand complex of palaces, courtyards, and gardens, showcasing a beautiful blend of Rajasthani and Mughal architectural styles.",
+        timing: "9:30 AM - 5:30 PM (Daily)",
+        fees: [
+            { type: "Adult", amount: "₹300" },
+            { type: "Child", amount: "₹100" },
+        ],
+        bestTimeToVisit: "September to March",
+        distances: [
+            { from: "Maharana Pratap Airport", distance: "22 km" },
+            { from: "Udaipur City Railway Station", distance: "3 km" },
+        ],
+        notes: ["A boat ride on Lake Pichola offers stunning views of the palace."],
+        nearbyHotels: ["Taj Lake Palace, Udaipur", "The Oberoi Udaivilas"]
+    },
+    {
+        name: 'Lake Pichola',
+        city: 'Udaipur',
+        cityId: 'udaipur',
+        image: {
+            src: 'https://picsum.photos/seed/lake-pichola/1200/600',
+            caption: 'boat ride on lake pichola',
+        },
+        description: "An artificial freshwater lake, created in the year 1362 AD, Lake Pichola is one of the several contiguous lakes in the city of Udaipur. The lake’s surroundings and the several islands within the lake have been developed over the centuries with palaces, marble temples, family mansions, and bathing ghats.",
+        timing: "9:00 AM - 6:00 PM for boating",
+        fees: [
+            { type: "Regular Boat Ride", amount: "approx. ₹400" },
+            { type: "Sunset Boat Ride", amount: "approx. ₹700" },
+        ],
+        bestTimeToVisit: "Sunset for a romantic experience",
+        distances: [
+            { from: "City Centre", distance: "0 km" },
+        ],
+        nearbyHotels: ["Taj Lake Palace, Udaipur", "The Oberoi Udaivilas", "The Leela Palace Udaipur"]
+    },
+];
+
+const jaisalmerAttractionsData: Omit<Attraction, 'attractionId'>[] = [
+     {
+        name: 'Jaisalmer Fort',
+        city: 'Jaisalmer',
+        cityId: 'jaisalmer',
+        image: {
+            src: 'https://picsum.photos/seed/jaisalmer-fort/1200/600',
+            caption: 'golden jaisalmer fort',
+        },
+        description: "Also known as Sonar Quila or the Golden Fort, Jaisalmer Fort is a massive sandcastle rising from the sandy plains of the Thar desert. It is one of the very few 'living forts' in the world, with a quarter of the city's population residing within its walls.",
+        timing: "9:00 AM - 9:00 PM (Daily)",
+        fees: [
+            { type: "Entry", amount: "Free" },
+            { type: "Palace Museum", amount: "₹250 (Indians) / ₹500 (Foreigners)" },
+        ],
+        bestTimeToVisit: "October to March",
+        distances: [
+            { from: "Jaisalmer Airport", distance: "15 km" },
+            { from: "Jaisalmer Railway Station", distance: "2 km" },
+        ],
+        notes: ["Explore the narrow lanes inside the fort to discover havelis, temples, and shops."],
+        nearbyHotels: ["Suryagarh Jaisalmer", "Jaisalmer Marriott Resort & Spa"]
+    },
+    {
+        name: 'Sam Sand Dunes',
+        city: 'Jaisalmer',
+        cityId: 'jaisalmer',
+        image: {
+            src: 'https://picsum.photos/seed/sam-sand-dunes/1200/600',
+            caption: 'sam sand dunes desert safari',
+        },
+        description: "Experience the quintessential desert life at Sam Sand Dunes. Enjoy a camel safari or a thrilling jeep safari over the golden sands, and witness a spectacular sunset followed by a cultural evening with Rajasthani folk music and dance.",
+        timing: "Afternoon to evening is best",
+        fees: [
+            { type: "Camel Safari", amount: "approx. ₹500-800" },
+            { type: "Jeep Safari", amount: "approx. ₹1200-1500" },
+        ],
+        bestTimeToVisit: "November to February for pleasant weather",
+        distances: [
+            { from: "Jaisalmer City", distance: "42 km" },
+        ],
+        notes: ["Overnight desert camping is a popular activity here."],
+        nearbyHotels: ["Desert Springs Resort", "Sam Sand Dunes Desert Safari Camp"]
+    },
+];
+
+
 export const attractions: Attraction[] = [
     ...jaipurAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...jodhpurAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...udaipurAttractionsData.map(attraction => ({
+        ...attraction,
+        attractionId: slugify(attraction.name),
+    })),
+    ...jaisalmerAttractionsData.map(attraction => ({
         ...attraction,
         attractionId: slugify(attraction.name),
     })),
