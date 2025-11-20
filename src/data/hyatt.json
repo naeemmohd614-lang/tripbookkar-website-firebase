@@ -13,7 +13,15 @@
       { "src": "https://picsum.photos/seed/hyatt-mumbai-1/1080/720", "caption": "Grand Hyatt Mumbai exterior facade" },
       { "src": "https://picsum.photos/seed/hyatt-mumbai-2/1080/720", "caption": "Spacious hotel lobby and lounge" }
     ],
+    "distance": { "Chhatrapati Shivaji Maharaj International Airport": "9 km" },
     "roomCategories": [{ "name": "Grand King Room", "count": 547, "size": "430 sqft" }],
+    "diningExperiences": [
+      { "name": "Celini", "type": "Italian" },
+      { "name": "Soma", "type": "Indian" },
+      { "name": "Fifty Five East", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Club Oasis Fitness Centre & Spa", "Outdoor swimming pools", "Grand Hyatt Plaza" ],
+    "weddingVenues": [ "Grand Ballroom", "The Gardens", "The Courtyard" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "mumbai", "luxury", "pet friendly"]
   },
@@ -30,7 +38,15 @@
       { "src": "https://picsum.photos/seed/hyatt-delhi-1/1080/720", "caption": "Hyatt Regency Delhi exterior" },
       { "src": "https://picsum.photos/seed/hyatt-delhi-2/1080/720", "caption": "Elegant lobby and seating area" }
     ],
+    "distance": { "Indira Gandhi International Airport": "12 km" },
     "roomCategories": [{ "name": "King Room", "count": 507, "size": "312 sqft" }],
+    "diningExperiences": [
+      { "name": "The China Kitchen", "type": "Chinese" },
+      { "name": "La Piazza", "type": "Italian" },
+      { "name": "T.K's Oriental Grill", "type": "Teppanyaki" }
+    ],
+    "experiencesAndActivities": [ "Club Olympus Spa & Fitness", "Outdoor Swimming Pool", "City Tours" ],
+    "weddingVenues": [ "The Mansion", "The Oval Room", "Regency Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "new delhi"]
   },
@@ -47,7 +63,14 @@
       { "src": "https://picsum.photos/seed/park-hyatt-chennai-1/1080/720", "caption": "Park Hyatt Chennai exterior" },
       { "src": "https://picsum.photos/seed/park-hyatt-chennai-2/1080/720", "caption": "The Dining Room restaurant" }
     ],
+    "distance": { "Chennai International Airport": "10 km" },
     "roomCategories": [{ "name": "Park King Room", "count": 201, "size": "463 sqft" }],
+    "diningExperiences": [
+      { "name": "The Flying Elephant", "type": "Multi-cuisine" },
+      { "name": "The Dining Room", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "Antahpura Spa", "Rooftop infinity pool", "Fitness Centre" ],
+    "weddingVenues": [ "The Apartment Gallery", "The Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "chennai", "business"]
   },
@@ -64,7 +87,14 @@
       { "src": "https://picsum.photos/seed/hyatt-dharamshala-1/1080/720", "caption": "Resort view with mountains" },
       { "src": "https://picsum.photos/seed/hyatt-dharamshala-2/1080/720", "caption": "Elegant room interior" }
     ],
+    "distance": { "Gaggal Airport": "25 km" },
     "roomCategories": [{ "name": "Regency King Room", "count": 89, "size": "450 sqft" }],
+    "diningExperiences": [
+      { "name": "Thym", "type": "Multi-cuisine" },
+      { "name": "2082", "type": "Bar" }
+    ],
+    "experiencesAndActivities": [ "Shanti Spa", "Heated indoor pool", "Yoga and meditation sessions", "Nature walks" ],
+    "weddingVenues": [ "The Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "mountain view", "dharamshala", "resort"]
   },
@@ -81,7 +111,14 @@
       { "src": "https://picsum.photos/seed/hyatt-dehradun-1/1080/720", "caption": "Hotel exterior view" },
       { "src": "https://picsum.photos/seed/hyatt-dehradun-2/1080/720", "caption": "Rooftop pool and lounge" }
     ],
+    "distance": { "Jolly Grant Airport": "45 km" },
     "roomCategories": [{ "name": "King Room with Garden View", "count": 263, "size": "400 sqft" }],
+    "diningExperiences": [
+      { "name": "Range", "type": "Cosmopolitan food-hall" },
+      { "name": "Beyul", "type": "Rooftop bar" }
+    ],
+    "experiencesAndActivities": [ "Spa & Salon", "Rooftop infinity pool", "Camp Hyatt for kids", "Guided treks" ],
+    "weddingVenues": [ "The Regency Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "dehradun", "business"]
   },
@@ -97,7 +134,14 @@
     "images": [
       { "src": "https://picsum.photos/seed/hyatt-ahmedabad-1/1080/720", "caption": "Hyatt Regency Ahmedabad exterior" }
     ],
+    "distance": { "Sardar Vallabhbhai Patel International Airport": "10 km" },
     "roomCategories": [{ "name": "Regency King Room", "count": 210, "size": "387 sqft" }],
+    "diningExperiences": [
+      { "name": "Tinello", "type": "Italian" },
+      { "name": "China House", "type": "Chinese" }
+    ],
+    "experiencesAndActivities": [ "Aadi Spa", "Outdoor pool", "24-hour fitness center" ],
+    "weddingVenues": [ "The Regency Ballroom", "The Sabarmati Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "ahmedabad"]
   }
