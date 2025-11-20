@@ -81,6 +81,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-chennai-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 101, "size": "320 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "business", "chennai"]
   },
@@ -95,6 +98,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-templebay-1/1080/720", "caption": "Beachfront pool view" }],
     "roomCategories": [{ "name": "Chalet", "count": 157, "size": "450 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach resort", "luxury", "mahabalipuram"]
   },
@@ -109,6 +115,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/parkplaza-ludhiana-1/1080/720", "caption": "Hotel lobby" }],
     "roomCategories": [{ "name": "Superior Room", "count": 91, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "ludhiana"]
   },
@@ -123,6 +132,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-guwahati-1/1080/720", "caption": "Infinity pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 196, "size": "355 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "guwahati", "business"]
   },
@@ -137,6 +149,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-udaipur-1/1080/720", "caption": "Hotel overlooking Fateh Sagar Lake" }],
     "roomCategories": [{ "name": "Superior Room", "count": 245, "size": "430 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["lake view", "resort", "udaipur"]
   },
@@ -151,6 +166,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/radisson-mumbai-andheri-1/1080/720", "caption": "Rooftop pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 111, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "mumbai"]
   },
@@ -165,6 +183,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-shimla-1/1080/720", "caption": "View from the hotel" }],
     "roomCategories": [{ "name": "Deluxe Room", "count": 59, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["mountain view", "resort", "shimla"]
   },
@@ -179,6 +200,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-faridabad-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 124, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "faridabad"]
   },
@@ -193,6 +217,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-mysore-1/1080/720", "caption": "Pool with a view" }],
     "roomCategories": [{ "name": "Superior Room", "count": 140, "size": "360 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["city hotel", "mysuru"]
   },
@@ -207,6 +234,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-agra-1/1080/720", "caption": "Rooftop pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 165, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["taj mahal view", "agra"]
   },
@@ -221,6 +251,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-nagpur-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 214, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "nagpur"]
   },
@@ -235,6 +268,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-vizag-1/1080/720", "caption": "Infinity pool overlooking the sea" }],
     "roomCategories": [{ "name": "Superior Sea View Room", "count": 100, "size": "380 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach resort", "sea view", "visakhapatnam"]
   },
@@ -249,6 +285,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-ghaziabad-1/1080/720", "caption": "Hotel lobby" }],
     "roomCategories": [{ "name": "Superior Room", "count": 147, "size": "360 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "ncr"]
   },
@@ -263,6 +302,9 @@
     "rating": 4.3,
     "images": [{ "src": "https://picsum.photos/seed/parkinn-jaipur-1/1080/720", "caption": "Rooftop pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 70, "size": "250 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["budget", "city center", "jaipur"]
   },
@@ -277,6 +319,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/countryinn-gurugram-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 100, "size": "280 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "gurugram"]
   },
@@ -291,6 +336,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-pune-hinjawadi-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 151, "size": "344 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "it hub", "pune"]
   },
@@ -305,6 +353,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-karjat-1/1080/720", "caption": "Resort pool and architecture" }],
     "roomCategories": [{ "name": "Superior Room", "count": 102, "size": "450 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "weekend getaway", "karjat"]
   },
@@ -319,6 +370,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-paschimvihar-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 178, "size": "365 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "new delhi"]
   },
@@ -333,6 +387,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/radisson-noida-1/1080/720", "caption": "Radisson Noida lobby" }],
     "roomCategories": [{ "name": "Superior Room", "count": 88, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "noida"]
   },
@@ -347,6 +404,9 @@
     "rating": 4.3,
     "images": [{ "src": "https://picsum.photos/seed/parkplaza-zirakpur-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 100, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "chandigarh"]
   },
@@ -361,6 +421,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-alibaug-1/1080/720", "caption": "Resort pool and villas" }],
     "roomCategories": [{ "name": "Superior Room", "count": 156, "size": "400 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "weekend getaway", "alibaug"]
   },
@@ -375,6 +438,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-mumbai-airport-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 206, "size": "320 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "business", "mumbai"]
   },
@@ -389,6 +455,9 @@
     "rating": 4.3,
     "images": [{ "src": "https://picsum.photos/seed/countryinn-goa-candolim-1/1080/720", "caption": "Hotel pool area" }],
     "roomCategories": [{ "name": "Superior Room", "count": 96, "size": "280 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach", "goa", "candolim"]
   },
@@ -403,6 +472,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-chennai-city-1/1080/720", "caption": "Rooftop pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 162, "size": "320 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["city center", "business", "chennai"]
   },
@@ -417,6 +489,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-hyd-banjara-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 155, "size": "340 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "hyderabad"]
   },
@@ -431,6 +506,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-amritsar-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 186, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "amritsar"]
   },
@@ -443,8 +521,11 @@
     "about": "A contemporary hotel close to the airport and major business hubs in Delhi and Gurugram. Features an outdoor pool, spa, and multiple dining options.",
     "basePrice": 9000,
     "rating": 4.5,
-    "images": [{ "src": "https://picsum.photos/seed/radisson-dwarka-1/1080/720", "caption": "Hotel pool area" }],
+    "images": [{ "src": "https://picsum.photos/seed/radisson-dwarka-2/1080/720", "caption": "Hotel pool area" }],
     "roomCategories": [{ "name": "Superior Room", "count": 219, "size": "330 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "new delhi"]
   },
@@ -459,6 +540,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/radisson-kandla-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 117, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "kutch", "gandhidham"]
   },
@@ -473,6 +557,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-ranchi-1/1080/720", "caption": "Hotel lobby" }],
     "roomCategories": [{ "name": "Superior Room", "count": 115, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "ranchi"]
   },
@@ -487,6 +574,9 @@
     "rating": 4.3,
     "images": [{ "src": "https://picsum.photos/seed/countryinn-bathinda-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 90, "size": "280 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "bathinda"]
   },
@@ -501,6 +591,9 @@
     "rating": 4.7,
     "images": [{ "src": "https://picsum.photos/seed/radisson-nashik-1/1080/720", "caption": "Hotel with mountain view" }],
     "roomCategories": [{ "name": "Superior Room", "count": 224, "size": "380 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "wellness", "nashik"]
   },
@@ -515,6 +608,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-bengaluru-orr-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 218, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "it hub", "bengaluru"]
   },
@@ -529,6 +625,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/radisson-khajuraho-1/1080/720", "caption": "Pool and garden area" }],
     "roomCategories": [{ "name": "Superior Room", "count": 90, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "resort", "khajuraho"]
   },
@@ -543,6 +642,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-nagpur-2/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 214, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "nagpur"]
   },
@@ -557,6 +659,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-guwahati-2/1080/720", "caption": "Infinity pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 196, "size": "355 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "guwahati", "wellness"]
   },
@@ -571,6 +676,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-chennai-2/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 101, "size": "320 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "business", "chennai"]
   },
@@ -608,6 +716,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/radisson-haridwar-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 129, "size": "330 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["pilgrimage", "business", "haridwar"]
   },
@@ -622,6 +733,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-salem-1/1080/720", "caption": "Rooftop pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 126, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "salem"]
   },
@@ -636,6 +750,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/radisson-kochi-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 150, "size": "320 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "city center", "kochi"]
   },
@@ -650,6 +767,9 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-karjat-2/1080/720", "caption": "Pool and resort architecture" }],
     "roomCategories": [{ "name": "Superior Room", "count": 102, "size": "450 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "weekend getaway", "karjat"]
   },
@@ -664,6 +784,9 @@
     "rating": 4.4,
     "images": [{ "src": "https://picsum.photos/seed/radisson-gurugram-1/1080/720", "caption": "Rooftop pool" }],
     "roomCategories": [{ "name": "Superior Room", "count": 90, "size": "280 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "gurugram"]
   },
@@ -678,6 +801,9 @@
     "rating": 4.5,
     "images": [{ "src": "https://picsum.photos/seed/parkplaza-jodhpur-1/1080/720", "caption": "Hotel with garden" }],
     "roomCategories": [{ "name": "Superior Room", "count": 65, "size": "300 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["fort view", "jodhpur"]
   },
@@ -692,22 +818,11 @@
     "rating": 4.6,
     "images": [{ "src": "https://picsum.photos/seed/radisson-ahmedabad-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 115, "size": "350 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "ahmedabad"]
-  },
-  {
-    "name": "Radisson Blu Hotel, New Delhi Dwarka",
-    "brand": "Radisson Blu",
-    "city": "New Delhi",
-    "state": "Delhi",
-    "address": "Plot 4, Centre, Sector 13, Dwarka, New Delhi, Delhi 110075",
-    "about": "A contemporary hotel close to the airport and major business hubs in Delhi and Gurugram. Features an outdoor pool, spa, and multiple dining options.",
-    "basePrice": 9000,
-    "rating": 4.5,
-    "images": [{ "src": "https://picsum.photos/seed/radisson-dwarka-2/1080/720", "caption": "Hotel pool area" }],
-    "roomCategories": [{ "name": "Superior Room", "count": 219, "size": "330 sqft" }],
-    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "new delhi"]
   },
   {
     "name": "Country Inn & Suites by Radisson, Amritsar",
@@ -720,6 +835,9 @@
     "rating": 4.3,
     "images": [{ "src": "https://picsum.photos/seed/countryinn-amritsar-1/1080/720", "caption": "Hotel exterior" }],
     "roomCategories": [{ "name": "Superior Room", "count": 48, "size": "250 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [],
+    "weddingVenues": [],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["city center", "pilgrimage", "amritsar"]
   }

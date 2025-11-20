@@ -1,4 +1,5 @@
 
+
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
 import type { Destination, Brand, State, City, Hotel, MonthDestination, Attraction } from './types';
