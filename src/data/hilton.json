@@ -1,0 +1,277 @@
+
+[
+  {
+    "name": "Hilton Chennai",
+    "brand": "Hilton",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "124/1, Jawaharlal Nehru Salai, Guindy, Chennai, Tamil Nadu 600032",
+    "about": "A contemporary hotel in the business district of Chennai, offering stylish rooms, a rooftop pool, and multiple dining options. It provides a luxurious stay for both business and leisure travelers.",
+    "basePrice": 11000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/hilton-chennai-1/1080/720", "caption": "Hilton Chennai exterior" },
+      { "src": "https://picsum.photos/seed/hilton-chennai-2/1080/720", "caption": "Rooftop infinity pool" }
+    ],
+    "roomCategories": [{ "name": "King Guest Room", "count": 250, "size": "355 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "chennai"]
+  },
+  {
+    "name": "Conrad Bengaluru",
+    "brand": "Hilton",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "25/3, Kensington Rd, Someshwarpura, Ulsoor, Bengaluru, Karnataka 560008",
+    "about": "An iconic luxury hotel overlooking the Ulsoor Lake, Conrad Bengaluru offers a sophisticated retreat with its modern design, award-winning dining, and panoramic city views.",
+    "basePrice": 18000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/conrad-bengaluru-1/1080/720", "caption": "Conrad Bengaluru exterior view" },
+      { "src": "https://picsum.photos/seed/conrad-bengaluru-2/1080/720", "caption": "Lobby and lounge area" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 285, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "lake view", "bengaluru"]
+  },
+  {
+    "name": "Hilton Mumbai International Airport",
+    "brand": "Hilton",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Sahar Airport Rd, Ashok Nagar, Andheri East, Mumbai, Maharashtra 400099",
+    "about": "Designed as a 19th-century summer palace, this hotel offers a unique blend of colonial-era charm and modern convenience, located just minutes from the international airport.",
+    "basePrice": 14000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/hilton-mumbai-1/1080/720", "caption": "Palace-style exterior of the hotel" }
+    ],
+    "roomCategories": [{ "name": "King Guest Room", "count": 171, "size": "388 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["airport hotel", "colonial", "mumbai"]
+  },
+  {
+    "name": "Conrad Pune",
+    "brand": "Hilton",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "address": "7, Mangaldas Rd, Sangamvadi, Pune, Maharashtra 411001",
+    "about": "A luxury hotel that embodies the cultural heritage of Pune with a modern twist. It offers spacious rooms, Art Deco-inspired design, and a range of upscale dining experiences.",
+    "basePrice": 15000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/conrad-pune-1/1080/720", "caption": "Conrad Pune exterior" }
+    ],
+    "roomCategories": [{ "name": "Deluxe Room", "count": 310, "size": "452 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "art deco", "pune"]
+  },
+  {
+    "name": "DoubleTree Suites by Hilton Bangalore",
+    "brand": "Hilton",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "Iblur Gate, Outer Ring Road, Sarjapur, Bengaluru, Karnataka 560102",
+    "about": "Located in the IT hub of Sarjapur, this all-suite hotel is perfect for extended stays and business travelers. Enjoy spacious accommodations and a warm chocolate chip cookie welcome.",
+    "basePrice": 10000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/doubletree-bengaluru-1/1080/720", "caption": "Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "King Studio Suite", "count": 172, "size": "475 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "all-suite", "bengaluru"]
+  },
+  {
+    "name": "Hilton Jaipur",
+    "brand": "Hilton",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "42, Geejgarh House, Hawa Sadak, Jaipur, Rajasthan 302006",
+    "about": "A stylish hotel offering panoramic views of the Aravalli hills. It features modern rooms, a rooftop pool, and is a great base to explore the Pink City's forts and palaces.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/hilton-jaipur-1/1080/720", "caption": "Rooftop pool area" }
+    ],
+    "roomCategories": [{ "name": "King Guest Room", "count": 179, "size": "377 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["city view", "jaipur", "modern"]
+  },
+  {
+    "name": "DoubleTree by Hilton Hotel Agra",
+    "brand": "Hilton",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "B/H - 1&2, Taj Nagri Phase 2, Agra, Uttar Pradesh 282001",
+    "about": "Located close to the Taj Mahal, this hotel offers comfortable rooms with modern amenities. Enjoy views of the monument from its rooftop infinity pool.",
+    "basePrice": 7000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/doubletree-agra-1/1080/720", "caption": "Rooftop pool with Taj Mahal view" }
+    ],
+    "roomCategories": [{ "name": "Guest Room", "count": 104, "size": "345 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["taj mahal view", "agra"]
+  },
+  {
+    "name": "Hilton Garden Inn, New Delhi/Saket",
+    "brand": "Hilton",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "A4, DLF Place, Saket District Centre, New Delhi, Delhi 110017",
+    "about": "A modern hotel in the heart of South Delhi, connected to a major shopping mall. It offers comfortable rooms and convenient access to corporate offices and entertainment options.",
+    "basePrice": 9000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/hgi-delhi-1/1080/720", "caption": "Hilton Garden Inn Saket exterior" }
+    ],
+    "roomCategories": [{ "name": "King Room", "count": 114, "size": "270 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "shopping", "new delhi"]
+  },
+  {
+    "name": "Waldorf Astoria Bengaluru",
+    "brand": "Hilton",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "Piazza, Yelahanka, Bengaluru, Karnataka 560064",
+    "about": "Set to be an icon of luxury, the upcoming Waldorf Astoria Bengaluru will offer unparalleled service, exquisite accommodations, and sophisticated dining in the north of the city.",
+    "basePrice": 30000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/waldorf-bengaluru-1/1080/720", "caption": "Artist impression of the hotel" }
+    ],
+    "roomCategories": [{ "name": "King Deluxe Room", "count": 300, "size": "600 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "upcoming", "bengaluru"]
+  },
+  {
+    "name": "DoubleTree by Hilton Goa - Panaji",
+    "brand": "Hilton",
+    "city": "Panaji",
+    "state": "Goa",
+    "address": "Kadamba Plateau, Panjim, Old Goa Rd, Panaji, Goa 403006",
+    "about": "Overlooking the Mandovi River, this hotel offers a serene escape. It features spacious rooms, an infinity pool, and is a short drive from the cultural attractions of Old Goa.",
+    "basePrice": 9000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/doubletree-panaji-1/1080/720", "caption": "Infinity pool overlooking the river" }
+    ],
+    "roomCategories": [{ "name": "King Room", "count": 160, "size": "365 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["river view", "goa", "resort"]
+  },
+  {
+    "name": "Hilton Garden Inn Lucknow",
+    "brand": "Hilton",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "address": "777, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+    "about": "Located in the central business district of Gomti Nagar, this hotel offers modern amenities, comfortable rooms, and a rooftop pool with city views.",
+    "basePrice": 7500,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/hgi-lucknow-1/1080/720", "caption": "Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "King Room", "count": 125, "size": "280 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "lucknow"]
+  },
+  {
+    "name": "Hilton Shillim Estate Retreat & Spa",
+    "brand": "Hilton",
+    "city": "Shilim",
+    "state": "Maharashtra",
+    "address": "Village Shilimb, Pawana Nagar, Taluka Maval, Shilim, Maharashtra 410406",
+    "about": "A wellness retreat nestled in the Sahyadri mountain range, this all-villa property is set within a 320-acre estate. It offers holistic spa treatments, yoga, and meditation.",
+    "basePrice": 25000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/hilton-shillim-1/1080/720", "caption": "Villas amidst nature" }
+    ],
+    "roomCategories": [{ "name": "Forest Villa", "count": 99, "size": "1000 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["wellness", "retreat", "luxury", "nature"]
+  },
+  {
+    "name": "Hilton Goa Resort",
+    "brand": "Hilton",
+    "city": "Candolim",
+    "state": "Goa",
+    "address": "Pilerne - Candolim Rd, Saipem, Candolim, Goa 403515",
+    "about": "Nestled on the rolling hills of Saipem, this resort offers beautiful views of the Nerul River. It features spacious rooms, four outdoor pools, and is a short drive from Candolim beach.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/hilton-goa-1/1080/720", "caption": "Resort pool area" }
+    ],
+    "roomCategories": [{ "name": "King Room with Balcony", "count": 104, "size": "475 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "goa", "family friendly"]
+  },
+  {
+    "name": "DoubleTree by Hilton Jaipur Amer",
+    "brand": "Hilton",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "Kukas, Jaipur, Rajasthan 302028",
+    "about": "Located near the historic Amer Fort, this hotel offers stunning views of the Aravalli range. It's a modern hotel with a blend of Rajasthani design elements.",
+    "basePrice": 8500,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/doubletree-jaipur-1/1080/720", "caption": "Hotel with mountain view" }
+    ],
+    "roomCategories": [{ "name": "Guest Room", "count": 151, "size": "365 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "jaipur"]
+  },
+  {
+    "name": "Hampton by Hilton Vadodara-Alkapuri",
+    "brand": "Hilton",
+    "city": "Vadodara",
+    "state": "Gujarat",
+    "address": "14, Friends Co-op Society, Alkapuri, Vadodara, Gujarat 390007",
+    "about": "A modern and budget-friendly hotel in the heart of Vadodara. It offers clean, comfortable rooms and a free hot breakfast, perfect for business and leisure travelers.",
+    "basePrice": 4500,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/hampton-vadodara-1/1080/720", "caption": "Hampton by Hilton exterior" }
+    ],
+    "roomCategories": [{ "name": "Queen Room", "count": 72, "size": "225 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["budget", "business", "vadodara"]
+  },
+  {
+    "name": "Hilton Garden Inn Trivandrum",
+    "brand": "Hilton",
+    "city": "Thiruvananthapuram",
+    "state": "Kerala",
+    "address": "Punnen Rd, Statue, Palayam, Thiruvananthapuram, Kerala 695039",
+    "about": "Located in the city center, this hotel offers bright and airy rooms, a rooftop pool, and easy access to government offices and tourist attractions like the Padmanabhaswamy Temple.",
+    "basePrice": 7000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/hgi-tvm-1/1080/720", "caption": "Rooftop pool" }
+    ],
+    "roomCategories": [{ "name": "King Room", "count": 134, "size": "280 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["city center", "business", "thiruvananthapuram"]
+  },
+  {
+    "name": "DoubleTree by Hilton Pune Chinchwad",
+    "brand": "Hilton",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "address": "MIDC, Pimpri-Chinchwad, Pune, Maharashtra 411019",
+    "about": "Located in the industrial hub of Pimpri-Chinchwad, this hotel caters to business travelers with its modern amenities, event spaces, and comfortable rooms.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/doubletree-pune-1/1080/720", "caption": "Hotel exterior" }
+    ],
+    "roomCategories": [{ "name": "Guest Room", "count": 115, "size": "345 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "pune"]
+  }
+]

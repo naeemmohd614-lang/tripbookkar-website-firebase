@@ -10,6 +10,7 @@ import oberoiHotels from '@/data/oberoi.json';
 import leelaHotels from '@/data/the-leela.json';
 import hyattHotels from '@/data/hyatt.json';
 import otherHotels from '@/data/other-hotels.json';
+import hiltonHotels from '@/data/hilton.json';
 
 import brandsData from '@/data/brands.json';
 import statesData from '@/data/states.json';
@@ -36,6 +37,7 @@ const allHotelsData = [
   ...oberoiHotels,
   ...leelaHotels,
   ...hyattHotels,
+  ...hiltonHotels,
   ...otherHotels
 ];
 
