@@ -148,6 +148,11 @@ export default function Header() {
   const NavContent = () => (
     <>
       <NavigationMenuItem>
+        <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/' ? "bg-accent" : "")}>
+          <Link href="/">Home</Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
         <NavigationMenuTrigger>Hotels</NavigationMenuTrigger>
         <NavigationMenuContent>
           <ul className="grid w-[200px] gap-1 p-2">
@@ -163,15 +168,11 @@ export default function Header() {
           </ul>
         </NavigationMenuContent>
       </NavigationMenuItem>
-
-      {navLinks.map(({ href, label }) => (
-        <NavigationMenuItem key={href}>
-          <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === href ? "bg-accent" : "")}>
-            <Link href={href}>{label}</Link>
+       <NavigationMenuItem>
+          <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/packages' ? "bg-accent" : "")}>
+            <Link href="/packages">Packages</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-      ))}
-
       <NavigationMenuItem>
         <NavigationMenuTrigger>Experiences</NavigationMenuTrigger>
         <NavigationMenuContent>
@@ -189,6 +190,11 @@ export default function Header() {
           </ul>
         </NavigationMenuContent>
       </NavigationMenuItem>
+      <NavigationMenuItem>
+          <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/contact' ? "bg-accent" : "")}>
+            <Link href="/contact">Contact</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
     </>
   );
 
