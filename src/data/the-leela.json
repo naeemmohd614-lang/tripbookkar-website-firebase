@@ -13,7 +13,15 @@
       { "src": "https://picsum.photos/seed/leela-chennai-1/1080/720", "caption": "Sea view from the hotel" },
       { "src": "https://picsum.photos/seed/leela-chennai-2/1080/720", "caption": "The grand lobby of The Leela Palace" }
     ],
+    "distance": { "Chennai International Airport": "15 km" },
     "roomCategories": [{ "name": "Deluxe Sea View", "count": 326, "size": "540 sqft" }],
+    "diningExperiences": [
+        { "name": "Spectra", "type": "All-day dining" },
+        { "name": "Jamavar", "type": "Indian" },
+        { "name": "China XO", "type": "Chinese" }
+    ],
+    "experiencesAndActivities": [ "ESPA Spa", "Sea-view infinity pool", "City tours" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Royal Room" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["sea view", "chennai", "luxury"]
   },
@@ -30,7 +38,16 @@
         { "src": "https://picsum.photos/seed/leela-delhi-1/1080/720", "caption": "Facade of The Leela Palace New Delhi" },
         { "src": "https://picsum.photos/seed/leela-delhi-2/1080/720", "caption": "Rooftop infinity pool" }
     ],
+    "distance": { "Indira Gandhi International Airport": "15 km" },
     "roomCategories": [{ "name": "Grande Deluxe Room", "count": 254, "size": "580 sqft" }],
+     "diningExperiences": [
+        { "name": "The Qube", "type": "All-day dining" },
+        { "name": "Jamavar", "type": "Indian" },
+        { "name": "Megu", "type": "Japanese" },
+        { "name": "Le Cirque", "type": "French-Italian" }
+    ],
+    "experiencesAndActivities": [ "ESPA Spa", "Rooftop infinity pool", "Personalized city tours" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Royal Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "diplomatic enclave", "new delhi"]
   },
@@ -47,7 +64,16 @@
         { "src": "https://picsum.photos/seed/leela-bengaluru-1/1080/720", "caption": "The Leela Palace Bengaluru gardens" },
         { "src": "https://picsum.photos/seed/leela-bengaluru-2/1080/720", "caption": "The grand lobby interior" }
     ],
+    "distance": { "Kempegowda International Airport": "45 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 284, "size": "520 sqft" }],
+    "diningExperiences": [
+        { "name": "Citrus", "type": "All-day dining" },
+        { "name": "Jamavar", "type": "Indian" },
+        { "name": "Zen", "type": "Pan-Asian" },
+        { "name": "Le Cirque Signature", "type": "French-Italian" }
+    ],
+    "experiencesAndActivities": [ "The Spa", "Lagoon-style pool", "Golf course access" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Royal Ballroom", "Outdoor Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "garden", "bengaluru"]
   },
@@ -64,7 +90,14 @@
         { "src": "https://picsum.photos/seed/leela-udaipur-1/1080/720", "caption": "View of the hotel from Lake Pichola" },
         { "src": "https://picsum.photos/seed/leela-udaipur-2/1080/720", "caption": "Courtyard and pool" }
     ],
+    "distance": { "Maharana Pratap Airport": "27 km" },
     "roomCategories": [{ "name": "Grande Heritage Lake View Room", "count": 80, "size": "600 sqft" }],
+    "diningExperiences": [
+        { "name": "The Dining Room", "type": "All-day dining" },
+        { "name": "Sheesh Mahal", "type": "Indian fine dining" }
+    ],
+    "experiencesAndActivities": [ "ESPA Spa", "Sunset boat cruises", "Destination dining" ],
+    "weddingVenues": [ "The Guava Garden", "The Marwar Lawn", "The Bada Mahal" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "lake view", "romantic", "udaipur"]
   },
@@ -80,7 +113,15 @@
     "images": [
         { "src": "https://picsum.photos/seed/leela-mumbai-1/1080/720", "caption": "The Leela Mumbai gardens" }
     ],
+    "distance": { "Chhatrapati Shivaji Maharaj International Airport": "1.5 km" },
     "roomCategories": [{ "name": "Premier City View Room", "count": 394, "size": "360 sqft" }],
+    "diningExperiences": [
+        { "name": "Jamavar", "type": "Indian" },
+        { "name": "The Great Wall", "type": "Chinese" },
+        { "name": "Le Cirque Signature", "type": "Italian" }
+    ],
+    "experiencesAndActivities": [ "ESPA Spa", "City food tours", "Poolside relaxation" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Royal Room", "The Waterfall Garden" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "luxury", "mumbai"]
   },
@@ -96,7 +137,14 @@
     "images": [
         { "src": "https://picsum.photos/seed/leela-bhartiya-1/1080/720", "caption": "Hotel exterior" }
     ],
+    "distance": { "Kempegowda International Airport": "25 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 281, "size": "480 sqft" }],
+    "diningExperiences": [
+        { "name": "Quattro", "type": "All-day dining" },
+        { "name": "The Lotus Oriental", "type": "Pan-Asian" }
+    ],
+    "experiencesAndActivities": [ "The Spa", "Infinity Pool" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Royal Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "bengaluru"]
   },
@@ -112,7 +160,14 @@
     "images": [
         { "src": "https://picsum.photos/seed/leela-gandhinagar-1/1080/720", "caption": "The grand facade of the hotel" }
     ],
+    "distance": { "Sardar Vallabhbhai Patel International Airport": "22 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 318, "size": "450 sqft" }],
+    "diningExperiences": [
+        { "name": "Citrus Junction", "type": "All-day dining" },
+        { "name": "Diya", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "The Spa", "Infinity Pool", "Mahatma Mandir Convention Centre access" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Mahatma Mandir Convention Centre" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "gandhinagar"]
   },
@@ -128,7 +183,14 @@
     "images": [
         { "src": "https://picsum.photos/seed/leela-jaipur-1/1080/720", "caption": "The Leela Palace Jaipur exterior" }
     ],
+    "distance": { "Jaipur International Airport": "35 km" },
     "roomCategories": [{ "name": "Grand View Room", "count": 200, "size": "650 sqft" }],
+    "diningExperiences": [
+        { "name": "Sukh Mahal", "type": "All-day dining" },
+        { "name": "Mohan Mahal", "type": "Indian fine dining" }
+    ],
+    "experiencesAndActivities": [ "ESPA Spa", "Cooking classes", "City tours" ],
+    "weddingVenues": [ "The Vikramaditya Ballroom", "The Sheesh Mahal Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["palace", "luxury", "jaipur", "resort"]
   },
@@ -144,7 +206,14 @@
     "images": [
         { "src": "https://picsum.photos/seed/leela-ashtamudi-1/1080/720", "caption": "Backwater view from the resort" }
     ],
+    "distance": { "Trivandrum International Airport": "70 km" },
     "roomCategories": [{ "name": "Heritage Room", "count": 93, "size": "450 sqft" }],
+    "diningExperiences": [
+        { "name": "Keraleeyam", "type": "Kerala cuisine" },
+        { "name": "The Riverside", "type": "Grill & Seafood" }
+    ],
+    "experiencesAndActivities": [ "The Spa", "Houseboat cruises", "Cultural performances" ],
+    "weddingVenues": [ "The Lakefront Lawns", "The Banquet Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["backwaters", "wellness", "kerala", "resort"]
   },
@@ -160,7 +229,14 @@
     "images": [
         { "src": "https://picsum.photos/seed/leela-kovalam-1/1080/720", "caption": "View of the hotel on the cliff" }
     ],
+    "distance": { "Trivandrum International Airport": "15 km" },
     "roomCategories": [{ "name": "Beach View Room", "count": 184, "size": "400 sqft" }],
+    "diningExperiences": [
+        { "name": "The Tides", "type": "Seafood" },
+        { "name": "The Terrace", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "The Spa", "Water sports", "Yoga sessions" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Beach Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach resort", "sea view", "kerala", "luxury"]
   }
