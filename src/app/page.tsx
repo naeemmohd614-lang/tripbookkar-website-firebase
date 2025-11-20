@@ -33,6 +33,25 @@ export default function Home() {
     { name: 'Luxury Tents', imageId: 'interest-tents', hint: 'glamping tent', href: '/interests/luxury-tents', icon: Tent },
     { name: 'Milestone Celebrations', imageId: 'interest-milestones', hint: 'special occasion party', href: '/interests/milestone-celebrations', icon: Sparkles },
   ];
+  
+  const stateImages: { [key: string]: { src: string, caption: string } } = {
+    karnataka: { src: 'https://images.unsplash.com/photo-1662904264665-f53f797a47fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsYW5kc2NhcGUlMjBvZiUyMEthcm5hdGFrYXxlbnwwfHx8fDE3NjM2NzA4ODd8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Karnataka' },
+    goa: { src: 'https://images.unsplash.com/photo-1750379819414-9b4d3ab443dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYW5kc2NhcGUlMjBvZiUyMEdvYXxlbnwwfHx8fDE3NjM2NzA4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Goa' },
+    rajasthan: { src: 'https://images.unsplash.com/photo-1646204892121-1b7010701cd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kc2NhcGUlMjBvZiUyMFJhamFzdGhhbnxlbnwwfHx8fDE3NjM2NzA4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Rajasthan' },
+    kerala: { src: 'https://images.unsplash.com/photo-1643534304426-c7b5148201bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kc2NhcGUlMjBvZiUyMEtlcmFsYXxlbnwwfHx8fDE3NjM2NzA4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Kerala' },
+    maharashtra: { src: 'https://images.unsplash.com/photo-1708867817499-148b23e2603d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kc2NhcGUlMjBvZiUyME1haGFyYXNodHJhfGVufDB8fHx8MTc2MzY3MDg4N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Maharashtra' },
+    'himachal-pradesh': { src: 'https://images.unsplash.com/photo-1654189675562-4d96b0a3de42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsYW5kc2NhcGUlMjBvZiUyMEhpbWFjaGFsJTIwUHJhZGVzaHxlbnwwfHx8fDE3NjM2NzA4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Himachal Pradesh' },
+    uttarakhand: { src: 'https://images.unsplash.com/photo-1623591999327-4197396028af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGUlMjBvZiUyMFV0dGFyYWtoYW5kfGVufDB8fHx8MTc2MzY3MDg4Nnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Uttarakhand' },
+    'jammu-and-kashmir': { src: 'https://images.unsplash.com/photo-1661536663209-e5f22a92c722?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsYW5kc2NhcGUlMjBvZiUyMEphbW11JTIwYW5kJTIwS2FzaG1pcnxlbnwwfHx8fDE3NjM2NzA4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Jammu and Kashmir' },
+    sikkim: { src: 'https://images.unsplash.com/photo-1633323773495-42816a4e8920?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsYW5kc2NhcGUlMjBvZiUyMFNpa2tpbXxlbnwwfHx8fDE3NjM2NzA4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Sikkim' },
+    'west-bengal': { src: 'https://images.unsplash.com/photo-1699387948969-af05ca0cdacc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYW5kc2NhcGUlMjBvZiUyMFdlc3QlMjBCZW5nYWx8ZW58MHx8fHwxNzYzNjcwODg2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of West Bengal' },
+    'tamil-nadu': { src: 'https://images.unsplash.com/photo-1622182474659-f13d68140bfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsYW5kc2NhcGUlMjBvZiUyMFRhbWlsJTIwTmFkdXxlbnwwfHx8fDE3NjM2NzA4ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Tamil Nadu' },
+    'uttar-pradesh': { src: 'https://images.unsplash.com/photo-1762514121927-3d68faac1b84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsYW5kc2NhcGUlMjBvZiUyMFV0dGFyJTIwUHJhZGVzaHxlbnwwfHx8fDE3NjM2NzA4ODd8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Uttar Pradesh' },
+    'madhya-pradesh': { src: 'https://images.unsplash.com/photo-1642152655253-9f1b70c8a0d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kc2NhcGUlMjBvZiUyME1hZGh5YSUyMFByYWRlc2h8ZW58MHx8fHwxNzYzNjcwODg2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Madhya Pradesh' },
+    gujarat: { src: 'https://images.unsplash.com/photo-1663693953045-2e97fc0b23c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kc2NhcGUlMjBvZiUyMEd1amFyYXR8ZW58MHx8fHwxNzYzNjcwODg2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Gujarat' },
+    delhi: { src: 'https://images.unsplash.com/photo-1609670289875-590e8ec05c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGUlMjBvZiUyMERlbGhpfGVufDB8fHx8MTc2MzY3MDg4N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Delhi' },
+  };
+
 
   return (
     <div className="flex flex-col">
@@ -110,10 +129,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {states.map((state) => {
-              const stateImage = {
-                  "src": `https://picsum.photos/seed/${state.stateId}/400/300`,
-                  "caption": `landscape of ${state.name}`
-              };
+               const stateImage = stateImages[state.stateId] || { src: `https://picsum.photos/seed/${state.stateId}/400/300`, caption: `landscape of ${state.name}` };
               return (
                 <Link href={`/states/${state.stateId}`} key={state.stateId}>
                   <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
