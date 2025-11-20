@@ -18,11 +18,11 @@ export default function Home() {
 
   const interests = [
     { name: 'Beaches', imageId: 'interest-beaches', hint: 'beach sunset', href: '/interests/beaches' },
-    { name: 'Mountains', imageId: 'interest-mountains', hint: 'mountain range', href: '#' },
-    { name: 'Heritage', imageId: 'interest-heritage', hint: 'ancient temple', href: '#' },
-    { name: 'Wildlife', imageId: 'interest-wildlife', hint: 'tiger wildlife', href: '#' },
-    { name: 'Adventure', imageId: 'interest-adventure', hint: 'mountain climbing', href: '#' },
-    { name: 'Spiritual', imageId: 'interest-spiritual', hint: 'yoga meditation', href: '#' },
+    { name: 'Mountains', imageId: 'interest-mountains', hint: 'mountain range', href: '/interests/mountains' },
+    { name: 'Heritage', imageId: 'interest-heritage', hint: 'ancient temple', href: '/interests/heritage' },
+    { name: 'Wildlife', imageId: 'interest-wildlife', hint: 'tiger wildlife', href: '/interests/wildlife' },
+    { name: 'Adventure', imageId: 'interest-adventure', hint: 'mountain climbing', href: '/interests/adventure' },
+    { name: 'Spiritual', imageId: 'interest-spiritual', hint: 'yoga meditation', href: '/interests/spiritual' },
   ];
 
   return (
