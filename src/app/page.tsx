@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin, Package } from "lucide-react";
+import { ArrowRight, MapPin, Package, HeartPulse, Cake, Sun, Building2, Tent, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -23,6 +23,12 @@ export default function Home() {
     { name: 'Wildlife', imageId: 'interest-wildlife', hint: 'tiger wildlife', href: '/interests/wildlife' },
     { name: 'Adventure', imageId: 'interest-adventure', hint: 'mountain climbing', href: '/interests/adventure' },
     { name: 'Spiritual', imageId: 'interest-spiritual', hint: 'yoga meditation', href: '/interests/spiritual' },
+    { name: 'Wellness Resorts', imageId: 'interest-wellness', hint: 'spa meditation', href: '/interests/wellness', icon: HeartPulse },
+    { name: 'Weddings', imageId: 'interest-weddings', hint: 'destination wedding', href: '/interests/weddings', icon: Cake },
+    { name: 'Desert Experiences', imageId: 'interest-desert', hint: 'sand dunes', href: '/interests/desert', icon: Sun },
+    { name: 'Boutique Hotels', imageId: 'interest-boutique', hint: 'charming hotel', href: '/interests/boutique', icon: Building2 },
+    { name: 'Luxury Tents', imageId: 'interest-tents', hint: 'glamping tent', href: '/interests/luxury-tents', icon: Tent },
+    { name: 'Milestone Celebrations', imageId: 'interest-milestones', hint: 'special occasion party', href: '/interests/milestone-celebrations', icon: Sparkles },
   ];
 
   return (
@@ -62,7 +68,7 @@ export default function Home() {
               Find the perfect trip based on what you love to do.
             </p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {interests.map((interest) => {
               const interestImage = {
                   "src": `https://picsum.photos/seed/${interest.imageId}/600/400`,
