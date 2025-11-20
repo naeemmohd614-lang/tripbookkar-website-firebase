@@ -13,13 +13,21 @@
       { "src": "https://picsum.photos/seed/hilton-chennai-1/1080/720", "caption": "Hilton Chennai exterior" },
       { "src": "https://picsum.photos/seed/hilton-chennai-2/1080/720", "caption": "Rooftop infinity pool" }
     ],
+    "distance": { "Chennai International Airport": "15 km" },
     "roomCategories": [{ "name": "King Guest Room", "count": 250, "size": "355 sqft" }],
+    "diningExperiences": [
+        { "name": "Aaleeshan", "type": "Indian" },
+        { "name": "Vasco's", "type": "All-day dining" },
+        { "name": "Q Bar", "type": "Rooftop Lounge" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Fitness Center", "Spa" ],
+    "weddingVenues": [ "The Grand Ballroom", "Hilton Meetings" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "chennai"]
   },
   {
     "name": "Conrad Bengaluru",
-    "brand": "Hilton",
+    "brand": "Conrad",
     "city": "Bengaluru",
     "state": "Karnataka",
     "address": "25/3, Kensington Rd, Someshwarpura, Ulsoor, Bengaluru, Karnataka 560008",
@@ -30,7 +38,15 @@
       { "src": "https://picsum.photos/seed/conrad-bengaluru-1/1080/720", "caption": "Conrad Bengaluru exterior view" },
       { "src": "https://picsum.photos/seed/conrad-bengaluru-2/1080/720", "caption": "Lobby and lounge area" }
     ],
+    "distance": { "Kempegowda International Airport": "38 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 285, "size": "452 sqft" }],
+    "diningExperiences": [
+        { "name": "Caraway Kitchen", "type": "Indian" },
+        { "name": "Tiamo", "type": "Mediterranean" },
+        { "name": "Mikusu", "type": "Pan-Asian" }
+    ],
+    "experiencesAndActivities": [ "Conrad Spa", "Temperature-controlled infinity pool", "Fitness center" ],
+    "weddingVenues": [ "Grand Ballroom", "The Senate" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "lake view", "bengaluru"]
   },
@@ -46,13 +62,21 @@
     "images": [
       { "src": "https://picsum.photos/seed/hilton-mumbai-1/1080/720", "caption": "Palace-style exterior of the hotel" }
     ],
+    "distance": { "Chhatrapati Shivaji Maharaj International Airport": "2 km" },
     "roomCategories": [{ "name": "King Guest Room", "count": 171, "size": "388 sqft" }],
+    "diningExperiences": [
+        { "name": "The Brasserie", "type": "All-day dining" },
+        { "name": "Imperial China", "type": "Chinese" },
+        { "name": "The Lounge Bar", "type": "Bar" }
+    ],
+    "experiencesAndActivities": [ "Outdoor Pool", "Fitness Center", "Spa services" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Chancellor" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "colonial", "mumbai"]
   },
   {
     "name": "Conrad Pune",
-    "brand": "Hilton",
+    "brand": "Conrad",
     "city": "Pune",
     "state": "Maharashtra",
     "address": "7, Mangaldas Rd, Sangamvadi, Pune, Maharashtra 411001",
@@ -62,13 +86,21 @@
     "images": [
       { "src": "https://picsum.photos/seed/conrad-pune-1/1080/720", "caption": "Conrad Pune exterior" }
     ],
+    "distance": { "Pune International Airport": "10 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 310, "size": "452 sqft" }],
+    "diningExperiences": [
+        { "name": "Coriander Kitchen", "type": "Multi-cuisine" },
+        { "name": "Koji", "type": "Pan-Asian" },
+        { "name": "Zeera", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Conrad Spa", "Outdoor Pool", "Fitness Center" ],
+    "weddingVenues": [ "Grand Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "art deco", "pune"]
   },
   {
     "name": "DoubleTree Suites by Hilton Bangalore",
-    "brand": "Hilton",
+    "brand": "DoubleTree by Hilton",
     "city": "Bengaluru",
     "state": "Karnataka",
     "address": "Iblur Gate, Outer Ring Road, Sarjapur, Bengaluru, Karnataka 560102",
@@ -78,7 +110,14 @@
     "images": [
       { "src": "https://picsum.photos/seed/doubletree-bengaluru-1/1080/720", "caption": "Hotel exterior" }
     ],
+    "distance": { "Kempegowda International Airport": "48 km" },
     "roomCategories": [{ "name": "King Studio Suite", "count": 172, "size": "475 sqft" }],
+    "diningExperiences": [
+        { "name": "Asia Alive", "type": "Pan-Asian" },
+        { "name": "Equinox", "type": "Lounge" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Fitness Center", "Spa" ],
+    "weddingVenues": [ "Grand Ballroom", "Meeting Rooms" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "all-suite", "bengaluru"]
   },
@@ -94,13 +133,20 @@
     "images": [
       { "src": "https://picsum.photos/seed/hilton-jaipur-1/1080/720", "caption": "Rooftop pool area" }
     ],
+    "distance": { "Jaipur International Airport": "11 km" },
     "roomCategories": [{ "name": "King Guest Room", "count": 179, "size": "377 sqft" }],
+    "diningExperiences": [
+        { "name": "Aurum", "type": "All-day dining" },
+        { "name": "Chaandi", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Fitness Center", "Spa" ],
+    "weddingVenues": [ "The Turquoise Ballroom", "The Jade Garden" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["city view", "jaipur", "modern"]
   },
   {
     "name": "DoubleTree by Hilton Hotel Agra",
-    "brand": "Hilton",
+    "brand": "DoubleTree by Hilton",
     "city": "Agra",
     "state": "Uttar Pradesh",
     "address": "B/H - 1&2, Taj Nagri Phase 2, Agra, Uttar Pradesh 282001",
@@ -110,13 +156,20 @@
     "images": [
       { "src": "https://picsum.photos/seed/doubletree-agra-1/1080/720", "caption": "Rooftop pool with Taj Mahal view" }
     ],
+    "distance": { "Agra Airport": "12 km" },
     "roomCategories": [{ "name": "Guest Room", "count": 104, "size": "345 sqft" }],
+    "diningExperiences": [
+        { "name": "North 27", "type": "All-day dining" },
+        { "name": "Kebab-e-Que", "type": "Indian Grill" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Infinity Pool", "Fitness Center", "Spa" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Poolside Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["taj mahal view", "agra"]
   },
   {
     "name": "Hilton Garden Inn, New Delhi/Saket",
-    "brand": "Hilton",
+    "brand": "Hilton Garden Inn",
     "city": "New Delhi",
     "state": "Delhi",
     "address": "A4, DLF Place, Saket District Centre, New Delhi, Delhi 110017",
@@ -126,13 +179,19 @@
     "images": [
       { "src": "https://picsum.photos/seed/hgi-delhi-1/1080/720", "caption": "Hilton Garden Inn Saket exterior" }
     ],
+    "distance": { "Indira Gandhi International Airport": "15 km" },
     "roomCategories": [{ "name": "King Room", "count": 114, "size": "270 sqft" }],
+    "diningExperiences": [
+        { "name": "India Grill", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Outdoor Pool", "24-hour Fitness Center" ],
+    "weddingVenues": [ "The Ballroom", "Meeting Rooms" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "shopping", "new delhi"]
   },
   {
     "name": "Waldorf Astoria Bengaluru",
-    "brand": "Hilton",
+    "brand": "Waldorf Astoria",
     "city": "Bengaluru",
     "state": "Karnataka",
     "address": "Piazza, Yelahanka, Bengaluru, Karnataka 560064",
@@ -142,13 +201,19 @@
     "images": [
       { "src": "https://picsum.photos/seed/waldorf-bengaluru-1/1080/720", "caption": "Artist impression of the hotel" }
     ],
+    "distance": { "Kempegowda International Airport": "20 km" },
     "roomCategories": [{ "name": "King Deluxe Room", "count": 300, "size": "600 sqft" }],
+    "diningExperiences": [
+        { "name": "Peacock Alley", "type": "Lounge" }
+    ],
+    "experiencesAndActivities": [ "Waldorf Astoria Spa", "Temperature-controlled Pool" ],
+    "weddingVenues": [ "The Grand Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "upcoming", "bengaluru"]
   },
   {
     "name": "DoubleTree by Hilton Goa - Panaji",
-    "brand": "Hilton",
+    "brand": "DoubleTree by Hilton",
     "city": "Panaji",
     "state": "Goa",
     "address": "Kadamba Plateau, Panjim, Old Goa Rd, Panaji, Goa 403006",
@@ -158,13 +223,20 @@
     "images": [
       { "src": "https://picsum.photos/seed/doubletree-panaji-1/1080/720", "caption": "Infinity pool overlooking the river" }
     ],
+    "distance": { "Dabolim Airport": "28 km" },
     "roomCategories": [{ "name": "King Room", "count": 160, "size": "365 sqft" }],
+    "diningExperiences": [
+        { "name": "Comida", "type": "Multi-cuisine" },
+        { "name": "Rio Salao", "type": "Lounge Bar" }
+    ],
+    "experiencesAndActivities": [ "Infinity Pool", "Kids' Club", "Spa" ],
+    "weddingVenues": [ "The Grand Ballroom", "Outdoor Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["river view", "goa", "resort"]
   },
   {
     "name": "Hilton Garden Inn Lucknow",
-    "brand": "Hilton",
+    "brand": "Hilton Garden Inn",
     "city": "Lucknow",
     "state": "Uttar Pradesh",
     "address": "777, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
@@ -174,7 +246,13 @@
     "images": [
       { "src": "https://picsum.photos/seed/hgi-lucknow-1/1080/720", "caption": "Hotel exterior" }
     ],
+    "distance": { "Chaudhary Charan Singh International Airport": "25 km" },
     "roomCategories": [{ "name": "King Room", "count": 125, "size": "280 sqft" }],
+    "diningExperiences": [
+        { "name": "The Garden Grille & Bar", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Fitness Center" ],
+    "weddingVenues": [ "The Ballroom", "Meeting Rooms" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "lucknow"]
   },
@@ -190,7 +268,14 @@
     "images": [
       { "src": "https://picsum.photos/seed/hilton-shillim-1/1080/720", "caption": "Villas amidst nature" }
     ],
+    "distance": { "Pune International Airport": "65 km" },
     "roomCategories": [{ "name": "Forest Villa", "count": 99, "size": "1000 sqft" }],
+    "diningExperiences": [
+        { "name": "Terrazzo", "type": "Wellness" },
+        { "name": "The Green Table", "type": "Organic" }
+    ],
+    "experiencesAndActivities": [ "The Shillim Spa", "Yoga & Meditation", "Trekking", "Cooking School" ],
+    "weddingVenues": [ "The Reserve (Private Forest)" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "retreat", "luxury", "nature"]
   },
@@ -206,13 +291,20 @@
     "images": [
       { "src": "https://picsum.photos/seed/hilton-goa-1/1080/720", "caption": "Resort pool area" }
     ],
+    "distance": { "Dabolim Airport": "35 km" },
     "roomCategories": [{ "name": "King Room with Balcony", "count": 104, "size": "475 sqft" }],
+    "diningExperiences": [
+        { "name": "Saipe", "type": "All-day dining" },
+        { "name": "Doce", "type": "Coffee Lounge" }
+    ],
+    "experiencesAndActivities": [ "Four outdoor pools", "Kids' Club", "Spa" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "goa", "family friendly"]
   },
   {
     "name": "DoubleTree by Hilton Jaipur Amer",
-    "brand": "Hilton",
+    "brand": "DoubleTree by Hilton",
     "city": "Jaipur",
     "state": "Rajasthan",
     "address": "Kukas, Jaipur, Rajasthan 302028",
@@ -222,13 +314,20 @@
     "images": [
       { "src": "https://picsum.photos/seed/doubletree-jaipur-1/1080/720", "caption": "Hotel with mountain view" }
     ],
+    "distance": { "Jaipur International Airport": "28 km" },
     "roomCategories": [{ "name": "Guest Room", "count": 151, "size": "365 sqft" }],
+    "diningExperiences": [
+        { "name": "The Amber Kitchen", "type": "All-day dining" },
+        { "name": "The Onyx Bar", "type": "Bar" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Spa", "Fitness Center" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Garden" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["mountain view", "jaipur"]
   },
   {
     "name": "Hampton by Hilton Vadodara-Alkapuri",
-    "brand": "Hilton",
+    "brand": "Hampton by Hilton",
     "city": "Vadodara",
     "state": "Gujarat",
     "address": "14, Friends Co-op Society, Alkapuri, Vadodara, Gujarat 390007",
@@ -238,13 +337,17 @@
     "images": [
       { "src": "https://picsum.photos/seed/hampton-vadodara-1/1080/720", "caption": "Hampton by Hilton exterior" }
     ],
+    "distance": { "Vadodara Airport": "8 km" },
     "roomCategories": [{ "name": "Queen Room", "count": 72, "size": "225 sqft" }],
+    "diningExperiences": [],
+    "experiencesAndActivities": [ "Fitness Center" ],
+    "weddingVenues": [ "Meeting Rooms" ],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["budget", "business", "vadodara"]
   },
   {
     "name": "Hilton Garden Inn Trivandrum",
-    "brand": "Hilton",
+    "brand": "Hilton Garden Inn",
     "city": "Thiruvananthapuram",
     "state": "Kerala",
     "address": "Punnen Rd, Statue, Palayam, Thiruvananthapuram, Kerala 695039",
@@ -254,13 +357,19 @@
     "images": [
       { "src": "https://picsum.photos/seed/hgi-tvm-1/1080/720", "caption": "Rooftop pool" }
     ],
+    "distance": { "Trivandrum International Airport": "5 km" },
     "roomCategories": [{ "name": "King Room", "count": 134, "size": "280 sqft" }],
+    "diningExperiences": [
+        { "name": "Garden Grille & Bar", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "24-hour Fitness Center" ],
+    "weddingVenues": [ "The Grand Ballroom" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["city center", "business", "thiruvananthapuram"]
   },
   {
     "name": "DoubleTree by Hilton Pune Chinchwad",
-    "brand": "Hilton",
+    "brand": "DoubleTree by Hilton",
     "city": "Pune",
     "state": "Maharashtra",
     "address": "MIDC, Pimpri-Chinchwad, Pune, Maharashtra 411019",
@@ -270,7 +379,14 @@
     "images": [
       { "src": "https://picsum.photos/seed/doubletree-pune-1/1080/720", "caption": "Hotel exterior" }
     ],
+    "distance": { "Pune International Airport": "20 km" },
     "roomCategories": [{ "name": "Guest Room", "count": 115, "size": "345 sqft" }],
+    "diningExperiences": [
+        { "name": "3 Spices", "type": "Multi-cuisine" },
+        { "name": "Miyuki", "type": "Japanese" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Spa", "Fitness Center" ],
+    "weddingVenues": [ "The Grand Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "pune"]
   }
