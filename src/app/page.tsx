@@ -1,4 +1,5 @@
 
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, Package, HeartPulse, Cake, Sun, Building2, Tent, Sparkles } from "lucide-react";
@@ -8,7 +9,9 @@ import { Separator } from "@/components/ui/separator";
 import SearchForm from "@/components/search-form";
 import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
-import { states, featuredPackages, destinationsByMonth } from "@/lib/data";
+import { states, featuredPackages, destinationsByMonth, hotels } from "@/lib/data";
+import HotelCard from "@/components/hotel-card";
+import type { Hotel } from "@/lib/types";
 
 export default function Home() {
   const heroImage = {
@@ -190,7 +193,6 @@ export default function Home() {
         </div>
       </section>
 
-
       <Separator />
 
       <section id="packages" className="py-16 md:py-24 bg-secondary/50">
@@ -212,6 +214,33 @@ export default function Home() {
             <Button asChild size="lg">
               <Link href="/packages">
                 View All Packages <ArrowRight className="ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Separator />
+
+      <section id="hotels" className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
+              Featured Hotels
+            </h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Handpicked hotels for a luxurious and comfortable stay.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(hotels as Hotel[]).slice(0, 3).map((hotel) => (
+              <HotelCard key={hotel.hotelId} hotel={hotel} />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild size="lg">
+              <Link href="/hotels">
+                View All Hotels <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>
