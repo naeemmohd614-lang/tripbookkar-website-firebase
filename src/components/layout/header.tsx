@@ -28,7 +28,8 @@ import {
   Tent,
   Train,
   HeartPulse,
-  Cake
+  Cake,
+  Phone
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -63,6 +64,7 @@ import { Separator } from '../ui/separator';
 
 const navLinks = [
   { href: '/packages', label: 'Packages', icon: Package },
+  { href: '/contact', label: 'Contact', icon: Phone },
 ];
 
 const hotelBrands = [
