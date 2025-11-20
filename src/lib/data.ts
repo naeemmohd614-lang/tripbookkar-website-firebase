@@ -1,5 +1,4 @@
 
-
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
 import type { Destination, Brand, State, City, Hotel, MonthDestination, Attraction } from './types';
@@ -11,6 +10,10 @@ import leelaHotels from '@/data/the-leela.json';
 import hyattHotels from '@/data/hyatt.json';
 import otherHotels from '@/data/other-hotels.json';
 import hiltonHotels from '@/data/hilton.json';
+import accorHotels from '@/data/accor.json';
+import ihgHotels from '@/data/ihg.json';
+import radissonHotels from '@/data/radisson.json';
+
 
 import brandsData from '@/data/brands.json';
 import statesData from '@/data/states.json';
@@ -38,6 +41,9 @@ const allHotelsData = [
   ...leelaHotels,
   ...hyattHotels,
   ...hiltonHotels,
+  ...accorHotels,
+  ...ihgHotels,
+  ...radissonHotels,
   ...otherHotels
 ];
 

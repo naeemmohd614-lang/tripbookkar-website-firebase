@@ -1,0 +1,73 @@
+
+[
+  {
+    "name": "Radisson Blu Marina Hotel Connaught Place",
+    "brand": "Radisson Blu",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "G-59, Connaught Circus, New Delhi, Delhi 110001",
+    "about": "A heritage hotel in the heart of Delhi, offering a blend of colonial charm and modern luxury. Its central location provides easy access to business hubs and historical sites.",
+    "basePrice": 12000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-delhi-1/1080/720", "caption": "Radisson Blu Marina Hotel exterior" }
+    ],
+    "distance": { "Indira Gandhi International Airport": "15 km" },
+    "roomCategories": [{ "name": "Superior Room", "count": 90, "size": "280 sqft" }],
+    "diningExperiences": [
+        { "name": "The Great Kabab Factory", "type": "Indian" },
+        { "name": "Fifty9", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Spa", "Fitness Center" ],
+    "weddingVenues": [ "The Connaught Hall" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "business", "downtown", "new delhi"]
+  },
+  {
+    "name": "Radisson Gwalior",
+    "brand": "Radisson",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "address": "Plot No 13-14, City Centre, Gwalior, Madhya Pradesh 474011",
+    "about": "A modern hotel located in the city center, offering comfortable accommodations and a range of amenities for business and leisure travelers. It's a great base for exploring Gwalior Fort.",
+    "basePrice": 7000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-gwalior/1080/720", "caption": "Radisson Gwalior exterior" }
+    ],
+    "distance": { "Gwalior Airport": "12 km" },
+    "roomCategories": [{ "name": "Superior Room", "count": 89, "size": "300 sqft" }],
+    "diningExperiences": [
+        { "name": "Indish", "type": "Indian" },
+        { "name": "The Creative Kitchen", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Fitness Center", "Spa" ],
+    "weddingVenues": [ "The Grand Ballroom", "Meeting Rooms" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city hotel", "gwalior"]
+  },
+  {
+    "name": "Radisson Blu Hotel Indore",
+    "brand": "Radisson Blu",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "address": "12, Scheme 94C, Ring Road, Indore, Madhya Pradesh 452010",
+    "about": "A stylish hotel offering upscale amenities, including a rooftop pool and fine dining restaurants. It's a popular choice for business and leisure travelers in Indore.",
+    "basePrice": 11000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-indore/1080/720", "caption": "Rooftop pool area" }
+    ],
+    "distance": { "Devi Ahilya Bai Holkar Airport": "16 km" },
+    "roomCategories": [{ "name": "Superior Room", "count": 200, "size": "377 sqft" }],
+     "diningExperiences": [
+        { "name": "The Creative Kitchen", "type": "All-day dining" },
+        { "name": "Ni Hao", "type": "Chinese" },
+        { "name": "Indore Kitchen", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Sky-lit rooftop pool", "Spa", "Fitness Center" ],
+    "weddingVenues": [ "The Grand Summit Ballroom", "The Senate Hall" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "indore"]
+  }
+]
