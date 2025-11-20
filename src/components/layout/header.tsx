@@ -71,6 +71,7 @@ const hotelBrands = [
   { title: "Oberoi", href: "/brands/oberoi" },
   { title: "Hyatt", href: "/brands/hyatt" },
   { title: "The Leela", href: "/brands/the-leela" },
+  { title: "The Lalit", href: "/brands/the-lalit" },
   { title: "IHG", href: "/brands/ihg" },
   { title: "Radisson", href: "/brands/radisson" },
   { title: "Accor", href: "/brands/accor" },
