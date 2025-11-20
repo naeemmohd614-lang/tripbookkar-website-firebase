@@ -1,4 +1,5 @@
 
+
 [
   {
     "brandSlug": "the-ritz-carlton",
@@ -64,7 +65,7 @@
     "totalHotels": 110
   },
   {
-    "brandSlug": "westin",
+    "brandSlug": "the-westin",
     "name": "The Westin",
     "logo": "",
     "description": "A brand focused on wellness and rejuvenation for travelers.",
@@ -329,11 +330,139 @@
     "description": "InterContinental Hotels Group is a British multinational hospitality company.",
     "totalHotels": 50
   },
-   {
+  {
     "brandSlug": "accor",
     "name": "Accor",
     "logo": "",
     "description": "A French multinational hospitality company that owns, manages and franchises hotels, resorts and vacation properties.",
     "totalHotels": 60
+  },
+  {
+    "brandSlug": "intercontinental",
+    "name": "InterContinental",
+    "logo": "",
+    "description": "IHG's flagship luxury brand, known for its international standards and local cultural insights.",
+    "totalHotels": 200
+  },
+  {
+    "brandSlug": "crowne-plaza",
+    "name": "Crowne Plaza",
+    "logo": "",
+    "description": "A premium hotel brand by IHG, designed for business travelers and meetings.",
+    "totalHotels": 400
+  },
+  {
+    "brandSlug": "holiday-inn",
+    "name": "Holiday Inn",
+    "logo": "",
+    "description": "One of the world's most recognized hotel brands, offering comfortable and affordable stays.",
+    "totalHotels": 1200
+  },
+  {
+    "brandSlug": "radisson-blu",
+    "name": "Radisson Blu",
+    "logo": "",
+    "description": "An upper-upscale hotel brand that delivers a positive and personalized service in stylish spaces.",
+    "totalHotels": 380
+  },
+  {
+    "brandSlug": "park-plaza",
+    "name": "Park Plaza",
+    "logo": "",
+    "description": "A brand offering smart, spirited service in a welcoming atmosphere at locations in city centers.",
+    "totalHotels": 50
+  },
+  {
+    "brandSlug": "pullman",
+    "name": "Pullman",
+    "logo": "",
+    "description": "Accor's upscale international brand for cosmopolitan travelers.",
+    "totalHotels": 120
+  },
+  {
+    "brandSlug": "novotel",
+    "name": "Novotel",
+    "logo": "",
+    "description": "A midscale hotel brand offering consistent quality and a spacious, modular room design.",
+    "totalHotels": 530
+  },
+  {
+    "brandSlug": "mercure",
+    "name": "Mercure",
+    "logo": "",
+    "description": "A midscale brand with hotels that are locally inspired and managed by passionate hoteliers.",
+    "totalHotels": 810
+  },
+  {
+    "brandSlug": "ibis",
+    "name": "ibis",
+    "logo": "",
+    "description": "A leading economy hotel brand, known for its modern design, comfort, and affordable prices.",
+    "totalHotels": 1200
+  },
+  {
+    "brandSlug": "fairmont",
+    "name": "Fairmont",
+    "logo": "",
+    "description": "An iconic collection of historic and landmark hotels, offering luxury and unforgettable experiences.",
+    "totalHotels": 80
+  },
+  {
+    "brandSlug": "sofitel",
+    "name": "Sofitel",
+    "logo": "",
+    "description": "A luxury brand that blends local culture with French art de vivre.",
+    "totalHotels": 120
+  },
+  {
+    "brandSlug": "ibis-styles",
+    "name": "ibis Styles",
+    "logo": "",
+    "description": "A non-standardized economy brand where each hotel has a unique and creative design.",
+    "totalHotels": 560
+  },
+  {
+    "brandSlug": "grand-mercure",
+    "name": "Grand Mercure",
+    "logo": "",
+    "description": "An upscale brand that offers a journey into the local culture with a premium touch.",
+    "totalHotels": 55
+  },
+  {
+    "brandSlug": "banyan-tree",
+    "name": "Banyan Tree",
+    "logo": "",
+    "description": "A luxury brand offering a sanctuary for the senses with a focus on romance and rejuvenation.",
+    "totalHotels": 48
+  },
+  {
+    "brandSlug": "angsana",
+    "name": "Angsana",
+    "logo": "",
+    "description": "A brand that brings the adventure back into travel, offering vibrant and fun-filled experiences.",
+    "totalHotels": 15
+  },
+  {
+    "brandSlug": "raffles",
+    "name": "Raffles",
+    "logo": "",
+    "description": "A legendary brand known for its timeless elegance, bespoke service, and historic hotels.",
+    "totalHotels": 15
+  },
+  {
+    "brandSlug": "movenpick",
+    "name": "Mövenpick",
+    "logo": "",
+    "description": "A premium brand from Switzerland, known for making ordinary moments extraordinary.",
+    "totalHotels": 90
+  },
+  {
+    "brandSlug": "swissotel",
+    "name": "Swissôtel",
+    "logo": "",
+    "description": "A premium Swiss hotel brand that combines Alpine vitality with intelligent design.",
+    "totalHotels": 30
   }
 ]
+
+    
