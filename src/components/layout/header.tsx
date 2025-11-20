@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -69,6 +70,11 @@ const hotelBrands = [
   { title: "Taj", href: "/brands/taj" },
   { title: "Oberoi", href: "/brands/oberoi" },
   { title: "Hyatt", href: "/brands/hyatt" },
+  { title: "The Leela", href: "/brands/the-leela" },
+  { title: "IHG", href: "/brands/ihg" },
+  { title: "Radisson", href: "/brands/radisson" },
+  { title: "Accor", href: "/brands/accor" },
+  { title: "Hilton", href: "/brands/hilton" },
 ];
 
 const experiences = [
