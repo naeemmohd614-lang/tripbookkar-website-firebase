@@ -685,5 +685,24 @@
     "roomCategories": [{ "name": "Cottage", "count": 10, "size": "350 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "12:00 PM", "checkOut": "11:00 AM" },
     "tags": ["cottage", "pet friendly", "auli"]
+  },
+  {
+    "name": "Suryagarh Jaisalmer",
+    "brand": "Suryagarh",
+    "city": "Jaisalmer",
+    "state": "Rajasthan",
+    "address": "Kahala Phata, Sam Road, Jaisalmer, Rajasthan 345001",
+    "about": "Suryagarh is a luxurious fortress hotel in the Thar Desert. It offers a unique blend of modern luxury and traditional Rajasthani architecture, providing an unforgettable desert experience.",
+    "basePrice": 20000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/suryagarh-jaisalmer-1/1080/720", "caption": "Suryagarh Jaisalmer exterior" },
+      { "src": "https://picsum.photos/seed/suryagarh-jaisalmer-2/1080/720", "caption": "Courtyard at night" }
+    ],
+    "roomCategories": [{ "name": "Fort Room", "count": 72, "size": "450 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "desert", "heritage", "jaisalmer", "boutique"]
   }
 ]
+
+    
