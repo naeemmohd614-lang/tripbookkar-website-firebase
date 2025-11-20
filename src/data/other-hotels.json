@@ -1,6 +1,89 @@
 
 [
   {
+    "name": "The Lalit New Delhi",
+    "brand": "The Lalit",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Barakhamba Avenue, Connaught Place, New Delhi, Delhi 110001",
+    "about": "Located in the heart of the city's business and shopping district, The Lalit New Delhi offers a luxurious stay with contemporary design, fine dining restaurants, and a world-class spa.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/lalit-delhi-1/1080/720", "caption": "The Lalit New Delhi exterior" },
+      { "src": "https://picsum.photos/seed/lalit-delhi-2/1080/720", "caption": "Luxurious hotel lobby" }
+    ],
+    "distance": { "Indira Gandhi International Airport": "15 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 461, "size": "350 sqft" }],
+    "diningExperiences": [
+        { "name": "Baluchi", "type": "Indian" },
+        { "name": "OKO", "type": "Pan-Asian" },
+        { "name": "24/7 Restaurant", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "Rejuve - The Spa", "Kitty Su Nightclub", "Art Junction" ],
+    "weddingVenues": [ "The Crystal Ballroom", "The Plaza Terrace Garden" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "downtown", "new delhi"]
+  },
+  {
+    "name": "The Lalit Mumbai",
+    "brand": "The Lalit",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Sahar Airport Road, Andheri East, Mumbai, Maharashtra 400059",
+    "about": "A luxury hotel located close to the Mumbai airport, offering contemporary accommodations, a grand lobby, and a range of dining and wellness facilities.",
+    "basePrice": 12000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/lalit-mumbai-1/1080/720", "caption": "The Lalit Mumbai exterior" },
+      { "src": "https://picsum.photos/seed/lalit-mumbai-2/1080/720", "caption": "Grand atrium lobby" }
+    ],
+    "distance": { "Chhatrapati Shivaji Maharaj International Airport": "1 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 369, "size": "475 sqft" }],
+    "diningExperiences": [
+        { "name": "Baluchi", "type": "Indian" },
+        { "name": "24/7 Restaurant", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "Rejuve - The Spa", "Kitty Su Nightclub" ],
+    "weddingVenues": [ "The Majestic Ballroom", "The Royal Gardens" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "airport hotel", "mumbai"]
+  },
+  {
+    "name": "Ramada Encore by Wyndham Statue of Unity",
+    "brand": "Ramada",
+    "city": "Kevadia",
+    "state": "Gujarat",
+    "address": "Statue of Unity Road, Kevadia, Gujarat 393151",
+    "about": "Located close to the Statue of Unity, Ramada Encore offers modern amenities and comfortable accommodation for tourists visiting the monument and its surrounding attractions.",
+    "basePrice": 6500,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/ramada-kevadia-1/1080/720", "caption": "Ramada Encore hotel exterior" },
+      { "src": "https://picsum.photos/seed/ramada-kevadia-2/1080/720", "caption": "Comfortable hotel room" }
+    ],
+    "roomCategories": [{ "name": "Superior Room", "count": 100, "size": "300 sqft" }],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["statue of unity", "kevadia", "family friendly"]
+  },
+  {
+    "name": "Tent City Narmada",
+    "brand": "Tent City",
+    "city": "Kevadia",
+    "state": "Gujarat",
+    "address": "Dyke 4, Sardar Sarovar Dam, Kevadia, Gujarat 393151",
+    "about": "Experience luxury tented accommodation near the Statue of Unity. Tent City Narmada offers a unique blend of nature and comfort, with cultural programs and activities.",
+    "basePrice": 8000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/tent-city-kevadia-1/1080/720", "caption": "Luxury tents at Tent City Narmada" },
+      { "src": "https://picsum.photos/seed/tent-city-kevadia-2/1080/720", "caption": "Interior of a luxury tent" }
+    ],
+    "roomCategories": [{ "name": "Luxury Tent", "count": 200, "size": "400 sqft" }],
+    "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:30 PM", "checkOut": "9:30 AM" },
+    "tags": ["luxury camping", "tent city", "kevadia", "unique stay"]
+  },
+  {
     "name": "ITC Mughal, Agra",
     "brand": "ITC",
     "city": "Agra",
