@@ -220,8 +220,8 @@
     "distance": { "Srinagar International Airport": "15 km" },
     "roomCategories": [{ "name": "Palace Garden View", "count": 113, "size": "450 sqft" }],
     "diningExperiences": [
-      { "name": "The Chinar", "type": "Multi-cuisine" },
-      { "name": "Dal Bar", "type": "Lounge" }
+        { "name": "The Chinar", "type": "Multi-cuisine" },
+        { "name": "Dal Bar", "type": "Lounge" }
     ],
     "experiencesAndActivities": [ "Rejuve - The Spa", "Indoor Swimming Pool", "Shikara Ride arrangement" ],
     "weddingVenues": [ "The Durbar Hall", "The Palace Lawns" ],
@@ -559,7 +559,7 @@
   },
   {
     "name": "Radisson Blu Hotel Indore",
-    "brand": "Radisson",
+    "brand": "Radisson Blu",
     "city": "Indore",
     "state": "Madhya Pradesh",
     "address": "12, Scheme 94C, Ring Road, Indore, Madhya Pradesh 452010",
@@ -803,7 +803,7 @@
   },
   {
     "name": "Radisson Blu Marina Hotel Connaught Place",
-    "brand": "Radisson",
+    "brand": "Radisson Blu",
     "city": "New Delhi",
     "state": "Delhi",
     "address": "G-59, Connaught Circus, New Delhi, Delhi 110001",
@@ -823,6 +823,77 @@
     "weddingVenues": [ "The Connaught Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "business", "downtown", "new delhi"]
+  },
+  {
+    "name": "Pullman New Delhi Aerocity",
+    "brand": "Accor",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Asset No 02, GMR Hospitality District, IGI Airport, New Delhi, Delhi 110037",
+    "about": "A premium hotel in the Aerocity complex, offering a blend of business and leisure with stylish rooms, multiple dining options, and extensive wellness facilities.",
+    "basePrice": 13000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/pullman-delhi-1/1080/720", "caption": "Pullman New Delhi exterior" },
+      { "src": "https://picsum.photos/seed/pullman-delhi-2/1080/720", "caption": "Hotel lobby and art" }
+    ],
+    "distance": { "Indira Gandhi International Airport": "2 km" },
+    "roomCategories": [{ "name": "Superior Room", "count": 270, "size": "380 sqft" }],
+    "diningExperiences": [
+      { "name": "Pluck", "type": "Modern European" },
+      { "name": "Honk", "type": "Pan-Asian" }
+    ],
+    "experiencesAndActivities": [ "Woo Wellness Spa & Salon", "Outdoor Pool", "Fitness Centre" ],
+    "weddingVenues": [ "Peacock Ballroom", "Meeting Rooms" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "airport hotel", "new delhi", "business"]
+  },
+  {
+    "name": "Novotel Mumbai Juhu Beach",
+    "brand": "Accor",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Balraj Sahni Marg, Juhu Beach, Mumbai, Maharashtra 400049",
+    "about": "A beachfront hotel on the vibrant Juhu Beach, offering stunning sea views. It features contemporary rooms, an outdoor pool, and a variety of dining options.",
+    "basePrice": 14000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/novotel-mumbai-1/1080/720", "caption": "Hotel overlooking Juhu Beach" },
+      { "src": "https://picsum.photos/seed/novotel-mumbai-2/1080/720", "caption": "Sea-facing room interior" }
+    ],
+    "distance": { "Chhatrapati Shivaji Maharaj International Airport": "10 km" },
+    "roomCategories": [{ "name": "Standard Room", "count": 203, "size": "280 sqft" }],
+    "diningExperiences": [
+      { "name": "The Square", "type": "All-day dining" },
+      { "name": "Gadda Da Vida", "type": "Sea Lounge" }
+    ],
+    "experiencesAndActivities": [ "Beach Access", "Outdoor Pool", "Spa & Salon" ],
+    "weddingVenues": [ "The Champagne Ballroom", "The Garden" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["sea view", "beachfront", "mumbai"]
+  },
+  {
+    "name": "ibis Jaipur Civil Lines",
+    "brand": "Accor",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "address": "Near Civil Lines Metro Station, Ajmer Road, Jaipur, Rajasthan 302006",
+    "about": "A smart and modern economy hotel, offering a comfortable stay for both business and leisure travelers. It's well-connected and provides easy access to Jaipur's main attractions.",
+    "basePrice": 4500,
+    "rating": 4.3,
+    "images": [
+      { "src": "https://picsum.photos/seed/ibis-jaipur-1/1080/720", "caption": "ibis Jaipur exterior" },
+      { "src": "https://picsum.photos/seed/ibis-jaipur-2/1080/720", "caption": "Compact and modern room" }
+    ],
+    "distance": { "Jaipur International Airport": "11 km" },
+    "roomCategories": [{ "name": "Standard Queen Room", "count": 140, "size": "200 sqft" }],
+    "diningExperiences": [
+      { "name": "Spice It", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Fitness Centre", "Web Corner" ],
+    "weddingVenues": [ "Meeting Rooms" ],
+    "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["budget", "business", "jaipur", "pet friendly"]
   }
 ]
 
