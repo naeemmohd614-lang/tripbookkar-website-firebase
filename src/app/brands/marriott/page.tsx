@@ -28,6 +28,12 @@ export default function MarriottPage() {
         ["The Ritz-Carlton, Bangalore", "The St. Regis Mumbai", "W Goa"].includes(h.name)
     );
 
+    const hotelsByBrand = marriottBrands.map(brand => ({
+      ...brand,
+      hotels: marriottHotels.filter(hotel => hotel.brand === brand.name)
+    })).filter(brand => brand.hotels.length > 0);
+
+
     return (
         <div className="bg-background text-foreground">
             <section className="relative w-full h-[50vh] text-white">
@@ -82,15 +88,26 @@ export default function MarriottPage() {
             </section>
 
             <section id="all-marriott-hotels" className="py-16 bg-secondary/30">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-headline font-bold text-primary mb-8 text-center">
-                        All Marriott Properties in India
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {marriottHotels.map(hotel => (
-                            <HotelCard hotel={hotel} key={hotel.hotelId} />
-                        ))}
-                    </div>
+                <div className="container mx-auto px-4 space-y-16">
+                    {hotelsByBrand.map(brand => (
+                        <div key={brand.brandSlug}>
+                            <h2 className="text-3xl font-headline font-bold text-primary mb-8 text-center">
+                                Top {brand.name} Properties
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {brand.hotels.slice(0, 4).map(hotel => (
+                                    <HotelCard hotel={hotel} key={hotel.hotelId} />
+                                ))}
+                            </div>
+                            {brand.hotels.length > 4 && (
+                                <div className="text-center mt-8">
+                                    <Button asChild variant="link">
+                                        <Link href={`/brands/${brand.brandSlug}`}>View all {brand.name} hotels</Link>
+                                    </Button>
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
             </section>
         </div>
