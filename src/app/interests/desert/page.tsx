@@ -6,7 +6,13 @@ import Image from 'next/image';
 
 export default function DesertPage() {
   const desertHotels = (hotels as Hotel[]).filter(hotel => 
-    hotel.tags.some(tag => tag.toLowerCase().includes('desert') || tag.toLowerCase().includes('jaisalmer'))
+    hotel.tags.some(tag => 
+      tag.toLowerCase().includes('desert') || 
+      tag.toLowerCase().includes('jaisalmer') ||
+      tag.toLowerCase().includes('jodhpur') ||
+      tag.toLowerCase().includes('bikaner') ||
+      tag.toLowerCase().includes('osian')
+    )
   ).slice(0, 10);
 
   const heroImage = {
