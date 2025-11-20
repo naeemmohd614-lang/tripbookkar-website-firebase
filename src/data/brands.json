@@ -321,5 +321,19 @@
     "logo": "",
     "description": "Known for providing luxury tented accommodations at unique locations and festivals.",
     "totalHotels": 3
+  },
+  {
+    "brandSlug": "ihg",
+    "name": "IHG",
+    "logo": "",
+    "description": "InterContinental Hotels Group is a British multinational hospitality company.",
+    "totalHotels": 50
+  },
+   {
+    "brandSlug": "accor",
+    "name": "Accor",
+    "logo": "",
+    "description": "A French multinational hospitality company that owns, manages and franchises hotels, resorts and vacation properties.",
+    "totalHotels": 60
   }
 ]
