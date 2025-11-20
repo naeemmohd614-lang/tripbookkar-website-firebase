@@ -10,7 +10,7 @@ export default function HeritagePage() {
   ).slice(0, 10);
 
   const heroImage = {
-      "src": "https://picsum.photos/seed/interest-heritage/1920/600",
+      "src": "https://images.unsplash.com/photo-1534423892 जायसवाल?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
       "caption": "ancient indian palace"
   };
 
