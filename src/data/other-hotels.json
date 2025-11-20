@@ -716,5 +716,74 @@
     "roomCategories": [{ "name": "Fort Room", "count": 72, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "desert", "heritage", "jaisalmer", "boutique"]
+  },
+  {
+    "name": "InterContinental Chennai Mahabalipuram Resort",
+    "brand": "IHG",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "212, Nemeli Village, East Coast Rd, Chennai, Tamil Nadu 603104",
+    "about": "A luxury beach resort on the scenic East Coast Road, offering stunning views of the Bay of Bengal. It features contemporary design, a beautiful pool, and expansive gardens.",
+    "basePrice": 16000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://picsum.photos/seed/ic-chennai-1/1080/720", "caption": "Resort exterior with pool view" }
+    ],
+    "distance": { "Chennai International Airport": "45 km" },
+    "roomCategories": [{ "name": "Classic Room", "count": 105, "size": "500 sqft" }],
+    "diningExperiences": [
+        { "name": "The Melting Pot", "type": "Multi-cuisine" },
+        { "name": "Tao of Peng", "type": "Chinese" }
+    ],
+    "experiencesAndActivities": [ "Amrtam Spa", "Beach Access", "Yoga Sessions" ],
+    "weddingVenues": [ "The Grand Ballroom", "Beachfront Lawns" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beachfront", "luxury", "resort", "chennai"]
+  },
+  {
+    "name": "Crowne Plaza New Delhi Rohini",
+    "brand": "IHG",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Twin District Centre, Sector 10, Rohini, New Delhi, Delhi 110085",
+    "about": "A modern business hotel located in North-West Delhi, connected to a mall. It offers comfortable rooms, extensive meeting facilities, and a rooftop pool with panoramic city views.",
+    "basePrice": 10000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/cp-delhi-1/1080/720", "caption": "Crowne Plaza New Delhi Rohini exterior" }
+    ],
+    "distance": { "Indira Gandhi International Airport": "30 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 183, "size": "355 sqft" }],
+    "diningExperiences": [
+        { "name": "Mosaic", "type": "All-day dining" },
+        { "name": "Spice Art", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Adya Spa", "Rooftop Pool", "Fitness Centre" ],
+    "weddingVenues": [ "The Crystal Ballroom", "The Sapphire Hall" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "new delhi"]
+  },
+  {
+    "name": "Holiday Inn Goa Candolim",
+    "brand": "IHG",
+    "city": "Candolim",
+    "state": "Goa",
+    "address": "Candolim, Bardez, Goa 403515",
+    "about": "Located in the vibrant area of Candolim, this hotel is a short walk from the beach. It offers modern rooms, an outdoor pool, and is a great base to explore North Goa's attractions.",
+    "basePrice": 8000,
+    "rating": 4.4,
+    "images": [
+      { "src": "https://picsum.photos/seed/hi-goa-1/1080/720", "caption": "Poolside at Holiday Inn Goa" }
+    ],
+    "distance": { "Dabolim Airport": "36 km" },
+    "roomCategories": [{ "name": "Standard Room", "count": 100, "size": "280 sqft" }],
+    "diningExperiences": [
+        { "name": "Viva All Day Dining", "type": "Multi-cuisine" },
+        { "name": "Shell & Malt", "type": "Bar" }
+    ],
+    "experiencesAndActivities": [ "Outdoor Pool", "Fitness Centre" ],
+    "weddingVenues": [ "The Ballroom" ],
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beach", "goa", "candolim"]
   }
 ]
