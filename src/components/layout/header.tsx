@@ -63,6 +63,7 @@ import React from 'react';
 import { Separator } from '../ui/separator';
 
 const navLinks = [
+  { href: '/', label: 'Home', icon: Home },
   { href: '/packages', label: 'Packages', icon: Package },
   { href: '/contact', label: 'Contact', icon: Phone },
 ];
@@ -165,7 +166,7 @@ export default function Header() {
 
       {navLinks.map(({ href, label }) => (
         <NavigationMenuItem key={href}>
-          <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname.startsWith(href) ? "bg-accent" : "")}>
+          <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === href ? "bg-accent" : "")}>
             <Link href={href}>{label}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -196,7 +197,7 @@ export default function Header() {
       {navLinks.map(({ href, label, icon: Icon }) => (
         <Button
           key={href}
-          variant={pathname.startsWith(href) ? 'secondary' : 'ghost'}
+          variant={pathname === href ? 'secondary' : 'ghost'}
           asChild
           className="w-full justify-start"
         >
