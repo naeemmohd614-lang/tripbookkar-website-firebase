@@ -1,3 +1,4 @@
+
 [
   {
     "brandSlug": "the-ritz-carlton",
@@ -5,5 +6,320 @@
     "logo": "",
     "description": "A global luxury hotel brand known for its legendary service and opulent accommodations.",
     "totalHotels": 150
+  },
+  {
+    "brandSlug": "st-regis",
+    "name": "St. Regis",
+    "logo": "",
+    "description": "An iconic luxury brand with a legacy of glamour and bespoke service.",
+    "totalHotels": 50
+  },
+  {
+    "brandSlug": "edition",
+    "name": "Edition",
+    "logo": "",
+    "description": "A unique collection of individualized, one-of-a-kind hotels.",
+    "totalHotels": 15
+  },
+  {
+    "brandSlug": "the-luxury-collection",
+    "name": "The Luxury Collection",
+    "logo": "",
+    "description": "A curated ensemble of the world's most iconic hotels.",
+    "totalHotels": 120
+  },
+  {
+    "brandSlug": "w-hotels",
+    "name": "W Hotels",
+    "logo": "",
+    "description": "A vibrant, contemporary luxury brand with a focus on design, fashion, and music.",
+    "totalHotels": 60
+  },
+  {
+    "brandSlug": "jw-marriott",
+    "name": "JW Marriott",
+    "logo": "",
+    "description": "A global brand of luxury hotels and resorts, catering to sophisticated travelers.",
+    "totalHotels": 100
+  },
+  {
+    "brandSlug": "marriott",
+    "name": "Marriott",
+    "logo": "",
+    "description": "The flagship brand of Marriott International, offering consistent, high-quality service.",
+    "totalHotels": 600
+  },
+  {
+    "brandSlug": "sheraton",
+    "name": "Sheraton",
+    "logo": "",
+    "description": "A classic brand focused on community and connection, with a global presence.",
+    "totalHotels": 450
+  },
+  {
+    "brandSlug": "le-meridien",
+    "name": "Le Méridien",
+    "logo": "",
+    "description": "A European-inspired brand with a passion for culture, art, and cuisine.",
+    "totalHotels": 110
+  },
+  {
+    "brandSlug": "westin",
+    "name": "The Westin",
+    "logo": "",
+    "description": "A brand focused on wellness and rejuvenation for travelers.",
+    "totalHotels": 230
+  },
+  {
+    "brandSlug": "autograph-collection",
+    "name": "Autograph Collection",
+    "logo": "",
+    "description": "A diverse portfolio of independent hotels, each with its own unique character.",
+    "totalHotels": 200
+  },
+  {
+    "brandSlug": "renaissance-hotels",
+    "name": "Renaissance Hotels",
+    "logo": "",
+    "description": "A brand for the curious, with hotels that offer unexpected discoveries.",
+    "totalHotels": 170
+  },
+  {
+    "brandSlug": "courtyard-by-marriott",
+    "name": "Courtyard by Marriott",
+    "logo": "",
+    "description": "A brand designed for business travelers, offering a blend of comfort and functionality.",
+    "totalHotels": 1200
+  },
+  {
+    "brandSlug": "four-points-by-sheraton",
+    "name": "Four Points by Sheraton",
+    "logo": "",
+    "description": "A brand offering classic style and timeless comfort for the modern traveler.",
+    "totalHotels": 300
+  },
+  {
+    "brandSlug": "fairfield-by-marriott",
+    "name": "Fairfield by Marriott",
+    "logo": "",
+    "description": "A brand that focuses on the beauty of simplicity and warm hospitality.",
+    "totalHotels": 1100
+  },
+  {
+    "brandSlug": "aloft-hotels",
+    "name": "Aloft Hotels",
+    "logo": "",
+    "description": "A tech-forward brand for music lovers and creators, with a vibrant social scene.",
+    "totalHotels": 190
+  },
+  {
+    "brandSlug": "taj",
+    "name": "Taj",
+    "logo": "",
+    "description": "India's iconic luxury hotel brand, known for its legendary hospitality and rich heritage.",
+    "totalHotels": 100
+  },
+  {
+    "brandSlug": "oberoi",
+    "name": "Oberoi",
+    "logo": "",
+    "description": "A global luxury hotel group known for its attention to detail and personalized service.",
+    "totalHotels": 35
+  },
+  {
+    "brandSlug": "the-leela",
+    "name": "The Leela",
+    "logo": "",
+    "description": "An Indian luxury hotel chain that embodies traditional Indian hospitality and opulence.",
+    "totalHotels": 12
+  },
+  {
+    "brandSlug": "hyatt",
+    "name": "Hyatt",
+    "logo": "",
+    "description": "A leading global hospitality company with a portfolio of 20 premier brands.",
+    "totalHotels": 950
+  },
+  {
+    "brandSlug": "itc",
+    "name": "ITC",
+    "logo": "",
+    "description": "A luxury hotel chain in India known for its 'Responsible Luxury' ethos and culinary excellence.",
+    "totalHotels": 100
+  },
+  {
+    "brandSlug": "brij",
+    "name": "Brij",
+    "logo": "",
+    "description": "A collection of boutique heritage hotels offering immersive local experiences.",
+    "totalHotels": 8
+  },
+  {
+    "brandSlug": "clarks",
+    "name": "Clarks",
+    "logo": "",
+    "description": "One of the oldest hotel chains in India, offering a blend of modern and traditional hospitality.",
+    "totalHotels": 20
+  },
+  {
+    "brandSlug": "lebua",
+    "name": "Lebua",
+    "logo": "",
+    "description": "A luxury hotel brand known for its stunning rooftop bars and exceptional service.",
+    "totalHotels": 5
+  },
+  {
+    "brandSlug": "sarovar-portico",
+    "name": "Sarovar Portico",
+    "logo": "",
+    "description": "A leading hotel management company in India with a portfolio of hotels across the country.",
+    "totalHotels": 95
+  },
+  {
+    "brandSlug": "fortune",
+    "name": "Fortune",
+    "logo": "",
+    "description": "A member of ITC's hotel group, offering contemporary hotels for business and leisure travelers.",
+    "totalHotels": 50
+  },
+  {
+    "brandSlug": "leisure-hotels",
+    "name": "Leisure Hotels",
+    "logo": "",
+    "description": "A prominent hotel chain in Uttarakhand, offering a range of resorts and hotels in scenic locations.",
+    "totalHotels": 30
+  },
+  {
+    "brandSlug": "jaypee",
+    "name": "Jaypee",
+    "logo": "",
+    "description": "A hospitality group with five-star hotels and resorts in key destinations in India.",
+    "totalHotels": 5
+  },
+  {
+    "brandSlug": "the-lalit",
+    "name": "The Lalit",
+    "logo": "",
+    "description": "An Indian luxury hotel chain with a focus on art, style, and hospitality.",
+    "totalHotels": 12
+  },
+  {
+    "brandSlug": "the-khyber",
+    "name": "The Khyber",
+    "logo": "",
+    "description": "A luxury resort in Gulmarg offering stunning Himalayan views and world-class amenities.",
+    "totalHotels": 1
+  },
+  {
+    "brandSlug": "mayfair",
+    "name": "Mayfair",
+    "logo": "",
+    "description": "A luxury hotel group with properties in unique locations, offering warm hospitality.",
+    "totalHotels": 12
+  },
+  {
+    "brandSlug": "the-elgin",
+    "name": "The Elgin",
+    "logo": "",
+    "description": "A collection of heritage hotels in the Himalayas, preserving colonial-era charm.",
+    "totalHotels": 6
+  },
+  {
+    "brandSlug": "summit",
+    "name": "Summit",
+    "logo": "",
+    "description": "A hotel chain focused on providing comfortable stays in the Himalayan region.",
+    "totalHotels": 20
+  },
+  {
+    "brandSlug": "sinclairs",
+    "name": "Sinclairs",
+    "logo": "",
+    "description": "A chain of hotels and resorts located in key business and leisure destinations in India.",
+    "totalHotels": 8
+  },
+  {
+    "brandSlug": "windamere",
+    "name": "Windamere",
+    "logo": "",
+    "description": "A well-known heritage hotel in Darjeeling, offering a glimpse into the colonial past.",
+    "totalHotels": 1
+  },
+  {
+    "brandSlug": "heritage",
+    "name": "Heritage",
+    "logo": "",
+    "description": "A brand that represents hotels with historical and cultural significance.",
+    "totalHotels": 5
+  },
+  {
+    "brandSlug": "sterling",
+    "name": "Sterling",
+    "logo": "",
+    "description": "A leading holiday and resort company in India, with properties in various scenic locations.",
+    "totalHotels": 30
+  },
+  {
+    "brandSlug": "carlton",
+    "name": "Carlton",
+    "logo": "",
+    "description": "A luxury brand with a focus on providing exceptional service and experiences.",
+    "totalHotels": 1
+  },
+  {
+    "brandSlug": "radisson",
+    "name": "Radisson",
+    "logo": "",
+    "description": "A global hotel brand known for its stylish interiors and positive, personalized service.",
+    "totalHotels": 35
+  },
+  {
+    "brandSlug": "welcomheritage",
+    "name": "Welcomheritage",
+    "logo": "",
+    "description": "A joint venture between ITC and Jodhana Group, preserving and showcasing India's heritage.",
+    "totalHotels": 38
+  },
+  {
+    "brandSlug": "mpt",
+    "name": "MPT",
+    "logo": "",
+    "description": "Madhya Pradesh Tourism's own chain of hotels and resorts, offering stays across the state.",
+    "totalHotels": 70
+  },
+  {
+    "brandSlug": "the-fern",
+    "name": "The Fern",
+    "logo": "",
+    "description": "An environmentally sensitive hotel chain with properties across India.",
+    "totalHotels": 80
+  },
+  {
+    "brandSlug": "the-house-of-mg",
+    "name": "The House of MG",
+    "logo": "",
+    "description": "A boutique heritage hotel in Ahmedabad, showcasing Gujarati culture and architecture.",
+    "totalHotels": 1
+  },
+  {
+    "brandSlug": "tgb",
+    "name": "TGB",
+    "logo": "",
+    "description": "The Grand Bhagwati, a brand known for its luxury hotels and grand event venues.",
+    "totalHotels": 5
+  },
+  {
+    "brandSlug": "ramada",
+    "name": "Ramada",
+    "logo": "",
+    "description": "A global hotel chain by Wyndham, offering a wide range of hotels for all travelers.",
+    "totalHotels": 50
+  },
+  {
+    "brandSlug": "tent-city",
+    "name": "Tent City",
+    "logo": "",
+    "description": "Known for providing luxury tented accommodations at unique locations and festivals.",
+    "totalHotels": 3
   }
 ]
