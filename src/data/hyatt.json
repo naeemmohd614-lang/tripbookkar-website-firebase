@@ -18,6 +18,40 @@
     "tags": ["business", "mumbai", "luxury", "pet friendly"]
   },
   {
+    "name": "Hyatt Regency Delhi",
+    "brand": "Hyatt",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Bhikaji Cama Place, Ring Road, New Delhi, Delhi 110066",
+    "about": "A landmark hotel in New Delhi, Hyatt Regency is a preferred destination for business and leisure travelers. It offers luxurious rooms, award-winning dining, and extensive event spaces.",
+    "basePrice": 15000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/hyatt-delhi-1/1080/720", "caption": "Hyatt Regency Delhi exterior" },
+      { "src": "https://picsum.photos/seed/hyatt-delhi-2/1080/720", "caption": "Elegant lobby and seating area" }
+    ],
+    "roomCategories": [{ "name": "King Room", "count": 507, "size": "312 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "new delhi"]
+  },
+  {
+    "name": "Park Hyatt Chennai",
+    "brand": "Hyatt",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "39, Velachery Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600032",
+    "about": "A luxurious retreat in the heart of Chennai, Park Hyatt offers sophisticated interiors, serene lily ponds, and personalized service. It features spacious rooms with views of the Guindy forest reserve.",
+    "basePrice": 13000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/park-hyatt-chennai-1/1080/720", "caption": "Park Hyatt Chennai exterior" },
+      { "src": "https://picsum.photos/seed/park-hyatt-chennai-2/1080/720", "caption": "The Dining Room restaurant" }
+    ],
+    "roomCategories": [{ "name": "Park King Room", "count": 201, "size": "463 sqft" }],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "chennai", "business"]
+  },
+  {
     "name": "Hyatt Regency Dharamshala Resort",
     "brand": "Hyatt",
     "city": "Dharamshala",
