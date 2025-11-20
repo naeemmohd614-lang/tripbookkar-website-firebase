@@ -217,7 +217,14 @@
       { "src": "https://picsum.photos/seed/lalit-srinagar-1/1080/720", "caption": "View of the palace hotel and gardens" },
       { "src": "https://picsum.photos/seed/lalit-srinagar-2/1080/720", "caption": "Luxurious suite interior" }
     ],
+    "distance": { "Srinagar International Airport": "15 km" },
     "roomCategories": [{ "name": "Palace Garden View", "count": 113, "size": "450 sqft" }],
+    "diningExperiences": [
+      { "name": "The Chinar", "type": "Multi-cuisine" },
+      { "name": "Dal Bar", "type": "Lounge" }
+    ],
+    "experiencesAndActivities": [ "Rejuve - The Spa", "Indoor Swimming Pool", "Shikara Ride arrangement" ],
+    "weddingVenues": [ "The Durbar Hall", "The Palace Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "luxury", "lake view", "srinagar"]
   },
@@ -468,7 +475,14 @@
     "images": [
       { "src": "https://picsum.photos/seed/lalit-khajuraho-1/1080/720", "caption": "Hotel exterior with temple view" }
     ],
+    "distance": { "Khajuraho Airport": "4 km" },
     "roomCategories": [{ "name": "Garden View Room", "count": 47, "size": "350 sqft" }],
+    "diningExperiences": [
+        { "name": "Panna", "type": "All-day dining" },
+        { "name": "Mahua", "type": "Bar" }
+    ],
+    "experiencesAndActivities": [ "Rejuve - The Spa", "Sound and Light Show at temples", "Yoga Sessions" ],
+    "weddingVenues": [ "The Garden Lawn", "The Crystal Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["temple view", "luxury", "khajuraho"]
   },
@@ -704,5 +718,3 @@
     "tags": ["luxury", "desert", "heritage", "jaisalmer", "boutique"]
   }
 ]
-
-    
