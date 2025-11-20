@@ -58,10 +58,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { cn } from '@/lib/utils';
 import { useUser, useAuth } from '@/firebase';
 import React from 'react';
+import { Separator } from '../ui/separator';
 
 const navLinks = [
-  { href: '/hotels', label: 'Hotels', icon: Hotel },
   { href: '/packages', label: 'Packages', icon: Package },
+];
+
+const hotelBrands = [
+  { title: "Marriott", href: "/brands/marriott" },
+  { title: "Taj", href: "/brands/taj" },
+  { title: "Oberoi", href: "/brands/oberoi" },
+  { title: "Hyatt", href: "/brands/hyatt" },
 ];
 
 const experiences = [
@@ -106,9 +113,9 @@ const ListItem = React.forwardRef<
             {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
             {title}
           </div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          {children && <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
-          </p>
+          </p>}
         </a>
       </NavigationMenuLink>
     </li>
@@ -130,6 +137,23 @@ export default function Header() {
 
   const NavContent = () => (
     <>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger>Hotels</NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <ul className="grid w-[200px] gap-1 p-2">
+            {hotelBrands.map((brand) => (
+              <ListItem
+                key={brand.title}
+                title={brand.title}
+                href={brand.href}
+              />
+            ))}
+            <Separator className="my-1" />
+            <ListItem href="/hotels" title="All Hotels" />
+          </ul>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+
       {navLinks.map(({ href, label }) => (
         <NavigationMenuItem key={href}>
           <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname.startsWith(href) ? "bg-accent" : "")}>
