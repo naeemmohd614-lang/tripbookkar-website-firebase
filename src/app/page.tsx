@@ -52,6 +52,19 @@ export default function Home() {
     delhi: { src: 'https://images.unsplash.com/photo-1609670289875-590e8ec05c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGUlMjBvZiUyMERlbGhpfGVufDB8fHx8MTc2MzY3MDg4N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Delhi' },
   };
 
+  const featuredHotels: Hotel[] = (hotels as Hotel[]).map(h => {
+    if (h.name === "The Ritz-Carlton Bangalore") {
+      return { ...h, images: [{ ...h.images[0], src: 'https://images.unsplash.com/photo-1709294974005-24e5695257ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxFeHRlcmlvciUyMHZpZXclMjBvZiUyMFRoZSUyMFJpdHotQ2FybHRvbiUyMEJhbmdhbG9yZXxlbnwwfHx8fDE3NjM2NTY4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Exterior view of The Ritz-Carlton Bangalore' }, ...h.images.slice(1)] };
+    }
+    if (h.name === "JW Marriott Hotel New Delhi Aerocity") {
+      return { ...h, images: [{ ...h.images[0], src: 'https://images.unsplash.com/photo-1551870803-e068765a19e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8SG90ZWwlMjBleHRlcmlvciUyMGF0JTIwQWVyb2NpdHl8ZW58MHx8fHwxNzYzNjU2ODgzfDA&ixlib.rb-4.1.0&q=80&w=1080', caption: 'Hotel exterior at Aerocity' }, ...h.images.slice(1)] };
+    }
+    if (h.name === "Goa Marriott Resort & Spa") {
+      return { ...h, images: [{ ...h.images[0], src: 'https://images.unsplash.com/photo-1703085722123-0c6af3e9319b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxWaWV3JTIwb2YlMjB0aGUlMjByZXNvcnQlMjBmcm9tJTIwdGhlJTIwYmF5fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of the resort from the bay' }, ...h.images.slice(1)] };
+    }
+    return h;
+  });
+
 
   return (
     <div className="flex flex-col">
@@ -246,7 +259,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(hotels as Hotel[]).slice(0, 3).map((hotel) => (
+            {(featuredHotels as Hotel[]).slice(0, 3).map((hotel) => (
               <HotelCard key={hotel.hotelId} hotel={hotel} />
             ))}
           </div>
