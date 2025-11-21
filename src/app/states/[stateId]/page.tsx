@@ -37,9 +37,9 @@ export default function StatePage() {
 
   if (stateId === 'delhi') {
     const delhiCarouselImages = [
-        { src: 'https://picsum.photos/seed/delhi-carousel-1/1200/600', caption: 'India Gate', 'data-ai-hint': 'india gate new delhi' },
-        { src: 'https://picsum.photos/seed/delhi-carousel-2/1200/600', caption: 'Humayun\'s Tomb', 'data-ai-hint': 'humayuns tomb delhi' },
-        { src: 'https://picsum.photos/seed/delhi-carousel-3/1200/600', caption: 'Lotus Temple', 'data-ai-hint': 'lotus temple delhi' }
+        { src: 'https://images.unsplash.com/photo-1587474260584-136574528934?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGdhdGUlMjBuZXclMjBkZWxoaXxlbnwwfHx8fDE3NjM3MTEzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'India Gate', 'data-ai-hint': 'india gate new delhi' },
+        { src: 'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxodW1heXVucyUyMHRvbWIlMjBkZWxoaXxlbnwwfHx8fDE3NjM3MTEzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Humayun\'s Tomb', 'data-ai-hint': 'humayuns tomb delhi' },
+        { src: 'https://images.unsplash.com/photo-1588133547998-a23c214d455c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb3R1cyUyMHRlbXBsZSUyMGRlbGhpfGVufDB8fHx8MTc2MzcxMTM5Mnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Lotus Temple', 'data-ai-hint': 'lotus temple delhi' }
     ];
 
     const delhiHighlights = [
@@ -1213,9 +1213,9 @@ export default function StatePage() {
 
   if (stateId === 'uttar-pradesh') {
     const upCarouselImages = [
-        { src: 'https://picsum.photos/seed/up-carousel-1/1200/600', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' },
-        { src: 'https://picsum.photos/seed/up-carousel-2/1200/600', caption: 'Ghats of Varanasi', 'data-ai-hint': 'varanasi ghats' },
-        { src: 'https://picsum.photos/seed/up-carousel-3/1200/600', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
+        { src: 'https://images.unsplash.com/photo-1616812555938-1e4348a25c74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxscmVzZW1ibGluZyUyMGFyY2hpdGVjdHVyZSUyMG9mJTIwTHVja25vd3xlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' },
+        { src: 'https://images.unsplash.com/photo-1582563388057-26a1b14a046c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91cCUyMG9mJTIwcGVvcGxlJTIwaW4lMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwaW4lMjBHYW5nZXMlMjBSaXZlcnxlbnwwfHx8fDE3NjM3MTE0MDd8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Ghats of Varanasi', 'data-ai-hint': 'varanasi ghats' },
+        { src: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxUYWolMjBNYWhhbHxlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
     ];
 
     const upHighlights = [
@@ -1227,11 +1227,18 @@ export default function StatePage() {
     const upCities = ['Agra', 'Varanasi', 'Lucknow', 'Prayagraj', 'Mathura'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
+      const cityImages: { [key: string]: { image: string, caption: string } } = {
+          'agra': { image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ3JhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Agra city' },
+          'varanasi': { image: 'https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGNpdHl8ZW58MHx8fHwxNzYzNzExMzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Varanasi city' },
+          'lucknow': { image: 'https://images.unsplash.com/photo-1599309199147-e2343c3a4ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxscmVzZW1ibGluZyUyMGFyY2hpdGVjdHVyZSUyMG9mJTIwTHVja25vd3xlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Lucknow city' },
+          'prayagraj': { image: 'https://images.unsplash.com/photo-1627449552179-880145c4a03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcmF5YWdyYWolMjBjaXR5fGVufDB8fHx8MTc2MzcxMTM5Mnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Prayagraj city' },
+          'mathura': { image: 'https://images.unsplash.com/photo-1621785536417-8903c7395026?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXRodXJhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTN8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Mathura city' },
+      };
       return {
         name: cityName,
         cityId: cityId,
-        image: `https://picsum.photos/seed/city-${cityId}/400/500`,
-        caption: `${cityName} city`
+        image: cityImages[cityId]?.image || `https://picsum.photos/seed/city-${cityId}/400/500`,
+        caption: cityImages[cityId]?.caption || `${cityName} city`
       };
     });
 
@@ -1366,17 +1373,17 @@ export default function StatePage() {
 
   const rajasthanCarouselImages = [
     {
-      src: 'https://picsum.photos/seed/rajasthan-carousel-1/1200/600',
+      src: 'https://images.unsplash.com/photo-1617490215167-a09c31375d60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWlwdXIlMjBqYWwlMjBtYWhhbHxlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Jal Mahal, Jaipur',
       'data-ai-hint': 'jaipur jal mahal'
     },
     {
-      src: 'https://picsum.photos/seed/rajasthan-carousel-2/1200/600',
+      src: 'https://images.unsplash.com/photo-1603787723954-526419523277?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqZHB1ciUyMGNpdHklMjBmb3J0fGVufDB8fHx8MTc2MzcxMTQwNnww&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Mehrangarh Fort, Jodhpur',
       'data-ai-hint': 'jodhpur fort city'
     },
     {
-      src: 'https://picsum.photos/seed/rajasthan-carousel-3/1200/600',
+      src: 'https://images.unsplash.com/photo-1576722420637-9b45e9a464de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1ZGFpcHVyJTIwbGFrZSUyMHBpY2hvbGF8ZW58MHx8fHwxNzYzNzExNDA2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Lake Pichola, Udaipur',
       'data-ai-hint': 'udaipur lake pichola'
     }
@@ -1385,7 +1392,6 @@ export default function StatePage() {
   if (stateId === 'rajasthan') {
     return (
       <div>
-        {/* Full-width Image Carousel */}
         <div className="w-full mb-12">
            <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
@@ -1409,7 +1415,6 @@ export default function StatePage() {
         </div>
 
         <div className="container mx-auto px-4">
-          {/* Hero Description */}
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-brand-blue">Rajasthan</h1>
             <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -1417,7 +1422,6 @@ export default function StatePage() {
             </p>
           </div>
 
-          {/* Info Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto my-12">
             <Card className="text-center">
               <CardContent className="p-4">
@@ -1449,7 +1453,6 @@ export default function StatePage() {
             </Card>
           </div>
 
-          {/* Highlights */}
           <div className="text-center my-16">
               <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8">Highlights</h2>
               <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
@@ -1467,7 +1470,6 @@ export default function StatePage() {
               </div>
           </div>
 
-          {/* Explore Major Cities */}
           <div className="text-center my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue">Explore Major Cities</h2>
             <p className="mt-2 text-muted-foreground">Discover the unique charm of each city within Rajasthan.</p>
@@ -1484,7 +1486,6 @@ export default function StatePage() {
             </div>
           </div>
           
-          {/* Top Attractions */}
           <div className="my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Rajasthan</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1506,7 +1507,6 @@ export default function StatePage() {
             </div>
           </div>
 
-          {/* Top 10 Hotels */}
           <div className="my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">
               Top 10 Hotels in Rajasthan
@@ -1536,12 +1536,12 @@ export default function StatePage() {
       'data-ai-hint': 'baga beach crowd'
     },
     {
-      src: 'https://picsum.photos/seed/goa-carousel-2/1200/600',
+      src: 'https://images.unsplash.com/photo-1570194883446-a3c3c7340c49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2ElMjBiZWFjaCUyMHNoYWNrc3xlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'A beach party in Goa',
       'data-ai-hint': 'goa nightlife party'
     },
     {
-      src: 'https://picsum.photos/seed/goa-carousel-3/1200/600',
+      src: 'https://images.unsplash.com/photo-1620336292023-0622c815777a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2ElMjBjaHVyY2glMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYzNzAyMjgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Basilica of Bom Jesus, Old Goa',
       'data-ai-hint': 'goa church architecture'
     }
@@ -1557,13 +1557,13 @@ export default function StatePage() {
     {
       name: 'North Goa',
       slug: 'north-goa',
-      image: 'https://picsum.photos/seed/north-goa-area/400/500',
+      image: 'https://images.unsplash.com/photo-1590372339797-de37a44517e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYWdhJTIwYmVhY2glMjBnb2F8ZW58MHx8fHwxNzYzNjk3Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'North Goa beach'
     },
     {
       name: 'South Goa',
       slug: 'south-goa',
-      image: 'https://picsum.photos/seed/south-goa-area/400/500',
+      image: 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGdvYSUyMHBlYWNlZnVsJTIwYmVhY2h8ZW58MHx8fHwxNzYzNjk3Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'South Goa peaceful beach'
     },
   ];
