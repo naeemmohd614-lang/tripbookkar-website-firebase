@@ -10,9 +10,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Clock, Ticket, CalendarCheck, MapPin, Bus, Train, Plane, Info, Hotel as HotelIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import React from 'react';
 
 export default function AttractionPage() {
-    const params = useParams();
+    const params = React.use(useParams());
     const router = useRouter();
     const attractionId = params.attractionId as string;
 

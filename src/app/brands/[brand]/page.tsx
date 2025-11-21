@@ -7,9 +7,10 @@ import type { Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import { hotels } from '@/lib/data';
 import { Hotel } from '@/lib/types';
+import React from 'react';
 
 export default function BrandPage() {
-  const params = useParams();
+  const params = React.use(useParams());
   const brandSlug = params.brand as string;
   
   const brand = (brands as Brand[]).find((b) => b.brandSlug === brandSlug);

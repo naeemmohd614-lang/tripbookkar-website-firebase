@@ -8,9 +8,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Check, Dumbbell, Dog, MapPin, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
+import React from 'react';
 
 export default function HotelDetailPage() {
-  const params = useParams();
+  const params = React.use(useParams());
   const hotelId = params.hotelId as string;
 
   const hotel = (hotels as Hotel[]).find((h) => h.hotelId === hotelId);
