@@ -10,7 +10,7 @@ export default function MountainsPage() {
   ).slice(0, 10);
 
   const heroImage = {
-      "src": "https://picsum.photos/seed/interest-mountains/1920/600",
+      "src": "https://images.unsplash.com/photo-1763480005793-501a0cbe1ac9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaW1hbGF5YW4lMjBtb3VudGFpbiUyMHJhbmdlfGVufDB8fHx8MTc2Mzc2NDA0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "himalayan mountain range"
   };
 

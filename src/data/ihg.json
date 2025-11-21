@@ -556,7 +556,7 @@
     "about": "A premier hotel set in 12 acres of landscaped grounds, offering stunning views of the Himalayas. It features luxurious rooms, a casino, and multiple dining options.",
     "basePrice": 11000,
     "rating": 4.5,
-    "images": [{ "src": "https://picsum.photos/seed/cp-kathmandu-1/1080/720", "caption": "Hotel gardens with mountain view" }],
+    "images": [{ "src": "https://images.unsplash.com/photo-1652788542076-e3895c18c993?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxIb3RlbCUyMGdhcmRlbnMlMjB3aXRoJTIwbW91bnRhaW4lMjB2aWV3fGVufDB8fHx8MTc2Mzc2NDA0OXww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel gardens with mountain view" }],
     "distance": { "Tribhuvan International Airport": "8 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 282, "size": "320 sqft" }],
     "diningExperiences": [
@@ -639,7 +639,7 @@
     "about": "Overlooking the Morni Hills, this hotel offers a serene setting with modern amenities. It's a great base for exploring Chandigarh and its surroundings.",
     "basePrice": 7000,
     "rating": 4.4,
-    "images": [{ "src": "https://picsum.photos/seed/hi-panchkula-1/1080/720", "caption": "Poolside area" }],
+    "images": [{ "src": "https://images.unsplash.com/photo-1722404189965-c502754c751a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxQb29sc2lkZSUyMGFyZWF8ZW58MHx8fHwxNzYzNzY0MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Poolside area" }],
     "distance": { "Chandigarh International Airport": "15 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 127, "size": "300 sqft" }],
     "diningExperiences": [

@@ -256,7 +256,7 @@
     "basePrice": 20000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1613467973253-f00f4f1a2f6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxWaWV3JTIwZnJvbSUyMHRoZSUyMHJlc29ydHxlbnwwfHx8fDE3NjM3MjA2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from the resort" }
+      { "src": "https://images.unsplash.com/photo-1706290692638-d51a33f55b65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxWaWV3JTIwZnJvbSUyMHRoZSUyMHJlc29ydHxlbnwwfHx8fDE3NjM3MjA2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from the resort" }
     ],
     "distance": { "Shimla Airport": "45 km" },
     "roomCategories": [
@@ -1194,7 +1194,7 @@
     "basePrice": 12000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/vivanta-sikkim-1/1080/720", "caption": "Vivanta Sikkim exterior" }
+      { "src": "https://images.unsplash.com/photo-1512818908771-583ff7531c14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxWaXZhbnRhJTIwU2lra2ltJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzY0MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Vivanta Sikkim exterior" }
     ],
     "distance": { "Pakyong Airport": "5 km" },
     "roomCategories": [

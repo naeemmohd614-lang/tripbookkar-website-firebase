@@ -223,7 +223,7 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-1.webp", "caption": "Resort with valley view" },
+      { "src": "https://images.unsplash.com/photo-1657077684125-c46749cabed2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM3NjQwNDl8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-2.webp", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
@@ -242,7 +242,7 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-1.webp", "caption": "Resort nestled in the hills" },
+      { "src": "https://images.unsplash.com/photo-1755883384895-3fcddc3441c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxSZXNvcnQlMjBuZXN0bGVkJTIwaW4lMjB0aGUlMjBoaWxsc3xlbnwwfHx8fDE3NjM2NTY4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-2.webp", "caption": "Infinity pool overlooking the valley" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],

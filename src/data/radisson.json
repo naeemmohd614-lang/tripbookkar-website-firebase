@@ -56,7 +56,7 @@
     "basePrice": 10000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1692071191666-f75e4f6c4942?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwZnJvbSUyMHRoZSUyMGhvdGVsfGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from the hotel" }
+      { "src": "https://images.unsplash.com/photo-1712620506151-fa74c778a8e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxWaWV3JTIwZnJvbSUyMHRoZSUyMGhvdGVsfGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from the hotel" }
     ],
     "distance": { "Shimla Airport": "26 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 59, "size": "350 sqft" }],

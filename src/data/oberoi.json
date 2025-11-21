@@ -59,7 +59,7 @@
     "basePrice": 35000,
     "rating": 4.9,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1663314904239-4e7b022e3f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxXaWxkZmxvd2VyJTIwSGFsbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzcyMDY4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Wildflower Hall exterior" },
+      { "src": "https://images.unsplash.com/photo-1622462047242-2ac2e1f7908b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8V2lsZGZsb3dlciUyMEhhbGwlMjBleHRlcmlvcnxlbnwwfHx8fDE3NjM3MjA2ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Wildflower Hall exterior" },
       { "src": "https://picsum.photos/seed/wildflower-shimla-2/1080/720", "caption": "Indoor heated pool" }
     ],
     "distance": { "Shimla Airport": "30 km" },
