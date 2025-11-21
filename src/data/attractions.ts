@@ -728,7 +728,7 @@ const jammuAndKashmirAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         city: 'Srinagar',
         cityId: 'srinagar',
         stateId: 'jammu-and-kashmir',
-        image: { src: 'https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/dal-lake.webp', caption: 'shikara ride dal lake' },
+        image: { src: 'https://images.unsplash.com/photo-1627889615925-56037b304313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWhhbGdhbSUyMHZhbGxleSUyMHJpdmVyfGVufDB8fHx8MTc2MzcyMjk4OXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'shikara ride dal lake' },
         description: "The jewel of Srinagar, Dal Lake is famous for its houseboats (shikaras), floating gardens, and scenic beauty. A shikara ride is a must-do experience.",
         timing: "All day",
         fees: [ { type: "Shikara Ride", amount: "Approx. ₹500-700 per hour" } ],
@@ -741,7 +741,7 @@ const jammuAndKashmirAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         city: 'Gulmarg',
         cityId: 'gulmarg',
         stateId: 'jammu-and-kashmir',
-        image: { src: 'https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/gulmarg-gondola.webp', caption: 'gulmarg gondola view' },
+        image: { src: 'https://images.unsplash.com/photo-1620227892398-323869275107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndWxtYXJnJTIwc25vdyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjM3MjI5ODl8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'gulmarg gondola view' },
         description: "One of the highest cable cars in the world, the Gulmarg Gondola offers breathtaking views of the snow-capped Himalayas. It has two phases, with the second phase taking you to Apharwat Peak.",
         timing: "10:00 AM - 4:00 PM (Varies with weather)",
         fees: [ { type: "Phase 1", amount: "₹740" }, { type: "Phase 2", amount: "₹950" } ],
@@ -755,7 +755,7 @@ const jammuAndKashmirAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         city: 'Srinagar',
         cityId: 'srinagar',
         stateId: 'jammu-and-kashmir',
-        image: { src: 'https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/shankaracharya-temple.webp', caption: 'shankaracharya temple srinagar' },
+        image: { src: 'https://images.unsplash.com/photo-1616162386445-618706363a0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzYzNzIyOTg5fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'shankaracharya temple srinagar' },
         description: "Perched on a hilltop, this ancient temple dedicated to Lord Shiva offers panoramic views of Srinagar and the Dal Lake. It's a significant pilgrimage site and a historical monument.",
         timing: "8:00 AM - 5:00 PM",
         fees: [ { type: "Entry", amount: "Free" } ],
@@ -1445,5 +1445,6 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
 ];
+
 
 
