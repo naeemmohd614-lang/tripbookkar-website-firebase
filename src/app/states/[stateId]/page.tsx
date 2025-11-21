@@ -1051,7 +1051,7 @@ export default function StatePage() {
                     'the-mall-road-nainital': { src: 'https://images.unsplash.com/photo-1656259106724-2df8558df324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxsJTIwcm9hZCUyMG5haW5pdGFsfGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
                     'kempty-falls': { src: 'https://images.unsplash.com/photo-1714807776639-1e57f98462a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZW1wdHklMjBmYWxscyUyMG11c3Nvb3JpZXxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080' },
                     'gun-hill': { src: 'https://images.unsplash.com/photo-1678195246797-9535fe4d7809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxndW4lMjBoaWxsJTIwbXVzc29vcmllfGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'robbers-cave': { src: 'https://images.unsplash.com/photo-1628152980740-5be7768c4e60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyb2JiZXJzJTIwY2F2ZSUyMGRlaHJhZHVufGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib-rb-4.1.0&q=80&w=1080' },
+                    'robbers-cave': { src: 'https://images.unsplash.com/photo-1628152980740-5be7768c4e60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyb2JiZXJzJTIwY2F2ZSUyMGRlaHJhZHVufGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
                     'forest-research-institute': { src: 'https://images.unsplash.com/photo-1695974761529-bdbf75cef0f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmcmklMjBkZWhyYWR1bnxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080' },
                 };
 
@@ -1398,19 +1398,19 @@ export default function StatePage() {
 
   const rajasthanCarouselImages = [
     {
-      src: 'https://picsum.photos/seed/jaisalmer-fort/1200/600',
-      caption: 'Jaisalmer Fort',
-      'data-ai-hint': 'jaisalmer fort'
+      src: 'https://images.unsplash.com/photo-1599661046223-140c147242da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWwlMjBtYWhhbCUyMGphaXB1cnxlbnwwfHx8fDE3NjM0NTU2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      caption: 'Jal Mahal, Jaipur',
+      'data-ai-hint': 'jaipur jal mahal'
     },
     {
-      src: 'https://picsum.photos/seed/hawa-mahal/1200/600',
-      caption: 'Hawa Mahal, Jaipur',
-      'data-ai-hint': 'hawa mahal'
+      src: 'https://images.unsplash.com/photo-1547153761-245464673801?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZWhyYW5nYXJoJTIwZm9ydCUyMGJsdWUlMjBjaXR5fGVufDB8fHx8MTc2MzU2MDMxMXww&ixlib=rb-4.1.0&q=80&w=1080',
+      caption: 'Mehrangarh Fort, Jodhpur',
+      'data-ai-hint': 'jodhpur fort city'
     },
     {
-      src: 'https://picsum.photos/seed/udaipur-lake/1200/600',
+      src: 'https://images.unsplash.com/photo-1595829124447-d170b6a22164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1ZGFpcHVyJTIwbGFrZSUyMHZpZXd8ZW58MHx8fHwxNzYzNTYwMzQwfDA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Lake Pichola, Udaipur',
-      'data-ai-hint': 'udaipur lake'
+      'data-ai-hint': 'udaipur lake pichola'
     }
   ];
 
