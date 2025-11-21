@@ -170,24 +170,21 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {destinationsByMonth.map((month) => {
-              const monthImageHints = {
-                'January': 'winter snow',
-                'February': 'northern lights',
-                'March': 'cherry blossom',
-                'April': 'tulip field',
-                'May': 'venice canal',
-                'June': 'tropical beach',
-                'July': 'savannah elephant',
-                'August': 'bali temple',
-                'September': 'jungle elephant',
-                'October': 'autumn lake',
-                'November': 'vietnam rice',
-                'December': 'skiing mountain',
+              const monthImageUrls: { [key: string]: { src: string; caption: string } } = {
+                'January': { src: 'https://images.unsplash.com/photo-1641566797195-5c5080f3c251?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3aW50ZXIlMjBzbm93fGVufDB8fHx8MTc2MzY4NDY2N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'winter snow' },
+                'February': { src: 'https://images.unsplash.com/photo-1488415032361-b7e238421f1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxub3J0aGVybiUyMGxpZ2h0c3xlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'northern lights' },
+                'March': { src: 'https://images.unsplash.com/photo-1493589976221-c2357c31ad77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaGVycnklMjBibG9zc29tfGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'cherry blossom' },
+                'April': { src: 'https://images.unsplash.com/photo-1619787110676-c0181304528d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0dWxpcCUyMGZpZWxkfGVufDB8fHx8MTc2MzY1MDM1MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'tulip field' },
+                'May': { src: 'https://images.unsplash.com/photo-1653766846644-4e8a5498f69a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2ZW5pY2UlMjBjYW5hbHxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'venice canal' },
+                'June': { src: 'https://images.unsplash.com/photo-1586500036065-bdaeac7a4feb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMGJlYWNofGVufDB8fHx8MTc2MzU5MzAxMXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'tropical beach' },
+                'July': { src: 'https://images.unsplash.com/photo-1738508798495-32d5de3f2eda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzYXZhbm5haCUyMGVsZXBoYW50fGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'savannah elephant' },
+                'August': { src: 'https://images.unsplash.com/photo-1584493737987-b2f0c75a8729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc2MzY2NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'bali temple' },
+                'September': { src: 'https://images.unsplash.com/photo-1549366021-9f761d450615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxqdW5nbGUlMjBlbGVwaGFudHxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'jungle elephant' },
+                'October': { src: 'https://images.unsplash.com/photo-1507830075634-ce51e8b19328?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhdXR1bW4lMjBsYWtlfGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'autumn lake' },
+                'November': { src: 'https://images.unsplash.com/photo-1694152327372-39b2f9159f33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aWV0bmFtJTIwcmljZXxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'vietnam rice' },
+                'December': { src: 'https://images.unsplash.com/photo-1605199024013-5954321963dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxza2lpbmclMjBtb3VudGFpbnxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'skiing mountain' },
               };
-              const destImage = {
-                  "src": `https://picsum.photos/seed/${month.imageId}/1080/400`,
-                  "caption": monthImageHints[month.name as keyof typeof monthImageHints] || "travel destination"
-              };
+              const destImage = monthImageUrls[month.name] || { src: `https://picsum.photos/seed/${month.imageId}/1080/400`, caption: "travel destination" };
               return (
                 <Link href={`/destinations/${month.slug}`} key={month.name}>
                   <Card className="overflow-hidden group relative h-24 hover:shadow-xl transition-shadow duration-300">
