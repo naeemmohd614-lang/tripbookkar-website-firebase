@@ -138,7 +138,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Goa",
         reason: "The famous Goa Carnival usually takes place in February, filling the streets with colorful parades, music, and dancing. It's a unique cultural experience.",
         hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
-        image: { src: "https://images.unsplash.com/photo-1620027582539-01583562a98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2ElMjBjYXJuaXZhbHxlbnwwfHx8fDE3NjM3OTU5ODV8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa carnival" }
+        image: { src: "https://images.unsplash.com/photo-1620027582539-01583562a98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2ElMjBjYXJuaXZhbHxlbnwwfHx8fDE3NjM3OTU5ODVfMA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa carnival" }
       },
       {
         name: "Puri, Odisha",
@@ -814,7 +814,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Konark, Odisha",
         reason: "The Konark Dance Festival often takes place in early December. The weather is ideal for exploring the magnificent Sun Temple and nearby Chandrabhaga beach.",
         hotels: (hotels as Hotel[]).filter(h => ["Lotus Eco Resort", "Toshali Sands", "The Chariot Resort & Spa", "Mayfair Heritage", "Pramod Convention & Beach Resort"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1668587629217-7567ae4f7b4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxrb25hcmssJTIwc3VuJTIwdGVtcGxlJTIwZmVzdGl2YWx8ZW58MHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "konark sun temple festival" }
+        image: { src: "https://images.unsplash.com/photo-1668587629217-7567ae4f7b4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxrb25hcmssJTIwc3VuJTIwdGVtcGxlJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzIyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "konark sun temple festival" }
       },
       {
         name: "Pondicherry",
@@ -831,3 +831,5 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
+
+    
