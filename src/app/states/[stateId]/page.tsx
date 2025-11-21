@@ -410,9 +410,9 @@ export default function StatePage() {
 
   if (stateId === 'tamil-nadu') {
     const tnCarouselImages = [
-        { src: 'https://picsum.photos/seed/tn-carousel-1/1200/600', caption: 'Meenakshi Temple, Madurai', 'data-ai-hint': 'madurai meenakshi temple' },
-        { src: 'https://picsum.photos/seed/tn-carousel-2/1200/600', caption: 'Nilgiri Mountain Railway, Ooty', 'data-ai-hint': 'ooty toy train' },
-        { src: 'https://picsum.photos/seed/tn-carousel-3/1200/600', caption: 'Vivekananda Rock Memorial, Kanyakumari', 'data-ai-hint': 'kanyakumari memorial' }
+        { src: 'https://images.unsplash.com/photo-1582646636184-b04e0b04b407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWR1cmFpJTIwbWVlbmFrc2hpJTIwdGVtcGxlfGVufDB8fHx8MTc2Mzc5NjQwMnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Meenakshi Temple, Madurai', 'data-ai-hint': 'madurai meenakshi temple' },
+        { src: 'https://images.unsplash.com/photo-1620473281222-a9b2b50937a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvb3R5JTIwdG95JTIwdHJhaW58ZW58MHx8fHwxNzYzNzk2NDAyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Nilgiri Mountain Railway, Ooty', 'data-ai-hint': 'ooty toy train' },
+        { src: 'https://images.unsplash.com/photo-1622619443415-c205e4a4282e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrYW55YWt1bWFyaSUyMG1lbW9yaWFsfGVufDB8fHx8MTc2Mzc5NjQwMnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Vivekananda Rock Memorial, Kanyakumari', 'data-ai-hint': 'kanyakumari memorial' }
     ];
 
     const tnHighlights = [
@@ -424,11 +424,18 @@ export default function StatePage() {
     const tnCities = ['Chennai', 'Madurai', 'Kanyakumari', 'Ooty', 'Kodaikanal'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
+      const cityImages: { [key: string]: { image: string, caption: string } } = {
+        'chennai': { image: 'https://images.unsplash.com/photo-1616843413587-9e3a35f02c63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxDaGVubmFpJTIwY2l0eXxlbnwwfHx8fDE3NjM3OTY0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Chennai city' },
+        'madurai': { image: 'https://images.unsplash.com/photo-1628590144343-41dd2e55e81e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWR1cmFpJTIwY2l0eXxlbnwwfHx8fDE3NjM3OTY0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Madurai city' },
+        'kanyakumari': { image: 'https://images.unsplash.com/photo-1605285223011-f2518f8d6978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrYW55YWt1bWFyaSUyMGNpdHl8ZW58MHx8fHwxNzYzNzk2NDAyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Kanyakumari city' },
+        'ooty': { image: 'https://images.unsplash.com/photo-1629938883995-124b86835a7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvcnR5JTIwY2l0eXxlbnwwfHx8fDE3NjM3OTY0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Ooty city' },
+        'kodaikanal': { image: 'https://images.unsplash.com/photo-1596767353994-e37456d95b36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrb2RhaWthbmFsJTIwY2l0eXxlbnwwfHx8fDE3NjM3OTY0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Kodaikanal city' },
+      };
       return {
         name: cityName,
         cityId: cityId,
-        image: `https://picsum.photos/seed/city-${cityId}/400/500`,
-        caption: `${cityName} city`
+        image: cityImages[cityId]?.image || `https://picsum.photos/seed/city-${cityId}/400/500`,
+        caption: cityImages[cityId]?.caption || `${cityName} city`
       };
     });
 
@@ -1821,4 +1828,5 @@ export default function StatePage() {
     
 
     
+
 
