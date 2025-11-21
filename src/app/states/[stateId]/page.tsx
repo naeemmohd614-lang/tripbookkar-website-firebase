@@ -19,7 +19,7 @@ function slugify(text: string) {
 }
 
 export default function StatePage() {
-  const params = React.use(useParams());
+  const params = useParams();
   const stateId = params.stateId as string;
   
   const state = (states as State[]).find((s) => s.stateId === stateId);
@@ -1809,6 +1809,8 @@ export default function StatePage() {
     </div>
   );
 }
+
+    
 
     
 
