@@ -12,6 +12,7 @@ const admin = require("firebase-admin");
 const serviceAccountPath = path.join(__dirname, '..', 'serviceAccountKey.json');
 if (!fs.existsSync(serviceAccountPath)) {
   console.error('❌ ERROR: serviceAccountKey.json not found in the project root directory.');
+  console.error('Please download it from your Firebase project settings and place it in the root of your project.');
   process.exit(1);
 }
 const serviceAccount = JSON.parse(
