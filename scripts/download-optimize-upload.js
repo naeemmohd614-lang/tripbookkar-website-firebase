@@ -58,12 +58,12 @@ async function optimizeImage(inputPath) {
     if(!inputPath) return null;
     const fileName = path.basename(inputPath);
     fs.ensureDirSync(OPTIMIZED_DIR);
-    const outputPath = path.join(OPTIMIZED_DIR, fileName);
+    const outputPath = path.join(OPTIMIZED_DIR, `${path.parse(fileName).name}.webp`);
 
     try {
         await sharp(inputPath)
-            .resize(1800)
-            .jpeg({ quality: 75 })
+            .resize(1080, 720, { fit: 'cover' })
+            .webp({ quality: 80 })
             .toFile(outputPath);
 
         console.log("✔ Optimized:", path.relative(path.join(__dirname, '..'), outputPath));
@@ -80,12 +80,16 @@ async function optimizeImage(inputPath) {
 async function uploadToFirebase(filePath) {
     if(!filePath) return null;
     try {
-        const uploaded = await bucket.upload(filePath, {
-            destination: `images/${path.basename(filePath)}`,
+        const destination = `images/${path.basename(filePath)}`;
+        const [uploaded] = await bucket.upload(filePath, {
+            destination: destination,
             public: true,
+            metadata: {
+                cacheControl: 'public, max-age=31536000',
+            }
         });
 
-        const url = uploaded[0].publicUrl();
+        const url = uploaded.publicUrl();
         console.log("🔥 Uploaded:", url);
         return url;
     } catch (error) {
@@ -123,7 +127,12 @@ async function replaceUrlsInFiles(map) {
       totalReplaced++;
     }
   }
-  console.log(`\n✅ Replaced URLs in ${totalReplaced} files.`);
+  
+  if (totalReplaced > 0) {
+      console.log(`\n✅ Replaced URLs in ${totalReplaced} files.`);
+  } else {
+      console.log('\nNo URLs needed to be replaced in project files.');
+  }
 }
 
 
@@ -132,22 +141,21 @@ async function replaceUrlsInFiles(map) {
 // -----------------------------
 (async () => {
     const projectRoot = path.join(__dirname, '..');
-    const files = glob.sync(
+    const filesToScan = glob.sync(
         "{src,data}/**/*.{ts,tsx,js,jsx,json,md,mdx}",
-        { cwd: projectRoot, absolute: true, ignore: '**/node_modules/**' }
+        { cwd: projectRoot, absolute: true, ignore: ['**/node_modules/**', '**/package.json', '**/package-lock.json'] }
     );
 
     const urlRegex = /(https?:\/\/(?:picsum\.photos|images\.unsplash\.com)[^\s"'`)\\]+)/gi;
 
     let foundUrls = new Set();
 
-    for (const file of files) {
+    for (const file of filesToScan) {
         const content = fs.readFileSync(file, "utf8");
         const matches = content.match(urlRegex);
         if (matches) {
             matches.forEach((url) => {
-                // Clean up trailing characters that might be caught by regex
-                const cleanedUrl = url.replace(/[")>]+$/, '');
+                const cleanedUrl = url.replace(/[")'>]+$/, '');
                 foundUrls.add(cleanedUrl);
             });
         }
@@ -168,7 +176,8 @@ async function replaceUrlsInFiles(map) {
     let replaceMap = {};
 
     for (const remoteUrl of foundUrls) {
-        const fileName = remoteUrl.split("/").pop().split("?")[0] || `image-${Date.now()}`;
+        const urlParts = new URL(remoteUrl);
+        const fileName = urlParts.pathname.split('/').pop() || `image-${Date.now()}`;
         const localPath = path.join(TEMP_DIR, fileName);
 
         const downloadedPath = await downloadImage(remoteUrl, localPath);
