@@ -1545,7 +1545,7 @@ export default function StatePage() {
 
   const goaCarouselImages = [
     {
-      src: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHb2F8ZW58MHx8fHwxNzYzNzAyMjgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1596620245148-384351235174?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWdhJTIwYmVhY2glMjBjcm93ZHxlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Baga Beach, Goa',
       'data-ai-hint': 'baga beach crowd'
     },
@@ -1830,3 +1830,6 @@ export default function StatePage() {
     
 
 
+
+
+    
