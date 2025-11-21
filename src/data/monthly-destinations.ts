@@ -831,3 +831,5 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
+
+    
