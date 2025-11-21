@@ -1,3 +1,4 @@
+import React from 'react';
 import { hotels } from '@/lib/data';
 import HotelCard from '@/components/hotel-card';
 import SearchForm from '@/components/search-form';
@@ -8,7 +9,7 @@ export default function SearchPage({
 }: {
   searchParams?: { q?: string };
 }) {
-  const query = searchParams?.q?.toLowerCase() || '';
+  const query = React.use(searchParams)?.q?.toLowerCase() || '';
 
   const filteredHotels = query
     ? (hotels as Hotel[]).filter(
