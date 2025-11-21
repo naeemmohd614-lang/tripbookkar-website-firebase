@@ -18,7 +18,7 @@ function slugify(text: string) {
 }
 
 export default function CityPage() {
-  const params = React.use(useParams());
+  const params = useParams();
   const stateId = params.stateId as string;
   const cityId = params.cityId as string;
 

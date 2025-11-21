@@ -1,3 +1,4 @@
+
 'use client';
 import { brands } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
@@ -10,7 +11,7 @@ import { Hotel } from '@/lib/types';
 import React from 'react';
 
 export default function BrandPage() {
-  const params = React.use(useParams());
+  const params = useParams();
   const brandSlug = params.brand as string;
   
   const brand = (brands as Brand[]).find((b) => b.brandSlug === brandSlug);

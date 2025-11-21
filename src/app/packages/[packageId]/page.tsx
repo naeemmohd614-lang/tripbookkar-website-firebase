@@ -1,3 +1,4 @@
+
 'use client';
 import { featuredPackages } from '@/lib/data';
 import { useParams, notFound } from 'next/navigation';
@@ -10,7 +11,7 @@ import type { Package } from '@/lib/types';
 import React from 'react';
 
 export default function PackageDetailPage() {
-    const params = React.use(useParams());
+    const params = useParams();
     const packageId = params.packageId as string;
     const pkg = (featuredPackages as Package[]).find((p) => p.id === packageId);
 

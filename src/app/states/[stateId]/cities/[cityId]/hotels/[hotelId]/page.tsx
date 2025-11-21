@@ -11,7 +11,7 @@ import { Check, Dumbbell, Dog, MapPin, Utensils, Zap, Mic2, GlassWater } from 'l
 import React from 'react';
 
 export default function HotelDetailPage() {
-  const params = React.use(useParams());
+  const params = useParams();
   const hotelId = params.hotelId as string;
 
   const hotel = (hotels as Hotel[]).find((h) => h.hotelId === hotelId);
