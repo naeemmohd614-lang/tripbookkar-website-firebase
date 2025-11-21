@@ -699,67 +699,67 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   november: {
     name: 'November',
     slug: 'november',
-    pageImage: { src: 'https://images.unsplash.com/photo-1542296016-836b76174a72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTY0MDV8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1666244453401-43a8c15b5640?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3NjI4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
     destinations: [
       {
         name: "Varanasi, Uttar Pradesh",
         reason: "Witness the ethereal beauty of Dev Deepawali, when thousands of diyas (earthen lamps) are lit on the ghats of the Ganges. It's a truly magical and spiritual experience.",
         hotels: (hotels as Hotel[]).filter(h => ["BrijRama Palace, Varanasi", "Taj Ganges, Varanasi", "The Clarks, Varanasi", "Hotel Madin", "Ramada Plaza by Wyndham JHV Varanasi"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/varanasi-nov/1200/400", caption: "dev deepawali varanasi" }
+        image: { src: "https://images.unsplash.com/photo-1635742390926-64e2c3f01ca0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZXYlMjBkZWVwYXdhbGklMjB2YXJhbmFzaXxlbnwwfHx8fDE3NjM3NjI4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "dev deepawali varanasi" }
       },
       {
         name: "Pushkar, Rajasthan",
         reason: "Experience the world's largest camel fair, the Pushkar Mela. It's a vibrant spectacle of culture, trade, and traditions, with competitions, folk performances, and hot air ballooning.",
         hotels: (hotels as Hotel[]).filter(h => ["The Westin Pushkar Resort & Spa", "Ananta Spa & Resorts", "Pratap Mahal, Ajmer", "The Greenhouse Resort", "Bhanwar Singh Palace"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/pushkar-nov/1200/400", caption: "pushkar camel fair" }
+        image: { src: "https://images.unsplash.com/photo-1717131553948-13c2c59c7293?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwdXNoa2FyJTIwY2FtZWwlMjBmYWlyfGVufDB8fHx8MTc2Mzc2Mjg1Mnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "pushkar camel fair" }
       },
       {
         name: "Sundarbans, West Bengal",
         reason: "The pleasant weather is ideal for exploring the world's largest mangrove forest. It's the best time for boat safaris to spot the elusive Royal Bengal Tiger and other wildlife.",
         hotels: (hotels as Hotel[]).filter(h => ["Sundarban Tiger Camp", "Sunderban Jungle Mahal", "Royal Bengal Resort", "Solitary Nook", "WBTD Sajnekhali Tourist Lodge"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/sundarbans-nov/1200/400", caption: "sundarbans mangrove forest" }
+        image: { src: "https://images.unsplash.com/photo-1712852828865-bb920a0876b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdW5kYXJiYW5zJTIwbWFuZ3JvdmUlMjBmb3Jlc3R8ZW58MHx8fHwxNzYzNzYyODUyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "sundarbans mangrove forest" }
       },
       {
         name: "Goa",
         reason: "November marks the beginning of the tourist season. The weather is perfect, the shacks are open, and the vibe is energetic, but it's less crowded than December.",
         hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
-        image: { src: "https://picsum.photos/seed/goa-nov/1200/400", caption: "goa beach shack" }
+        image: { src: "https://images.unsplash.com/photo-1597820334272-af87b2d917c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z29hJTIwYmVhY2glMjBzaGFja3xlbnwwfHx8fDE3NjM3NjI4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa beach shack" }
       },
       {
         name: "Hampi, Karnataka",
         reason: "The weather is perfect for exploring the ruins. The Hampi Utsav, a grand cultural festival, is sometimes held in November, bringing the ancient city to life with music and dance.",
         hotels: (hotels as Hotel[]).filter(h => ["Evolve Back, Hampi", "Hyatt Place Hampi", "Hampi's Boulders Resort", "Heritage Resort Hampi", "Kishkinda Heritage Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/hampi-nov/1200/400", caption: "hampi festival" }
+        image: { src: "https://images.unsplash.com/photo-1718293753538-976041c4f2f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGFtcGklMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3NjI4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "hampi festival" }
       },
       {
         name: "Udaipur, Rajasthan",
         reason: "The cool and pleasant weather is ideal for sightseeing and boat rides on Lake Pichola. The city is beautifully lit up for Diwali if it falls in November.",
         hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').slice(0, 10),
-        image: { src: "https://picsum.photos/seed/udaipur-nov/1200/400", caption: "udaipur city palace" }
+        image: { src: "https://images.unsplash.com/photo-1696861524777-978d87c7cff2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1ZGFpcHVyJTIwY2l0eSUyMHBhbGFjZXxlbnwwfHx8fDE3NjM3NjI4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "udaipur city palace" }
       },
       {
         name: "Bodh Gaya, Bihar",
         reason: "The weather is cool and pleasant, making it the perfect time for pilgrims and tourists to visit the Mahabodhi Temple and other Buddhist monasteries.",
         hotels: (hotels as Hotel[]).filter(h => ["The Royal Residency", "Maha Bodhi Hotel Resort", "Oaks Bodhgaya", "Hotel Bodh Vilas", "Hotel Sujata"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/bodhgaya-nov/1200/400", caption: "mahabodhi temple bodh gaya" }
+        image: { src: "https://images.unsplash.com/photo-1744979324655-520e1be34f4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWhhYm9kaGklMjB0ZW1wbGUlMjBib2RoJTIwZ2F5YXxlbnwwfHx8fDE3NjM3NjI4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "mahabodhi temple bodh gaya" }
       },
       {
         name: "Gir National Park, Gujarat",
         reason: "This is the best time to spot the majestic Asiatic Lions as the weather is pleasant and the vegetation is not too dense. The park is fully open for safaris.",
         hotels: (hotels as Hotel[]).filter(h => ["The Fern Gir Forest Resort", "Woods at Sasan", "The Gateway Hotel Gir Forest", "Amidhara Resort", "Gir Serai - IHCL SeleQtions"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/gir-nov/1200/400", caption: "asiatic lion gir" }
+        image: { src: "https://images.unsplash.com/photo-1653038803592-642bcd3910da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhc2lhdGljJTIwbGlvbiUyMGdpcnxlbnwwfHx8fDE3NjM3NjI4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "asiatic lion gir" }
       },
       {
         name: "Almora, Uttarakhand",
         reason: "Enjoy crisp mountain air and clear panoramic views of the Himalayas. The town's unique horseshoe shape and cultural heritage make it a charming winter destination.",
         hotels: (hotels as Hotel[]).filter(h => ["The Kumaon", "Gohil's Homestay", "Imperial Heights", "Kasar Rainbow Resort", "Mohan's Binsar Retreat"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/almora-nov/1200/400", caption: "himalayan view from almora" }
+        image: { src: "https://images.unsplash.com/photo-1707818131609-f34f7316c5f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGltYWxheWFuJTIwdmlldyUyMGZyb20lMjBhbG1vcmF8ZW58MHx8fHwxNzYzNzYyODUyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "himalayan view from almora" }
       },
       {
         name: "Shillong, Meghalaya",
         reason: "The post-monsoon Cherry Blossom Festival is a spectacular event, painting the city in shades of pink. The weather is cool and perfect for exploring.",
         hotels: (hotels as Hotel[]).filter(h => ["Ri Kynjai", "Hotel Polo Towers Shillong", "The Eee Cee Hotel", "Cafe Shillong Bed & Breakfast", "Aerodene Cottage"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/shillong-nov/1200/400", caption: "shillong cherry blossom" }
+        image: { src: "https://images.unsplash.com/photo-1679840892951-8bd6562214f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaGlsbG9uZyUyMGNoZXJyeSUyMGJsb3Nzb218ZW58MHx8fHwxNzYzNzYyODUyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "shillong cherry blossom" }
       }
     ]
   },
@@ -831,5 +831,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
+
+    
 
     
