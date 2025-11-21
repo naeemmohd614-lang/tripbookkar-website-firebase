@@ -37,9 +37,9 @@ export default function StatePage() {
 
   if (stateId === 'delhi') {
     const delhiCarouselImages = [
-        { src: 'https://images.unsplash.com/photo-1588624340333-c5a4f31c518d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGdhdGUlMjBuZXclMjBkZWxoaXxlbnwwfHx8fDE3NjM3MTAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'India Gate', 'data-ai-hint': 'india gate new delhi' },
-        { src: 'https://images.unsplash.com/photo-1507281632231-62d37095033a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxodW1heXVucyUyMHRvbWIlMjBkZWxoaXxlbnwwfHx8fDE3NjM3MTAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Humayun\'s Tomb', 'data-ai-hint': 'humayuns tomb delhi' },
-        { src: 'https://images.unsplash.com/photo-1587569383679-b78f3528ab4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb3R1cyUyMHRlbXBsZSUyMGRlbGhpfGVufDB8fHx8MTc2MzcxMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Lotus Temple', 'data-ai-hint': 'lotus temple delhi' }
+        { src: 'https://picsum.photos/seed/delhi-carousel-1/1200/600', caption: 'India Gate', 'data-ai-hint': 'india gate new delhi' },
+        { src: 'https://picsum.photos/seed/delhi-carousel-2/1200/600', caption: 'Humayun\'s Tomb', 'data-ai-hint': 'humayuns tomb delhi' },
+        { src: 'https://picsum.photos/seed/delhi-carousel-3/1200/600', caption: 'Lotus Temple', 'data-ai-hint': 'lotus temple delhi' }
     ];
 
     const delhiHighlights = [
@@ -941,9 +941,9 @@ export default function StatePage() {
 
   if (stateId === 'uttarakhand') {
     const uttarakhandCarouselImages = [
-        { src: 'https://images.unsplash.com/photo-1725600090866-dc591ddf4957?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyaXNoaWtlc2glMjBnYW5nZXMlMjByaXZlcnxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Rishikesh, Uttarakhand', 'data-ai-hint': 'rishikesh ganges river' },
-        { src: 'https://images.unsplash.com/photo-1715871058561-4dced94d23e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuYWluaXRhbCUyMGxha2UlMjBib2F0c3xlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Nainital Lake', 'data-ai-hint': 'nainital lake boats' },
-        { src: 'https://images.unsplash.com/photo-1550854317-10deac0a98a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhdWxpJTIwc2tpaW5nJTIwc25vd3xlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Auli Ski Resort', 'data-ai-hint': 'auli skiing snow' }
+        { src: 'https://picsum.photos/seed/uttarakhand-carousel-1/1200/600', caption: 'Rishikesh, Uttarakhand', 'data-ai-hint': 'rishikesh ganges river' },
+        { src: 'https://picsum.photos/seed/uttarakhand-carousel-2/1200/600', caption: 'Nainital Lake', 'data-ai-hint': 'nainital lake boats' },
+        { src: 'https://picsum.photos/seed/uttarakhand-carousel-3/1200/600', caption: 'Auli Ski Resort', 'data-ai-hint': 'auli skiing snow' }
     ];
 
     const uttarakhandHighlights = [
@@ -1213,7 +1213,7 @@ export default function StatePage() {
 
   if (stateId === 'uttar-pradesh') {
     const upCarouselImages = [
-        { src: 'https://images.unsplash.com/photo-1654057892249-c2cf38a50ab7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8THVja25vdyUyMHxlbnwwfHx8fDE3NjM1MjgyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' },
+        { src: 'https://picsum.photos/seed/up-carousel-1/1200/600', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' },
         { src: 'https://picsum.photos/seed/up-carousel-2/1200/600', caption: 'Ghats of Varanasi', 'data-ai-hint': 'varanasi ghats' },
         { src: 'https://picsum.photos/seed/up-carousel-3/1200/600', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
     ];
@@ -1366,17 +1366,17 @@ export default function StatePage() {
 
   const rajasthanCarouselImages = [
     {
-      src: 'https://images.unsplash.com/photo-1599661046223-140c147242da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWwlMjBtYWhhbCUyMGphaXB1cnxlbnwwfHx8fDE3NjM0NTU2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://picsum.photos/seed/rajasthan-carousel-1/1200/600',
       caption: 'Jal Mahal, Jaipur',
       'data-ai-hint': 'jaipur jal mahal'
     },
     {
-      src: 'https://images.unsplash.com/photo-1547153761-245464673801?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZWhyYW5nYXJoJTIwZm9ydCUyMGJsdWUlMjBjaXR5fGVufDB8fHx8MTc2MzU2MDMxMXww&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://picsum.photos/seed/rajasthan-carousel-2/1200/600',
       caption: 'Mehrangarh Fort, Jodhpur',
       'data-ai-hint': 'jodhpur fort city'
     },
     {
-      src: 'https://images.unsplash.com/photo-1595829124447-d170b6a22164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1ZGFpcHVyJTIwbGFrZSUyMHZpZXd8ZW58MHx8fHwxNzYzNTYwMzQwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://picsum.photos/seed/rajasthan-carousel-3/1200/600',
       caption: 'Lake Pichola, Udaipur',
       'data-ai-hint': 'udaipur lake pichola'
     }
@@ -1536,12 +1536,12 @@ export default function StatePage() {
       'data-ai-hint': 'baga beach crowd'
     },
     {
-      src: 'https://images.unsplash.com/photo-1570194883446-a3c3c7340c49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2ElMjBiZWFjaCUyMHNoYWNrc3xlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://picsum.photos/seed/goa-carousel-2/1200/600',
       caption: 'A beach party in Goa',
       'data-ai-hint': 'goa nightlife party'
     },
     {
-      src: 'https://images.unsplash.com/photo-1593169389279-b1d6904c60a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvY3RhdmlvJTIwYmFzaWxpY2ElMjBvZiUyMGJvbSUyMGplc3VzfGVufDB8fHx8MTc2MzY5Nzc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://picsum.photos/seed/goa-carousel-3/1200/600',
       caption: 'Basilica of Bom Jesus, Old Goa',
       'data-ai-hint': 'goa church architecture'
     }
@@ -1557,13 +1557,13 @@ export default function StatePage() {
     {
       name: 'North Goa',
       slug: 'north-goa',
-      image: 'https://images.unsplash.com/photo-1589995171587-01a2f3089408?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxub3J0aCUyMGdvYSUyMGJlYWNofGVufDB8fHx8MTc2MzY5Nzc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://picsum.photos/seed/north-goa-area/400/500',
       caption: 'North Goa beach'
     },
     {
       name: 'South Goa',
       slug: 'south-goa',
-      image: 'https://images.unsplash.com/photo-1579033461380-adb47c3eb938?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb3V0aCUyMGdvYSUyMGJlYWNofGVufDB8fHx8MTc2MzY5Nzc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://picsum.photos/seed/south-goa-area/400/500',
       caption: 'South Goa peaceful beach'
     },
   ];
@@ -1808,3 +1808,5 @@ export default function StatePage() {
     </div>
   );
 }
+
+    
