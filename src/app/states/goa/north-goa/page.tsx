@@ -12,7 +12,7 @@ import HotelCard from '@/components/hotel-card';
 export default function NorthGoaPage() {
     
     const heroImage = {
-        src: 'https://picsum.photos/seed/north-goa-hero/1920/600',
+        src: 'https://images.unsplash.com/photo-1570194883446-a3c3c7340c49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2ElMjBiZWFjaCUyMHNoYWNrc3xlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
         caption: 'Baga beach shacks and nightlife'
     };
 

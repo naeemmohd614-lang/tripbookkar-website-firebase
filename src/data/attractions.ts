@@ -12,7 +12,7 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         cityId: 'jaipur',
         stateId: 'rajasthan',
         image: {
-            src: 'https://picsum.photos/seed/amer-fort/1200/600',
+            src: 'https://images.unsplash.com/photo-1599661046223-140c147242da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWwlMjBtYWhhbCUyMGphaXB1cnxlbnwwfHx8fDE3NjM0NTU2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
             caption: 'amer fort',
         },
         description: "A stunning example of Rajput architecture, Amer Fort is a majestic fortress-palace overlooking Maota Lake. Explore its intricate courtyards, halls, and the breathtaking Sheesh Mahal (Mirror Palace).",
@@ -40,7 +40,7 @@ const jaipurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         cityId: 'jaipur',
         stateId: 'rajasthan',
         image: {
-            src: 'https://picsum.photos/seed/hawa-mahal/1200/600',
+            src: 'https://images.unsplash.com/photo-1617541183350-a9244015f074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYXdhJTIwbWFoYWwlMjBwaW5rJTIwY2l0eXxlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
             caption: 'hawa mahal',
         },
         description: "The 'Palace of Winds', Hawa Mahal is an iconic five-story honeycomb-like structure with 953 windows. It allowed royal women to observe street festivities unseen from the outside.",
@@ -288,7 +288,7 @@ const goaAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         cityId: 'north-goa',
         stateId: 'goa',
         image: {
-            src: 'https://picsum.photos/seed/baga-beach/1200/600',
+            src: 'https://images.unsplash.com/photo-1590372339797-de37a44517e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYWdhJTIwYmVhY2glMjBnb2F8ZW58MHx8fHwxNzYzNjk3Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
             caption: 'Baga Beach shacks and crowd',
         },
         description: "One of the most famous beaches in North Goa, Baga is known for its lively atmosphere, beach shacks, water sports, and electrifying nightlife. It's the perfect spot for fun and excitement.",
@@ -329,7 +329,7 @@ const goaAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         cityId: 'north-goa',
         stateId: 'goa',
         image: {
-            src: 'https://picsum.photos/seed/old-goa-church/1200/600',
+            src: 'https://images.unsplash.com/photo-1593169389279-b1d6904c60a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvY3RhdmlvJTIwYmFzaWxpY2ElMjBvZiUyMGJvbSUyMGplc3VzfGVufDB8fHx8MTc2MzY5Nzc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
             caption: 'Basilica of Bom Jesus in Old Goa',
         },
         description: "The former capital of Portuguese India, Old Goa is a UNESCO World Heritage site. It's renowned for its magnificent colonial-era churches and cathedrals, including the Basilica of Bom Jesus and Se Cathedral.",
@@ -608,7 +608,7 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         city: 'Rishikesh',
         cityId: 'rishikesh',
         stateId: 'uttarakhand',
-        image: { src: 'https://images.unsplash.com/photo-1718431108698-2324891fd796?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGF4bWFuJTIwamh1bGElMjByaXNoaWtlc2h8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'laxman jhula rishikesh' },
+        image: { src: 'https://images.unsplash.com/photo-1701709488066-8d32fe5871b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsYXhtYW4lMjBqaHVsYSUyMHJpc2hpa2VzaHxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'laxman jhula rishikesh' },
         description: "Similar to Ram Jhula, this is another major suspension bridge across the Ganges. It is said that Laxman, the brother of Lord Ram, crossed the Ganges on jute ropes where this bridge is built.",
         timing: "5:00 AM - 10:00 PM",
         fees: [ { type: "Entry", amount: "Free" } ],
