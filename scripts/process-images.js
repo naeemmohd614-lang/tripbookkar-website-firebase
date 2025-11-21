@@ -3,12 +3,12 @@ const fs = require("fs-extra");
 const path = require("path");
 const sharp = require("sharp");
 const glob = require("glob");
+const axios = require("axios");
 const admin = require("firebase-admin");
 
 // -----------------------------
 // 1. Firebase Admin Init
 // -----------------------------
-// Ensure serviceAccountKey.json is present in the root directory
 const serviceAccountPath = path.join(__dirname, '..', 'serviceAccountKey.json');
 if (!fs.existsSync(serviceAccountPath)) {
   console.error('❌ ERROR: serviceAccountKey.json not found in the project root directory.');
@@ -24,95 +24,176 @@ admin.initializeApp({
 });
 
 const bucket = admin.storage().bucket();
+const TEMP_DIR = path.join(__dirname, 'temp');
+const OPTIMIZED_DIR = path.join(__dirname, 'optimized');
+
 
 // -----------------------------
-// 2. Process All Images
+// Helper: Download Image
 // -----------------------------
-async function processImage(filePath) {
-  const fileName = path.basename(filePath);
-  const optimizedDir = path.join(__dirname, '..', 'optimized_images');
-  if (!fs.existsSync(optimizedDir)) {
-    fs.mkdirSync(optimizedDir);
-  }
-  const optimizedPath = path.join(optimizedDir, fileName);
+async function downloadImage(url, localPath) {
+    try {
+        const response = await axios({
+            url,
+            method: "GET",
+            responseType: "arraybuffer",
+            timeout: 15000,
+        });
 
-  await sharp(filePath)
-    .resize(1800)
-    .jpeg({ quality: 75 })
-    .toFile(optimizedPath);
+        fs.ensureDirSync(path.dirname(localPath));
+        fs.writeFileSync(localPath, response.data);
+        console.log("⬇ Downloaded:", url);
+        return localPath;
+    } catch (error) {
+        console.error("❌ Failed to download:", url, error.message);
+        return null;
+    }
+}
 
-  console.log("✔ Optimized:", path.relative(path.join(__dirname, '..'), optimizedPath));
-  return optimizedPath;
+// -----------------------------
+// 2. Optimize Image
+// -----------------------------
+async function optimizeImage(inputPath) {
+    if(!inputPath) return null;
+    const fileName = path.basename(inputPath);
+    fs.ensureDirSync(OPTIMIZED_DIR);
+    const outputPath = path.join(OPTIMIZED_DIR, fileName);
+
+    try {
+        await sharp(inputPath)
+            .resize(1800)
+            .jpeg({ quality: 75 })
+            .toFile(outputPath);
+
+        console.log("✔ Optimized:", path.relative(path.join(__dirname, '..'), outputPath));
+        return outputPath;
+    } catch (error) {
+        console.error("❌ Failed to optimize:", inputPath, error.message);
+        return null;
+    }
 }
 
 // -----------------------------
 // 3. Upload to Firebase Storage
 // -----------------------------
 async function uploadToFirebase(filePath) {
-  const uploaded = await bucket.upload(filePath, {
-    destination: `images/${path.basename(filePath)}`,
-    public: true,
-  });
+    if(!filePath) return null;
+    try {
+        const uploaded = await bucket.upload(filePath, {
+            destination: `images/${path.basename(filePath)}`,
+            public: true,
+        });
 
-  const url = uploaded[0].publicUrl();
-  console.log("🔥 Uploaded:", url);
-  return url;
+        const url = uploaded[0].publicUrl();
+        console.log("🔥 Uploaded:", url);
+        return url;
+    } catch (error) {
+        console.error("❌ Failed to upload:", filePath, error.message);
+        return null;
+    }
 }
 
 // -----------------------------
-// 4. Auto Replace URLs in All Files
+// 4. Auto Replace URLs in Source Files
 // -----------------------------
 async function replaceUrlsInFiles(map) {
+  const projectRoot = path.join(__dirname, '..');
   const files = glob.sync(
-    "{src/**/*.{ts,tsx,js,json,md,mdx},public/**/*.json}",
-    { cwd: path.join(__dirname, '..'), absolute: true }
+    "{src,data}/**/*.{ts,tsx,js,jsx,json,md,mdx}",
+    { cwd: projectRoot, absolute: true, ignore: '**/node_modules/**' }
   );
+
+  let totalReplaced = 0;
 
   for (const file of files) {
     let content = fs.readFileSync(file, "utf8");
-    let replaced = false;
+    let changed = false;
 
     for (const [oldUrl, newUrl] of Object.entries(map)) {
       if (content.includes(oldUrl)) {
         content = content.replaceAll(oldUrl, newUrl);
-        replaced = true;
+        changed = true;
       }
     }
 
-    if (replaced) {
+    if (changed) {
       fs.writeFileSync(file, content);
-      console.log("🔁 Updated:", path.relative(path.join(__dirname, '..'), file));
+      console.log("🔁 Updated:", path.relative(projectRoot, file));
+      totalReplaced++;
     }
   }
+  console.log(`\n✅ Replaced URLs in ${totalReplaced} files.`);
 }
+
 
 // -----------------------------
 // 5. MAIN EXECUTION
 // -----------------------------
 (async () => {
-  const projectRoot = path.join(__dirname, '..');
-  const images = glob.sync("public/uploads/**/*.{jpg,jpeg,png,webp}", { cwd: projectRoot, absolute: true });
+    const projectRoot = path.join(__dirname, '..');
+    const files = glob.sync(
+        "{src,data}/**/*.{ts,tsx,js,jsx,json,md,mdx}",
+        { cwd: projectRoot, absolute: true, ignore: '**/node_modules/**' }
+    );
 
-  if(images.length === 0) {
-    console.log("No images found in public/uploads/. Nothing to process.");
-    return;
-  }
+    const urlRegex = /(https?:\/\/(?:picsum\.photos|images\.unsplash\.com)[^\s"'`)\\]+)/gi;
 
-  let replaceMap = {};
+    let foundUrls = new Set();
 
-  for (const image of images) {
-    const optimized = await processImage(image);
-    const firebaseUrl = await uploadToFirebase(optimized);
+    for (const file of files) {
+        const content = fs.readFileSync(file, "utf8");
+        const matches = content.match(urlRegex);
+        if (matches) {
+            matches.forEach((url) => {
+                // Clean up trailing characters that might be caught by regex
+                const cleanedUrl = url.replace(/[")>]+$/, '');
+                foundUrls.add(cleanedUrl);
+            });
+        }
+    }
 
-    // Creates a relative URL path to be replaced
-    const relativeImagePath = path.relative(path.join(projectRoot, 'public'), image);
-    replaceMap[`/${relativeImagePath.replace(/\\/g, '/')}`] = firebaseUrl;
+    if (foundUrls.size === 0) {
+        console.log("\n🤷 No remote image URLs found to process. Exiting.");
+        return;
+    }
+    
+    console.log(`\n🔍 Found ${foundUrls.size} unique remote image URLs.`);
+    console.log("------------------------------------------");
 
-    // Clean up the optimized file after upload
-    fs.removeSync(optimized);
-  }
 
-  await replaceUrlsInFiles(replaceMap);
+    fs.ensureDirSync(TEMP_DIR);
+    fs.ensureDirSync(OPTIMIZED_DIR);
 
-  console.log("\n🎉 ALL DONE — Website images now optimized + on Firebase CDN!");
+    let replaceMap = {};
+
+    for (const remoteUrl of foundUrls) {
+        const fileName = remoteUrl.split("/").pop().split("?")[0] || `image-${Date.now()}`;
+        const localPath = path.join(TEMP_DIR, fileName);
+
+        const downloadedPath = await downloadImage(remoteUrl, localPath);
+        if (!downloadedPath) continue;
+
+        const optimizedPath = await optimizeImage(downloadedPath);
+        if (!optimizedPath) continue;
+        
+        const firebaseUrl = await uploadToFirebase(optimizedPath);
+        if (!firebaseUrl) continue;
+        
+        replaceMap[remoteUrl] = firebaseUrl;
+        console.log('---');
+    }
+
+    // Clean up temporary folders
+    fs.removeSync(TEMP_DIR);
+    fs.removeSync(OPTIMIZED_DIR);
+    console.log("\n🧹 Cleaned up temporary folders.");
+
+    if (Object.keys(replaceMap).length > 0) {
+        await replaceUrlsInFiles(replaceMap);
+    } else {
+        console.log("\nNo new URLs to replace.");
+    }
+    
+
+    console.log("\n🎉 ALL DONE — Website images now optimized + on Firebase CDN!");
 })();
