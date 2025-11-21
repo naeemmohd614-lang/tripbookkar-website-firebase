@@ -31,12 +31,12 @@ export default function DashboardPage(){
   ];
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-6">Dashboard</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
+    <div className="space-y-8">
+      <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Card className="bg-white shadow-sm">
             <CardHeader>
-                <CardTitle>Content Overview</CardTitle>
+                <CardTitle className="text-lg font-semibold text-gray-700">Content Overview</CardTitle>
             </CardHeader>
             <CardContent>
                 <ResponsiveContainer width="100%" height={300}>
@@ -46,14 +46,14 @@ export default function DashboardPage(){
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="count" fill="#8884d8" />
+                        <Bar dataKey="count" fill="#3B82F6" />
                     </BarChart>
                 </ResponsiveContainer>
             </CardContent>
         </Card>
-         <Card>
+         <Card className="bg-white shadow-sm">
             <CardHeader>
-                <CardTitle>Content Distribution</CardTitle>
+                <CardTitle className="text-lg font-semibold text-gray-700">Content Distribution</CardTitle>
             </CardHeader>
             <CardContent>
                 <ResponsiveContainer width="100%" height={300}>
