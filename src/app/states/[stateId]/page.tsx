@@ -816,7 +816,7 @@ export default function StatePage() {
 
   if (stateId === 'jammu-and-kashmir') {
     const jnkCarouselImages = [
-        { src: 'https://images.unsplash.com/photo-1579305101662-33cec3328e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzYzODAwNjU0fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dal Lake, Srinagar', 'data-ai-hint': 'srinagar dal lake' },
+        { src: 'https://images.unsplash.com/photo-1595822378881-375990264b97?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzA3NjExMDIyfDA&ixlib=rb-4.0.3&w=1080&h=720&fit=crop&crop=entropy', caption: 'Dal Lake, Srinagar', 'data-ai-hint': 'srinagar dal lake' },
         { src: 'https://images.unsplash.com/photo-1627889615925-56037b304313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWhhbGdhbSUyMHZhbGxleSUyMHJpdmVyfGVufDB8fHx8MTc2MzcyMjk4OXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Pahalgam Valley', 'data-ai-hint': 'pahalgam valley river' },
         { src: 'https://images.unsplash.com/photo-1620227892398-323869275107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndWxtYXJnJTIwc25vdyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjM3MjI5ODl8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Gulmarg in snow', 'data-ai-hint': 'gulmarg snow mountains' },
     ];
@@ -831,8 +831,8 @@ export default function StatePage() {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
        const cityImages: { [key: string]: { image: string, caption: string } } = {
-        'srinagar': { image: 'https://images.unsplash.com/photo-1616162386445-618706363a0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzYzNzIyOTg5fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'srinagar city' },
-        'gulmarg': { image: 'https://images.unsplash.com/photo-1593361589133-c82a55982855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxndWxtYXJnJTIwc2tpaW5nfGVufDB8fHx8MTc2MzgwMDY1NXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'gulmarg city' },
+        'srinagar': { image: 'https://images.unsplash.com/photo-1616162386445-618706363a0a?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzA3NjExMDIyfDA&ixlib=rb-4.0.3&w=400&h=500&fit=crop&crop=entropy', caption: 'srinagar city' },
+        'gulmarg': { image: 'https://images.unsplash.com/photo-1593361589133-c82a55982855?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndWxtYXJnJTIwc2tpaW5nfGVufDB8fHx8MTcwNzYxMTAyMnww&ixlib=rb-4.0.3&w=400&h=500&fit=crop&crop=entropy', caption: 'gulmarg city' },
         'pahalgam': { image: 'https://images.unsplash.com/photo-1627889615925-56037b304313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWhhbGdhbSUyMHZhbGxleSUyMHJpdmVyfGVufDB8fHx8MTc2MzcyMjk4OXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'pahalgam city' },
       };
       return {
@@ -1550,17 +1550,17 @@ export default function StatePage() {
 
   const goaCarouselImages = [
     {
-      src: 'https://images.unsplash.com/photo-1596620245148-384351235174?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWdhJTIwYmVhY2glMjBjcm93ZHxlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1596620245148-384351235174?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWdhJTIwYmVhY2glMjBjcm93ZHxlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.0.3&w=1080&h=720&fit=crop&crop=entropy',
       caption: 'Baga Beach, Goa',
       'data-ai-hint': 'baga beach crowd'
     },
     {
-      src: 'https://images.unsplash.com/photo-1570194883446-a3c3c7340c49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2ElMjBiZWFjaCUyMHNoYWNrc3xlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1570194883446-a3c3c7340c49?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2ElMjBiZWFjaCUyMHNoYWNrc3xlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.0.3&w=1080&h=720&fit=crop&crop=entropy',
       caption: 'A beach party in Goa',
       'data-ai-hint': 'goa nightlife party'
     },
     {
-      src: 'https://images.unsplash.com/photo-1620336292023-0622c815777a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2ElMjBjaHVyY2glMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYzNzAyMjgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1620336292023-0622c815777a?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2ElMjBjaHVyY2glMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYzNzAyMjgxfDA&ixlib=rb-4.0.3&w=1080&h=720&fit=crop&crop=entropy',
       caption: 'Basilica of Bom Jesus, Old Goa',
       'data-ai-hint': 'goa church architecture'
     }
@@ -1576,13 +1576,13 @@ export default function StatePage() {
     {
       name: 'North Goa',
       slug: 'north-goa',
-      image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHb2F8ZW58MHx8fHwxNzYzNzAyMjgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHb2F8ZW58MHx8fHwxNzYzNzAyMjgxfDA&ixlib=rb-4.0.3&w=400&h=500&fit=crop&crop=entropy',
       caption: 'North Goa beach'
     },
     {
       name: 'South Goa',
       slug: 'south-goa',
-      image: 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGdvYSUyMHBlYWNlZnVsJTIwYmVhY2h8ZW58MHx8fHwxNzYzNjk3Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGdvYSUyMHBlYWNlZnVsJTIwYmVhY2h8ZW58MHx8fHwxNzYzNjk3Nzk5fDA&ixlib=rb-4.0.3&w=400&h=500&fit=crop&crop=entropy',
       caption: 'South Goa peaceful beach'
     },
   ];
@@ -1781,7 +1781,7 @@ export default function StatePage() {
                             };
                             return (
                                 <Link href={`/states/${state.stateId}/cities/${city.cityId}`} key={city.cityId}>
-                                    <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                                    <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300">
                                         <CardContent className="p-0">
                                         <div className="relative h-40">
                                             <Image
