@@ -21,9 +21,7 @@ export interface Hotel {
   };
   images: {
     src: string;
-    thumb: string;
     caption: string;
-    hash: string;
   }[];
   roomCategories: {
     name: string;
