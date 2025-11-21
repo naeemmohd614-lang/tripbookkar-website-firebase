@@ -27,7 +27,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     name: 'January',
     slug: 'january',
     pageImage: {
-        src: 'https://picsum.photos/seed/jan-hero/1080/200',
+        src: 'https://images.unsplash.com/photo-1517524206127-48bbd363f357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3aW50ZXIlMjB0cmF2ZWwlMjBpbmRpYXxlbnwwfHx8fDE3NjM3OTcwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080',
         caption: 'winter travel india',
     },
     destinations: [
@@ -96,74 +96,74 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   february: {
     name: 'February',
     slug: 'february',
-    pageImage: { src: 'https://picsum.photos/seed/feb-hero/1080/200', caption: 'spring flowers festival' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1518621434389-403d5a4009a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxGZWJydWFyeSUyMGZlc3RpdmFsfGVufDB8fHx8MTc2Mzc5NjM5MHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'spring flowers festival' },
     destinations: [
       {
         name: "Jaisalmer, Rajasthan",
         reason: "Attend the vibrant Desert Festival, showcasing Rajasthani culture with folk dances, music, and camel races. The weather is perfect for desert safaris and exploring the golden fort.",
         hotels: (hotels as Hotel[]).filter(h => ["Suryagarh Jaisalmer", "Jaisalmer Marriott Resort & Spa", "Hotel Rang Mahal", "Fort Rajwada", "The Gulaal"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/jaisalmer-feb/1200/400", caption: "jaisalmer fort" }
+        image: { src: "https://images.unsplash.com/photo-1626955834454-7f897363a027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWlzYWxtZXIlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTU5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "jaisalmer fort" }
       },
       {
         name: "Nashik, Maharashtra",
         reason: "February is the time for SulaFest, a popular gourmet world music festival. Enjoy wine tasting at various vineyards in India's wine capital with pleasant weather as your companion.",
         hotels: (hotels as Hotel[]).filter(h => ["The Source at Sula", "Radisson Blu Hotel & Spa, Nashik", "Ginger Nashik", "Ibis Nashik", "Courtyard by Marriott Nashik"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/nashik-feb/1200/400", caption: "vineyard nashik" }
+        image: { src: "https://images.unsplash.com/photo-1599948123812-701d3a51e678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aW5leWFyZCUyMG5hc2hpa3xlbnwwfHx8fDE3NjM3OTU5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "vineyard nashik" }
       },
       {
         name: "Varanasi, Uttar Pradesh",
         reason: "Experience the spiritual fervor of Maha Shivaratri, which often falls in February. The city's ghats and temples come alive with prayers, rituals, and processions.",
         hotels: (hotels as Hotel[]).filter(h => ["BrijRama Palace", "Taj Ganges, Varanasi", "The Clarks, Varanasi", "Hotel Madin", "Ramada Plaza by Wyndham JHV Varanasi"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/varanasi-feb/1200/400", caption: "varanasi ghats" }
+        image: { src: "https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGdoYXRzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "varanasi ghats" }
       },
       {
         name: "Kaziranga National Park, Assam",
         reason: "The dry season offers the best chances for wildlife sightings, especially the one-horned rhinoceros. The pleasant weather makes jeep safaris and elephant rides more enjoyable.",
         hotels: (hotels as Hotel[]).filter(h => ["Diphlu River Lodge", "IORA - The Retreat", "Borgos Resort", "Landmark Woods", "Infinity Resorts Kaziranga"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/kaziranga-feb/1200/400", caption: "one-horned rhinoceros" }
+        image: { src: "https://images.unsplash.com/photo-1598463166168-54a8e6717548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvaG5lLWhvcm5lZCUyMHJoaW5vY2Vyb3N8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "one-horned rhinoceros" }
       },
       {
         name: "Agra, Uttar Pradesh",
         reason: "Visit during the Taj Mahotsav, a 10-day cultural festival celebrating arts, crafts, and cuisines of India, with the magnificent Taj Mahal as the backdrop.",
         hotels: (hotels as Hotel[]).filter(h => ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra", "Taj Hotel & Convention Centre, Agra", "Courtyard by Marriott Agra", "Trident, Agra"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/agra-feb/1200/400", caption: "taj mahal agra" }
+        image: { src: "https://images.unsplash.com/photo-1564507592333-c60657eea523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxUYWolMjBNYWhhbHxlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "taj mahal agra" }
       },
       {
         name: "Andaman and Nicobar Islands",
         reason: "The weather remains perfect for water sports and beach exploration. It's slightly less crowded than January, offering a more serene experience.",
         hotels: (hotels as Hotel[]).filter(h => ["Taj Exotica Resort & Spa, Andamans", "Barefoot at Havelock", "SeaShell, Havelock", "Munjoh Ocean Resort", "Silver Sand Beach Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/andaman-feb/1200/400", caption: "andaman scuba diving" }
+        image: { src: "https://images.unsplash.com/photo-1602023805263-238493979048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhbmRhbWFuJTIwc2N1YmElMjBkaXZpbmd8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "andaman scuba diving" }
       },
       {
         name: "Goa",
         reason: "The famous Goa Carnival usually takes place in February, filling the streets with colorful parades, music, and dancing. It's a unique cultural experience.",
         hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
-        image: { src: "https://picsum.photos/seed/goa-carnival-feb/1200/400", caption: "goa carnival" }
+        image: { src: "https://images.unsplash.com/photo-1620027582539-01583562a98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2ElMjBjYXJuaXZhbHxlbnwwfHx8fDE3NjM3OTU5ODV8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa carnival" }
       },
       {
         name: "Puri, Odisha",
         reason: "Attend the Konark Dance Festival held at the magnificent Konark Sun Temple, a short drive from Puri. The weather is pleasant for visiting the Jagannath Temple and beaches.",
         hotels: (hotels as Hotel[]).filter(h => ["Mayfair Heritage", "Pramod Convention & Beach Resort", "The Chariot Resort & Spa", "Sterling Puri", "Toshali Sands"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/puri-feb/1200/400", caption: "konark sun temple" }
+        image: { src: "https://images.unsplash.com/photo-1598164749320-33c978018d45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrb25hcmssJTIwc3VuJTIwdGVtcGxlfGVufDB8fHx8MTc2Mzc5NTk4Nnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "konark sun temple" }
       },
       {
         name: "Thekkady, Kerala",
         reason: "The weather is very pleasant for boating on Periyar Lake and spotting wildlife. It's a great time for trekking and exploring the spice plantations.",
         hotels: (hotels as Hotel[]).filter(h => ["Spice Village - CGH Earth", "The Elephant Court", "Cardamom County", "Poetree Sarovar Portico", "Amritara Shalimar Spice Garden"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/thekkady-feb/1200/400", caption: "periyar lake thekkady" }
+        image: { src: "https://images.unsplash.com/photo-1623976862780-3f3246714c6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJpeWFyJTIwbGFrZSUyMHRoZWtrYWR5fGVufDB8fHx8MTc2Mzc5NTk4Nnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "periyar lake thekkady" }
       },
       {
         name: "Kolkata, West Bengal",
         reason: "The weather is cool and pleasant, ideal for sightseeing. It's also the time for the Kolkata International Book Fair, a paradise for literature lovers.",
         hotels: (hotels as Hotel[]).filter(h => ["The Oberoi Grand, Kolkata", "Taj Bengal", "ITC Sonar", "Hyatt Regency Kolkata", "The Park Kolkata"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/kolkata-feb/1200/400", caption: "victoria memorial kolkata" }
+        image: { src: "https://images.unsplash.com/photo-1572349911219-97c02b281b37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxWaWN0b3JpYSUyME1lbW9yaWFsJTIwS29sa2F0YXxlbnwwfHx8fDE3NjM3OTU5ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "victoria memorial kolkata" }
       }
     ]
   },
   march: {
     name: 'March',
     slug: 'march',
-    pageImage: { src: 'https://picsum.photos/seed/mar-hero/1080/200', caption: 'holi festival colors' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1616421295988-185d1c24e6c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob2xpJTIwZmVzdGl2YWwlMjBjb2xvcnN8ZW58MHx8fHwxNzYzNzk2MzkxfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'holi festival colors' },
     destinations: [
       {
         name: "Vrindavan & Mathura, Uttar Pradesh",
@@ -230,7 +230,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   april: {
       name: 'April',
       slug: 'april',
-      pageImage: { src: 'https://picsum.photos/seed/apr-hero/1080/200', caption: 'himalayan mountains spring' },
+      pageImage: { src: 'https://images.unsplash.com/photo-1559663738-22b934024337?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBzcHJpbmd8ZW58MHx8fHwxNzYzNzk2MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'himalayan mountains spring' },
       destinations: [
         {
             name: "Srinagar, Kashmir",
@@ -297,7 +297,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   may: {
       name: 'May',
       slug: 'may',
-      pageImage: { src: 'https://picsum.photos/seed/may-hero/1080/200', caption: 'cool mountain valley' },
+      pageImage: { src: 'https://images.unsplash.com/photo-1527098254020-0c379a5b394d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHZhbGxleSUyMHN1bW1lcnxlbnwwfHx8fDE3NjM3OTYzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'cool mountain valley' },
       destinations: [
         {
             name: "Shimla, Himachal Pradesh",
@@ -364,7 +364,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   june: {
     name: 'June',
     slug: 'june',
-    pageImage: { src: 'https://picsum.photos/seed/jun-hero/1080/200', caption: 'ladakh mountain pass' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1628867567780-602c8a3c5a08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWRha2glMjBtb3VudGFpbiUyMHBhc3N8ZW58MHx8fHwxNzYzNzk2Mzk1fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'ladakh mountain pass' },
     destinations: [
       {
         name: "Ladakh, Jammu & Kashmir",
@@ -431,7 +431,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   july: {
     name: 'July',
     slug: 'july',
-    pageImage: { src: 'https://picsum.photos/seed/jul-hero/1080/200', caption: 'monsoon kerala backwaters' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1623789045790-2c77d611802a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb25zb29uJTIwa2VyYWxhJTIwYmFja3dhdGVyc3xlbnwwfHx8fDE3NjM3OTYzOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
     destinations: [
       {
         name: "Munnar, Kerala",
@@ -498,7 +498,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   august: {
     name: 'August',
     slug: 'august',
-    pageImage: { src: 'https://picsum.photos/seed/aug-hero/1080/200', caption: 'flower valley monsoon' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1594736746227-09d35a39626e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmbG93ZXIlMjB2YWxsZXklMjBtb25zb29ufGVufDB8fHx8MTc2Mzc5NjM5OHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'flower valley monsoon' },
     destinations: [
       {
         name: "Valley of Flowers, Uttarakhand",
@@ -565,7 +565,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   september: {
     name: 'September',
     slug: 'september',
-    pageImage: { src: 'https://picsum.photos/seed/sep-hero/1080/200', caption: 'post-monsoon green hills' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1533130099162-132b135c392a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3N0LW1vbnNvb24lMjBncmVlbiUyMGhpbGxzfGVufDB8fHx8MTc2Mzc5NjM5OXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'post-monsoon green hills' },
     destinations: [
       {
         name: "Ziro Valley, Arunachal Pradesh",
@@ -632,7 +632,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   october: {
     name: 'October',
     slug: 'october',
-    pageImage: { src: 'https://picsum.photos/seed/oct-hero/1080/200', caption: 'dussehra festival celebration' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1604213410534-e43152652a90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkdXNzZWhyYSUyMGZlc3RpdmFsJTIwY2VsZWJyYXRpb258ZW58MHx8fHwxNzYzNzk2NDAxfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'dussehra festival celebration' },
     destinations: [
       {
         name: "Kolkata, West Bengal",
@@ -699,7 +699,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   november: {
     name: 'November',
     slug: 'november',
-    pageImage: { src: 'https://picsum.photos/seed/nov-hero/1080/200', caption: 'diwali lights festival' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1542296016-836b76174a72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTYzOTl8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
     destinations: [
       {
         name: "Varanasi, Uttar Pradesh",
@@ -766,7 +766,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   december: {
     name: 'December',
     slug: 'december',
-    pageImage: { src: 'https://picsum.photos/seed/dec-hero/1080/200', caption: 'beach party new year' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1574862806297-3c32652a65a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWFjaCUyMHBhcnR5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE3NjM3OTY0MDV8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'beach party new year' },
     destinations: [
       {
         name: "Goa",
