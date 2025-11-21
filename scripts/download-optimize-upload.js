@@ -5,6 +5,7 @@ const sharp = require("sharp");
 const glob = require("glob");
 const axios = require("axios");
 const admin = require("firebase-admin");
+const pLimit = require("p-limit");
 
 // -----------------------------
 // 1. Firebase Admin Init
@@ -31,6 +32,8 @@ const bucket = admin.storage().bucket();
 const TEMP_DIR = path.join(__dirname, 'temp');
 const OPTIMIZED_DIR = path.join(__dirname, 'optimized');
 
+// Concurrency Limiter
+const limit = pLimit(10); // Process up to 10 images in parallel
 
 // -----------------------------
 // Helper: Download Image
@@ -138,6 +141,28 @@ async function replaceUrlsInFiles(map) {
   }
 }
 
+// -----------------------------
+//  Single Image Processing Pipeline
+// -----------------------------
+async function processSingleImage(remoteUrl) {
+    const urlParts = new URL(remoteUrl);
+    let fileName = urlParts.pathname.split('/').filter(p => p).join('-') || `image-${Date.now()}`;
+    fileName = fileName.replace(/[^a-zA-Z0-9-]/g, '-'); // Further sanitize filename
+    const localPath = path.join(TEMP_DIR, fileName);
+
+    const downloadedPath = await downloadImage(remoteUrl, localPath);
+    if (!downloadedPath) return null;
+
+    const optimizedPath = await optimizeImage(downloadedPath);
+    if (!optimizedPath) return null;
+    
+    const firebaseUrl = await uploadToFirebase(optimizedPath);
+    if (!firebaseUrl) return null;
+    
+    console.log('---');
+    return { oldUrl: remoteUrl, newUrl: firebaseUrl };
+}
+
 
 // -----------------------------
 // 5. MAIN EXECUTION
@@ -179,26 +204,15 @@ async function replaceUrlsInFiles(map) {
     fs.ensureDirSync(TEMP_DIR);
     fs.ensureDirSync(OPTIMIZED_DIR);
 
-    let replaceMap = {};
+    const jobs = Array.from(foundUrls).map(url => limit(() => processSingleImage(url)));
+    const results = await Promise.all(jobs);
 
-    for (const remoteUrl of foundUrls) {
-        const urlParts = new URL(remoteUrl);
-        let fileName = urlParts.pathname.split('/').filter(p => p).join('-') || `image-${Date.now()}`;
-        fileName = fileName.replace(/\?/g, '-'); // Sanitize query params
-        const localPath = path.join(TEMP_DIR, fileName);
-
-        const downloadedPath = await downloadImage(remoteUrl, localPath);
-        if (!downloadedPath) continue;
-
-        const optimizedPath = await optimizeImage(downloadedPath);
-        if (!optimizedPath) continue;
-        
-        const firebaseUrl = await uploadToFirebase(optimizedPath);
-        if (!firebaseUrl) continue;
-        
-        replaceMap[remoteUrl] = firebaseUrl;
-        console.log('---');
-    }
+    const replaceMap = results
+        .filter(Boolean) // Filter out any null results from failed processes
+        .reduce((acc, { oldUrl, newUrl }) => {
+            acc[oldUrl] = newUrl;
+            return acc;
+        }, {});
 
     // Clean up temporary folders
     fs.removeSync(TEMP_DIR);
@@ -211,6 +225,5 @@ async function replaceUrlsInFiles(map) {
         console.log("\nNo new URLs to replace.");
     }
     
-
-    console.log("\n🎉 ALL DONE — Website images now optimized + on Firebase CDN!");
+    console.log(`\n🎉 ALL DONE — ${Object.keys(replaceMap).length} images optimized and synced!`);
 })();
