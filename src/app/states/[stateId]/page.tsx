@@ -10,6 +10,7 @@ import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import React from 'react';
 
 // Helper function to create a slug
 function slugify(text: string) {
@@ -18,7 +19,7 @@ function slugify(text: string) {
 }
 
 export default function StatePage() {
-  const params = useParams();
+  const params = React.use(useParams());
   const stateId = params.stateId as string;
   
   const state = (states as State[]).find((s) => s.stateId === stateId);
@@ -143,9 +144,9 @@ export default function StatePage() {
 
   if (stateId === 'gujarat') {
     const gujaratCarouselImages = [
-        { src: 'https://picsum.photos/seed/gujarat-carousel-1/1200/600', caption: 'Rann of Kutch', 'data-ai-hint': 'rann of kutch white desert' },
-        { src: 'https://picsum.photos/seed/gujarat-carousel-2/1200/600', caption: 'Somnath Temple', 'data-ai-hint': 'somnath temple india' },
-        { src: 'https://picsum.photos/seed/gujarat-carousel-3/1200/600', caption: 'Statue of Unity', 'data-ai-hint': 'statue of unity' }
+        { src: 'https://images.unsplash.com/photo-1617653252599-69ce89538333?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSYW5uJTIwb2YlMjBLdXRjaHxlbnwwfHx8fDE3NjM3MDIyODF8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Rann of Kutch', 'data-ai-hint': 'rann of kutch white desert' },
+        { src: 'https://images.unsplash.com/photo-1621287636838-5457f5c225b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb21uYXRoJTIwdGVtcGxlfGVufDB8fHx8MTc2MzcwMjI4MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Somnath Temple', 'data-ai-hint': 'somnath temple india' },
+        { src: 'https://images.unsplash.com/photo-1617490215167-a09c31375d60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWlwdXIlMjBqYWwlMjBtYWhhbHxlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Statue of Unity', 'data-ai-hint': 'statue of unity' }
     ];
 
     const gujaratHighlights = [
@@ -1213,8 +1214,8 @@ export default function StatePage() {
 
   if (stateId === 'uttar-pradesh') {
     const upCarouselImages = [
-        { src: 'https://images.unsplash.com/photo-1616812555938-1e4348a25c74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxscmVzZW1ibGluZyUyMGFyY2hpdGVjdHVyZSUyMG9mJTIwTHVja25vd3xlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' },
-        { src: 'https://images.unsplash.com/photo-1582563388057-26a1b14a046c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm91cCUyMG9mJTIwcGVvcGxlJTIwaW4lMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwaW4lMjBHYW5nZXMlMjBSaXZlcnxlbnwwfHx8fDE3NjM3MTE0MDd8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Ghats of Varanasi', 'data-ai-hint': 'varanasi ghats' },
+        { src: 'https://images.unsplash.com/photo-1599309199147-e2343c3a4ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNlbWJsaW5nJTIwYXJjaGl0ZWN0dXJlJTIwb2YlMjBMdWNrbm93fGVufDB8fHx8MTc2MzcxMTQwNnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Bara Imambara, Lucknow', 'data-ai-hint': 'lucknow architecture' },
+        { src: 'https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGNpdHl8ZW58MHx8fHwxNzYzNzExMzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Ghats of Varanasi', 'data-ai-hint': 'varanasi ghats' },
         { src: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxUYWolMjBNYWhhbHxlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Taj Mahal, Agra', 'data-ai-hint': 'taj mahal' },
     ];
 
@@ -1230,7 +1231,7 @@ export default function StatePage() {
       const cityImages: { [key: string]: { image: string, caption: string } } = {
           'agra': { image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ3JhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Agra city' },
           'varanasi': { image: 'https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGNpdHl8ZW58MHx8fHwxNzYzNzExMzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Varanasi city' },
-          'lucknow': { image: 'https://images.unsplash.com/photo-1599309199147-e2343c3a4ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxscmVzZW1ibGluZyUyMGFyY2hpdGVjdHVyZSUyMG9mJTIwTHVja25vd3xlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Lucknow city' },
+          'lucknow': { image: 'https://images.unsplash.com/photo-1599309199147-e2343c3a4ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNlbWJsaW5nJTIwYXJjaGl0ZWN0dXJlJTIwb2YlMjBMdWNrbm93fGVufDB8fHx8MTc2MzcxMTQwNnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Lucknow city' },
           'prayagraj': { image: 'https://images.unsplash.com/photo-1627449552179-880145c4a03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcmF5YWdyYWolMjBjaXR5fGVufDB8fHx8MTc2MzcxMTM5Mnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Prayagraj city' },
           'mathura': { image: 'https://images.unsplash.com/photo-1621785536417-8903c7395026?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXRodXJhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTN8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Mathura city' },
       };
@@ -1557,7 +1558,7 @@ export default function StatePage() {
     {
       name: 'North Goa',
       slug: 'north-goa',
-      image: 'https://images.unsplash.com/photo-1590372339797-de37a44517e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYWdhJTIwYmVhY2glMjBnb2F8ZW58MHx8fHwxNzYzNjk3Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxHb2F8ZW58MHx8fHwxNzYzNzAyMjgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'North Goa beach'
     },
     {
@@ -1808,5 +1809,7 @@ export default function StatePage() {
     </div>
   );
 }
+
+    
 
     
