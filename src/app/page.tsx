@@ -20,18 +20,18 @@ export default function Home() {
     };
 
   const interests = [
-    { name: 'Beaches', imageId: 'interest-beaches', hint: 'beach sunset', href: '/interests/beaches' },
-    { name: 'Mountains', imageId: 'interest-mountains', hint: 'mountain range', href: '/interests/mountains' },
-    { name: 'Heritage', imageId: 'interest-heritage', hint: 'ancient temple', href: '/interests/heritage' },
-    { name: 'Wildlife', imageId: 'interest-wildlife', hint: 'tiger wildlife', href: '/interests/wildlife' },
-    { name: 'Adventure', imageId: 'interest-adventure', hint: 'mountain climbing', href: '/interests/adventure' },
-    { name: 'Spiritual', imageId: 'interest-spiritual', hint: 'yoga meditation', href: '/interests/spiritual' },
-    { name: 'Wellness Resorts', imageId: 'interest-wellness', hint: 'spa meditation', href: '/interests/wellness', icon: HeartPulse },
-    { name: 'Weddings', imageId: 'interest-weddings', hint: 'destination wedding', href: '/interests/weddings', icon: Cake },
-    { name: 'Desert Experiences', imageId: 'interest-desert', hint: 'sand dunes', href: '/interests/desert', icon: Sun },
-    { name: 'Boutique Hotels', imageId: 'interest-boutique', hint: 'charming hotel', href: '/interests/boutique', icon: Building2 },
-    { name: 'Luxury Tents', imageId: 'interest-tents', hint: 'glamping tent', href: '/interests/luxury-tents', icon: Tent },
-    { name: 'Milestone Celebrations', imageId: 'interest-milestones', hint: 'special occasion party', href: '/interests/milestone-celebrations', icon: Sparkles },
+    { name: 'Beaches', imageId: 'https://images.unsplash.com/photo-1507525428034-b723a996f6ea?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjM3MDk2ODh8MA&ixlib=rb-4.1.0', hint: 'beach sunset', href: '/interests/beaches' },
+    { name: 'Mountains', imageId: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJhbmdlfGVufDB8fHx8MTc2MzcwOTY4OHww&ixlib=rb-4.1.0', hint: 'mountain range', href: '/interests/mountains' },
+    { name: 'Heritage', imageId: 'https://images.unsplash.com/photo-1534423892829-6e379aca62c3?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwdGVtcGxlfGVufDB8fHx8MTc2MzcwOTY4OXww&ixlib=rb-4.1.0', hint: 'ancient temple', href: '/interests/heritage' },
+    { name: 'Wildlife', imageId: 'https://images.unsplash.com/photo-1555169062-013468b47731?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3aWxkbGlmZSUyMHNhdGFyYXxlbnwwfHx8fDE3NjM3MDk2ODl8MA&ixlib=rb-4.1.0', hint: 'tiger wildlife', href: '/interests/wildlife' },
+    { name: 'Adventure', imageId: 'https://images.unsplash.com/photo-1594132352203-9488f2f135e6?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2MzcwOTY4OXww&ixlib=rb-4.1.0', hint: 'mountain climbing', href: '/interests/adventure' },
+    { name: 'Spiritual', imageId: 'https://images.unsplash.com/photo-1597475322761-b842ea3b2a47?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b2dhJTIwbWVkaXRhdGlvbnxlbnwwfHx8fDE3NjM3MDk2OTB8MA&ixlib=rb-4.1.0', hint: 'yoga meditation', href: '/interests/spiritual' },
+    { name: 'Wellness Resorts', imageId: 'https://images.unsplash.com/photo-1544161515-cfd836b08084?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcCUyMG1lZGl0YXRpb258ZW58MHx8fHwxNzYzNzA5NjkwfDA&ixlib=rb-4.1.0', hint: 'spa meditation', href: '/interests/wellness', icon: HeartPulse },
+    { name: 'Weddings', imageId: 'https://images.unsplash.com/photo-1560962961-0c464c4897a2?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZXN0aW5hdGlvbiUyMHdlZGRpbmd8ZW58MHx8fHwxNzYzNzA5NjkwfDA&ixlib=rb-4.1.0', hint: 'destination wedding', href: '/interests/weddings', icon: Cake },
+    { name: 'Desert Experiences', imageId: 'https://images.unsplash.com/photo-1542314831-068cd1dbb563?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYW5kJTIwZHVuZXN8ZW58MHx8fHwxNzYzNzA5NjkxfDA&ixlib=rb-4.1.0', hint: 'sand dunes', href: '/interests/desert', icon: Sun },
+    { name: 'Boutique Hotels', imageId: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGFybWluZyUyMGhvdGVsfGVufDB8fHx8MTc2MzcwOTY5MXww&ixlib=rb-4.1.0', hint: 'charming hotel', href: '/interests/boutique', icon: Building2 },
+    { name: 'Luxury Tents', imageId: 'https://images.unsplash.com/photo-1531097514935-5136a87c107a?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbGFtcGluZyUyMHRlbnR8ZW58MHx8fHwxNzYzNzA5NjkyfDA&ixlib=rb-4.1.0', hint: 'glamping tent', href: '/interests/luxury-tents', icon: Tent },
+    { name: 'Milestone Celebrations', imageId: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGVjaWFsJTIwb2NjYXNpb24lMjBwYXJ0eXxlbnwwfHx8fDE3NjM3MDk2OTJ8MA&ixlib=rb-4.1.0', hint: 'special occasion party', href: '/interests/milestone-celebrations', icon: Sparkles },
   ];
   
   const stateImages: { [key: string]: { src: string, caption: string } } = {
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {interests.map((interest) => {
               const interestImage = {
-                  "src": `https://picsum.photos/seed/${interest.imageId}/600/400`,
+                  "src": interest.imageId,
                   "caption": interest.hint
               };
               return (
