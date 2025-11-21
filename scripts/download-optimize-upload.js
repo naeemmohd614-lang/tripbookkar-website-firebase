@@ -149,7 +149,7 @@ async function replaceUrlsInFiles(map) {
         { cwd: projectRoot, absolute: true, ignore: ['**/node_modules/**', '**/package.json', '**/package-lock.json', '**/components.json', '**/tsconfig.json'] }
     );
 
-    const urlRegex = /(https?:\/\/(?:picsum\.photos|images\.unsplash\.com)[^\s"'`)\\]+)/gi;
+    const urlRegex = /https?:\/\/[^\s"'`)\\]+/gi;
 
     let foundUrls = new Set();
 
@@ -159,7 +159,10 @@ async function replaceUrlsInFiles(map) {
         if (matches) {
             matches.forEach((url) => {
                 const cleanedUrl = url.replace(/[")'>]+$/, '');
-                foundUrls.add(cleanedUrl);
+                 // Filter out already processed firebase storage URLs
+                if (!cleanedUrl.includes('storage.googleapis.com')) {
+                    foundUrls.add(cleanedUrl);
+                }
             });
         }
     }
