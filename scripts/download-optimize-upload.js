@@ -111,7 +111,7 @@ async function replaceUrlsInFiles(map) {
   const projectRoot = path.join(__dirname, '..');
   const files = glob.sync(
     "{src,data}/**/*.{ts,tsx,js,jsx,json,md,mdx}",
-    { cwd: projectRoot, absolute: true, ignore: '**/node_modules/**' }
+    { cwd: projectRoot, absolute: true, ignore: ['**/node_modules/**'] }
   );
 
   let totalReplaced = 0;
@@ -121,8 +121,11 @@ async function replaceUrlsInFiles(map) {
     let changed = false;
 
     for (const [oldUrl, newUrl] of Object.entries(map)) {
-      if (content.includes(oldUrl)) {
-        content = content.replaceAll(oldUrl, newUrl);
+      // More robust replacement to avoid partial matches
+      const oldUrlEscaped = oldUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(oldUrlEscaped, "g");
+      if (regex.test(content)) {
+        content = content.replace(regex, newUrl);
         changed = true;
       }
     }
@@ -227,3 +230,5 @@ async function processSingleImage(remoteUrl) {
     
     console.log(`\n🎉 ALL DONE — ${Object.keys(replaceMap).length} images optimized and synced!`);
 })();
+
+    
