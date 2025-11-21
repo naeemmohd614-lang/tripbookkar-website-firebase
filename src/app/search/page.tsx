@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { hotels } from '@/lib/data';
 import HotelCard from '@/components/hotel-card';
