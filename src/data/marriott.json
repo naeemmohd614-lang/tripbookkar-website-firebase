@@ -82,10 +82,9 @@
     "basePrice": 12500,
     "rating": 4.5,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-1.webp", "caption": "View of the resort from the bay" },
+      { "src": "https://images.unsplash.com/photo-1703085722123-0c6af3e9319b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxWaWV3JTIwb2YlMjB0aGUlMjByZXNvcnQlMjBmcm9tJTIwdGhlJTIwYmF5fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View of the resort from the bay" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-2.webp", "caption": "Outdoor pool and garden" }
     ],
-    "distance": { "Dabolim Airport": "30 km" },
     "roomCategories": [{ "name": "Garden View Room", "count": 180, "size": "388 sqft" }],
     "diningExperiences": [
       { "name": "Waterfront Terrace & Bar", "type": "All-day dining" },
@@ -389,7 +388,7 @@
     "basePrice": 25000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/w-goa-1.webp", "caption": "Stylish pool area at W Goa" }
+      { "src": "https://images.unsplash.com/photo-1648978373851-081a8a323c2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxTdHlsaXNoJTIwcG9vbCUyMGFyZWElMjBhdCUyMFclMjBHb2F8ZW58MHx8fHwxNzYzNzYzMjAzfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Stylish pool area at W Goa" }
     ],
     "roomCategories": [{ "name": "Wonderful Room", "count": 121, "size": "650 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -587,7 +586,7 @@
     "basePrice": 15000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sheraton-chennai-1.webp", "caption": "Beachfront view of the resort" }
+      { "src": "https://images.unsplash.com/photo-1625444725045-ee7c4bb4482a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxCZWFjaGZyb250JTIwdmlldyUyMG9mJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Beachfront view of the resort" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 125, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -839,7 +838,7 @@
     "basePrice": 28000,
     "rating": 4.7,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/stregis-goa-1.webp", "caption": "The St. Regis Goa Resort lagoon view" }
+      { "src": "https://images.unsplash.com/photo-1751675706145-b0e36efb12fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxUaGUlMjBTdC4lMjBSZWdpcyUyMEdvYSUyMFJlc29ydCUyMGxhZ29vbiUyMHZpZXd8ZW58MHx8fHwxNzYzNzYzMjAzfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The St. Regis Goa Resort lagoon view" }
     ],
     "roomCategories": [{ "name": "Lagoon View Room", "count": 206, "size": "600 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },

@@ -570,7 +570,7 @@
     "basePrice": 20000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/taj-aguada-1/1080/720", "caption": "View from Taj Fort Aguada" }
+      { "src": "https://images.unsplash.com/photo-1717631882050-f5f8dacbf342?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxWaWV3JTIwZnJvbSUyMFRhaiUyMEZvcnQlMjBBZ3VhZGF8ZW58MHx8fHwxNzYzNzAwOTg3fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from Taj Fort Aguada" }
     ],
     "distance": { "Dabolim Airport": "45 km" },
     "roomCategories": [
@@ -596,7 +596,7 @@
     "basePrice": 24000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/taj-exotica-goa-1/1080/720", "caption": "Lobby of Taj Exotica Goa" }
+      { "src": "https://images.unsplash.com/photo-1709715459023-84d696417eb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxMb2JieSUyMG9mJTIwVGFqJTIwRXhvdGljYSUyMEdvYXxlbnwwfHx8fDE3NjM3MDE3MTl8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Lobby of Taj Exotica Goa" }
     ],
     "distance": { "Dabolim Airport": "27 km" },
     "roomCategories": [
@@ -843,7 +843,7 @@
     ],
     "experiencesAndActivities": [ "Wine Tasting Tours", "Temple Visits" ],
     "weddingVenues": [ "The Ballroom", "The Lawns" ],
-    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "resort", "nashik"]
   },
   {
@@ -1012,7 +1012,7 @@
     "basePrice": 40000,
     "rating": 4.9,
     "images": [
-      { "src": "https://picsum.photos/seed/taj-andaman-1/1080/720", "caption": "Villas at Taj Exotica Andamans" }
+      { "src": "https://images.unsplash.com/photo-1742479706168-b2c0e0120d68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxWaWxsYXMlMjBhdCUyMFRhaiUyMEV4b3RpY2ElMjBBbmRhbWFuc3xlbnwwfHx8fDE3NjM3NjMyMDR8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Villas at Taj Exotica Andamans" }
     ],
     "distance": { "Veer Savarkar International Airport": "60 km (via ferry)" },
     "roomCategories": [
@@ -1064,7 +1064,7 @@
     "basePrice": 20000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/taj-bekal-1/1080/720", "caption": "Villas at Taj Bekal" }
+      { "src": "https://images.unsplash.com/photo-1560238722-20e11c1b1e30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxWaWxsYXMlMjBhdCUyMFRhaiUyMEJla2FsfGVufDB8fHx8MTc2Mzc2MzIwNHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Villas at Taj Bekal" }
     ],
     "distance": { "Mangalore International Airport": "80 km" },
     "roomCategories": [

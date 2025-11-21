@@ -10,7 +10,7 @@ export default function BeachesPage() {
   ).slice(0, 10);
 
   const heroImage = {
-      "src": "https://picsum.photos/seed/interest-beaches/1920/600",
+      "src": "https://images.unsplash.com/photo-1647962431451-d0fdaf1cf21c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjM3Mzk5NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "beach sunset"
   };
 
