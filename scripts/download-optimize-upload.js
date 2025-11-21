@@ -19,10 +19,13 @@ const serviceAccount = JSON.parse(
   fs.readFileSync(serviceAccountPath, "utf8")
 );
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  storageBucket: `${serviceAccount.project_id}.appspot.com`,
-});
+if (!admin.apps.length) {
+    admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount),
+        storageBucket: `${serviceAccount.project_id}.appspot.com`,
+    });
+}
+
 
 const bucket = admin.storage().bucket();
 const TEMP_DIR = path.join(__dirname, 'temp');
@@ -142,8 +145,8 @@ async function replaceUrlsInFiles(map) {
 (async () => {
     const projectRoot = path.join(__dirname, '..');
     const filesToScan = glob.sync(
-        "{src,data}/**/*.{ts,tsx,js,jsx,json,md,mdx}",
-        { cwd: projectRoot, absolute: true, ignore: ['**/node_modules/**', '**/package.json', '**/package-lock.json'] }
+        "{src,data}/**/*.json",
+        { cwd: projectRoot, absolute: true, ignore: ['**/node_modules/**', '**/package.json', '**/package-lock.json', '**/components.json', '**/tsconfig.json'] }
     );
 
     const urlRegex = /(https?:\/\/(?:picsum\.photos|images\.unsplash\.com)[^\s"'`)\\]+)/gi;
@@ -177,7 +180,8 @@ async function replaceUrlsInFiles(map) {
 
     for (const remoteUrl of foundUrls) {
         const urlParts = new URL(remoteUrl);
-        const fileName = urlParts.pathname.split('/').pop() || `image-${Date.now()}`;
+        let fileName = urlParts.pathname.split('/').filter(p => p).join('-') || `image-${Date.now()}`;
+        fileName = fileName.replace(/\?/g, '-'); // Sanitize query params
         const localPath = path.join(TEMP_DIR, fileName);
 
         const downloadedPath = await downloadImage(remoteUrl, localPath);
