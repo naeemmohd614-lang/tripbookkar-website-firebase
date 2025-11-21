@@ -127,8 +127,8 @@
     ],
     "distance": { "Maharana Pratap Airport": "25 km" },
     "roomCategories": [
-      { "name": "Palace Room", "count": 66, "size": "350 sqft" },
-      { "name": "Royal Suite", "count": 10, "size": "700 sqft" }
+        { "name": "Palace Room", "count": 66, "size": "350 sqft" },
+        { "name": "Royal Suite", "count": 10, "size": "700 sqft" }
     ],
     "diningExperiences": [
       { "name": "Neel Kamal", "type": "Indian" },
@@ -247,31 +247,30 @@
     "tags": ["luxury", "resort", "lucknow"]
   },
   {
-    "name": "Taj Rishikesh Resort & Spa, Uttarakhand",
+    "name": "Taj Theog Resort & Spa, Shimla",
     "brand": "Taj",
-    "city": "Rishikesh",
-    "state": "Uttarakhand",
-    "address": "Singthali, Rishikesh, Uttarakhand 249192",
-    "about": "A serene hideaway on the banks of the river Ganges, this resort offers a spiritual and wellness retreat. With its Himalayan architecture and spectacular views, it's a perfect escape.",
-    "basePrice": 30000,
+    "city": "Theog",
+    "state": "Himachal Pradesh",
+    "address": "Tehsil, Theog, Himachal Pradesh 171201",
+    "about": "A picturesque resort nestled in the Himalayan forests, offering stunning views of the Churdhar peak. It's a perfect escape for those seeking peace and luxury away from the bustle of Shimla.",
+    "basePrice": 20000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1707573698444-86401c1f6411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBHYW5nZXMlMjBmcm9tJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View of Ganges from the resort" },
-      { "src": "https://picsum.photos/seed/taj-rishikesh-2/1080/720", "caption": "Yoga session by the river" }
+      { "src": "https://images.unsplash.com/photo-1613467973253-f00f4f1a2f6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxWaWV3JTIwZnJvbSUyMHRoZSUyMHJlc29ydHxlbnwwfHx8fDE3NjM3MjA2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from the resort" }
     ],
-    "distance": { "Jolly Grant Airport": "45 km" },
+    "distance": { "Shimla Airport": "45 km" },
     "roomCategories": [
-        { "name": "Deluxe Room", "count": 79, "size": "450 sqft" },
-        { "name": "Premium Villa", "count": 20 }
+        { "name": "Deluxe Room", "count": 99, "size": "450 sqft" },
+        { "name": "Grand Luxury Suite", "count": 5 }
     ],
     "diningExperiences": [
-        { "name": "Rock Flour", "type": "All-day dining" },
-        { "name": "The Riverside", "type": "Grill" }
+        { "name": "Trattoria", "type": "Italian" },
+        { "name": "Theog Junction", "type": "Local Himachali" }
     ],
-    "experiencesAndActivities": [ "Jiva Spa", "Ganga Aarti", "Yoga & Meditation" ],
-    "weddingVenues": [ "The Pebble Beach Lawn", "The Conference Hall" ],
+    "experiencesAndActivities": [ "Jiva Spa", "Nature Trails", "Stargazing" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Peak Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["wellness", "spiritual", "river view", "rishikesh", "luxury"]
+    "tags": ["mountain view", "luxury", "shimla", "resort"]
   },
    {
     "name": "Vivanta Dal View, Srinagar",
@@ -697,7 +696,7 @@
     "city": "Bhubaneswar",
     "state": "Odisha",
     "address": "DN Regalia, DN Square, Kalinga Vihar, Patrapada, Bhubaneswar, Odisha 751019",
-    "about": "A modern and stylish hotel in the temple city of Bhubaneswar. It offers modern comforts, expansive rooms, and is well-connected to the city's business and tourist hubs.",
+    "about": "A stylish and contemporary hotel in the temple city of Bhubaneswar. It offers modern comforts, expansive rooms, and is well-connected to the city's business and tourist hubs.",
     "basePrice": 8000,
     "rating": 4.5,
     "images": [
@@ -1132,32 +1131,6 @@
     "weddingVenues": [ "The Grand Ballroom" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "navi mumbai"]
-  },
-  {
-    "name": "Taj Theog Resort & Spa, Shimla",
-    "brand": "Taj",
-    "city": "Theog",
-    "state": "Himachal Pradesh",
-    "address": "Tehsil, Theog, Himachal Pradesh 171201",
-    "about": "A picturesque resort nestled in the Himalayan forests, offering stunning views of the Churdhar peak. It's a perfect escape for those seeking peace and luxury away from the bustle of Shimla.",
-    "basePrice": 20000,
-    "rating": 4.8,
-    "images": [
-      { "src": "https://picsum.photos/seed/taj-theog-1/1080/720", "caption": "View from the resort" }
-    ],
-    "distance": { "Shimla Airport": "45 km" },
-    "roomCategories": [
-        { "name": "Deluxe Room", "count": 99, "size": "450 sqft" },
-        { "name": "Grand Luxury Suite", "count": 5 }
-    ],
-    "diningExperiences": [
-        { "name": "Trattoria", "type": "Italian" },
-        { "name": "Theog Junction", "type": "Local Himachali" }
-    ],
-    "experiencesAndActivities": [ "Jiva Spa", "Nature Trails", "Stargazing" ],
-    "weddingVenues": [ "The Grand Ballroom", "The Peak Lawns" ],
-    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["mountain view", "luxury", "shimla", "resort"]
   },
   {
     "name": "Vivanta Coimbatore",

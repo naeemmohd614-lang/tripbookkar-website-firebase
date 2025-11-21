@@ -1081,9 +1081,9 @@ export default function StatePage() {
 
   if (stateId === 'himachal-pradesh') {
     const himachalCarouselImages = [
-        { src: 'https://picsum.photos/seed/himachal-carousel-1/1200/600', caption: 'Shimla, Himachal Pradesh', 'data-ai-hint': 'shimla city' },
-        { src: 'https://picsum.photos/seed/himachal-carousel-2/1200/600', caption: 'Solang Valley, Manali', 'data-ai-hint': 'manali valley snow' },
-        { src: 'https://picsum.photos/seed/himachal-carousel-3/1200/600', caption: 'Rohtang Pass', 'data-ai-hint': 'rohtang pass mountains' }
+        { src: 'https://images.unsplash.com/photo-1712753849140-7e8e96f8816f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzaGltbGElMjBjaXR5fGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Shimla, Himachal Pradesh', 'data-ai-hint': 'shimla city' },
+        { src: 'https://images.unsplash.com/photo-1677820915317-b5e5174c1f7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW5hbGklMjB2YWxsZXklMjBzbm93fGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Solang Valley, Manali', 'data-ai-hint': 'manali valley snow' },
+        { src: 'https://images.unsplash.com/photo-1693745559025-75658021a07f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyb2h0YW5nJTIwcGFzcyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjM3MjA2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Rohtang Pass', 'data-ai-hint': 'rohtang pass mountains' }
     ];
 
     const himachalHighlights = [
@@ -1095,11 +1095,17 @@ export default function StatePage() {
     const himachalCities = ['Shimla', 'Manali', 'Dharamshala', 'Dalhousie'].map(cityName => {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
+      const cityImages: { [key: string]: { image: string, caption: string } } = {
+          'shimla': { image: 'https://images.unsplash.com/photo-1609948545248-b4f2b2054f15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8U2hpbWxhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MjA2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Shimla city' },
+          'manali': { image: 'https://images.unsplash.com/photo-1713981272299-355d7038d708?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxNYW5hbGklMjBjaXR5fGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Manali city' },
+          'dharamshala': { image: 'https://images.unsplash.com/photo-1609410065485-332392feb93b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxEaGFyYW1zaGFsYSUyMGNpdHl8ZW58MHx8fHwxNzYzNzIwNjgxfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dharamshala city' },
+          'dalhousie': { image: 'https://images.unsplash.com/photo-1647678033475-ebe67c799487?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEYWxob3VzaWUlMjBjaXR5fGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dalhousie city' },
+      };
       return {
         name: cityName,
         cityId: cityId,
-        image: `https://picsum.photos/seed/city-${cityId}/400/500`,
-        caption: `${cityName} city`
+        image: cityImages[cityId]?.image || `https://picsum.photos/seed/city-${cityId}/400/500`,
+        caption: cityImages[cityId]?.caption || `${cityName} city`
       };
     });
 

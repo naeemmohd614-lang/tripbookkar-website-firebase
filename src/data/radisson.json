@@ -47,6 +47,28 @@
     "tags": ["business", "city hotel", "gwalior"]
   },
   {
+    "name": "Radisson Jass Shimla",
+    "brand": "Radisson",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "address": "Goodwood Estate, Lower Bharari Rd, Shimla, Himachal Pradesh 171001",
+    "about": "Nestled amidst cedar forests, this resort offers a peaceful retreat with panoramic views of the Himalayas. Features an outdoor pool and a rejuvenating spa.",
+    "basePrice": 10000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://images.unsplash.com/photo-1692071191666-f75e4f6c4942?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwZnJvbSUyMHRoZSUyMGhvdGVsfGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from the hotel" }
+    ],
+    "distance": { "Shimla Airport": "26 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 59, "size": "350 sqft" }],
+    "diningExperiences": [
+      { "name": "Cafe Valley Vue", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Sansha Spa", "Outdoor heated pool", "Nature walks" ],
+    "weddingVenues": [ "The Grand Ballroom" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "resort", "shimla"]
+  },
+  {
     "name": "Radisson Blu Hotel Indore",
     "brand": "Radisson Blu",
     "city": "Indore",
@@ -189,26 +211,5 @@
     "weddingVenues": [ "The Emerald Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "mumbai"]
-  },
-  {
-    "name": "Radisson Jass Shimla",
-    "brand": "Radisson",
-    "city": "Shimla",
-    "state": "Himachal Pradesh",
-    "address": "Goodwood Estate, Lower Bharari Rd, Shimla, Himachal Pradesh 171001",
-    "about": "Nestled amidst cedar forests, this resort offers a peaceful retreat with panoramic views of the Himalayas. Features an outdoor pool and a rejuvenating spa.",
-    "basePrice": 10000,
-    "rating": 4.5,
-    "images": [{ "src": "https://picsum.photos/seed/radisson-shimla-1/1080/720", "caption": "View from the hotel" }],
-    "roomCategories": [{ "name": "Deluxe Room", "count": 59, "size": "350 sqft" }],
-    "diningExperiences": [
-        { "name": "Cafe Valley Vue", "type": "Multi-cuisine" }
-    ],
-    "experiencesAndActivities": [ "Sansha Spa", "Outdoor heated pool", "Nature walks" ],
-    "weddingVenues": [ "The Grand Ballroom" ],
-    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["mountain view", "resort", "shimla"]
   }
 ]
-
-    

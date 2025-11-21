@@ -236,8 +236,8 @@
     "basePrice": 12000,
     "rating": 4.5,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/manuallaya-manali-1.webp", "caption": "Resort exterior with mountain background" },
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/manuallaya-manali-2.webp", "caption": "Cozy room interior" }
+      { "src": "https://images.unsplash.com/photo-1758297802342-a830f02f2a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSZXNvcnQlMjBleHRlcmlvciUyMHdpdGglMjBtb3VudGFpbiUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzYzNzIwNjgxfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort exterior with mountain background" },
+      { "src": "https://picsum.photos/seed/manuallaya-manali-2/1080/720", "caption": "Cozy room interior" }
     ],
     "roomCategories": [{ "name": "Garden Room", "count": 55, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
@@ -255,8 +255,8 @@
     "basePrice": 9000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fortune-dalhousie-1.webp", "caption": "Hotel exterior view" },
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fortune-dalhousie-2.webp", "caption": "Restaurant with a view" }
+      { "src": "https://images.unsplash.com/photo-1565170594519-25087a51737f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxIb3RlbCUyMGV4dGVyaW9yJTIwdmlld3xlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior view" },
+      { "src": "https://picsum.photos/seed/fortune-dalhousie-2/1080/720", "caption": "Restaurant with a view" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 57, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
