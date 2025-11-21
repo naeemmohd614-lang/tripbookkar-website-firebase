@@ -37,9 +37,9 @@ export default function StatePage() {
 
   if (stateId === 'delhi') {
     const delhiCarouselImages = [
-        { src: 'https://picsum.photos/seed/delhi-carousel-1/1200/600', caption: 'India Gate', 'data-ai-hint': 'india gate new delhi' },
-        { src: 'https://picsum.photos/seed/delhi-carousel-2/1200/600', caption: 'Humayun\'s Tomb', 'data-ai-hint': 'humayuns tomb delhi' },
-        { src: 'https://picsum.photos/seed/delhi-carousel-3/1200/600', caption: 'Lotus Temple', 'data-ai-hint': 'lotus temple delhi' }
+        { src: 'https://images.unsplash.com/photo-1588624340333-c5a4f31c518d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGdhdGUlMjBuZXclMjBkZWxoaXxlbnwwfHx8fDE3NjM3MTAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'India Gate', 'data-ai-hint': 'india gate new delhi' },
+        { src: 'https://images.unsplash.com/photo-1507281632231-62d37095033a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxodW1heXVucyUyMHRvbWIlMjBkZWxoaXxlbnwwfHx8fDE3NjM3MTAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Humayun\'s Tomb', 'data-ai-hint': 'humayuns tomb delhi' },
+        { src: 'https://images.unsplash.com/photo-1587569383679-b78f3528ab4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb3R1cyUyMHRlbXBsZSUyMGRlbGhpfGVufDB8fHx8MTc2MzcxMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Lotus Temple', 'data-ai-hint': 'lotus temple delhi' }
     ];
 
     const delhiHighlights = [
@@ -1052,7 +1052,7 @@ export default function StatePage() {
                     'kempty-falls': { src: 'https://images.unsplash.com/photo-1714807776639-1e57f98462a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZW1wdHklMjBmYWxscyUyMG11c3Nvb3JpZXxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080' },
                     'gun-hill': { src: 'https://images.unsplash.com/photo-1678195246797-9535fe4d7809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxndW4lMjBoaWxsJTIwbXVzc29vcmllfGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
                     'robbers-cave': { src: 'https://images.unsplash.com/photo-1628152980740-5be7768c4e60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyb2JiZXJzJTIwY2F2ZSUyMGRlaHJhZHVufGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'forest-research-institute': { src: 'https://images.unsplash.com/photo-1695974761529-bdbf75cef0f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmcmklMjBkZWhyYWR1bnxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib-rb-4.1.0&q=80&w=1080' },
+                    'forest-research-institute': { src: 'https://images.unsplash.com/photo-1695974761529-bdbf75cef0f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmcmklMjBkZWhyYWR1bnxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080' },
                 };
 
                 const imageSrc = attractionImages[attraction.attractionId]?.src || attraction.image.src;
