@@ -256,7 +256,7 @@
     "basePrice": 30000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/taj-rishikesh-1/1080/720", "caption": "View of Ganges from the resort" },
+      { "src": "https://images.unsplash.com/photo-1707573698444-86401c1f6411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBHYW5nZXMlMjBmcm9tJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View of Ganges from the resort" },
       { "src": "https://picsum.photos/seed/taj-rishikesh-2/1080/720", "caption": "Yoga session by the river" }
     ],
     "distance": { "Jolly Grant Airport": "45 km" },
@@ -478,7 +478,7 @@
         { "name": "Southern Spice", "type": "South Indian" },
         { "name": "Golden Dragon", "type": "Chinese" }
     ],
-    "experiencesAndActivities": [ "Jiva Grande Spa", "Book Shop", "Fitness Centre" ],
+    "experiencesAndActivities": [ "Jiva Spa", "Book Shop", "Fitness Centre" ],
     "weddingVenues": [ "The Grand Ballroom", "The Willingdon Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "chennai"]

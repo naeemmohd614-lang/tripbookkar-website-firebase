@@ -189,7 +189,7 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/fourpoints-dehradun-1/1080/720", "caption": "Hotel exterior" },
+      { "src": "https://images.unsplash.com/photo-1668480441891-3744c25337a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
       { "src": "https://picsum.photos/seed/fourpoints-dehradun-2/1080/720", "caption": "Modern hotel lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
@@ -206,7 +206,7 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-mussoorie-1/1080/720", "caption": "Resort with valley view" },
+      { "src": "https://images.unsplash.com/photo-1618246308586-98d13e9978ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM2NTY4ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
       { "src": "https://picsum.photos/seed/jw-mussoorie-2/1080/720", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
@@ -223,7 +223,7 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-himalayas-1/1080/720", "caption": "Resort nestled in the hills" },
+      { "src": "https://images.unsplash.com/photo-1652496491346-7cbd3e44e1b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UmVzb3J0JTIwbmVzdGxlZCUyMGluJTIwdGhlJTIwaGlsbHN8ZW58MHx8fHwxNzYzNjU2ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
       { "src": "https://picsum.photos/seed/westin-himalayas-2/1080/720", "caption": "Infinity pool overlooking the valley" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],
