@@ -21,7 +21,7 @@ const serviceAccount = JSON.parse(
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: "studio-1865376664-5e932.appspot.com",
+  storageBucket: `${serviceAccount.project_id}.appspot.com`,
 });
 
 const bucket = admin.storage().bucket();
