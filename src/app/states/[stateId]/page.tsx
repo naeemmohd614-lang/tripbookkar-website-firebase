@@ -816,9 +816,9 @@ export default function StatePage() {
 
   if (stateId === 'jammu-and-kashmir') {
     const jnkCarouselImages = [
-        { src: 'https://images.unsplash.com/photo-1595822378881-375990264b97?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzA3NjExMDIyfDA&ixlib=rb-4.0.3&w=1080&h=720&fit=crop&crop=entropy', caption: 'Dal Lake, Srinagar', 'data-ai-hint': 'srinagar dal lake' },
-        { src: 'https://images.unsplash.com/photo-1627889615925-56037b304313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWhhbGdhbSUyMHZhbGxleSUyMHJpdmVyfGVufDB8fHx8MTc2MzcyMjk4OXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Pahalgam Valley', 'data-ai-hint': 'pahalgam valley river' },
-        { src: 'https://images.unsplash.com/photo-1620227892398-323869275107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndWxtYXJnJTIwc25vdyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjM3MjI5ODl8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Gulmarg in snow', 'data-ai-hint': 'gulmarg snow mountains' },
+        { src: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYWwlMjBsYWtlJTIwc3JpbmFnYXJ8ZW58MHx8fHwxNzYzNzU4OTI3fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dal Lake, Srinagar', 'data-ai-hint': 'srinagar dal lake' },
+        { src: 'https://images.unsplash.com/photo-1627889615925-56037b304313?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWhhbGdhbSUyMHZhbGxleSUyMHJpdmVyfGVufDB8fHx8MTc2MzcyMjk4OXww&ixlib=rb-4.0.3&w=1080&h=720&fit=crop&crop=entropy', caption: 'Pahalgam Valley', 'data-ai-hint': 'pahalgam valley river' },
+        { src: 'https://images.unsplash.com/photo-1620227892398-323869275107?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndWxtYXJnJTIwc25vdyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjM3MjI5ODl8MA&ixlib=rb-4.0.3&w=1080&h=720&fit=crop&crop=entropy', caption: 'Gulmarg in snow', 'data-ai-hint': 'gulmarg snow mountains' },
     ];
 
     const jnkHighlights = [
@@ -831,7 +831,7 @@ export default function StatePage() {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
        const cityImages: { [key: string]: { image: string, caption: string } } = {
-        'srinagar': { image: 'https://images.unsplash.com/photo-1595822378881-375990264b97?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzA3NjExMDIyfDA&ixlib=rb-4.0.3&w=400&h=500&fit=crop&crop=entropy', caption: 'Srinagar city' },
+        'srinagar': { image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYWwlMjBsYWtlJTIwc3JpbmFnYXJ8ZW58MHx8fHwxNzYzNzU4OTI3fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Srinagar city' },
         'gulmarg': { image: 'https://images.unsplash.com/photo-1593361589133-c82a55982855?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndWxtYXJnJTIwc2tpaW5nfGVufDB8fHx8MTcwNzYxMTAyMnww&ixlib=rb-4.0.3&w=400&h=500&fit=crop&crop=entropy', caption: 'Gulmarg city' },
         'pahalgam': { image: 'https://images.unsplash.com/photo-1627889615925-56037b304313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWhhbGdhbSUyMHZhbGxleSUyMHJpdmVyfGVufDB8fHx8MTc2MzcyMjk4OXww&ixlib=rb-4.1.0&q=80&w=400&h=500&fit=crop&crop=entropy', caption: 'Pahalgam city' },
       };
@@ -972,7 +972,7 @@ export default function StatePage() {
         'rishikesh': { image: 'https://images.unsplash.com/photo-1678788166239-b28733f56956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSaXNoaWtlc2glMjBjaXR5fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Rishikesh city' },
         'nainital': { image: 'https://images.unsplash.com/photo-1609309582553-547a357b95bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxOYWluaXRhbCUyMGNpdHl8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Nainital city' },
         'mussoorie': { image: 'https://images.unsplash.com/photo-1612763855876-b2f0bbaa89fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxNdXNzb29yaWUlMjBjaXR5fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Mussoorie city' },
-        'dehradun': { image: 'https://images.unsplash.com/photo-1658316342181-1b90e17734ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEZWhyYWR1biUyMGNpdHl8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Dehradun city' },
+        'dehradun': { image: 'https://images.unsplash.com/photo-1658316342181-1b90e17734ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEZWhyYWR1biUyMGNpdHl8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dehradun city' },
       };
       return {
         name: cityName,
@@ -1110,8 +1110,8 @@ export default function StatePage() {
       const cityImages: { [key: string]: { image: string, caption: string } } = {
           'shimla': { image: 'https://images.unsplash.com/photo-1609948545248-b4f2b2054f15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8U2hpbWxhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MjA2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Shimla city' },
           'manali': { image: 'https://images.unsplash.com/photo-1713981272299-355d7038d708?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxNYW5hbGklMjBjaXR5fGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Manali city' },
-          'dharamshala': { image: 'https://images.unsplash.com/photo-1609410065485-332392feb93b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxEaGFyYW1zaGFsYSUyMGNpdHl8ZW58MHx8fHwxNzYzNzIwNjgxfDA&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Dharamshala city' },
-          'dalhousie': { image: 'https://images.unsplash.com/photo-1647678033475-ebe67c799487?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEYWxob3VzaWUlMjBjaXR5fGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Dalhousie city' },
+          'dharamshala': { image: 'https://images.unsplash.com/photo-1609410065485-332392feb93b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxEaGFyYW1zaGFsYSUyMGNpdHl8ZW58MHx8fHwxNzYzNzIwNjgxfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dharamshala city' },
+          'dalhousie': { image: 'https://images.unsplash.com/photo-1647678033475-ebe67c799487?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxEYWxob3VzaWUlMjBjaXR5fGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dalhousie city' },
       };
       return {
         name: cityName,
@@ -1247,11 +1247,11 @@ export default function StatePage() {
       const city = (allCities as City[]).find(c => c.name === cityName);
       const cityId = city ? city.cityId : slugify(cityName);
       const cityImages: { [key: string]: { image: string, caption: string } } = {
-          'agra': { image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ3JhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTJ8MA&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Agra city' },
-          'varanasi': { image: 'https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGNpdHl8ZW58MHx8fHwxNzYzNzExMzkyfDA&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Varanasi city' },
-          'lucknow': { image: 'https://images.unsplash.com/photo-1599309199147-e2343c3a4ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNlbWJsaW5nJTIwYXJjaGl0ZWN0dXJlJTIwb2YlMjBMdWNrbm93fGVufDB8fHx8MTc2MzcxMTQwNnww&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Lucknow city' },
-          'prayagraj': { image: 'https://images.unsplash.com/photo-1627449552179-880145c4a03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcmF5YWdyYWolMjBjaXR5fGVufDB8fHx8MTc2MzcxMTM5Mnww&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Prayagraj city' },
-          'mathura': { image: 'https://images.unsplash.com/photo-1621785536417-8903c7395026?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXRodXJhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTN8MA&ixlib-rb-4.1.0&q=80&w=1080', caption: 'Mathura city' },
+          'agra': { image: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ3JhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Agra city' },
+          'varanasi': { image: 'https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGNpdHl8ZW58MHx8fHwxNzYzNzExMzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Varanasi city' },
+          'lucknow': { image: 'https://images.unsplash.com/photo-1599309199147-e2343c3a4ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZXNlbWJsaW5nJTIwYXJjaGl0ZWN0dXJlJTIwb2YlMjBMdWNrbm93fGVufDB8fHx8MTc2MzcxMTQwNnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Lucknow city' },
+          'prayagraj': { image: 'https://images.unsplash.com/photo-1627449552179-880145c4a03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcmF5YWdyYWolMjBjaXR5fGVufDB8fHx8MTc2MzcxMTM5Mnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Prayagraj city' },
+          'mathura': { image: 'https://images.unsplash.com/photo-1621785536417-8903c7395026?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXRodXJhJTIwY2l0eXxlbnwwfHx8fDE3NjM3MTEzOTN8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Mathura city' },
       };
       return {
         name: cityName,
@@ -1397,12 +1397,12 @@ export default function StatePage() {
       'data-ai-hint': 'jaipur jal mahal'
     },
     {
-      src: 'https://images.unsplash.com/photo-1603787723954-526419523277?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqZHB1ciUyMGNpdHklMjBmb3J0fGVufDB8fHx8MTc2MzcxMTQwNnww&ixlib-rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1603787723954-526419523277?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqZHB1ciUyMGNpdHklMjBmb3J0fGVufDB8fHx8MTc2MzcxMTQwNnww&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Mehrangarh Fort, Jodhpur',
       'data-ai-hint': 'jodhpur fort city'
     },
     {
-      src: 'https://images.unsplash.com/photo-1576722420637-9b45e9a464de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1ZGFpcHVyJTIwbGFrZSUyMHBpY2hvbGF8ZW58MHx8fHwxNzYzNzExNDA2fDA&ixlib-rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1576722420637-9b45e9a464de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1ZGFpcHVyJTIwbGFrZSUyMHBpY2hvbGF8ZW58MHx8fHwxNzYzNzExNDA2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Lake Pichola, Udaipur',
       'data-ai-hint': 'udaipur lake pichola'
     }
@@ -1838,4 +1838,5 @@ export default function StatePage() {
 
 
     
+
 
