@@ -1041,26 +1041,10 @@ export default function StatePage() {
           <div className="my-16">
             <h2 className="text-3xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Uttarakhand</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {uttarakhandAttractions.map(attraction => {
-                const attractionImages: { [key: string]: { src: string } } = {
-                    'ram-jhula': { src: 'https://images.unsplash.com/photo-1719232427783-8087a1b16daa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyYW0lMjBqaHVsYSUyMGJyaWRnZSUyMHJpc2hpa2VzaHxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080'},
-                    'laxman-jhula': { src: 'https://images.unsplash.com/photo-1701709488066-8d32fe5871b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsYXhtYW4lMjBqaHVsYSUyMHJpc2hpa2VzaHxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080'},
-                    'triveni-ghat': { src: 'https://images.unsplash.com/photo-1719644584112-e046e7fa23c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cml2ZW5pJTIwZ2hhdCUyMHJpc2hpa2VzaHxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080'},
-                    'naini-lake': { src: 'https://images.unsplash.com/photo-1609309582553-547a357b95bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxOYWluaXRhbCUyMGNpdHl8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'snow-view-point': { src: 'https://images.unsplash.com/photo-1757514464763-f0f4db91c872?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzbm93JTIwdmlldyUyMHBvaW50JTIwbmFpbml0YWx8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'the-mall-road-nainital': { src: 'https://images.unsplash.com/photo-1656259106724-2df8558df324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxsJTIwcm9hZCUyMG5haW5pdGFsfGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'kempty-falls': { src: 'https://images.unsplash.com/photo-1714807776639-1e57f98462a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZW1wdHklMjBmYWxscyUyMG11c3Nvb3JpZXxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'gun-hill': { src: 'https://images.unsplash.com/photo-1678195246797-9535fe4d7809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxndW4lMjBoaWxsJTIwbXVzc29vcmllfGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'robbers-cave': { src: 'https://images.unsplash.com/photo-1628152980740-5be7768c4e60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyb2JiZXJzJTIwY2F2ZSUyMGRlaHJhZHVufGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
-                    'forest-research-institute': { src: 'https://images.unsplash.com/photo-1695974761529-bdbf75cef0f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmcmklMjBkZWhyYWR1bnxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-                };
-
-                const imageSrc = attractionImages[attraction.attractionId]?.src || attraction.image.src;
-
-                return (
+              {uttarakhandAttractions.map(attraction => (
                  <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
                     <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
-                        <Image src={imageSrc} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-40 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-40 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
                         <CardContent className="p-4">
                             <h3 className="font-bold text-lg">{attraction.name}</h3>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1"><MapPin className="w-3 h-3" />{attraction.city}</div>
@@ -1068,8 +1052,7 @@ export default function StatePage() {
                         </CardContent>
                     </Card>
                 </Link>
-                );
-              })}
+              ))}
             </div>
           </div>
 
@@ -1079,24 +1062,9 @@ export default function StatePage() {
             </h2>
             {stateHotels.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {stateHotels.map((hotel) => {
-                   const hotelImages: { [key: string]: { src: string } } = {
-                        'four-points-by-sheraton-dehradun': { src: 'https://images.unsplash.com/photo-1668480441891-3744c25337a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'jw-marriott-mussoorie-walnut-grove-resort-spa': { src: 'https://images.unsplash.com/photo-1618246308586-98d13e9978ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM2NTY4ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'the-westin-resort-spa-himalayas': { src: 'https://images.unsplash.com/photo-1652496491346-7cbd3e44e1b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UmVzb3J0JTIwbmVzdGxlZCUyMGluJTIwdGhlJTIwaGlsbHN8ZW58MHx8fHwxNzYzNjU2ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'taj-rishikesh-resort-spa-uttarakhand': { src: 'https://images.unsplash.com/photo-1707573698444-86401c1f6411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBHYW5nZXMlMjBmcm9tJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'taj-corbett-resort-spa-uttarakhand': { src: 'https://images.unsplash.com/photo-1751882680415-b060d918fb3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Q290dGFnZXMlMjBhdCUyMFRhaiUyMENvcmJldHR8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'hyatt-regency-dehradun': { src: 'https://images.unsplash.com/photo-1694432922207-52c411937215?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8SG90ZWwlMjBleHRlcmlvciUyMHZpZXd8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'the-naini-retreat-by-leisure-hotels': { src: 'https://images.unsplash.com/photo-1688741398577-f6f05757d2d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxIb3RlbCUyMGV4dGVyaW9yJTIwd2l0aCUyMGElMjB2aWV3fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'the-manu-maharani': { src: 'https://images.unsplash.com/photo-1667319694403-ed898727f03b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxIb3RlbCUyMGZhY2FkZXxlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'jaypee-residency-manor': { src: 'https://images.unsplash.com/photo-1664360030689-5de6045f9c96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxIb3RlbCUyMHdpdGglMjBwYW5vcmFtaWMlMjBIaW1hbGF5YW4lMjB2aWV3fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' }
-                    };
-                    const updatedHotel = { ...hotel };
-                    if (hotelImages[hotel.hotelId] && updatedHotel.images[0]) {
-                        updatedHotel.images[0].src = hotelImages[hotel.hotelId].src;
-                    }
-                  return <HotelCard key={hotel.hotelId} hotel={updatedHotel} />
-                })}
+                {stateHotels.map((hotel) => (
+                  <HotelCard key={hotel.hotelId} hotel={hotel} />
+                ))}
               </div>
             ) : (
               <div className="text-center py-16 border-2 border-dashed rounded-lg">
