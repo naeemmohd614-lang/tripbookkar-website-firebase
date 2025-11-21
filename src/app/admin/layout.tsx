@@ -15,7 +15,11 @@ import {
   Mail, 
   Share2,
   LogOut,
-  Settings
+  Settings,
+  Ticket,
+  Percent,
+  TrendingUp,
+  Tag
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -37,14 +41,13 @@ const WhatsAppIcon = () => (
 
 const navLinks = [
   { href: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/admin/packages', label: 'Package Management', icon: Package },
-  { href: '/admin/destinations', label: 'Destination Management', icon: Map },
-  { href: '/admin/hotels', label: 'Hotel Management', icon: Building2 },
-  { href: '/admin/farm-house', label: 'Farm House Management', icon: Home },
-  { href: '/admin/bookings', label: 'Booking Management', icon: BookOpen },
-  { href: '/admin/email-marketing', label: 'Email Marketing', icon: Mail },
-  { href: '/admin/whatsapp-marketing', label: 'WhatsApp Marketing', icon: WhatsAppIcon },
-  { href: '/admin/social-media', label: 'Social Media', icon: Share2 },
+  { href: '/admin/packages', label: 'Packages', icon: Package },
+  { href: '/admin/destinations', label: 'Destinations', icon: Map },
+  { href: '/admin/hotels', label: 'Hotels', icon: Building2 },
+  { href: '/admin/leads', label: 'Leads', icon: Mail },
+  { href: '/admin/affiliates', label: 'Affiliates', icon: Share2 },
+  { href: '/admin/pricing', label: 'Pricing', icon: Percent },
+  { href: '/admin/seo', label: 'SEO', icon: TrendingUp },
 ];
 
 function AdminLayout({ children }: { children: React.ReactNode }) {

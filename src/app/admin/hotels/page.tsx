@@ -13,7 +13,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Badge } from '@/components/ui/badge';
 
 type Hotel = {
     id: string;
@@ -40,6 +39,7 @@ export default function HotelsPage(){
   },[firestore]);
 
   const formatPrice = (price: number) => {
+    if (typeof price !== 'number') return 'N/A';
     return new Intl.NumberFormat('en-IN', {
       style: 'currency',
       currency: 'INR',
@@ -77,7 +77,7 @@ export default function HotelsPage(){
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     <div className="flex items-center gap-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span>{h.rating.toFixed(1)}</span>
+                        <span>{h.rating ? h.rating.toFixed(1) : 'N/A'}</span>
                     </div>
                 </TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
