@@ -76,8 +76,8 @@
         { "name": "Royal Suite", "count": 5 }
     ],
     "diningExperiences": [
-        { "name": "Adaa", "type": "Indian" },
-        { "name": "Celeste", "type": "Italian & Mediterranean" }
+      { "name": "Adaa", "type": "Indian" },
+      { "name": "Celeste", "type": "Italian & Mediterranean" }
     ],
     "experiencesAndActivities": [ "Jiva Spa", "Heritage Walk", "Billiards Room", "Hookah Lounge" ],
     "weddingVenues": [ "The Durbar Hall", "Jade Terrace", "Main Lawn" ],
@@ -812,7 +812,7 @@
         { "name": "Deluxe Allure Suite", "count": 10 }
     ],
     "diningExperiences": [
-        { "name": "Seven", "type": "Multi-cuisine" },
+        { "name": "Mynt", "type": "All-day dining" },
         { "name": "Umami", "type": "Pan-Asian" }
     ],
     "experiencesAndActivities": [ "Jiva Spa", "City Tours", "Kamakhya Temple Visit" ],

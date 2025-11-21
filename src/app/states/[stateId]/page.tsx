@@ -809,9 +809,9 @@ export default function StatePage() {
 
   if (stateId === 'jammu-and-kashmir') {
     const jnkCarouselImages = [
-        { src: 'https://picsum.photos/seed/jnk-carousel-1/1200/600', caption: 'Dal Lake, Srinagar', 'data-ai-hint': 'srinagar dal lake' },
-        { src: 'https://picsum.photos/seed/jnk-carousel-2/1200/600', caption: 'Gulmarg in snow', 'data-ai-hint': 'gulmarg snow mountains' },
-        { src: 'https://picsum.photos/seed/jnk-carousel-3/1200/600', caption: 'Pahalgam Valley', 'data-ai-hint': 'pahalgam valley river' }
+        { src: 'https://images.unsplash.com/photo-1616162386445-618706363a0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcmluYWdhciUyMGRhbCUyMGxha2V8ZW58MHx8fHwxNzYzNzIyOTg5fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Dal Lake, Srinagar', 'data-ai-hint': 'srinagar dal lake' },
+        { src: 'https://images.unsplash.com/photo-1620227892398-323869275107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndWxtYXJnJTIwc25vdyUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjM3MjI5ODl8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Gulmarg in snow', 'data-ai-hint': 'gulmarg snow mountains' },
+        { src: 'https://images.unsplash.com/photo-1627889615925-56037b304313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYWhhbGdhbSUyMHZhbGxleSUyMHJpdmVyfGVufDB8fHx8MTc2MzcyMjk4OXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Pahalgam Valley', 'data-ai-hint': 'pahalgam valley river' }
     ];
 
     const jnkHighlights = [
@@ -942,9 +942,9 @@ export default function StatePage() {
 
   if (stateId === 'uttarakhand') {
     const uttarakhandCarouselImages = [
-        { src: 'https://picsum.photos/seed/uttarakhand-carousel-1/1200/600', caption: 'Rishikesh, Uttarakhand', 'data-ai-hint': 'rishikesh ganges river' },
-        { src: 'https://picsum.photos/seed/uttarakhand-carousel-2/1200/600', caption: 'Nainital Lake', 'data-ai-hint': 'nainital lake boats' },
-        { src: 'https://picsum.photos/seed/uttarakhand-carousel-3/1200/600', caption: 'Auli Ski Resort', 'data-ai-hint': 'auli skiing snow' }
+        { src: 'https://images.unsplash.com/photo-1678788166239-b28733f56956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSaXNoaWtlc2glMjBjaXR5fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Rishikesh, Uttarakhand', 'data-ai-hint': 'rishikesh ganges river' },
+        { src: 'https://images.unsplash.com/photo-1609309582553-547a357b95bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxOYWluaXRhbCUyMGNpdHl8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Nainital Lake', 'data-ai-hint': 'nainital lake boats' },
+        { src: 'https://images.unsplash.com/photo-1605703975549-3544a3a69634?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhdWxpJTIwc2tpaW5nJTIwc25vd3xlbnwwfHx8fDE3NjM2OTI1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Auli Ski Resort', 'data-ai-hint': 'auli skiing snow' }
     ];
 
     const uttarakhandHighlights = [
@@ -1821,3 +1821,4 @@ export default function StatePage() {
     
 
     
+
