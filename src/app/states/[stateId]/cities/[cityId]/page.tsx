@@ -1,5 +1,4 @@
 
-
 'use client';
 import { cities, hotels, states, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
@@ -10,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Users2, ShieldCheck, HeartPulse, Drama, CookingPot, Diamond, ShoppingBasket, Anchor, Compass } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
+import React from 'react';
 
 // Helper function to create a slug
 function slugify(text: string) {
@@ -18,7 +18,7 @@ function slugify(text: string) {
 }
 
 export default function CityPage() {
-  const params = useParams();
+  const params = React.use(useParams());
   const stateId = params.stateId as string;
   const cityId = params.cityId as string;
 
@@ -2209,7 +2209,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Gangtok</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link>))}</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
@@ -2444,7 +2444,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Attractions in Kanyakumari</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link>))}</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{cityAttractions.map(attraction => ( <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}><Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow"><CardHeader className="p-0"><Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} /></CardHeader><CardContent className="p-4"><h3 className="font-bold text-lg">{attraction.name}</h3><p className="text-sm text-muted-foreground mt-2 line-clamp-3">{attraction.description}</p></CardContent></Card></Link> ))}</div>
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
@@ -2824,3 +2824,5 @@ export default function CityPage() {
 }
 
   
+
+    
