@@ -1084,7 +1084,7 @@ export default function StatePage() {
                         'four-points-by-sheraton-dehradun': { src: 'https://images.unsplash.com/photo-1668480441891-3744c25337a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080' },
                         'jw-marriott-mussoorie-walnut-grove-resort-spa': { src: 'https://images.unsplash.com/photo-1618246308586-98d13e9978ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM2NTY4ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080' },
                         'the-westin-resort-spa-himalayas': { src: 'https://images.unsplash.com/photo-1652496491346-7cbd3e44e1b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UmVzb3J0JTIwbmVzdGxlZCUyMGluJTIwdGhlJTIwaGlsbHN8ZW58MHx8fHwxNzYzNjU2ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080' },
-                        'taj-rishikesh-resort-spa-uttarakhand': { src: 'https://images.unsplash.com/photo-1707573698444-86401c1f6411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBHYW5nZXMlMjBmcm9tJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
+                        'taj-rishikesh-resort-spa-uttarakhand': { src: 'https://images.unsplash.com/photo-1707573698444-86401c1f6411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBHYW5nZXMlMjBmcm9tJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib-rb-4.1.0&q=80&w=1080' },
                         'taj-corbett-resort-spa-uttarakhand': { src: 'https://images.unsplash.com/photo-1751882680415-b060d918fb3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Q290dGFnZXMlMjBhdCUyMFRhaiUyMENvcmJldHR8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080' },
                         'hyatt-regency-dehradun': { src: 'https://images.unsplash.com/photo-1694432922207-52c411937215?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8SG90ZWwlMjBleHRlcmlvciUyMHZpZXd8ZW58MHx8fHwxNzYzNjkyNTMwfDA&ixlib=rb-4.1.0&q=80&w=1080' },
                         'the-naini-retreat-by-leisure-hotels': { src: 'https://images.unsplash.com/photo-1688741398577-f6f05757d2d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxIb3RlbCUyMGV4dGVyaW9yJTIwd2l0aCUyMGElMjB2aWV3fGVufDB8fHx8MTc2MzY5MjUzMHww&ixlib=rb-4.1.0&q=80&w=1080' },
@@ -1563,19 +1563,19 @@ export default function StatePage() {
 
   const goaCarouselImages = [
     {
-      src: 'https://picsum.photos/seed/goa-carousel-1/1200/600',
-      caption: 'Palolem Beach, Goa',
-      'data-ai-hint': 'palolem beach'
+      src: 'https://images.unsplash.com/photo-1590372339797-de37a44517e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYWdhJTIwYmVhY2glMjBnb2F8ZW58MHx8fHwxNzYzNjk3Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      caption: 'Baga Beach, Goa',
+      'data-ai-hint': 'baga beach crowd'
     },
     {
-      src: 'https://picsum.photos/seed/goa-carousel-2/1200/600',
+      src: 'https://images.unsplash.com/photo-1570194883446-a3c3c7340c49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2ElMjBiZWFjaCUyMHNoYWNrc3xlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'A beach party in Goa',
-      'data-ai-hint': 'goa nightlife'
+      'data-ai-hint': 'goa nightlife party'
     },
     {
-      src: 'https://picsum.photos/seed/goa-carousel-3/1200/600',
+      src: 'https://images.unsplash.com/photo-1593169389279-b1d6904c60a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvY3RhdmlvJTIwYmFzaWxpY2ElMjBvZiUyMGJvbSUyMGplc3VzfGVufDB8fHx8MTc2MzY5Nzc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'Basilica of Bom Jesus, Old Goa',
-      'data-ai-hint': 'goa church'
+      'data-ai-hint': 'goa church architecture'
     }
   ];
 
@@ -1589,13 +1589,13 @@ export default function StatePage() {
     {
       name: 'North Goa',
       slug: 'north-goa',
-      image: 'https://picsum.photos/seed/city-north-goa/400/500',
+      image: 'https://images.unsplash.com/photo-1589995171587-01a2f3089408?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxub3J0aCUyMGdvYSUyMGJlYWNofGVufDB8fHx8MTc2MzY5Nzc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'North Goa beach'
     },
     {
       name: 'South Goa',
       slug: 'south-goa',
-      image: 'https://picsum.photos/seed/city-south-goa/400/500',
+      image: 'https://images.unsplash.com/photo-1579033461380-adb47c3eb938?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb3V0aCUyMGdvYSUyMGJlYWNofGVufDB8fHx8MTc2MzY5Nzc5OXww&ixlib=rb-4.1.0&q=80&w=1080',
       caption: 'South Goa peaceful beach'
     },
   ];
