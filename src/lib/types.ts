@@ -9,14 +9,14 @@ export interface Hotel {
   stateId: string;
   city: string;
   cityId: string;
-  location: {
+  location?: {
     lat: number;
     lng: number;
   };
   address: string;
-  pincode: string;
+  pincode?: string;
   about: string;
-  distance: {
+  distance?: {
     [key: string]: string;
   };
   images: {
@@ -41,13 +41,13 @@ export interface Hotel {
   diningExperiences?: { name: string; type: string }[];
   experiencesAndActivities?: string[];
   weddingVenues?: string[];
-  diningCount: number;
-  banquetCount: number;
+  diningCount?: number;
+  banquetCount?: number;
   basePrice: number;
-  dynamicPrice: number;
+  dynamicPrice?: number;
   rating: number;
   tags: string[];
-  affiliate: {
+  affiliate?: {
     booking: string;
     agoda: string;
     expedia: string;
@@ -57,14 +57,14 @@ export interface Hotel {
     uber: string;
     ola: string;
   };
-  seo: {
+  seo?: {
     title: string;
     description: string;
     keywords: string[];
     slug: string;
   };
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 

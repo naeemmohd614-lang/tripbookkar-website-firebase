@@ -1,6 +1,8 @@
 
 [
   {
+    "id": "the-ritz-carlton-bangalore",
+    "brandSlug": "the-ritz-carlton",
     "name": "The Ritz-Carlton Bangalore",
     "brand": "The Ritz-Carlton",
     "city": "Bengaluru",
@@ -10,14 +12,16 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "/uploads/ritz-carlton-exterior.jpg", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
-      { "src": "https://picsum.photos/seed/ritz-bangalore-2/1080/720", "caption": "Lobby area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-bangalore-1.webp", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-bangalore-2.webp", "caption": "Lobby area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 100, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "downtown"]
   },
   {
+    "id": "jw-marriott-hotel-new-delhi-aerocity",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Hotel New Delhi Aerocity",
     "brand": "JW Marriott",
     "city": "New Delhi",
@@ -27,14 +31,16 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-delhi-1/1080/720", "caption": "Hotel exterior at Aerocity" },
-      { "src": "https://picsum.photos/seed/jw-delhi-2/1080/720", "caption": "Swimming pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-delhi-1.webp", "caption": "Hotel exterior at Aerocity" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-delhi-2.webp", "caption": "Swimming pool area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 250, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "luxury", "new delhi"]
   },
   {
+    "id": "goa-marriott-resort-spa",
+    "brandSlug": "marriott",
     "name": "Goa Marriott Resort & Spa",
     "brand": "Marriott",
     "city": "Panaji",
@@ -44,14 +50,16 @@
     "basePrice": 12500,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-goa-1/1080/720", "caption": "View of the resort from the bay" },
-      { "src": "https://picsum.photos/seed/marriott-goa-2/1080/720", "caption": "Outdoor pool and garden" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-1.webp", "caption": "View of the resort from the bay" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-2.webp", "caption": "Outdoor pool and garden" }
     ],
     "roomCategories": [{ "name": "Garden View Room", "count": 180, "size": "388 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beach resort", "goa", "casino"]
   },
   {
+    "id": "jw-marriott-mumbai-juhu",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Mumbai Juhu",
     "brand": "JW Marriott",
     "city": "Mumbai",
@@ -61,14 +69,16 @@
     "basePrice": 18000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-mumbai-1/1080/720", "caption": "Hotel overlooking Juhu beach" },
-      { "src": "https://picsum.photos/seed/jw-mumbai-2/1080/720", "caption": "Lotus pond at the hotel" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mumbai-1.webp", "caption": "Hotel overlooking Juhu beach" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mumbai-2.webp", "caption": "Lotus pond at the hotel" }
     ],
     "roomCategories": [{ "name": "Deluxe Sea View Room", "count": 200, "size": "431 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["sea view", "luxury", "mumbai"]
   },
   {
+    "id": "jaipur-marriott-hotel",
+    "brandSlug": "marriott",
     "name": "Jaipur Marriott Hotel",
     "brand": "Marriott",
     "city": "Jaipur",
@@ -78,14 +88,16 @@
     "basePrice": 9500,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-jaipur-1/1080/720", "caption": "Front facade of Jaipur Marriott" },
-      { "src": "https://picsum.photos/seed/marriott-jaipur-2/1080/720", "caption": "Grand lobby interior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-1.webp", "caption": "Front facade of Jaipur Marriott" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-2.webp", "caption": "Grand lobby interior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 300, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["jaipur", "wedding hotel", "modern"]
   },
   {
+    "id": "the-westin-pune-koregaon-park",
+    "brandSlug": "the-westin",
     "name": "The Westin Pune Koregaon Park",
     "brand": "The Westin",
     "city": "Pune",
@@ -95,8 +107,8 @@
     "basePrice": 11000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-pune-1/1080/720", "caption": "Hotel exterior and landscape" },
-      { "src": "https://picsum.photos/seed/westin-pune-2/1080/720", "caption": "Rooftop lounge view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pune-1.webp", "caption": "Hotel exterior and landscape" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pune-2.webp", "caption": "Rooftop lounge view" }
     ],
     "roomCategories": [{ "name": "Premium Room", "count": 250, "size": "430 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },

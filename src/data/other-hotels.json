@@ -1,6 +1,8 @@
 
 [
   {
+    "id": "the-lalit-new-delhi",
+    "brandSlug": "the-lalit",
     "name": "The Lalit New Delhi",
     "brand": "The Lalit",
     "city": "New Delhi",
@@ -10,8 +12,8 @@
     "basePrice": 14000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/lalit-delhi-1/1080/720", "caption": "The Lalit New Delhi exterior" },
-      { "src": "https://picsum.photos/seed/lalit-delhi-2/1080/720", "caption": "Luxurious hotel lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-delhi-1.webp", "caption": "The Lalit New Delhi exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-delhi-2.webp", "caption": "Luxurious hotel lobby" }
     ],
     "distance": { "Indira Gandhi International Airport": "15 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 461, "size": "350 sqft" }],
@@ -26,6 +28,8 @@
     "tags": ["luxury", "business", "downtown", "new delhi"]
   },
   {
+    "id": "the-lalit-mumbai",
+    "brandSlug": "the-lalit",
     "name": "The Lalit Mumbai",
     "brand": "The Lalit",
     "city": "Mumbai",
@@ -35,8 +39,8 @@
     "basePrice": 12000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/lalit-mumbai-1/1080/720", "caption": "The Lalit Mumbai exterior" },
-      { "src": "https://picsum.photos/seed/lalit-mumbai-2/1080/720", "caption": "Grand atrium lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-mumbai-1.webp", "caption": "The Lalit Mumbai exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-mumbai-2.webp", "caption": "Grand atrium lobby" }
     ],
     "distance": { "Chhatrapati Shivaji Maharaj International Airport": "1 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 369, "size": "475 sqft" }],
@@ -50,6 +54,8 @@
     "tags": ["luxury", "airport hotel", "mumbai"]
   },
   {
+    "id": "ramada-encore-by-wyndham-statue-of-unity",
+    "brandSlug": "ramada",
     "name": "Ramada Encore by Wyndham Statue of Unity",
     "brand": "Ramada",
     "city": "Kevadia",
@@ -59,14 +65,16 @@
     "basePrice": 6500,
     "rating": 4.3,
     "images": [
-      { "src": "https://picsum.photos/seed/ramada-kevadia-1/1080/720", "caption": "Ramada Encore hotel exterior" },
-      { "src": "https://picsum.photos/seed/ramada-kevadia-2/1080/720", "caption": "Comfortable hotel room" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ramada-kevadia-1.webp", "caption": "Ramada Encore hotel exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ramada-kevadia-2.webp", "caption": "Comfortable hotel room" }
     ],
     "roomCategories": [{ "name": "Superior Room", "count": 100, "size": "300 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["statue of unity", "kevadia", "family friendly"]
   },
   {
+    "id": "tent-city-narmada",
+    "brandSlug": "tent-city",
     "name": "Tent City Narmada",
     "brand": "Tent City",
     "city": "Kevadia",
@@ -76,14 +84,16 @@
     "basePrice": 8000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/tent-city-kevadia-1/1080/720", "caption": "Luxury tents at Tent City Narmada" },
-      { "src": "https://picsum.photos/seed/tent-city-kevadia-2/1080/720", "caption": "Interior of a luxury tent" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/tent-city-kevadia-1.webp", "caption": "Luxury tents at Tent City Narmada" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/tent-city-kevadia-2.webp", "caption": "Interior of a luxury tent" }
     ],
     "roomCategories": [{ "name": "Luxury Tent", "count": 200, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:30 PM", "checkOut": "9:30 AM" },
     "tags": ["luxury camping", "tent city", "kevadia", "unique stay"]
   },
   {
+    "id": "itc-mughal-agra",
+    "brandSlug": "itc",
     "name": "ITC Mughal, Agra",
     "brand": "ITC",
     "city": "Agra",
@@ -93,14 +103,16 @@
     "basePrice": 12000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/itc-agra-1/1080/720", "caption": "ITC Mughal architecture" },
-      { "src": "https://picsum.photos/seed/itc-agra-2/1080/720", "caption": "Gardens and pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-agra-1.webp", "caption": "ITC Mughal architecture" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-agra-2.webp", "caption": "Gardens and pool area" }
     ],
     "roomCategories": [{ "name": "Mughal Room", "count": 233, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "mughal architecture", "agra"]
   },
   {
+    "id": "brijrama-palace-varanasi",
+    "brandSlug": "brij",
     "name": "BrijRama Palace, Varanasi",
     "brand": "Brij",
     "city": "Varanasi",
@@ -110,14 +122,16 @@
     "basePrice": 25000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/brijrama-1/1080/720", "caption": "BrijRama Palace on the ghats" },
-      { "src": "https://picsum.photos/seed/brijrama-2/1080/720", "caption": "Interior courtyard" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/brijrama-1.webp", "caption": "BrijRama Palace on the ghats" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/brijrama-2.webp", "caption": "Interior courtyard" }
     ],
     "roomCategories": [{ "name": "Varuna Burj", "count": 32, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "ghat view", "spiritual", "varanasi"]
   },
   {
+    "id": "hotel-clarks-shiraz-agra",
+    "brandSlug": "clarks",
     "name": "Hotel Clarks Shiraz, Agra",
     "brand": "Clarks",
     "city": "Agra",
@@ -127,14 +141,16 @@
     "basePrice": 7000,
     "rating": 4.3,
     "images": [
-      { "src": "https://picsum.photos/seed/clarks-agra-1/1080/720", "caption": "Hotel exterior and lawn" },
-      { "src": "https://picsum.photos/seed/clarks-agra-2/1080/720", "caption": "Revolving restaurant view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/clarks-agra-1.webp", "caption": "Hotel exterior and lawn" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/clarks-agra-2.webp", "caption": "Revolving restaurant view" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 237, "size": "300 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["family friendly", "agra", "taj mahal view"]
   },
   {
+    "id": "the-clarks-varanasi",
+    "brandSlug": "clarks",
     "name": "The Clarks, Varanasi",
     "brand": "Clarks",
     "city": "Varanasi",
@@ -144,14 +160,16 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/clarks-varanasi-1/1080/720", "caption": "Hotel exterior and garden" },
-      { "src": "https://picsum.photos/seed/clarks-varanasi-2/1080/720", "caption": "Swimming pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/clarks-varanasi-1.webp", "caption": "Hotel exterior and garden" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/clarks-varanasi-2.webp", "caption": "Swimming pool area" }
     ],
     "roomCategories": [{ "name": "Superior Room", "count": 104, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["city hotel", "business", "varanasi"]
   },
   {
+    "id": "lebua-lucknow",
+    "brandSlug": "lebua",
     "name": "Lebua Lucknow",
     "brand": "Lebua",
     "city": "Lucknow",
@@ -161,14 +179,16 @@
     "basePrice": 9000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/lebua-lucknow-1/1080/720", "caption": "Art Deco facade of the hotel" },
-      { "src": "https://picsum.photos/seed/lebua-lucknow-2/1080/720", "caption": "Courtyard dining area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lebua-lucknow-1.webp", "caption": "Art Deco facade of the hotel" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lebua-lucknow-2.webp", "caption": "Courtyard dining area" }
     ],
     "roomCategories": [{ "name": "Executive Room", "count": 41, "size": "400 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "boutique", "lucknow"]
   },
   {
+    "id": "hotel-kanha-shyam-prayagraj",
+    "brandSlug": "kanha-shyam",
     "name": "Hotel Kanha Shyam, Prayagraj",
     "brand": "Kanha Shyam",
     "city": "Prayagraj",
@@ -178,14 +198,16 @@
     "basePrice": 5000,
     "rating": 4.2,
     "images": [
-      { "src": "https://picsum.photos/seed/kanha-prayagraj-1/1080/720", "caption": "Hotel exterior" },
-      { "src": "https://picsum.photos/seed/kanha-prayagraj-2/1080/720", "caption": "Lobby area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/kanha-prayagraj-1.webp", "caption": "Hotel exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/kanha-prayagraj-2.webp", "caption": "Lobby area" }
     ],
     "roomCategories": [{ "name": "Executive Room", "count": 94, "size": "280 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "12:00 PM" },
     "tags": ["city hotel", "pilgrimage", "prayagraj"]
   },
   {
+    "id": "nidhivan-sarovar-portico-vrindavan",
+    "brandSlug": "sarovar-portico",
     "name": "Nidhivan Sarovar Portico, Vrindavan",
     "brand": "Sarovar Portico",
     "city": "Mathura",
@@ -195,14 +217,16 @@
     "basePrice": 6000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/nidhivan-vrindavan-1/1080/720", "caption": "Hotel garden area" },
-      { "src": "https://picsum.photos/seed/nidhivan-vrindavan-2/1080/720", "caption": "Restaurant interior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/nidhivan-vrindavan-1.webp", "caption": "Hotel garden area" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/nidhivan-vrindavan-2.webp", "caption": "Restaurant interior" }
     ],
     "roomCategories": [{ "name": "Superior Room", "count": 68, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["pilgrimage", "spiritual", "mathura", "vrindavan"]
   },
   {
+    "id": "manuallaya-the-resort-spa-in-the-himalayas",
+    "brandSlug": "manuallaya",
     "name": "Manuallaya - The Resort Spa in the Himalayas",
     "brand": "Manuallaya",
     "city": "Manali",
@@ -212,14 +236,16 @@
     "basePrice": 12000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/manuallaya-manali-1/1080/720", "caption": "Resort exterior with mountain background" },
-      { "src": "https://picsum.photos/seed/manuallaya-manali-2/1080/720", "caption": "Cozy room interior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/manuallaya-manali-1.webp", "caption": "Resort exterior with mountain background" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/manuallaya-manali-2.webp", "caption": "Cozy room interior" }
     ],
     "roomCategories": [{ "name": "Garden Room", "count": 55, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "mountain view", "manali"]
   },
   {
+    "id": "fortune-park-dalhousie",
+    "brandSlug": "fortune",
     "name": "Fortune Park Dalhousie",
     "brand": "Fortune",
     "city": "Dalhousie",
@@ -229,14 +255,16 @@
     "basePrice": 9000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/fortune-dalhousie-1/1080/720", "caption": "Hotel exterior view" },
-      { "src": "https://picsum.photos/seed/fortune-dalhousie-2/1080/720", "caption": "Restaurant with a view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fortune-dalhousie-1.webp", "caption": "Hotel exterior view" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fortune-dalhousie-2.webp", "caption": "Restaurant with a view" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 57, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["mountain view", "dalhousie", "colonial"]
   },
   {
+    "id": "the-naini-retreat-by-leisure-hotels",
+    "brandSlug": "leisure-hotels",
     "name": "The Naini Retreat, by Leisure Hotels",
     "brand": "Leisure Hotels",
     "city": "Nainital",
@@ -246,14 +274,16 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/naini-retreat-1/1080/720", "caption": "Hotel exterior with a view" },
-      { "src": "https://picsum.photos/seed/naini-retreat-2/1080/720", "caption": "Room with lake view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/naini-retreat-1.webp", "caption": "Hotel exterior with a view" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/naini-retreat-2.webp", "caption": "Room with lake view" }
     ],
     "roomCategories": [{ "name": "Superior Room", "count": 52, "size": "350 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
     "tags": ["heritage", "lake view", "nainital"]
   },
   {
+    "id": "the-manu-maharani",
+    "brandSlug": "leisure-hotels",
     "name": "The Manu Maharani",
     "brand": "Leisure Hotels",
     "city": "Nainital",
@@ -263,14 +293,16 @@
     "basePrice": 14000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/manu-maharani-1/1080/720", "caption": "Hotel facade" },
-      { "src": "https://picsum.photos/seed/manu-maharani-2/1080/720", "caption": "Room overlooking the lake" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/manu-maharani-1.webp", "caption": "Hotel facade" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/manu-maharani-2.webp", "caption": "Room overlooking the lake" }
     ],
     "roomCategories": [{ "name": "Premium Lake View Room", "count": 67, "size": "380 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["lake view", "nainital", "luxury"]
   },
   {
+    "id": "jaypee-residency-manor",
+    "brandSlug": "jaypee",
     "name": "Jaypee Residency Manor",
     "brand": "Jaypee",
     "city": "Mussoorie",
@@ -280,14 +312,16 @@
     "basePrice": 13000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/jaypee-mussoorie-1/1080/720", "caption": "Hotel with panoramic Himalayan view" },
-      { "src": "https://picsum.photos/seed/jaypee-mussoorie-2/1080/720", "caption": "Indoor heated swimming pool" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jaypee-mussoorie-1.webp", "caption": "Hotel with panoramic Himalayan view" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jaypee-mussoorie-2.webp", "caption": "Indoor heated swimming pool" }
     ],
     "roomCategories": [{ "name": "Manor Room", "count": 90, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["mountain view", "mussoorie", "family friendly"]
   },
   {
+    "id": "the-khyber-himalayan-resort-spa",
+    "brandSlug": "the-khyber",
     "name": "The Khyber Himalayan Resort & Spa",
     "brand": "The Khyber",
     "city": "Gulmarg",
@@ -297,14 +331,16 @@
     "basePrice": 30000,
     "rating": 4.9,
     "images": [
-      { "src": "https://picsum.photos/seed/khyber-gulmarg-1/1080/720", "caption": "Resort exterior in snow" },
-      { "src": "https://picsum.photos/seed/khyber-gulmarg-2/1080/720", "caption": "Heated indoor pool with a view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/khyber-gulmarg-1.webp", "caption": "Resort exterior in snow" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/khyber-gulmarg-2.webp", "caption": "Heated indoor pool with a view" }
     ],
     "roomCategories": [{ "name": "Premier Valley View Room", "count": 85, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["ski resort", "luxury", "mountain view", "gulmarg"]
   },
   {
+    "id": "mayfair-spa-resort-casino",
+    "brandSlug": "mayfair",
     "name": "Mayfair Spa Resort & Casino",
     "brand": "Mayfair",
     "city": "Gangtok",
@@ -314,14 +350,16 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/mayfair-gangtok-1/1080/720", "caption": "Resort exterior and pool" },
-      { "src": "https://picsum.photos/seed/mayfair-gangtok-2/1080/720", "caption": "Lobby with traditional decor" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/mayfair-gangtok-1.webp", "caption": "Resort exterior and pool" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/mayfair-gangtok-2.webp", "caption": "Lobby with traditional decor" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 68, "size": "400 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["casino", "luxury", "mountain view", "gangtok"]
   },
   {
+    "id": "the-elgin-mount-pandim-pelling",
+    "brandSlug": "the-elgin",
     "name": "The Elgin Mount Pandim, Pelling",
     "brand": "The Elgin",
     "city": "Pelling",
@@ -331,14 +369,16 @@
     "basePrice": 12000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/elgin-pelling-1/1080/720", "caption": "View of Kanchenjunga from the hotel" },
-      { "src": "https://picsum.photos/seed/elgin-pelling-2/1080/720", "caption": "Colonial-style hotel exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/elgin-pelling-1.webp", "caption": "View of Kanchenjunga from the hotel" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/elgin-pelling-2.webp", "caption": "Colonial-style hotel exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "350 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "mountain view", "pelling", "romantic"]
   },
   {
+    "id": "yarlam-lachung",
+    "brandSlug": "yarlam",
     "name": "Yarlam, Lachung",
     "brand": "Yarlam",
     "city": "Lachung",
@@ -348,14 +388,16 @@
     "basePrice": 10000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/yarlam-lachung-1/1080/720", "caption": "Hotel exterior in Lachung valley" },
-      { "src": "https://picsum.photos/seed/yarlam-lachung-2/1080/720", "caption": "Comfortable room interior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/yarlam-lachung-1.webp", "caption": "Hotel exterior in Lachung valley" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/yarlam-lachung-2.webp", "caption": "Comfortable room interior" }
     ],
     "roomCategories": [{ "name": "Super Deluxe", "count": 38, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["remote", "mountain view", "lachung", "valley"]
   },
   {
+    "id": "hotel-summit-sobralia",
+    "brandSlug": "summit",
     "name": "Hotel Summit Sobralia",
     "brand": "Summit",
     "city": "Namchi",
@@ -365,14 +407,16 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/summit-namchi-1/1080/720", "caption": "Hotel exterior and view" },
-      { "src": "https://picsum.photos/seed/summit-namchi-2/1080/720", "caption": "Restaurant area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/summit-namchi-1.webp", "caption": "Hotel exterior and view" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/summit-namchi-2.webp", "caption": "Restaurant area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 50, "size": "280 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["cultural", "mountain view", "namchi"]
   },
   {
+    "id": "mayfair-darjeeling",
+    "brandSlug": "mayfair",
     "name": "Mayfair Darjeeling",
     "brand": "Mayfair",
     "city": "Darjeeling",
@@ -382,14 +426,16 @@
     "basePrice": 13000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/mayfair-darjeeling-1/1080/720", "caption": "Hotel exterior view" },
-      { "src": "https://picsum.photos/seed/mayfair-darjeeling-2/1080/720", "caption": "Lounge with a fireplace" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/mayfair-darjeeling-1.webp", "caption": "Hotel exterior view" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/mayfair-darjeeling-2.webp", "caption": "Lounge with a fireplace" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 44, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "mountain view", "darjeeling"]
   },
   {
+    "id": "sinclairs-siliguri",
+    "brandSlug": "sinclairs",
     "name": "Sinclairs Siliguri",
     "brand": "Sinclairs",
     "city": "Siliguri",
@@ -399,14 +445,16 @@
     "basePrice": 6000,
     "rating": 4.3,
     "images": [
-      { "src": "https://picsum.photos/seed/sinclairs-siliguri-1/1080/720", "caption": "Hotel exterior and gardens" },
-      { "src": "https://picsum.photos/seed/sinclairs-siliguri-2/1080/720", "caption": "Swimming pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sinclairs-siliguri-1.webp", "caption": "Hotel exterior and gardens" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sinclairs-siliguri-2.webp", "caption": "Swimming pool area" }
     ],
     "roomCategories": [{ "name": "Superior Room", "count": 41, "size": "300 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "gateway", "siliguri"]
   },
   {
+    "id": "the-elgin-silver-oaks-kalimpong",
+    "brandSlug": "the-elgin",
     "name": "The Elgin Silver Oaks, Kalimpong",
     "brand": "The Elgin",
     "city": "Kalimpong",
@@ -416,14 +464,16 @@
     "basePrice": 11000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/elgin-kalimpong-1/1080/720", "caption": "Colonial exterior of the hotel" },
-      { "src": "https://picsum.photos/seed/elgin-kalimpong-2/1080/720", "caption": "Lush gardens and sitting area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/elgin-kalimpong-1.webp", "caption": "Colonial exterior of the hotel" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/elgin-kalimpong-2.webp", "caption": "Lush gardens and sitting area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 25, "size": "350 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "mountain view", "kalimpong", "romantic"]
   },
   {
+    "id": "itc-royal-bengal-a-luxury-collection-hotel-kolkata",
+    "brandSlug": "itc",
     "name": "ITC Royal Bengal, a Luxury Collection Hotel, Kolkata",
     "brand": "ITC",
     "city": "Kolkata",
@@ -433,14 +483,16 @@
     "basePrice": 16000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/itc-kolkata-1/1080/720", "caption": "Grand facade of ITC Royal Bengal" },
-      { "src": "https://picsum.photos/seed/itc-kolkata-2/1080/720", "caption": "Lavish hotel lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-kolkata-1.webp", "caption": "Grand facade of ITC Royal Bengal" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-kolkata-2.webp", "caption": "Lavish hotel lobby" }
     ],
     "roomCategories": [{ "name": "Tower Room", "count": 456, "size": "527 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "kolkata"]
   },
   {
+    "id": "the-windamere-hotel",
+    "brandSlug": "windamere",
     "name": "The Windamere Hotel",
     "brand": "Windamere",
     "city": "Darjeeling",
@@ -450,14 +502,16 @@
     "basePrice": 14000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/windamere-darjeeling-1/1080/720", "caption": "Colonial architecture of Windamere" },
-      { "src": "https://picsum.photos/seed/windamere-darjeeling-2/1080/720", "caption": "View from the hotel terrace" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/windamere-darjeeling-1.webp", "caption": "Colonial architecture of Windamere" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/windamere-darjeeling-2.webp", "caption": "View from the hotel terrace" }
     ],
     "roomCategories": [{ "name": "Superior Room", "count": 38, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "colonial", "darjeeling"]
   },
   {
+    "id": "heritage-madurai",
+    "brandSlug": "heritage",
     "name": "Heritage Madurai",
     "brand": "Heritage",
     "city": "Madurai",
@@ -467,13 +521,15 @@
     "basePrice": 9000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/heritage-madurai/1080/720", "caption": "Temple-style pool" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/heritage-madurai.webp", "caption": "Temple-style pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Club", "count": 72, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "resort", "madurai"]
   },
   {
+    "id": "sterling-ooty-fern-hill",
+    "brandSlug": "sterling",
     "name": "Sterling Ooty Fern Hill",
     "brand": "Sterling",
     "city": "Ooty",
@@ -483,13 +539,15 @@
     "basePrice": 7000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/sterling-ooty/1080/720", "caption": "View from the resort" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sterling-ooty.webp", "caption": "View from the resort" }
     ],
     "roomCategories": [{ "name": "Classic Room", "count": 175, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
     "tags": ["mountain view", "ooty", "resort"]
   },
   {
+    "id": "the-carlton-kodaikanal",
+    "brandSlug": "carlton",
     "name": "The Carlton Kodaikanal",
     "brand": "Carlton",
     "city": "Kodaikanal",
@@ -499,13 +557,15 @@
     "basePrice": 11000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/carlton-kodai/1080/720", "caption": "Hotel overlooking Kodai Lake" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/carlton-kodai.webp", "caption": "Hotel overlooking Kodai Lake" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 91, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["lake view", "kodaikanal", "luxury"]
   },
   {
+    "id": "sterling-kodai-lake",
+    "brandSlug": "sterling",
     "name": "Sterling Kodai Lake",
     "brand": "Sterling",
     "city": "Kodaikanal",
@@ -515,14 +575,16 @@
     "basePrice": 6000,
     "rating": 4.3,
     "images": [
-      { "src": "https://picsum.photos/seed/sterling-kodai-1/1080/720", "caption": "View of the resort" },
-      { "src": "https://picsum.photos/seed/sterling-kodai-2/1080/720", "caption": "Room with a view of the lake" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sterling-kodai-1.webp", "caption": "View of the resort" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sterling-kodai-2.webp", "caption": "Room with a view of the lake" }
     ],
     "roomCategories": [{ "name": "Classic Room", "count": 102, "size": "280 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "10:00 AM" },
     "tags": ["lake view", "resort", "kodaikanal"]
   },
   {
+    "id": "the-lalit-temple-view-khajuraho",
+    "brandSlug": "the-lalit",
     "name": "The Lalit Temple View Khajuraho",
     "brand": "The Lalit",
     "city": "Khajuraho",
@@ -532,7 +594,7 @@
     "basePrice": 9000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/lalit-khajuraho-1/1080/720", "caption": "Hotel exterior with temple view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-khajuraho-1.webp", "caption": "Hotel exterior with temple view" }
     ],
     "distance": { "Khajuraho Airport": "4 km" },
     "roomCategories": [{ "name": "Garden View Room", "count": 47, "size": "350 sqft" }],
@@ -546,6 +608,8 @@
     "tags": ["temple view", "luxury", "khajuraho"]
   },
   {
+    "id": "syna-tiger-resort",
+    "brandSlug": "syna",
     "name": "Syna Tiger Resort",
     "brand": "Syna",
     "city": "Bandhavgarh",
@@ -555,13 +619,15 @@
     "basePrice": 12000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/syna-bandhavgarh-1/1080/720", "caption": "Cottage exterior in the jungle" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/syna-bandhavgarh-1.webp", "caption": "Cottage exterior in the jungle" }
     ],
     "roomCategories": [{ "name": "Luxury Cottage", "count": 20, "size": "500 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
     "tags": ["wildlife", "jungle resort", "bandhavgarh"]
   },
   {
+    "id": "welcomheritage-golf-view",
+    "brandSlug": "welcomheritage",
     "name": "Welcomheritage Golf View",
     "brand": "Welcomheritage",
     "city": "Pachmarhi",
@@ -571,13 +637,15 @@
     "basePrice": 8000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/golf-view-pachmarhi-1/1080/720", "caption": "Colonial-style hotel exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/golf-view-pachmarhi-1.webp", "caption": "Colonial-style hotel exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "hill station", "pachmarhi"]
   },
   {
+    "id": "jehan-numa-palace-hotel-bhopal",
+    "brandSlug": "jehan-numa",
     "name": "Jehan Numa Palace Hotel, Bhopal",
     "brand": "Jehan Numa",
     "city": "Bhopal",
@@ -587,13 +655,15 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/jehan-numa-bhopal/1080/720", "caption": "Jehan Numa Palace exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jehan-numa-bhopal.webp", "caption": "Jehan Numa Palace exterior" }
     ],
     "roomCategories": [{ "name": "Regal Room", "count": 100, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "palace", "bhopal"]
   },
   {
+    "id": "mpt-amaltas-pachmarhi",
+    "brandSlug": "mpt",
     "name": "MPT Amaltas, Pachmarhi",
     "brand": "MPT",
     "city": "Pachmarhi",
@@ -603,13 +673,15 @@
     "basePrice": 3500,
     "rating": 4.1,
     "images": [
-      { "src": "https://picsum.photos/seed/amaltas-pachmarhi/1080/720", "caption": "Hotel exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/amaltas-pachmarhi.webp", "caption": "Hotel exterior" }
     ],
     "roomCategories": [{ "name": "AC Room", "count": 25, "size": "250 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:00 PM", "checkOut": "11:00 AM" },
     "tags": ["budget", "family", "pachmarhi"]
   },
   {
+    "id": "the-fern-residency-somnath",
+    "brandSlug": "the-fern",
     "name": "The Fern Residency, Somnath",
     "brand": "The Fern",
     "city": "Somnath",
@@ -619,13 +691,15 @@
     "basePrice": 5000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/fern-somnath-1/1080/720", "caption": "The Fern Residency exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fern-somnath-1.webp", "caption": "The Fern Residency exterior" }
     ],
     "roomCategories": [{ "name": "Winter Green Room", "count": 56, "size": "280 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["pilgrimage", "somnath", "eco-friendly"]
   },
   {
+    "id": "the-house-of-mg-ahmedabad",
+    "brandSlug": "the-house-of-mg",
     "name": "The House of MG, Ahmedabad",
     "brand": "The House of MG",
     "city": "Ahmedabad",
@@ -635,13 +709,15 @@
     "basePrice": 10000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/house-of-mg-1/1080/720", "caption": "Courtyard of The House of MG" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/house-of-mg-1.webp", "caption": "Courtyard of The House of MG" }
     ],
     "roomCategories": [{ "name": "Grand Suite", "count": 38, "size": "600 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
     "tags": ["heritage", "boutique", "ahmedabad", "cultural"]
   },
   {
+    "id": "the-grand-bhagwati-surat",
+    "brandSlug": "tgb",
     "name": "The Grand Bhagwati, Surat",
     "brand": "TGB",
     "city": "Surat",
@@ -651,7 +727,7 @@
     "basePrice": 7500,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/tgb-surat-1/1080/720", "caption": "The Grand Bhagwati hotel facade" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/tgb-surat-1.webp", "caption": "The Grand Bhagwati hotel facade" }
     ],
     "roomCategories": [{ "name": "Executive Room", "count": 170, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },

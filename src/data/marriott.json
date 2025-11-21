@@ -1,6 +1,8 @@
 
 [
   {
+    "id": "the-ritz-carlton-bangalore",
+    "brandSlug": "the-ritz-carlton",
     "name": "The Ritz-Carlton Bangalore",
     "brand": "The Ritz-Carlton",
     "city": "Bengaluru",
@@ -10,8 +12,8 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/ritz-bangalore-1/1080/720", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
-      { "src": "https://picsum.photos/seed/ritz-bangalore-2/1080/720", "caption": "Lobby area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-bangalore-1.webp", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-bangalore-2.webp", "caption": "Lobby area" }
     ],
     "distance": {
       "Kempegowda International Airport": "35 km"
@@ -40,6 +42,8 @@
     "tags": ["luxury", "business", "downtown"]
   },
   {
+    "id": "jw-marriott-hotel-new-delhi-aerocity",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Hotel New Delhi Aerocity",
     "brand": "JW Marriott",
     "city": "New Delhi",
@@ -49,8 +53,8 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-delhi-1/1080/720", "caption": "Hotel exterior at Aerocity" },
-      { "src": "https://picsum.photos/seed/jw-delhi-2/1080/720", "caption": "Swimming pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-delhi-1.webp", "caption": "Hotel exterior at Aerocity" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-delhi-2.webp", "caption": "Swimming pool area" }
     ],
     "distance": {
       "Indira Gandhi International Airport": "2 km"
@@ -67,6 +71,8 @@
     "tags": ["airport hotel", "luxury", "new delhi"]
   },
   {
+    "id": "goa-marriott-resort-spa",
+    "brandSlug": "marriott",
     "name": "Goa Marriott Resort & Spa",
     "brand": "Marriott",
     "city": "Panaji",
@@ -76,8 +82,8 @@
     "basePrice": 12500,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-goa-1/1080/720", "caption": "View of the resort from the bay" },
-      { "src": "https://picsum.photos/seed/marriott-goa-2/1080/720", "caption": "Outdoor pool and garden" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-1.webp", "caption": "View of the resort from the bay" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-2.webp", "caption": "Outdoor pool and garden" }
     ],
     "distance": { "Dabolim Airport": "30 km" },
     "roomCategories": [{ "name": "Garden View Room", "count": 180, "size": "388 sqft" }],
@@ -91,6 +97,8 @@
     "tags": ["beach resort", "goa", "casino"]
   },
   {
+    "id": "jw-marriott-mumbai-juhu",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Mumbai Juhu",
     "brand": "JW Marriott",
     "city": "Mumbai",
@@ -100,8 +108,8 @@
     "basePrice": 18000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-mumbai-1/1080/720", "caption": "Hotel overlooking Juhu beach" },
-      { "src": "https://picsum.photos/seed/jw-mumbai-2/1080/720", "caption": "Lotus pond at the hotel" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mumbai-1.webp", "caption": "Hotel overlooking Juhu beach" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mumbai-2.webp", "caption": "Lotus pond at the hotel" }
     ],
     "distance": { "Chhatrapati Shivaji Maharaj International Airport": "9 km" },
     "roomCategories": [{ "name": "Deluxe Sea View Room", "count": 200, "size": "431 sqft" }],
@@ -115,6 +123,8 @@
     "tags": ["sea view", "luxury", "mumbai"]
   },
   {
+    "id": "jaipur-marriott-hotel",
+    "brandSlug": "marriott",
     "name": "Jaipur Marriott Hotel",
     "brand": "Marriott",
     "city": "Jaipur",
@@ -124,8 +134,8 @@
     "basePrice": 9500,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-jaipur-1/1080/720", "caption": "Front facade of Jaipur Marriott" },
-      { "src": "https://picsum.photos/seed/marriott-jaipur-2/1080/720", "caption": "Grand lobby interior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-1.webp", "caption": "Front facade of Jaipur Marriott" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-2.webp", "caption": "Grand lobby interior" }
     ],
     "distance": { "Jaipur International Airport": "2 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 300, "size": "452 sqft" }],
@@ -139,6 +149,8 @@
     "tags": ["jaipur", "wedding hotel", "modern"]
   },
   {
+    "id": "the-westin-pune-koregaon-park",
+    "brandSlug": "the-westin",
     "name": "The Westin Pune Koregaon Park",
     "brand": "The Westin",
     "city": "Pune",
@@ -148,8 +160,8 @@
     "basePrice": 11000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-pune-1/1080/720", "caption": "Hotel exterior and landscape" },
-      { "src": "https://picsum.photos/seed/westin-pune-2/1080/720", "caption": "Rooftop lounge view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pune-1.webp", "caption": "Hotel exterior and landscape" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pune-2.webp", "caption": "Rooftop lounge view" }
     ],
     "distance": { "Pune International Airport": "5 km" },
     "roomCategories": [{ "name": "Premium Room", "count": 250, "size": "430 sqft" }],
@@ -163,6 +175,8 @@
     "tags": ["wellness", "pune", "pet friendly"]
   },
   {
+    "id": "renaissance-lucknow-hotel",
+    "brandSlug": "renaissance-hotels",
     "name": "Renaissance Lucknow Hotel",
     "brand": "Marriott",
     "city": "Lucknow",
@@ -172,14 +186,16 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/renaissance-lucknow-1/1080/720", "caption": "Rooftop infinity pool" },
-      { "src": "https://picsum.photos/seed/renaissance-lucknow-2/1080/720", "caption": "Hotel exterior at night" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-lucknow-1.webp", "caption": "Rooftop infinity pool" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-lucknow-2.webp", "caption": "Hotel exterior at night" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 112, "size": "377 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "city view", "lucknow"]
   },
   {
+    "id": "four-points-by-sheraton-dehradun",
+    "brandSlug": "four-points-by-sheraton",
     "name": "Four Points by Sheraton Dehradun",
     "brand": "Marriott",
     "city": "Dehradun",
@@ -189,14 +205,16 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1668480441891-3744c25337a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
-      { "src": "https://picsum.photos/seed/fourpoints-dehradun-2/1080/720", "caption": "Modern hotel lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-dehradun-1.webp", "caption": "Hotel exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-dehradun-2.webp", "caption": "Modern hotel lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "dehradun", "city hotel"]
   },
   {
+    "id": "jw-marriott-mussoorie-walnut-grove-resort-spa",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Mussoorie Walnut Grove Resort & Spa",
     "brand": "JW Marriott",
     "city": "Mussoorie",
@@ -206,14 +224,16 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1618246308586-98d13e9978ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM2NTY4ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
-      { "src": "https://picsum.photos/seed/jw-mussoorie-2/1080/720", "caption": "Indoor swimming pool" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-1.webp", "caption": "Resort with valley view" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-2.webp", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "valley view", "mussoorie", "resort"]
   },
   {
+    "id": "the-westin-resort-spa-himalayas",
+    "brandSlug": "the-westin",
     "name": "The Westin Resort & Spa, Himalayas",
     "brand": "The Westin",
     "city": "Rishikesh",
@@ -223,14 +243,16 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1652496491346-7cbd3e44e1b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UmVzb3J0JTIwbmVzdGxlZCUyMGluJTIwdGhlJTIwaGlsbHN8ZW58MHx8fHwxNzYzNjU2ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
-      { "src": "https://picsum.photos/seed/westin-himalayas-2/1080/720", "caption": "Infinity pool overlooking the valley" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-1.webp", "caption": "Resort nestled in the hills" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-2.webp", "caption": "Infinity pool overlooking the valley" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "luxury", "mountain view", "rishikesh"]
   },
   {
+    "id": "courtyard-by-marriott-madurai",
+    "brandSlug": "courtyard-by-marriott",
     "name": "Courtyard by Marriott Madurai",
     "brand": "Marriott",
     "city": "Madurai",
@@ -240,14 +262,16 @@
     "basePrice": 8000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/courtyard-madurai-1/1080/720", "caption": "Hotel exterior" },
-      { "src": "https://picsum.photos/seed/courtyard-madurai-2/1080/720", "caption": "Modern room interior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-madurai-1.webp", "caption": "Hotel exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-madurai-2.webp", "caption": "Modern room interior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["modern", "business", "madurai"]
   },
   {
+    "id": "indore-marriott-hotel",
+    "brandSlug": "marriott",
     "name": "Indore Marriott Hotel",
     "brand": "Marriott",
     "city": "Indore",
@@ -257,13 +281,15 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-indore/1080/720", "caption": "Indore Marriott Hotel poolside" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-indore.webp", "caption": "Indore Marriott Hotel poolside" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 218, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "resort", "indore"]
   },
   {
+    "id": "courtyard-by-marriott-ahmedabad",
+    "brandSlug": "courtyard-by-marriott",
     "name": "Courtyard by Marriott, Ahmedabad",
     "brand": "Marriott",
     "city": "Ahmedabad",
@@ -273,13 +299,15 @@
     "basePrice": 11000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/courtyard-ahmedabad-1/1080/720", "caption": "Hotel exterior at night" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-ahmedabad-1.webp", "caption": "Hotel exterior at night" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "ahmedabad"]
   },
   {
+    "id": "surat-marriott-hotel",
+    "brandSlug": "marriott",
     "name": "Surat Marriott Hotel",
     "brand": "Marriott",
     "city": "Surat",
@@ -289,13 +317,15 @@
     "basePrice": 9000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-surat-1/1080/720", "caption": "Surat Marriott Hotel exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-surat-1.webp", "caption": "Surat Marriott Hotel exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 209, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "surat"]
   },
   {
+    "id": "the-st-regis-mumbai",
+    "brandSlug": "st-regis",
     "name": "The St. Regis Mumbai",
     "brand": "Marriott",
     "city": "Mumbai",
@@ -305,13 +335,15 @@
     "basePrice": 24000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/stregis-mumbai-1/1080/720", "caption": "Panoramic city view from the hotel" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/stregis-mumbai-1.webp", "caption": "Panoramic city view from the hotel" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 395, "size": "484 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "city view", "mumbai"]
   },
   {
+    "id": "itc-maurya-a-luxury-collection-hotel-new-delhi",
+    "brandSlug": "the-luxury-collection",
     "name": "ITC Maurya, a Luxury Collection Hotel, New Delhi",
     "brand": "Marriott",
     "city": "New Delhi",
@@ -321,13 +353,15 @@
     "basePrice": 18000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/itc-maurya-1/1080/720", "caption": "The grand facade of ITC Maurya" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-maurya-1.webp", "caption": "The grand facade of ITC Maurya" }
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 437, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "diplomatic enclave", "new delhi"]
   },
   {
+    "id": "the-ritz-carlton-pune",
+    "brandSlug": "the-ritz-carlton",
     "name": "The Ritz-Carlton, Pune",
     "brand": "Marriott",
     "city": "Pune",
@@ -337,13 +371,15 @@
     "basePrice": 17000,
     "rating": 4.8,
     "images": [
-      { "src": "https://picsum.photos/seed/ritz-pune-1/1080/720", "caption": "The Ritz-Carlton, Pune exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-pune-1.webp", "caption": "The Ritz-Carlton, Pune exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Golf View Room", "count": 198, "size": "538 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "golf view", "pune"]
   },
   {
+    "id": "w-goa",
+    "brandSlug": "w-hotels",
     "name": "W Goa",
     "brand": "Marriott",
     "city": "Vagator",
@@ -353,13 +389,15 @@
     "basePrice": 25000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/w-goa-1/1080/720", "caption": "Stylish pool area at W Goa" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/w-goa-1.webp", "caption": "Stylish pool area at W Goa" }
     ],
     "roomCategories": [{ "name": "Wonderful Room", "count": 121, "size": "650 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "beachfront", "party", "goa", "pet friendly"]
   },
   {
+    "id": "sheraton-grand-bangalore-hotel-at-brigade-gateway",
+    "brandSlug": "sheraton",
     "name": "Sheraton Grand Bangalore Hotel at Brigade Gateway",
     "brand": "Marriott",
     "city": "Bengaluru",
@@ -369,13 +407,15 @@
     "basePrice": 14000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/sheraton-bangalore-1/1080/720", "caption": "Sheraton Grand Bangalore exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sheraton-bangalore-1.webp", "caption": "Sheraton Grand Bangalore exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 230, "size": "387 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "luxury", "bengaluru"]
   },
   {
+    "id": "the-westin-chennai-velachery",
+    "brandSlug": "the-westin",
     "name": "The Westin Chennai Velachery",
     "brand": "Marriott",
     "city": "Chennai",
@@ -385,13 +425,15 @@
     "basePrice": 10000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-chennai-1/1080/720", "caption": "The Westin Chennai exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-chennai-1.webp", "caption": "The Westin Chennai exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 215, "size": "431 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "business", "chennai"]
   },
   {
+    "id": "le-meridien-hyderabad",
+    "brandSlug": "le-meridien",
     "name": "Le Méridien Hyderabad",
     "brand": "Marriott",
     "city": "Hyderabad",
@@ -401,13 +443,15 @@
     "basePrice": 9000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/lemeridien-hyd-1/1080/720", "caption": "Le Méridien Hyderabad facade" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lemeridien-hyd-1.webp", "caption": "Le Méridien Hyderabad facade" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 241, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "design", "hyderabad"]
   },
   {
+    "id": "fairfield-by-marriott-visakhapatnam",
+    "brandSlug": "fairfield-by-marriott",
     "name": "Fairfield by Marriott Visakhapatnam",
     "brand": "Marriott",
     "city": "Visakhapatnam",
@@ -417,13 +461,15 @@
     "basePrice": 5500,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/fairfield-vizag-1/1080/720", "caption": "Fairfield by Marriott Visakhapatnam exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-vizag-1.webp", "caption": "Fairfield by Marriott Visakhapatnam exterior" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 121, "size": "258 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "city hotel", "visakhapatnam"]
   },
   {
+    "id": "jw-marriott-hotel-kolkata",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Hotel Kolkata",
     "brand": "JW Marriott",
     "city": "Kolkata",
@@ -433,13 +479,15 @@
     "basePrice": 14000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-kolkata-1/1080/720", "caption": "JW Marriott Hotel Kolkata exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-kolkata-1.webp", "caption": "JW Marriott Hotel Kolkata exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 281, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "kolkata"]
   },
   {
+    "id": "the-westin-hyderabad-mindspace",
+    "brandSlug": "the-westin",
     "name": "The Westin Hyderabad Mindspace",
     "brand": "Marriott",
     "city": "Hyderabad",
@@ -449,13 +497,15 @@
     "basePrice": 12000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-hyd-1/1080/720", "caption": "The Westin Hyderabad Mindspace pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-hyd-1.webp", "caption": "The Westin Hyderabad Mindspace pool area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 427, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "business", "hyderabad"]
   },
   {
+    "id": "itc-gardenia-a-luxury-collection-hotel-bengaluru",
+    "brandSlug": "the-luxury-collection",
     "name": "ITC Gardenia, a Luxury Collection Hotel, Bengaluru",
     "brand": "Marriott",
     "city": "Bengaluru",
@@ -465,13 +515,15 @@
     "basePrice": 16000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/itc-gardenia-1/1080/720", "caption": "Lobby with vertical gardens" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-gardenia-1.webp", "caption": "Lobby with vertical gardens" }
     ],
     "roomCategories": [{ "name": "Tower Room", "count": 292, "size": "530 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "eco-friendly", "bengaluru"]
   },
   {
+    "id": "jw-marriott-hotel-bengaluru",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Hotel Bengaluru",
     "brand": "JW Marriott",
     "city": "Bengaluru",
@@ -481,13 +533,15 @@
     "basePrice": 19000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-bengaluru-1/1080/720", "caption": "JW Marriott Hotel Bengaluru exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-bengaluru-1.webp", "caption": "JW Marriott Hotel Bengaluru exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 270, "size": "485 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "park view", "bengaluru"]
   },
   {
+    "id": "aloft-new-delhi-aerocity",
+    "brandSlug": "aloft-hotels",
     "name": "Aloft New Delhi Aerocity",
     "brand": "Marriott",
     "city": "New Delhi",
@@ -497,13 +551,15 @@
     "basePrice": 9000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/aloft-delhi-1/1080/720", "caption": "Aloft New Delhi Aerocity lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/aloft-delhi-1.webp", "caption": "Aloft New Delhi Aerocity lobby" }
     ],
     "roomCategories": [{ "name": "Aloft Room", "count": 253, "size": "333 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["modern", "airport hotel", "new delhi", "pet friendly"]
   },
   {
+    "id": "courtyard-by-marriott-siliguri",
+    "brandSlug": "courtyard-by-marriott",
     "name": "Courtyard by Marriott Siliguri",
     "brand": "Marriott",
     "city": "Siliguri",
@@ -513,13 +569,15 @@
     "basePrice": 7500,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/courtyard-siliguri-1/1080/720", "caption": "Rooftop pool at Courtyard Siliguri" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-siliguri-1.webp", "caption": "Rooftop pool at Courtyard Siliguri" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 130, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "city view", "siliguri"]
   },
   {
+    "id": "sheraton-grand-chennai-resort-spa",
+    "brandSlug": "sheraton",
     "name": "Sheraton Grand Chennai Resort & Spa",
     "brand": "Marriott",
     "city": "Chennai",
@@ -529,13 +587,15 @@
     "basePrice": 15000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/sheraton-chennai-1/1080/720", "caption": "Beachfront view of the resort" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sheraton-chennai-1.webp", "caption": "Beachfront view of the resort" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 125, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beachfront", "resort", "chennai"]
   },
   {
+    "id": "four-points-by-sheraton-mahabalipuram-resort-convention-center",
+    "brandSlug": "four-points-by-sheraton",
     "name": "Four Points by Sheraton Mahabalipuram Resort & Convention Center",
     "brand": "Marriott",
     "city": "Chennai",
@@ -545,13 +605,15 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/fourpoints-mah-1/1080/720", "caption": "Resort pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-mah-1.webp", "caption": "Resort pool area" }
     ],
     "roomCategories": [{ "name": "Chalet", "count": 90, "size": "500 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "family friendly", "mahabalipuram"]
   },
   {
+    "id": "jw-marriott-hotel-chandigarh",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Hotel Chandigarh",
     "brand": "JW Marriott",
     "city": "Chandigarh",
@@ -561,13 +623,15 @@
     "basePrice": 13000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-chandigarh-1/1080/720", "caption": "JW Marriott Chandigarh exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-chandigarh-1.webp", "caption": "JW Marriott Chandigarh exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "chandigarh"]
   },
   {
+    "id": "courtyard-by-marriott-amritsar",
+    "brandSlug": "courtyard-by-marriott",
     "name": "Courtyard by Marriott Amritsar",
     "brand": "Marriott",
     "city": "Amritsar",
@@ -577,13 +641,15 @@
     "basePrice": 7000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/courtyard-amritsar-1/1080/720", "caption": "Courtyard by Marriott Amritsar facade" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-amritsar-1.webp", "caption": "Courtyard by Marriott Amritsar facade" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "301 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["modern", "business", "amritsar"]
   },
   {
+    "id": "renaissance-ahmedabad-hotel",
+    "brandSlug": "renaissance-hotels",
     "name": "Renaissance Ahmedabad Hotel",
     "brand": "Marriott",
     "city": "Ahmedabad",
@@ -593,13 +659,15 @@
     "basePrice": 9500,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/renaissance-ahmedabad-1/1080/720", "caption": "Rooftop pool at Renaissance Ahmedabad" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-ahmedabad-1.webp", "caption": "Rooftop pool at Renaissance Ahmedabad" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 155, "size": "387 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["design", "business", "ahmedabad"]
   },
   {
+    "id": "the-westin-sohna-resort-spa",
+    "brandSlug": "the-westin",
     "name": "The Westin Sohna Resort & Spa",
     "brand": "Marriott",
     "city": "Gurugram",
@@ -609,13 +677,15 @@
     "basePrice": 15000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-sohna-1/1080/720", "caption": "Villas at The Westin Sohna Resort" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-sohna-1.webp", "caption": "Villas at The Westin Sohna Resort" }
     ],
     "roomCategories": [{ "name": "Premier Villa", "count": 97, "size": "645 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "wellness", "gurugram", "pet friendly"]
   },
   {
+    "id": "the-westin-pushkar-resort-spa",
+    "brandSlug": "the-westin",
     "name": "The Westin Pushkar Resort & Spa",
     "brand": "Marriott",
     "city": "Pushkar",
@@ -625,13 +695,15 @@
     "basePrice": 13000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-pushkar-1/1080/720", "caption": "The Westin Pushkar Resort aerial view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pushkar-1.webp", "caption": "The Westin Pushkar Resort aerial view" }
     ],
     "roomCategories": [{ "name": "Luxury Villa", "count": 98, "size": "785 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "luxury", "pushkar"]
   },
   {
+    "id": "jw-marriott-jaipur-resort-spa",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Jaipur Resort & Spa",
     "brand": "JW Marriott",
     "city": "Jaipur",
@@ -641,13 +713,15 @@
     "basePrice": 19000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-jaipur-1/1080/720", "caption": "Architectural detail of JW Marriott Jaipur" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-jaipur-1.webp", "caption": "Architectural detail of JW Marriott Jaipur" }
     ],
     "roomCategories": [{ "name": "Royal Room", "count": 200, "size": "550 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "resort", "jaipur"]
   },
   {
+    "id": "le-meridien-mahabaleshwar-resort-spa",
+    "brandSlug": "le-meridien",
     "name": "Le Méridien Mahabaleshwar Resort & Spa",
     "brand": "Marriott",
     "city": "Mahabaleshwar",
@@ -657,13 +731,15 @@
     "basePrice": 16000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/lemeridien-maha-1/1080/720", "caption": "Le Méridien Mahabaleshwar Resort exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lemeridien-maha-1.webp", "caption": "Le Méridien Mahabaleshwar Resort exterior" }
     ],
     "roomCategories": [{ "name": "Classic Forest King Room", "count": 122, "size": "441 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "forest", "mahabaleshwar"]
   },
   {
+    "id": "fairfield-by-marriott-goa-anjuna",
+    "brandSlug": "fairfield-by-marriott",
     "name": "Fairfield by Marriott Goa Anjuna",
     "brand": "Marriott",
     "city": "Anjuna",
@@ -673,13 +749,15 @@
     "basePrice": 6500,
     "rating": 4.3,
     "images": [
-      { "src": "https://picsum.photos/seed/fairfield-anjuna-1/1080/720", "caption": "Pool area at Fairfield Anjuna" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-anjuna-1.webp", "caption": "Pool area at Fairfield Anjuna" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 130, "size": "280 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["modern", "goa", "anjuna"]
   },
   {
+    "id": "the-westin-mumbai-garden-city",
+    "brandSlug": "the-westin",
     "name": "The Westin Mumbai Garden City",
     "brand": "Marriott",
     "city": "Mumbai",
@@ -689,13 +767,15 @@
     "basePrice": 13000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-mumbai-1/1080/720", "caption": "The Westin Mumbai Garden City exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-mumbai-1.webp", "caption": "The Westin Mumbai Garden City exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 268, "size": "409 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "city view", "mumbai"]
   },
   {
+    "id": "jw-marriott-mumbai-sahar",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Mumbai Sahar",
     "brand": "JW Marriott",
     "city": "Mumbai",
@@ -705,13 +785,15 @@
     "basePrice": 17000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-sahar-1/1080/720", "caption": "JW Marriott Mumbai Sahar lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-sahar-1.webp", "caption": "JW Marriott Mumbai Sahar lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 588, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "airport hotel", "mumbai"]
   },
   {
+    "id": "itc-grand-chola-a-luxury-collection-hotel-chennai",
+    "brandSlug": "the-luxury-collection",
     "name": "ITC Grand Chola, a Luxury Collection Hotel, Chennai",
     "brand": "Marriott",
     "city": "Chennai",
@@ -721,13 +803,15 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/itc-chola-1/1080/720", "caption": "Grand facade of ITC Grand Chola" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-chola-1.webp", "caption": "Grand facade of ITC Grand Chola" }
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 600, "size": "615 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "architecture", "chennai"]
   },
   {
+    "id": "the-westin-gurgaon-new-delhi",
+    "brandSlug": "the-westin",
     "name": "The Westin Gurgaon, New Delhi",
     "brand": "Marriott",
     "city": "Gurugram",
@@ -737,13 +821,15 @@
     "basePrice": 12000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-gurgaon-1/1080/720", "caption": "The Westin Gurgaon exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-gurgaon-1.webp", "caption": "The Westin Gurgaon exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 313, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "business", "gurugram"]
   },
   {
+    "id": "the-st-regis-goa-resort",
+    "brandSlug": "st-regis",
     "name": "The St. Regis Goa Resort",
     "brand": "Marriott",
     "city": "Cavelossim",
@@ -753,13 +839,15 @@
     "basePrice": 28000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/stregis-goa-1/1080/720", "caption": "The St. Regis Goa Resort lagoon view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/stregis-goa-1.webp", "caption": "The St. Regis Goa Resort lagoon view" }
     ],
     "roomCategories": [{ "name": "Lagoon View Room", "count": 206, "size": "600 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["beachfront", "luxury", "resort", "goa"]
   },
   {
+    "id": "the-westin-goa",
+    "brandSlug": "the-westin",
     "name": "The Westin Goa",
     "brand": "Marriott",
     "city": "Anjuna",
@@ -769,13 +857,15 @@
     "basePrice": 14000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/westin-goa-1/1080/720", "caption": "The Westin Goa pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-goa-1.webp", "caption": "The Westin Goa pool area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 171, "size": "420 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["wellness", "modern", "goa"]
   },
   {
+    "id": "jw-marriott-hotel-pune",
+    "brandSlug": "jw-marriott",
     "name": "JW Marriott Hotel Pune",
     "brand": "JW Marriott",
     "city": "Pune",
@@ -785,13 +875,15 @@
     "basePrice": 14000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/jw-pune-1/1080/720", "caption": "JW Marriott Hotel Pune exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-pune-1.webp", "caption": "JW Marriott Hotel Pune exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 414, "size": "441 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "business", "pune"]
   },
   {
+    "id": "courtyard-by-marriott-kochi-airport",
+    "brandSlug": "courtyard-by-marriott",
     "name": "Courtyard by Marriott Kochi Airport",
     "brand": "Marriott",
     "city": "Kochi",
@@ -801,13 +893,15 @@
     "basePrice": 8000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/courtyard-kochi-1/1080/720", "caption": "Courtyard by Marriott Kochi Airport exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-kochi-1.webp", "caption": "Courtyard by Marriott Kochi Airport exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 107, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["airport hotel", "business", "kochi"]
   },
   {
+    "id": "kochi-marriott-hotel",
+    "brandSlug": "marriott",
     "name": "Kochi Marriott Hotel",
     "brand": "Marriott",
     "city": "Kochi",
@@ -817,13 +911,15 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-kochi-1/1080/720", "caption": "Kochi Marriott Hotel exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-kochi-1.webp", "caption": "Kochi Marriott Hotel exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 274, "size": "366 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["shopping", "business", "kochi"]
   },
   {
+    "id": "itc-kohenur-a-luxury-collection-hotel-hyderabad",
+    "brandSlug": "the-luxury-collection",
     "name": "ITC Kohenur, a Luxury Collection Hotel, Hyderabad",
     "brand": "Marriott",
     "city": "Hyderabad",
@@ -833,13 +929,15 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/itc-kohenur-1/1080/720", "caption": "ITC Kohenur exterior view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-kohenur-1.webp", "caption": "ITC Kohenur exterior view" }
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 271, "size": "474 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["luxury", "lake view", "hyderabad"]
   },
   {
+    "id": "fairfield-by-marriott-coimbatore",
+    "brandSlug": "fairfield-by-marriott",
     "name": "Fairfield by Marriott Coimbatore",
     "brand": "Marriott",
     "city": "Coimbatore",
@@ -849,13 +947,15 @@
     "basePrice": 5000,
     "rating": 4.4,
     "images": [
-      { "src": "https://picsum.photos/seed/fairfield-coimbatore-1/1080/720", "caption": "Fairfield by Marriott Coimbatore exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-coimbatore-1.webp", "caption": "Fairfield by Marriott Coimbatore exterior" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 128, "size": "215 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["business", "airport hotel", "coimbatore"]
   },
   {
+    "id": "fairfield-by-marriott-jodhpur",
+    "brandSlug": "fairfield-by-marriott",
     "name": "Fairfield by Marriott Jodhpur",
     "brand": "Marriott",
     "city": "Jodhpur",
@@ -865,13 +965,15 @@
     "basePrice": 5000,
     "rating": 4.5,
     "images": [
-      { "src": "https://picsum.photos/seed/fairfield-jodhpur-1/1080/720", "caption": "Fairfield by Marriott Jodhpur exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-jodhpur-1.webp", "caption": "Fairfield by Marriott Jodhpur exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 136, "size": "269 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["modern", "business", "jodhpur"]
   },
   {
+    "id": "jaisalmer-marriott-resort-spa",
+    "brandSlug": "marriott",
     "name": "Jaisalmer Marriott Resort & Spa",
     "brand": "Marriott",
     "city": "Jaisalmer",
@@ -881,13 +983,15 @@
     "basePrice": 12000,
     "rating": 4.6,
     "images": [
-      { "src": "https://picsum.photos/seed/marriott-jaisalmer-1/1080/720", "caption": "Jaisalmer Marriott Resort & Spa exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaisalmer-1.webp", "caption": "Jaisalmer Marriott Resort & Spa exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 135, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["resort", "fort view", "jaisalmer"]
   },
   {
+    "id": "four-points-by-sheraton-agra",
+    "brandSlug": "four-points-by-sheraton",
     "name": "Four Points by Sheraton, Agra",
     "brand": "Marriott",
     "city": "Agra",
@@ -897,7 +1001,7 @@
     "basePrice": 6000,
     "rating": 4.3,
     "images": [
-      { "src": "https://picsum.photos/seed/fourpoints-agra-1/1080/720", "caption": "Rooftop pool with Taj Mahal view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-agra-1.webp", "caption": "Rooftop pool with Taj Mahal view" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 165, "size": "301 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
