@@ -35,61 +35,61 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Auli, Uttarakhand",
         reason: "January transforms Auli into a premier skiing destination. The snow-covered meadows, panoramic views of the Himalayas, and the crisp mountain air make it perfect for winter sports enthusiasts and nature lovers.",
         hotels: (hotels as Hotel[]).filter(h => ["The Royal Village", "Himalayan High, Auli", "The Tattva Resort", "Cliff Top Club", "Blue Poppy Resorts"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/auli-january/1200/400", caption: "snowy mountains auli" }
+        image: { src: "https://images.unsplash.com/photo-1708622359632-56294a8d327e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c25vd3klMjBtb3VudGFpbnMlMjBhdWxpfGVufDB8fHx8MTc2MzcxNjgzM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "snowy mountains auli" }
       },
       {
         name: "Jaipur, Rajasthan",
         reason: "The weather in January is pleasantly cool and ideal for sightseeing. You can explore majestic forts, vibrant markets, and attend the Jaipur Literature Festival, which often takes place this month.",
         hotels: (hotels as Hotel[]).filter(h => h.cityId === 'jaipur'),
-        image: { src: "https://picsum.photos/seed/jaipur-january/1200/400", caption: "amber fort jaipur" }
+        image: { src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbWJlciUyMGZvcnQlMjBqYWlwdXJ8ZW58MHx8fHwxNzYzNzE2ODMzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "amber fort jaipur" }
       },
       {
         name: "Goa",
         reason: "After the peak season rush of December, January in Goa is more relaxed but still vibrant. The weather is perfect for beach hopping, water sports, and enjoying the lively shacks and nightlife.",
         hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
-        image: { src: "https://picsum.photos/seed/goa-january/1200/400", caption: "goa beach" }
+        image: { src: "https://images.unsplash.com/photo-1532517891316-72a08e5c03a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb2ElMjBiZWFjaHxlbnwwfHx8fDE3NjM3MTY4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa beach" }
       },
       {
         name: "Munnar, Kerala",
         reason: "The cool and comfortable climate of January is perfect for exploring Munnar's sprawling tea plantations. The post-monsoon greenery is at its peak, offering breathtaking landscapes.",
         hotels: (hotels as Hotel[]).filter(h => ["The Fog Munnar", "Chandys Windy Woods", "KTDC Tea County", "Parakkat Nature Resort", "Amber Dale Luxury Hotel"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/munnar-january/1200/400", caption: "tea plantation munnar" }
+        image: { src: "https://images.unsplash.com/photo-1673118857471-34bedcb90ee7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVhJTIwcGxhbnRhdGlvbiUyMG11bm5hcnxlbnwwfHx8fDE3NjM3MTY4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "tea plantation munnar" }
       },
       {
         name: "Andaman and Nicobar Islands",
         reason: "With clear skies and calm seas, January is the best time for water activities like scuba diving and snorkeling. The pristine beaches and turquoise waters create a picture-perfect tropical paradise.",
         hotels: (hotels as Hotel[]).filter(h => ["Taj Exotica Resort & Spa, Andamans", "Barefoot at Havelock", "SeaShell, Havelock", "Munjoh Ocean Resort", "Silver Sand Beach Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/andaman-january/1200/400", caption: "andaman beach" }
+        image: { src: "https://images.unsplash.com/photo-1710790980336-8dea6a8d432d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhbmRhbWFuJTIwYmVhY2h8ZW58MHx8fHwxNzYzNzE2ODMzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "andaman beach" }
       },
       {
         name: "Delhi",
         reason: "The pleasant winter of January is ideal for exploring the historical monuments of Delhi. The month culminates with the grand Republic Day Parade on January 26th, a spectacular event to witness.",
         hotels: (hotels as Hotel[]).filter(h => h.city === 'New Delhi').slice(0, 10),
-        image: { src: "https://picsum.photos/seed/delhi-january/1200/400", caption: "india gate delhi" }
+        image: { src: "https://images.unsplash.com/photo-1688781298681-ae1f2d470b31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGdhdGUlMjBkZWxoaXxlbnwwfHx8fDE3NjM3MDU3MTd8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "india gate delhi" }
       },
       {
         name: "Rann of Kutch, Gujarat",
         reason: "January is when the Rann Utsav is in full swing. Experience the vast white salt desert under the full moon, enjoy cultural performances, and witness the region's vibrant heritage.",
         hotels: (hotels as Hotel[]).filter(h => h.cityId === 'kutch' || h.cityId === 'bhuj'),
-        image: { src: "https://picsum.photos/seed/kutch-january/1200/400", caption: "rann of kutch" }
+        image: { src: "https://images.unsplash.com/photo-1670406312373-6d4d1776e4aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYW5uJTIwb2YlMjBrdXRjaHxlbnwwfHx8fDE3NjM3MTY4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "rann of kutch" }
       },
       {
         name: "Pondicherry",
         reason: "The weather is cool and perfect for exploring the charming French Quarter on foot or by bicycle. The spiritual vibes of Auroville and the serene beaches make it a unique winter getaway.",
         hotels: (hotels as Hotel[]).filter(h => ["Palais de Mahe - CGH Earth", "La Villa", "The Promenade", "Le Dupleix", "Villa Shanti"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/pondy-january/1200/400", caption: "pondicherry french colony" }
+        image: { src: "https://images.unsplash.com/photo-1647624366438-5b57986d7c45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb25kaWNoZXJyeSUyMGZyZW5jaCUyMGNvbG9ueXxlbnwwfHx8fDE3NjM3MTY4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "pondicherry french colony" }
       },
       {
         name: "Udaipur, Rajasthan",
         reason: "Known as the 'City of Lakes', Udaipur's beauty is enhanced by the pleasant January weather. Enjoy boat rides on Lake Pichola and explore the majestic City Palace without the scorching heat.",
         hotels: (hotels as Hotel[]).filter(h => h.city === 'Udaipur').slice(0, 10),
-        image: { src: "https://picsum.photos/seed/udaipur-january/1200/400", caption: "udaipur lake palace" }
+        image: { src: "https://images.unsplash.com/photo-1718812771168-3b3dc283cc78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1ZGFpcHVyJTIwbGFrZSUyMHBhbGFjZXxlbnwwfHx8fDE3NjM3MTY4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "udaipur lake palace" }
       },
       {
         name: "Khajuraho, Madhya Pradesh",
         reason: "The pleasant daytime temperatures in January are perfect for exploring the intricate and world-famous temple sculptures. The annual Khajuraho Dance Festival often begins towards the end of the month.",
         hotels: (hotels as Hotel[]).filter(h => h.cityId === 'khajuraho'),
-        image: { src: "https://picsum.photos/seed/khajuraho-january/1200/400", caption: "khajuraho temple" }
+        image: { src: "https://images.unsplash.com/photo-1672215051407-6e05138da3a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxraGFqdXJhaG8lMjB0ZW1wbGV8ZW58MHx8fHwxNzYzNzE2ODMzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "khajuraho temple" }
       }
     ]
   },
