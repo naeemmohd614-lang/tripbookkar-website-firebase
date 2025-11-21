@@ -181,7 +181,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Hampi, Karnataka",
         reason: "Explore the ancient ruins and stunning landscapes of this UNESCO World Heritage site in pleasant weather, before the scorching summer begins.",
         hotels: (hotels as Hotel[]).filter(h => ["Evolve Back, Hampi", "Hyatt Place Hampi", "Hampi's Boulders Resort", "Heritage Resort Hampi", "Kishkinda Heritage Resort"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1599307746149-8a2927283621?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYW1waSUyMHJ1aW5zfGVufDB8fHx8MTc2Mzc5NjM5Mnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "hampi ruins" }
+        image: { src: "https://images.unsplash.com/photo-1599307746149-8a2927283621?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxoYW1waSUyMHJ1aW5zfGVufDB8fHx8MTc2Mzc5NjM5Mnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "hampi ruins" }
       },
       {
         name: "Shillong, Meghalaya",
@@ -530,7 +530,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         hotels: (hotels as Hotel[]).filter(h => h.city === 'New Delhi').slice(0, 10),
         image: { src: "https://picsum.photos/seed/delhi-aug/1200/400", caption: "red fort delhi" }
       },
-      {
+       {
         name: "Athirapally, Kerala",
         reason: "The Athirapally Falls, often called the 'Niagara of India', is at its majestic best during the monsoons of August. The sheer volume and power of the water is a sight to behold.",
         hotels: (hotels as Hotel[]).filter(h => ["Rainforest Resort", "Niraamaya Retreats Samroha", "Casa Rio Resorts", "Willow Heights", "Magic Land Resort"].includes(h.name)),
@@ -766,70 +766,68 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   december: {
     name: 'December',
     slug: 'december',
-    pageImage: { src: 'https://images.unsplash.com/photo-1574862806297-3c32652a65a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWFjaCUyMHBhcnR5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE3NjM3OTY0MDV8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'beach party new year' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1746982599109-783229bddac8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiZWFjaCUyMHBhcnR5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'beach party new year' },
     destinations: [
       {
         name: "Goa",
         reason: "December is the peak party season. From Christmas celebrations to New Year's Eve bashes, the atmosphere is electric. Enjoy the beaches, nightlife, and music festivals.",
         hotels: (hotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
-        image: { src: "https://picsum.photos/seed/goa-dec/1200/400", caption: "goa new year party" }
+        image: { src: "https://images.unsplash.com/photo-1747144368673-78dd0354765a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnb2ElMjBuZXclMjB5ZWFyJTIwcGFydHl8ZW58MHx8fHwxNzYzNzIyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa new year party" }
       },
       {
         name: "Rann of Kutch, Gujarat",
         reason: "The Rann Utsav is in full swing under the cool winter sky. Experience the magical white desert under the full moon, enjoy cultural programs, and shop for local handicrafts.",
         hotels: (hotels as Hotel[]).filter(h => h.cityId === 'kutch' || h.cityId === 'bhuj'),
-        image: { src: "https://picsum.photos/seed/kutch-dec/1200/400", caption: "rann utsav kutch" }
+        image: { src: "https://images.unsplash.com/photo-1709917524188-3f442929bacd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyYW5uJTIwdXRzYXYlMjBrdXRjaHxlbnwwfHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "rann utsav kutch" }
       },
       {
         name: "Manali, Himachal Pradesh",
         reason: "For those who love snow, December is the time to visit Manali. The town is covered in a blanket of snow, perfect for skiing, snowboarding, and enjoying a white Christmas.",
         hotels: (hotels as Hotel[]).filter(h => ["The Himalayan", "Manuallaya - The Resort Spa in the Himalayas", "Span Resort & Spa", "Baragarh Resort", "Solang Valley Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/manali-dec/1200/400", caption: "snowfall in manali" }
+        image: { src: "https://images.unsplash.com/photo-1748745167545-89684aa5df86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzbm93ZmFsbCUyMGluJTIwbWFuYWxpfGVufDB8fHx8MTc2MzcyMjU2Mnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "snowfall in manali" }
       },
       {
         name: "Alleppey (Alappuzha), Kerala",
         reason: "The weather is cool and pleasant, ideal for a relaxing houseboat cruise in the backwaters. Christmas celebrations in the region also have a unique local charm.",
         hotels: (hotels as Hotel[]).filter(h => ["Punnamada Resort", "Lake Palace Resort", "Marari Beach Resort - CGH Earth", "Xandari Pearl", "The World Backwaters"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/alleppey-dec/1200/400", caption: "kerala houseboat winter" }
+        image: { src: "https://images.unsplash.com/photo-1523130923377-84727cf0c825?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxrZXJhbGElMjBob3VzZWJvYXQlMjB3aW50ZXJ8ZW58MHx8fHwxNzYzNzIyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kerala houseboat winter" }
       },
       {
         name: "Jodhpur, Rajasthan",
         reason: "The pleasant winter sun is perfect for exploring the majestic Mehrangarh Fort and the blue city. The cool evenings are great for enjoying Rajasthani cuisine.",
         hotels: (hotels as Hotel[]).filter(h => ["Umaid Bhawan Palace, Jodhpur", "RAAS Jodhpur", "Taj Hari Mahal Jodhpur", "Ajit Bhawan", "The Ummed Jodhpur Palace"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/jodhpur-dec/1200/400", caption: "mehrangarh fort jodhpur" }
+        image: { src: "https://images.unsplash.com/photo-1677251486218-96798abb85a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZWhyYW5nYXJoJTIwZm9ydCUyMGpvZGhwdXJ8ZW58MHx8fHwxNzYzNjk2NTkzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "mehrangarh fort jodhpur" }
       },
       {
         name: "Auli, Uttarakhand",
         reason: "The skiing season begins in late December. It's a winter wonderland with fresh snowfall, perfect for adventure sports and enjoying the Himalayan chill.",
         hotels: (hotels as Hotel[]).filter(h => ["The Royal Village", "Himalayan High, Auli", "The Tattva Resort", "Cliff Top Club", "Blue Poppy Resorts"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/auli-dec/1200/400", caption: "auli skiing" }
+        image: { src: "https://images.unsplash.com/photo-1709882370846-7d9247dc08ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhdWxpJTIwc2tpaW5nfGVufDB8fHx8MTc2MzcyMjU2NXww&ixlib=rb-4.1.0&q=80&w=1080", caption: "auli skiing" }
       },
       {
         name: "Gokarna, Karnataka",
         reason: "A more laid-back alternative to Goa for a beach holiday. The weather is perfect for beach hopping, trekking between beaches, and enjoying a tranquil New Year's.",
         hotels: (hotels as Hotel[]).filter(h => ["SwaSwara - CGH Earth", "Kahani Paradise", "Kudle Beach View Resort", "Namaste Yoga Farm", "Zostel Gokarna"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/gokarna-dec/1200/400", caption: "gokarna om beach" }
+        image: { src: "https://images.unsplash.com/photo-1656849416642-37caee8843d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnb2thcm5hJTIwb20lMjBiZWFjaHxlbnwwfHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "gokarna om beach" }
       },
       {
         name: "Konark, Odisha",
         reason: "The Konark Dance Festival often takes place in early December. The weather is ideal for exploring the magnificent Sun Temple and nearby Chandrabhaga beach.",
         hotels: (hotels as Hotel[]).filter(h => ["Lotus Eco Resort", "Toshali Sands", "The Chariot Resort & Spa", "Mayfair Heritage", "Pramod Convention & Beach Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/konark-dec/1200/400", caption: "konark sun temple festival" }
+        image: { src: "https://images.unsplash.com/photo-1668587629217-7567ae4f7b4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxrb25hcmssJTIwc3VuJTIwdGVtcGxlJTIwZmVzdGl2YWx8ZW58MHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "konark sun temple festival" }
       },
       {
         name: "Pondicherry",
         reason: "The weather is cool and pleasant, ideal for exploring the French Quarter. The serene atmosphere of Auroville and the Christmas celebrations offer a unique experience.",
         hotels: (hotels as Hotel[]).filter(h => ["Palais de Mahe - CGH Earth", "La Villa", "The Promenade", "Le Dupleix", "Villa Shanti"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/pondy-dec/1200/400", caption: "pondicherry christmas" }
+        image: { src: "https://images.unsplash.com/photo-1724161179561-e9b991c83ec1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb25kaWNoZXJyeSUyMGNocmlzdG1hc3xlbnwwfHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "pondicherry christmas" }
       },
       {
         name: "Tawang, Arunachal Pradesh",
         reason: "Experience a magical winter in the mountains. The landscape is covered in snow, and the Torgya festival is sometimes celebrated at the Tawang Monastery in late December or January.",
         hotels: (hotels as Hotel[]).filter(h => ["Hotel Tawang Heights", "Vivanta Tawang", "Dondrub Homestay", "Hotel Gakyi Khang Zhang", "Hotel Sambala"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/tawang-dec/1200/400", caption: "tawang in snow" }
+        image: { src: "https://images.unsplash.com/photo-1671733437670-6af00d5afcea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YXdhbmclMjBpbiUyMHNub3d8ZW58MHx8fHwxNzYzNzIyNTYzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "tawang in snow" }
       }
     ]
   }
 };
-
-    
