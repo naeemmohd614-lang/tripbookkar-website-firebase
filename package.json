@@ -11,7 +11,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "create-admin": "node scripts/create-admin.js",
-    "process-images": "node scripts/process-images.js",
+    "images:remote": "node scripts/download-optimize-upload.js",
     "optimize:images": "node scripts/process-images.js"
   },
   "dependencies": {
