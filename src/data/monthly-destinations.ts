@@ -102,7 +102,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Jaisalmer, Rajasthan",
         reason: "Attend the vibrant Desert Festival, showcasing Rajasthani culture with folk dances, music, and camel races. The weather is perfect for desert safaris and exploring the golden fort.",
         hotels: (hotels as Hotel[]).filter(h => ["Suryagarh Jaisalmer", "Jaisalmer Marriott Resort & Spa", "Hotel Rang Mahal", "Fort Rajwada", "The Gulaal"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1626955834454-7f897363a027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWlzYWxtZXIlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTU5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "jaisalmer fort" }
+        image: { src: "https://images.unsplash.com/photo-1626955834454-7f897363a027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWlzYWxtZXIlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTU5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "jaisalmer festival" }
       },
       {
         name: "Nashik, Maharashtra",
@@ -114,7 +114,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Varanasi, Uttar Pradesh",
         reason: "Experience the spiritual fervor of Maha Shivaratri, which often falls in February. The city's ghats and temples come alive with prayers, rituals, and processions.",
         hotels: (hotels as Hotel[]).filter(h => ["BrijRama Palace", "Taj Ganges, Varanasi", "The Clarks, Varanasi", "Hotel Madin", "Ramada Plaza by Wyndham JHV Varanasi"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGdoYXRzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "varanasi ghats" }
+        image: { src: "https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGdoYXRzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "varanasi ghats festival" }
       },
       {
         name: "Kaziranga National Park, Assam",
@@ -169,49 +169,49 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Vrindavan & Mathura, Uttar Pradesh",
         reason: "Experience the unique and vibrant celebrations of Holi. From Lathmar Holi in Barsana to the flower-filled Phoolon ki Holi in Vrindavan, it's a spectacle of colors and traditions.",
         hotels: (hotels as Hotel[]).filter(h => ["Nidhivan Sarovar Portico, Vrindavan", "The Radha Ashok", "Hotel Brijwasi Royal", "Krishna Residency", "Anandam Clarks Inn Suites"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/vrindavan-mar/1200/400", caption: "holi festival vrindavan" }
+        image: { src: "https://images.unsplash.com/photo-1616421295988-185d1c24e6c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob2xpJTIwZmVzdGl2YWwlMjBjb2xvcnN8ZW58MHx8fHwxNzYzNzk2MzkxfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "holi festival colors" }
       },
       {
         name: "Rishikesh, Uttarakhand",
         reason: "The weather is perfect for yoga, meditation, and adventure sports like white-water rafting before the summer heat sets in. The International Yoga Festival is also held in March.",
         hotels: (hotels as Hotel[]).filter(h => ["The Westin Resort & Spa, Himalayas", "The Roseate Ganges", "Aloha on the Ganges", "Taj Rishikesh Resort & Spa, Uttarakhand", "EllBee Ganga View"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/rishikesh-mar/1200/400", caption: "rishikesh bridge" }
+        image: { src: "https://images.unsplash.com/photo-1596706917414-b2b513364654?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxSaXNoaWtlc2glMjBicmlkZ2V8ZW58MHx8fHwxNzYzNzk2MzkxfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "rishikesh bridge" }
       },
       {
         name: "Hampi, Karnataka",
         reason: "Explore the ancient ruins and stunning landscapes of this UNESCO World Heritage site in pleasant weather, before the scorching summer begins.",
         hotels: (hotels as Hotel[]).filter(h => ["Evolve Back, Hampi", "Hyatt Place Hampi", "Hampi's Boulders Resort", "Heritage Resort Hampi", "Kishkinda Heritage Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/hampi-mar/1200/400", caption: "hampi ruins" }
+        image: { src: "https://images.unsplash.com/photo-1599307746149-8a2927283621?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYW1waSUyMHJ1aW5zfGVufDB8fHx8MTc2Mzc5NjM5Mnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "hampi ruins" }
       },
       {
         name: "Shillong, Meghalaya",
         reason: "The spring season brings pleasant weather, making it ideal to explore the 'Scotland of the East'. The hills are lush green, and waterfalls like Elephant Falls are beautiful.",
         hotels: (hotels as Hotel[]).filter(h => ["Ri Kynjai", "Hotel Polo Towers Shillong", "The Eee Cee Hotel", "Cafe Shillong Bed & Breakfast", "Aerodene Cottage"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/shillong-mar/1200/400", caption: "shillong landscape" }
+        image: { src: "https://images.unsplash.com/photo-1596548233981-807a3939922c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaGlsbG9uZyUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjM3OTYzOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "shillong landscape" }
       },
       {
         name: "Wayanad, Kerala",
         reason: "Enjoy the cool and pleasant climate to explore Wayanad's natural beauty, including Chembra Peak, Edakkal Caves, and serene waterfalls, before the onset of the summer heat.",
         hotels: (hotels as Hotel[]).filter(h => ["Vythiri Resort", "Banasura Hill Resort", "The Windflower Resort & Spa", "Pepper Trail", "Vythiri Village Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/wayanad-mar/1200/400", caption: "wayanad hills" }
+        image: { src: "https://images.unsplash.com/photo-1623862419448-897457c156f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXlhbmFkJTIwaGlsbHN8ZW58MHx8fHwxNzYzNzk2MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "wayanad hills" }
       },
        {
         name: "Coorg, Karnataka",
         reason: "The weather is pleasant, perfect for coffee plantation tours and trekking. The air is fragrant with the scent of coffee blossoms.",
         hotels: (hotels as Hotel[]).filter(h => ["Evolve Back, Coorg", "The Tamara Coorg", "Taj Madikeri Resort & Spa", "Coorg Wilderness Resort", "Old Kent Estates"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/coorg-mar/1200/400", caption: "coorg coffee blossoms" }
+        image: { src: "https://images.unsplash.com/photo-1592751509314-72b363a15234?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb29yZyUyMGNvZmZlZSUyMGJsb3Nzb21zfGVufDB8fHx8MTc2Mzc5NjM5Mnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "coorg coffee blossoms" }
       },
       {
         name: "Amritsar, Punjab",
         reason: "The weather is comfortable for visiting the Golden Temple and Jallianwala Bagh. The harvest festival of Baisakhi preparations begin, adding a cultural flavor.",
         hotels: (hotels as Hotel[]).filter(h => ["Hyatt Regency Amritsar", "Taj Swarna Amritsar", "Ramada by Wyndham Amritsar", "Fairfield by Marriott Amritsar", "Holiday Inn Amritsar"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/amritsar-mar/1200/400", caption: "golden temple morning" }
+        image: { src: "https://images.unsplash.com/photo-1611333834498-25b3a4a90184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYm9sZGVuJTIwdGVtcGxlJTIwbW9ybmluZ3xlbnwwfHx8fDE3NjM3OTYzOTN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "golden temple morning" }
       },
       {
         name: "Tawang, Arunachal Pradesh",
         reason: "March offers clear skies and breathtaking views of the snow-capped Himalayas. It's a great time to visit the Tawang Monastery before the monsoon season.",
         hotels: (hotels as Hotel[]).filter(h => ["Hotel Tawang Heights", "Vivanta Tawang", "Dondrub Homestay", "Hotel Gakyi Khang Zhang", "Hotel Sambala"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/tawang-mar/1200/400", caption: "tawang monastery" }
+        image: { src: "https://images.unsplash.com/photo-1642839958741-f7a97753e8e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YXdhbmclMjBtb25hc3Rlcnl8ZW58MHx8fHwxNzYzNzk2MzkzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "tawang monastery" }
       },
       {
         name: "Velneshwar, Maharashtra",
@@ -230,7 +230,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   april: {
       name: 'April',
       slug: 'april',
-      pageImage: { src: 'https://images.unsplash.com/photo-1559663738-22b934024337?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBzcHJpbmd8ZW58MHx8fHwxNzYzNzk2MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'himalayan mountains spring' },
+      pageImage: { src: 'https://images.unsplash.com/photo-1559663738-22b934024337?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHzoaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBzcHJpbmd8ZW58MHx8fHwxNzYzNzk2MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'himalayan mountains spring' },
       destinations: [
         {
             name: "Srinagar, Kashmir",
@@ -431,7 +431,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   july: {
     name: 'July',
     slug: 'july',
-    pageImage: { src: 'https://images.unsplash.com/photo-1623789045790-2c77d611802a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb25zb29uJTIwa2VyYWxhJTIwYmFja3dhdGVyc3xlbnwwfHx8fDE3NjM3OTYzOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1623789045790-2c77d611802a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb25zb29uJTIwa2VyYWxhJ2NhY2t3YXRlcnN8ZW58MHx8fHwxNzYzNzk2Mzk2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
     destinations: [
       {
         name: "Munnar, Kerala",
@@ -690,7 +690,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       },
       {
         name: "Nainital, Uttarakhand",
-        reason: "The autumn season brings a crispness to the air and clear skies. Enjoy boating on Naini Lake and get panoramic Himalayan views from Snow View Point.",
+        reason: "The autumn season brings a crispness to the air and clear panoramic views of the Himalayas. Enjoy boating on Naini Lake and get panoramic Himalayan views from Snow View Point.",
         hotels: (hotels as Hotel[]).filter(h => ["The Naini Retreat, by Leisure Hotels", "Shervani Hilltop", "The Manu Maharani", "Vikram Vintage Inn", "The Pavilion"].includes(h.name)),
         image: { src: "https://picsum.photos/seed/nainital-oct/1200/400", caption: "nainital lake" }
       }
@@ -699,7 +699,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   november: {
     name: 'November',
     slug: 'november',
-    pageImage: { src: 'https://images.unsplash.com/photo-1542296016-836b76174a72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTYzOTl8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1542296016-836b76174a72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTY0MDV8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
     destinations: [
       {
         name: "Varanasi, Uttar Pradesh",
