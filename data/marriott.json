@@ -12,7 +12,7 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1709294974005-24e5695257ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxFeHRlcmlvciUyMHZpZXclMjBvZiUyMFRoZSUyMFJpdHotQ2FybHRvbiUyMEJhbmdhbG9yZXxlbnwwfHx8fDE3NjM2NTY4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
+      { "src": "https://images.unsplash.com/photo-1734455937991-01f528d6b633?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxFeHRlcmlvciUyMHZpZXclMjBvZiUyMFRoZSUyMFJpdHotQ2FybHRvbiUyMEJhbmdhbG9yZXxlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-bangalore-2.webp", "caption": "Lobby area" }
     ],
     "distance": {
@@ -53,7 +53,7 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1551870803-e068765a19e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8SG90ZWwlMjBleHRlcmlvciUyMGF0JTIwQWVyb2NpdHl8ZW58MHx8fHwxNzYzNjU2ODgzfDA&ixlib.rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior at Aerocity" },
+      { "src": "https://images.unsplash.com/photo-1656838611814-3b0bd9c3f6dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIb3RlbCUyMGV4dGVyaW9yJTIwYXQlMjBBZXJvY2l0eXxlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior at Aerocity" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-delhi-2.webp", "caption": "Swimming pool area" }
     ],
     "distance": {
@@ -82,7 +82,7 @@
     "basePrice": 12500,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1703085722123-0c6af3e9319b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxWaWV3JTIwb2YlMjB0aGUlMjByZXNvcnQlMjBmcm9tJTIwdGhlJTIwYmF5fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib.rb-4.1.0&q=80&w=1080", "caption": "View of the resort from the bay" },
+      { "src": "https://images.unsplash.com/photo-1741570455043-cb6bfe1cc076?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxWaWV3JTIwb2YlMjB0aGUlMjByZXNvcnQlMjBmcm9tJTIwdGhlJTIwYmF5fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View of the resort from the bay" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-2.webp", "caption": "Outdoor pool and garden" }
     ],
     "roomCategories": [{ "name": "Garden View Room", "count": 180, "size": "388 sqft" }],
@@ -107,7 +107,7 @@
     "basePrice": 18000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mumbai-1.webp", "caption": "Hotel overlooking Juhu beach" },
+      { "src": "https://images.unsplash.com/photo-1710144481132-b1702639d4e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIb3RlbCUyMG92ZXJsb29raW5nJTIwSnVodSUyMGJlYWNofGVufDB8fHx8MTc2Mzc3NDM0N3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel overlooking Juhu beach" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mumbai-2.webp", "caption": "Lotus pond at the hotel" }
     ],
     "distance": { "Chhatrapati Shivaji Maharaj International Airport": "9 km" },
@@ -133,7 +133,7 @@
     "basePrice": 9500,
     "rating": 4.5,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-1.webp", "caption": "Front facade of Jaipur Marriott" },
+      { "src": "https://images.unsplash.com/photo-1677868818231-b5e09bcfc5e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxGcm9udCUyMGZhY2FkZSUyMG9mJTIwSmFpcHVyJTIwTWFycmlvdHR8ZW58MHx8fHwxNzYzNzc0MzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Front facade of Jaipur Marriott" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-2.webp", "caption": "Grand lobby interior" }
     ],
     "distance": { "Jaipur International Airport": "2 km" },
@@ -159,7 +159,7 @@
     "basePrice": 11000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pune-1.webp", "caption": "Hotel exterior and landscape" },
+      { "src": "https://images.unsplash.com/photo-1697070919909-cf154ba3278c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxIb3RlbCUyMGV4dGVyaW9yJTIwYW5kJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2Mzc3NDM0N3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior and landscape" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pune-2.webp", "caption": "Rooftop lounge view" }
     ],
     "distance": { "Pune International Airport": "5 km" },
@@ -185,7 +185,7 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-lucknow-1.webp", "caption": "Rooftop infinity pool" },
+      { "src": "https://images.unsplash.com/photo-1588504633950-9dc518941e93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxSb29mdG9wJTIwaW5maW5pdHklMjBwb29sfGVufDB8fHx8MTc2MzY1Njg4M3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop infinity pool" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-lucknow-2.webp", "caption": "Hotel exterior at night" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 112, "size": "377 sqft" }],
@@ -204,7 +204,7 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-dehradun-1.webp", "caption": "Hotel exterior" },
+      { "src": "https://images.unsplash.com/photo-1607320879139-1bb689f6a68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-dehradun-2.webp", "caption": "Modern hotel lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
@@ -223,7 +223,7 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-1.webp", "caption": "Resort with valley view" },
+      { "src": "https://images.unsplash.com/photo-1664106076343-72afa7ee8a47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM3NjQwNDl8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-2.webp", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
@@ -242,7 +242,7 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-1.webp", "caption": "Resort nestled in the hills" },
+      { "src": "https://images.unsplash.com/photo-1758297802342-a830f02f2a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxSZXNvcnQlMjBuZXN0bGVkJTIwaW4lMjB0aGUlMjBoaWxsc3xlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-2.webp", "caption": "Infinity pool overlooking the valley" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],
@@ -478,7 +478,7 @@
     "basePrice": 14000,
     "rating": 4.7,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-kolkata-1.webp", "caption": "JW Marriott Hotel Kolkata exterior" }
+      { "src": "https://images.unsplash.com/photo-1702365202232-c29f1d96c098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxKVyUyME1hcnJpb3R0JTIwSG90ZWwlMjBLb2xrYXRhJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzc0MzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "JW Marriott Hotel Kolkata exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 281, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -586,7 +586,7 @@
     "basePrice": 15000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1625444725045-ee7c4bb4482a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxCZWFjaGZyb250JTIwdmlldyUyMG9mJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib.rb-4.1.0&q=80&w=1080", "caption": "Beachfront view of the resort" }
+      { "src": "https://images.unsplash.com/photo-1625444725045-ee7c4bb4482a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxCZWFjaGZyb250JTIwdmlldyUyMG9mJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Beachfront view of the resort" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 125, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -622,7 +622,7 @@
     "basePrice": 13000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-chandigarh-1.webp", "caption": "JW Marriott Chandigarh exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-chandigarh-1.webp", "caption": "JW Marriott Hotel Chandigarh exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -1007,5 +1007,3 @@
     "tags": ["modern", "taj mahal view", "agra"]
   }
 ]
-
-    
