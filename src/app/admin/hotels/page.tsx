@@ -76,7 +76,7 @@ function BulkImportMenu() {
                         onClick={() => handleImport(brand)}
                         disabled={isImporting === brand}
                     >
-                        {isImporting === brand ? 'Importing...' : `Import ${brand.replace('-', ' ')}`}
+                        {isImporting === brand ? 'Importing...' : `Import ${brand.replace(/[-_]/g, ' ')}`}
                     </DropdownMenuItem>
                 ))}
                  <DropdownMenuSeparator />

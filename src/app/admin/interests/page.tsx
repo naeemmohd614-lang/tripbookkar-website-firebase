@@ -53,7 +53,7 @@ export default function InterestsPage() {
                             {interests.map(interest => (
                                 <TableRow key={interest.id}>
                                     <TableCell>
-                                        <Image src={interest.image?.src || 'https://placehold.co/100x100'} alt={interest.name} width={64} height={64} className="rounded-md object-cover"/>
+                                        {interest.image?.src && <Image src={interest.image.src} alt={interest.name} width={64} height={64} className="rounded-md object-cover"/>}
                                     </TableCell>
                                     <TableCell className="font-semibold">{interest.name}</TableCell>
                                     <TableCell className="text-sm text-gray-600 max-w-xs truncate">{interest.description}</TableCell>
