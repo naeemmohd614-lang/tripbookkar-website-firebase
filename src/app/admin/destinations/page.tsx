@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { useToast } from '@/hooks/use-toast';
 import { bulkImportData } from '@/app/actions';
+import Link from 'next/link';
 
 function BulkImportMonthlyData() {
     const { toast } = useToast();
@@ -61,8 +62,10 @@ export default function DestinationsPage() {
                 <h1 className="text-2xl font-bold text-gray-800">Monthly Destinations</h1>
                 <div className="flex items-center gap-4">
                      <BulkImportMonthlyData />
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                        <Plus size={18} className="mr-2"/> Add New Month
+                    <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+                        <Link href="/admin/destinations/new">
+                            <Plus size={18} className="mr-2"/> Add New Month
+                        </Link>
                     </Button>
                 </div>
             </div>
@@ -73,8 +76,15 @@ export default function DestinationsPage() {
                  <Accordion type="single" collapsible className="w-full">
                     {monthlyDestinations.sort((a,b) => new Date(`1 ${a.name} 2000`).getMonth() - new Date(`1 ${b.name} 2000`).getMonth()).map(month => (
                         <AccordionItem value={month.id} key={month.id}>
-                            <AccordionTrigger className="text-lg font-semibold hover:no-underline capitalize">
-                                {month.name} ({month.destinations?.length || 0} destinations)
+                            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+                                <div className="flex justify-between items-center w-full pr-4">
+                                    <span className="capitalize">{month.name} ({month.destinations?.length || 0} destinations)</span>
+                                    <Button asChild variant="outline" size="sm" onClick={(e) => e.stopPropagation()}>
+                                        <Link href={`/admin/destinations/${month.id}`}>
+                                            <Pencil size={14} className="mr-2"/> Edit Month
+                                        </Link>
+                                    </Button>
+                                </div>
                             </AccordionTrigger>
                             <AccordionContent>
                                <div className="space-y-4">
@@ -84,14 +94,6 @@ export default function DestinationsPage() {
                                             <h4 className="font-semibold text-gray-800">{dest.name}</h4>
                                             <p className="text-sm text-gray-600 line-clamp-2">{dest.reason}</p>
                                          </div>
-                                         <div className="flex gap-4 shrink-0 ml-4">
-                                            <button className="text-blue-600 hover:text-blue-800">
-                                                <Pencil size={18} />
-                                            </button>
-                                            <button className="text-red-500 hover:text-red-700">
-                                                <Trash2 size={18} />
-                                            </button>
-                                        </div>
                                      </div>
                                 ))}
                                 </div>
@@ -104,5 +106,3 @@ export default function DestinationsPage() {
         </div>
     );
 }
-
-    
