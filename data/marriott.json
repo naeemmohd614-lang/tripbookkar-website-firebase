@@ -223,7 +223,7 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1664106076343-72afa7ee8a47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM3NjQwNDl8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
+      { "src": "https://cache.marriott.com/is/image/marriotts7prod/dedjw-exterior-0029:Pano-Hor?wid=1600&fit=constrain", "caption": "Resort with valley view" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-2.webp", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
@@ -622,7 +622,7 @@
     "basePrice": 13000,
     "rating": 4.6,
     "images": [
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-chandigarh-1.webp", "caption": "JW Marriott Hotel Chandigarh exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-chandigarh-1.webp", "caption": "JW Marriott Chandigarh exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
