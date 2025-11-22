@@ -19,9 +19,6 @@ import { getFirestore } from 'firebase-admin/firestore';
 import serviceAccount from '../../serviceAccountKey.json';
 import { revalidatePath } from 'next/cache';
 
-import marriottHotels from '@/data/marriott.json';
-
-
 if (!getApps().length) {
     initializeApp({
       credential: cert(serviceAccount)
@@ -134,12 +131,29 @@ export async function generateHotelDetailsAction(input: GenerateHotelDetailsInpu
 }
 
 
-export async function bulkImportHotels(): Promise<{ success: boolean, message: string }> {
+export async function bulkImportHotels(brand: string): Promise<{ success: boolean, message: string }> {
+  let hotelsToImport: Hotel[] = [];
+  
+  try {
+    // Dynamically import the correct JSON file based on the brand
+    const hotelData = await import(`@/data/${brand}.json`);
+    hotelsToImport = hotelData.default as Hotel[];
+  } catch (error) {
+    console.error(`Failed to load data for brand: ${brand}`, error);
+    return { success: false, message: `Could not find data file for brand: ${brand}.` };
+  }
+
+  if (!hotelsToImport || hotelsToImport.length === 0) {
+    return { success: false, message: `No hotels found in the data file for ${brand}.` };
+  }
+
   try {
     const batch = db.batch();
     let count = 0;
 
-    (marriottHotels as Hotel[]).forEach((hotel) => {
+    hotelsToImport.forEach((hotel) => {
+      // Ensure there's a name to slugify, otherwise skip.
+      if (!hotel.name) return;
       const hotelId = slugify(hotel.name);
       const hotelRef = db.collection('hotels').doc(hotelId);
 
@@ -159,9 +173,9 @@ export async function bulkImportHotels(): Promise<{ success: boolean, message: s
     await batch.commit();
     revalidatePath('/admin/hotels'); // Revalidate the page to show new data
     
-    return { success: true, message: `${count} Marriott hotels imported successfully.` };
+    return { success: true, message: `${count} ${brand} hotels imported successfully.` };
   } catch (error: any) {
-    console.error("Bulk import failed:", error);
-    return { success: false, message: `Bulk import failed: ${error.message}` };
+    console.error(`Bulk import for ${brand} failed:`, error);
+    return { success: false, message: `Bulk import for ${brand} failed: ${error.message}` };
   }
 }

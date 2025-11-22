@@ -19,18 +19,30 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import type { Hotel } from '@/lib/types';
 import { bulkImportHotels } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 
 
-function BulkImportButton() {
+function BulkImportMenu() {
     const { toast } = useToast();
-    const [isImporting, setIsImporting] = React.useState(false);
+    const [isImporting, setIsImporting] = React.useState<string | null>(null);
 
-    const handleImport = async () => {
-        setIsImporting(true);
-        const result = await bulkImportHotels();
+    const hotelBrands = [
+        'marriott', 'taj', 'oberoi', 'the-leela', 'hyatt', 'the-lalit', 'hilton', 'ihg', 'accor', 'radisson', 'other-hotels'
+    ];
+
+    const handleImport = async (brand: string) => {
+        setIsImporting(brand);
+        const result = await bulkImportHotels(brand);
         if (result.success) {
             toast({
                 title: 'Import Successful',
@@ -43,14 +55,31 @@ function BulkImportButton() {
                 description: result.message,
             });
         }
-        setIsImporting(false);
+        setIsImporting(null);
     };
 
     return (
-        <Button onClick={handleImport} disabled={isImporting}>
-            <Upload className="mr-2 h-4 w-4" />
-            {isImporting ? 'Importing...' : 'Bulk Import Hotels'}
-        </Button>
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <Button variant="outline">
+                    <Upload className="mr-2 h-4 w-4" />
+                    Bulk Import
+                </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+                <DropdownMenuLabel>Import Hotels by Brand</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                {hotelBrands.map(brand => (
+                    <DropdownMenuItem 
+                        key={brand} 
+                        onClick={() => handleImport(brand)}
+                        disabled={isImporting === brand}
+                    >
+                        {isImporting === brand ? 'Importing...' : `Import ${brand.replace('-', ' ')}`}
+                    </DropdownMenuItem>
+                ))}
+            </DropdownMenuContent>
+        </DropdownMenu>
     );
 }
 
@@ -95,7 +124,7 @@ export default function HotelsPage(){
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Hotel Management</h1>
         <div className="flex gap-4">
-            <BulkImportButton />
+            <BulkImportMenu />
             <Button asChild>
               <Link href="/admin/hotels/new">+ Add New Hotel</Link>
             </Button>
