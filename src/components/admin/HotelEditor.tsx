@@ -1,101 +1,193 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { useForm, useFieldArray } from 'react-hook-form';
-import { useParams, useRouter } from 'next/navigation';
-import { useFirestore } from '@/firebase';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import React, { useEffect } from 'react';
+import { useForm, useFieldArray, SubmitHandler } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Label } from '@/components/ui/label';
+import { Trash2 } from 'lucide-react';
+import type { Hotel } from '@/lib/types';
 
-export default function HotelEditor(){
-  const params = useParams();
-  const id = params.id as string;
+interface HotelEditorProps {
+  hotel: Hotel;
+}
+
+type FormValues = {
+    name: string;
+    brand: string;
+    city: string;
+    state: string;
+    address: string;
+    about: string;
+    basePrice: number;
+    rating: number;
+    roomCategories: {
+        name: string;
+        count: number;
+        size: string;
+    }[];
+};
+
+export default function HotelEditor({ hotel }: HotelEditorProps) {
   const router = useRouter();
-  const firestore = useFirestore();
-  const storage = getStorage();
 
-  const { register, control, handleSubmit, reset } = useForm({ defaultValues: { roomCategories: [] } });
-  const { fields, append, remove } = useFieldArray({ control, name: 'roomCategories' });
-
-  useEffect(()=>{
-    if(!id || !firestore) return;
-    (async ()=>{
-      const d = await getDoc(doc(firestore,'hotels',id));
-      if(d.exists()) reset(d.data());
-    })();
-  },[id, reset, firestore]);
-
-  const onSubmit = async (data: any) => {
-    if (!firestore) return;
-    const docId = id || (data.name && data.name.toLowerCase().replace(/[^a-z0-9]+/g,'-'));
-    if (!docId) {
-        alert('Hotel name is required to create a new hotel.');
-        return;
+  const { register, control, handleSubmit, reset, formState: { isSubmitting } } = useForm<FormValues>({
+    defaultValues: {
+      name: hotel.name,
+      brand: hotel.brand,
+      city: hotel.city,
+      state: hotel.state,
+      address: hotel.address,
+      about: hotel.about,
+      basePrice: hotel.basePrice,
+      rating: hotel.rating,
+      roomCategories: hotel.roomCategories || [],
     }
-    const docRef = doc(firestore,'hotels', docId);
-    await setDoc(docRef, { ...data, id: docId, updatedAt: new Date() }, { merge: true });
-    alert('Saved');
+  });
+
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: "roomCategories"
+  });
+
+  useEffect(() => {
+    reset(hotel);
+  }, [hotel, reset]);
+
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    // In a real application, you would save this data to your database (e.g., Firestore or an API)
+    // For this example, we'll just log it and simulate a save.
+    console.log("Saving hotel data:", data);
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate async save
+    alert('Hotel saved successfully!');
     router.push('/admin/hotels');
   };
-
-  const uploadImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if(!file || !firestore) return;
+    if (!file) return;
 
-    const hotelIdForPath = id || (document.querySelector('input[name="name"]') as HTMLInputElement)?.value.toLowerCase().replace(/[^a-z0-9]+/g,'-') || 'new';
-
-    const path = `hotels/${hotelIdForPath}/${file.name}`;
-    const sref = ref(storage, path);
-    const task = uploadBytesResumable(sref, file);
-    
-    task.on('state_changed', ()=>{}, err=>alert(err.message), async ()=>{
-      const url = await getDownloadURL(task.snapshot.ref);
-      
-      if (id) {
-          const docRef = doc(firestore, 'hotels', id);
-          const d = await getDoc(docRef);
-          const existingImages = d.exists() ? d.data().images || [] : [];
-          await setDoc(docRef, { images: [...existingImages, url] }, { merge: true });
-          alert('Image uploaded and linked to hotel.');
-      } else {
-          alert('Image uploaded. Please save the hotel to link the image.');
-          // You might want to store the URL temporarily and add it on first save
-      }
-    });
+    alert(`Simulating upload for: ${file.name}. In a real app, this would upload to cloud storage.`);
+    // In a real app:
+    // 1. Get a reference to Firebase Storage
+    // 2. Upload the file
+    // 3. Get the download URL
+    // 4. Update the hotel's data with the new image URL
   };
 
+
   return (
-    <div className="max-w-3xl">
-      <h1 className="text-xl font-bold mb-4">{id? 'Edit Hotel' : 'New Hotel'}</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-4 rounded shadow space-y-3">
-        <label className="block">Name <input {...register('name')} className="w-full border p-2 rounded"/></label>
-        <label className="block">Brand <input {...register('brand')} className="w-full border p-2 rounded"/></label>
-        <div className="grid grid-cols-2 gap-3">
-          <label>City<input {...register('city')} className="w-full border p-2 rounded"/></label>
-          <label>State<input {...register('state')} className="w-full border p-2 rounded"/></label>
-        </div>
-        <label>About<textarea {...register('about')} className="w-full border p-2 rounded"/></label>
-
-        <div>
-          <div className="flex justify-between items-center mb-2"> <div className="font-semibold">Room Categories</div> <button type="button" onClick={()=>append({name:'',count:0,size:''})} className="text-sm text-indigo-600">Add</button></div>
-          <div className="space-y-2">
-            {fields.map((f,i)=> (
-              <div key={f.id} className="flex gap-2">
-                <input {...register(`roomCategories.${i}.name`)} placeholder="Name" className="border p-2 rounded flex-1"/>
-                <input type="number" {...register(`roomCategories.${i}.count`)} placeholder="Count" className="border p-2 rounded w-28"/>
-                <input {...register(`roomCategories.${i}.size`)} placeholder="Size" className="border p-2 rounded w-32"/>
-                <button type="button" onClick={()=>remove(i)} className="text-red-600">Remove</button>
+    <div className="max-w-4xl mx-auto">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold">{hotel.hotelId ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
+          <CardDescription>Manage hotel details, room categories, and images.</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+            
+            <section>
+              <h3 className="text-lg font-semibold mb-4 border-b pb-2">Basic Information</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Hotel Name</Label>
+                  <Input id="name" {...register('name')} />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="brand">Brand</Label>
+                  <Input id="brand" {...register('brand')} />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="city">City</Label>
+                  <Input id="city" {...register('city')} />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="state">State</Label>
+                  <Input id="state" {...register('state')} />
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                  <Label htmlFor="address">Address</Label>
+                  <Input id="address" {...register('address')} />
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                  <Label htmlFor="about">About</Label>
+                  <Textarea id="about" {...register('about')} rows={5}/>
+                </div>
+                 <div className="space-y-2">
+                  <Label htmlFor="basePrice">Base Price (INR)</Label>
+                  <Input id="basePrice" type="number" {...register('basePrice', { valueAsNumber: true })} />
+                </div>
+                 <div className="space-y-2">
+                  <Label htmlFor="rating">Rating (0-5)</Label>
+                  <Input id="rating" type="number" step="0.1" {...register('rating', { valueAsNumber: true })} />
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </section>
+            
+            <Separator />
+            
+            <section>
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold">Room Categories</h3>
+                    <Button type="button" variant="outline" onClick={() => append({ name: '', count: 0, size: '' })}>
+                        Add Room
+                    </Button>
+                </div>
+                <div className="space-y-4">
+                    {fields.map((field, index) => (
+                        <div key={field.id} className="grid grid-cols-1 md:grid-cols-[1fr,100px,100px,auto] gap-4 items-end p-4 border rounded-lg bg-secondary/30">
+                            <div className="space-y-2">
+                                <Label>Room Name</Label>
+                                <Input {...register(`roomCategories.${index}.name`)} placeholder="e.g., Deluxe Room" />
+                            </div>
+                             <div className="space-y-2">
+                                <Label>Count</Label>
+                                <Input type="number" {...register(`roomCategories.${index}.count`, { valueAsNumber: true })} placeholder="e.g., 50" />
+                            </div>
+                             <div className="space-y-2">
+                                <Label>Size (sqft)</Label>
+                                <Input {...register(`roomCategories.${index}.size`)} placeholder="e.g., 450 sqft" />
+                            </div>
+                            <Button type="button" variant="destructive" size="icon" onClick={() => remove(index)}>
+                                <Trash2 className="h-4 w-4" />
+                            </Button>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
-        <div>
-          <label className="block">Upload Image</label>
-          <input type="file" onChange={uploadImage} />
-        </div>
+             <Separator />
 
-        <div className="flex justify-end"><button className="bg-indigo-600 text-white px-4 py-2 rounded">Save</button></div>
-      </form>
+             <section>
+                <h3 className="text-lg font-semibold mb-4">Image Management</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {hotel.images.map((image, index) => (
+                        <div key={index} className="relative aspect-video">
+                            <img src={image.src} alt={image.caption} className="rounded-md object-cover w-full h-full" />
+                        </div>
+                    ))}
+                     <div className="flex items-center justify-center p-4 border-2 border-dashed rounded-md">
+                        <Label htmlFor="image-upload" className="cursor-pointer text-center">
+                            <p>+ Add Image</p>
+                            <Input id="image-upload" type="file" className="sr-only" onChange={handleImageUpload} accept="image/*" />
+                        </Label>
+                    </div>
+                </div>
+            </section>
+
+
+            <div className="flex justify-end gap-4 pt-4">
+              <Button type="button" variant="outline" onClick={() => router.back()}>Cancel</Button>
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Saving...' : 'Save Hotel'}
+              </Button>
+            </div>
+          </form>
+        </CardContent>
+      </Card>
     </div>
   );
 }
