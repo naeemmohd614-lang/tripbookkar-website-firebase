@@ -129,11 +129,15 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     });
 
     if (result.details) {
-      if(sections.includes('about')) setValue('about', result.details.about);
-      if(sections.includes('dining')) setValue('diningExperiences', result.details.diningExperiences || []);
-      if(sections.includes('experiences')) setValue('experiencesAndActivities', result.details.experiencesAndActivities || []);
-      if(sections.includes('weddings')) setValue('weddingVenues', result.details.weddingVenues || []);
-      if(sections.includes('tags')) setValue('tags', result.details.tags || []);
+      if (sections.includes('about')) setValue('about', result.details.about);
+      if (sections.includes('dining')) setValue('diningExperiences', result.details.diningExperiences || []);
+      
+      const formatForFieldArray = (data: string[]) => data.map(item => ({ value: item }));
+
+      if(sections.includes('experiences')) setValue('experiencesAndActivities', formatForFieldArray(result.details.experiencesAndActivities || []) as any);
+      if(sections.includes('weddings')) setValue('weddingVenues', formatForFieldArray(result.details.weddingVenues || []) as any);
+      if(sections.includes('tags')) setValue('tags', formatForFieldArray(result.details.tags || []) as any);
+
       toast({ title: "AI Generation Complete", description: "Selected details have been filled in." });
     }
     if (result.error) {
@@ -332,7 +336,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                          <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end p-4 border rounded-lg bg-secondary/30">
                             <div className="space-y-2">
                                 <Label>Activity</Label>
-                                <Input {...register(`experiencesAndActivities.${index}` as any)} placeholder="e.g., Rooftop Pool" />
+                                <Input {...register(`experiencesAndActivities.${index}.value` as any)} placeholder="e.g., Rooftop Pool" />
                             </div>
                             <Button type="button" variant="destructive" size="icon" onClick={() => removeExperience(index)}>
                                 <Trash2 className="h-4 w-4" />
@@ -361,7 +365,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                         <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end p-4 border rounded-lg bg-secondary/30">
                             <div className="space-y-2">
                                 <Label>Venue</Label>
-                                <Input {...register(`weddingVenues.${index}` as any)} placeholder="e.g., Grand Ballroom" />
+                                <Input {...register(`weddingVenues.${index}.value` as any)} placeholder="e.g., Grand Ballroom" />
                             </div>
                             <Button type="button" variant="destructive" size="icon" onClick={() => removeWedding(index)}>
                                 <Trash2 className="h-4 w-4" />
@@ -388,7 +392,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                 <div className="space-y-4">
                     {tagFields.map((field, index) => (
                          <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end">
-                            <Input {...register(`tags.${index}` as any)} placeholder="e.g., luxury" />
+                            <Input {...register(`tags.${index}.value` as any)} placeholder="e.g., luxury" />
                             <Button type="button" variant="destructive" size="icon" onClick={() => removeTag(index)}>
                                 <Trash2 className="h-4 w-4" />
                             </Button>
