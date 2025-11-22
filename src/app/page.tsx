@@ -11,39 +11,34 @@ import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
 import { states, featuredPackages, destinationsByMonth } from "@/lib/data";
 import HotelCard from "@/components/hotel-card";
-import type { Hotel } from "@/lib/types";
+import type { Hotel, Interest } from "@/lib/types";
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy, limit } from 'firebase/firestore';
 
 
 export default function Home() {
   const firestore = useFirestore();
+
   const hotelsQuery = useMemoFirebase(() => {
     if (!firestore) return null;
     return query(collection(firestore, 'hotels'), orderBy('rating', 'desc'), limit(3));
   }, [firestore]);
 
   const { data: featuredHotels, isLoading: hotelsLoading } = useCollection<Hotel>(hotelsQuery);
+  
+  const interestsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'interests'), orderBy('name'));
+  }, [firestore]);
+
+  const { data: interests, isLoading: interestsLoading } = useCollection<Interest>(interestsQuery);
+
 
   const heroImage = {
       "src": "https://images.unsplash.com/photo-1672841828271-54340a6fbcd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cm9waWNhbCUyMGJlYWNofGVufDB8fHx8MTc2MzM3MzAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "tropical beach"
     };
 
-  const interests = [
-    { name: 'Beaches', imageId: 'https://images.unsplash.com/photo-1626951876321-3b7137628f83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjM2MjQ2NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'beach sunset', href: '/interests/beaches' },
-    { name: 'Mountains', imageId: 'https://images.unsplash.com/photo-1526239187794-f8c27c7872ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb3VudGFpbiUyMHJhbmdlfGVufDB8fHx8MTc2MzYyMTIyNnww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'mountain range', href: '/interests/mountains' },
-    { name: 'Heritage', imageId: 'https://images.unsplash.com/photo-1650343301290-e22780fe2609?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmNpZW50JTIwdGVtcGxlfGVufDB8fHx8MTc2MzY2MDg1Mnww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'ancient temple', href: '/interests/heritage' },
-    { name: 'Wildlife', imageId: 'https://images.unsplash.com/photo-1634273182550-40960b2d6f88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0aWdlciUyMHdpbGRsaWZlfGVufDB8fHx8MTc2MzYzMzY1MXww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'tiger wildlife', href: '/interests/wildlife' },
-    { name: 'Adventure', imageId: 'https://images.unsplash.com/photo-1634707983128-0236c567a345?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2MzY5MjgxOXww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'mountain climbing', href: '/interests/adventure' },
-    { name: 'Spiritual', imageId: 'https://images.unsplash.com/photo-1645148284392-e2b0fae3262d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx5b2dhJTIwbWVkaXRhdGlvbnxlbnwwfHx8fDE3NjM2OTI4MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'yoga meditation', href: '/interests/spiritual' },
-    { name: 'Wellness Resorts', imageId: 'https://images.unsplash.com/photo-1700522924565-9fad1c05469e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzcGElMjBtZWRpdGF0aW9ufGVufDB8fHx8MTc2MzY5MjgyMHww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'spa meditation', href: '/interests/wellness', icon: HeartPulse },
-    { name: 'Weddings', imageId: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXN0aW5hdGlvbiUyMHdlZGRpbmd8ZW58MHx8fHwxNzYzNjkyODE5fDA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'destination wedding', href: '/interests/weddings', icon: Cake },
-    { name: 'Desert Experiences', imageId: 'https://images.unsplash.com/photo-1650556443811-4f515ca1b1f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYW5kJTIwZHVuZXN8ZW58MHx8fHwxNzYzNjkyODE5fDA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'sand dunes', href: '/interests/desert', icon: Sun },
-    { name: 'Boutique Hotels', imageId: 'https://images.unsplash.com/photo-1762472662611-d0391e522521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGFybWluZyUyMGhvdGVsfGVufDB8fHx8MTc2MzY5MjgxOXww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'charming hotel', href: '/interests/boutique', icon: Building2 },
-    { name: 'Luxury Tents', imageId: 'https://images.unsplash.com/photo-1714326029322-fcc1464df757?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbGFtcGluZyUyMHRlbnR8ZW58MHx8fHwxNzYzNjgxOTA0fDA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'glamping tent', href: '/interests/luxury-tents', icon: Tent },
-    { name: 'Milestone Celebrations', imageId: 'https://images.unsplash.com/photo-1759124650346-43900f8479d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGVjaWFsJTIwb2NjYXNpb24lMjBwYXJ0eXxlbnwwfHx8fDE3NjM2OTI4MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'special occasion party', href: '/interests/milestone-celebrations', icon: Sparkles },
-  ];
   
   const stateImages: { [key: string]: { src: string, caption: string } } = {
     karnataka: { src: 'https://images.unsplash.com/photo-1662904264665-f53f797a47fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsYW5kc2NhcGUlMjBvZiUyMEthcm5hdGFrYXxlbnwwfHx8fDE3NjM2NzA4ODd8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Karnataka' },
@@ -100,30 +95,33 @@ export default function Home() {
               Find the perfect trip based on what you love to do.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
-            {interests.map((interest) => {
-              const interestImage = {
-                  "src": interest.imageId,
-                  "caption": interest.hint
-              };
-              return (
-                <Link href={interest.href} key={interest.name}>
-                  <Card className="overflow-hidden group relative h-48 hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src={interestImage.src}
-                      alt={interest.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      data-ai-hint={interestImage.caption}
-                    />
-                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                      <h3 className="font-bold text-2xl text-white font-headline tracking-wider">{interest.name}</h3>
-                    </div>
-                  </Card>
-                </Link>
-              );
-            })}
-          </div>
+          {interestsLoading && <p className="text-center">Loading interests...</p>}
+          {interests && (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
+              {interests.map((interest) => {
+                const interestImage = {
+                    "src": interest.image.src,
+                    "caption": interest.image.caption
+                };
+                return (
+                  <Link href={`/interests/${interest.id}`} key={interest.id}>
+                    <Card className="overflow-hidden group relative h-48 hover:shadow-xl transition-shadow duration-300">
+                      <Image
+                        src={interestImage.src}
+                        alt={interest.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-ai-hint={interestImage.caption}
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                        <h3 className="font-bold text-2xl text-white font-headline tracking-wider">{interest.name}</h3>
+                      </div>
+                    </Card>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 
@@ -181,7 +179,7 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {destinationsByMonth.map((month) => {
               const monthImageUrls: { [key: string]: { src: string; caption: string } } = {
-                'January': { src: 'https://images.unsplash.com/photo-1641566797195-5c5080f3c251?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3aW50ZXIlMjBzbm93fGVufDB8fHx8MTc2MzY4NDY2N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'winter snow' },
+                'January': { src: 'https://images.unsplash.com/photo-1517524206127-48bbd363f357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3aW50ZXIlMjB0cmF2ZWwlMjBpbmRpYXxlbnwwfHx8fDE3NjM3OTcwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'winter travel india' },
                 'February': { src: 'https://images.unsplash.com/photo-1488415032361-b7e238421f1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxub3J0aGVybiUyMGxpZ2h0c3xlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'northern lights' },
                 'March': { src: 'https://images.unsplash.com/photo-1493589976221-c2357c31ad77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaGVycnklMjBibG9zc29tfGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'cherry blossom' },
                 'April': { src: 'https://images.unsplash.com/photo-1619787110676-c0181304528d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0dWxpcCUyMGZpZWxkfGVufDB8fHx8MTc2MzY1MDM1MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'tulip field' },
