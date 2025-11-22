@@ -1,7 +1,6 @@
 'use client'
-import React, { useEffect, useState } from 'react';
-import { useFirestore } from '@/firebase';
-import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
+import React from 'react';
+import { hotels } from '@/lib/data'; // Import hotels from local data
 import Link from 'next/link';
 import { Pencil, Trash2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,30 +12,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-
-type Hotel = {
-    id: string;
-    name: string;
-    brand: string;
-    city: string;
-    state: string;
-    basePrice: number;
-    rating: number;
-};
+import type { Hotel } from '@/lib/types';
 
 export default function HotelsPage(){
-  const [hotels, setHotels] = useState<Hotel[]>([]);
-  const firestore = useFirestore();
-
-  useEffect(()=>{
-    if (!firestore) return;
-    const q = query(collection(firestore,'hotels'), orderBy('name'));
-    const unsub = onSnapshot(q, snap=>{
-      const arr = snap.docs.map(d=>({ id: d.id, ...d.data() })) as Hotel[];
-      setHotels(arr);
-    });
-    return ()=>unsub();
-  },[firestore]);
 
   const formatPrice = (price: number) => {
     if (typeof price !== 'number') return 'N/A';
@@ -46,6 +24,9 @@ export default function HotelsPage(){
       minimumFractionDigits: 0,
     }).format(price);
   };
+
+  // Sort hotels by name
+  const sortedHotels = [...hotels].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
@@ -68,8 +49,8 @@ export default function HotelsPage(){
             </TableRow>
           </TableHeader>
           <TableBody className="bg-white divide-y divide-gray-200">
-            {hotels.map(h => (
-              <TableRow key={h.id} className="hover:bg-gray-50">
+            {sortedHotels.map((h: Hotel) => (
+              <TableRow key={h.hotelId} className="hover:bg-gray-50">
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{h.name}</TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.brand}</TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.city}, {h.state}</TableCell>
@@ -82,7 +63,7 @@ export default function HotelsPage(){
                 </TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex items-center gap-4">
-                     <Link href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
+                     <Link href={`/admin/hotels/${h.hotelId}`} className="text-blue-600 hover:text-blue-800">
                         <Pencil size={18} />
                     </Link>
                     <button className="text-red-500 hover:text-red-700">
