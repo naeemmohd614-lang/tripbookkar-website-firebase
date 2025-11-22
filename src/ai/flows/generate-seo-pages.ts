@@ -4,27 +4,21 @@
  * @fileOverview Flow for generating SEO-optimized pages for cities, states, and hotel types.
  *
  * - generateSeoPage - A function that handles the generation of SEO pages.
- * - GenerateSeoPageInput - The input type for the generateSeoPage function.
- * - GenerateSeoPageOutput - The return type for the generateSeoPage function.
  * - generateHotelDescription - Generates a compelling description for a hotel.
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {
+  GenerateSeoPageInputSchema,
+  GenerateSeoPageOutputSchema,
+  GenerateHotelDescriptionInputSchema,
+  GenerateHotelDescriptionOutputSchema,
+  type GenerateSeoPageInput,
+  type GenerateSeoPageOutput,
+  type GenerateHotelDescriptionInput,
+  type GenerateHotelDescriptionOutput,
+} from '@/lib/types';
 
-const GenerateSeoPageInputSchema = z.object({
-  pageType: z.enum(['city', 'state', 'hotelType']).describe('The type of SEO page to generate.'),
-  location: z.string().optional().describe('The city or state for which to generate the page (if applicable).'),
-  hotelType: z.string().optional().describe('The type of hotel for which to generate the page (if applicable).'),
-});
-export type GenerateSeoPageInput = z.infer<typeof GenerateSeoPageInputSchema>;
-
-const GenerateSeoPageOutputSchema = z.object({
-  title: z.string().describe('The SEO title for the page.'),
-  description: z.string().describe('The SEO description for the page.'),
-  content: z.string().describe('The main content of the SEO page.'),
-});
-export type GenerateSeoPageOutput = z.infer<typeof GenerateSeoPageOutputSchema>;
 
 export async function generateSeoPage(input: GenerateSeoPageInput): Promise<GenerateSeoPageOutput> {
   return generateSeoPageFlow(input);
@@ -64,20 +58,6 @@ const generateSeoPageFlow = ai.defineFlow(
     return output!;
   }
 );
-
-
-// Hotel Description Flow
-export const GenerateHotelDescriptionInputSchema = z.object({
-  name: z.string().describe('The name of the hotel.'),
-  city: z.string().optional().describe('The city where the hotel is located.'),
-  brand: z.string().optional().describe('The brand of the hotel.'),
-});
-export type GenerateHotelDescriptionInput = z.infer<typeof GenerateHotelDescriptionInputSchema>;
-
-export const GenerateHotelDescriptionOutputSchema = z.object({
-  description: z.string().describe('A compelling, paragraph-long "about" description for the hotel.'),
-});
-export type GenerateHotelDescriptionOutput = z.infer<typeof GenerateHotelDescriptionOutputSchema>;
 
 
 const generateHotelDescriptionPrompt = ai.definePrompt({

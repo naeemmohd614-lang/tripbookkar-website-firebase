@@ -10,7 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
 import { Trash2, Wand2 } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
-import { generateHotelDescription } from '@/app/actions';
+import { generateHotelDescriptionAction } from '@/app/actions';
 
 interface HotelEditorProps {
   hotel?: Hotel;
@@ -80,7 +80,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
       alert("Please enter a hotel name first.");
       return;
     }
-    const result = await generateHotelDescription({
+    const result = await generateHotelDescriptionAction({
       name: watchedName,
       city: watchedCity,
       brand: watchedBrand,

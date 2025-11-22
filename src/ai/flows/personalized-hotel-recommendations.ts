@@ -5,32 +5,16 @@
  * @fileOverview A flow to generate personalized hotel recommendations based on user's past searches.
  *
  * - personalizedHotelRecommendations - A function that returns personalized hotel recommendations.
- * - PersonalizedHotelRecommendationsInput - The input type for the personalizedHotelRecommendations function.
- * - PersonalizedHotelRecommendationsOutput - The return type for the personalizedHotelRecommendations function.
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {
+  PersonalizedHotelRecommendationsInputSchema,
+  PersonalizedHotelRecommendationsOutputSchema,
+  type PersonalizedHotelRecommendationsInput,
+  type PersonalizedHotelRecommendationsOutput
+} from '@/lib/types';
 
-const PersonalizedHotelRecommendationsInputSchema = z.object({
-  pastSearches: z
-    .string()
-    .describe('A comma-separated list of the user\'s past hotel searches.'),
-});
-
-export type PersonalizedHotelRecommendationsInput = z.infer<
-  typeof PersonalizedHotelRecommendationsInputSchema
->;
-
-const PersonalizedHotelRecommendationsOutputSchema = z.object({
-  recommendations: z
-    .string()
-    .describe('A list of personalized hotel recommendations.'),
-});
-
-export type PersonalizedHotelRecommendationsOutput = z.infer<
-  typeof PersonalizedHotelRecommendationsOutputSchema
->;
 
 const prompt = ai.definePrompt({
   name: 'personalizedHotelRecommendationsPrompt',

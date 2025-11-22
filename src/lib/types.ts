@@ -1,6 +1,5 @@
 
-
-import type { GenerateSeoPageInput } from '@/ai/flows/generate-seo-pages';
+import { z } from 'zod';
 
 export interface Hotel {
   hotelId?: string;
@@ -251,6 +250,50 @@ export interface Itinerary {
   meals?: string[];
   activities: string[];
 }
+
+export const GenerateSeoPageInputSchema = z.object({
+  pageType: z.enum(['city', 'state', 'hotelType']).describe('The type of SEO page to generate.'),
+  location: z.string().optional().describe('The city or state for which to generate the page (if applicable).'),
+  hotelType: z.string().optional().describe('The type of hotel for which to generate the page (if applicable).'),
+});
+export type GenerateSeoPageInput = z.infer<typeof GenerateSeoPageInputSchema>;
+
+export const GenerateSeoPageOutputSchema = z.object({
+  title: z.string().describe('The SEO title for the page.'),
+  description: z.string().describe('The SEO description for the page.'),
+  content: z.string().describe('The main content of the SEO page.'),
+});
+export type GenerateSeoPageOutput = z.infer<typeof GenerateSeoPageOutputSchema>;
+
+
+// Hotel Description Flow
+export const GenerateHotelDescriptionInputSchema = z.object({
+  name: z.string().describe('The name of the hotel.'),
+  city: z.string().optional().describe('The city where the hotel is located.'),
+  brand: z.string().optional().describe('The brand of the hotel.'),
+});
+export type GenerateHotelDescriptionInput = z.infer<typeof GenerateHotelDescriptionInputSchema>;
+
+export const GenerateHotelDescriptionOutputSchema = z.object({
+  description: z.string().describe('A compelling, paragraph-long "about" description for the hotel.'),
+});
+export type GenerateHotelDescriptionOutput = z.infer<typeof GenerateHotelDescriptionOutputSchema>;
+
+
+// Personalized Recommendations Flow
+export const PersonalizedHotelRecommendationsInputSchema = z.object({
+  pastSearches: z
+    .string()
+    .describe('A comma-separated list of the user\'s past hotel searches.'),
+});
+export type PersonalizedHotelRecommendationsInput = z.infer<typeof PersonalizedHotelRecommendationsInputSchema>;
+
+export const PersonalizedHotelRecommendationsOutputSchema = z.object({
+  recommendations: z
+    .string()
+    .describe('A list of personalized hotel recommendations.'),
+});
+export type PersonalizedHotelRecommendationsOutput = z.infer<typeof PersonalizedHotelRecommendationsOutputSchema>;
 
 
 // State for personalizedHotelRecommendations

@@ -1,10 +1,17 @@
 
 'use server';
 
-import { personalizedHotelRecommendations, type PersonalizedHotelRecommendationsInput } from '@/ai/flows/personalized-hotel-recommendations';
-import { generateSeoPage, generateHotelDescription, type GenerateSeoPageInput, type GenerateHotelDescriptionInput } from '@/ai/flows/generate-seo-pages';
+import { personalizedHotelRecommendations } from '@/ai/flows/personalized-hotel-recommendations';
+import { generateSeoPage, generateHotelDescription } from '@/ai/flows/generate-seo-pages';
 import { z } from 'zod';
-import type { RecommendationsState, SeoGeneratorState, HotelDescriptionState } from '@/lib/types';
+import type { 
+  RecommendationsState, 
+  SeoGeneratorState, 
+  HotelDescriptionState,
+  GenerateSeoPageInput,
+  PersonalizedHotelRecommendationsInput,
+  GenerateHotelDescriptionInput
+} from '@/lib/types';
 
 export async function getRecommendations(
   prevState: RecommendationsState,
@@ -71,7 +78,7 @@ export async function generateSeoContent(
   }
 
   try {
-    const result = await generateSeoPage(input);
+    const result = await generateSeoPage(input as GenerateSeoPageInput);
     return { ...result, input };
   } catch (e) {
     console.error(e);
@@ -80,5 +87,12 @@ export async function generateSeoContent(
 }
 
 // Re-exporting the imported function so other parts of the app can use it from here.
-export { generateHotelDescription };
-export type { GenerateHotelDescriptionInput, HotelDescriptionState };
+export async function generateHotelDescriptionAction(input: GenerateHotelDescriptionInput): Promise<HotelDescriptionState> {
+  try {
+    const result = await generateHotelDescription(input);
+    return { description: result.description };
+  } catch(e: any) {
+    console.error(e);
+    return { error: 'Failed to generate description.' };
+  }
+}
