@@ -29,7 +29,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import type { Hotel } from '@/lib/types';
-import { bulkImportHotels } from '@/app/actions';
+import { bulkImportData } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 
 
@@ -37,13 +37,13 @@ function BulkImportMenu() {
     const { toast } = useToast();
     const [isImporting, setIsImporting] = React.useState<string | null>(null);
 
-    const hotelBrands = [
+    const dataTypes = [
         'marriott', 'taj', 'oberoi', 'the-leela', 'hyatt', 'the-lalit', 'hilton', 'ihg', 'accor', 'radisson', 'other-hotels'
     ];
 
-    const handleImport = async (brand: string) => {
-        setIsImporting(brand);
-        const result = await bulkImportHotels(brand);
+    const handleImport = async (type: string) => {
+        setIsImporting(type);
+        const result = await bulkImportData(type);
         if (result.success) {
             toast({
                 title: 'Import Successful',
@@ -68,24 +68,31 @@ function BulkImportMenu() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-                <DropdownMenuLabel>Import Hotels by Brand</DropdownMenuLabel>
+                <DropdownMenuLabel>Import Data</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {hotelBrands.map(brand => (
-                    <DropdownMenuItem 
-                        key={brand} 
-                        onClick={() => handleImport(brand)}
-                        disabled={isImporting === brand}
-                    >
-                        {isImporting === brand ? 'Importing...' : `Import ${brand.replace(/[-_]/g, ' ')}`}
-                    </DropdownMenuItem>
-                ))}
-                 <DropdownMenuSeparator />
+                <DropdownMenuItem 
+                    onClick={() => handleImport('states')}
+                    disabled={isImporting === 'states'}
+                >
+                    {isImporting === 'states' ? 'Importing...' : 'Import States'}
+                </DropdownMenuItem>
                  <DropdownMenuItem 
                     onClick={() => handleImport('interests')}
                     disabled={isImporting === 'interests'}
                 >
                     {isImporting === 'interests' ? 'Importing...' : 'Import Interests'}
                 </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                 <DropdownMenuLabel>Import Hotels by Brand</DropdownMenuLabel>
+                {dataTypes.map(type => (
+                    <DropdownMenuItem 
+                        key={type} 
+                        onClick={() => handleImport(type)}
+                        disabled={isImporting === type}
+                    >
+                        {isImporting === type ? 'Importing...' : `Import ${type.replace(/[-_]/g, ' ')}`}
+                    </DropdownMenuItem>
+                ))}
             </DropdownMenuContent>
         </DropdownMenu>
     );

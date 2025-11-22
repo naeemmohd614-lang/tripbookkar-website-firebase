@@ -14,7 +14,9 @@ import type {
   GenerateHotelDescriptionInput,
   GenerateHotelDetailsInput,
   Hotel,
-  Interest
+  Interest,
+  State,
+  MonthData,
 } from '@/lib/types';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
@@ -133,7 +135,7 @@ export async function generateHotelDetailsAction(input: GenerateHotelDetailsInpu
 }
 
 
-export async function bulkImportHotels(dataType: string): Promise<{ success: boolean, message: string }> {
+export async function bulkImportData(dataType: string): Promise<{ success: boolean, message: string }> {
   try {
     const batch = db.batch();
     let count = 0;
@@ -148,6 +150,27 @@ export async function bulkImportHotels(dataType: string): Promise<{ success: boo
       await batch.commit();
       revalidatePath('/admin/interests');
       return { success: true, message: `${count} interests imported successfully.` };
+    } else if (dataType === 'states') {
+      const statesData = (await import(`@/data/states.json`)).default;
+       statesData.forEach((state: State) => {
+        const docRef = db.collection('states').doc(state.stateId);
+        batch.set(docRef, state, { merge: true });
+        count++;
+      });
+      await batch.commit();
+      revalidatePath('/admin/dashboard'); // Or a relevant page
+      return { success: true, message: `${count} states imported successfully.` };
+    } else if (dataType === 'monthlyDestinations') {
+      const { monthlyDestinationsData } = await import(`@/data/monthly-destinations`);
+      for (const monthKey in monthlyDestinationsData) {
+        const month: MonthData = monthlyDestinationsData[monthKey];
+        const docRef = db.collection('monthlyDestinations').doc(month.slug);
+        batch.set(docRef, month, { merge: true });
+        count++;
+      }
+      await batch.commit();
+      revalidatePath('/admin/destinations');
+      return { success: true, message: `${count} monthly destination sets imported successfully.` };
     } else {
       // Assuming it's a hotel brand
       const hotelDataModule = await import(`@/data/${dataType}.json`);
