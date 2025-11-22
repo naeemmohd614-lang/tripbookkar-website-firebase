@@ -72,6 +72,17 @@ service cloud.firestore {
       allow read, list: if true;
       allow write: if isAdmin();
     }
+    
+    /**
+     * @description Rules for the /interests collection.
+     * @path /interests/{interestId}
+     * @allow read, list: if true; // Anyone can read interest data for public pages.
+     * @allow write: if isAdmin(); // Only admins can manage interests.
+     */
+    match /interests/{interestId} {
+        allow read, list: if true;
+        allow write: if isAdmin();
+    }
 
 
     /**
@@ -129,5 +140,3 @@ service cloud.firestore {
     }
   }
 }
-
-    

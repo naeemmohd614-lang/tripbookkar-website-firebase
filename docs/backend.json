@@ -348,6 +348,39 @@
         }
       },
       "required": ["id", "name"]
+    },
+    "Interest": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Interest",
+      "type": "object",
+      "description": "Represents a travel interest category.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the interest, e.g., 'beaches'."
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the interest, e.g., 'Beaches'."
+        },
+        "description": {
+          "type": "string",
+          "description": "A short paragraph describing the interest category."
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "src": { "type": "string", "description": "URL of the hero image." },
+            "caption": { "type": "string", "description": "AI hint for the hero image." }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "description": "An array of hotel tags used to query hotels for this interest.",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["id", "name", "tags"]
     }
   },
   "auth": {
@@ -490,6 +523,17 @@
         }
       },
       {
+        "path": "/interests/{interestId}",
+        "definition": {
+          "entityName": "Interest",
+          "schema": { "$ref": "#/backend/entities/Interest" },
+          "description": "Stores travel interest categories.",
+          "params": [
+            { "name": "interestId", "description": "The slug of the interest (e.g., 'beaches')." }
+          ]
+        }
+      },
+      {
         "path": "/admin/{uid}",
         "definition": {
           "entityName": "Admin",
@@ -509,5 +553,3 @@
     "reasoning": "This Firestore structure is designed to support the TripBookKar admin dashboard application. It prioritizes authorization independence, clarity, and scalability. All collections are designed with a homogeneous security posture in mind.\n\nAuthorization Independence:\n\n*   The structure uses custom claims for authorization, avoiding the need for `get()` calls in security rules.\n*   Admin status is determined by checking for `request.auth.token.admin == true`, which is set by a trusted server process.\n\nQAPs (Rules are not Filters):\n\n*   The data is segregated into collections based on entity type (hotels, packages, etc.). This simplifies security rules, as each collection has a consistent access model. List operations are secured by ensuring that only authorized users (admins) can access the data.\n\n\nAdditional Considerations:\n\n*   The structure is designed to support the core features of the app: Hotel Data Storage, Package Management, Dynamic Pricing, Image Processing, Location Search, and SEO Page Generation.\n*   Timestamp fields (`createdAt`, `updatedAt`) can be used to track creation and modification times."
   }
 }
-
-    

@@ -19,7 +19,8 @@ import {
   Ticket,
   Percent,
   TrendingUp,
-  Tag
+  Tag,
+  Heart
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -44,6 +45,7 @@ const navLinks = [
   { href: '/admin/hotels', label: 'Hotels', icon: Building2 },
   { href: '/admin/packages', label: 'Packages', icon: Package },
   { href: '/admin/destinations', label: 'Destinations', icon: Map },
+  { href: '/admin/interests', label: 'Interests', icon: Heart },
   { href: '/admin/leads', label: 'Leads', icon: Mail },
   { href: '/admin/affiliates', label: 'Affiliates', icon: Share2 },
   { href: '/admin/pricing', label: 'Pricing', icon: Percent },
