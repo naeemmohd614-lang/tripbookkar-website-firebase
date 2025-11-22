@@ -10,6 +10,13 @@ import { Check, Dumbbell, Dog, MapPin, Utensils, Zap, Mic2, GlassWater } from 'l
 import React from 'react';
 import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
 import { doc } from 'firebase/firestore';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function HotelDetailPage() {
   const params = useParams();
@@ -57,96 +64,116 @@ export default function HotelDetailPage() {
 
   return (
     <div className="bg-background text-foreground">
-        <div className="relative h-64 md:h-96 w-full">
-            {mainImage && (
-                <Image
-                src={mainImage.src}
-                alt={`Main image for ${hotel.name}`}
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint={mainImage.caption}
-                />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-        </div>
-        
-      <div className="container mx-auto -mt-24 relative z-10 px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          <div className="lg:col-span-2 space-y-8">
-                <Card className="bg-background/80 backdrop-blur-sm border-border/20">
+       
+        <div className="container mx-auto px-4 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+
+                <div className="lg:col-span-3">
+                     <Carousel className="w-full">
+                        <CarouselContent>
+                            {hotel.images.map((image, index) => (
+                            <CarouselItem key={index}>
+                                <div className="relative aspect-video w-full">
+                                <Image
+                                    src={image.src}
+                                    alt={image.caption || hotel.name}
+                                    fill
+                                    className="object-cover rounded-lg"
+                                />
+                                </div>
+                            </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="ml-16" />
+                        <CarouselNext className="mr-16"/>
+                    </Carousel>
+                </div>
+
+                <div className="lg:col-span-2">
+                    <Card className="bg-background/80 backdrop-blur-sm border-border/20">
+                        <CardHeader>
+                            <Badge variant="secondary" className="w-fit mb-2">{hotel.brand}</Badge>
+                            <CardTitle className="text-4xl md:text-5xl font-headline">{hotel.name}</CardTitle>
+                            <CardDescription className="flex items-center gap-2 pt-2 text-base">
+                                <MapPin className="w-5 h-5" />
+                                {hotel.address}
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <h2 className="text-2xl font-headline text-primary mb-2">About this hotel</h2>
+                            <p className="text-foreground/80 leading-relaxed">{hotel.about}</p>
+                            
+                            {hotel.distance && Object.keys(hotel.distance).length > 0 &&
+                            <div className="mt-4 text-sm text-muted-foreground flex items-center gap-2">
+                                <Zap className="w-4 h-4 text-primary" />
+                                {Object.entries(hotel.distance).map(([key, value]) => (
+                                <span key={key}><strong>{value}</strong> from {key}</span>
+                                ))}
+                            </div>
+                            }
+                        </CardContent>
+                    </Card>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mt-8">
+                <div className="lg:col-span-2 space-y-8">
+                    {hotel.roomCategories && hotel.roomCategories.length > 0 && (
+                        <SectionCard icon={GlassWater} title="Room Categories">
+                            {hotel.roomCategories.map(room => (
+                                <ListItem key={room.name}>
+                                    {room.name} {room.count && `(${room.count})`}
+                                </ListItem>
+                            ))}
+                        </SectionCard>
+                    )}
+
+                    {hotel.diningExperiences && hotel.diningExperiences.length > 0 && (
+                        <SectionCard icon={Utensils} title="Dining Experiences">
+                            {hotel.diningExperiences.map(dining => (
+                                <ListItem key={dining.name}>
+                                    {dining.name} ({dining.type})
+                                </ListItem>
+                            ))}
+                        </SectionCard>
+                    )}
+
+                    {hotel.experiencesAndActivities && hotel.experiencesAndActivities.length > 0 && (
+                        <SectionCard icon={Zap} title="Experiences &amp; Activities">
+                            {hotel.experiencesAndActivities.map(activity => (
+                                <ListItem key={activity}>
+                                    {activity}
+                                </ListItem>
+                            ))}
+                        </SectionCard>
+                    )}
+
+                     {hotel.weddingVenues && hotel.weddingVenues.length > 0 && (
+                        <SectionCard icon={Mic2} title="Wedding Venues">
+                            {hotel.weddingVenues.map(venue => (
+                                <ListItem key={venue}>
+                                    {venue}
+                                </ListItem>
+                            ))}
+                        </SectionCard>
+                    )}
+                </div>
+                <div className="lg:col-span-1">
+                    <Card className="sticky top-24 bg-background/80 backdrop-blur-sm border-border/20">
                     <CardHeader>
-                        <Badge variant="secondary" className="w-fit mb-2">{hotel.brand}</Badge>
-                        <CardTitle className="text-4xl md:text-5xl font-headline">{hotel.name}</CardTitle>
-                        <CardDescription className="flex items-center gap-2 pt-2 text-base">
-                            <MapPin className="w-5 h-5" />
-                            {hotel.address}
-                        </CardDescription>
+                        <CardTitle>Book Your Stay</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <h2 className="text-2xl font-headline text-primary mb-2">About this hotel</h2>
-                        <p className="text-foreground/80 leading-relaxed">{hotel.about}</p>
-                        
-                        {hotel.distance && Object.keys(hotel.distance).length > 0 &&
-                        <div className="mt-4 text-sm text-muted-foreground flex items-center gap-2">
-                            <Zap className="w-4 h-4 text-primary" />
-                            {Object.entries(hotel.distance).map(([key, value]) => (
-                            <span key={key}><strong>{value}</strong> from {key}</span>
-                            ))}
-                        </div>
-                        }
+                        <p className="text-3xl font-bold text-brand-blue mb-4">
+                            {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(hotel.basePrice)}
+                            <span className="text-sm font-normal text-muted-foreground">/night</span>
+                        </p>
+                        <Button size="lg" className="w-full h-12 text-lg">Book Now</Button>
                     </CardContent>
-                </Card>
-
-                {hotel.roomCategories && hotel.roomCategories.length > 0 && (
-                    <SectionCard icon={GlassWater} title="Room Categories">
-                        {hotel.roomCategories.map(room => (
-                            <ListItem key={room.name}>
-                                {room.name} {room.count && `(${room.count})`}
-                            </ListItem>
-                        ))}
-                    </SectionCard>
-                )}
-
-                {hotel.diningExperiences && hotel.diningExperiences.length > 0 && (
-                    <SectionCard icon={Utensils} title="Dining Experiences">
-                        {hotel.diningExperiences.map(dining => (
-                            <ListItem key={dining.name}>
-                                {dining.name} ({dining.type})
-                            </ListItem>
-                        ))}
-                    </SectionCard>
-                )}
-
-                {hotel.experiencesAndActivities && hotel.experiencesAndActivities.length > 0 && (
-                    <SectionCard icon={Zap} title="Experiences & Activities">
-                        {hotel.experiencesAndActivities.map(activity => (
-                            <ListItem key={activity}>
-                                {activity}
-                            </ListItem>
-                        ))}
-                    </SectionCard>
-                )}
-
-                 {hotel.weddingVenues && hotel.weddingVenues.length > 0 && (
-                    <SectionCard icon={Mic2} title="Wedding Venues">
-                        {hotel.weddingVenues.map(venue => (
-                            <ListItem key={venue}>
-                                {venue}
-                            </ListItem>
-                        ))}
-                    </SectionCard>
-                )}
-          </div>
-          <div className="lg:col-span-1">
-            <Card className="sticky top-24 bg-background/80 backdrop-blur-sm border-border/20">
-              <CardContent className="p-6">
-                <Button size="lg" className="w-full h-12 text-lg">Book Now</Button>
-              </CardContent>
-            </Card>
-          </div>
+                    </Card>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   );
 }

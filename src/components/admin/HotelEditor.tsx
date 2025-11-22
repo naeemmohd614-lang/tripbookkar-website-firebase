@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
-import { Trash2, Wand2 } from 'lucide-react';
+import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
 import { generateHotelDescriptionAction } from '@/app/actions';
 import { useFirestore } from '@/firebase';
@@ -38,6 +38,9 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
       rating: 0,
       images: [],
       roomCategories: [],
+      diningExperiences: [],
+      experiencesAndActivities: [],
+      weddingVenues: [],
     }
   });
 
@@ -49,6 +52,21 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
   const { fields: imageFields, append: appendImage, remove: removeImage } = useFieldArray({
     control,
     name: "images"
+  });
+  
+  const { fields: diningFields, append: appendDining, remove: removeDining } = useFieldArray({
+    control,
+    name: "diningExperiences"
+  });
+
+  const { fields: experienceFields, append: appendExperience, remove: removeExperience } = useFieldArray({
+    control,
+    name: "experiencesAndActivities"
+  });
+  
+  const { fields: weddingFields, append: appendWedding, remove: removeWedding } = useFieldArray({
+    control,
+    name: "weddingVenues"
   });
 
   useEffect(() => {
@@ -63,7 +81,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
 
   const handleGenerateDescription = async () => {
     if (!watchedName) {
-      alert("Please enter a hotel name first.");
+      toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating a description." });
       return;
     }
     const result = await generateHotelDescriptionAction({
@@ -74,9 +92,10 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
 
     if (result.description) {
       setValue('about', result.description);
+      toast({ title: "Description Generated", description: "The AI-powered description has been filled in." });
     }
     if (result.error) {
-      alert(`AI Error: ${result.error}`);
+       toast({ variant: 'destructive', title: 'AI Error', description: result.error });
     }
   };
 
@@ -88,18 +107,17 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
 
     try {
       if (hotel?.id) {
-        // Update existing hotel
         const hotelRef = doc(firestore, 'hotels', hotel.id);
-        setDocumentNonBlocking(hotelRef, data, { merge: true });
+        await setDocumentNonBlocking(hotelRef, data, { merge: true });
         toast({ title: 'Hotel Updated', description: `"${data.name}" has been saved.` });
       } else {
-        // Create new hotel
         const hotelsCol = collection(firestore, 'hotels');
-        await addDocumentNonBlocking(hotelsCol, data);
+        const newDocRef = await addDocumentNonBlocking(hotelsCol, data);
+        await setDocumentNonBlocking(newDocRef, {id: newDocRef.id}, {merge: true}); // Add the id to the document
         toast({ title: 'Hotel Created', description: `"${data.name}" has been added.` });
       }
       router.push('/admin/hotels');
-      router.refresh(); // To show the updated list
+      router.refresh();
     } catch (error: any) {
       console.error("Error saving hotel:", error);
       toast({ variant: 'destructive', title: 'Save Failed', description: error.message });
@@ -110,13 +128,8 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    alert(`Simulating upload for: ${file.name}. In a real app, this would upload to cloud storage.`);
-    // In a real app:
-    // 1. Get a reference to Firebase Storage
-    // 2. Upload the file
-    // 3. Get the download URL
-    // 4. Update the hotel's data with the new image URL
-    // e.g., appendImage({ src: newUrl, caption: 'Uploaded image' });
+    toast({ title: 'Simulating Upload', description: `Uploading: ${file.name}. In a real app, this would upload to cloud storage.` });
+    appendImage({ src: URL.createObjectURL(file), caption: 'New upload' });
   };
 
 
@@ -178,7 +191,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
             
             <section>
                 <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-semibold">Room Categories</h3>
+                    <h3 className="text-lg font-semibold flex items-center gap-2"><GlassWater className="w-5 h-5"/>Room Categories</h3>
                     <Button type="button" variant="outline" onClick={() => append({ name: '', count: 0, size: '' })}>
                         Add Room
                     </Button>
@@ -205,6 +218,82 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                     ))}
                 </div>
             </section>
+            
+            <Separator />
+
+            <section>
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold flex items-center gap-2"><Utensils className="w-5 h-5"/>Dining Experiences</h3>
+                    <Button type="button" variant="outline" onClick={() => appendDining({ name: '', type: '' })}>
+                        Add Dining
+                    </Button>
+                </div>
+                <div className="space-y-4">
+                    {diningFields.map((field, index) => (
+                        <div key={field.id} className="grid grid-cols-1 md:grid-cols-[1fr,1fr,auto] gap-4 items-end p-4 border rounded-lg bg-secondary/30">
+                            <div className="space-y-2">
+                                <Label>Name</Label>
+                                <Input {...register(`diningExperiences.${index}.name`)} placeholder="e.g., The Lantern" />
+                            </div>
+                             <div className="space-y-2">
+                                <Label>Type</Label>
+                                <Input {...register(`diningExperiences.${index}.type`)} placeholder="e.g., Chinese" />
+                            </div>
+                            <Button type="button" variant="destructive" size="icon" onClick={() => removeDining(index)}>
+                                <Trash2 className="h-4 w-4" />
+                            </Button>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+             <Separator />
+
+             <section>
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold flex items-center gap-2"><Zap className="w-5 h-5"/>Experiences &amp; Activities</h3>
+                    <Button type="button" variant="outline" onClick={() => appendExperience({ value: '' } as any)}>
+                       Add Activity
+                    </Button>
+                </div>
+                <div className="space-y-4">
+                    {experienceFields.map((field, index) => (
+                         <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end p-4 border rounded-lg bg-secondary/30">
+                            <div className="space-y-2">
+                                <Label>Activity</Label>
+                                <Input {...register(`experiencesAndActivities.${index}` as any)} placeholder="e.g., Rooftop Pool" />
+                            </div>
+                            <Button type="button" variant="destructive" size="icon" onClick={() => removeExperience(index)}>
+                                <Trash2 className="h-4 w-4" />
+                            </Button>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <Separator />
+            
+             <section>
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold flex items-center gap-2"><Mic2 className="w-5 h-5"/>Wedding Venues</h3>
+                    <Button type="button" variant="outline" onClick={() => appendWedding({ value: '' } as any)}>
+                        Add Venue
+                    </Button>
+                </div>
+                <div className="space-y-4">
+                    {weddingFields.map((field, index) => (
+                        <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end p-4 border rounded-lg bg-secondary/30">
+                            <div className="space-y-2">
+                                <Label>Venue</Label>
+                                <Input {...register(`weddingVenues.${index}` as any)} placeholder="e.g., Grand Ballroom" />
+                            </div>
+                            <Button type="button" variant="destructive" size="icon" onClick={() => removeWedding(index)}>
+                                <Trash2 className="h-4 w-4" />
+                            </Button>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
              <Separator />
 
@@ -213,7 +302,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {imageFields.map((image, index) => (
                         <div key={image.id} className="relative aspect-video">
-                            <Image src={image.src} alt={image.caption || `Image ${index + 1}`} fill className="rounded-md object-cover" />
+                           {image.src && <Image src={image.src} alt={image.caption || `Image ${index + 1}`} fill className="rounded-md object-cover" />}
                              <Button
                                 type="button"
                                 variant="destructive"
