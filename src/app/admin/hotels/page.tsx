@@ -2,8 +2,8 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
-import { collection } from 'firebase/firestore';
+import { useFirestore, useCollection, useMemoFirebase, deleteDocumentNonBlocking } from '@/firebase';
+import { collection, doc } from 'firebase/firestore';
 import { Pencil, Trash2, Star, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -14,6 +14,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import {
   Accordion,
   AccordionContent,
@@ -87,12 +98,24 @@ function BulkImportMenu() {
 
 export default function HotelsPage(){
   const firestore = useFirestore();
+  const { toast } = useToast();
+
   const hotelsQuery = useMemoFirebase(() => {
     if (!firestore) return null;
     return collection(firestore, 'hotels');
   }, [firestore]);
 
   const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
+
+  const handleDelete = (hotelId: string) => {
+    if (!firestore) return;
+    const hotelRef = doc(firestore, 'hotels', hotelId);
+    deleteDocumentNonBlocking(hotelRef);
+    toast({
+        title: "Hotel Deleted",
+        description: "The hotel has been removed from the database.",
+    });
+  };
 
   const hotelsByBrand = React.useMemo(() => {
     if (!hotels) return {};
@@ -172,9 +195,26 @@ export default function HotelsPage(){
                                  <Link href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
                                     <Pencil size={18} />
                                 </Link>
-                                <button className="text-red-500 hover:text-red-700">
-                                    <Trash2 size={18} />
-                                </button>
+                                <AlertDialog>
+                                  <AlertDialogTrigger asChild>
+                                    <Button variant="ghost" size="icon" className="text-red-500 hover:text-red-700 h-8 w-8">
+                                      <Trash2 size={18} />
+                                    </Button>
+                                  </AlertDialogTrigger>
+                                  <AlertDialogContent>
+                                    <AlertDialogHeader>
+                                      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                                      <AlertDialogDescription>
+                                        This action cannot be undone. This will permanently delete the hotel
+                                        "{h.name}" and remove its data from our servers.
+                                      </AlertDialogDescription>
+                                    </AlertDialogHeader>
+                                    <AlertDialogFooter>
+                                      <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                      <AlertDialogAction onClick={() => handleDelete(h.id!)}>Continue</AlertDialogAction>
+                                    </AlertDialogFooter>
+                                  </AlertDialogContent>
+                                </AlertDialog>
                               </div>
                             </TableCell>
                           </TableRow>
