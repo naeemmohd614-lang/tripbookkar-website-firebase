@@ -11,9 +11,10 @@
  * `affiliates`, `pricingRules`, `seoPages`, `leads`, and `admin`.
  *
  * Key Security Decisions:
- * - **Admin-Only Access:** Most read and write operations are restricted to authenticated admins.
+ * - **Admin-Only Write Access:** Most write operations are restricted to authenticated admins.
+ * - **Public Read Access:** Public pages need to read hotel and package data, so read is allowed for everyone on those collections.
  * - **Public Lead Creation:** Anyone can create a document in the 'leads' collection.
- * - **No Public Listing:** List operations are secured to prevent unauthorized data access.
+ * - **No Public Listing on sensitive collections:** List operations are secured to prevent unauthorized data access.
  * - **Custom Claims for Authorization:** The rules check for `request.auth.token.admin == true` to grant admin privileges.
  */
 rules_version = '2';
@@ -39,23 +40,25 @@ service cloud.firestore {
     /**
      * @description Rules for the /hotels collection.
      * @path /hotels/{hotelId}
-     * @allow (read, write) If the user is an admin.
-     * @deny (read, write) If the user is not an admin.
-     * @principle Admin-Only Access: Only admins can manage hotel data.
+     * @allow read: if true; // Anyone can read hotel data for public pages.
+     * @allow write: if isAdmin(); // Only admins can create, update, or delete hotels.
+     * @principle Admin-Only Write Access, Public Read Access
      */
     match /hotels/{hotelId} {
-      allow read, write: if isAdmin();
+      allow read: if true;
+      allow write: if isAdmin();
     }
 
     /**
      * @description Rules for the /packages collection.
      * @path /packages/{packageId}
-     * @allow (read, write) If the user is an admin.
-     * @deny (read, write) If the user is not an admin.
-     * @principle Admin-Only Access: Only admins can manage package data.
+     * @allow read: if true; // Anyone can read package data.
+     * @allow write: if isAdmin(); // Only admins can manage packages.
+     * @principle Admin-Only Write Access, Public Read Access
      */
     match /packages/{packageId} {
-      allow read, write: if isAdmin();
+      allow read: if true;
+      allow write: if isAdmin();
     }
 
     /**
