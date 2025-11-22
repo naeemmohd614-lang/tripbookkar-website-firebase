@@ -103,6 +103,20 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
   const watchedCity = useWatch({ control, name: 'city' });
   const watchedBrand = useWatch({ control, name: 'brand' });
 
+  const handleGenerateDescription = async () => {
+    if (!watchedName) {
+        toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating a description." });
+        return;
+    }
+    const result = await generateHotelDescriptionAction({ name: watchedName, city: watchedCity, brand: watchedBrand });
+    if (result.description) {
+        setValue('about', result.description);
+        toast({ title: "Description Generated", description: "The description has been filled in by AI." });
+    } else if (result.error) {
+        toast({ variant: 'destructive', title: 'AI Error', description: result.error });
+    }
+  };
+
   const handleGenerateDetails = async (sections: ('about' | 'dining' | 'experiences' | 'weddings' | 'tags')[]) => {
     if (!watchedName) {
       toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating details." });
@@ -217,7 +231,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                 <div className="space-y-2 md:col-span-2">
                   <div className="flex justify-between items-center">
                      <Label htmlFor="about">About</Label>
-                     <Button type="button" size="sm" variant="ghost" onClick={() => handleGenerateDetails(['about'])}>
+                     <Button type="button" size="sm" variant="ghost" onClick={handleGenerateDescription}>
                         <Wand2 className="mr-2 h-3 w-3" /> Generate
                     </Button>
                   </div>
@@ -424,5 +438,3 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     </div>
   );
 }
-
-    
