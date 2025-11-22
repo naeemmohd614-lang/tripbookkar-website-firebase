@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
-import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
+import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater, Tag } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
 import { generateHotelDetailsAction, generateHotelDescriptionAction } from '@/app/actions';
 import { useFirestore } from '@/firebase';
@@ -103,7 +103,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
   const watchedCity = useWatch({ control, name: 'city' });
   const watchedBrand = useWatch({ control, name: 'brand' });
 
-  const handleGenerateDetails = async () => {
+  const handleGenerateDetails = async (sections: ('about' | 'dining' | 'experiences' | 'weddings' | 'tags')[]) => {
     if (!watchedName) {
       toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating details." });
       return;
@@ -115,39 +115,17 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     });
 
     if (result.details) {
-      const { about, diningExperiences, experiencesAndActivities, weddingVenues, tags } = result.details;
-      setValue('about', about);
-      setValue('diningExperiences', diningExperiences || []);
-      setValue('experiencesAndActivities', experiencesAndActivities || []);
-      setValue('weddingVenues', weddingVenues || []);
-      setValue('tags', tags || []);
-      toast({ title: "Hotel Details Generated", description: "All details have been filled in by AI." });
+      if(sections.includes('about')) setValue('about', result.details.about);
+      if(sections.includes('dining')) setValue('diningExperiences', result.details.diningExperiences || []);
+      if(sections.includes('experiences')) setValue('experiencesAndActivities', result.details.experiencesAndActivities || []);
+      if(sections.includes('weddings')) setValue('weddingVenues', result.details.weddingVenues || []);
+      if(sections.includes('tags')) setValue('tags', result.details.tags || []);
+      toast({ title: "AI Generation Complete", description: "Selected details have been filled in." });
     }
     if (result.error) {
        toast({ variant: 'destructive', title: 'AI Error', description: result.error });
     }
   };
-
-  const handleGenerateDescription = async () => {
-    if (!watchedName) {
-      toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating a description." });
-      return;
-    }
-    const result = await generateHotelDescriptionAction({
-      name: watchedName,
-      city: watchedCity,
-      brand: watchedBrand,
-    });
-
-    if (result.description) {
-      setValue('about', result.description);
-      toast({ title: "Description Generated", description: "The 'About' section has been filled in by AI." });
-    }
-    if (result.error) {
-       toast({ variant: 'destructive', title: 'AI Error', description: result.error });
-    }
-  };
-
 
   const onSubmit: SubmitHandler<Hotel> = async (data) => {
     if (!firestore) {
@@ -158,14 +136,11 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     try {
       let hotelData: Hotel;
       if (hotel?.id) {
-        // For existing hotels, we just merge the updated data.
-        // We assume essential IDs like hotelId, cityId, etc. already exist.
         hotelData = data;
         const hotelRef = doc(firestore, 'hotels', hotel.id);
         await setDocumentNonBlocking(hotelRef, hotelData, { merge: true });
         toast({ title: 'Hotel Updated', description: `"${data.name}" has been saved.` });
       } else {
-        // For a NEW hotel, we must generate all the necessary IDs.
         const generatedId = slugify(data.name);
         hotelData = {
           ...data,
@@ -207,7 +182,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
               <CardTitle className="text-2xl font-bold">{hotel?.id ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
               <CardDescription>Manage hotel details, room categories, and images.</CardDescription>
             </div>
-            <Button type="button" onClick={handleGenerateDetails} variant="outline">
+            <Button type="button" onClick={() => handleGenerateDetails(['about', 'dining', 'experiences', 'weddings', 'tags'])} variant="outline">
               <Wand2 className="mr-2 h-4 w-4" />
               Generate All Details with AI
             </Button>
@@ -242,7 +217,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                 <div className="space-y-2 md:col-span-2">
                   <div className="flex justify-between items-center">
                      <Label htmlFor="about">About</Label>
-                     <Button type="button" size="sm" variant="ghost" onClick={handleGenerateDescription}>
+                     <Button type="button" size="sm" variant="ghost" onClick={() => handleGenerateDetails(['about'])}>
                         <Wand2 className="mr-2 h-3 w-3" /> Generate
                     </Button>
                   </div>
@@ -296,9 +271,14 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
             <section>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold flex items-center gap-2"><Utensils className="w-5 h-5"/>Dining Experiences</h3>
-                    <Button type="button" variant="outline" onClick={() => appendDining({ name: '', type: '' })}>
-                        Add Dining
-                    </Button>
+                    <div className="flex items-center gap-2">
+                        <Button type="button" variant="ghost" size="sm" onClick={() => handleGenerateDetails(['dining'])}>
+                            <Wand2 className="mr-2 h-4 w-4" /> Generate
+                        </Button>
+                        <Button type="button" variant="outline" onClick={() => appendDining({ name: '', type: '' })}>
+                            Add Dining
+                        </Button>
+                    </div>
                 </div>
                 <div className="space-y-4">
                     {diningFields.map((field, index) => (
@@ -324,9 +304,14 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
              <section>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold flex items-center gap-2"><Zap className="w-5 h-5"/>Experiences &amp; Activities</h3>
-                    <Button type="button" variant="outline" onClick={() => appendExperience({ value: '' } as any)}>
-                       Add Activity
-                    </Button>
+                    <div className="flex items-center gap-2">
+                         <Button type="button" variant="ghost" size="sm" onClick={() => handleGenerateDetails(['experiences'])}>
+                            <Wand2 className="mr-2 h-4 w-4" /> Generate
+                        </Button>
+                        <Button type="button" variant="outline" onClick={() => appendExperience({ value: '' } as any)}>
+                           Add Activity
+                        </Button>
+                    </div>
                 </div>
                 <div className="space-y-4">
                     {experienceFields.map((field, index) => (
@@ -348,9 +333,14 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
              <section>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold flex items-center gap-2"><Mic2 className="w-5 h-5"/>Wedding Venues</h3>
-                    <Button type="button" variant="outline" onClick={() => appendWedding({ value: '' } as any)}>
-                        Add Venue
-                    </Button>
+                    <div className="flex items-center gap-2">
+                         <Button type="button" variant="ghost" size="sm" onClick={() => handleGenerateDetails(['weddings'])}>
+                            <Wand2 className="mr-2 h-4 w-4" /> Generate
+                        </Button>
+                        <Button type="button" variant="outline" onClick={() => appendWedding({ value: '' } as any)}>
+                            Add Venue
+                        </Button>
+                    </div>
                 </div>
                 <div className="space-y-4">
                     {weddingFields.map((field, index) => (
@@ -371,10 +361,15 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
 
              <section>
                 <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-semibold">Tags</h3>
-                    <Button type="button" variant="outline" onClick={() => appendTag({ value: '' } as any)}>
-                        Add Tag
-                    </Button>
+                    <h3 className="text-lg font-semibold flex items-center gap-2"><Tag className="w-5 h-5" />Tags</h3>
+                     <div className="flex items-center gap-2">
+                         <Button type="button" variant="ghost" size="sm" onClick={() => handleGenerateDetails(['tags'])}>
+                            <Wand2 className="mr-2 h-4 w-4" /> Generate
+                        </Button>
+                        <Button type="button" variant="outline" onClick={() => appendTag({ value: '' } as any)}>
+                            Add Tag
+                        </Button>
+                    </div>
                 </div>
                 <div className="space-y-4">
                     {tagFields.map((field, index) => (
@@ -429,3 +424,5 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     </div>
   );
 }
+
+    
