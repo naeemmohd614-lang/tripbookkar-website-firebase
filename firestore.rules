@@ -84,6 +84,17 @@ service cloud.firestore {
         allow write: if isAdmin();
     }
 
+    /**
+     * @description Rules for the /states collection.
+     * @path /states/{stateId}
+     * @allow read, list: if true; // Anyone can read or list states for public pages.
+     * @allow write: if isAdmin(); // Only admins can manage states.
+     */
+    match /states/{stateId} {
+      allow read, list: if true;
+      allow write: if isAdmin();
+    }
+
 
     /**
      * @description Rules for the /affiliates collection.
