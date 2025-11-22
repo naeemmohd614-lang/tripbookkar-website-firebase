@@ -1,0 +1,193 @@
+
+[
+  {
+    "name": "The Oberoi, New Delhi",
+    "brand": "Oberoi",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Dr. Zakir Hussain Marg, New Delhi, Delhi 110003",
+    "about": "A landmark hotel in the heart of the capital, The Oberoi, New Delhi offers breathtaking views of Delhi Golf Course and Humayun's Tomb. It's a perfect blend of tradition and contemporary sophistication.",
+    "basePrice": 25000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-delhi-1/1080/720", "caption": "The Oberoi New Delhi Exterior" },
+      { "src": "https://picsum.photos/seed/oberoi-delhi-2/1080/720", "caption": "Luxurious Hotel Lobby" }
+    ],
+    "distance": { "Indira Gandhi International Airport": "15 km" },
+    "roomCategories": [{ "name": "Luxury Room", "count": 220, "size": "550 sqft" }],
+    "diningExperiences": [
+      { "name": "Threesixty", "type": "Multi-cuisine" },
+      { "name": "Omya", "type": "Indian" },
+      { "name": "Baoshuan", "type": "Chinese" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Indoor & Outdoor Pools", "24-hour Fitness Centre" ],
+    "weddingVenues": [ "The Grand Ballroom", "Himalaya Ballroom" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["iconic", "luxury", "new delhi"]
+  },
+  {
+    "name": "The Oberoi Amarvilas, Agra",
+    "brand": "Oberoi",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "address": "Taj East Gate Rd, Paktola, Tajganj, Agra, Uttar Pradesh 282001",
+    "about": "Located just 600 meters from the Taj Mahal, this luxury hotel offers uninterrupted views of the monument from every room. Experience Mughal-inspired architecture and royal hospitality.",
+    "basePrice": 50000,
+    "rating": 5,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-agra-1/1080/720", "caption": "View of Taj Mahal from the hotel" },
+      { "src": "https://picsum.photos/seed/oberoi-agra-2/1080/720", "caption": "Poolside with arches" }
+    ],
+    "distance": { "Agra Airport": "13 km" },
+    "roomCategories": [{ "name": "Premier Room with Balcony", "count": 102, "size": "480 sqft" }],
+    "diningExperiences": [
+      { "name": "Bellevue", "type": "International" },
+      { "name": "Esphahan", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Private dining with Taj Mahal views", "Yoga & Meditation" ],
+    "weddingVenues": [ "The Ballroom", "The Lawns" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["taj mahal view", "luxury", "romantic", "agra"]
+  },
+  {
+    "name": "Wildflower Hall, An Oberoi Resort, Shimla",
+    "brand": "Oberoi",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "address": "Chharabra, Shimla, Himachal Pradesh 171012",
+    "about": "Set in 22 acres of virgin woods of pine and cedar, the former residence of Lord Kitchener is a fairytale luxury resort. It offers spectacular views of the Himalayas.",
+    "basePrice": 35000,
+    "rating": 4.9,
+    "images": [
+      { "src": "https://images.unsplash.com/photo-1622462047242-2ac2e1f7908b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8V2lsZGZsb3dlciUyMEhhbGwlMjBleHRlcmlvcnxlbnwwfHx8fDE3NjM3MjA2ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Wildflower Hall exterior" },
+      { "src": "https://picsum.photos/seed/wildflower-shimla-2/1080/720", "caption": "Indoor heated pool" }
+    ],
+    "distance": { "Shimla Airport": "30 km" },
+    "roomCategories": [{ "name": "Deluxe Garden View Room", "count": 85, "size": "430 sqft" }],
+    "diningExperiences": [
+      { "name": "The Restaurant", "type": "Multi-cuisine" },
+      { "name": "Lutyens", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Nature walks", "River rafting", "Trekking" ],
+    "weddingVenues": [ "The Ballroom", "The Lawns" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "mountain view", "shimla", "romantic"]
+  },
+  {
+    "name": "The Oberoi Grand, Kolkata",
+    "brand": "Oberoi",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "address": "15, Jawaharlal Nehru Rd, New Market Area, Dharmatala, Taltala, Kolkata, West Bengal 700013",
+    "about": "Affectionately known as the 'Grande Dame of Chowringhee', this iconic hotel offers a blend of classic Victorian architecture and modern amenities. A true oasis in the heart of the city.",
+    "basePrice": 18000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-kolkata-1/1080/720", "caption": "The Oberoi Grand exterior" },
+      { "src": "https://picsum.photos/seed/oberoi-kolkata-2/1080/720", "caption": "Courtyard pool" }
+    ],
+    "distance": { "Netaji Subhas Chandra Bose International Airport": "16 km" },
+    "roomCategories": [{ "name": "Luxury Room", "count": 209, "size": "400 sqft" }],
+    "diningExperiences": [
+      { "name": "Threesixtythree°", "type": "Multi-cuisine" },
+      { "name": "Baan Thai", "type": "Thai" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "City Heritage Walks" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Burdwan & Coochbehar Suites" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "luxury", "kolkata", "downtown"]
+  },
+  {
+    "name": "The Oberoi, Bengaluru",
+    "brand": "Oberoi",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "address": "37-39, Mahatma Gandhi Rd, Yellappa Garden, Yellappa Chetty Layout, Sivanchetti Gardens, Bengaluru, Karnataka 560001",
+    "about": "A serene sanctuary in the heart of the city, this hotel is known for its lush, tropical gardens and tranquil ambiance, offering a peaceful retreat from the bustling city.",
+    "basePrice": 20000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-bengaluru-1/1080/720", "caption": "Garden view from the hotel" },
+      { "src": "https://picsum.photos/seed/oberoi-bengaluru-2/1080/720", "caption": "The lobby with lush greenery" }
+    ],
+    "distance": { "Kempegowda International Airport": "35 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 160, "size": "450 sqft" }],
+    "diningExperiences": [
+      { "name": "Le Jardin", "type": "Multi-cuisine" },
+      { "name": "Szechwan Court", "type": "Chinese" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Garden Tours", "Yoga Sessions" ],
+    "weddingVenues": [ "The Ballroom", "The Orchid Room" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "garden", "bengaluru"]
+  },
+  {
+    "name": "The Oberoi, Mumbai",
+    "brand": "Oberoi",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Nariman Point, Mumbai, Maharashtra 400021",
+    "about": "Located at the heart of the business and entertainment district, The Oberoi, Mumbai offers stunning views of the ocean and the city's skyline. It's renowned for its contemporary design and impeccable service.",
+    "basePrice": 22000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-mumbai-1/1080/720", "caption": "The Oberoi, Mumbai ocean view" }
+    ],
+    "distance": { "Chhatrapati Shivaji Maharaj International Airport": "25 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 287, "size": "400 sqft" }],
+    "diningExperiences": [
+      { "name": "Ziya", "type": "Indian" },
+      { "name": "Vetro", "type": "Italian" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Art Gallery", "Sunset at Marine Drive" ],
+    "weddingVenues": [ "The Jaipur Suite", "The Udaipur Suite" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["sea view", "luxury", "mumbai", "business"]
+  },
+  {
+    "name": "The Oberoi Udaivilas, Udaipur",
+    "brand": "Oberoi",
+    "city": "Udaipur",
+    "state": "Rajasthan",
+    "address": "Badi-Gorela-Mulla Talai Rd, Haridas Ji Ki Magri, Pichola, Udaipur, Rajasthan 313001",
+    "about": "A magnificent property on the banks of Lake Pichola, The Oberoi Udaivilas stands on the 200-year-old hunting grounds of the Maharana of Mewar. It showcases the rich heritage of the Land of Kings.",
+    "basePrice": 55000,
+    "rating": 5,
+    "images": [
+      { "src": "https://picsum.photos/seed/oberoi-udaipur-1/1080/720", "caption": "The grand architecture of Udaivilas" }
+    ],
+    "distance": { "Maharana Pratap Airport": "27 km" },
+    "roomCategories": [{ "name": "Premier Room with Semi Private Pool", "count": 87, "size": "600 sqft" }],
+    "diningExperiences": [
+      { "name": "Suryamahal", "type": "Multi-cuisine" },
+      { "name": "Udaimahal", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Shikara ride with wine", "Cooking sessions" ],
+    "weddingVenues": [ "The Front Lawns", "The Chandra Mahal" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["palace", "heritage", "romantic", "udaipur", "luxury"]
+  },
+  {
+    "name": "The Oberoi Cecil, Shimla",
+    "brand": "Oberoi",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "address": "Chaura Maidan Rd, Nabha, Shimla, Himachal Pradesh 171004",
+    "about": "A Grand Heritage Hotel, The Oberoi Cecil dates back over 100 years. It offers a colonial-era charm, with its wood-paneled interiors, period furniture, and warm, gracious service.",
+    "basePrice": 22000,
+    "rating": 4.8,
+    "images": [
+      { "src": "https://images.unsplash.com/photo-1697037127735-93c52f49af7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxDb2xvbmlhbCUyMGZhY2FkZSUyMG9mJTIwVGhlJTIwT2Jlcm9pJTIwQ2VjaWx8ZW58MHx8fHwxNzYzNzIwNjgxfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Colonial facade of The Oberoi Cecil" }
+    ],
+    "distance": { "Shimla Airport": "22 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 75, "size": "350 sqft" }],
+    "diningExperiences": [
+      { "name": "The Restaurant", "type": "Multi-cuisine" },
+      { "name": "The Lounge", "type": "Lounge" }
+    ],
+    "experiencesAndActivities": [ "The Oberoi Spa", "Heritage walks", "Indoor heated pool" ],
+    "weddingVenues": [ "The Ballroom", "The Cedar Garden" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "colonial", "shimla"]
+  }
+]

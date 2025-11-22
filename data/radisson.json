@@ -1,0 +1,215 @@
+
+[
+  {
+    "name": "Radisson Blu Marina Hotel Connaught Place",
+    "brand": "Radisson Blu",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "G-59, Connaught Circus, New Delhi, Delhi 110001",
+    "about": "A heritage hotel in the heart of Delhi, offering a blend of colonial charm and modern luxury. Its central location provides easy access to business hubs and historical sites.",
+    "basePrice": 12000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-delhi-1/1080/720", "caption": "Radisson Blu Marina Hotel exterior" }
+    ],
+    "distance": { "Indira Gandhi International Airport": "15 km" },
+    "roomCategories": [{ "name": "Superior Room", "count": 90, "size": "280 sqft" }],
+    "diningExperiences": [
+        { "name": "The Great Kabab Factory", "type": "Indian" },
+        { "name": "Fifty9", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Spa", "Fitness Center" ],
+    "weddingVenues": [ "The Connaught Hall" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["heritage", "business", "downtown", "new delhi"]
+  },
+  {
+    "name": "Radisson Gwalior",
+    "brand": "Radisson",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "address": "Plot No 13-14, City Centre, Gwalior, Madhya Pradesh 474011",
+    "about": "A modern hotel located in the city center, offering comfortable accommodations and a range of amenities for business and leisure travelers. It's a great base for exploring Gwalior Fort.",
+    "basePrice": 7000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-gwalior/1080/720", "caption": "Radisson Gwalior exterior" }
+    ],
+    "distance": { "Gwalior Airport": "12 km" },
+    "roomCategories": [{ "name": "Superior Room", "count": 89, "size": "300 sqft" }],
+    "diningExperiences": [
+        { "name": "Indish", "type": "Indian" },
+        { "name": "The Creative Kitchen", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Fitness Center", "Spa" ],
+    "weddingVenues": [ "The Grand Ballroom", "Meeting Rooms" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "city hotel", "gwalior"]
+  },
+  {
+    "name": "Radisson Jass Shimla",
+    "brand": "Radisson",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "address": "Goodwood Estate, Lower Bharari Rd, Shimla, Himachal Pradesh 171001",
+    "about": "Nestled amidst cedar forests, this resort offers a peaceful retreat with panoramic views of the Himalayas. Features an outdoor pool and a rejuvenating spa.",
+    "basePrice": 10000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://images.unsplash.com/photo-1712620506151-fa74c778a8e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxWaWV3JTIwZnJvbSUyMHRoZSUyMGhvdGVsfGVufDB8fHx8MTc2MzcyMDY4MXww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View from the hotel" }
+    ],
+    "distance": { "Shimla Airport": "26 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 59, "size": "350 sqft" }],
+    "diningExperiences": [
+      { "name": "Cafe Valley Vue", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "Sansha Spa", "Outdoor heated pool", "Nature walks" ],
+    "weddingVenues": [ "The Grand Ballroom" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["mountain view", "resort", "shimla"]
+  },
+  {
+    "name": "Radisson Blu Hotel Indore",
+    "brand": "Radisson Blu",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "address": "12, Scheme 94C, Ring Road, Indore, Madhya Pradesh 452010",
+    "about": "A stylish hotel offering upscale amenities, including a rooftop pool and fine dining restaurants. It's a popular choice for business and leisure travelers in Indore.",
+    "basePrice": 11000,
+    "rating": 4.7,
+    "images": [
+      { "src": "https://picsum.photos/seed/radisson-indore/1080/720", "caption": "Rooftop pool area" }
+    ],
+    "distance": { "Devi Ahilya Bai Holkar Airport": "16 km" },
+    "roomCategories": [{ "name": "Superior Room", "count": 200, "size": "377 sqft" }],
+     "diningExperiences": [
+        { "name": "The Creative Kitchen", "type": "All-day dining" },
+        { "name": "Ni Hao", "type": "Chinese" },
+        { "name": "Indore Kitchen", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Sky-lit rooftop pool", "Spa", "Fitness Center" ],
+    "weddingVenues": [ "The Grand Summit Ballroom", "The Senate Hall" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "indore"]
+  },
+  {
+    "name": "Radisson Blu Hotel GRT Chennai",
+    "brand": "Radisson Blu",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "address": "531, GST Road, St. Thomas Mount, Chennai, Tamil Nadu 600016",
+    "about": "An elegant business hotel located near Chennai International Airport. Offers stylish rooms, a beautiful garden pool, and award-winning dining experiences.",
+    "basePrice": 10000,
+    "rating": 4.6,
+    "images": [{ "src": "https://picsum.photos/seed/radisson-chennai-1/1080/720", "caption": "Hotel exterior" }],
+    "roomCategories": [{ "name": "Superior Room", "count": 101, "size": "320 sqft" }],
+    "diningExperiences": [
+        { "name": "Salt.Co.531", "type": "All-day dining" },
+        { "name": "The Great Kabab Factory", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Bodhi Spa", "Garden Pool" ],
+    "weddingVenues": [ "The Royal Court", "The Summit" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["airport hotel", "business", "chennai"]
+  },
+  {
+    "name": "Radisson Blu Resort Temple Bay Mamallapuram",
+    "brand": "Radisson Blu",
+    "city": "Mahabalipuram",
+    "state": "Tamil Nadu",
+    "address": "57, Covelong Road, Mahabalipuram, Tamil Nadu 603104",
+    "about": "A sprawling beachfront resort set amidst 44 acres of landscaped gardens, offering stunning views of the Bay of Bengal. Features the longest swimming pool in India.",
+    "basePrice": 15000,
+    "rating": 4.5,
+    "images": [{ "src": "https://picsum.photos/seed/radisson-templebay-1/1080/720", "caption": "Beachfront pool view" }],
+    "roomCategories": [{ "name": "Chalet", "count": 157, "size": "450 sqft" }],
+    "diningExperiences": [
+        { "name": "Water's Edge Cafe", "type": "All-day dining" },
+        { "name": "Wharf 2.0", "type": "Seafood" }
+    ],
+    "experiencesAndActivities": [ "Bodhi Spa", "9-hole mini golf course", "ATV rides" ],
+    "weddingVenues": [ "The Grand Ballroom", "Beachside Lawns" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["beach resort", "luxury", "mahabalipuram"]
+  },
+  {
+    "name": "Park Plaza Ludhiana",
+    "brand": "Park Plaza",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "address": "Ferozepur Rd, Gurdev Nagar, Ludhiana, Punjab 141001",
+    "about": "A premium hotel in the heart of Ludhiana's business district. Offers modern amenities, spacious rooms, and a variety of dining options.",
+    "basePrice": 7000,
+    "rating": 4.4,
+    "images": [{ "src": "https://picsum.photos/seed/parkplaza-ludhiana-1/1080/720", "caption": "Hotel lobby" }],
+    "roomCategories": [{ "name": "Superior Room", "count": 91, "size": "300 sqft" }],
+    "diningExperiences": [
+        { "name": "Panorama", "type": "Multi-cuisine" },
+        { "name": "Orient Blade", "type": "Pan-Asian" }
+    ],
+    "experiencesAndActivities": [ "Outdoor Pool", "Fitness Center" ],
+    "weddingVenues": [ "The Majestic Ballroom", "The Senate Hall" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "ludhiana"]
+  },
+  {
+    "name": "Radisson Blu Hotel, Guwahati",
+    "brand": "Radisson Blu",
+    "city": "Guwahati",
+    "state": "Assam",
+    "address": "National Highway 37, Gotanagar, Guwahati, Assam 781033",
+    "about": "A serene urban resort nestled between the city and the lush green hills. Offers a tranquil escape with its beautiful infinity pool and modern amenities.",
+    "basePrice": 9000,
+    "rating": 4.5,
+    "images": [{ "src": "https://picsum.photos/seed/radisson-guwahati-1/1080/720", "caption": "Infinity pool" }],
+    "roomCategories": [{ "name": "Superior Room", "count": 196, "size": "355 sqft" }],
+    "diningExperiences": [
+        { "name": "Café B-You", "type": "All-day dining" },
+        { "name": "The Great Kabab Factory", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Rejuv Spa", "Infinity Pool", "Fitness Center" ],
+    "weddingVenues": [ "The Grand Ballroom" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["resort", "guwahati", "business"]
+  },
+  {
+    "name": "Radisson Blu Udaipur Palace Resort & Spa",
+    "brand": "Radisson Blu",
+    "city": "Udaipur",
+    "state": "Rajasthan",
+    "address": "B-1, Ambamata Scheme - A, Opp. Aravali Hospital, Udaipur, Rajasthan 313001",
+    "about": "Overlooking the Fateh Sagar Lake, this palace-style resort offers stunning views and a luxurious stay. Features beautiful architecture and a two-level swimming pool.",
+    "basePrice": 12000,
+    "rating": 4.6,
+    "images": [{ "src": "https://picsum.photos/seed/radisson-udaipur-1/1080/720", "caption": "Hotel overlooking Fateh Sagar Lake" }],
+    "roomCategories": [{ "name": "Superior Room", "count": 245, "size": "430 sqft" }],
+    "diningExperiences": [
+        { "name": "Aravali Roof Top", "type": "Indian" },
+        { "name": "Neel Kamal Restaurant", "type": "Multi-cuisine" }
+    ],
+    "experiencesAndActivities": [ "The Spa", "Two-tier swimming pool", "Kids Club" ],
+    "weddingVenues": [ "The Grand Ballroom", "The Lakeview Lawns" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["lake view", "resort", "udaipur"]
+  },
+  {
+    "name": "Radisson Mumbai Andheri MIDC",
+    "brand": "Radisson",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "X - 22, MIDC Central Road, Andheri East, Mumbai, Maharashtra 400093",
+    "about": "A contemporary hotel in the business hub of Andheri. Offers stylish rooms, a rooftop pool, and convenient access to the airport and exhibition centers.",
+    "basePrice": 9000,
+    "rating": 4.4,
+    "images": [{ "src": "https://picsum.photos/seed/radisson-mumbai-andheri-1/1080/720", "caption": "Rooftop pool" }],
+    "roomCategories": [{ "name": "Superior Room", "count": 111, "size": "300 sqft" }],
+    "diningExperiences": [
+        { "name": "The Gallery Cafe", "type": "All-day dining" },
+        { "name": "Qebab & Curry", "type": "Indian" }
+    ],
+    "experiencesAndActivities": [ "Rooftop Pool", "Fitness Center" ],
+    "weddingVenues": [ "The Emerald Hall" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["business", "mumbai"]
+  }
+]
