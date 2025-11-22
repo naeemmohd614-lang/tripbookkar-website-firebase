@@ -223,7 +223,7 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1657077684125-c46749cabed2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM3NjQwNDl8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
+      { "src": "https://cache.marriott.com/is/image/marriotts7prod/dedjw-exterior-0029:Pano-Hor?wid=1600&fit=constrain", "caption": "Resort with valley view" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-2.webp", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
