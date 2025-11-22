@@ -1,10 +1,11 @@
 'use server';
 
 /**
- * @fileOverview Flow for generating SEO-optimized pages for cities, states, and hotel types.
+ * @fileOverview Flow for generating SEO-optimized pages and hotel details.
  *
- * - generateSeoPage - A function that handles the generation of SEO pages.
- * - generateHotelDescription - Generates a compelling description for a hotel.
+ * - generateSeoPage - Generates SEO-optimized content for a given page type.
+ * - generateHotelDescription - Generates a compelling "about" paragraph for a hotel.
+ * - generateHotelDetails - Generates a comprehensive set of details for a hotel.
  */
 
 import {ai} from '@/ai/genkit';
@@ -13,10 +14,14 @@ import {
   GenerateSeoPageOutputSchema,
   GenerateHotelDescriptionInputSchema,
   GenerateHotelDescriptionOutputSchema,
+  GenerateHotelDetailsInputSchema,
+  GenerateHotelDetailsOutputSchema,
   type GenerateSeoPageInput,
   type GenerateSeoPageOutput,
   type GenerateHotelDescriptionInput,
   type GenerateHotelDescriptionOutput,
+  type GenerateHotelDetailsInput,
+  type GenerateHotelDetailsOutput
 } from '@/lib/types';
 
 
@@ -99,4 +104,43 @@ const generateHotelDescriptionFlow = ai.defineFlow(
 
 export async function generateHotelDescription(input: GenerateHotelDescriptionInput): Promise<GenerateHotelDescriptionOutput> {
   return generateHotelDescriptionFlow(input);
+}
+
+
+const generateHotelDetailsPrompt = ai.definePrompt({
+  name: 'generateHotelDetailsPrompt',
+  input: { schema: GenerateHotelDetailsInputSchema },
+  output: { schema: GenerateHotelDetailsOutputSchema },
+  prompt: `You are a creative travel content writer for a luxury travel website. Your task is to generate compelling details for a hotel based on its name, brand, and city. Infer likely features based on the hotel's branding and location (e.g., a 'resort' will have leisure activities, a 'business' hotel will have meeting rooms).
+
+Hotel Details:
+- Name: {{{name}}}
+- City: {{{city}}}
+- Brand: {{{brand}}}
+
+Instructions:
+1.  **About**: Write one engaging paragraph highlighting the hotel's key features and unique selling points. The tone should be sophisticated and inviting.
+2.  **Dining Experiences**: Suggest 2-3 likely dining experiences with a name and type (e.g., "The Lantern", "Chinese").
+3.  **Experiences & Activities**: Suggest 3-4 likely experiences or activities available at the hotel (e.g., "Rooftop Pool", "Spa", "Fitness Center").
+4.  **Wedding Venues**: Suggest 2-3 potential wedding venues (e.g., "Grand Ballroom", "Outdoor Lawns").
+5.  **Tags**: Provide 3-5 relevant, one-word or two-word tags (e.g., "luxury", "business", "city view", "pet friendly").
+
+Output the result in a valid JSON object.
+`,
+});
+
+const generateHotelDetailsFlow = ai.defineFlow(
+  {
+    name: 'generateHotelDetailsFlow',
+    inputSchema: GenerateHotelDetailsInputSchema,
+    outputSchema: GenerateHotelDetailsOutputSchema,
+  },
+  async (input) => {
+    const { output } = await generateHotelDetailsPrompt(input);
+    return output!;
+  }
+);
+
+export async function generateHotelDetails(input: GenerateHotelDetailsInput): Promise<GenerateHotelDetailsOutput> {
+  return generateHotelDetailsFlow(input);
 }

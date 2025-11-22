@@ -281,6 +281,23 @@ export const GenerateHotelDescriptionOutputSchema = z.object({
 });
 export type GenerateHotelDescriptionOutput = z.infer<typeof GenerateHotelDescriptionOutputSchema>;
 
+// Hotel Details Flow
+export const GenerateHotelDetailsInputSchema = z.object({
+  name: z.string().describe('The name of the hotel.'),
+  city: z.string().optional().describe('The city where the hotel is located.'),
+  brand: z.string().optional().describe('The brand of the hotel.'),
+});
+export type GenerateHotelDetailsInput = z.infer<typeof GenerateHotelDetailsInputSchema>;
+
+export const GenerateHotelDetailsOutputSchema = z.object({
+  about: z.string().describe('A compelling, paragraph-long "about" description for the hotel.'),
+  diningExperiences: z.array(z.object({ name: z.string(), type: z.string() })).describe('A list of 2-3 potential dining experiences.'),
+  experiencesAndActivities: z.array(z.string()).describe('A list of 3-4 likely experiences and activities.'),
+  weddingVenues: z.array(z.string()).describe('A list of 2-3 potential wedding venues.'),
+  tags: z.array(z.string()).describe('A list of 3-5 relevant tags for the hotel.'),
+});
+export type GenerateHotelDetailsOutput = z.infer<typeof GenerateHotelDetailsOutputSchema>;
+
 
 // Personalized Recommendations Flow
 export const PersonalizedHotelRecommendationsInputSchema = z.object({
@@ -318,3 +335,10 @@ export type HotelDescriptionState = {
   description?: string;
   error?: string;
 }
+
+// State for Hotel Details Generator
+export type HotelDetailsState = {
+  details?: GenerateHotelDetailsOutput;
+  error?: string;
+}
+

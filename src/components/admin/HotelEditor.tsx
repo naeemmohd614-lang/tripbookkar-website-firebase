@@ -10,7 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
 import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
-import { generateHotelDescriptionAction } from '@/app/actions';
+import { generateHotelDetailsAction } from '@/app/actions';
 import { useFirestore } from '@/firebase';
 import { doc, collection } from 'firebase/firestore';
 import { setDocumentNonBlocking, addDocumentNonBlocking } from '@/firebase';
@@ -75,6 +75,11 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     name: "weddingVenues"
   });
 
+  const { fields: tagFields, append: appendTag, remove: removeTag } = useFieldArray({
+      control,
+      name: "tags"
+  });
+
   useEffect(() => {
     if (hotel) {
       reset(hotel);
@@ -85,20 +90,25 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
   const watchedCity = useWatch({ control, name: 'city' });
   const watchedBrand = useWatch({ control, name: 'brand' });
 
-  const handleGenerateDescription = async () => {
+  const handleGenerateDetails = async () => {
     if (!watchedName) {
-      toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating a description." });
+      toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating details." });
       return;
     }
-    const result = await generateHotelDescriptionAction({
+    const result = await generateHotelDetailsAction({
       name: watchedName,
       city: watchedCity,
       brand: watchedBrand,
     });
 
-    if (result.description) {
-      setValue('about', result.description);
-      toast({ title: "Description Generated", description: "The AI-powered description has been filled in." });
+    if (result.details) {
+      const { about, diningExperiences, experiencesAndActivities, weddingVenues, tags } = result.details;
+      setValue('about', about);
+      setValue('diningExperiences', diningExperiences);
+      setValue('experiencesAndActivities', experiencesAndActivities);
+      setValue('weddingVenues', weddingVenues);
+      setValue('tags', tags);
+      toast({ title: "Hotel Details Generated", description: "All details have been filled in by AI." });
     }
     if (result.error) {
        toast({ variant: 'destructive', title: 'AI Error', description: result.error });
@@ -143,8 +153,16 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     <div className="max-w-4xl mx-auto">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">{hotel?.id ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
-          <CardDescription>Manage hotel details, room categories, and images.</CardDescription>
+          <div className="flex justify-between items-center">
+            <div>
+              <CardTitle className="text-2xl font-bold">{hotel?.id ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
+              <CardDescription>Manage hotel details, room categories, and images.</CardDescription>
+            </div>
+            <Button type="button" onClick={handleGenerateDetails} variant="outline">
+              <Wand2 className="mr-2 h-4 w-4" />
+              Generate All Details with AI
+            </Button>
+          </div>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
@@ -173,13 +191,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                   <Input id="address" {...register('address')} />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <div className="flex justify-between items-center">
-                    <Label htmlFor="about">About</Label>
-                    <Button type="button" variant="outline" size="sm" onClick={handleGenerateDescription}>
-                      <Wand2 className="mr-2 h-4 w-4"/>
-                      Generate with AI
-                    </Button>
-                  </div>
+                  <Label htmlFor="about">About</Label>
                   <Textarea id="about" {...register('about')} rows={5}/>
                 </div>
                  <div className="space-y-2">
@@ -294,6 +306,27 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                                 <Input {...register(`weddingVenues.${index}` as any)} placeholder="e.g., Grand Ballroom" />
                             </div>
                             <Button type="button" variant="destructive" size="icon" onClick={() => removeWedding(index)}>
+                                <Trash2 className="h-4 w-4" />
+                            </Button>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+             <Separator />
+
+             <section>
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold">Tags</h3>
+                    <Button type="button" variant="outline" onClick={() => appendTag({ value: '' } as any)}>
+                        Add Tag
+                    </Button>
+                </div>
+                <div className="space-y-4">
+                    {tagFields.map((field, index) => (
+                         <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end">
+                            <Input {...register(`tags.${index}` as any)} placeholder="e.g., luxury" />
+                            <Button type="button" variant="destructive" size="icon" onClick={() => removeTag(index)}>
                                 <Trash2 className="h-4 w-4" />
                             </Button>
                         </div>

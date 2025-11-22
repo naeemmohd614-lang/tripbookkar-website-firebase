@@ -2,15 +2,17 @@
 'use server';
 
 import { personalizedHotelRecommendations } from '@/ai/flows/personalized-hotel-recommendations';
-import { generateSeoPage, generateHotelDescription } from '@/ai/flows/generate-seo-pages';
+import { generateSeoPage, generateHotelDescription, generateHotelDetails } from '@/ai/flows/generate-seo-pages';
 import { z } from 'zod';
 import type { 
   RecommendationsState, 
   SeoGeneratorState, 
   HotelDescriptionState,
+  HotelDetailsState,
   GenerateSeoPageInput,
   PersonalizedHotelRecommendationsInput,
-  GenerateHotelDescriptionInput
+  GenerateHotelDescriptionInput,
+  GenerateHotelDetailsInput,
 } from '@/lib/types';
 
 export async function getRecommendations(
@@ -94,5 +96,15 @@ export async function generateHotelDescriptionAction(input: GenerateHotelDescrip
   } catch(e: any) {
     console.error(e);
     return { error: 'Failed to generate description.' };
+  }
+}
+
+export async function generateHotelDetailsAction(input: GenerateHotelDetailsInput): Promise<HotelDetailsState> {
+  try {
+    const result = await generateHotelDetails(input);
+    return { details: result };
+  } catch(e: any) {
+    console.error(e);
+    return { error: 'Failed to generate hotel details.' };
   }
 }
