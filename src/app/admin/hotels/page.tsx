@@ -64,26 +64,12 @@ function BulkImportMenu() {
             <DropdownMenuTrigger asChild>
                 <Button variant="outline">
                     <Upload className="mr-2 h-4 w-4" />
-                    Bulk Import
+                    Bulk Import Hotels
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-                <DropdownMenuLabel>Import Data</DropdownMenuLabel>
+                <DropdownMenuLabel>Import Hotels by Brand</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem 
-                    onClick={() => handleImport('states')}
-                    disabled={isImporting === 'states'}
-                >
-                    {isImporting === 'states' ? 'Importing...' : 'Import States'}
-                </DropdownMenuItem>
-                 <DropdownMenuItem 
-                    onClick={() => handleImport('interests')}
-                    disabled={isImporting === 'interests'}
-                >
-                    {isImporting === 'interests' ? 'Importing...' : 'Import Interests'}
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                 <DropdownMenuLabel>Import Hotels by Brand</DropdownMenuLabel>
                 {dataTypes.map(type => (
                     <DropdownMenuItem 
                         key={type} 

@@ -20,7 +20,8 @@ import {
   Percent,
   TrendingUp,
   Tag,
-  Heart
+  Heart,
+  Landmark
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -44,6 +45,7 @@ const navLinks = [
   { href: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/admin/hotels', label: 'Hotels', icon: Building2 },
   { href: '/admin/packages', label: 'Packages', icon: Package },
+  { href: '/admin/states', label: 'States', icon: Landmark },
   { href: '/admin/destinations', label: 'Destinations', icon: Map },
   { href: '/admin/interests', label: 'Interests', icon: Heart },
   { href: '/admin/leads', label: 'Leads', icon: Mail },
