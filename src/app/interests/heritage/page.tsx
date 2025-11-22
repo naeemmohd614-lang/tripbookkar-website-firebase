@@ -1,13 +1,21 @@
 
-import { hotels } from '@/lib/data';
+'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 export default function HeritagePage() {
-  const heritageHotels = (hotels as Hotel[]).filter(hotel => 
-    hotel.tags.some(tag => tag.toLowerCase().includes('heritage') || tag.toLowerCase().includes('palace') || tag.toLowerCase().includes('colonial'))
-  ).slice(0, 10);
+  const firestore = useFirestore();
+  const heritageHotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['heritage', 'palace', 'colonial']));
+  }, [firestore]);
+
+  const { data: heritageHotels, isLoading } = useCollection<Hotel>(heritageHotelsQuery);
 
   const heroImage = {
       "src": "https://images.unsplash.com/photo-1534423892 जायसवाल?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
@@ -40,16 +48,16 @@ export default function HeritagePage() {
         </div>
 
         <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
-          Top 10 Heritage Hotels
+          Top Heritage Hotels
         </h2>
-
-        {heritageHotels.length > 0 ? (
+        {isLoading && <p className="text-center">Loading hotels...</p>}
+        {heritageHotels && heritageHotels.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {heritageHotels.map((hotel) => (
-              <HotelCard key={hotel.hotelId} hotel={hotel} />
+              <HotelCard key={hotel.id} hotel={hotel} />
             ))}
           </div>
-        ) : (
+        ) : !isLoading && (
           <div className="text-center py-16 border-2 border-dashed rounded-lg">
             <h3 className="text-xl font-semibold text-muted-foreground">No heritage hotels found.</h3>
             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>

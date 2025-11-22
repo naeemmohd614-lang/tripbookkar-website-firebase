@@ -1,11 +1,16 @@
 
-import { hotels, brands } from '@/lib/data';
+'use client';
+import { brands } from '@/lib/data';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Hotel, Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 const marriottBrandNames = [
     "The Ritz-Carlton", "St. Regis", "Edition", "The Luxury Collection",
@@ -15,22 +20,28 @@ const marriottBrandNames = [
 ];
 
 export default function MarriottPage() {
+    const firestore = useFirestore();
     const heroImage = {
         src: "https://picsum.photos/seed/marriott-hero-page/1920/800",
         caption: "modern hotel exterior"
     };
 
     const marriottBrands = (brands as Brand[]).filter(b => marriottBrandNames.includes(b.name));
+    
+    const marriottHotelsQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
+        return query(collection(firestore, 'hotels'), where('brand', 'in', marriottBrandNames));
+    }, [firestore]);
 
-    const marriottHotels = (hotels as Hotel[]).filter(h => marriottBrandNames.includes(h.brand));
+    const { data: marriottHotels, isLoading } = useCollection<Hotel>(marriottHotelsQuery);
 
-    const preferredHotels = marriottHotels.filter(h => 
+    const preferredHotels = marriottHotels?.filter(h => 
         ["The Ritz-Carlton, Bangalore", "The St. Regis Mumbai", "W Goa"].includes(h.name)
-    );
+    ) || [];
 
     const hotelsByBrand = marriottBrands.map(brand => ({
       ...brand,
-      hotels: marriottHotels.filter(hotel => hotel.brand === brand.name)
+      hotels: marriottHotels?.filter(hotel => hotel.brand === brand.name) || []
     })).filter(brand => brand.hotels.length > 0);
 
 
@@ -81,7 +92,7 @@ export default function MarriottPage() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {preferredHotels.map(hotel => (
-                            <HotelCard hotel={hotel} key={hotel.hotelId} />
+                            <HotelCard hotel={hotel} key={hotel.id} />
                         ))}
                     </div>
                 </div>
@@ -96,7 +107,7 @@ export default function MarriottPage() {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {brand.hotels.slice(0, 4).map(hotel => (
-                                    <HotelCard hotel={hotel} key={hotel.hotelId} />
+                                    <HotelCard hotel={hotel} key={hotel.id} />
                                 ))}
                             </div>
                             {brand.hotels.length > 4 && (

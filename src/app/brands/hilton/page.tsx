@@ -1,29 +1,40 @@
 
-import { hotels, brands } from '@/lib/data';
+'use client';
+import { brands } from '@/lib/data';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Hotel, Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 const hiltonBrandNames = [
     "Hilton", "Conrad", "DoubleTree by Hilton", "Waldorf Astoria", "Hampton by Hilton"
 ];
 
 export default function HiltonPage() {
+    const firestore = useFirestore();
     const heroImage = {
         src: "https://picsum.photos/seed/hilton-hero-page/1920/800",
         caption: "sleek modern hotel building"
     };
 
     const hiltonBrands = (brands as Brand[]).filter(b => hiltonBrandNames.includes(b.name));
+    
+    const hiltonHotelsQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
+        return query(collection(firestore, 'hotels'), where('brand', 'in', hiltonBrandNames));
+    }, [firestore]);
 
-    const hiltonHotels = (hotels as Hotel[]).filter(h => hiltonBrandNames.includes(h.brand));
+    const { data: hiltonHotels, isLoading } = useCollection<Hotel>(hiltonHotelsQuery);
 
-    const preferredHotels = hiltonHotels.filter(h => 
+    const preferredHotels = hiltonHotels?.filter(h => 
         ["Conrad Bengaluru", "Hilton Mumbai International Airport", "Hilton Shillim Estate Retreat & Spa"].includes(h.name)
-    );
+    ) || [];
 
     return (
         <div className="bg-background text-foreground">
@@ -72,7 +83,7 @@ export default function HiltonPage() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {preferredHotels.map(hotel => (
-                            <HotelCard hotel={hotel} key={hotel.hotelId} />
+                            <HotelCard hotel={hotel} key={hotel.id} />
                         ))}
                     </div>
                 </div>
@@ -83,11 +94,19 @@ export default function HiltonPage() {
                     <h2 className="text-3xl font-headline font-bold text-primary mb-8 text-center">
                         All Hilton Properties in India
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {hiltonHotels.map(hotel => (
-                            <HotelCard hotel={hotel} key={hotel.hotelId} />
-                        ))}
-                    </div>
+                    {isLoading && <p className="text-center">Loading hotels...</p>}
+                    {hiltonHotels && hiltonHotels.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {hiltonHotels.map(hotel => (
+                                <HotelCard hotel={hotel} key={hotel.id} />
+                            ))}
+                        </div>
+                    ) : !isLoading && (
+                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                            <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this brand.</h3>
+                            <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
+                        </div>
+                    )}
                 </div>
             </section>
         </div>

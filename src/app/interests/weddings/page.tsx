@@ -1,13 +1,20 @@
 
-import { hotels } from '@/lib/data';
+'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 export default function WeddingsPage() {
-  const weddingHotels = (hotels as Hotel[]).filter(hotel => 
-    hotel.tags.some(tag => tag.toLowerCase().includes('wedding'))
-  ).slice(0, 10);
+    const firestore = useFirestore();
+    const weddingHotelsQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
+        return query(collection(firestore, 'hotels'), where('tags', 'array-contains', 'wedding'));
+    }, [firestore]);
+    const { data: weddingHotels, isLoading } = useCollection<Hotel>(weddingHotelsQuery);
 
   const heroImage = {
       "src": "https://picsum.photos/seed/interest-weddings/1920/600",
@@ -40,16 +47,16 @@ export default function WeddingsPage() {
         </div>
 
         <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
-          Top 10 Wedding Hotels
+          Top Wedding Hotels
         </h2>
-
-        {weddingHotels.length > 0 ? (
+        {isLoading && <p className="text-center">Loading hotels...</p>}
+        {weddingHotels && weddingHotels.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {weddingHotels.map((hotel) => (
-              <HotelCard key={hotel.hotelId} hotel={hotel} />
+              <HotelCard key={hotel.id} hotel={hotel} />
             ))}
           </div>
-        ) : (
+        ) : !isLoading && (
           <div className="text-center py-16 border-2 border-dashed rounded-lg">
             <h3 className="text-xl font-semibold text-muted-foreground">No wedding hotels found.</h3>
             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>

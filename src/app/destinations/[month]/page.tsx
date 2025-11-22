@@ -4,9 +4,13 @@ import { useParams, notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { hotels, cities, states } from '@/lib/data';
+import { cities, states } from '@/lib/data';
 import type { Hotel, City, State } from '@/lib/types';
 import { monthlyDestinationsData, MonthData } from '@/data/monthly-destinations';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 function slugify(text: string) {
   if (!text) return '';
@@ -15,9 +19,20 @@ function slugify(text: string) {
 
 export default function MonthPage() {
     const params = useParams();
+    const firestore = useFirestore();
     const monthSlug = params.month as string;
 
     const monthData: MonthData | undefined = monthlyDestinationsData[monthSlug];
+
+    const hotelNames = monthData?.destinations.flatMap(d => d.hotels.map(h => typeof h === 'string' ? h : h.name)) || [];
+    
+    const hotelsQuery = useMemoFirebase(() => {
+        if (!firestore || hotelNames.length === 0) return null;
+        // Firestore 'in' queries are limited to 30 items. If more, you'd need multiple queries.
+        return query(collection(firestore, 'hotels'), where('name', 'in', hotelNames.slice(0, 30)));
+    }, [firestore, hotelNames]);
+
+    const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
 
     if (!monthData) {
         notFound();
@@ -76,15 +91,16 @@ export default function MonthPage() {
                                         <h3 className="font-bold text-lg mb-3">Top Hotels in {dest.name.split(',')[0]}:</h3>
                                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-sm">
                                             {dest.hotels.map(hotelOrName => {
-                                                const hotel = typeof hotelOrName === 'string' ? (hotels as Hotel[]).find(h => h.name === hotelOrName) : hotelOrName;
+                                                const hotelName = typeof hotelOrName === 'string' ? hotelOrName : hotelOrName.name;
+                                                const hotel = hotels?.find(h => h.name === hotelName);
                                                 return (
-                                                    <div key={hotel ? hotel.hotelId : hotelOrName as string}>
+                                                    <div key={hotelName}>
                                                     {hotel ? (
-                                                        <Link href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.hotelId}`} className="text-primary hover:underline">
+                                                        <Link href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.id}`} className="text-primary hover:underline">
                                                             {hotel.name}
                                                         </Link>
                                                     ) : (
-                                                        <span className="text-muted-foreground">{hotelOrName as string}</span>
+                                                        <span className="text-muted-foreground">{hotelName}</span>
                                                     )}
                                                     </div>
                                                 )
@@ -107,5 +123,3 @@ export default function MonthPage() {
         </div>
     );
 }
-
-    

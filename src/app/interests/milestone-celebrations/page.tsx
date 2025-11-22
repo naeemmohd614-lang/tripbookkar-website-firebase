@@ -1,13 +1,20 @@
 
-import { hotels } from '@/lib/data';
+'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 export default function MilestoneCelebrationsPage() {
-  const celebrationHotels = (hotels as Hotel[]).filter(hotel => 
-    hotel.tags.some(tag => tag.toLowerCase().includes('romantic') || tag.toLowerCase().includes('palace') || tag.toLowerCase().includes('luxury'))
-  ).slice(0, 10);
+    const firestore = useFirestore();
+    const celebrationHotelsQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
+        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['romantic', 'palace', 'luxury']));
+    }, [firestore]);
+    const { data: celebrationHotels, isLoading } = useCollection<Hotel>(celebrationHotelsQuery);
 
   const heroImage = {
       "src": "https://picsum.photos/seed/interest-milestones/1920/600",
@@ -40,16 +47,16 @@ export default function MilestoneCelebrationsPage() {
         </div>
 
         <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
-          Top 10 Hotels for Celebrations
+          Top Hotels for Celebrations
         </h2>
-
-        {celebrationHotels.length > 0 ? (
+        {isLoading && <p className="text-center">Loading hotels...</p>}
+        {celebrationHotels && celebrationHotels.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {celebrationHotels.map((hotel) => (
-              <HotelCard key={hotel.hotelId} hotel={hotel} />
+              <HotelCard key={hotel.id} hotel={hotel} />
             ))}
           </div>
-        ) : (
+        ) : !isLoading && (
           <div className="text-center py-16 border-2 border-dashed rounded-lg">
             <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for celebrations.</h3>
             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>

@@ -1,13 +1,21 @@
 
-import { hotels } from '@/lib/data';
+'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 export default function LuxuryTentsPage() {
-  const luxuryTentHotels = (hotels as Hotel[]).filter(hotel => 
-    hotel.tags.some(tag => tag.toLowerCase().includes('tent') || tag.toLowerCase().includes('glamping'))
-  ).slice(0, 10);
+  const firestore = useFirestore();
+  const luxuryTentHotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['tent', 'glamping']));
+  }, [firestore]);
+
+  const { data: luxuryTentHotels, isLoading } = useCollection<Hotel>(luxuryTentHotelsQuery);
 
   const heroImage = {
       "src": "https://picsum.photos/seed/interest-tents/1920/600",
@@ -40,16 +48,16 @@ export default function LuxuryTentsPage() {
         </div>
 
         <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
-          Top 10 Luxury Tent Stays
+          Top Luxury Tent Stays
         </h2>
-
-        {luxuryTentHotels.length > 0 ? (
+        {isLoading && <p className="text-center">Loading hotels...</p>}
+        {luxuryTentHotels && luxuryTentHotels.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {luxuryTentHotels.map((hotel) => (
-              <HotelCard key={hotel.hotelId} hotel={hotel} />
+              <HotelCard key={hotel.id} hotel={hotel} />
             ))}
           </div>
-        ) : (
+        ) : !isLoading && (
           <div className="text-center py-16 border-2 border-dashed rounded-lg">
             <h3 className="text-xl font-semibold text-muted-foreground">No luxury tents found.</h3>
             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>

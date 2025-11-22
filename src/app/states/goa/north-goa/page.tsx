@@ -1,6 +1,6 @@
 
 'use client';
-import { attractions, hotels } from '@/lib/data';
+import { attractions } from '@/lib/data';
 import type { Attraction, Hotel } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,9 +8,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, MapPin, Waves, Martini, ShoppingBag, Utensils, Music } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 export default function NorthGoaPage() {
-    
+    const firestore = useFirestore();
     const heroImage = {
         src: 'https://images.unsplash.com/photo-1570194883446-a3c3c7340c49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2ElMjBiZWFjaCUyMHNoYWNrc3xlbnwwfHx8fDE3NjM2OTc3OTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
         caption: 'Baga beach shacks and nightlife'
@@ -25,9 +29,12 @@ export default function NorthGoaPage() {
     
     const northGoaAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'north-goa');
 
-    const northGoaHotels = (hotels as Hotel[]).filter(hotel => 
-        ['baga', 'calangute', 'candolim', 'panaji', 'vagator', 'anjuna'].includes(hotel.cityId)
-    );
+    const northGoaHotelsQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
+        return query(collection(firestore, 'hotels'), where('cityId', 'in', ['baga', 'calangute', 'candolim', 'panaji', 'vagator', 'anjuna']));
+    }, [firestore]);
+
+    const { data: northGoaHotels, isLoading } = useCollection<Hotel>(northGoaHotelsQuery);
 
     return (
         <div>
@@ -107,13 +114,14 @@ export default function NorthGoaPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in North Goa</h3>
-                     {northGoaHotels.length > 0 ? (
+                     {isLoading && <p>Loading hotels...</p>}
+                     {northGoaHotels && northGoaHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {northGoaHotels.map((hotel) => (
-                            <HotelCard key={hotel.hotelId} hotel={hotel} />
+                            <HotelCard key={hotel.id} hotel={hotel} />
                         ))}
                         </div>
-                    ) : (
+                    ) : !isLoading && (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
                             <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this area yet.</h3>
                             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>

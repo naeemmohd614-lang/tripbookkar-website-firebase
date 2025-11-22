@@ -1,6 +1,6 @@
 
 'use client';
-import { attractions, hotels } from '@/lib/data';
+import { attractions } from '@/lib/data';
 import type { Attraction, Hotel } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -8,9 +8,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, MapPin, Waves, Leaf, Hotel as HotelIcon } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
+import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 export default function SouthGoaPage() {
-    
+    const firestore = useFirestore();
     const heroImage = {
         src: 'https://picsum.photos/seed/south-goa-hero/1920/600',
         caption: 'Palolem beach serene sunset'
@@ -24,9 +28,12 @@ export default function SouthGoaPage() {
     
     const southGoaAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === 'south-goa');
 
-    const southGoaHotels = (hotels as Hotel[]).filter(hotel => 
-        ['benaulim', 'cavelossim', 'margao', 'palolem'].includes(hotel.cityId)
-    );
+    const southGoaHotelsQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
+        return query(collection(firestore, 'hotels'), where('cityId', 'in', ['benaulim', 'cavelossim', 'margao', 'palolem']));
+    }, [firestore]);
+
+    const { data: southGoaHotels, isLoading } = useCollection<Hotel>(southGoaHotelsQuery);
 
     return (
         <div>
@@ -106,13 +113,14 @@ export default function SouthGoaPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in South Goa</h3>
-                     {southGoaHotels.length > 0 ? (
+                    {isLoading && <p>Loading hotels...</p>}
+                     {southGoaHotels && southGoaHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {southGoaHotels.map((hotel) => (
-                            <HotelCard key={hotel.hotelId} hotel={hotel} />
+                            <HotelCard key={hotel.id} hotel={hotel} />
                         ))}
                         </div>
-                    ) : (
+                    ) : !isLoading && (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
                             <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this area yet.</h3>
                             <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
