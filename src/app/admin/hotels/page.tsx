@@ -1,8 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
-import { collection, query, orderBy } from 'firebase/firestore';
+import { collection } from 'firebase/firestore';
 import { Pencil, Trash2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -20,7 +20,8 @@ export default function HotelsPage(){
   const firestore = useFirestore();
   const hotelsQuery = useMemoFirebase(() => {
     if (!firestore) return null;
-    return query(collection(firestore, 'hotels'));
+    // Directly reference the collection to fetch all documents without ordering
+    return collection(firestore, 'hotels');
   }, [firestore]);
 
   const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
@@ -84,6 +85,11 @@ export default function HotelsPage(){
                 </TableCell>
               </TableRow>
             ))}
+             {!isLoading && (!hotels || hotels.length === 0) && (
+              <TableRow>
+                <TableCell colSpan={6} className="text-center p-8 text-muted-foreground">No hotels found.</TableCell>
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </div>
