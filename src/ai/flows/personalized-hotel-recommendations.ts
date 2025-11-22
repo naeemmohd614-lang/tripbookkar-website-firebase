@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -31,12 +32,6 @@ export type PersonalizedHotelRecommendationsOutput = z.infer<
   typeof PersonalizedHotelRecommendationsOutputSchema
 >;
 
-export async function personalizedHotelRecommendations(
-  input: PersonalizedHotelRecommendationsInput
-): Promise<PersonalizedHotelRecommendationsOutput> {
-  return personalizedHotelRecommendationsFlow(input);
-}
-
 const prompt = ai.definePrompt({
   name: 'personalizedHotelRecommendationsPrompt',
   input: {schema: PersonalizedHotelRecommendationsInputSchema},
@@ -61,3 +56,10 @@ const personalizedHotelRecommendationsFlow = ai.defineFlow(
     return output!;
   }
 );
+
+
+export async function personalizedHotelRecommendations(
+  input: PersonalizedHotelRecommendationsInput
+): Promise<PersonalizedHotelRecommendationsOutput> {
+  return personalizedHotelRecommendationsFlow(input);
+}

@@ -105,7 +105,7 @@ Example Output for "The Ritz-Carlton, Bangalore":
 });
 
 
-export const generateHotelDescription = ai.defineFlow(
+const generateHotelDescriptionFlow = ai.defineFlow(
   {
     name: 'generateHotelDescriptionFlow',
     inputSchema: GenerateHotelDescriptionInputSchema,
@@ -116,3 +116,7 @@ export const generateHotelDescription = ai.defineFlow(
     return output!;
   }
 );
+
+export async function generateHotelDescription(input: GenerateHotelDescriptionInput): Promise<GenerateHotelDescriptionOutput> {
+  return generateHotelDescriptionFlow(input);
+}
