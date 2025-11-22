@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Pencil, Trash2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,9 +12,27 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import type { Hotel } from '@/lib/types';
-import { hotels } from '@/lib/data';
+import { useFirestore } from '@/firebase';
+import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
+
 
 export default function HotelsPage(){
+  const [hotels, setHotels] = useState<Hotel[]>([]);
+  const firestore = useFirestore();
+
+  useEffect(() => {
+    if (!firestore) return;
+    const q = query(collection(firestore, 'hotels'), orderBy('name', 'asc'));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const hotelsData = querySnapshot.docs.map(doc => ({
+        ...doc.data() as Omit<Hotel, 'hotelId'>,
+        hotelId: doc.id
+      }));
+      setHotels(hotelsData);
+    });
+    return () => unsubscribe();
+  }, [firestore]);
+
 
   const formatPrice = (price: number) => {
     if (typeof price !== 'number') return 'N/A';
@@ -24,8 +42,6 @@ export default function HotelsPage(){
       minimumFractionDigits: 0,
     }).format(price);
   };
-
-  const sortedHotels = [...(hotels as Hotel[])].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
@@ -48,7 +64,7 @@ export default function HotelsPage(){
             </TableRow>
           </TableHeader>
           <TableBody className="bg-white divide-y divide-gray-200">
-            {sortedHotels.map((h: Hotel) => (
+            {hotels.map((h: Hotel) => (
               <TableRow key={h.hotelId} className="hover:bg-gray-50">
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{h.name}</TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.brand}</TableCell>

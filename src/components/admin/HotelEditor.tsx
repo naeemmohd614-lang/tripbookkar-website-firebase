@@ -11,37 +11,22 @@ import { Label } from '@/components/ui/label';
 import { Trash2, Wand2 } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
 import { generateHotelDescriptionAction } from '@/app/actions';
+import { useFirestore } from '@/firebase';
+import { doc, collection } from 'firebase/firestore';
+import { setDocumentNonBlocking, addDocumentNonBlocking } from '@/firebase';
+import { useToast } from '@/hooks/use-toast';
 
 interface HotelEditorProps {
   hotel?: Hotel;
 }
 
-type FormValues = {
-    name: string;
-    brand: string;
-    city: string;
-    state: string;
-    address: string;
-    about: string;
-    basePrice: number;
-    rating: number;
-    images: { src: string; caption: string }[];
-    roomCategories: {
-        name: string;
-        count: number;
-        size: string;
-    }[];
-};
-
 export default function HotelEditor({ hotel }: HotelEditorProps) {
   const router = useRouter();
+  const firestore = useFirestore();
+  const { toast } = useToast();
 
-  const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<FormValues>({
-    defaultValues: hotel ? {
-      ...hotel,
-      basePrice: hotel.basePrice || 0,
-      rating: hotel.rating || 0,
-    } : {
+  const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<Hotel>({
+    defaultValues: hotel || {
       name: '',
       brand: '',
       city: '',
@@ -94,13 +79,30 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     }
   };
 
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    // In a real application, you would save this data to your database (e.g., Firestore or an API)
-    // For this example, we'll just log it and simulate a save.
-    console.log("Saving hotel data:", data);
-    await new Promise(resolve => setTimeout(resolve, 1000)); 
-    alert(`Hotel "${data.name}" ${hotel ? 'updated' : 'created'} successfully!`);
-    router.push('/admin/hotels');
+  const onSubmit: SubmitHandler<Hotel> = async (data) => {
+    if (!firestore) {
+      toast({ variant: 'destructive', title: 'Error', description: 'Firestore not available.' });
+      return;
+    }
+
+    try {
+      if (hotel?.hotelId) {
+        // Update existing hotel
+        const hotelRef = doc(firestore, 'hotels', hotel.hotelId);
+        setDocumentNonBlocking(hotelRef, data, { merge: true });
+        toast({ title: 'Hotel Updated', description: `"${data.name}" has been saved.` });
+      } else {
+        // Create new hotel
+        const hotelsCol = collection(firestore, 'hotels');
+        await addDocumentNonBlocking(hotelsCol, data);
+        toast({ title: 'Hotel Created', description: `"${data.name}" has been added.` });
+      }
+      router.push('/admin/hotels');
+      router.refresh(); // To show the updated list
+    } catch (error: any) {
+      console.error("Error saving hotel:", error);
+      toast({ variant: 'destructive', title: 'Save Failed', description: error.message });
+    }
   };
   
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -113,6 +115,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     // 2. Upload the file
     // 3. Get the download URL
     // 4. Update the hotel's data with the new image URL
+    // e.g., appendImage({ src: newUrl, caption: 'Uploaded image' });
   };
 
 
