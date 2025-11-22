@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import { hotels } from '@/lib/data'; // Import hotels from local data
 import Link from 'next/link';
 import { Pencil, Trash2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,6 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import type { Hotel } from '@/lib/types';
+import { hotels } from '@/lib/data';
 
 export default function HotelsPage(){
 
@@ -25,8 +25,7 @@ export default function HotelsPage(){
     }).format(price);
   };
 
-  // Sort hotels by name
-  const sortedHotels = [...hotels].sort((a, b) => a.name.localeCompare(b.name));
+  const sortedHotels = [...(hotels as Hotel[])].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">

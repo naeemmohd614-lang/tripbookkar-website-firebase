@@ -6,6 +6,7 @@
  * - generateSeoPage - A function that handles the generation of SEO pages.
  * - GenerateSeoPageInput - The input type for the generateSeoPage function.
  * - GenerateSeoPageOutput - The return type for the generateSeoPage function.
+ * - generateHotelDescription - Generates a compelling description for a hotel.
  */
 
 import {ai} from '@/ai/genkit';
@@ -60,6 +61,58 @@ const generateSeoPageFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await generateSeoPagePrompt(input);
+    return output!;
+  }
+);
+
+
+// Hotel Description Flow
+export const GenerateHotelDescriptionInputSchema = z.object({
+  name: z.string().describe('The name of the hotel.'),
+  city: z.string().optional().describe('The city where the hotel is located.'),
+  brand: z.string().optional().describe('The brand of the hotel.'),
+});
+export type GenerateHotelDescriptionInput = z.infer<typeof GenerateHotelDescriptionInputSchema>;
+
+export const GenerateHotelDescriptionOutputSchema = z.object({
+  description: z.string().describe('A compelling, paragraph-long "about" description for the hotel.'),
+});
+export type GenerateHotelDescriptionOutput = z.infer<typeof GenerateHotelDescriptionOutputSchema>;
+
+
+const generateHotelDescriptionPrompt = ai.definePrompt({
+  name: 'generateHotelDescriptionPrompt',
+  input: { schema: GenerateHotelDescriptionInputSchema },
+  output: { schema: GenerateHotelDescriptionOutputSchema },
+  prompt: `You are a creative copywriter for a luxury travel website. Your task is to write a single, compelling "about" paragraph for a hotel.
+
+Hotel Details:
+- Name: {{{name}}}
+- City: {{{city}}}
+- Brand: {{{brand}}}
+
+Instructions:
+- Write one engaging paragraph.
+- Highlight the hotel's key features and unique selling points (e.g., location, luxury, views, specific amenities).
+- Use evocative and appealing language.
+- The tone should be sophisticated and inviting.
+- Do not make up specific facts if they aren't provided (like number of rooms), but you can infer likely characteristics based on brand and location (e.g., a JW Marriott in a major city is likely to have business facilities and luxury amenities).
+- The output must be only the description text, with no preamble.
+
+Example Output for "The Ritz-Carlton, Bangalore":
+"The Ritz-Carlton, Bangalore, located in the heart of the city, offers luxurious accommodations, fine dining, and a tranquil spa. Experience legendary service in a sophisticated setting where modern design meets timeless elegance, making it the perfect urban oasis for both business and leisure travelers."
+`,
+});
+
+
+export const generateHotelDescription = ai.defineFlow(
+  {
+    name: 'generateHotelDescriptionFlow',
+    inputSchema: GenerateHotelDescriptionInputSchema,
+    outputSchema: GenerateHotelDescriptionOutputSchema,
+  },
+  async (input) => {
+    const { output } = await generateHotelDescriptionPrompt(input);
     return output!;
   }
 );

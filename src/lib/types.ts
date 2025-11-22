@@ -1,7 +1,9 @@
 
 
+import type { GenerateSeoPageInput } from '@/ai/flows/generate-seo-pages';
+
 export interface Hotel {
-  hotelId: string;
+  hotelId?: string;
   name: string;
   brand: string;
   brandSlug: string;
@@ -248,4 +250,26 @@ export interface Itinerary {
   stay?: string;
   meals?: string[];
   activities: string[];
+}
+
+
+// State for personalizedHotelRecommendations
+export type RecommendationsState = {
+  recommendations?: string;
+  error?: string;
+}
+
+// State for generateSeoPage
+export type SeoGeneratorState = {
+  title?: string;
+  description?: string;
+  content?: string;
+  error?: string;
+  input?: GenerateSeoPageInput;
+}
+
+// State for Hotel Description Generator
+export type HotelDescriptionState = {
+  description?: string;
+  error?: string;
 }

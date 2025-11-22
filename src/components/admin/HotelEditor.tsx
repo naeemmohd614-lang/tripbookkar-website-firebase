@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-import { useForm, useFieldArray, SubmitHandler } from 'react-hook-form';
+import { useForm, useFieldArray, SubmitHandler, useWatch } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,11 +8,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
-import { Trash2 } from 'lucide-react';
+import { Trash2, Wand2 } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
+import { generateHotelDescription } from '@/app/actions';
 
 interface HotelEditorProps {
-  hotel: Hotel;
+  hotel?: Hotel;
 }
 
 type FormValues = {
@@ -24,6 +25,7 @@ type FormValues = {
     about: string;
     basePrice: number;
     rating: number;
+    images: { src: string; caption: string }[];
     roomCategories: {
         name: string;
         count: number;
@@ -34,17 +36,22 @@ type FormValues = {
 export default function HotelEditor({ hotel }: HotelEditorProps) {
   const router = useRouter();
 
-  const { register, control, handleSubmit, reset, formState: { isSubmitting } } = useForm<FormValues>({
-    defaultValues: {
-      name: hotel.name,
-      brand: hotel.brand,
-      city: hotel.city,
-      state: hotel.state,
-      address: hotel.address,
-      about: hotel.about,
-      basePrice: hotel.basePrice,
-      rating: hotel.rating,
-      roomCategories: hotel.roomCategories || [],
+  const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<FormValues>({
+    defaultValues: hotel ? {
+      ...hotel,
+      basePrice: hotel.basePrice || 0,
+      rating: hotel.rating || 0,
+    } : {
+      name: '',
+      brand: '',
+      city: '',
+      state: '',
+      address: '',
+      about: '',
+      basePrice: 0,
+      rating: 0,
+      images: [],
+      roomCategories: [],
     }
   });
 
@@ -53,16 +60,46 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     name: "roomCategories"
   });
 
+  const { fields: imageFields, append: appendImage, remove: removeImage } = useFieldArray({
+    control,
+    name: "images"
+  });
+
   useEffect(() => {
-    reset(hotel);
+    if (hotel) {
+      reset(hotel);
+    }
   }, [hotel, reset]);
+  
+  const watchedName = useWatch({ control, name: 'name' });
+  const watchedCity = useWatch({ control, name: 'city' });
+  const watchedBrand = useWatch({ control, name: 'brand' });
+
+  const handleGenerateDescription = async () => {
+    if (!watchedName) {
+      alert("Please enter a hotel name first.");
+      return;
+    }
+    const result = await generateHotelDescription({
+      name: watchedName,
+      city: watchedCity,
+      brand: watchedBrand,
+    });
+
+    if (result.description) {
+      setValue('about', result.description);
+    }
+    if (result.error) {
+      alert(`AI Error: ${result.error}`);
+    }
+  };
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     // In a real application, you would save this data to your database (e.g., Firestore or an API)
     // For this example, we'll just log it and simulate a save.
     console.log("Saving hotel data:", data);
-    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate async save
-    alert('Hotel saved successfully!');
+    await new Promise(resolve => setTimeout(resolve, 1000)); 
+    alert(`Hotel "${data.name}" ${hotel ? 'updated' : 'created'} successfully!`);
     router.push('/admin/hotels');
   };
   
@@ -83,7 +120,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     <div className="max-w-4xl mx-auto">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">{hotel.hotelId ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
+          <CardTitle className="text-2xl font-bold">{hotel?.hotelId ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
           <CardDescription>Manage hotel details, room categories, and images.</CardDescription>
         </CardHeader>
         <CardContent>
@@ -113,7 +150,13 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                   <Input id="address" {...register('address')} />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="about">About</Label>
+                  <div className="flex justify-between items-center">
+                    <Label htmlFor="about">About</Label>
+                    <Button type="button" variant="outline" size="sm" onClick={handleGenerateDescription}>
+                      <Wand2 className="mr-2 h-4 w-4"/>
+                      Generate with AI
+                    </Button>
+                  </div>
                   <Textarea id="about" {...register('about')} rows={5}/>
                 </div>
                  <div className="space-y-2">
@@ -164,9 +207,18 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
              <section>
                 <h3 className="text-lg font-semibold mb-4">Image Management</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {hotel.images.map((image, index) => (
-                        <div key={index} className="relative aspect-video">
+                    {imageFields.map((image, index) => (
+                        <div key={image.id} className="relative aspect-video">
                             <img src={image.src} alt={image.caption} className="rounded-md object-cover w-full h-full" />
+                             <Button
+                                type="button"
+                                variant="destructive"
+                                size="icon"
+                                className="absolute top-1 right-1 h-6 w-6"
+                                onClick={() => removeImage(index)}
+                              >
+                                <Trash2 className="h-3 w-3" />
+                              </Button>
                         </div>
                     ))}
                      <div className="flex items-center justify-center p-4 border-2 border-dashed rounded-md">
