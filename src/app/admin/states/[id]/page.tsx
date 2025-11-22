@@ -1,4 +1,3 @@
-
 'use client'
 import StateEditor from '@/components/admin/StateEditor';
 import type { State } from '@/lib/types';
@@ -12,7 +11,7 @@ export default function EditStatePage({ params }: { params: { id: string } }) {
   const stateRef = useMemoFirebase(() => {
     if (!firestore || !params.id) return null;
     return doc(firestore, 'states', params.id);
-  }, [firestore, params.id]);
+  }, [firestore]);
 
   const { data: state, isLoading } = useDoc<State>(stateRef);
 
