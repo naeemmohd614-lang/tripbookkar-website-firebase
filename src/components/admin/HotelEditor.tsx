@@ -21,23 +21,22 @@ interface HotelEditorProps {
   hotel?: Hotel;
 }
 
-const westinSohnaData: Hotel = {
-  "id": "the-westin-sohna-resort-spa",
-  "brandSlug": "the-westin",
-  "name": "The Westin Sohna Resort & Spa",
-  "brand": "Marriott",
-  "city": "Gurugram",
-  "state": "Haryana",
-  "address": "Vatika Complex, Karanki Road, Dhaulah, Sohna, Gurugram, Haryana 122103",
-  "about": "A sprawling wellness resort set amidst green landscapes, offering a tranquil escape from the city. It features luxurious villas, a serene spa, and focuses on rejuvenation.",
-  "basePrice": 15000,
-  "rating": 4.5,
-  "images": [
-    { "src": "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx2aWxsYXMlMjBhdCUyMHRoZSUyMHdlc3RpbiUyMHNvaG5hJTIwcmVzb3J0fGVufDB8fHx8MTc2Mzc4OTEyN3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Villas at The Westin Sohna Resort" }
-  ],
-  "roomCategories": [{ "name": "Premier Villa", "count": 97, "size": "645 sqft" }],
-  "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-  "tags": ["resort", "wellness", "gurugram", "pet friendly"]
+const newHotelDefault: Partial<Hotel> = {
+  name: '',
+  brand: '',
+  city: '',
+  state: '',
+  address: '',
+  about: '',
+  basePrice: 0,
+  rating: 0,
+  images: [],
+  roomCategories: [],
+  facilities: { pool: false, spa: false, gym: false, wifi: true, parking: true, petFriendly: false, checkIn: '3:00 PM', checkOut: '12:00 PM' },
+  tags: [],
+  diningExperiences: [],
+  experiencesAndActivities: [],
+  weddingVenues: [],
 };
 
 
@@ -47,7 +46,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
   const { toast } = useToast();
 
   const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<Hotel>({
-    defaultValues: hotel || westinSohnaData
+    defaultValues: hotel || newHotelDefault
   });
 
   const { fields, append, remove } = useFieldArray({
@@ -104,10 +103,10 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     if (result.details) {
       const { about, diningExperiences, experiencesAndActivities, weddingVenues, tags } = result.details;
       setValue('about', about);
-      setValue('diningExperiences', diningExperiences);
-      setValue('experiencesAndActivities', experiencesAndActivities);
-      setValue('weddingVenues', weddingVenues);
-      setValue('tags', tags);
+      setValue('diningExperiences', diningExperiences || []);
+      setValue('experiencesAndActivities', experiencesAndActivities || []);
+      setValue('weddingVenues', weddingVenues || []);
+      setValue('tags', tags || []);
       toast({ title: "Hotel Details Generated", description: "All details have been filled in by AI." });
     }
     if (result.error) {
