@@ -306,6 +306,48 @@
         "phone",
         "message"
       ]
+    },
+    "MonthlyDestination": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "MonthlyDestination",
+      "type": "object",
+      "description": "Represents top destinations for a specific month.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the month, e.g., 'january'."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the month, e.g., 'January'."
+        },
+        "pageImage": {
+          "type": "object",
+          "properties": {
+            "src": { "type": "string" },
+            "caption": { "type": "string" }
+          }
+        },
+        "destinations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "reason": { "type": "string" },
+              "hotels": { "type": "array", "items": { "type": "string" } },
+              "image": {
+                "type": "object",
+                "properties": {
+                  "src": { "type": "string" },
+                  "caption": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": ["id", "name"]
     }
   },
   "auth": {
@@ -436,6 +478,17 @@
           ]
         }
       },
+       {
+        "path": "/monthlyDestinations/{monthId}",
+        "definition": {
+          "entityName": "MonthlyDestination",
+          "schema": { "$ref": "#/backend/entities/MonthlyDestination" },
+          "description": "Stores the top destinations for each month.",
+          "params": [
+            { "name": "monthId", "description": "The slug of the month (e.g., 'january')." }
+          ]
+        }
+      },
       {
         "path": "/admin/{uid}",
         "definition": {
@@ -456,3 +509,5 @@
     "reasoning": "This Firestore structure is designed to support the TripBookKar admin dashboard application. It prioritizes authorization independence, clarity, and scalability. All collections are designed with a homogeneous security posture in mind.\n\nAuthorization Independence:\n\n*   The structure uses custom claims for authorization, avoiding the need for `get()` calls in security rules.\n*   Admin status is determined by checking for `request.auth.token.admin == true`, which is set by a trusted server process.\n\nQAPs (Rules are not Filters):\n\n*   The data is segregated into collections based on entity type (hotels, packages, etc.). This simplifies security rules, as each collection has a consistent access model. List operations are secured by ensuring that only authorized users (admins) can access the data.\n\n\nAdditional Considerations:\n\n*   The structure is designed to support the core features of the app: Hotel Data Storage, Package Management, Dynamic Pricing, Image Processing, Location Search, and SEO Page Generation.\n*   Timestamp fields (`createdAt`, `updatedAt`) can be used to track creation and modification times."
   }
 }
+
+    

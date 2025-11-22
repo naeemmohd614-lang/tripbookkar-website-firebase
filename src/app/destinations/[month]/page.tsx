@@ -6,10 +6,10 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { cities, states } from '@/lib/data';
 import type { Hotel, City, State } from '@/lib/types';
-import { monthlyDestinationsData, MonthData } from '@/data/monthly-destinations';
+import type { MonthData } from '@/data/monthly-destinations';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
-import { collection, query, where } from 'firebase/firestore';
+import { useFirestore, useCollection, useDoc, useMemoFirebase } from '@/firebase';
+import { collection, query, where, doc } from 'firebase/firestore';
 
 
 function slugify(text: string) {
@@ -22,23 +22,33 @@ export default function MonthPage() {
     const firestore = useFirestore();
     const monthSlug = params.month as string;
 
-    const monthData: MonthData | undefined = monthlyDestinationsData[monthSlug];
+    const monthDocRef = useMemoFirebase(() => {
+        if (!firestore || !monthSlug) return null;
+        return doc(firestore, 'monthlyDestinations', monthSlug);
+    }, [firestore, monthSlug]);
 
-    const hotelNames = monthData?.destinations.flatMap(d => d.hotels.map(h => typeof h === 'string' ? h : h.name)) || [];
+    const { data: monthData, isLoading: isMonthLoading } = useDoc<MonthData>(monthDocRef);
+
+    const hotelNames = monthData?.destinations?.flatMap(d => d.hotels.map(h => typeof h === 'string' ? h : h.name)) || [];
     
     const hotelsQuery = useMemoFirebase(() => {
         if (!firestore || hotelNames.length === 0) return null;
-        // Firestore 'in' queries are limited to 30 items. If more, you'd need multiple queries.
         return query(collection(firestore, 'hotels'), where('name', 'in', hotelNames.slice(0, 30)));
     }, [firestore, hotelNames]);
 
-    const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
+    const { data: hotels, isLoading: areHotelsLoading } = useCollection<Hotel>(hotelsQuery);
+    
+    const isLoading = isMonthLoading || areHotelsLoading;
 
-    if (!monthData) {
+    if (!monthData && !isLoading) {
         notFound();
     }
     
-    const { name, pageImage, destinations } = monthData;
+    if (isLoading) {
+        return <div className="p-6 text-center">Loading destinations for {monthSlug}...</div>;
+    }
+    
+    const { name, pageImage, destinations } = monthData!;
 
     return (
         <div className="bg-secondary/30">
@@ -123,3 +133,5 @@ export default function MonthPage() {
         </div>
     );
 }
+
+    
