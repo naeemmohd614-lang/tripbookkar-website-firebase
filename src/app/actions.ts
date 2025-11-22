@@ -1,3 +1,4 @@
+
 'use server';
 
 import { personalizedHotelRecommendations } from '@/ai/flows/personalized-hotel-recommendations';
@@ -12,7 +13,8 @@ import type {
   PersonalizedHotelRecommendationsInput,
   GenerateHotelDescriptionInput,
   GenerateHotelDetailsInput,
-  Hotel
+  Hotel,
+  Interest
 } from '@/lib/types';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
@@ -131,51 +133,55 @@ export async function generateHotelDetailsAction(input: GenerateHotelDetailsInpu
 }
 
 
-export async function bulkImportHotels(brand: string): Promise<{ success: boolean, message: string }> {
-  let hotelsToImport: Hotel[] = [];
-  
-  try {
-    // Dynamically import the correct JSON file based on the brand
-    const hotelData = await import(`@/data/${brand}.json`);
-    hotelsToImport = hotelData.default as Hotel[];
-  } catch (error) {
-    console.error(`Failed to load data for brand: ${brand}`, error);
-    return { success: false, message: `Could not find data file for brand: ${brand}.` };
-  }
-
-  if (!hotelsToImport || hotelsToImport.length === 0) {
-    return { success: false, message: `No hotels found in the data file for ${brand}.` };
-  }
-
+export async function bulkImportHotels(dataType: string): Promise<{ success: boolean, message: string }> {
   try {
     const batch = db.batch();
     let count = 0;
 
-    hotelsToImport.forEach((hotel) => {
-      // Ensure there's a name to slugify, otherwise skip.
-      if (!hotel.name) return;
-      const hotelId = slugify(hotel.name);
-      const hotelRef = db.collection('hotels').doc(hotelId);
+    if (dataType === 'interests') {
+      const interestsData = (await import(`@/data/interests.json`)).default;
+      interestsData.forEach((interest: Interest) => {
+        const docRef = db.collection('interests').doc(interest.id);
+        batch.set(docRef, interest, { merge: true });
+        count++;
+      });
+      await batch.commit();
+      revalidatePath('/admin/interests');
+      return { success: true, message: `${count} interests imported successfully.` };
+    } else {
+      // Assuming it's a hotel brand
+      const hotelDataModule = await import(`@/data/${dataType}.json`);
+      const hotelsToImport: Hotel[] = hotelDataModule.default;
 
-      const hotelData: Hotel = {
-        ...hotel,
-        id: hotelId,
-        hotelId: hotelId,
-        cityId: slugify(hotel.city),
-        stateId: slugify(hotel.state),
-        brandSlug: slugify(hotel.brand),
-      };
-      
-      batch.set(hotelRef, hotelData, { merge: true });
-      count++;
-    });
+      if (!hotelsToImport || hotelsToImport.length === 0) {
+        return { success: false, message: `No data found for type: ${dataType}.` };
+      }
 
-    await batch.commit();
-    revalidatePath('/admin/hotels'); // Revalidate the page to show new data
-    
-    return { success: true, message: `${count} ${brand} hotels imported successfully.` };
+      hotelsToImport.forEach((hotel) => {
+        if (!hotel.name) return;
+        const hotelId = slugify(hotel.name);
+        const hotelRef = db.collection('hotels').doc(hotelId);
+
+        const hotelData: Hotel = {
+          ...hotel,
+          id: hotelId,
+          hotelId: hotelId,
+          cityId: slugify(hotel.city),
+          stateId: slugify(hotel.state),
+          brandSlug: slugify(hotel.brand),
+        };
+        
+        batch.set(hotelRef, hotelData, { merge: true });
+        count++;
+      });
+
+      await batch.commit();
+      revalidatePath('/admin/hotels');
+      return { success: true, message: `${count} ${dataType} hotels imported successfully.` };
+    }
+
   } catch (error: any) {
-    console.error(`Bulk import for ${brand} failed:`, error);
-    return { success: false, message: `Bulk import for ${brand} failed: ${error.message}` };
+    console.error(`Bulk import for ${dataType} failed:`, error);
+    return { success: false, message: `Bulk import for ${dataType} failed: ${error.message}` };
   }
 }

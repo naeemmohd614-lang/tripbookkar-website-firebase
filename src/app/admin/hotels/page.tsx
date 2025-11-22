@@ -1,3 +1,4 @@
+
 'use client'
 import React from 'react';
 import Link from 'next/link';
@@ -78,6 +79,13 @@ function BulkImportMenu() {
                         {isImporting === brand ? 'Importing...' : `Import ${brand.replace('-', ' ')}`}
                     </DropdownMenuItem>
                 ))}
+                 <DropdownMenuSeparator />
+                 <DropdownMenuItem 
+                    onClick={() => handleImport('interests')}
+                    disabled={isImporting === 'interests'}
+                >
+                    {isImporting === 'interests' ? 'Importing...' : 'Import Interests'}
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     );

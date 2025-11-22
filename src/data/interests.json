@@ -1,0 +1,123 @@
+
+[
+  {
+    "id": "beaches",
+    "name": "Beaches",
+    "description": "Discover our curated collection of stunning beachfront hotels and resorts. Whether you're looking for a vibrant party spot or a tranquil escape by the sea, find your perfect coastal getaway here.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1626951876321-3b7137628f83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjM2MjQ2NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "beach sunset"
+    },
+    "tags": ["beach", "beachfront", "sea view"]
+  },
+  {
+    "id": "mountains",
+    "name": "Mountains",
+    "description": "Discover hotels with breathtaking views, crisp mountain air, and serene surroundings. From luxurious resorts to cozy lodges, find your perfect high-altitude getaway.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1526239187794-f8c27c7872ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb3VudGFpbiUyMHJhbmdlfGVufDB8fHx8MTc2MzYyMTIyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "mountain range"
+    },
+    "tags": ["mountain", "himalayas", "valley view", "mountain view"]
+  },
+  {
+    "id": "heritage",
+    "name": "Heritage",
+    "description": "Step back in time with our collection of heritage hotels. Stay in magnificent palaces, colonial-era bungalows, and historic havelis that tell tales of a bygone era.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1534423892 जायसवाल?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+      "caption": "ancient indian palace"
+    },
+    "tags": ["heritage", "palace", "colonial"]
+  },
+  {
+    "id": "wildlife",
+    "name": "Wildlife",
+    "description": "Embark on an adventure into the wild. Stay at jungle lodges and resorts located on the fringes of national parks, offering a perfect blend of comfort and thrill.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1634273182550-40960b2d6f88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0aWdlciUyMHdpbGRsaWZlfGVufDB8fHx8MTc2MzYzMzY1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "tiger wildlife"
+    },
+    "tags": ["wildlife", "jungle", "national park"]
+  },
+  {
+    "id": "adventure",
+    "name": "Adventure",
+    "description": "For the thrill-seekers and adrenaline junkies. Discover hotels that serve as a base for trekking, skiing, rafting, and other exciting adventure sports.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1634707983128-0236c567a345?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2MzY5MjgxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "mountain climbing"
+    },
+    "tags": ["adventure", "trekking", "skiing", "rafting"]
+  },
+  {
+    "id": "spiritual",
+    "name": "Spiritual",
+    "description": "Embark on a journey of inner peace and discovery. Find serene hotels and resorts near major pilgrimage sites and spiritual centers, perfect for contemplation and rejuvenation.",
+    "image": {
+      "src": "https://picsum.photos/seed/interest-spiritual/1920/600",
+      "caption": "ganges river ceremony"
+    },
+    "tags": ["spiritual", "pilgrimage", "rishikesh"]
+  },
+  {
+    "id": "wellness",
+    "name": "Wellness",
+    "description": "Rejuvenate your mind, body, and soul. Our collection of wellness resorts offers serene environments, world-class spas, yoga retreats, and holistic treatments for a truly restorative getaway.",
+    "image": {
+      "src": "https://picsum.photos/seed/interest-wellness/1920/600",
+      "caption": "woman meditating at sunrise"
+    },
+    "tags": ["wellness", "spa", "yoga", "retreat"]
+  },
+  {
+    "id": "weddings",
+    "name": "Weddings",
+    "description": "Find the perfect venue for your dream wedding. From grand palaces and heritage forts to pristine beaches and lush gardens, explore our curated collection of hotels that make for a magical wedding destination.",
+    "image": {
+      "src": "https://picsum.photos/seed/interest-weddings/1920/600",
+      "caption": "beach wedding ceremony"
+    },
+    "tags": ["wedding", "wedding hotel", "destination wedding"]
+  },
+  {
+    "id": "desert",
+    "name": "Desert",
+    "description": "Explore the magic and majesty of the desert. From luxurious desert resorts to authentic camps under the stars, discover stays that offer unforgettable experiences like camel safaris, cultural nights, and stargazing.",
+    "image": {
+      "src": "https://picsum.photos/seed/interest-desert/1920/600",
+      "caption": "camel safari sunset"
+    },
+    "tags": ["desert", "jaisalmer", "jodhpur", "fort view"]
+  },
+  {
+    "id": "boutique",
+    "name": "Boutique",
+    "description": "Discover unique and intimate hotels with personalized service. Our collection of boutique hotels offers one-of-a-kind experiences, distinctive design, and a strong sense of place for the discerning traveler.",
+    "image": {
+      "src": "https://picsum.photos/seed/interest-boutique/1920/600",
+      "caption": "stylish boutique hotel lobby"
+    },
+    "tags": ["boutique", "design", "unique stay"]
+  },
+  {
+    "id": "luxury-tents",
+    "name": "Luxury Tents",
+    "description": "Experience the glamour of camping with all the comforts of a luxury hotel. Our selection of luxury tents and glamping sites offers a unique way to connect with nature without sacrificing style or comfort.",
+    "image": {
+      "src": "https://picsum.photos/seed/interest-tents/1920/600",
+      "caption": "luxury tent interior night"
+    },
+    "tags": ["tent", "glamping", "luxury camping"]
+  },
+  {
+    "id": "milestone-celebrations",
+    "name": "Milestone Celebrations",
+    "description": "Celebrate your special occasions in memorable settings. Whether it's an anniversary, a birthday, or any significant milestone, find the perfect hotel to make your celebration extraordinary.",
+    "image": {
+      "src": "https://picsum.photos/seed/interest-milestones/1920/600",
+      "caption": "romantic dinner setup"
+    },
+    "tags": ["romantic", "celebration", "anniversary", "honeymoon"]
+  }
+]
