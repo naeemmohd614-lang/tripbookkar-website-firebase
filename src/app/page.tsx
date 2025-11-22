@@ -1,5 +1,7 @@
+
 'use client';
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, Package, HeartPulse, Cake, Sun, Building2, Tent, Sparkles } from "lucide-react";
@@ -9,9 +11,9 @@ import { Separator } from "@/components/ui/separator";
 import SearchForm from "@/components/search-form";
 import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
-import { states, featuredPackages, destinationsByMonth } from "@/lib/data";
+import { featuredPackages } from "@/lib/data";
 import HotelCard from "@/components/hotel-card";
-import type { Hotel, Interest } from "@/lib/types";
+import type { Hotel, Interest, State, MonthDestination } from "@/lib/types";
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy, limit } from 'firebase/firestore';
 
@@ -32,6 +34,25 @@ export default function Home() {
   }, [firestore]);
 
   const { data: interests, isLoading: interestsLoading } = useCollection<Interest>(interestsQuery);
+
+  const statesQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'states'), orderBy('name', 'asc'));
+  }, [firestore]);
+
+  const { data: states, isLoading: statesLoading } = useCollection<State>(statesQuery);
+
+  const destinationsByMonthQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'monthlyDestinations'));
+  }, [firestore]);
+
+  const { data: destinationsByMonthData, isLoading: destinationsLoading } = useCollection<MonthDestination>(destinationsByMonthQuery);
+  
+  const sortedDestinationsByMonth = React.useMemo(() => {
+    if (!destinationsByMonthData) return [];
+    return destinationsByMonthData.sort((a, b) => new Date(`1 ${a.name} 2000`).getMonth() - new Date(`1 ${b.name} 2000`).getMonth());
+  }, [destinationsByMonthData]);
 
 
   const heroImage = {
@@ -135,34 +156,37 @@ export default function Home() {
               Discover hotels and experiences across India.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-            {states.map((state) => {
-               const stateImage = stateImages[state.stateId] || { src: `https://picsum.photos/seed/${state.stateId}/400/300`, caption: `landscape of ${state.name}` };
-              return (
-                <Link href={`/states/${state.stateId}`} key={state.stateId}>
-                  <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="p-0">
-                      <div className="relative h-40">
-                         {stateImage && (
-                          <Image
-                            src={stateImage.src}
-                            alt={`View of ${state.name}`}
-                            fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            data-ai-hint={stateImage.caption}
-                          />
-                        )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                        <div className="absolute bottom-0 left-0 p-3">
-                          <h3 className="font-bold text-lg text-white font-headline">{state.name}</h3>
+          {statesLoading && <p className="text-center">Loading states...</p>}
+          {states && (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+              {states.map((state) => {
+                const stateImage = stateImages[state.stateId] || { src: `https://picsum.photos/seed/${state.stateId}/400/300`, caption: `landscape of ${state.name}` };
+                return (
+                  <Link href={`/states/${state.stateId}`} key={state.stateId}>
+                    <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                      <CardContent className="p-0">
+                        <div className="relative h-40">
+                          {stateImage && (
+                            <Image
+                              src={stateImage.src}
+                              alt={`View of ${state.name}`}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              data-ai-hint={stateImage.caption}
+                            />
+                          )}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                          <div className="absolute bottom-0 left-0 p-3">
+                            <h3 className="font-bold text-lg text-white font-headline">{state.name}</h3>
+                          </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              );
-            })}
-          </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 
@@ -176,41 +200,33 @@ export default function Home() {
               Find the perfect place to travel for every month of the year.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {destinationsByMonth.map((month) => {
-              const monthImageUrls: { [key: string]: { src: string; caption: string } } = {
-                'January': { src: 'https://images.unsplash.com/photo-1517524206127-48bbd363f357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3aW50ZXIlMjB0cmF2ZWwlMjBpbmRpYXxlbnwwfHx8fDE3NjM3OTcwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'winter travel india' },
-                'February': { src: 'https://images.unsplash.com/photo-1488415032361-b7e238421f1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxub3J0aGVybiUyMGxpZ2h0c3xlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'northern lights' },
-                'March': { src: 'https://images.unsplash.com/photo-1493589976221-c2357c31ad77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaGVycnklMjBibG9zc29tfGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'cherry blossom' },
-                'April': { src: 'https://images.unsplash.com/photo-1619787110676-c0181304528d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0dWxpcCUyMGZpZWxkfGVufDB8fHx8MTc2MzY1MDM1MXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'tulip field' },
-                'May': { src: 'https://images.unsplash.com/photo-1653766846644-4e8a5498f69a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2ZW5pY2UlMjBjYW5hbHxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'venice canal' },
-                'June': { src: 'https://images.unsplash.com/photo-1586500036065-bdaeac7a4feb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMGJlYWNofGVufDB8fHx8MTc2MzU5MzAxMXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'tropical beach' },
-                'July': { src: 'https://images.unsplash.com/photo-1738508798495-32d5de3f2eda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzYXZhbm5haCUyMGVsZXBoYW50fGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'savannah elephant' },
-                'August': { src: 'https://images.unsplash.com/photo-1584493737987-b2f0c75a8729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc2MzY2NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'bali temple' },
-                'September': { src: 'https://images.unsplash.com/photo-1549366021-9f761d450615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxqdW5nbGUlMjBlbGVwaGFudHxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'jungle elephant' },
-                'October': { src: 'https://images.unsplash.com/photo-1507830075634-ce51e8b19328?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhdXR1bW4lMjBsYWtlfGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'autumn lake' },
-                'November': { src: 'https://images.unsplash.com/photo-1694152327372-39b2f9159f33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aWV0bmFtJTIwcmljZXxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'vietnam rice' },
-                'December': { src: 'https://images.unsplash.com/photo-1605199024013-5954321963dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxza2lpbmclMjBtb3VudGFpbnxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'skiing mountain' },
-              };
-              const destImage = monthImageUrls[month.name] || { src: `https://picsum.photos/seed/${month.imageId}/1080/400`, caption: "travel destination" };
-              return (
-                <Link href={`/destinations/${month.slug}`} key={month.name}>
-                  <Card className="overflow-hidden group relative h-24 hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src={destImage.src}
-                      alt={month.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      data-ai-hint={destImage.caption}
-                    />
-                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                      <h3 className="font-bold text-xl text-white font-headline tracking-wider">{month.name}</h3>
-                    </div>
-                  </Card>
-                </Link>
-              );
-            })}
-          </div>
+          {destinationsLoading && <p className="text-center">Loading destinations...</p>}
+          {sortedDestinationsByMonth && (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {sortedDestinationsByMonth.map((month) => {
+                const destImage = {
+                  src: month.pageImage.src,
+                  caption: month.pageImage.caption,
+                };
+                return (
+                  <Link href={`/destinations/${month.slug}`} key={month.name}>
+                    <Card className="overflow-hidden group relative h-24 hover:shadow-xl transition-shadow duration-300">
+                      <Image
+                        src={destImage.src}
+                        alt={month.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-ai-hint={destImage.caption}
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                        <h3 className="font-bold text-xl text-white font-headline tracking-wider">{month.name}</h3>
+                      </div>
+                    </Card>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 
