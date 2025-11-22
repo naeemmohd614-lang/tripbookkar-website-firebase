@@ -298,6 +298,28 @@ export const GenerateHotelDetailsOutputSchema = z.object({
 });
 export type GenerateHotelDetailsOutput = z.infer<typeof GenerateHotelDetailsOutputSchema>;
 
+// Interest Description Flow
+export const GenerateInterestDescriptionInputSchema = z.object({
+  name: z.string().describe('The name of the travel interest.'),
+});
+export type GenerateInterestDescriptionInput = z.infer<typeof GenerateInterestDescriptionInputSchema>;
+
+export const GenerateInterestDescriptionOutputSchema = z.object({
+  description: z.string().describe('A compelling, paragraph-long description for the travel interest.'),
+});
+export type GenerateInterestDescriptionOutput = z.infer<typeof GenerateInterestDescriptionOutputSchema>;
+
+// State Description Flow
+export const GenerateStateDescriptionInputSchema = z.object({
+  name: z.string().describe('The name of the Indian state.'),
+});
+export type GenerateStateDescriptionInput = z.infer<typeof GenerateStateDescriptionInputSchema>;
+
+export const GenerateStateDescriptionOutputSchema = z.object({
+  description: z.string().describe('A compelling, one-sentence description for the state.'),
+});
+export type GenerateStateDescriptionOutput = z.infer<typeof GenerateStateDescriptionOutputSchema>;
+
 
 // Personalized Recommendations Flow
 export const PersonalizedHotelRecommendationsInputSchema = z.object({
@@ -342,3 +364,25 @@ export type HotelDetailsState = {
   error?: string;
 }
 
+// State for Interest Description Generator
+export type InterestDescriptionState = {
+  description?: string;
+  error?: string;
+}
+
+// State for State Description Generator
+export type StateDescriptionState = {
+  description?: string;
+  error?: string;
+}
+
+export interface Interest {
+  id: string;
+  name: string;
+  description: string;
+  image: {
+    src: string;
+    caption: string;
+  };
+  tags: string[];
+}

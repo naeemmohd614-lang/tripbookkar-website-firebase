@@ -16,12 +16,20 @@ import {
   GenerateHotelDescriptionOutputSchema,
   GenerateHotelDetailsInputSchema,
   GenerateHotelDetailsOutputSchema,
+  GenerateInterestDescriptionInputSchema,
+  GenerateInterestDescriptionOutputSchema,
+  GenerateStateDescriptionInputSchema,
+  GenerateStateDescriptionOutputSchema,
   type GenerateSeoPageInput,
   type GenerateSeoPageOutput,
   type GenerateHotelDescriptionInput,
   type GenerateHotelDescriptionOutput,
   type GenerateHotelDetailsInput,
-  type GenerateHotelDetailsOutput
+  type GenerateHotelDetailsOutput,
+  type GenerateInterestDescriptionInput,
+  type GenerateInterestDescriptionOutput,
+  type GenerateStateDescriptionInput,
+  type GenerateStateDescriptionOutput,
 } from '@/lib/types';
 
 
@@ -143,4 +151,71 @@ const generateHotelDetailsFlow = ai.defineFlow(
 
 export async function generateHotelDetails(input: GenerateHotelDetailsInput): Promise<GenerateHotelDetailsOutput> {
   return generateHotelDetailsFlow(input);
+}
+
+
+const generateInterestDescriptionPrompt = ai.definePrompt({
+  name: 'generateInterestDescriptionPrompt',
+  input: { schema: GenerateInterestDescriptionInputSchema },
+  output: { schema: GenerateInterestDescriptionOutputSchema },
+  prompt: `You are a creative travel content writer. Your task is to write a single, compelling "description" paragraph for a travel interest category.
+
+Interest Name: {{{name}}}
+
+Instructions:
+- Write one engaging paragraph (around 40-60 words).
+- Describe the essence of this travel style.
+- Use evocative and appealing language to inspire travelers.
+- The tone should be inviting and exciting.
+- The output must be only the description text, with no preamble.
+`,
+});
+
+const generateInterestDescriptionFlow = ai.defineFlow(
+  {
+    name: 'generateInterestDescriptionFlow',
+    inputSchema: GenerateInterestDescriptionInputSchema,
+    outputSchema: GenerateInterestDescriptionOutputSchema,
+  },
+  async (input) => {
+    const { output } = await generateInterestDescriptionPrompt(input);
+    return output!;
+  }
+);
+
+export async function generateInterestDescription(input: GenerateInterestDescriptionInput): Promise<GenerateInterestDescriptionOutput> {
+  return generateInterestDescriptionFlow(input);
+}
+
+
+const generateStateDescriptionPrompt = ai.definePrompt({
+  name: 'generateStateDescriptionPrompt',
+  input: { schema: GenerateStateDescriptionInputSchema },
+  output: { schema: GenerateStateDescriptionOutputSchema },
+  prompt: `You are a travel content writer for Tripify. Your task is to write a short, compelling "description" paragraph for an Indian state.
+
+State Name: {{{name}}}
+
+Instructions:
+- Write one engaging paragraph (around 20-30 words).
+- Highlight the state's main identity or key attractions (e.g., tech hub, palaces, beaches, backwaters).
+- The tone should be concise and informative.
+- The output must be only the description text, with no preamble.
+`,
+});
+
+const generateStateDescriptionFlow = ai.defineFlow(
+  {
+    name: 'generateStateDescriptionFlow',
+    inputSchema: GenerateStateDescriptionInputSchema,
+    outputSchema: GenerateStateDescriptionOutputSchema,
+  },
+  async (input) => {
+    const { output } = await generateStateDescriptionPrompt(input);
+    return output!;
+  }
+);
+
+export async function generateStateDescription(input: GenerateStateDescriptionInput): Promise<GenerateStateDescriptionOutput> {
+  return generateStateDescriptionFlow(input);
 }

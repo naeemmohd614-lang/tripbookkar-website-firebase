@@ -2,17 +2,21 @@
 'use server';
 
 import { personalizedHotelRecommendations } from '@/ai/flows/personalized-hotel-recommendations';
-import { generateSeoPage, generateHotelDescription, generateHotelDetails } from '@/ai/flows/generate-seo-pages';
+import { generateSeoPage, generateHotelDescription, generateHotelDetails, generateInterestDescription, generateStateDescription } from '@/ai/flows/generate-seo-pages';
 import { z } from 'zod';
 import type { 
   RecommendationsState, 
   SeoGeneratorState, 
   HotelDescriptionState,
   HotelDetailsState,
+  InterestDescriptionState,
+  StateDescriptionState,
   GenerateSeoPageInput,
   PersonalizedHotelRecommendationsInput,
   GenerateHotelDescriptionInput,
   GenerateHotelDetailsInput,
+  GenerateInterestDescriptionInput,
+  GenerateStateDescriptionInput,
   Hotel,
   Interest,
   State,
@@ -113,7 +117,6 @@ export async function generateSeoContent(
   }
 }
 
-// Re-exporting the imported function so other parts of the app can use it from here.
 export async function generateHotelDescriptionAction(input: GenerateHotelDescriptionInput): Promise<HotelDescriptionState> {
   try {
     const result = await generateHotelDescription(input);
@@ -131,6 +134,26 @@ export async function generateHotelDetailsAction(input: GenerateHotelDetailsInpu
   } catch(e: any) {
     console.error(e);
     return { error: 'Failed to generate hotel details.' };
+  }
+}
+
+export async function generateInterestDescriptionAction(input: GenerateInterestDescriptionInput): Promise<InterestDescriptionState> {
+  try {
+    const result = await generateInterestDescription(input);
+    return { description: result.description };
+  } catch(e: any) {
+    console.error(e);
+    return { error: 'Failed to generate description.' };
+  }
+}
+
+export async function generateStateDescriptionAction(input: GenerateStateDescriptionInput): Promise<StateDescriptionState> {
+  try {
+    const result = await generateStateDescription(input);
+    return { description: result.description };
+  } catch(e: any) {
+    console.error(e);
+    return { error: 'Failed to generate description.' };
   }
 }
 

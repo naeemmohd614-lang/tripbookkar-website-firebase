@@ -10,7 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
 import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
-import { generateHotelDetailsAction } from '@/app/actions';
+import { generateHotelDetailsAction, generateHotelDescriptionAction } from '@/app/actions';
 import { useFirestore } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import { setDocumentNonBlocking } from '@/firebase';
@@ -128,6 +128,27 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     }
   };
 
+  const handleGenerateDescription = async () => {
+    if (!watchedName) {
+      toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating a description." });
+      return;
+    }
+    const result = await generateHotelDescriptionAction({
+      name: watchedName,
+      city: watchedCity,
+      brand: watchedBrand,
+    });
+
+    if (result.description) {
+      setValue('about', result.description);
+      toast({ title: "Description Generated", description: "The 'About' section has been filled in by AI." });
+    }
+    if (result.error) {
+       toast({ variant: 'destructive', title: 'AI Error', description: result.error });
+    }
+  };
+
+
   const onSubmit: SubmitHandler<Hotel> = async (data) => {
     if (!firestore) {
       toast({ variant: 'destructive', title: 'Error', description: 'Firestore not available.' });
@@ -219,7 +240,12 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                   <Input id="address" {...register('address')} />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="about">About</Label>
+                  <div className="flex justify-between items-center">
+                     <Label htmlFor="about">About</Label>
+                     <Button type="button" size="sm" variant="ghost" onClick={handleGenerateDescription}>
+                        <Wand2 className="mr-2 h-3 w-3" /> Generate
+                    </Button>
+                  </div>
                   <Textarea id="about" {...register('about')} rows={5}/>
                 </div>
                  <div className="space-y-2">

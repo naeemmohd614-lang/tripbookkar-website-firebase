@@ -1,19 +1,20 @@
 'use client';
 import React, { useEffect } from 'react';
-import { useForm, useFieldArray, SubmitHandler } from 'react-hook-form';
+import { useForm, useFieldArray, SubmitHandler, useWatch } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { Trash2 } from 'lucide-react';
+import { Trash2, Wand2 } from 'lucide-react';
 import type { Interest } from '@/lib/types';
 import { useFirestore } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import { setDocumentNonBlocking } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
+import { generateInterestDescriptionAction } from '@/app/actions';
 
 interface InterestEditorProps {
   interest?: Interest;
@@ -43,7 +44,7 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
   const firestore = useFirestore();
   const { toast } = useToast();
 
-  const { register, control, handleSubmit, reset, formState: { isSubmitting } } = useForm<Interest>({
+  const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<Interest>({
     defaultValues: interest || newInterestDefault
   });
 
@@ -59,6 +60,23 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
       reset(newInterestDefault);
     }
   }, [interest, reset]);
+
+  const watchedName = useWatch({ control, name: 'name' });
+
+  const handleGenerateDescription = async () => {
+    if (!watchedName) {
+        toast({ variant: 'destructive', title: "Interest Name Required", description: "Please enter an interest name before generating a description." });
+        return;
+    }
+    const result = await generateInterestDescriptionAction({ name: watchedName });
+    if (result.description) {
+        setValue('description', result.description);
+        toast({ title: "Description Generated", description: "The description has been filled in by AI." });
+    } else if (result.error) {
+        toast({ variant: 'destructive', title: 'AI Error', description: result.error });
+    }
+  };
+
 
   const onSubmit: SubmitHandler<Interest> = async (data) => {
     if (!firestore) {
@@ -111,7 +129,12 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
               <Input id="name" {...register('name', { required: true })} />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="description">Description</Label>
+               <div className="flex justify-between items-center">
+                    <Label htmlFor="description">Description</Label>
+                    <Button type="button" size="sm" variant="ghost" onClick={handleGenerateDescription}>
+                        <Wand2 className="mr-2 h-3 w-3" /> Generate with AI
+                    </Button>
+                </div>
               <Textarea id="description" {...register('description')} />
             </div>
              <div className="space-y-2">
