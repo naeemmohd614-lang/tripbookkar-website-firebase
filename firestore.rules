@@ -40,24 +40,24 @@ service cloud.firestore {
     /**
      * @description Rules for the /hotels collection.
      * @path /hotels/{hotelId}
-     * @allow read: if true; // Anyone can get a single hotel or list hotels for public pages.
+     * @allow read, list: if true; // Anyone can get a single hotel or list all hotels.
      * @allow write: if isAdmin(); // Only admins can create, update, or delete hotels.
      * @principle Admin-Only Write Access, Public Read Access
      */
     match /hotels/{hotelId} {
-      allow read: if true;
+      allow read, list: if true;
       allow write: if isAdmin();
     }
 
     /**
      * @description Rules for the /packages collection.
      * @path /packages/{packageId}
-     * @allow read: if true; // Anyone can read package data.
+     * @allow read, list: if true; // Anyone can read or list package data.
      * @allow write: if isAdmin(); // Only admins can manage packages.
      * @principle Admin-Only Write Access, Public Read Access
      */
     match /packages/{packageId} {
-      allow read: if true;
+      allow read, list: if true;
       allow write: if isAdmin();
     }
 
