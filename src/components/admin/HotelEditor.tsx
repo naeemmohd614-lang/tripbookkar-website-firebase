@@ -15,6 +15,7 @@ import { useFirestore } from '@/firebase';
 import { doc, collection } from 'firebase/firestore';
 import { setDocumentNonBlocking, addDocumentNonBlocking } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
+import Image from 'next/image';
 
 interface HotelEditorProps {
   hotel?: Hotel;
@@ -86,9 +87,9 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     }
 
     try {
-      if (hotel?.hotelId) {
+      if (hotel?.id) {
         // Update existing hotel
-        const hotelRef = doc(firestore, 'hotels', hotel.hotelId);
+        const hotelRef = doc(firestore, 'hotels', hotel.id);
         setDocumentNonBlocking(hotelRef, data, { merge: true });
         toast({ title: 'Hotel Updated', description: `"${data.name}" has been saved.` });
       } else {
@@ -123,7 +124,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     <div className="max-w-4xl mx-auto">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">{hotel?.hotelId ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
+          <CardTitle className="text-2xl font-bold">{hotel?.id ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
           <CardDescription>Manage hotel details, room categories, and images.</CardDescription>
         </CardHeader>
         <CardContent>
@@ -212,7 +213,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {imageFields.map((image, index) => (
                         <div key={image.id} className="relative aspect-video">
-                            <img src={image.src} alt={image.caption} className="rounded-md object-cover w-full h-full" />
+                            <Image src={image.src} alt={image.caption || `Image ${index + 1}`} fill className="rounded-md object-cover" />
                              <Button
                                 type="button"
                                 variant="destructive"

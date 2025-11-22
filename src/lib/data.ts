@@ -1,5 +1,3 @@
-
-
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
 import type { Destination, Brand, State, City, Hotel, MonthDestination, Attraction } from './types';
@@ -35,29 +33,6 @@ function slugify(text: string) {
     .replace(/-+$/, '');
 }
 
-const allHotelsData = [
-  ...marriottHotels,
-  ...tajHotels,
-  ...oberoiHotels,
-  ...leelaHotels,
-  ...hyattHotels,
-  ...hiltonHotels,
-  ...accorHotels,
-  ...ihgHotels,
-  ...radissonHotels,
-  ...otherHotels
-];
-
-// We need to cast this because the JSON import is not typed
-const hotels: Hotel[] = (allHotelsData as any[]).map((hotel, index) => ({
-  ...hotel,
-  id: hotel.id || `${slugify(hotel.name)}-${index}`,
-  hotelId: hotel.id || `${slugify(hotel.name)}-${index}`,
-  stateId: slugify(hotel.state),
-  cityId: slugify(hotel.city),
-  brandSlug: slugify(hotel.brand),
-}));
-
 const brands: Brand[] = (brandsData as Brand[]).map(brand => ({
     ...brand,
     brandSlug: slugify(brand.name),
@@ -72,7 +47,6 @@ const cities: City[] = (citiesData as City[]).map(city => ({
     stateId: slugify(city.stateId),
 }));
 
-export { hotels };
 export { brands };
 export { states };
 export { cities };

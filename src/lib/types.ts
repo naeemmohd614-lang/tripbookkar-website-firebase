@@ -3,15 +3,15 @@
 import { z } from 'zod';
 
 export interface Hotel {
-  id: string; // Firestore document ID
-  hotelId: string; // Keep original ID for links
+  id?: string; // Firestore document ID - optional for new documents
+  hotelId?: string; // Keep original ID for links
   name: string;
   brand: string;
-  brandSlug: string;
+  brandSlug?: string;
   state: string;
-  stateId: string;
+  stateId?: string;
   city: string;
-  cityId: string;
+  cityId?: string;
   location?: {
     lat: number;
     lng: number;

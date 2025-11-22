@@ -22,7 +22,14 @@ export default function HotelCard({ hotel }: HotelCardProps) {
     }).format(price);
   };
 
-  const hotelId = hotel.id || hotel.hotelId;
+  const hotelId = hotel.id;
+  const stateId = hotel.stateId;
+  const cityId = hotel.cityId;
+
+  if (!hotelId || !stateId || !cityId) {
+    // Handle cases where IDs are missing if necessary
+    return null;
+  }
 
   return (
     <Card className="overflow-hidden group w-full flex flex-col">
@@ -75,7 +82,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           )}
         </div>
         <Button asChild>
-          <Link href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotelId}`}>View Details</Link>
+          <Link href={`/states/${stateId}/cities/${cityId}/hotels/${hotelId}`}>View Details</Link>
         </Button>
       </CardFooter>
     </Card>
