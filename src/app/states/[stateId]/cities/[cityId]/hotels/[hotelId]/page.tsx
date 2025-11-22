@@ -1,6 +1,5 @@
 
 'use client';
-import { hotels } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
@@ -9,12 +8,25 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Check, Dumbbell, Dog, MapPin, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
 import React from 'react';
+import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { doc } from 'firebase/firestore';
 
 export default function HotelDetailPage() {
   const params = useParams();
   const hotelId = params.hotelId as string;
+  const firestore = useFirestore();
 
-  const hotel = (hotels as Hotel[]).find((h) => h.hotelId === hotelId);
+  const hotelRef = useMemoFirebase(() => {
+    if (!firestore || !hotelId) return null;
+    return doc(firestore, 'hotels', hotelId);
+  }, [firestore, hotelId]);
+
+  const { data: hotel, isLoading } = useDoc<Hotel>(hotelRef);
+
+
+  if (isLoading) {
+    return <div className="p-6 text-center">Loading hotel details...</div>;
+  }
 
   if (!hotel) {
     notFound();

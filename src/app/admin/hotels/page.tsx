@@ -1,6 +1,8 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, orderBy } from 'firebase/firestore';
 import { Pencil, Trash2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,9 +14,16 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import type { Hotel } from '@/lib/types';
-import { hotels } from '@/lib/data';
+
 
 export default function HotelsPage(){
+  const firestore = useFirestore();
+  const hotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'hotels'), orderBy('name', 'asc'));
+  }, [firestore]);
+
+  const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
 
   const formatPrice = (price: number) => {
     if (typeof price !== 'number') return 'N/A';
@@ -46,8 +55,13 @@ export default function HotelsPage(){
             </TableRow>
           </TableHeader>
           <TableBody className="bg-white divide-y divide-gray-200">
-            {(hotels as Hotel[]).map((h: Hotel) => (
-              <TableRow key={h.hotelId} className="hover:bg-gray-50">
+            {isLoading && (
+              <TableRow>
+                <TableCell colSpan={6} className="text-center p-8">Loading hotels...</TableCell>
+              </TableRow>
+            )}
+            {!isLoading && hotels && hotels.map((h: Hotel) => (
+              <TableRow key={h.id} className="hover:bg-gray-50">
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{h.name}</TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.brand}</TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.city}, {h.state}</TableCell>
@@ -60,7 +74,7 @@ export default function HotelsPage(){
                 </TableCell>
                 <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <div className="flex items-center gap-4">
-                     <Link href={`/admin/hotels/${h.hotelId}`} className="text-blue-600 hover:text-blue-800">
+                     <Link href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
                         <Pencil size={18} />
                     </Link>
                     <button className="text-red-500 hover:text-red-700">

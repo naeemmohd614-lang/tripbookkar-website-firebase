@@ -22,6 +22,8 @@ export default function HotelCard({ hotel }: HotelCardProps) {
     }).format(price);
   };
 
+  const hotelId = hotel.id || hotel.hotelId;
+
   return (
     <Card className="overflow-hidden group w-full flex flex-col">
       <CardHeader className="p-0">
@@ -73,7 +75,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           )}
         </div>
         <Button asChild>
-          <Link href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.hotelId}`}>View Details</Link>
+          <Link href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotelId}`}>View Details</Link>
         </Button>
       </CardFooter>
     </Card>

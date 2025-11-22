@@ -2,14 +2,26 @@
 import HotelEditor from '@/components/admin/HotelEditor';
 import type { Hotel } from '@/lib/types';
 import { notFound } from 'next/navigation';
-import { hotels } from '@/lib/data';
+import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { doc } from 'firebase/firestore';
 
 export default function EditHotelPage({ params }: { params: { id: string } }) {
-  const hotel = (hotels as Hotel[]).find(h => h.hotelId === params.id);
+  const firestore = useFirestore();
 
-  if (!hotel) {
+  const hotelRef = useMemoFirebase(() => {
+    if (!firestore || !params.id) return null;
+    return doc(firestore, 'hotels', params.id);
+  }, [firestore, params.id]);
+
+  const { data: hotel, isLoading } = useDoc<Hotel>(hotelRef);
+
+  if (isLoading) {
+    return <div className="p-6">Loading hotel data...</div>;
+  }
+  
+  if (!hotel && !isLoading) {
     notFound();
   }
 
-  return <HotelEditor hotel={hotel} />;
+  return <HotelEditor hotel={hotel as Hotel} />;
 }

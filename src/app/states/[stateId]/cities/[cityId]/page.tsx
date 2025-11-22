@@ -1,6 +1,7 @@
 
+
 'use client';
-import { cities, hotels, states, attractions } from '@/lib/data';
+import { cities, states, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
@@ -10,6 +11,9 @@ import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 // Helper function to create a slug
 function slugify(text: string) {
@@ -22,6 +26,8 @@ export default function CityPage() {
   const stateId = params.stateId as string;
   const cityId = params.cityId as string;
 
+  const firestore = useFirestore();
+
   const state = (states as State[]).find((s) => s.stateId === stateId);
   const city = (cities as City[]).find((c) => c.cityId === cityId);
 
@@ -29,9 +35,12 @@ export default function CityPage() {
     notFound();
   }
 
-  const cityHotels = (hotels as Hotel[]).filter(
-    (hotel) => hotel.cityId === cityId
-  );
+  const cityHotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'hotels'), where('cityId', '==', cityId));
+  }, [firestore, cityId]);
+
+  const { data: cityHotels, isLoading } = useCollection<Hotel>(cityHotelsQuery);
   
   const heroImage = {
       "src": `https://picsum.photos/seed/city-${cityId}/1920/600`,
@@ -70,7 +79,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -109,7 +118,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -148,7 +157,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -187,7 +196,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -226,7 +235,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -265,7 +274,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -304,7 +313,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -343,7 +352,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -384,7 +393,7 @@ export default function CityPage() {
                 }
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -425,7 +434,7 @@ export default function CityPage() {
                 }
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -525,10 +534,10 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {cityHotels.map((hotel) => (
-                            <HotelCard key={hotel.hotelId} hotel={hotel} />
+                            <HotelCard key={hotel.id} hotel={hotel} />
                         ))}
                         </div>
                     ) : (
@@ -621,9 +630,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -714,9 +723,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -807,9 +816,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -899,9 +908,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -991,9 +1000,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1085,9 +1094,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1142,7 +1151,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -1187,13 +1196,12 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
     );
   }
-
 
   // Himachal Pages
   if (cityId === 'shimla') {
@@ -1271,9 +1279,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1362,9 +1370,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1453,9 +1461,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1544,9 +1552,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1636,9 +1644,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1727,9 +1735,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1818,9 +1826,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -1909,9 +1917,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -2001,9 +2009,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -2092,9 +2100,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -2164,9 +2172,9 @@ export default function CityPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                     {cityHotels.length > 0 ? (
+                     {cityHotels && cityHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}
+                        {cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}
                         </div>
                     ) : (
                         <div className="text-center py-16 border-2 border-dashed rounded-lg">
@@ -2213,7 +2221,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2252,7 +2260,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2291,7 +2299,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2330,7 +2338,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2370,7 +2378,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2409,7 +2417,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2448,7 +2456,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2487,7 +2495,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2528,7 +2536,7 @@ export default function CityPage() {
                 }
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2568,7 +2576,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2607,7 +2615,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2646,7 +2654,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2685,7 +2693,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2724,7 +2732,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2763,7 +2771,7 @@ export default function CityPage() {
                 </div>
                 <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in {city.name}</h3>
-                    {cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.hotelId} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
+                    {cityHotels && cityHotels.length > 0 ? ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{cityHotels.map((hotel) => (<HotelCard key={hotel.id} hotel={hotel} />))}</div>) : ( <div className="text-center py-16 border-2 border-dashed rounded-lg"><h3 className="text-xl font-semibold text-muted-foreground">No hotels found.</h3><p className="mt-2 text-muted-foreground">Check back soon for updates.</p></div> )}
                 </div>
             </div>
         </div>
@@ -2806,14 +2814,15 @@ export default function CityPage() {
             <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
                 Hotels in {city.name}
             </h2>
-            {cityHotels.length > 0 ? (
+            {isLoading && <p>Loading hotels...</p>}
+            {cityHotels && cityHotels.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {cityHotels.map((hotel) => (
-                    <HotelCard key={hotel.hotelId} hotel={hotel} />
+                    <HotelCard key={hotel.id} hotel={hotel} />
                 ))}
                 </div>
             ) : (
-                <div className="text-center py-16 border-2 border-dashed rounded-lg">
+                !isLoading && <div className="text-center py-16 border-2 border-dashed rounded-lg">
                 <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this city yet.</h3>
                 <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
                 </div>
@@ -2822,7 +2831,3 @@ export default function CityPage() {
     </div>
   )
 }
-
-  
-
-    

@@ -1,4 +1,4 @@
-
+'use client';
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,11 +9,22 @@ import { Separator } from "@/components/ui/separator";
 import SearchForm from "@/components/search-form";
 import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
-import { states, featuredPackages, destinationsByMonth, hotels } from "@/lib/data";
+import { states, featuredPackages, destinationsByMonth } from "@/lib/data";
 import HotelCard from "@/components/hotel-card";
 import type { Hotel } from "@/lib/types";
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, orderBy, limit } from 'firebase/firestore';
+
 
 export default function Home() {
+  const firestore = useFirestore();
+  const hotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'hotels'), orderBy('rating', 'desc'), limit(3));
+  }, [firestore]);
+
+  const { data: featuredHotels, isLoading: hotelsLoading } = useCollection<Hotel>(hotelsQuery);
+
   const heroImage = {
       "src": "https://images.unsplash.com/photo-1672841828271-54340a6fbcd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cm9waWNhbCUyMGJlYWNofGVufDB8fHx8MTc2MzM3MzAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "tropical beach"
@@ -24,14 +35,14 @@ export default function Home() {
     { name: 'Mountains', imageId: 'https://images.unsplash.com/photo-1526239187794-f8c27c7872ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtb3VudGFpbiUyMHJhbmdlfGVufDB8fHx8MTc2MzYyMTIyNnww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'mountain range', href: '/interests/mountains' },
     { name: 'Heritage', imageId: 'https://images.unsplash.com/photo-1650343301290-e22780fe2609?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmNpZW50JTIwdGVtcGxlfGVufDB8fHx8MTc2MzY2MDg1Mnww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'ancient temple', href: '/interests/heritage' },
     { name: 'Wildlife', imageId: 'https://images.unsplash.com/photo-1634273182550-40960b2d6f88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0aWdlciUyMHdpbGRsaWZlfGVufDB8fHx8MTc2MzYzMzY1MXww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'tiger wildlife', href: '/interests/wildlife' },
-    { name: 'Adventure', imageId: 'https://images.unsplash.com/photo-1634707983128-0236c567a345?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2MzY5MjgxOXww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'mountain climbing', href: '/interests/adventure' },
+    { name: 'Adventure', imageId: 'https://images.unsplash.com/photo-1634707983128-0236c567a345?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2MzY5MjgxOXww&ixlib-rb-4.1.0&q=80&w=1080', hint: 'mountain climbing', href: '/interests/adventure' },
     { name: 'Spiritual', imageId: 'https://images.unsplash.com/photo-1645148284392-e2b0fae3262d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx5b2dhJTIwbWVkaXRhdGlvbnxlbnwwfHx8fDE3NjM2OTI4MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'yoga meditation', href: '/interests/spiritual' },
-    { name: 'Wellness Resorts', imageId: 'https://images.unsplash.com/photo-1700522924565-9fad1c05469e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzcGElMjBtZWRpdGF0aW9ufGVufDB8fHx8MTc2MzY5MjgyMHww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'spa meditation', href: '/interests/wellness', icon: HeartPulse },
-    { name: 'Weddings', imageId: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXN0aW5hdGlvbiUyMHdlZGRpbmd8ZW58MHx8fHwxNzYzNjkyODE5fDA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'destination wedding', href: '/interests/weddings', icon: Cake },
-    { name: 'Desert Experiences', imageId: 'https://images.unsplash.com/photo-1650556443811-4f515ca1b1f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYW5kJTIwZHVuZXN8ZW58MHx8fHwxNzYzNjkyODE5fDA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'sand dunes', href: '/interests/desert', icon: Sun },
-    { name: 'Boutique Hotels', imageId: 'https://images.unsplash.com/photo-1762472662611-d0391e522521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGFybWluZyUyMGhvdGVsfGVufDB8fHx8MTc2MzY5MjgxOXww&ixlib=rb-4.1.0&q=80&w=1080', hint: 'charming hotel', href: '/interests/boutique', icon: Building2 },
-    { name: 'Luxury Tents', imageId: 'https://images.unsplash.com/photo-1714326029322-fcc1464df757?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbGFtcGluZyUyMHRlbnR8ZW58MHx8fHwxNzYzNjgxOTA0fDA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'glamping tent', href: '/interests/luxury-tents', icon: Tent },
-    { name: 'Milestone Celebrations', imageId: 'https://images.unsplash.com/photo-1759124650346-43900f8479d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGVjaWFsJTIwb2NjYXNpb24lMjBwYXJ0eXxlbnwwfHx8fDE3NjM2OTI4MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', hint: 'special occasion party', href: '/interests/milestone-celebrations', icon: Sparkles },
+    { name: 'Wellness Resorts', imageId: 'https://images.unsplash.com/photo-1700522924565-9fad1c05469e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzcGElMjBtZWRpdGF0aW9ufGVufDB8fHx8MTc2MzY5MjgyMHww&ixlib-rb-4.1.0&q=80&w=1080', hint: 'spa meditation', href: '/interests/wellness', icon: HeartPulse },
+    { name: 'Weddings', imageId: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZXN0aW5hdGlvbiUyMHdlZGRpbmd8ZW58MHx8fHwxNzYzNjkyODE5fDA&ixlib-rb-4.1.0&q=80&w=1080', hint: 'destination wedding', href: '/interests/weddings', icon: Cake },
+    { name: 'Desert Experiences', imageId: 'https://images.unsplash.com/photo-1650556443811-4f515ca1b1f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYW5kJTIwZHVuZXN8ZW58MHx8fHwxNzYzNjkyODE5fDA&ixlib-rb-4.1.0&q=80&w=1080', hint: 'sand dunes', href: '/interests/desert', icon: Sun },
+    { name: 'Boutique Hotels', imageId: 'https://images.unsplash.com/photo-1762472662611-d0391e522521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGFybWluZyUyMGhvdGVsfGVufDB8fHx8MTc2MzY5MjgxOXww&ixlib-rb-4.1.0&q=80&w=1080', hint: 'charming hotel', href: '/interests/boutique', icon: Building2 },
+    { name: 'Luxury Tents', imageId: 'https://images.unsplash.com/photo-1714326029322-fcc1464df757?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbGFtcGluZyUyMHRlbnR8ZW58MHx8fHwxNzYzNjgxOTA0fDA&ixlib-rb-4.1.0&q=80&w=1080', hint: 'glamping tent', href: '/interests/luxury-tents', icon: Tent },
+    { name: 'Milestone Celebrations', imageId: 'https://images.unsplash.com/photo-1759124650346-43900f8479d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGVjaWFsJTIwb2NjYXNpb24lMjBwYXJ0eXxlbnwwfHx8fDE3NjM2OTI4MTl8MA&ixlib-rb-4.1.0&q=80&w=1080', hint: 'special occasion party', href: '/interests/milestone-celebrations', icon: Sparkles },
   ];
   
   const stateImages: { [key: string]: { src: string, caption: string } } = {
@@ -51,20 +62,6 @@ export default function Home() {
     gujarat: { src: 'https://images.unsplash.com/photo-1663693953045-2e97fc0b23c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kc2NhcGUlMjBvZiUyMEd1amFyYXR8ZW58MHx8fHwxNzYzNjcwODg2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Gujarat' },
     delhi: { src: 'https://images.unsplash.com/photo-1609670289875-590e8ec05c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGUlMjBvZiUyMERlbGhpfGVufDB8fHx8MTc2MzY3MDg4N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Delhi' },
   };
-
-  const featuredHotels: Hotel[] = (hotels as Hotel[]).map(h => {
-    if (h.name === "The Ritz-Carlton Bangalore") {
-      return { ...h, images: [{ ...h.images[0], src: 'https://images.unsplash.com/photo-1709294974005-24e5695257ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxFeHRlcmlvciUyMHZpZXclMjBvZiUyMFRoZSUyMFJpdHotQ2FybHRvbiUyMEJhbmdhbG9yZXxlbnwwfHx8fDE3NjM2NTY4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Exterior view of The Ritz-Carlton Bangalore' }, ...h.images.slice(1)] };
-    }
-    if (h.name === "JW Marriott Hotel New Delhi Aerocity") {
-      return { ...h, images: [{ ...h.images[0], src: 'https://images.unsplash.com/photo-1551870803-e068765a19e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8SG90ZWwlMjBleHRlcmlvciUyMGF0JTIwQWVyb2NpdHl8ZW58MHx8fHwxNzYzNjU2ODgzfDA&ixlib.rb-4.1.0&q=80&w=1080', caption: 'Hotel exterior at Aerocity' }, ...h.images.slice(1)] };
-    }
-    if (h.name === "Goa Marriott Resort & Spa") {
-      return { ...h, images: [{ ...h.images[0], src: 'https://images.unsplash.com/photo-1703085722123-0c6af3e9319b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxWaWV3JTIwb2YlMjB0aGUlMjByZXNvcnQlMjBmcm9tJTIwdGhlJTIwYmF5fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib.rb-4.1.0&q=80&w=1080', caption: 'View of the resort from the bay' }, ...h.images.slice(1)] };
-    }
-    return h;
-  });
-
 
   return (
     <div className="flex flex-col">
@@ -194,7 +191,7 @@ export default function Home() {
                 'August': { src: 'https://images.unsplash.com/photo-1584493737987-b2f0c75a8729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc2MzY2NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'bali temple' },
                 'September': { src: 'https://images.unsplash.com/photo-1549366021-9f761d450615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxqdW5nbGUlMjBlbGVwaGFudHxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'jungle elephant' },
                 'October': { src: 'https://images.unsplash.com/photo-1507830075634-ce51e8b19328?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhdXR1bW4lMjBsYWtlfGVufDB8fHx8MTc2MzY5NDgzOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'autumn lake' },
-                'November': { src: 'https://images.unsplash.com/photo-1694152327372-39b2f9159f33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aWV0bmFtJTIwcmljZXxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'vietnam rice' },
+                'November': { src: 'https://images.unsplash.com/photo-1694152327372-39b2f9159f33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aWV0bmFtJTIwcmljZXxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib-rb-4.1.0&q=80&w=1080', caption: 'vietnam rice' },
                 'December': { src: 'https://images.unsplash.com/photo-1605199024013-5954321963dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxza2lpbmclMjBtb3VudGFpbnxlbnwwfHx8fDE3NjM2OTQ4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'skiing mountain' },
               };
               const destImage = monthImageUrls[month.name] || { src: `https://picsum.photos/seed/${month.imageId}/1080/400`, caption: "travel destination" };
@@ -259,8 +256,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(featuredHotels as Hotel[]).slice(0, 3).map((hotel) => (
-              <HotelCard key={hotel.hotelId} hotel={hotel} />
+            {hotelsLoading && <p>Loading...</p>}
+            {featuredHotels && featuredHotels.map((hotel) => (
+              <HotelCard key={hotel.id} hotel={hotel} />
             ))}
           </div>
           <div className="text-center mt-12">

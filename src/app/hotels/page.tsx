@@ -1,9 +1,19 @@
 
-import { hotels } from '@/lib/data';
+'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, orderBy } from 'firebase/firestore';
 
 export default function HotelsPage() {
+  const firestore = useFirestore();
+  const hotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'hotels'), orderBy('name', 'asc'));
+  }, [firestore]);
+
+  const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
@@ -15,11 +25,15 @@ export default function HotelsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {(hotels as Hotel[]).map((hotel) => (
-          <HotelCard key={hotel.hotelId} hotel={hotel} />
-        ))}
-      </div>
+      {isLoading && <p className="text-center">Loading hotels...</p>}
+
+      {!isLoading && hotels && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {hotels.map((hotel) => (
+            <HotelCard key={hotel.id} hotel={hotel} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

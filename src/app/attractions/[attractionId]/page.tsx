@@ -1,20 +1,24 @@
 
+
 'use client';
 
 import { useParams, notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { attractions, hotels } from '@/lib/data';
+import { attractions } from '@/lib/data';
 import type { Attraction, Hotel } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Clock, Ticket, CalendarCheck, MapPin, Bus, Train, Plane, Info, Hotel as HotelIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
 
 export default function AttractionPage() {
     const params = useParams();
     const router = useRouter();
+    const firestore = useFirestore();
     const attractionId = params.attractionId as string;
 
     const attraction = attractions.find((a) => a.attractionId === attractionId);
@@ -23,6 +27,14 @@ export default function AttractionPage() {
         notFound();
     }
     
+    const nearbyHotelsQuery = useMemoFirebase(() => {
+        if (!firestore || !attraction.nearbyHotels || attraction.nearbyHotels.length === 0) return null;
+        return query(collection(firestore, 'hotels'), where('name', 'in', attraction.nearbyHotels));
+    }, [firestore, attraction.nearbyHotels]);
+    
+    const { data: nearbyHotels, isLoading } = useCollection<Hotel>(nearbyHotelsQuery);
+
+
     const distanceIcons: { [key: string]: React.ElementType } = {
         'Airport': Plane,
         'Railway Station': Train,
@@ -86,20 +98,22 @@ export default function AttractionPage() {
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {attraction.nearbyHotels.map(hotelName => {
-                                            const hotel = (hotels as Hotel[]).find(h => h.name === hotelName);
-                                            if (!hotel) return null;
-                                            return (
-                                                <Link key={hotel.hotelId} href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.hotelId}`}>
-                                                    <div className="p-3 rounded-md border hover:bg-accent transition-colors">
-                                                        <h4 className="font-semibold text-primary">{hotel.name}</h4>
-                                                        <p className="text-sm text-muted-foreground">{hotel.brand}</p>
-                                                    </div>
-                                                </Link>
-                                            )
-                                        })}
-                                    </div>
+                                    {isLoading && <p>Loading nearby hotels...</p>}
+                                    {nearbyHotels && (
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            {nearbyHotels.map(hotel => {
+                                                if (!hotel) return null;
+                                                return (
+                                                    <Link key={hotel.id} href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.id}`}>
+                                                        <div className="p-3 rounded-md border hover:bg-accent transition-colors">
+                                                            <h4 className="font-semibold text-primary">{hotel.name}</h4>
+                                                            <p className="text-sm text-muted-foreground">{hotel.brand}</p>
+                                                        </div>
+                                                    </Link>
+                                                )
+                                            })}
+                                        </div>
+                                    )}
                                 </CardContent>
                             </Card>
                         )}

@@ -4,15 +4,17 @@ import { brands } from '@/lib/data';
 import { notFound, useParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2 } from 'lucide-react';
-import type { Brand } from '@/lib/types';
+import type { Brand, Hotel } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
-import { hotels } from '@/lib/data';
-import { Hotel } from '@/lib/types';
 import React from 'react';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where } from 'firebase/firestore';
+
 
 export default function BrandPage() {
   const params = useParams();
   const brandSlug = params.brand as string;
+  const firestore = useFirestore();
   
   const brand = (brands as Brand[]).find((b) => b.brandSlug === brandSlug);
   
@@ -20,7 +22,12 @@ export default function BrandPage() {
     notFound();
   }
 
-  const brandHotels = (hotels as Hotel[]).filter(hotel => hotel.brandSlug === brandSlug);
+  const brandHotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'hotels'), where('brandSlug', '==', brandSlug));
+  }, [firestore, brandSlug]);
+
+  const { data: brandHotels, isLoading } = useCollection<Hotel>(brandHotelsQuery);
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -52,14 +59,16 @@ export default function BrandPage() {
         Hotels by {brand.name}
       </h2>
 
-      {brandHotels.length > 0 ? (
+      {isLoading && <p>Loading hotels...</p>}
+
+      {brandHotels && brandHotels.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {brandHotels.map((hotel) => (
-            <HotelCard key={hotel.hotelId} hotel={hotel} />
+            <HotelCard key={hotel.id} hotel={hotel} />
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+        !isLoading && <div className="text-center py-16 border-2 border-dashed rounded-lg">
           <h3 className="text-xl font-semibold text-muted-foreground">No hotels found for this brand yet.</h3>
           <p className="mt-2 text-muted-foreground">Check back soon for updates.</p>
         </div>

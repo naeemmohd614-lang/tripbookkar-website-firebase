@@ -51,6 +51,7 @@ const allHotelsData = [
 // We need to cast this because the JSON import is not typed
 const hotels: Hotel[] = (allHotelsData as any[]).map((hotel, index) => ({
   ...hotel,
+  id: hotel.id || `${slugify(hotel.name)}-${index}`,
   hotelId: hotel.id || `${slugify(hotel.name)}-${index}`,
   stateId: slugify(hotel.state),
   cityId: slugify(hotel.city),

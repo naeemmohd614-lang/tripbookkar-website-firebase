@@ -1,8 +1,10 @@
 
+
 import { z } from 'zod';
 
 export interface Hotel {
-  hotelId?: string;
+  id: string; // Firestore document ID
+  hotelId: string; // Keep original ID for links
   name: string;
   brand: string;
   brandSlug: string;

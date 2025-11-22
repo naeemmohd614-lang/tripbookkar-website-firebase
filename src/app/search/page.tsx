@@ -1,52 +1,80 @@
 
-import React from 'react';
-import { hotels } from '@/lib/data';
+'use client';
+import React, { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { collection, query, where, or } from 'firebase/firestore';
 import HotelCard from '@/components/hotel-card';
 import SearchForm from '@/components/search-form';
-import { Hotel } from '@/lib/types';
+import type { Hotel } from '@/lib/types';
 
-export default function SearchPage({
-  searchParams,
-}: {
-  searchParams?: { q?: string };
-}) {
-  const query = React.use(searchParams)?.q?.toLowerCase() || '';
+function SearchResults() {
+  const searchParams = useSearchParams();
+  const q = searchParams.get('q')?.toLowerCase() || '';
 
-  const filteredHotels = query
-    ? (hotels as Hotel[]).filter(
-        (hotel: Hotel) =>
-          (hotel.name && hotel.name.toLowerCase().includes(query)) ||
-          (hotel.city && hotel.city.toLowerCase().includes(query)) ||
-          (hotel.state && hotel.state.toLowerCase().includes(query)) ||
-          (hotel.brand && hotel.brand.toLowerCase().includes(query))
-      )
-    : (hotels as Hotel[]);
+  const firestore = useFirestore();
+  const hotelsQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    if (!q) return collection(firestore, 'hotels');
+    
+    // This is a simple client-side search. For production, consider a dedicated search service.
+    return query(collection(firestore, 'hotels'));
+  }, [firestore, q]);
 
+  const { data: allHotels, isLoading } = useCollection<Hotel>(hotelsQuery);
+
+  const filteredHotels = React.useMemo(() => {
+    if (!allHotels) return [];
+    if (!q) return allHotels;
+    
+    return allHotels.filter(hotel => 
+        (hotel.name && hotel.name.toLowerCase().includes(q)) ||
+        (hotel.city && hotel.city.toLowerCase().includes(q)) ||
+        (hotel.state && hotel.state.toLowerCase().includes(q)) ||
+        (hotel.brand && hotel.brand.toLowerCase().includes(q)) ||
+        (hotel.tags && hotel.tags.some(tag => tag.toLowerCase().includes(q)))
+    );
+  }, [allHotels, q]);
+
+  return (
+    <>
+      <h1 className="text-3xl font-headline font-bold text-brand-blue mb-2">
+        {q ? `Search results for "${q}"` : 'All Hotels'}
+      </h1>
+      <p className="text-muted-foreground mb-8">
+        {isLoading ? 'Searching...' : `Found ${filteredHotels.length} ${filteredHotels.length === 1 ? 'hotel' : 'hotels'}.`}
+      </p>
+
+      {isLoading && <div className="text-center py-16">Loading...</div>}
+
+      {!isLoading && filteredHotels.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredHotels.map((hotel) => (
+            <HotelCard key={hotel.id} hotel={hotel} />
+          ))}
+        </div>
+      ) : (
+        !isLoading && (
+          <div className="text-center py-16 border-2 border-dashed rounded-lg">
+            <h2 className="text-xl font-semibold text-muted-foreground">No hotels found</h2>
+            <p className="mt-2 text-muted-foreground">Try adjusting your search query.</p>
+          </div>
+        )
+      )}
+    </>
+  );
+}
+
+
+export default function SearchPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto mb-8">
         <SearchForm />
       </div>
-
-      <h1 className="text-3xl font-headline font-bold text-brand-blue mb-2">
-        {query ? `Search results for "${query}"` : 'All Hotels'}
-      </h1>
-      <p className="text-muted-foreground mb-8">
-        Found {filteredHotels.length} {filteredHotels.length === 1 ? 'hotel' : 'hotels'}.
-      </p>
-
-      {filteredHotels.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredHotels.map((hotel) => (
-            <HotelCard key={hotel.hotelId} hotel={hotel} />
-          ))}
-        </div>
-      ) : (
-        <div className="text-center py-16 border-2 border-dashed rounded-lg">
-          <h2 className="text-xl font-semibold text-muted-foreground">No hotels found</h2>
-          <p className="mt-2 text-muted-foreground">Try adjusting your search query.</p>
-        </div>
-      )}
+      <Suspense fallback={<div>Loading search results...</div>}>
+        <SearchResults />
+      </Suspense>
     </div>
   );
 }
