@@ -1,7 +1,7 @@
 
 'use client';
 import React from 'react';
-import { Pencil, Trash2, Plus } from "lucide-react";
+import { Pencil, Trash2, Plus, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection } from 'firebase/firestore';
@@ -15,6 +15,39 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import Image from 'next/image';
+import Link from 'next/link';
+import { useToast } from '@/hooks/use-toast';
+import { bulkImportData } from '@/app/actions';
+
+function BulkImportInterestsData() {
+    const { toast } = useToast();
+    const [isImporting, setIsImporting] = React.useState(false);
+
+    const handleImport = async () => {
+        setIsImporting(true);
+        const result = await bulkImportData('interests');
+        if (result.success) {
+            toast({
+                title: 'Import Successful',
+                description: result.message,
+            });
+        } else {
+            toast({
+                variant: 'destructive',
+                title: 'Import Failed',
+                description: result.message,
+            });
+        }
+        setIsImporting(false);
+    };
+
+    return (
+        <Button onClick={handleImport} disabled={isImporting}>
+            <Upload className="mr-2 h-4 w-4" />
+            {isImporting ? 'Importing...' : 'Bulk Import Interests'}
+        </Button>
+    );
+}
 
 export default function InterestsPage() {
     const firestore = useFirestore();
@@ -30,9 +63,14 @@ export default function InterestsPage() {
         <div className="bg-white rounded-lg shadow p-6">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold text-gray-800">Travel Interests</h1>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                    <Plus size={18} className="mr-2"/> Add New Interest
-                </Button>
+                <div className="flex items-center gap-4">
+                     <BulkImportInterestsData />
+                    <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+                         <Link href="/admin/interests/new">
+                            <Plus size={18} className="mr-2"/> Add New Interest
+                        </Link>
+                    </Button>
+                </div>
             </div>
             
             {isLoading && <p>Loading interests...</p>}
@@ -66,9 +104,9 @@ export default function InterestsPage() {
                                     </TableCell>
                                     <TableCell>
                                          <div className="flex gap-4 shrink-0">
-                                            <button className="text-blue-600 hover:text-blue-800">
+                                            <Link href={`/admin/interests/${interest.id}`} className="text-blue-600 hover:text-blue-800">
                                                 <Pencil size={18} />
-                                            </button>
+                                            </Link>
                                             <button className="text-red-500 hover:text-red-700">
                                                 <Trash2 size={18} />
                                             </button>
