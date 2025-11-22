@@ -20,7 +20,7 @@ export default function HotelsPage(){
   const firestore = useFirestore();
   const hotelsQuery = useMemoFirebase(() => {
     if (!firestore) return null;
-    return query(collection(firestore, 'hotels'), orderBy('name', 'asc'));
+    return query(collection(firestore, 'hotels'));
   }, [firestore]);
 
   const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
