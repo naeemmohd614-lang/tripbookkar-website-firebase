@@ -17,6 +17,7 @@ import {
 import Image from 'next/image';
 import { useToast } from '@/hooks/use-toast';
 import { bulkImportData } from '@/app/actions';
+import Link from 'next/link';
 
 function BulkImportStatesData() {
     const { toast } = useToast();
@@ -64,8 +65,10 @@ export default function StatesPage() {
                 <h1 className="text-2xl font-bold text-gray-800">States</h1>
                  <div className="flex items-center gap-4">
                      <BulkImportStatesData />
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                        <Plus size={18} className="mr-2"/> Add New State
+                    <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+                        <Link href="/admin/states/new">
+                            <Plus size={18} className="mr-2"/> Add New State
+                        </Link>
                     </Button>
                 </div>
             </div>
@@ -93,9 +96,9 @@ export default function StatesPage() {
                                     <TableCell>{state.totalHotels}</TableCell>
                                     <TableCell>
                                          <div className="flex gap-4 shrink-0">
-                                            <button className="text-blue-600 hover:text-blue-800">
+                                            <Link href={`/admin/states/${state.stateId}`} className="text-blue-600 hover:text-blue-800">
                                                 <Pencil size={18} />
-                                            </button>
+                                            </Link>
                                             <button className="text-red-500 hover:text-red-700">
                                                 <Trash2 size={18} />
                                             </button>
