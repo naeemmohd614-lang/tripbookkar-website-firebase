@@ -12,8 +12,8 @@ import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
 import { generateHotelDetailsAction } from '@/app/actions';
 import { useFirestore } from '@/firebase';
-import { doc, collection } from 'firebase/firestore';
-import { setDocumentNonBlocking, addDocumentNonBlocking } from '@/firebase';
+import { doc } from 'firebase/firestore';
+import { setDocumentNonBlocking } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
 
@@ -94,6 +94,8 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
   useEffect(() => {
     if (hotel) {
       reset(hotel);
+    } else {
+      reset(newHotelDefault);
     }
   }, [hotel, reset]);
   
@@ -133,15 +135,21 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     }
 
     try {
+      let hotelData: Hotel;
       if (hotel?.id) {
+        // For existing hotels, we just merge the updated data.
+        // We assume essential IDs like hotelId, cityId, etc. already exist.
+        hotelData = data;
         const hotelRef = doc(firestore, 'hotels', hotel.id);
-        await setDocumentNonBlocking(hotelRef, data, { merge: true });
+        await setDocumentNonBlocking(hotelRef, hotelData, { merge: true });
         toast({ title: 'Hotel Updated', description: `"${data.name}" has been saved.` });
       } else {
-        const hotelData = {
+        // For a NEW hotel, we must generate all the necessary IDs.
+        const generatedId = slugify(data.name);
+        hotelData = {
           ...data,
-          id: slugify(data.name),
-          hotelId: slugify(data.name),
+          id: generatedId,
+          hotelId: generatedId,
           cityId: slugify(data.city),
           stateId: slugify(data.state),
           brandSlug: slugify(data.brand),
@@ -150,8 +158,10 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
         await setDocumentNonBlocking(hotelRef, hotelData, { merge: true });
         toast({ title: 'Hotel Created', description: `"${data.name}" has been added.` });
       }
+      
       router.push('/admin/hotels');
       router.refresh();
+
     } catch (error: any) {
       console.error("Error saving hotel:", error);
       toast({ variant: 'destructive', title: 'Save Failed', description: error.message });
