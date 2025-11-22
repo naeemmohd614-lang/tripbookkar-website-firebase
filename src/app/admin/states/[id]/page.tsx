@@ -11,7 +11,7 @@ export default function EditStatePage({ params }: { params: { id: string } }) {
   const stateRef = useMemoFirebase(() => {
     if (!firestore || !params.id) return null;
     return doc(firestore, 'states', params.id);
-  }, [firestore]);
+  }, [firestore, params.id]);
 
   const { data: state, isLoading } = useDoc<State>(stateRef);
 
