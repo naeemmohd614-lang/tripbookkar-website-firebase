@@ -13,6 +13,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import type { Hotel } from '@/lib/types';
 
 
@@ -20,11 +26,27 @@ export default function HotelsPage(){
   const firestore = useFirestore();
   const hotelsQuery = useMemoFirebase(() => {
     if (!firestore) return null;
-    // Directly reference the collection to fetch all documents without ordering
     return collection(firestore, 'hotels');
   }, [firestore]);
 
   const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
+
+  const hotelsByBrand = React.useMemo(() => {
+    if (!hotels) return {};
+    return hotels.reduce((acc, hotel) => {
+        const brand = hotel.brand || 'Unbranded';
+        if (!acc[brand]) {
+            acc[brand] = [];
+        }
+        acc[brand].push(hotel);
+        return acc;
+    }, {} as { [key: string]: Hotel[] });
+  }, [hotels]);
+
+  const sortedBrands = React.useMemo(() => {
+      return Object.keys(hotelsByBrand).sort((a, b) => a.localeCompare(b));
+  }, [hotelsByBrand]);
+
 
   const formatPrice = (price: number) => {
     if (typeof price !== 'number') return 'N/A';
@@ -43,56 +65,64 @@ export default function HotelsPage(){
           <Link href="/admin/hotels/new">+ Add New Hotel</Link>
         </Button>
       </div>
-      <div className="overflow-x-auto border rounded-lg">
-        <Table>
-          <TableHeader className="bg-gray-50">
-            <TableRow>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Brand</TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price/Night</TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</TableHead>
-              <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody className="bg-white divide-y divide-gray-200">
-            {isLoading && (
-              <TableRow>
-                <TableCell colSpan={6} className="text-center p-8">Loading hotels...</TableCell>
-              </TableRow>
-            )}
-            {!isLoading && hotels && hotels.map((h: Hotel) => (
-              <TableRow key={h.id} className="hover:bg-gray-50">
-                <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{h.name}</TableCell>
-                <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.brand}</TableCell>
-                <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.city}, {h.state}</TableCell>
-                <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatPrice(h.basePrice)}</TableCell>
-                <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span>{h.rating ? h.rating.toFixed(1) : 'N/A'}</span>
-                    </div>
-                </TableCell>
-                <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  <div className="flex items-center gap-4">
-                     <Link href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
-                        <Pencil size={18} />
-                    </Link>
-                    <button className="text-red-500 hover:text-red-700">
-                        <Trash2 size={18} />
-                    </button>
+
+       {isLoading && (
+          <div className="text-center p-8">Loading hotels...</div>
+       )}
+
+      {!isLoading && sortedBrands.length > 0 ? (
+         <Accordion type="single" collapsible className="w-full">
+            {sortedBrands.map(brand => (
+              <AccordionItem value={brand} key={brand}>
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+                  {brand} ({hotelsByBrand[brand].length} hotels)
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="overflow-x-auto border rounded-lg">
+                    <Table>
+                      <TableHeader className="bg-gray-50">
+                        <TableRow>
+                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</TableHead>
+                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</TableHead>
+                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price/Night</TableHead>
+                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</TableHead>
+                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody className="bg-white divide-y divide-gray-200">
+                        {hotelsByBrand[brand].map((h: Hotel) => (
+                          <TableRow key={h.id} className="hover:bg-gray-50">
+                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{h.name}</TableCell>
+                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.city}, {h.state}</TableCell>
+                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatPrice(h.basePrice)}</TableCell>
+                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <div className="flex items-center gap-1">
+                                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                    <span>{h.rating ? h.rating.toFixed(1) : 'N/A'}</span>
+                                </div>
+                            </TableCell>
+                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                              <div className="flex items-center gap-4">
+                                 <Link href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
+                                    <Pencil size={18} />
+                                </Link>
+                                <button className="text-red-500 hover:text-red-700">
+                                    <Trash2 size={18} />
+                                </button>
+                              </div>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
                   </div>
-                </TableCell>
-              </TableRow>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-             {!isLoading && (!hotels || hotels.length === 0) && (
-              <TableRow>
-                <TableCell colSpan={6} className="text-center p-8 text-muted-foreground">No hotels found.</TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div>
+          </Accordion>
+      ) : !isLoading && (
+        <div className="text-center p-8 text-muted-foreground">No hotels found.</div>
+      )}
     </div>
   );
 }
