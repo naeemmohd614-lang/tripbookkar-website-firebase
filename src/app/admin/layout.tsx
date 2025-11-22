@@ -41,9 +41,9 @@ const WhatsAppIcon = () => (
 
 const navLinks = [
   { href: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/admin/hotels', label: 'Hotels', icon: Building2 },
   { href: '/admin/packages', label: 'Packages', icon: Package },
   { href: '/admin/destinations', label: 'Destinations', icon: Map },
-  { href: '/admin/hotels', label: 'Hotels', icon: Building2 },
   { href: '/admin/leads', label: 'Leads', icon: Mail },
   { href: '/admin/affiliates', label: 'Affiliates', icon: Share2 },
   { href: '/admin/pricing', label: 'Pricing', icon: Percent },
