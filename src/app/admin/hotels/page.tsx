@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection } from 'firebase/firestore';
-import { Pencil, Trash2, Star } from 'lucide-react';
+import { Pencil, Trash2, Star, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Table,
@@ -20,6 +20,39 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import type { Hotel } from '@/lib/types';
+import { bulkImportHotels } from '@/app/actions';
+import { useToast } from '@/hooks/use-toast';
+
+
+function BulkImportButton() {
+    const { toast } = useToast();
+    const [isImporting, setIsImporting] = React.useState(false);
+
+    const handleImport = async () => {
+        setIsImporting(true);
+        const result = await bulkImportHotels();
+        if (result.success) {
+            toast({
+                title: 'Import Successful',
+                description: result.message,
+            });
+        } else {
+            toast({
+                variant: 'destructive',
+                title: 'Import Failed',
+                description: result.message,
+            });
+        }
+        setIsImporting(false);
+    };
+
+    return (
+        <Button onClick={handleImport} disabled={isImporting}>
+            <Upload className="mr-2 h-4 w-4" />
+            {isImporting ? 'Importing...' : 'Bulk Import Hotels'}
+        </Button>
+    );
+}
 
 
 export default function HotelsPage(){
@@ -61,9 +94,12 @@ export default function HotelsPage(){
     <div className="bg-white rounded-lg shadow-sm p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Hotel Management</h1>
-        <Button asChild>
-          <Link href="/admin/hotels/new">+ Add New Hotel</Link>
-        </Button>
+        <div className="flex gap-4">
+            <BulkImportButton />
+            <Button asChild>
+              <Link href="/admin/hotels/new">+ Add New Hotel</Link>
+            </Button>
+        </div>
       </div>
 
        {isLoading && (

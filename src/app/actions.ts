@@ -1,4 +1,3 @@
-
 'use server';
 
 import { personalizedHotelRecommendations } from '@/ai/flows/personalized-hotel-recommendations';
@@ -13,7 +12,32 @@ import type {
   PersonalizedHotelRecommendationsInput,
   GenerateHotelDescriptionInput,
   GenerateHotelDetailsInput,
+  Hotel
 } from '@/lib/types';
+import { initializeApp, getApps, cert } from 'firebase-admin/app';
+import { getFirestore } from 'firebase-admin/firestore';
+import serviceAccount from '../../serviceAccountKey.json';
+import { revalidatePath } from 'next/cache';
+
+import marriottHotels from '@/data/marriott.json';
+
+
+if (!getApps().length) {
+    initializeApp({
+      credential: cert(serviceAccount)
+    });
+}
+const db = getFirestore();
+
+function slugify(text: string) {
+    if (!text) return '';
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]+/g, '')
+        .replace(/--+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+}
 
 export async function getRecommendations(
   prevState: RecommendationsState,
@@ -106,5 +130,38 @@ export async function generateHotelDetailsAction(input: GenerateHotelDetailsInpu
   } catch(e: any) {
     console.error(e);
     return { error: 'Failed to generate hotel details.' };
+  }
+}
+
+
+export async function bulkImportHotels(): Promise<{ success: boolean, message: string }> {
+  try {
+    const batch = db.batch();
+    let count = 0;
+
+    (marriottHotels as Hotel[]).forEach((hotel) => {
+      const hotelId = slugify(hotel.name);
+      const hotelRef = db.collection('hotels').doc(hotelId);
+
+      const hotelData: Hotel = {
+        ...hotel,
+        id: hotelId,
+        hotelId: hotelId,
+        cityId: slugify(hotel.city),
+        stateId: slugify(hotel.state),
+        brandSlug: slugify(hotel.brand),
+      };
+      
+      batch.set(hotelRef, hotelData, { merge: true });
+      count++;
+    });
+
+    await batch.commit();
+    revalidatePath('/admin/hotels'); // Revalidate the page to show new data
+    
+    return { success: true, message: `${count} Marriott hotels imported successfully.` };
+  } catch (error: any) {
+    console.error("Bulk import failed:", error);
+    return { success: false, message: `Bulk import failed: ${error.message}` };
   }
 }
