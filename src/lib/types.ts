@@ -70,6 +70,12 @@ export interface Hotel {
   updatedAt?: string;
 }
 
+export const ItinerarySchema = z.object({
+  day: z.number().describe('The day number of the itinerary item.'),
+  title: z.string().describe('The title for the day\'s plan.'),
+  description: z.string().describe('A detailed description of the activities for the day.'),
+});
+export type Itinerary = z.infer<typeof ItinerarySchema>;
 
 export interface Package {
   id: string;
@@ -79,21 +85,17 @@ export interface Package {
   state: string[];
   city: string[];
   price: number;
-  dynamicPrice: number;
-  itinerary: {
-    day: number;
-    title: string;
-    description: string;
-  }[];
+  dynamicPrice?: number;
+  itinerary: Itinerary[];
   images: string[];
   tags: string[];
-  seo: {
+  seo?: {
     title: string;
     description: string;
     keywords: string[];
   };
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface Destination {
@@ -244,13 +246,22 @@ export interface SeoPage {
   updatedAt: string;
 }
 
-export interface Itinerary {
-  day: number;
-  title: string;
-  description: string;
-  stay?: string;
-  meals?: string[];
-  activities: string[];
+export interface MonthData {
+  name: string;
+  slug: string;
+  pageImage: {
+    src: string;
+    caption: string;
+  };
+  destinations: {
+    name: string;
+    reason: string;
+    hotels: string[] | { name: string }[];
+    image: {
+      src: string;
+      caption: string;
+    };
+  }[];
 }
 
 export const GenerateSeoPageInputSchema = z.object({
@@ -336,6 +347,22 @@ export const PersonalizedHotelRecommendationsOutputSchema = z.object({
 });
 export type PersonalizedHotelRecommendationsOutput = z.infer<typeof PersonalizedHotelRecommendationsOutputSchema>;
 
+// Package Itinerary Flow
+export const GeneratePackageItineraryInputSchema = z.object({
+    name: z.string().describe('The name of the travel package.'),
+    days: z.number().describe('The total number of days for the package.'),
+    nights: z.number().describe('The total number of nights for the package.'),
+    cities: z.array(z.string()).describe('A list of cities covered in the package.'),
+    states: z.array(z.string()).describe('A list of states covered in the package.'),
+    tags: z.array(z.string()).optional().describe('Keywords describing the package theme (e.g., honeymoon, adventure, heritage).'),
+});
+export type GeneratePackageItineraryInput = z.infer<typeof GeneratePackageItineraryInputSchema>;
+
+export const GeneratePackageItineraryOutputSchema = z.object({
+  itinerary: z.array(ItinerarySchema).describe('A detailed day-by-day itinerary for the travel package.'),
+});
+export type GeneratePackageItineraryOutput = z.infer<typeof GeneratePackageItineraryOutputSchema>;
+
 
 // State for personalizedHotelRecommendations
 export type RecommendationsState = {
@@ -373,6 +400,12 @@ export type InterestDescriptionState = {
 // State for State Description Generator
 export type StateDescriptionState = {
   description?: string;
+  error?: string;
+}
+
+// State for Package Itinerary Generator
+export type PackageItineraryState = {
+  itinerary?: Itinerary[];
   error?: string;
 }
 

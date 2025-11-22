@@ -1,7 +1,9 @@
+
 'use client'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Link from 'next/link';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { collection } from 'firebase/firestore';
 import { Pencil, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { Package } from '@/lib/types';
@@ -15,7 +17,6 @@ import {
 } from "@/components/ui/table"
 
 export default function PackagesPage(){
-  const [packages, setPackages] = useState<Package[]>([]);
   const firestore = useFirestore();
 
   const packagesQuery = useMemoFirebase(() => {
@@ -38,8 +39,8 @@ export default function PackagesPage(){
     <div className="bg-white rounded-lg shadow-sm p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Package Management</h1>
-        <Button>
-          + Add New Package
+        <Button asChild>
+          <Link href="/admin/packages/new">+ Add New Package</Link>
         </Button>
       </div>
        {isLoading && (
@@ -63,9 +64,9 @@ export default function PackagesPage(){
                   <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatPrice(p.price)}</TableCell>
                   <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <div className="flex items-center gap-4">
-                      <button className="text-blue-600 hover:text-blue-800">
+                      <Link href={`/admin/packages/${p.id}`} className="text-blue-600 hover:text-blue-800">
                         <Pencil size={18} />
-                      </button>
+                      </Link>
                       <button className="text-red-500 hover:text-red-700">
                         <Trash2 size={18} />
                       </button>

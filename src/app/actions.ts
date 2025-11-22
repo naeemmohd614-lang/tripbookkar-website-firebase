@@ -3,6 +3,7 @@
 
 import { personalizedHotelRecommendations } from '@/ai/flows/personalized-hotel-recommendations';
 import { generateSeoPage, generateHotelDescription, generateHotelDetails, generateInterestDescription, generateStateDescription } from '@/ai/flows/generate-seo-pages';
+import { generatePackageItinerary } from '@/ai/flows/generate-package-itinerary';
 import { z } from 'zod';
 import type { 
   RecommendationsState, 
@@ -11,12 +12,14 @@ import type {
   HotelDetailsState,
   InterestDescriptionState,
   StateDescriptionState,
+  PackageItineraryState,
   GenerateSeoPageInput,
   PersonalizedHotelRecommendationsInput,
   GenerateHotelDescriptionInput,
   GenerateHotelDetailsInput,
   GenerateInterestDescriptionInput,
   GenerateStateDescriptionInput,
+  GeneratePackageItineraryInput,
   Hotel,
   Interest,
   State,
@@ -155,6 +158,16 @@ export async function generateStateDescriptionAction(input: GenerateStateDescrip
     console.error(e);
     return { error: 'Failed to generate description.' };
   }
+}
+
+export async function generatePackageItineraryAction(input: GeneratePackageItineraryInput): Promise<PackageItineraryState> {
+    try {
+        const result = await generatePackageItinerary(input);
+        return { itinerary: result.itinerary };
+    } catch(e: any) {
+        console.error(e);
+        return { error: 'Failed to generate itinerary.' };
+    }
 }
 
 
