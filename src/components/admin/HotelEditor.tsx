@@ -21,27 +21,33 @@ interface HotelEditorProps {
   hotel?: Hotel;
 }
 
+const westinSohnaData: Hotel = {
+  "id": "the-westin-sohna-resort-spa",
+  "brandSlug": "the-westin",
+  "name": "The Westin Sohna Resort & Spa",
+  "brand": "Marriott",
+  "city": "Gurugram",
+  "state": "Haryana",
+  "address": "Vatika Complex, Karanki Road, Dhaulah, Sohna, Gurugram, Haryana 122103",
+  "about": "A sprawling wellness resort set amidst green landscapes, offering a tranquil escape from the city. It features luxurious villas, a serene spa, and focuses on rejuvenation.",
+  "basePrice": 15000,
+  "rating": 4.5,
+  "images": [
+    { "src": "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx2aWxsYXMlMjBhdCUyMHRoZSUyMHdlc3RpbiUyMHNvaG5hJTIwcmVzb3J0fGVufDB8fHx8MTc2Mzc4OTEyN3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Villas at The Westin Sohna Resort" }
+  ],
+  "roomCategories": [{ "name": "Premier Villa", "count": 97, "size": "645 sqft" }],
+  "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
+  "tags": ["resort", "wellness", "gurugram", "pet friendly"]
+};
+
+
 export default function HotelEditor({ hotel }: HotelEditorProps) {
   const router = useRouter();
   const firestore = useFirestore();
   const { toast } = useToast();
 
   const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<Hotel>({
-    defaultValues: hotel || {
-      name: '',
-      brand: '',
-      city: '',
-      state: '',
-      address: '',
-      about: '',
-      basePrice: 0,
-      rating: 0,
-      images: [],
-      roomCategories: [],
-      diningExperiences: [],
-      experiencesAndActivities: [],
-      weddingVenues: [],
-    }
+    defaultValues: hotel || westinSohnaData
   });
 
   const { fields, append, remove } = useFieldArray({
