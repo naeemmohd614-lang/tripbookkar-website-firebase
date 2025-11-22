@@ -40,17 +40,13 @@ service cloud.firestore {
     /**
      * @description Rules for the /hotels collection.
      * @path /hotels/{hotelId}
-     * @allow get: if true; // Anyone can get a single hotel document.
-     * @allow list: if true; // Anyone can list hotels for public pages.
+     * @allow get, list: if true; // Anyone can get a single hotel or list hotels for public pages.
      * @allow write: if isAdmin(); // Only admins can create, update, or delete hotels.
      * @principle Admin-Only Write Access, Public Read Access
      */
     match /hotels/{hotelId} {
-      allow get: if true;
+      allow read: if true;
       allow write: if isAdmin();
-    }
-    match /hotels {
-      allow list: if true;
     }
 
     /**
