@@ -21,6 +21,18 @@ interface HotelEditorProps {
   hotel?: Hotel;
 }
 
+function slugify(text: string) {
+  if (!text) return '';
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
 const newHotelDefault: Partial<Hotel> = {
   name: '',
   brand: '',
@@ -126,9 +138,16 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
         await setDocumentNonBlocking(hotelRef, data, { merge: true });
         toast({ title: 'Hotel Updated', description: `"${data.name}" has been saved.` });
       } else {
-        const hotelsCol = collection(firestore, 'hotels');
-        const newDocRef = await addDocumentNonBlocking(hotelsCol, data);
-        await setDocumentNonBlocking(newDocRef, {id: newDocRef.id}, {merge: true}); // Add the id to the document
+        const hotelData = {
+          ...data,
+          id: slugify(data.name),
+          hotelId: slugify(data.name),
+          cityId: slugify(data.city),
+          stateId: slugify(data.state),
+          brandSlug: slugify(data.brand),
+        };
+        const hotelRef = doc(firestore, 'hotels', hotelData.id);
+        await setDocumentNonBlocking(hotelRef, hotelData, { merge: true });
         toast({ title: 'Hotel Created', description: `"${data.name}" has been added.` });
       }
       router.push('/admin/hotels');
