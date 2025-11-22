@@ -27,7 +27,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     name: 'January',
     slug: 'january',
     pageImage: {
-        src: 'https://images.unsplash.com/photo-1517524206127-48bbd363f357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3aW50ZXIlMjB0cmF2ZWwlMjBpbmRpYXxlbnwwfHx8fDE3NjM3OTcwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        src: 'https://images.unsplash.com/photo-1597755472102-15fb225feee1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3aW50ZXIlMjB0cmF2ZWwlMjBpbmRpYXxlbnwwfHx8fDE3NjM4MjQzNTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
         caption: 'winter travel india',
     },
     destinations: [
@@ -96,7 +96,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   february: {
     name: 'February',
     slug: 'february',
-    pageImage: { src: 'https://images.unsplash.com/photo-1518621434389-403d5a4009a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxGZWJydWFyeSUyMGZlc3RpdmFsfGVufDB8fHx8MTc2Mzc5NjM5MHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'spring flowers festival' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1715785070665-c01b8eecbab1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcHJpbmclMjBmbG93ZXJzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzI3NTc2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'spring flowers festival' },
     destinations: [
       {
         name: "Jaisalmer, Rajasthan",
@@ -163,7 +163,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   march: {
     name: 'March',
     slug: 'march',
-    pageImage: { src: 'https://images.unsplash.com/photo-1616421295988-185d1c24e6c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob2xpJTIwZmVzdGl2YWwlMjBjb2xvcnN8ZW58MHx8fHwxNzYzNzk2MzkxfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'holi festival colors' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1679942232210-4cdbbc55cd9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxob2xpJTIwZmVzdGl2YWwlMjBjb2xvcnN8ZW58MHx8fHwxNzYzODI0MzU3fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'holi festival colors' },
     destinations: [
       {
         name: "Vrindavan & Mathura, Uttar Pradesh",
@@ -230,7 +230,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   april: {
       name: 'April',
       slug: 'april',
-      pageImage: { src: 'https://images.unsplash.com/photo-1559663738-22b934024337?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHzoaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBzcHJpbmd8ZW58MHx8fHwxNzYzNzk2MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'himalayan mountains spring' },
+      pageImage: { src: 'https://images.unsplash.com/photo-1746036677181-b5431955da63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBzcHJpbmd8ZW58MHx8fHwxNzYzODI0MzU2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'himalayan mountains spring' },
       destinations: [
         {
             name: "Srinagar, Kashmir",
@@ -297,7 +297,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   may: {
       name: 'May',
       slug: 'may',
-      pageImage: { src: 'https://images.unsplash.com/photo-1527098254020-0c379a5b394d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHZhbGxleSUyMHN1bW1lcnxlbnwwfHx8fDE3NjM3OTYzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'cool mountain valley' },
+      pageImage: { src: 'https://images.unsplash.com/photo-1706999281949-fab404605701?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb29sJTIwbW91bnRhaW4lMjB2YWxsZXl8ZW58MHx8fHwxNzYzODI0MzU3fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'cool mountain valley' },
       destinations: [
         {
             name: "Shimla, Himachal Pradesh",
@@ -364,7 +364,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   june: {
     name: 'June',
     slug: 'june',
-    pageImage: { src: 'https://images.unsplash.com/photo-1628867567780-602c8a3c5a08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYWRha2glMjBtb3VudGFpbiUyMHBhc3N8ZW58MHx8fHwxNzYzNzk2Mzk1fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'ladakh mountain pass' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1762696796348-d6f22d721657?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYWRha2glMjBtb3VudGFpbiUyMHBhc3N8ZW58MHx8fHwxNzYzODI0MzU3fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'ladakh mountain pass' },
     destinations: [
       {
         name: "Ladakh, Jammu & Kashmir",
@@ -431,7 +431,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   july: {
     name: 'July',
     slug: 'july',
-    pageImage: { src: 'https://images.unsplash.com/photo-1623789045790-2c77d611802a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb25zb29uJTIwa2VyYWxhJ2NhY2t3YXRlcnN8ZW58MHx8fHwxNzYzNzk2Mzk2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1665324428131-86842f82e1b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb25zb29uJTIwa2VyYWxhJTIwYmFja3dhdGVyc3xlbnwwfHx8fDE3NjM4MjQzNTd8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
     destinations: [
       {
         name: "Munnar, Kerala",
@@ -498,7 +498,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   august: {
     name: 'August',
     slug: 'august',
-    pageImage: { src: 'https://images.unsplash.com/photo-1594736746227-09d35a39626e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmbG93ZXIlMjB2YWxsZXklMjBtb25zb29ufGVufDB8fHx8MTc2Mzc5NjM5OHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'flower valley monsoon' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1676655781084-4cbf87d0d53f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmbG93ZXIlMjB2YWxsZXklMjBtb25zb29ufGVufDB8fHx8MTc2MzgyNDM1Nnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'flower valley monsoon' },
     destinations: [
       {
         name: "Valley of Flowers, Uttarakhand",
@@ -565,7 +565,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   september: {
     name: 'September',
     slug: 'september',
-    pageImage: { src: 'https://images.unsplash.com/photo-1533130099162-132b135c392a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwb3N0LW1vbnNvb24lMjBncmVlbiUyMGhpbGxzfGVufDB8fHx8MTc2Mzc5NjM5OXww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'post-monsoon green hills' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1639369486683-cbdf35613047?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwb3N0LW1vbnNvb24lMjBncmVlbiUyMGhpbGxzfGVufDB8fHx8MTc2MzgyNDM1Nnww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'post-monsoon green hills' },
     destinations: [
       {
         name: "Ziro Valley, Arunachal Pradesh",
@@ -632,7 +632,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   october: {
     name: 'October',
     slug: 'october',
-    pageImage: { src: 'https://images.unsplash.com/photo-1604213410534-e43152652a90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkdXNzZWhyYSUyMGZlc3RpdmFsJTIwY2VsZWJyYXRpb258ZW58MHx8fHwxNzYzNzk2NDAxfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'dussehra festival celebration' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1701847895768-521a661037a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZHVzc2VocmElMjBmZXN0aXZhbCUyMGNlbGVicmF0aW9ufGVufDB8fHx8MTc2MzgyNDM1N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'dussehra festival celebration' },
     destinations: [
       {
         name: "Kolkata, West Bengal",
@@ -699,7 +699,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   november: {
     name: 'November',
     slug: 'november',
-    pageImage: { src: 'https://images.unsplash.com/photo-1666244453401-43a8c15b5640?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3NjI4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1608865413608-6cfd1fc622b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3NjI4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
     destinations: [
       {
         name: "Varanasi, Uttar Pradesh",
@@ -766,7 +766,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   december: {
     name: 'December',
     slug: 'december',
-    pageImage: { src: 'https://images.unsplash.com/photo-1746982599109-783229bddac8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiZWFjaCUyMHBhcnR5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'beach party new year' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1739373854851-5226dda19e0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiZWFjaCUyMHBhcnR5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE3NjM3MjI1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'beach party new year' },
     destinations: [
       {
         name: "Goa",
@@ -831,7 +831,5 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
-
-    
 
     
