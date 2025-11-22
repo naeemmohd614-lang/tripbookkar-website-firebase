@@ -1,4 +1,3 @@
-
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -61,6 +60,7 @@ import { cn } from '@/lib/utils';
 import { useUser, useAuth } from '@/firebase';
 import React from 'react';
 import { Separator } from '../ui/separator';
+import { ThemeToggle } from '../theme-toggle';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -248,7 +248,8 @@ export default function Header() {
         </div>
 
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
           {isUserLoading ? (
             <div className="h-8 w-20 animate-pulse rounded-md bg-muted" />
           ) : user ? (
