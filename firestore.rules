@@ -76,7 +76,7 @@ service cloud.firestore {
     /**
      * @description Rules for the /interests collection.
      * @path /interests/{interestId}
-     * @allow read, list: if true; // Anyone can read interest data for public pages.
+     * @allow read, list: if true; // Anyone can read or list interest data for public pages.
      * @allow write: if isAdmin(); // Only admins can manage interests.
      */
     match /interests/{interestId} {
