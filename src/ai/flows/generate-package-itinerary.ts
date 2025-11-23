@@ -24,10 +24,6 @@ export const GeneratePackageItineraryOutputSchema = z.object({
 export type GeneratePackageItineraryOutput = z.infer<typeof GeneratePackageItineraryOutputSchema>;
 
 
-export async function generatePackageItinerary(input: GeneratePackageItineraryInput): Promise<GeneratePackageItineraryOutput> {
-  return generatePackageItineraryFlow(input);
-}
-
 const generatePackageItineraryPrompt = ai.definePrompt({
   name: 'generatePackageItineraryPrompt',
   input: {schema: GeneratePackageItineraryInputSchema},
@@ -62,3 +58,7 @@ const generatePackageItineraryFlow = ai.defineFlow(
     return output!;
   }
 );
+
+export async function generatePackageItinerary(input: GeneratePackageItineraryInput): Promise<GeneratePackageItineraryOutput> {
+  return generatePackageItineraryFlow(input);
+}

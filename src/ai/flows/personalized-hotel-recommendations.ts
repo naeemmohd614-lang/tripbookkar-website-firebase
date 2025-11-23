@@ -16,7 +16,7 @@ import {
 } from '@/lib/types';
 
 
-const prompt = ai.definePrompt({
+const personalizedHotelRecommendationsPrompt = ai.definePrompt({
   name: 'personalizedHotelRecommendationsPrompt',
   input: {schema: PersonalizedHotelRecommendationsInputSchema},
   output: {schema: PersonalizedHotelRecommendationsOutputSchema},
@@ -36,7 +36,7 @@ const personalizedHotelRecommendationsFlow = ai.defineFlow(
     outputSchema: PersonalizedHotelRecommendationsOutputSchema,
   },
   async input => {
-    const {output} = await prompt(input);
+    const {output} = await personalizedHotelRecommendationsPrompt(input);
     return output!;
   }
 );

@@ -33,10 +33,6 @@ import {
 } from '@/lib/types';
 
 
-export async function generateSeoPage(input: GenerateSeoPageInput): Promise<GenerateSeoPageOutput> {
-  return generateSeoPageFlow(input);
-}
-
 const generateSeoPagePrompt = ai.definePrompt({
   name: 'generateSeoPagePrompt',
   input: {schema: GenerateSeoPageInputSchema},
@@ -71,6 +67,10 @@ const generateSeoPageFlow = ai.defineFlow(
     return output!;
   }
 );
+
+export async function generateSeoPage(input: GenerateSeoPageInput): Promise<GenerateSeoPageOutput> {
+  return generateSeoPageFlow(input);
+}
 
 
 const generateHotelDescriptionPrompt = ai.definePrompt({
