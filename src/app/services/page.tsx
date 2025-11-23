@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -142,7 +141,7 @@ export default function ServicesPage() {
                   Chahe family vacation ho ya business trip, hum aapke liye best hotels aur deals laate hain.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4 md:gap-6">
-                  {['Best Price Guarantee', 'Verified Hotels', '24/7 Support', 'Instant Confirmation'].map(item => (
+                  {['Best Price', 'Verified Hotels', '24/7 Support', 'Instant Confirmation'].map(item => (
                       <div key={item} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
                           <CheckCircle className="w-5 h-5 text-green-400" />
                           <span>{item}</span>
@@ -285,7 +284,9 @@ export default function ServicesPage() {
                 </Link>
              </Button>
              <Button size="lg" variant="outline">
-                <Send className="mr-2 h-5 w-5" /> Get Custom Quote
+                <Link href="/contact">
+                    <Send className="mr-2 h-5 w-5" /> Get Custom Quote
+                </Link>
              </Button>
              <Button size="lg" variant="outline">
                 <a href="tel:8950652665" className="flex items-center">
