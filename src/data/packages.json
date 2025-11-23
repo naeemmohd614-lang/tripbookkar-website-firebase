@@ -1,5 +1,4 @@
 
-
 [
   {
     "id": "kerala-honeymoon-5n-6d",
@@ -42,7 +41,7 @@
         "description": "After breakfast, check out from the hotel and you will be transferred to Cochin airport or railway station for your onward journey, with sweet memories of your Kerala honeymoon."
       }
     ],
-    "images": ["kerala-honeymoon-package"],
+    "images": [{ "src": "https://images.unsplash.com/photo-1709786204898-dc160b24f883?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbWFnZSUyMGZvciUyMEtlcmFsYSUyMEhvbmV5bW9vbiUyMFBhY2thZ2UlMjA1JTIwTmlnaHRzJTIwNiUyMERheXN8ZW58MHx8fHwxNzYzOTE5NzU4fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "kerala backwaters" }],
     "tags": ["honeymoon", "romantic", "kerala", "backwaters"],
     "seo": {
       "title": "Kerala Honeymoon Package | 5 Nights 6 Days",
@@ -93,7 +92,7 @@
         "description": "After breakfast, transfer to the airport or railway station for your onward journey."
       }
     ],
-    "images": ["golden-triangle-tour"],
+    "images": [{ "src": "https://images.unsplash.com/photo-1566214724282-cb884485f3c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aW1hZ2UlMjBmb3IlMjBHb2xkZW4lMjBUcmlhbmdsZSUyMFRvdXIlMjA1JTIwTmlnaHRzJTIwNiUyMERheXN8ZW58MHx8fHwxNzYzOTE5NzU4fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "taj mahal" }],
     "tags": ["heritage", "golden triangle", "delhi", "agra", "jaipur"],
     "seo": {
       "title": "Golden Triangle Tour | 5 Nights 6 Days",
@@ -139,7 +138,7 @@
         "description": "After breakfast, transfer to the airport or railway station for your onward journey."
       }
     ],
-    "images": ["rajasthan-desert-safari"],
+    "images": [{ "src": "https://images.unsplash.com/photo-1730303557255-c69ac397845a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpbWFnZSUyMGZvciUyMFJhamFzdGhhbiUyMERlc2VydCUyMFNhZmFyaSUyMDQlMjBOaWdodHMlMjA1JTIwRGF5c3xlbnwwfHx8fDE3NjM5MTk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "camel desert safari" }],
     "tags": ["desert safari", "rajasthan", "jodhpur", "jaisalmer", "heritage"],
     "seo": {
       "title": "Rajasthan Desert Safari Package | Jodhpur & Jaisalmer",
@@ -195,7 +194,7 @@
         "description": "After breakfast, transfer to Chandigarh airport/station for your onward journey."
       }
     ],
-    "images": ["himalayan-adventure-tour"],
+    "images": [{ "src": "https://images.unsplash.com/photo-1626621341526-76a916212975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2xhbmclMjB2YWxsZXl8ZW58MHx8fHwxNzYzNzg2MzUxfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "himalayan adventure tour" }],
     "tags": ["himalayas", "adventure", "shimla", "manali", "mountain"],
     "seo": {
       "title": "Himachal Himalayan Adventure | Shimla & Manali",
@@ -251,7 +250,7 @@
         "description": "After breakfast, transfer to the airport or railway station for your onward journey."
       }
     ],
-    "images": ["south-india-temple-tour"],
+    "images": [{ "src": "https://images.unsplash.com/photo-1583088923385-2c262a4a7516?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZWVuYWtzaGklMjB0ZW1wbGUlMjBtYWR1cmFpfGVufDB8fHx8MTc2Mzc4NjM1Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "south india temple tour" }],
     "tags": ["temple tour", "south india", "tamil nadu", "heritage", "spiritual"],
     "seo": {
       "title": "South India Temple Tour Package | 7 Days",
@@ -262,5 +261,3 @@
     "updatedAt": "2023-11-10T12:00:00Z"
   }
 ]
-
-    

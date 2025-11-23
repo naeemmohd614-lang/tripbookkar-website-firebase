@@ -2,27 +2,31 @@
 
 'use client';
 import { featuredPackages } from '@/lib/data';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import type { Package } from '@/lib/types';
-import React, { use } from 'react';
+import React from 'react';
 
 export default function PackageDetailPage({ params }: { params: { packageId: string } }) {
-    const { packageId } = use(Promise.resolve(params));
+    const { packageId } = React.use(Promise.resolve(params));
     const pkg = (featuredPackages as Package[]).find((p) => p.id === packageId);
 
     if (!pkg) {
         notFound();
     }
     
-    const packageImage = {
-        "src": `https://picsum.photos/seed/${pkg.images[0]}/1080/200`,
-        "caption": `image of ${pkg.name}`
-    }
+    const packageImage = pkg.images[0] ? {
+      src: typeof pkg.images[0] === 'string' ? pkg.images[0] : pkg.images[0].src,
+      caption: typeof pkg.images[0] === 'string' ? `image for ${pkg.name}` : pkg.images[0].caption,
+    } : {
+      src: `https://picsum.photos/seed/${pkg.id}/1280/400`,
+      caption: `image for ${pkg.name}`
+    };
+
 
     return (
         <div className="bg-secondary/30">

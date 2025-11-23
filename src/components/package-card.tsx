@@ -12,10 +12,14 @@ interface PackageCardProps {
 }
 
 export default function PackageCard({ pkg }: PackageCardProps) {
-    const packageImage = {
-      "src": `https://picsum.photos/seed/${pkg.images[0]}/1080/720`,
-      "caption": `image for ${pkg.name}`
+    const packageImage = pkg.images[0] ? {
+      src: typeof pkg.images[0] === 'string' ? pkg.images[0] : pkg.images[0].src,
+      caption: typeof pkg.images[0] === 'string' ? `image for ${pkg.name}` : pkg.images[0].caption,
+    } : {
+      src: `https://picsum.photos/seed/${pkg.id}/1080/720`,
+      caption: `image for ${pkg.name}`
     };
+
 
   return (
     <Card className="overflow-hidden group w-full flex flex-col hover:shadow-xl transition-shadow duration-300">
