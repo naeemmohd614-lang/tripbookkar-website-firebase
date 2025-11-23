@@ -21,7 +21,8 @@ import {
   TrendingUp,
   Tag,
   Heart,
-  Landmark
+  Landmark,
+  Building
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -46,6 +47,7 @@ const navLinks = [
   { href: '/admin/hotels', label: 'Hotels', icon: Building2 },
   { href: '/admin/packages', label: 'Packages', icon: Package },
   { href: '/admin/states', label: 'States', icon: Landmark },
+  { href: '/admin/cities', label: 'Cities', icon: Building },
   { href: '/admin/destinations', label: 'Destinations', icon: Map },
   { href: '/admin/interests', label: 'Interests', icon: Heart },
   { href: '/admin/leads', label: 'Leads', icon: Mail },
