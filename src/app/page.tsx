@@ -193,48 +193,6 @@ export default function Home() {
           )}
         </div>
       </section>
-      
-      <section id="explore-cities" className="py-16 md:py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
-              Explore Popular Cities
-            </h2>
-            <p className="mt-2 text-lg text-muted-foreground">
-              Find top hotels in India's most popular cities.
-            </p>
-          </div>
-          {citiesLoading && <p className="text-center">Loading cities...</p>}
-          {cities && (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-              {cities.slice(0, 12).map((city) => {
-                 const cityImage = { src: `https://picsum.photos/seed/${city.cityId}/400/300`, caption: `view of ${city.name}` };
-                 return (
-                  <Link href={`/states/${city.stateId}/cities/${city.cityId}`} key={city.cityId}>
-                    <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-                      <CardContent className="p-0">
-                        <div className="relative h-32">
-                            <Image
-                              src={cityImage.src}
-                              alt={`View of ${city.name}`}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-300"
-                              data-ai-hint={cityImage.caption}
-                            />
-                          <div className="absolute inset-0 bg-black/40" />
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <h3 className="font-bold text-lg text-white font-headline text-center px-2">{city.name}</h3>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                 );
-              })}
-            </div>
-          )}
-        </div>
-      </section>
 
       <section id="destinations-by-month" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
