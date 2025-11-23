@@ -3,6 +3,7 @@
 
 
 
+
 import { z } from 'zod';
 
 export interface Hotel {
@@ -146,6 +147,7 @@ export interface City {
     highlights?: {
       name: string;
       icon: string;
+      color: string;
     }[];
 }
 
