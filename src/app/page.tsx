@@ -138,6 +138,32 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <section id="hotels" className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
+              Featured Hotels
+            </h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Handpicked hotels for a luxurious and comfortable stay.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {hotelsLoading && <p>Loading...</p>}
+            {featuredHotels && featuredHotels.map((hotel) => (
+              <HotelCard key={hotel.id} hotel={hotel} />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild size="lg">
+              <Link href="/hotels">
+                View All Hotels <ArrowRight className="ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
       
       <section className="bg-secondary/30 text-foreground py-16 md:py-20">
         <div className="container mx-auto px-4">
@@ -365,34 +391,6 @@ export default function Home() {
             <Button asChild size="lg">
               <Link href="/packages">
                 View All Packages <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <Separator />
-
-      <section id="hotels" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
-              Featured Hotels
-            </h2>
-            <p className="mt-2 text-lg text-muted-foreground">
-              Handpicked hotels for a luxurious and comfortable stay.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {hotelsLoading && <p>Loading...</p>}
-            {featuredHotels && featuredHotels.map((hotel) => (
-              <HotelCard key={hotel.id} hotel={hotel} />
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button asChild size="lg">
-              <Link href="/hotels">
-                View All Hotels <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>
