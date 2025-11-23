@@ -15,7 +15,7 @@ export default function AdventurePage() {
         if (!firestore) return null;
         return query(
             collection(firestore, 'hotels'), 
-            where('tags', 'array-contains-any', ['adventure', 'ski resort', 'trekking'])
+            where('tags', 'array-contains-any', ['adventure', 'ski resort', 'trekking', 'wildlife', 'jungle'])
         );
     }, [firestore]);
 
