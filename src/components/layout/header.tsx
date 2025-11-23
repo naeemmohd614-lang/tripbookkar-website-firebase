@@ -183,22 +183,10 @@ export default function Header() {
           </NavigationMenuLink>
         </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuTrigger>Experiences</NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] lg:grid-cols-3">
-             {experiences.map((component) => (
-              <ListItem
-                key={component.title}
-                title={component.title}
-                href={component.href}
-                icon={component.icon}
-              >
-                {component.description}
-              </ListItem>
-            ))}
-          </ul>
-        </NavigationMenuContent>
-      </NavigationMenuItem>
+          <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname.startsWith('/#destinations') ? "bg-accent" : "")}>
+            <Link href="/#destinations">Destinations</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
       <NavigationMenuItem>
           <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/contact' ? "bg-accent" : "")}>
             <Link href="/contact">Contact</Link>
