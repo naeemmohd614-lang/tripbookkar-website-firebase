@@ -4,7 +4,7 @@ import React from 'react';
 import { Pencil, Trash2, Plus, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
-import { collection, orderBy } from 'firebase/firestore';
+import { collection, orderBy, query } from 'firebase/firestore';
 import type { City } from '@/lib/types';
 import {
   Table,
