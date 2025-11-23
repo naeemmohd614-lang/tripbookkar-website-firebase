@@ -5,7 +5,7 @@
     "name": "Beaches",
     "description": "Discover our curated collection of stunning beachfront hotels and resorts. Whether you're looking for a vibrant party spot or a tranquil escape by the sea, find your perfect coastal getaway here.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1561571994-3c61c554181a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjM4NDMzNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjM4NDMzNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "beach sunset"
     },
     "tags": ["beach", "beachfront", "sea view"]
@@ -15,7 +15,7 @@
     "name": "Mountains",
     "description": "Discover hotels with breathtaking views, crisp mountain air, and serene surroundings. From luxurious resorts to cozy lodges, find your perfect high-altitude getaway.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1590256518627-c9f8a6855185?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb3VudGFpbiUyMHJhbmdlfGVufDB8fHx8MTc2Mzg3NDEzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1604428803896-c1e5151d4128?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3VudGFpbiUyMHJhbmdlfGVufDB8fHx8MTc2Mzg3NDEzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "mountain range"
     },
     "tags": ["mountain", "himalayas", "valley view", "mountain view"]
@@ -25,7 +25,7 @@
     "name": "Heritage",
     "description": "Step back in time with our collection of heritage hotels. Stay in magnificent palaces, colonial-era bungalows, and historic havelis that tell tales of a bygone era.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1674842653989-e174afe4d736?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbmNpZW50JTIwaW5kaWFuJTIwcGFsYWNlfGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1674842654145-bcd3332efed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmNpZW50JTIwaW5kaWFuJTIwcGFsYWNlfGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "ancient indian palace"
     },
     "tags": ["heritage", "palace", "colonial"]
@@ -35,7 +35,7 @@
     "name": "Wildlife",
     "description": "Embark on an adventure into the wild. Stay at jungle lodges and resorts located on the fringes of national parks, offering a perfect blend of comfort and thrill.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1700050427555-d58df7da7469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0aWdlciUyMHdpbGRsaWZlfGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1714096927480-8a1278dede9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGlnZXIlMjB3aWxkbGlmZXxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "tiger wildlife"
     },
     "tags": ["wildlife", "jungle", "national park"]
@@ -45,7 +45,7 @@
     "name": "Adventure",
     "description": "For the thrill-seekers and adrenaline junkies. Discover hotels that serve as a base for trekking, skiing, rafting, and other exciting adventure sports.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1597250861267-429663f244a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2Mzg0MDUyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1602842900683-0040b9be5dfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb3VudGFpbiUyMGNsaW1iaW5nfGVufDB8fHx8MTc2Mzg0MDUyOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "mountain climbing"
     },
     "tags": ["adventure", "trekking", "skiing", "rafting"]
@@ -55,7 +55,7 @@
     "name": "Spiritual",
     "description": "Embark on a journey of inner peace and discovery. Find serene hotels and resorts near major pilgrimage sites and spiritual centers, perfect for contemplation and rejuvenation.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1761383396518-e2e30968a25f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYW5nZXMlMjByaXZlciUyMGNlcmVtb255fGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1740593348228-4e4a97e66a17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnYW5nZXMlMjByaXZlciUyMGNlcmVtb255fGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "ganges river ceremony"
     },
     "tags": ["spiritual", "pilgrimage", "rishikesh"]
@@ -65,7 +65,7 @@
     "name": "Wellness",
     "description": "Rejuvenate your mind, body, and soul. Our collection of wellness resorts offers serene environments, world-class spas, yoga retreats, and holistic treatments for a truly restorative getaway.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1658333273411-9d0ed9303905?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMG1lZGl0YXRpbmclMjBhdCUyMHN1bnJpc2V8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1658333273368-59186680da6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMG1lZGl0YXRpbmclMjBhdCUyMHN1bnJpc2V8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "woman meditating at sunrise"
     },
     "tags": ["wellness", "spa", "yoga", "retreat"]
@@ -75,7 +75,7 @@
     "name": "Weddings",
     "description": "Find the perfect venue for your dream wedding. From grand palaces and heritage forts to pristine beaches and lush gardens, explore our curated collection of hotels that make for a magical wedding destination.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1723203812312-0b0ad8c142b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWFjaCUyMHdlZGRpbmclMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1760669345624-e737e3327d22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWFjaCUyMHdlZGRpbmclMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "beach wedding ceremony"
     },
     "tags": ["wedding", "wedding hotel", "destination wedding"]
@@ -85,7 +85,7 @@
     "name": "Desert",
     "description": "Explore the magic and majesty of the desert. From luxurious desert resorts to authentic camps under the stars, discover stays that offer unforgettable experiences like camel safaris, cultural nights, and stargazing.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1762538190374-310cda4382dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYW1lbCUyMHNhZmFyaSUyMHN1bnNldHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1656917051695-8a6d8df727f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYW1lbCUyMHNhZmFyaSUyMHN1bnNldHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "camel safari sunset"
     },
     "tags": ["desert", "jaisalmer", "jodhpur", "fort view"]
@@ -95,8 +95,8 @@
     "name": "Boutique",
     "description": "Discover unique and intimate hotels with personalized service. Our collection of boutique hotels offers one-of-a-kind experiences, distinctive design, and a strong sense of place for the discerning traveler.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzdHlsaXNoJTIwYm91dGlxdWUlMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2MzkzMDQwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "caption": "modern stylish boutique hotel lobby"
+      "src": "https://images.unsplash.com/photo-1675273440569-1350adecb26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHlsaXNoJTIwYm91dGlxdWUlMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "stylish boutique hotel lobby"
     },
     "tags": ["boutique", "design", "unique stay"]
   },
@@ -105,7 +105,7 @@
     "name": "Luxury Tents",
     "description": "Experience the glamour of camping with all the comforts of a luxury hotel. Our selection of luxury tents and glamping sites offers a unique way to connect with nature without sacrificing style or comfort.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1668396713381-e5e6fd3449bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bHV4dXJ5JTIwdGVudCUyMGludGVyaW9yJTIwbmlnaHR8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1652400094037-c10fb276a255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjB0ZW50JTIwaW50ZXJpb3IlMjBuaWdodHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "luxury tent interior night"
     },
     "tags": ["tent", "glamping", "luxury camping"]
@@ -115,7 +115,7 @@
     "name": "Milestone Celebrations",
     "description": "Celebrate your special occasions in memorable settings. Whether it's an anniversary, a birthday, or any significant milestone, find the perfect hotel to make your celebration extraordinary.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1761110840708-9d6814876068?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cm9tYW50aWMlMjBkaW5uZXIlMjBzZXR1cHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1751891076185-cced7f1cc007?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb21hbnRpYyUyMGRpbm5lciUyMHNldHVwfGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "romantic dinner setup"
     },
     "tags": ["romantic", "celebration", "anniversary", "honeymoon"]
