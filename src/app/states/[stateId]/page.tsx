@@ -3,13 +3,13 @@
 'use client';
 import { states, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingBasket, Star, HeartPulse, Music, Paintbrush } from 'lucide-react';
-import type { State, Hotel, City, Attraction } from '@/lib/types';
-import HotelCard from '@/components/hotel-card';
+import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Users, Package, Clock, Calendar } from 'lucide-react';
 import Link from 'next/link';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import HotelCard from '@/components/hotel-card';
 import React from 'react';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
@@ -27,7 +27,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, 
   Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, 
   CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingBasket, Star,
-  HeartPulse, Music, Paintbrush, PackageIcon, HotelIcon, Users, Map, Clock, Calendar
+  HeartPulse, Music, Paintbrush, HotelIcon, Sparkles, Users, Package, Clock, Calendar
 };
 
 
@@ -66,7 +66,7 @@ export default function StatePage() {
     rishikesh: { src: 'https://images.unsplash.com/photo-1681928701229-75ec3d9650b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBSaXNoaWtlc2h8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Rishikesh' },
     nainital: { src: 'https://images.unsplash.com/photo-1619796696652-a29a854f21a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxWaWV3JTIwb2YlMjBOYWluaXRhbHxlbnwwfHx8fDE3NjM4NzIwNzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Nainital' },
     mussoorie: { src: 'https://images.unsplash.com/photo-1720782114166-703488743930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxWaWV3JTIwb2YlMjBNdXNzb29yaWV8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Mussoorie' },
-    dehradun: { src: 'https://images.unsplash.com/photo-1754560939545-c4235592f2f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8VmlldyUyMG9mJTIwRGVocmFkdW58ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Dehradun' },
+    dehradun: { src: 'https://images.unsplash.com/photo-1714919988045-f47e43a10aac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYW5vcmFtaWMlMjB2aWV3JTIwb2YlMjBEZWhyYWR1bnxlbnwwfHx8fDE3NjM4NzYyNjF8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'panoramic view of Dehradun' },
   };
 
   return (
@@ -114,7 +114,7 @@ export default function StatePage() {
                             </div>
                         }
                          <div className="flex items-center gap-2">
-                            <PackageIcon className="w-5 h-5 text-green-500"/>
+                            <Package className="w-5 h-5 text-green-500"/>
                              <div>
                                 <span className="font-semibold text-foreground">Holiday Packages</span><br/>
                                 <Link href="/packages" className="hover:underline">View Packages</Link>
@@ -237,3 +237,4 @@ export default function StatePage() {
     </div>
   );
 }
+

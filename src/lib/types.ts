@@ -4,6 +4,7 @@
 
 
 
+
 import { z } from 'zod';
 
 export interface Hotel {
@@ -262,6 +263,7 @@ export interface SeoPage {
 }
 
 export interface MonthData {
+  id: string;
   name: string;
   slug: string;
   pageImage: {
