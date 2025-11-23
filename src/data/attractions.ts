@@ -712,7 +712,7 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         city: 'Dehradun',
         cityId: 'dehradun',
         stateId: 'uttarakhand',
-        image: { src: 'https://images.unsplash.com/photo-1651779472865-9f4b7389b7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmcmklMjBkZWhyYWR1bnxlbnwwfHx8fDE3NjM4NzIwNzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'fri dehradun' },
+        image: { src: 'https://images.unsplash.com/photo-1757494792285-c7032f9918eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8REVIUkFEVU58ZW58MHx8fHwxNzYzODc2ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'fri dehradun' },
         description: "A premier institution in the field of forestry research, the Forest Research Institute (FRI) is also an architectural marvel. Its Greco-Roman style building and vast campus are a popular tourist attraction.",
         timing: "9:00 AM - 5:30 PM",
         fees: [ { type: "Entry", amount: "₹10" } ],
