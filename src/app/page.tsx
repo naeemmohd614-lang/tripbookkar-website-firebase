@@ -164,7 +164,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       <section id="travel-by-interest" className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -202,38 +202,6 @@ export default function Home() {
               })}
             </div>
           )}
-        </div>
-      </section>
-      
-      <section className="py-16 md:py-20 bg-secondary/30 text-foreground">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Why Choose TripBookKar?</h2>
-            <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">At TripBookKar, we believe travel should be easy, enjoyable and extraordinary. From luxury stays to tailor-made trips, we manage every detail for a perfect travel experience.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-4xl mx-auto">
-            <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                <MapPin className="w-8 h-8 text-primary" />
-              </div>
-              <p className="text-4xl font-bold">100+</p>
-              <p className="text-muted-foreground">Domestic Destinations</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                <Star className="w-8 h-8 text-primary" />
-              </div>
-              <p className="text-4xl font-bold">99%</p>
-              <p className="text-muted-foreground">Customer Satisfaction</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                <Handshake className="w-8 h-8 text-primary" />
-              </div>
-              <p className="text-4xl font-bold">100%</p>
-              <p className="text-muted-foreground">Customized Holidays</p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -278,6 +246,38 @@ export default function Home() {
               })}
             </div>
           )}
+        </div>
+      </section>
+      
+      <section className="py-16 md:py-20 bg-secondary/30 text-foreground">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">Why Choose TripBookKar?</h2>
+            <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">At TripBookKar, we believe travel should be easy, enjoyable and extraordinary. From luxury stays to tailor-made trips, we manage every detail for a perfect travel experience.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-4xl mx-auto">
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <MapPin className="w-8 h-8 text-primary" />
+              </div>
+              <p className="text-4xl font-bold">100+</p>
+              <p className="text-muted-foreground">Domestic Destinations</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <Star className="w-8 h-8 text-primary" />
+              </div>
+              <p className="text-4xl font-bold">99%</p>
+              <p className="text-muted-foreground">Customer Satisfaction</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <Handshake className="w-8 h-8 text-primary" />
+              </div>
+              <p className="text-4xl font-bold">100%</p>
+              <p className="text-muted-foreground">Customized Holidays</p>
+            </div>
+          </div>
         </div>
       </section>
 
