@@ -1,8 +1,9 @@
+
 'use client';
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CheckCircle, Award, Shield, Phone, Users, Heart, Briefcase, GraduationCap, Gift, Building, Search, Send, Calendar, Star } from 'lucide-react';
 import Image from 'next/image';
@@ -340,8 +341,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
-export const metadata = {
-  title: "Best Hotel Booking Services in India | TripBookKar",
-  description: "TripBookKar par paayein best hotel booking services. Family, honeymoon, corporate ya group trips ke liye verified hotels aur best price guarantee. Abhi book karein!",
-};
