@@ -65,7 +65,7 @@
     "name": "Wellness",
     "description": "Rejuvenate your mind, body, and soul. Our collection of wellness resorts offers serene environments, world-class spas, yoga retreats, and holistic treatments for a truly restorative getaway.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1658333273368-59186680da6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMG1lZGl0YXRpbmclMjBhdCUyMHN1bnJpc2V8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1658333273411-9d0ed9303905?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMG1lZGl0YXRpbmclMjBhdCUyMHN1bnJpc2V8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "woman meditating sunrise"
     },
     "tags": ["wellness", "spa", "yoga", "retreat"]
@@ -95,7 +95,7 @@
     "name": "Boutique",
     "description": "Discover unique and intimate hotels with personalized service. Our collection of boutique hotels offers one-of-a-kind experiences, distinctive design, and a strong sense of place for the discerning traveler.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1647249893022-9287c83b8cc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHlsaXNoJTIwYm91dGlxdWUlMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1675273440569-1350adecb26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHlsaXNoJTIwYm91dGlxdWUlMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "stylish boutique hotel lobby"
     },
     "tags": ["boutique", "design", "unique stay"]
@@ -105,7 +105,7 @@
     "name": "Luxury Tents",
     "description": "Experience the glamour of camping with all the comforts of a luxury hotel. Our selection of luxury tents and glamping sites offers a unique way to connect with nature without sacrificing style or comfort.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1668396713381-e5e6fd3449bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bHV4dXJ5JTIwdGVudCUyMGludGVyaW9yJTIwbmlnaHR8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1652400094037-c10fb276a255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjB0ZW50JTIwaW50ZXJpb3IlMjBuaWdodHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "luxury tent interior night"
     },
     "tags": ["tent", "glamping", "luxury camping"]
@@ -115,7 +115,7 @@
     "name": "Milestone Celebrations",
     "description": "Celebrate your special occasions in memorable settings. Whether it's an anniversary, a birthday, or any significant milestone, find the perfect hotel to make your celebration extraordinary.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1761110840708-9d6814876068?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cm9tYW50aWMlMjBkaW5uZXIlMjBzZXR1cHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1751891076185-cced7f1cc007?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb21hbnRpYyUyMGRpbm5lciUyMHNldHVwfGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "romantic dinner setup"
     },
     "tags": ["romantic", "celebration", "anniversary", "honeymoon"]
