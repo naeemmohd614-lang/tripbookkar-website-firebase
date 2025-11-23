@@ -4,7 +4,7 @@
 import { states, cities as allCities, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Star, ShoppingBag, Paintbrush, Music, HeartPulse, SwatchBook, Bell, Hand, Flower, CableCar, Sprout, Cat, Clapperboard, Drama, CookingPot, Diamond, ShoppingBasket, Anchor, Compass } from 'lucide-react';
+import { Map, Users, Calendar, Clock, Package as PackageIcon, Hotel as HotelIcon, Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingBasket, Star, HeartPulse, Music, Paintbrush } from 'lucide-react';
 import type { State, Hotel, City, Attraction } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import Image from 'next/image';
@@ -20,6 +20,16 @@ function slugify(text: string) {
   if (!text) return '';
   return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 }
+
+const iconMap: { [key: string]: React.ElementType } = {
+  Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, 
+  Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, 
+  Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, 
+  Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, 
+  CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingBasket, Star,
+  HeartPulse, Music, Paintbrush, PackageIcon, HotelIcon, Users, Map, Clock, Calendar
+};
+
 
 export default function StatePage() {
   const params = useParams();
@@ -55,7 +65,6 @@ export default function StatePage() {
     dehradun: { src: 'https://images.unsplash.com/photo-1754560939545-c4235592f2f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8VmlldyUyMG9mJTIwRGVocmFkdW58ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Dehradun' },
   };
 
-  // Fallback for other states
   return (
     <div>
         {stateImage && (
@@ -81,18 +90,64 @@ export default function StatePage() {
                     <CardDescription className="text-base pt-2">{state.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <div className="flex space-x-8 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-2">
-                            <Map className="w-5 h-5"/>
-                            <span>{state.totalCities} cities</span>
+                    <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-muted-foreground">
+                        {state.bestTimeToVisit && 
+                            <div className="flex items-center gap-2">
+                                <Sun className="w-5 h-5 text-amber-500"/>
+                                <div>
+                                    <span className="font-semibold text-foreground">Best Time to Visit</span><br/>
+                                    <span>{state.bestTimeToVisit}</span>
+                                </div>
+                            </div>
+                        }
+                         {state.idealDuration && 
+                            <div className="flex items-center gap-2">
+                                <Clock className="w-5 h-5 text-blue-500"/>
+                                 <div>
+                                    <span className="font-semibold text-foreground">Ideal Duration</span><br/>
+                                    <span>{state.idealDuration}</span>
+                                </div>
+                            </div>
+                        }
+                         <div className="flex items-center gap-2">
+                            <PackageIcon className="w-5 h-5 text-green-500"/>
+                             <div>
+                                <span className="font-semibold text-foreground">Holiday Packages</span><br/>
+                                <Link href="/packages" className="hover:underline">View Packages</Link>
+                            </div>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Users className="w-5 h-5"/>
-                            <span>{stateHotels ? stateHotels.length : '...'} hotels</span>
+                            <HotelIcon className="w-5 h-5 text-purple-500"/>
+                            <div>
+                                <span className="font-semibold text-foreground">Top Hotels</span><br/>
+                                <Link href={`/states/${state.stateId}/#state-hotels`} className="hover:underline">Find Hotels</Link>
+                            </div>
                         </div>
                     </div>
                 </CardContent>
             </Card>
+
+            {state.highlights && state.highlights.length > 0 && (
+                 <div className="my-16">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
+                        Highlights
+                    </h2>
+                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+                        {state.highlights.map(highlight => {
+                             const Icon = iconMap[highlight.icon] || Landmark;
+                            return (
+                                <div key={highlight.name} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full">
+                                        <Icon className="h-8 w-8 text-primary" />
+                                    </div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.name}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
 
             {stateAttractions.length > 0 && (
                 <div className="my-16">
@@ -156,7 +211,7 @@ export default function StatePage() {
             )}
 
 
-            <div className="my-16">
+            <div className="my-16" id="state-hotels">
                 <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
                     Hotels in {state.name}
                 </h2>

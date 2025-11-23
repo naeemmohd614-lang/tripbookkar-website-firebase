@@ -6,7 +6,14 @@
     "image": "",
     "description": "Top tourist state in South India, known for its tech hub, palaces, and national parks.",
     "totalCities": 35,
-    "totalHotels": 500
+    "totalHotels": 500,
+    "bestTimeToVisit": "October to April",
+    "idealDuration": "6-7 Days",
+    "highlights": [
+      { "name": "Ancient Ruins", "icon": "Landmark" },
+      { "name": "Lush Hills", "icon": "Mountain" },
+      { "name": "Urban Hub", "icon": "Building" }
+    ]
   },
   {
     "stateId": "goa",
@@ -14,7 +21,14 @@
     "image": "",
     "description": "Famous for its beaches, nightlife, and places of worship.",
     "totalCities": 2,
-    "totalHotels": 800
+    "totalHotels": 800,
+    "bestTimeToVisit": "November to February",
+    "idealDuration": "4-5 Days",
+    "highlights": [
+      { "name": "Beaches", "icon": "Waves" },
+      { "name": "Nightlife", "icon": "Martini" },
+      { "name": "Churches", "icon": "Church" }
+    ]
   },
   {
     "stateId": "rajasthan",
@@ -22,7 +36,14 @@
     "image": "",
     "description": "Known for its magnificent forts, palaces, and rich cultural heritage.",
     "totalCities": 33,
-    "totalHotels": 600
+    "totalHotels": 600,
+     "bestTimeToVisit": "October to March",
+    "idealDuration": "7-8 Days",
+    "highlights": [
+      { "name": "Majestic Forts", "icon": "Castle" },
+      { "name": "Royal Palaces", "icon": "Landmark" },
+      { "name": "Desert Safari", "icon": "Sun" }
+    ]
   },
   {
     "stateId": "kerala",
@@ -30,7 +51,14 @@
     "image": "",
     "description": "God's Own Country, famous for its backwaters, beaches, and Ayurvedic treatments.",
     "totalCities": 14,
-    "totalHotels": 700
+    "totalHotels": 700,
+    "bestTimeToVisit": "September to March",
+    "idealDuration": "6-7 Days",
+    "highlights": [
+      { "name": "Backwaters", "icon": "Sailboat" },
+      { "name": "Lush Greenery", "icon": "Leaf" },
+      { "name": "Wellness", "icon": "HeartPulse" }
+    ]
   },
   {
     "stateId": "maharashtra",
@@ -38,7 +66,14 @@
     "image": "",
     "description": "Home to the bustling metropolis of Mumbai and the serene Western Ghats.",
     "totalCities": 36,
-    "totalHotels": 1200
+    "totalHotels": 1200,
+    "bestTimeToVisit": "October to March",
+    "idealDuration": "5-6 Days",
+     "highlights": [
+      { "name": "Bollywood", "icon": "Clapperboard" },
+      { "name": "Ancient Caves", "icon": "Hand" },
+      { "name": "Bustling Cities", "icon": "Building" }
+    ]
   },
   {
     "stateId": "himachal-pradesh",
@@ -46,7 +81,14 @@
     "image": "",
     "description": "'Land of the Gods', known for its Himalayan landscapes and popular hill-stations.",
     "totalCities": 12,
-    "totalHotels": 450
+    "totalHotels": 450,
+    "bestTimeToVisit": "April to June & October to February",
+    "idealDuration": "6-7 Days",
+     "highlights": [
+      { "name": "Himalayan Views", "icon": "Mountain" },
+      { "name": "Adventure Sports", "icon": "Zap" },
+      { "name": "Monasteries", "icon": "Landmark" }
+    ]
   },
   {
     "stateId": "uttarakhand",
@@ -54,7 +96,14 @@
     "image": "",
     "description": "'Devbhumi' or the 'Land of the Gods', famous for pilgrimage sites and trekking.",
     "totalCities": 13,
-    "totalHotels": 400
+    "totalHotels": 400,
+    "bestTimeToVisit": "March to June & September to November",
+    "idealDuration": "5-6 Days",
+     "highlights": [
+      { "name": "Pilgrimage", "icon": "Hand" },
+      { "name": "Yoga & Wellness", "icon": "HeartPulse" },
+      { "name": "Trekking", "icon": "Mountain" }
+    ]
   },
   {
     "stateId": "jammu-and-kashmir",
@@ -62,7 +111,14 @@
     "image": "",
     "description": "'Paradise on Earth', known for its scenic splendor and snow-capped mountains.",
     "totalCities": 20,
-    "totalHotels": 300
+    "totalHotels": 300,
+    "bestTimeToVisit": "April to October",
+    "idealDuration": "7-8 Days",
+     "highlights": [
+      { "name": "Houseboats", "icon": "Sailboat" },
+      { "name": "Pristine Lakes", "icon": "Droplets" },
+      { "name": "Snowy Peaks", "icon": "Mountain" }
+    ]
   },
   {
     "stateId": "sikkim",
@@ -70,7 +126,14 @@
     "image": "",
     "description": "A jewel in the Himalayas, known for its pristine beauty and stunning views of Kanchenjunga.",
     "totalCities": 4,
-    "totalHotels": 150
+    "totalHotels": 150,
+    "bestTimeToVisit": "March to May & October to December",
+    "idealDuration": "5-6 Days",
+     "highlights": [
+      { "name": "Monasteries", "icon": "Landmark" },
+      { "name": "High-Altitude Lakes", "icon": "Waves" },
+      { "name": "Flower Valleys", "icon": "Flower" }
+    ]
   },
   {
     "stateId": "west-bengal",
@@ -78,7 +141,14 @@
     "image": "",
     "description": "Rich in culture and heritage, home to Kolkata, Darjeeling, and the Sundarbans.",
     "totalCities": 23,
-    "totalHotels": 350
+    "totalHotels": 350,
+    "bestTimeToVisit": "October to March",
+    "idealDuration": "6-7 Days",
+     "highlights": [
+      { "name": "Colonial Charm", "icon": "Landmark" },
+      { "name": "Royal Bengal Tiger", "icon": "Cat" },
+      { "name": "Toy Train", "icon": "Train" }
+    ]
   },
   {
     "stateId": "tamil-nadu",
@@ -86,7 +156,14 @@
     "image": "",
     "description": "Known for its Dravidian-style Hindu temples, classical dance, and beautiful coastline.",
     "totalCities": 38,
-    "totalHotels": 550
+    "totalHotels": 550,
+    "bestTimeToVisit": "November to February",
+    "idealDuration": "7-8 Days",
+     "highlights": [
+      { "name": "Grand Temples", "icon": "Landmark" },
+      { "name": "Rich Culture", "icon": "Drama" },
+      { "name": "Hill Stations", "icon": "Mountain" }
+    ]
   },
   {
     "stateId": "uttar-pradesh",
@@ -94,7 +171,14 @@
     "image": "",
     "description": "The heartland of India, home to the Taj Mahal, Varanasi, and ancient cities.",
     "totalCities": 75,
-    "totalHotels": 750
+    "totalHotels": 750,
+    "bestTimeToVisit": "October to March",
+    "idealDuration": "5-6 Days",
+     "highlights": [
+      { "name": "Taj Mahal", "icon": "Landmark" },
+      { "name": "Spiritual Ghats", "icon": "Anchor" },
+      { "name": "Mughal Cuisine", "icon": "CookingPot" }
+    ]
   },
   {
     "stateId": "madhya-pradesh",
@@ -102,7 +186,14 @@
     "image": "",
     "description": "'The Heart of India', known for its national parks, wildlife, and historical sites.",
     "totalCities": 52,
-    "totalHotels": 300
+    "totalHotels": 300,
+    "bestTimeToVisit": "October to March",
+    "idealDuration": "6-7 Days",
+     "highlights": [
+      { "name": "Tiger Reserves", "icon": "Cat" },
+      { "name": "Ancient Temples", "icon": "Landmark" },
+      { "name": "Marble Rocks", "icon": "Diamond" }
+    ]
   },
   {
     "stateId": "gujarat",
@@ -110,7 +201,14 @@
     "image": "",
     "description": "Famous for its vibrant culture, Rann of Kutch, and being the land of Mahatma Gandhi.",
     "totalCities": 33,
-    "totalHotels": 480
+    "totalHotels": 480,
+    "bestTimeToVisit": "October to March",
+    "idealDuration": "7-8 Days",
+     "highlights": [
+      { "name": "White Desert", "icon": "Sun" },
+      { "name": "Asiatic Lions", "icon": "Cat" },
+      { "name": "Rich Heritage", "icon": "Landmark" }
+    ]
   },
   {
     "stateId": "delhi",
@@ -118,6 +216,13 @@
     "image": "",
     "description": "The national capital, a vast metropolitan area with a rich history and Mughal-era monuments.",
     "totalCities": 1,
-    "totalHotels": 900
+    "totalHotels": 900,
+    "bestTimeToVisit": "October to March",
+    "idealDuration": "3-4 Days",
+     "highlights": [
+      { "name": "Mughal Architecture", "icon": "Landmark" },
+      { "name": "Street Food", "icon": "CookingPot" },
+      { "name": "Bustling Markets", "icon": "ShoppingBasket" }
+    ]
   }
 ]

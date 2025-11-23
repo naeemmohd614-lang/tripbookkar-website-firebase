@@ -1,6 +1,7 @@
 
 
 
+
 import { z } from 'zod';
 
 export interface Hotel {
@@ -126,6 +127,12 @@ export interface State {
   description: string;
   totalCities: number;
   totalHotels: number;
+  bestTimeToVisit?: string;
+  idealDuration?: string;
+  highlights?: {
+    name: string;
+    icon: string;
+  }[];
 }
 
 export interface City {
