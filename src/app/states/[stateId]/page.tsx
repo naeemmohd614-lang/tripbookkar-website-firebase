@@ -48,6 +48,13 @@ export default function StatePage() {
       "caption": `landscape ${state.name}`
   };
 
+  const cityImages: { [key: string]: { src: string, caption: string } } = {
+    rishikesh: { src: 'https://images.unsplash.com/photo-1681928701229-75ec3d9650b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBSaXNoaWtlc2h8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Rishikesh' },
+    nainital: { src: 'https://images.unsplash.com/photo-1619796696652-a29a854f21a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxWaWV3JTIwb2YlMjBOYWluaXRhbHxlbnwwfHx8fDE3NjM4NzIwNzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Nainital' },
+    mussoorie: { src: 'https://images.unsplash.com/photo-1720782114166-703488743930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxWaWV3JTIwb2YlMjBNdXNzb29yaWV8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Mussoorie' },
+    dehradun: { src: 'https://images.unsplash.com/photo-1754560939545-c4235592f2f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8VmlldyUyMG9mJTIwRGVocmFkdW58ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Dehradun' },
+  };
+
   // Fallback for other states
   return (
     <div>
@@ -121,10 +128,7 @@ export default function StatePage() {
                     </h2>
                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
                         {stateCities.map((city) => {
-                            const cityImage = {
-                                "src": `https://picsum.photos/seed/${city.cityId}/400/300`,
-                                "caption": `View of ${city.name}`
-                            };
+                            const cityImage = cityImages[city.cityId] || { src: `https://picsum.photos/seed/${city.cityId}/400/300`, caption: `View of ${city.name}` };
                             return (
                                 <Link href={`/states/${state.stateId}/cities/${city.cityId}`} key={city.cityId}>
                                     <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300">

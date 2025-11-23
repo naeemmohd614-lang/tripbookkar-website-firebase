@@ -204,7 +204,7 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1607320879139-1bb689f6a68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
+      { "src": "https://images.unsplash.com/photo-1570206986634-afd7cccb68d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzg3MjA3MHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-dehradun-2.webp", "caption": "Modern hotel lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
@@ -223,7 +223,7 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://cache.marriott.com/is/image/marriotts7prod/dedjw-exterior-0029:Pano-Hor?wid=1600&fit=constrain", "caption": "Resort with valley view" },
+      { "src": "https://images.unsplash.com/photo-1586961926492-505df7717079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UmVzb3J0JTIwd2l0aCUyMHZhbGxleSUyMHZpZXd8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-2.webp", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
@@ -242,7 +242,7 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1758297802342-a830f02f2a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxSZXNvcnQlMjBuZXN0bGVkJTIwaW4lMjB0aGUlMjBoaWxsc3xlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
+      { "src": "https://images.unsplash.com/photo-1701454407318-7f37c65bcf97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxSZXNvcnQlMjBuZXN0bGVkJTIwaW4lMjB0aGUlMjBoaWxsc3xlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-2.webp", "caption": "Infinity pool overlooking the valley" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],
