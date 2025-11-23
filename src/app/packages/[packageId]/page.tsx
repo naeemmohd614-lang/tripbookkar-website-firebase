@@ -85,8 +85,6 @@ export default function PackageDetailPage({ params }: { params: { packageId: str
                         <Card className="sticky top-24 shadow-lg">
                             <CardHeader>
                                 <CardTitle>Book This Package</CardTitle>
-                                <CardDescription>Price per person</CardDescription>
-                                <p className="text-3xl font-bold text-brand-blue">₹{pkg.price.toLocaleString()}</p>
                             </CardHeader>
                             <CardContent>
                                 <p className="text-sm text-muted-foreground">
