@@ -8,11 +8,12 @@ import { doc } from 'firebase/firestore';
 
 export default function EditMonthPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
+  const { id } = params;
 
   const monthRef = useMemoFirebase(() => {
-    if (!firestore || !params.id) return null;
-    return doc(firestore, 'monthlyDestinations', params.id);
-  }, [firestore, params.id]);
+    if (!firestore || !id) return null;
+    return doc(firestore, 'monthlyDestinations', id);
+  }, [firestore, id]);
 
   const { data: month, isLoading } = useDoc<MonthData>(monthRef);
 

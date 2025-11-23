@@ -7,11 +7,12 @@ import { doc } from 'firebase/firestore';
 
 export default function EditInterestPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
+  const { id } = params;
 
   const interestRef = useMemoFirebase(() => {
-    if (!firestore || !params.id) return null;
-    return doc(firestore, 'interests', params.id);
-  }, [firestore, params.id]);
+    if (!firestore || !id) return null;
+    return doc(firestore, 'interests', id);
+  }, [firestore, id]);
 
   const { data: interest, isLoading } = useDoc<Interest>(interestRef);
 
