@@ -18,7 +18,7 @@ export default function BoutiquePage() {
     const { data: boutiqueHotels, isLoading } = useCollection<Hotel>(boutiqueHotelsQuery);
 
   const heroImage = {
-      "src": "https://picsum.photos/seed/interest-boutique/1920/600",
+      "src": "https://images.unsplash.com/photo-1761501989065-7c98a5d1f773?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHlsaXNoJTIwYm91dGlxdWUlMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "stylish boutique hotel lobby"
   };
 

@@ -78,7 +78,7 @@
     "about": "An award-winning boutique hotel on Mumbai's famous seaside promenade, offering stunning ocean views, a rooftop pool, and personalized service.",
     "basePrice": 22000,
     "rating": 4.7,
-    "images": [{ "src": "https://picsum.photos/seed/ic-mumbai-1/1080/720", "caption": "Rooftop pool overlooking Marine Drive" }],
+    "images": [{ "src": "https://images.unsplash.com/photo-1639536104936-de8f9c0293a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSb29mdG9wJTIwcG9vbCUyMG92ZXJsb29raW5nJTIwTWFyaW5lJTIwRHJpdmV8ZW58MHx8fHwxNzYzOTIwMTU2fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop pool overlooking Marine Drive" }],
     "distance": { "Chhatrapati Shivaji Maharaj International Airport": "25 km" },
     "roomCategories": [{ "name": "Bay View Room", "count": 59, "size": "400 sqft" }],
     "diningExperiences": [
