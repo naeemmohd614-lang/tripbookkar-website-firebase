@@ -80,17 +80,14 @@ const samplePackages = [
   {
     title: "Family Comfort Package",
     bullets: ["Spacious rooms", "Kid's play area", "Free breakfast"],
-    price: "7,500"
   },
   {
     title: "Romantic Honeymoon Suite",
     bullets: ["Private pool access", "Candlelight dinner", "Couple's spa voucher"],
-    price: "15,000"
   },
   {
     title: "Corporate Quick-Book Package",
     bullets: ["Airport transfer", "Business center access", "GST Invoice"],
-    price: "6,000"
   }
 ];
 
@@ -240,8 +237,6 @@ export default function ServicesPage() {
                                     <li key={bullet}>{bullet}</li>
                                 ))}
                             </ul>
-                            <p className="text-sm text-muted-foreground">Starting from</p>
-                            <p className="text-2xl font-bold">₹{pkg.price}/night</p>
                         </CardContent>
                     </Card>
                 ))}
