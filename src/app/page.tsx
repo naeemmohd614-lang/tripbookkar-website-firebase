@@ -206,14 +206,31 @@ export default function Home() {
           </div>
           {citiesLoading && <p className="text-center">Loading cities...</p>}
           {cities && (
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-              {cities.slice(0, 12).map((city) => (
-                <Link href={`/states/${city.stateId}/cities/${city.cityId}`} key={city.cityId}>
-                    <Button variant="outline" className="w-full h-12 text-md font-medium">
-                      {city.name}
-                    </Button>
-                </Link>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+              {cities.slice(0, 12).map((city) => {
+                 const cityImage = { src: `https://picsum.photos/seed/${city.cityId}/400/300`, caption: `view of ${city.name}` };
+                 return (
+                  <Link href={`/states/${city.stateId}/cities/${city.cityId}`} key={city.cityId}>
+                    <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                      <CardContent className="p-0">
+                        <div className="relative h-32">
+                            <Image
+                              src={cityImage.src}
+                              alt={`View of ${city.name}`}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              data-ai-hint={cityImage.caption}
+                            />
+                          <div className="absolute inset-0 bg-black/40" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <h3 className="font-bold text-lg text-white font-headline text-center px-2">{city.name}</h3>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                 );
+              })}
             </div>
           )}
         </div>
