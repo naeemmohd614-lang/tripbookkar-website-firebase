@@ -95,6 +95,17 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    /**
+     * @description Rules for the /cities collection.
+     * @path /cities/{cityId}
+     * @allow read, list: if true; // Anyone can read or list cities for public pages.
+     * @allow write: if isAdmin(); // Only admins can manage cities.
+     */
+    match /cities/{cityId} {
+      allow read, list: if true;
+      allow write: if isAdmin();
+    }
+
 
     /**
      * @description Rules for the /affiliates collection.
