@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -66,6 +67,7 @@ import SearchForm from '../search-form';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
+  { href: '/services', label: 'Services', icon: Briefcase },
   { href: '/packages', label: 'Packages', icon: Package },
   { href: '/contact', label: 'Contact', icon: Phone },
 ];
@@ -170,6 +172,11 @@ export default function Header() {
           </ul>
         </NavigationMenuContent>
       </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/services' ? "bg-accent" : "")}>
+            <Link href="/services">Services</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
        <NavigationMenuItem>
           <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/packages' ? "bg-accent" : "")}>
             <Link href="/packages">Packages</Link>
