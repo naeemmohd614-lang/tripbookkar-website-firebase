@@ -12,7 +12,7 @@ export default function LuxuryTentsPage() {
   const firestore = useFirestore();
   const luxuryTentHotelsQuery = useMemoFirebase(() => {
     if (!firestore) return null;
-    return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['tent', 'glamping']));
+    return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['tent', 'glamping', 'luxury camping']));
   }, [firestore]);
 
   const { data: luxuryTentHotels, isLoading } = useCollection<Hotel>(luxuryTentHotelsQuery);
