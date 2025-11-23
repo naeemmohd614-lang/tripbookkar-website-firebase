@@ -95,8 +95,8 @@
     "name": "Boutique",
     "description": "Discover unique and intimate hotels with personalized service. Our collection of boutique hotels offers one-of-a-kind experiences, distinctive design, and a strong sense of place for the discerning traveler.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1647249893022-9287c83b8cc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdHlsaXNoJTIwYm91dGlxdWUlMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "caption": "stylish boutique hotel lobby"
+      "src": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzdHlsaXNoJTIwYm91dGlxdWUlMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2MzkzMDQwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "modern stylish boutique hotel lobby"
     },
     "tags": ["boutique", "design", "unique stay"]
   },
