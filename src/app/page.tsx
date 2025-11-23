@@ -109,30 +109,30 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="bg-gray-900 text-white py-16 md:py-20">
+      <section className="bg-secondary/30 text-foreground py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-orange-400">Why Choose TripBookKar?</h2>
-            <p className="mt-2 text-lg text-gray-400 max-w-3xl mx-auto">At TripBookKar, we believe travel should be easy, enjoyable and extraordinary. From luxury stays to tailor-made trips, we manage every detail for a perfect travel experience.</p>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-accent-foreground">Why Choose TripBookKar?</h2>
+            <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">At TripBookKar, we believe travel should be easy, enjoyable and extraordinary. From luxury stays to tailor-made trips, we manage every detail for a perfect travel experience.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-4xl mx-auto">
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-900/50 border border-orange-500/50 mb-4">
-                <MapPin className="w-8 h-8 text-orange-400" />
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <MapPin className="w-8 h-8 text-primary" />
               </div>
               <p className="text-4xl font-bold">100+</p>
               <p className="text-muted-foreground">Domestic Destinations</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-900/50 border border-orange-500/50 mb-4">
-                <Star className="w-8 h-8 text-orange-400" />
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <Star className="w-8 h-8 text-primary" />
               </div>
               <p className="text-4xl font-bold">99%</p>
               <p className="text-muted-foreground">Customer Satisfaction</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-900/50 border border-orange-500/50 mb-4">
-                <Handshake className="w-8 h-8 text-orange-400" />
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <Handshake className="w-8 h-8 text-primary" />
               </div>
               <p className="text-4xl font-bold">100%</p>
               <p className="text-muted-foreground">Customized Holidays</p>
