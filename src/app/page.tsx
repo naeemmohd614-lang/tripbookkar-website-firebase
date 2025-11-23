@@ -154,10 +154,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
-              Explore Our States
+              Top Tourist Destinations in India
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
-              Discover hotels and experiences across India.
+              Explore India's most popular states and cities for your next getaway.
             </p>
           </div>
           {statesLoading && <p className="text-center">Loading states...</p>}
