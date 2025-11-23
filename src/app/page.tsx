@@ -13,7 +13,7 @@ import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
 import { featuredPackages } from "@/lib/data";
 import HotelCard from "@/components/hotel-card";
-import type { Hotel, Interest, State, MonthDestination } from "@/lib/types";
+import type { Hotel, Interest, State, MonthDestination, City } from "@/lib/types";
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy, limit } from 'firebase/firestore';
 
@@ -41,6 +41,13 @@ export default function Home() {
   }, [firestore]);
 
   const { data: states, isLoading: statesLoading } = useCollection<State>(statesQuery);
+  
+  const citiesQuery = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return query(collection(firestore, 'cities'), orderBy('name', 'asc'));
+  }, [firestore]);
+
+  const { data: cities, isLoading: citiesLoading } = useCollection<City>(citiesQuery);
 
   const destinationsByMonthQuery = useMemoFirebase(() => {
     if (!firestore) return null;
@@ -186,8 +193,33 @@ export default function Home() {
           )}
         </div>
       </section>
+      
+      <section id="explore-cities" className="py-16 md:py-24 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
+              Explore Popular Cities
+            </h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Find top hotels in India's most popular cities.
+            </p>
+          </div>
+          {citiesLoading && <p className="text-center">Loading cities...</p>}
+          {cities && (
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+              {cities.slice(0, 12).map((city) => (
+                <Link href={`/states/${city.stateId}/cities/${city.cityId}`} key={city.cityId}>
+                    <Button variant="outline" className="w-full h-12 text-md font-medium">
+                      {city.name}
+                    </Button>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
 
-      <section id="destinations-by-month" className="py-16 md:py-24 bg-secondary/30">
+      <section id="destinations-by-month" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
