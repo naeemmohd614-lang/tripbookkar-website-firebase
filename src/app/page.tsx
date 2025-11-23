@@ -15,6 +15,14 @@ import HotelCard from "@/components/hotel-card";
 import type { Hotel, Interest, State, MonthDestination, City } from "@/lib/types";
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy, limit } from 'firebase/firestore';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 export default function Home() {
@@ -84,6 +92,27 @@ export default function Home() {
     gujarat: { src: 'https://images.unsplash.com/photo-1663693953045-2e97fc0b23c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kc2NhcGUlMjBvZiUyMEd1amFyYXR8ZW58MHx8fHwxNzYzNjcwODg2fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Gujarat' },
     delhi: { src: 'https://images.unsplash.com/photo-1609670289875-590e8ec05c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGUlMjBvZiUyMERlbGhpfGVufDB8fHx8MTc2MzY3MDg4N3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'landscape of Delhi' },
   };
+
+  const testimonials = [
+    {
+        name: "Priya Sharma",
+        location: "Delhi",
+        text: "Our honeymoon in the Maldives was magical! TripBookKar planned everything so perfectly. Thank you!",
+        avatar: "https://picsum.photos/seed/avatar1/100/100"
+    },
+    {
+        name: "Rahul Mehta",
+        location: "Mumbai",
+        text: "Professional & prompt service. Got great hotel deals for our Rajasthan family trip.",
+        avatar: "https://picsum.photos/seed/avatar2/100/100"
+    },
+    {
+        name: "Neha & Arjun",
+        location: "Bangalore",
+        text: "Very smooth process and friendly staff at TripBookKar. Will book again soon!",
+        avatar: "https://picsum.photos/seed/avatar3/100/100"
+    }
+  ];
 
   return (
     <div className="flex flex-col">
@@ -262,6 +291,55 @@ export default function Home() {
               })}
             </div>
           )}
+        </div>
+      </section>
+
+       <section className="py-16 md:py-24 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-orange-400">
+              What Our Travellers Say
+            </h2>
+            <p className="mt-2 text-lg text-gray-300">
+              Real stories from our happy customers. Your satisfaction is our priority.
+            </p>
+          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-4xl mx-auto"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="bg-gray-800 border-gray-700 text-center h-full flex flex-col justify-between">
+                      <CardContent className="p-6">
+                        <Avatar className="mx-auto mb-4 h-20 w-20 border-2 border-orange-400">
+                          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                          <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                        <div className="flex justify-center mb-2">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                        <p className="text-gray-300 italic">"{testimonial.text}"</p>
+                      </CardContent>
+                      <CardFooter className="flex-col items-center justify-center p-4 bg-gray-900/50">
+                        <p className="font-bold">{testimonial.name}</p>
+                        <p className="text-sm text-gray-400">{testimonial.location}</p>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="text-white bg-white/10 hover:bg-white/20 border-white/20" />
+            <CarouselNext className="text-white bg-white/10 hover:bg-white/20 border-white/20" />
+          </Carousel>
         </div>
       </section>
 
