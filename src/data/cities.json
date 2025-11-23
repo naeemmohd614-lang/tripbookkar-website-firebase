@@ -14,7 +14,13 @@
     "name": "Jaipur",
     "image": "",
     "description": "The Pink City, famous for its stunning forts, palaces, and rich Rajput history.",
-    "totalHotels": 75
+    "totalHotels": 75,
+    "highlights": [
+      { "name": "The Pink City", "icon": "Paintbrush" },
+      { "name": "Royal Forts & Palaces", "icon": "Castle" },
+      { "name": "Vibrant Bazaars", "icon": "ShoppingBag" },
+      { "name": "Rich Culinary Heritage", "icon": "Utensils" }
+    ]
   },
   {
     "cityId": "jodhpur",
@@ -22,7 +28,12 @@
     "name": "Jodhpur",
     "image": "",
     "description": "The Blue City, dominated by the majestic Mehrangarh Fort.",
-    "totalHotels": 45
+    "totalHotels": 45,
+    "highlights": [
+      { "name": "The Blue City", "icon": "Paintbrush" },
+      { "name": "Mehrangarh Fort", "icon": "Castle" },
+      { "name": "Desert Adventures", "icon": "Sun" }
+    ]
   },
   {
     "cityId": "udaipur",
@@ -30,7 +41,12 @@
     "name": "Udaipur",
     "image": "",
     "description": "The City of Lakes, known for its romantic palaces and beautiful lakes.",
-    "totalHotels": 60
+    "totalHotels": 60,
+     "highlights": [
+      { "name": "City of Lakes", "icon": "Waves" },
+      { "name": "Romantic Palaces", "icon": "Landmark" },
+      { "name": "Art & Culture", "icon": "Music" }
+    ]
   },
   {
     "cityId": "jaisalmer",

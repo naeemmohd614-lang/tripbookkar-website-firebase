@@ -2,6 +2,7 @@
 
 
 
+
 import { z } from 'zod';
 
 export interface Hotel {
@@ -142,6 +143,10 @@ export interface City {
     image: string;
     description: string;
     totalHotels: number;
+    highlights?: {
+      name: string;
+      icon: string;
+    }[];
 }
 
 export interface Attraction {

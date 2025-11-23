@@ -1,5 +1,6 @@
 
 
+
 'use client';
 import { cities, states, attractions } from '@/lib/data';
 import { notFound, useParams }from 'next/navigation';
@@ -20,6 +21,15 @@ function slugify(text: string) {
     if (!text) return '';
     return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 }
+
+const iconMap: { [key: string]: React.ElementType } = {
+  Castle, Sun, Landmark, MapPin, Waves, Martini, Zap, Leaf, Utensils, 
+  Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, 
+  Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, 
+  Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, 
+  CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingBasket, Star,
+  HeartPulse, Music, Paintbrush
+};
 
 export default function CityPage() {
   const params = useParams();
@@ -80,6 +90,27 @@ export default function CityPage() {
                     </Button>
                 </CardContent>
             </Card>
+
+             {city.highlights && city.highlights.length > 0 && (
+                 <div className="my-16">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
+                        Key Highlights
+                    </h2>
+                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+                        {city.highlights.map(highlight => {
+                             const Icon = iconMap[highlight.icon] || Landmark;
+                            return (
+                                <div key={highlight.name} className="flex flex-col items-center text-center gap-3">
+                                    <div className="bg-primary/10 p-4 rounded-full">
+                                        <Icon className={`h-8 w-8 text-primary`} />
+                                    </div>
+                                    <p className="font-semibold text-muted-foreground">{highlight.name}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
 
             {cityAttractions.length > 0 && (
                 <div className="my-16">
