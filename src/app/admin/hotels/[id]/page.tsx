@@ -7,11 +7,12 @@ import { doc } from 'firebase/firestore';
 
 export default function EditHotelPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
+  const { id } = params;
 
   const hotelRef = useMemoFirebase(() => {
-    if (!firestore || !params.id) return null;
-    return doc(firestore, 'hotels', params.id);
-  }, [firestore, params.id]);
+    if (!firestore || !id) return null;
+    return doc(firestore, 'hotels', id);
+  }, [firestore, id]);
 
   const { data: hotel, isLoading } = useDoc<Hotel>(hotelRef);
 
