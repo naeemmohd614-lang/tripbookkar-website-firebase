@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Tripify - Your Ultimate Travel Companion",
-  description: "Discover and book hotels, and plan your perfect trip with Tripify.",
+  title: "TripBookKar - Your Ultimate Travel Companion",
+  description: "Discover and book hotels, and plan your perfect trip with TripBookKar.",
 };
 
 const WhatsAppIcon = () => (
@@ -46,7 +46,7 @@ export default function RootLayout({
             <Toaster />
              <div className="fixed bottom-5 right-5 z-50">
                 <Button asChild size="icon" className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg">
-                    <a href="https://wa.me/918295486610" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                    <a href="https://wa.me/918950652665" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <WhatsAppIcon />
                     </a>
                 </Button>
