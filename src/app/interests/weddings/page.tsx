@@ -17,8 +17,8 @@ export default function WeddingsPage() {
     const { data: weddingHotels, isLoading } = useCollection<Hotel>(weddingHotelsQuery);
 
   const heroImage = {
-      "src": "https://picsum.photos/seed/interest-weddings/1920/600",
-      "caption": "beach wedding ceremony"
+      "src": "https://images.unsplash.com/photo-1593539922943-38f243a7d432?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbGVnYW50JTIwd2VkZGluZyUyMGRlY29yfGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "opulent wedding decor"
   };
 
   return (
@@ -26,7 +26,7 @@ export default function WeddingsPage() {
       <div className="relative h-64 md:h-80 w-full">
         <Image
           src={heroImage.src}
-          alt="A beautiful destination wedding setup on a beach"
+          alt="A beautiful destination wedding setup"
           fill
           className="object-cover"
           priority
