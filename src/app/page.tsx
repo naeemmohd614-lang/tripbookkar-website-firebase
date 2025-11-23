@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from "react";
@@ -294,13 +295,13 @@ export default function Home() {
         </div>
       </section>
 
-       <section className="py-16 md:py-24 bg-gray-900 text-white">
+      <section className="py-16 md:py-24 bg-secondary/30 text-foreground">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-orange-400">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">
               What Our Travellers Say
             </h2>
-            <p className="mt-2 text-lg text-gray-300">
+            <p className="mt-2 text-lg text-muted-foreground">
               Real stories from our happy customers. Your satisfaction is our priority.
             </p>
           </div>
@@ -315,9 +316,9 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <Card className="bg-gray-800 border-gray-700 text-center h-full flex flex-col justify-between">
+                    <Card className="bg-background border-border/50 text-center h-full flex flex-col justify-between">
                       <CardContent className="p-6">
-                        <Avatar className="mx-auto mb-4 h-20 w-20 border-2 border-orange-400">
+                        <Avatar className="mx-auto mb-4 h-20 w-20 border-2 border-primary/20">
                           <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                           <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
@@ -326,19 +327,19 @@ export default function Home() {
                             <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                           ))}
                         </div>
-                        <p className="text-gray-300 italic">"{testimonial.text}"</p>
+                        <p className="text-muted-foreground italic">"{testimonial.text}"</p>
                       </CardContent>
-                      <CardFooter className="flex-col items-center justify-center p-4 bg-gray-900/50">
-                        <p className="font-bold">{testimonial.name}</p>
-                        <p className="text-sm text-gray-400">{testimonial.location}</p>
+                      <CardFooter className="flex-col items-center justify-center p-4 bg-muted/50">
+                        <p className="font-bold text-foreground">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                       </CardFooter>
                     </Card>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-white bg-white/10 hover:bg-white/20 border-white/20" />
-            <CarouselNext className="text-white bg-white/10 hover:bg-white/20 border-white/20" />
+            <CarouselPrevious className="text-foreground bg-background/50 hover:bg-background border-border/50" />
+            <CarouselNext className="text-foreground bg-background/50 hover:bg-background border-border/50" />
           </Carousel>
         </div>
       </section>
