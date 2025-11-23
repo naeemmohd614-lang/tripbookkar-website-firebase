@@ -3,7 +3,7 @@
   {
     "id": "the-ritz-carlton-bangalore",
     "brandSlug": "the-ritz-carlton",
-    "name": "The Ritz-Carlton, Bangalore",
+    "name": "The Ritz-Carlton Bangalore",
     "brand": "The Ritz-Carlton",
     "city": "Bengaluru",
     "state": "Karnataka",
@@ -13,7 +13,7 @@
     "rating": 4.8,
     "images": [
       { "src": "https://images.unsplash.com/photo-1734455937991-01f528d6b633?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxFeHRlcmlvciUyMHZpZXclMjBvZiUyMFRoZSUyMFJpdHotQ2FybHRvbiUyMEJhbmdhbG9yZXxlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Exterior view of The Ritz-Carlton Bangalore" },
-      { "src": "https://images.unsplash.com/photo-1629195808732-c178e073c684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxMaXh1cnklMjBob3RlbCUyMGxvYmJ5JTIwQmFuZ2Fsb3JlfGVufDB8fHx8MTc2Mzc4ODExOXww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Lobby area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-bangalore-2.webp", "caption": "Lobby area" }
     ],
     "distance": {
       "Kempegowda International Airport": "35 km"
@@ -54,7 +54,7 @@
     "rating": 4.7,
     "images": [
       { "src": "https://images.unsplash.com/photo-1656838611814-3b0bd9c3f6dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIb3RlbCUyMGV4dGVyaW9yJTIwYXQlMjBBZXJvY2l0eXxlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior at Aerocity" },
-      { "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxMVXh1cnklMjBob3RlbCUyMHBvb2x8ZW58MHx8fHwxNzYzNzg4MTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Swimming pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-delhi-2.webp", "caption": "Swimming pool area" }
     ],
     "distance": {
       "Indira Gandhi International Airport": "2 km"
@@ -83,7 +83,7 @@
     "rating": 4.5,
     "images": [
       { "src": "https://images.unsplash.com/photo-1741570455043-cb6bfe1cc076?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxWaWV3JTIwb2YlMjB0aGUlMjByZXNvcnQlMjBmcm9tJTIwdGhlJTIwYmF5fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "View of the resort from the bay" },
-      { "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxnb2ElMjByZXNvcnQlMjBwb29sfGVufDB8fHx8MTc2Mzc4ODE5N3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Outdoor pool and garden" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-goa-2.webp", "caption": "Outdoor pool and garden" }
     ],
     "roomCategories": [{ "name": "Garden View Room", "count": 180, "size": "388 sqft" }],
     "diningExperiences": [
@@ -107,8 +107,8 @@
     "basePrice": 18000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1710144481132-b1702639d4e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxIb3RlbCUyMG92ZXJsb29raW5nJTIwSnVodSUyMGJlYWNofGVufDB8fHx8MTc2Mzc3NDM0N3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel overlooking Juhu beach" },
-      { "src": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxob3RlbCUyMGxvdHVzJTIwcG9uZHxlbnwwfHx8fDE3NjM3ODgyMjh8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Lotus pond at the hotel" }
+      { "src": "https://images.unsplash.com/photo-1710144481132-b1702639d4e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIb3RlbCUyMG92ZXJsb29raW5nJTIwSnVodSUyMGJlYWNofGVufDB8fHx8MTc2Mzc3NDM0N3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel overlooking Juhu beach" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mumbai-2.webp", "caption": "Lotus pond at the hotel" }
     ],
     "distance": { "Chhatrapati Shivaji Maharaj International Airport": "9 km" },
     "roomCategories": [{ "name": "Deluxe Sea View Room", "count": 200, "size": "431 sqft" }],
@@ -133,8 +133,8 @@
     "basePrice": 9500,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1677868818231-b5e09bcfc5e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxGcm9udCUyMGZhY2FkZSUyMG9mJTIwSmFpcHVyJTIwTWFycmlvdHR8ZW58MHx8fHwxNzYzNzc0MzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Front facade of Jaipur Marriott" },
-      { "src": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyb3lhbCUyMGhvdGVsJTIwbG9iYnl8ZW58MHx8fHwxNzYzNzg4MjU1fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Grand lobby interior" }
+      { "src": "https://images.unsplash.com/photo-1712488696577-c08c883f2c89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxGcm9udCUyMGZhY2FkZSUyMG9mJTIwSmFpcHVyJTIwTWFycmlvdHR8ZW58MHx8fHwxNzYzOTIwNzMyfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Front facade of Jaipur Marriott" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-2.webp", "caption": "Grand lobby interior" }
     ],
     "distance": { "Jaipur International Airport": "2 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 300, "size": "452 sqft" }],
@@ -160,7 +160,7 @@
     "rating": 4.6,
     "images": [
       { "src": "https://images.unsplash.com/photo-1697070919909-cf154ba3278c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxIb3RlbCUyMGV4dGVyaW9yJTIwYW5kJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2Mzc3NDM0N3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior and landscape" },
-      { "src": "https://images.unsplash.com/photo-1540541338287-41700207dee6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHhyb29mdG9wJTIwbG91bmdlJTIwdmlld3xlbnwwfHx8fDE3NjM3ODgzMDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop lounge view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pune-2.webp", "caption": "Rooftop lounge view" }
     ],
     "distance": { "Pune International Airport": "5 km" },
     "roomCategories": [{ "name": "Premium Room", "count": 250, "size": "430 sqft" }],
@@ -185,8 +185,8 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1588504633950-9dc518941e93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxSb29mdG9wJTIwaW5maW5pdHklMjBwb29sfGVufDB8fHx8MTc2MzY1Njg4M3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop infinity pool" },
-      { "src": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxsdXh1cnklMjBob3RlbCUyMGV4dGVyaW9yJTIwYXQlMjBuaWdodHxlbnwwfHx8fDE3NjM3ODgzMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior at night" }
+      { "src": "https://images.unsplash.com/photo-1588504633950-9dc518941e93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxSb29mdG9wJTIwaW5maW5pdHklMjBwb29sfGVufDB8fHx8MTc2MzY1Njg4M3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop infinity pool" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-lucknow-2.webp", "caption": "Hotel exterior at night" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 112, "size": "377 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -204,8 +204,8 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1607320879139-1bb689f6a68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
-      { "src": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2Mzc4ODM2Nnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Modern hotel lobby" }
+      { "src": "https://images.unsplash.com/photo-1607320895054-c5c543e9a069?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzg3MjA3MHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-dehradun-2.webp", "caption": "Modern hotel lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -223,8 +223,8 @@
     "basePrice": 28000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1664106076343-72afa7ee8a47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxSZXNvcnQlMjB3aXRoJTIwdmFsbGV5JTIwdmlld3xlbnwwfHx8fDE3NjM3NjQwNDl8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
-      { "src": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxpbmRvb3IlMjBzd2ltbWluZyUyMHBvb2x8ZW58MHx8fHwxNzYzNzg4NDIxfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Indoor swimming pool" }
+      { "src": "https://images.unsplash.com/photo-1586961926492-505df7717079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UmVzb3J0JTIwd2l0aCUyMHZhbGxleSUyMHZpZXd8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort with valley view" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-mussoorie-2.webp", "caption": "Indoor swimming pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -242,8 +242,8 @@
     "basePrice": 22000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1758297802342-a830f02f2a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxSZXNvcnQlMjBuZXN0bGVkJTIwaW4lMjB0aGUlMjBoaWxsc3xlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
-      { "src": "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxpbmZpbml0eSUyMHBvb2wlMjBvdmVybG9va2luZyUyMHRoZSUyMHZhbGxleXxlbnwwfHx8fDE3NjM3ODg0NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Infinity pool overlooking the valley" }
+      { "src": "https://images.unsplash.com/photo-1701454407318-7f37c65bcf97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxSZXNvcnQlMjBuZXN0bGVkJTIwaW4lMjB0aGUlMjBoaWxsc3xlbnwwfHx8fDE3NjM3NzQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort nestled in the hills" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-himalayas-2.webp", "caption": "Infinity pool overlooking the valley" }
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -261,8 +261,8 @@
     "basePrice": 8000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxob3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzc4ODQ4NHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
-      { "src": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBob3RlbCUyMHJvb20lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjM3ODg0ODR8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Modern room interior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-madurai-1.webp", "caption": "Hotel exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-madurai-2.webp", "caption": "Modern room interior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -280,7 +280,7 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxpbmRvcmUlMjBtYXJyaW90dCUyMGhvdGVsJTIwcG9vbHNpZGV8ZW58MHx8fHwxNzYzNzg4NTEzfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Indore Marriott Hotel poolside" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-indore.webp", "caption": "Indore Marriott Hotel poolside" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 218, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -298,7 +298,7 @@
     "basePrice": 11000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1620310218861-f3b35a75369a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxob3RlbCUyMGV4dGVyaW9yJTIwYXQlMjBuaWdodCUyMHVwc2NhbGV8ZW58MHx8fHwxNzYzNzg4NTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior at night" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-ahmedabad-1.webp", "caption": "Hotel exterior at night" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -316,7 +316,7 @@
     "basePrice": 9000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxzdXJhdCUyMG1hcnJpb3R0JTIwaG90ZWwlMjBleHRlcmlvcnxlbnwwfHx8fDE3NjM3ODg1Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Surat Marriott Hotel exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-surat-1.webp", "caption": "Surat Marriott Hotel exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 209, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -334,7 +334,7 @@
     "basePrice": 24000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1582719508461-905c673771fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxwYW5vcmFtaWMlMjBjaXR5JTIwdmlldyUyMGZyb20lMjBob3RlbHxlbnwwfHx8fDE3NjM3ODg2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Panoramic city view from the hotel" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/stregis-mumbai-1.webp", "caption": "Panoramic city view from the hotel" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 395, "size": "484 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -352,7 +352,7 @@
     "basePrice": 18000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxncmFuZCUyMGZhY2FkZSUyMG9mJTIwaXRjJTIwbWF1cnlhfGVufDB8fHx8MTc2Mzc4ODYzMXww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The grand facade of ITC Maurya" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-maurya-1.webp", "caption": "The grand facade of ITC Maurya" }
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 437, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -370,7 +370,7 @@
     "basePrice": 17000,
     "rating": 4.8,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx0aGUlMjByaXR6LWNhcmx0b24lMkMlMjBwdW5lJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzg4NjYwfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The Ritz-Carlton, Pune exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/ritz-pune-1.webp", "caption": "The Ritz-Carlton, Pune exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Golf View Room", "count": 198, "size": "538 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -406,7 +406,7 @@
     "basePrice": 14000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1549294413-26f195200c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxtb2Rlcm4lMjBob3RlbCUyMGV4dGVyaW9yJTIwc2hlcmF0b258ZW58MHx8fHwxNzYzNzg4NzA3fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Sheraton Grand Bangalore exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/sheraton-bangalore-1.webp", "caption": "Sheraton Grand Bangalore exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 230, "size": "387 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -424,7 +424,7 @@
     "basePrice": 10000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx0aGUlMjB3ZXN0aW4lMjBjaGVubmFpJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzg4NzMxfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The Westin Chennai exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-chennai-1.webp", "caption": "The Westin Chennai exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 215, "size": "431 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -442,7 +442,7 @@
     "basePrice": 9000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxsZSUyMG1lcmlkaWVuJTIwaHlkZXJhYmFkJTIwZmFjYWRlfGVufDB8fHx8MTc2Mzc4ODc1Nnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Le Méridien Hyderabad facade" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lemeridien-hyd-1.webp", "caption": "Le Méridien Hyderabad facade" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 241, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -460,7 +460,7 @@
     "basePrice": 5500,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1549294413-26f195200c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxmYWlyZmllbGQlMjBieSUyMG1hcnJpb3R0JTIwdmlzYWtoYXBhdG5hbSUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzc4ODc4N3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Fairfield by Marriott Visakhapatnam exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-vizag-1.webp", "caption": "Fairfield by Marriott Visakhapatnam exterior" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 121, "size": "258 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -496,7 +496,7 @@
     "basePrice": 12000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx0aGUlMjB3ZXN0aW4lMjBoeWRlcmFiYWQlMjBtaW5kc3BhY2UlMjBwb29sJTIwYXJlYXxlbnwwfHx8fDE3NjM3ODg4NDR8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The Westin Hyderabad Mindspace pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-hyd-1.webp", "caption": "The Westin Hyderabad Mindspace pool area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 427, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -514,7 +514,7 @@
     "basePrice": 16000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxvYmJ5JTIwd2l0aCUyMHZlcnRpY2FsJTIwZ2FyZGVuc3xlbnwwfHx8fDE3NjM3ODg4Njh8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Lobby with vertical gardens" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-gardenia-1.webp", "caption": "Lobby with vertical gardens" }
     ],
     "roomCategories": [{ "name": "Tower Room", "count": 292, "size": "530 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -532,7 +532,7 @@
     "basePrice": 19000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxqdyUyMG1hcnJpb3R0JTIwaG90ZWwlMjBiZW5nYWx1cnUlMjBleHRlcmlvcnxlbnwwfHx8fDE3NjM3ODg5MDN8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "JW Marriott Hotel Bengaluru exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-bengaluru-1.webp", "caption": "JW Marriott Hotel Bengaluru exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 270, "size": "485 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -550,7 +550,7 @@
     "basePrice": 9000,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxhbG9mdCUyMG5ldyUyMGRlbGhpJTIwYWVyb2NpdHklMjBsb2JieXxlbnwwfHx8fDE3NjM3ODg5MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Aloft New Delhi Aerocity lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/aloft-delhi-1.webp", "caption": "Aloft New Delhi Aerocity lobby" }
     ],
     "roomCategories": [{ "name": "Aloft Room", "count": 253, "size": "333 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -568,7 +568,7 @@
     "basePrice": 7500,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1540541338287-41700207dee6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyb29mdG9wJTIwcG9vbCUyMGF0JTIwY291cnR5YXJkJTIwc2lsaWd1cml8ZW58MHx8fHwxNzYzNzg4OTU5fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop pool at Courtyard Siliguri" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-siliguri-1.webp", "caption": "Rooftop pool at Courtyard Siliguri" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 130, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -586,7 +586,7 @@
     "basePrice": 15000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1625444725045-ee7c4bb4482a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxCZWFjaGZyb250JTIwdmlldyUyMG9mJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Beachfront view of the resort" }
+      { "src": "https://images.unsplash.com/photo-1625444725045-ee7c4bb4482a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxCZWFjaGZyb250JTIwdmlldyUyMG9mJTIwdGhlJTIwcmVzb3J0fGVufDB8fHx8MTc2MzY1Njg4Mnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Beachfront view of the resort" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 125, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -604,7 +604,7 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyZXNvcnQlMjBwb29sJTIwYXJlYXxlbnwwfHx8fDE3NjM3ODkwMDF8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Resort pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-mah-1.webp", "caption": "Resort pool area" }
     ],
     "roomCategories": [{ "name": "Chalet", "count": 90, "size": "500 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -622,7 +622,7 @@
     "basePrice": 13000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxqdyUyMG1hcnJpb3R0JTIwY2hhbmRpZ2FyaCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzc4OTA0Nnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "JW Marriott Chandigarh exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-chandigarh-1.webp", "caption": "JW Marriott Chandigarh exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 164, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -640,7 +640,7 @@
     "basePrice": 7000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxjb3VydHlhcmQlMjBieSUyMG1hcnJpb3R0JTIwYW1yaXRzYXIlMjBmYWNhZGV8ZW58MHx8fHwxNzYzNzg5MDcxfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Courtyard by Marriott Amritsar facade" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-amritsar-1.webp", "caption": "Courtyard by Marriott Amritsar facade" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "301 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -658,7 +658,7 @@
     "basePrice": 9500,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyb29mdG9wJTIwcG9vbCUyMGF0JTIwcmVuYWlzc2FuY2UlMjBhaG1lZGFiYWR8ZW58MHx8fHwxNzYzNzg5MTAwfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop pool at Renaissance Ahmedabad" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-ahmedabad-1.webp", "caption": "Rooftop pool at Renaissance Ahmedabad" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 155, "size": "387 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -676,7 +676,7 @@
     "basePrice": 15000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx2aWxsYXMlMjBhdCUyMHRoZSUyMHdlc3RpbiUyMHNvaG5hJTIwcmVzb3J0fGVufDB8fHx8MTc2Mzc4OTEyN3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Villas at The Westin Sohna Resort" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-sohna-1.webp", "caption": "Villas at The Westin Sohna Resort" }
     ],
     "roomCategories": [{ "name": "Premier Villa", "count": 97, "size": "645 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -694,7 +694,7 @@
     "basePrice": 13000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1582719508461-905c673771fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx0aGUlMjB3ZXN0aW4lMjBwdXNoa2FyJTIwcmVzb3J0JTIwYWVyaWFsJTIwdmlld3xlbnwwfHx8fDE3NjM3ODkxNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The Westin Pushkar Resort aerial view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-pushkar-1.webp", "caption": "The Westin Pushkar Resort aerial view" }
     ],
     "roomCategories": [{ "name": "Luxury Villa", "count": 98, "size": "785 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -712,7 +712,7 @@
     "basePrice": 19000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1540541338287-41700207dee6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsJTIwb2YlMjBqdyUyMG1hcnJpb3R0JTIwamFpcHVyfGVufDB8fHx8MTc2Mzc4OTE4M3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Architectural detail of JW Marriott Jaipur" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-jaipur-1.webp", "caption": "Architectural detail of JW Marriott Jaipur" }
     ],
     "roomCategories": [{ "name": "Royal Room", "count": 200, "size": "550 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -730,7 +730,7 @@
     "basePrice": 16000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxsZSUyMG1lcmlkaWVuJTIwbWFoYWJhbGVzaHdhciUyMHJlc29ydCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzc4OTIwOHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Le Méridien Mahabaleshwar Resort exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lemeridien-maha-1.webp", "caption": "Le Méridien Mahabaleshwar Resort exterior" }
     ],
     "roomCategories": [{ "name": "Classic Forest King Room", "count": 122, "size": "441 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -748,7 +748,7 @@
     "basePrice": 6500,
     "rating": 4.3,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxwb29sJTIwYXJlYSUyMGF0JTIwZmFpcmZpZWxkJTIwYW5qdW5hfGVufDB8fHx8MTc2Mzc4OTIzMnww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Pool area at Fairfield Anjuna" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-anjuna-1.webp", "caption": "Pool area at Fairfield Anjuna" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 130, "size": "280 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -766,7 +766,7 @@
     "basePrice": 13000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1582719508461-905c673771fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx0aGUlMjB3ZXN0aW4lMjBtdW1iYWklMjBnYXJkZW4lMjBjaXR5JTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzg5MjYyfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The Westin Mumbai Garden City exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-mumbai-1.webp", "caption": "The Westin Mumbai Garden City exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 268, "size": "409 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -784,7 +784,7 @@
     "basePrice": 17000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxqdyUyMG1hcnJpb3R0JTIwbXVtYmFpJTIwc2FoYXIlMjBsb2JieXxlbnwwfHx8fDE3NjM3ODkyODh8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "JW Marriott Mumbai Sahar lobby" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-sahar-1.webp", "caption": "JW Marriott Mumbai Sahar lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 588, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -802,7 +802,7 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxncmFuZCUyMGZhY2FkZSUyMG9mJTIwaXRjJTIwZ3JhbmQlMjBjaG9sYXxlbnwwfHx8fDE3NjM3ODkzMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Grand facade of ITC Grand Chola" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-chola-1.webp", "caption": "Grand facade of ITC Grand Chola" }
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 600, "size": "615 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -820,7 +820,7 @@
     "basePrice": 12000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1549294413-26f195200c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx0aGUlMjB3ZXN0aW4lMjBndXJnYm9uJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzg5MzM5fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The Westin Gurgaon exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-gurgaon-1.webp", "caption": "The Westin Gurgaon exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 313, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -856,7 +856,7 @@
     "basePrice": 14000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx0aGUlMjB3ZXN0aW4lMjBnb2ElMjBwb29sJTIwYXJlYXxlbnwwfHx8fDE3NjM3ODkzODR8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "The Westin Goa pool area" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/westin-goa-1.webp", "caption": "The Westin Goa pool area" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 171, "size": "420 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -874,7 +874,7 @@
     "basePrice": 14000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxqdyUyMG1hcnJpb3R0JTIwaG90ZWwlMjBwdW5lJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzg5NDExfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "JW Marriott Hotel Pune exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jw-pune-1.webp", "caption": "JW Marriott Hotel Pune exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 414, "size": "441 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -892,7 +892,7 @@
     "basePrice": 8000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxjb3VydHlhcmQlMjBieSUyMG1hcnJpb3R0JTIwa29jaGlfJTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzYzNzg5NDM3fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Courtyard by Marriott Kochi Airport exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/courtyard-kochi-1.webp", "caption": "Courtyard by Marriott Kochi Airport exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 107, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -910,7 +910,7 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxrb2NoaSUyMG1hcnJpb3R0JTIwaG90ZWwlMjBleHRlcmlvcnxlbnwwfHx8fDE3NjM3ODk0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Kochi Marriott Hotel exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-kochi-1.webp", "caption": "Kochi Marriott Hotel exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 274, "size": "366 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -928,7 +928,7 @@
     "basePrice": 15000,
     "rating": 4.7,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb5eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxhcmNoaXRlY3R1cmUlMjBvZiUyMGl0YyUyMGtvaGVudXJ8ZW58MHx8fHwxNzYzNzg5NDgzfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "ITC Kohenur exterior view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/itc-kohenur-1.webp", "caption": "ITC Kohenur exterior view" }
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 271, "size": "474 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -946,7 +946,7 @@
     "basePrice": 5000,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1549294413-26f195200c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxmYWlyZmllbGQlMjBieSUyMG1hcnJpb3R0JTIwY29pbWJhdG9yZSUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzc4OTUwOHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Fairfield by Marriott Coimbatore exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-coimbatore-1.webp", "caption": "Fairfield by Marriott Coimbatore exterior" }
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 128, "size": "215 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -964,7 +964,7 @@
     "basePrice": 5000,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxmYWlyZmllbGQlMjBieSUyMG1hcnJpb3R0JTIwam9kaHB1ciUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzc4OTUzOHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Fairfield by Marriott Jodhpur exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fairfield-jodhpur-1.webp", "caption": "Fairfield by Marriott Jodhpur exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 136, "size": "269 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -982,7 +982,7 @@
     "basePrice": 12000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1540541338287-41700207dee6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxqYWlzYWxtZXIlMjBtYXJyaW90dCUyMHJlc29ydCUyMCUyNiUyMHNwYSUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzc4OTU2NHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Jaisalmer Marriott Resort & Spa exterior" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaisalmer-1.webp", "caption": "Jaisalmer Marriott Resort & Spa exterior" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 135, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
@@ -1000,12 +1000,10 @@
     "basePrice": 6000,
     "rating": 4.3,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxyb29mdG9wJTIwcG9vbCUyMHdpdGglMjB0YWolMjBtYWhhbCUyMHZpZXd8ZW58MHx8fHwxNzYzNzg5NTkxfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop pool with Taj Mahal view" }
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-agra-1.webp", "caption": "Rooftop pool with Taj Mahal view" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 165, "size": "301 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
     "tags": ["modern", "taj mahal view", "agra"]
   }
 ]
-
-    

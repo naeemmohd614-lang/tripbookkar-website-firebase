@@ -1,4 +1,3 @@
-
 'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
@@ -17,7 +16,7 @@ export default function WeddingsPage() {
     const { data: weddingHotels, isLoading } = useCollection<Hotel>(weddingHotelsQuery);
 
   const heroImage = {
-      "src": "https://images.unsplash.com/photo-1593539922943-38f243a7d432?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbGVnYW50JTIwd2VkZGluZyUyMGRlY29yfGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1739047598160-b7004af1595e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvcHVsZW50JTIwd2VkZGluZyUyMGRlY29yfGVufDB8fHx8MTc2MzkyMDczMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "opulent wedding decor"
   };
 
