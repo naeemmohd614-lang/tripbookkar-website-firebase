@@ -9,10 +9,10 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import type { Package } from '@/lib/types';
-import React, { use } from 'react';
+import React from 'react';
 
 export default function PackageDetailPage({ params }: { params: { packageId: string } }) {
-    const { packageId } = use(Promise.resolve(params));
+    const { packageId } = params;
     const pkg = (featuredPackages as Package[]).find((p) => p.id === packageId);
 
     if (!pkg) {
@@ -87,7 +87,7 @@ export default function PackageDetailPage({ params }: { params: { packageId: str
                                 <CardTitle>Book This Package</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">
+                                <p className="text-sm text-muted-foreground mb-4">
                                     Contact us to customize and book this package for your travel dates.
                                 </p>
                             </CardContent>
