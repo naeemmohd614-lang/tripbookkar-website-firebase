@@ -4,24 +4,12 @@
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
-import { ItinerarySchema } from '@/lib/types';
-
-
-export const GeneratePackageItineraryInputSchema = z.object({
-    name: z.string().describe('The name of the travel package.'),
-    days: z.number().describe('The total number of days for the package.'),
-    nights: z.number().describe('The total number of nights for the package.'),
-    cities: z.array(z.string()).describe('A list of cities covered in the package.'),
-    states: z.array(z.string()).describe('A list of states covered in the package.'),
-    tags: z.array(z.string()).optional().describe('Keywords describing the package theme (e.g., honeymoon, adventure, heritage).'),
-});
-export type GeneratePackageItineraryInput = z.infer<typeof GeneratePackageItineraryInputSchema>;
-
-export const GeneratePackageItineraryOutputSchema = z.object({
-  itinerary: z.array(ItinerarySchema).describe('A detailed day-by-day itinerary for the travel package.'),
-});
-export type GeneratePackageItineraryOutput = z.infer<typeof GeneratePackageItineraryOutputSchema>;
+import {
+  GeneratePackageItineraryInputSchema,
+  GeneratePackageItineraryOutputSchema,
+  type GeneratePackageItineraryInput,
+  type GeneratePackageItineraryOutput,
+} from '@/lib/types';
 
 
 const generatePackageItineraryPrompt = ai.definePrompt({
