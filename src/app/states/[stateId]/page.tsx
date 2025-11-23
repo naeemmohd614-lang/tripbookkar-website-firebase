@@ -59,6 +59,10 @@ export default function StatePage() {
   };
 
   const cityImages: { [key: string]: { src: string, caption: string } } = {
+    jaipur: { src: 'https://images.unsplash.com/photo-1698031952427-040d75f92277?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxqYWlwcHVyJTIwY2l0eXxlbnwwfHx8fDE3NjM4NzYyNjB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Hawa Mahal Jaipur' },
+    jodhpur: { src: 'https://images.unsplash.com/photo-1678826532773-304f58c73449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxqodhpurJTIwYmx1ZSUyMGNpdHl8ZW58MHx8fHwxNzYzODc2MjYwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Jodhpur blue city' },
+    udaipur: { src: 'https://images.unsplash.com/photo-1715951336181-427a1b73e58c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1ZGFpcHVyJTIwY2l0eSUyMHBhbGFjZXxlbnwwfHx8fDE3NjM4NzYyNjB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Udaipur city palace' },
+    jaisalmer: { src: 'https://images.unsplash.com/photo-1678783440318-47734a171542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWlzYWxtZXIlMjBmb3J0fGVufDB8fHx8MTc2Mzg3NjI2MHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'Jaisalmer fort' },
     rishikesh: { src: 'https://images.unsplash.com/photo-1681928701229-75ec3d9650b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxWaWV3JTIwb2YlMjBSaXNoaWtlc2h8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Rishikesh' },
     nainital: { src: 'https://images.unsplash.com/photo-1619796696652-a29a854f21a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxWaWV3JTIwb2YlMjBOYWluaXRhbHxlbnwwfHx8fDE3NjM4NzIwNzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Nainital' },
     mussoorie: { src: 'https://images.unsplash.com/photo-1720782114166-703488743930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxWaWV3JTIwb2YlMjBNdXNzb29yaWV8ZW58MHx8fHwxNzYzODcyMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'View of Mussoorie' },

@@ -1,4 +1,5 @@
 
+
 import type { Attraction } from '@/lib/types';
 
 function slugify(text: string) {
@@ -145,7 +146,7 @@ const jodhpurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         cityId: 'jodhpur',
         stateId: 'rajasthan',
         image: {
-            src: 'https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/mehrangarh-fort.webp',
+            src: 'https://images.unsplash.com/photo-1590731671952-03e54b67b14d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZWhyYW5nYXJoJTIwZm9ydCUyMGpvaGRwdXJ8ZW58MHx8fHwxNzYzODc2MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080',
             caption: 'mehrangarh fort jodhpur',
         },
         description: "One of India's largest and most magnificent forts, Mehrangarh Fort towers 400 feet above the city. Its thick, imposing walls enclose a complex of palaces and courtyards that are breathtaking in their beauty and detail.",
@@ -168,7 +169,7 @@ const jodhpurAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         cityId: 'jodhpur',
         stateId: 'rajasthan',
         image: {
-            src: 'https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/jaswant-thada.webp',
+            src: 'https://images.unsplash.com/photo-1629557999822-446a8d799849?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYXN3YW50JTIwdGhhZGElMjBtb251bWVudHxlbnwwfHx8fDE3NjM4NzYyNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
             caption: 'jaswant thada monument',
         },
         description: "This milky-white marble memorial to Maharaja Jaswant Singh II is a masterpiece of Rajputana architecture. Often called the 'Taj Mahal of Marwar', its intricate carvings and peaceful setting by a lake make it a must-visit.",
