@@ -28,7 +28,8 @@ import {
   Train,
   HeartPulse,
   Cake,
-  Phone
+  Phone,
+  Search
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -61,6 +62,7 @@ import { useUser, useAuth } from '@/firebase';
 import React from 'react';
 import { Separator } from '../ui/separator';
 import { ThemeToggle } from '../theme-toggle';
+import SearchForm from '../search-form';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -233,7 +235,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue">
           <Mountain className="h-6 w-6" />
           <span className="font-headline">Tripify</span>
@@ -245,6 +247,12 @@ export default function Header() {
               <NavContent />
             </NavigationMenuList>
           </NavigationMenu>
+        </div>
+
+        <div className="flex-1 hidden md:flex justify-end">
+            <div className="w-full max-w-sm">
+                <SearchForm />
+            </div>
         </div>
 
 

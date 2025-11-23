@@ -100,9 +100,6 @@ export default function Home() {
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-gray-200 drop-shadow-md">
             Discover the best hotels and deals for your dream vacation.
           </p>
-          <div className="mt-8 w-full max-w-3xl">
-            <SearchForm />
-          </div>
         </div>
       </section>
 
