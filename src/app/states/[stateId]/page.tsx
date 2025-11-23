@@ -2,7 +2,7 @@
 
 'use client';
 import { states, cities as allCities, attractions } from '@/lib/data';
-import { notFound, useParams }from 'next/navigation';
+import { notFound }from 'next/navigation';
 import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Users, Package, Clock, Calendar, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
-import React from 'react';
+import React, { use } from 'react';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
@@ -31,9 +31,8 @@ const iconMap: { [key: string]: React.ElementType } = {
 };
 
 
-export default function StatePage() {
-  const params = useParams();
-  const stateId = params.stateId as string;
+export default function StatePage({ params }: { params: { stateId: string } }) {
+  const { stateId } = use(Promise.resolve(params));
   
   const firestore = useFirestore();
 
@@ -237,6 +236,7 @@ export default function StatePage() {
     </div>
   );
 }
+
 
 
 

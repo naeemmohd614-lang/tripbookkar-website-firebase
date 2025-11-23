@@ -1,13 +1,14 @@
 
+
 'use client';
-import { useParams, notFound } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { cities, states } from '@/lib/data';
 import type { Hotel, City, State } from '@/lib/types';
 import type { MonthData } from '@/data/monthly-destinations';
-import React from 'react';
+import React, { use } from 'react';
 import { useFirestore, useCollection, useDoc, useMemoFirebase } from '@/firebase';
 import { collection, query, where, doc } from 'firebase/firestore';
 
@@ -17,10 +18,9 @@ function slugify(text: string) {
   return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 }
 
-export default function MonthPage() {
-    const params = useParams();
+export default function MonthPage({ params }: { params: { month: string } }) {
     const firestore = useFirestore();
-    const monthSlug = params.month as string;
+    const { month: monthSlug } = use(Promise.resolve(params));
 
     const monthDocRef = useMemoFirebase(() => {
         if (!firestore || !monthSlug) return null;

@@ -1,18 +1,18 @@
 
+
 'use client';
 import { featuredPackages } from '@/lib/data';
-import { useParams, notFound } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import type { Package } from '@/lib/types';
-import React from 'react';
+import React, { use } from 'react';
 
-export default function PackageDetailPage() {
-    const params = useParams();
-    const packageId = params.packageId as string;
+export default function PackageDetailPage({ params }: { params: { packageId: string } }) {
+    const { packageId } = use(Promise.resolve(params));
     const pkg = (featuredPackages as Package[]).find((p) => p.id === packageId);
 
     if (!pkg) {

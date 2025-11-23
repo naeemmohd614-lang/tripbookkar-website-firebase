@@ -1,19 +1,18 @@
 
 'use client';
 import { brands } from '@/lib/data';
-import { notFound, useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2 } from 'lucide-react';
 import type { Brand, Hotel } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
-import React from 'react';
+import React, { use } from 'react';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
-export default function BrandPage() {
-  const params = useParams();
-  const brandSlug = params.brand as string;
+export default function BrandPage({ params }: { params: { brand: string }}) {
+  const { brand: brandSlug } = use(Promise.resolve(params));
   const firestore = useFirestore();
   
   const brand = (brands as Brand[]).find((b) => b.brandSlug === brandSlug);

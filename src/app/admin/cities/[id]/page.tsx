@@ -2,14 +2,14 @@
 'use client';
 import CityEditor from '@/components/admin/CityEditor';
 import type { City } from '@/lib/types';
-import { notFound, useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
 import { doc } from 'firebase/firestore';
-import { use } from 'react';
+import React, { use } from 'react';
 
 export default function EditCityPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = params;
+  const { id } = use(Promise.resolve(params));
 
   const cityRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useParams, notFound, useRouter } from 'next/navigation';
+import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { attractions } from '@/lib/data';
@@ -11,15 +11,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Clock, Ticket, CalendarCheck, MapPin, Bus, Train, Plane, Info, Hotel as HotelIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import React from 'react';
+import React, { use } from 'react';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
-export default function AttractionPage() {
-    const params = useParams();
+export default function AttractionPage({ params }: { params: { attractionId: string } }) {
     const router = useRouter();
     const firestore = useFirestore();
-    const attractionId = params.attractionId as string;
+    const { attractionId } = use(Promise.resolve(params));
 
     const attraction = attractions.find((a) => a.attractionId === attractionId);
 
