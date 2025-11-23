@@ -34,6 +34,8 @@ export default function CityPage() {
   if (!state || !city) {
     notFound();
   }
+  
+  const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === cityId);
 
   const cityHotelsQuery = useMemoFirebase(() => {
     if (!firestore) return null;
@@ -78,6 +80,32 @@ export default function CityPage() {
                     </Button>
                 </CardContent>
             </Card>
+
+            {cityAttractions.length > 0 && (
+                <div className="my-16">
+                    <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
+                        Top Attractions in {city.name}
+                    </h2>
+                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {cityAttractions.map((attraction) => (
+                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                                <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
+                                     <CardHeader className="p-0">
+                                        <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
+                                    </CardHeader>
+                                    <CardContent className="p-4">
+                                        <h3 className="font-bold text-lg">{attraction.name}</h3>
+                                        <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+                                            <MapPin className="w-3 h-3" />
+                                            {attraction.city}
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             <h2 className="text-3xl font-headline font-bold text-brand-blue mb-8 text-center">
                 Hotels in {city.name}
