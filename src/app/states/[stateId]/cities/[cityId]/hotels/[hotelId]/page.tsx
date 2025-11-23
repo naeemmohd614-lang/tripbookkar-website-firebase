@@ -3,6 +3,7 @@
 import { notFound, useParams } from 'next/navigation';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -167,7 +168,9 @@ export default function HotelDetailPage() {
                         <p className="text-sm text-muted-foreground mb-4">
                             Contact us to get the best deals and book this hotel for your travel dates.
                         </p>
-                        <Button size="lg" className="w-full h-12 text-lg">Enquire Now</Button>
+                        <Button asChild size="lg" className="w-full h-12 text-lg">
+                           <Link href="/contact">Enquire Now</Link>
+                        </Button>
                     </CardContent>
                     </Card>
                 </div>
