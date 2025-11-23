@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, Tag } from 'lucide-react';
@@ -45,14 +46,8 @@ export default function PackageCard({ pkg }: PackageCardProps) {
             ))}
         </div>
       </CardContent>
-      <CardFooter className="p-4 flex justify-between items-center bg-secondary/30">
-        <div>
-          <p className="text-sm text-muted-foreground">Price per person</p>
-          <p className="font-bold text-lg text-brand-blue">
-            ₹{pkg.price.toLocaleString()}
-          </p>
-        </div>
-        <Button asChild variant="secondary">
+      <CardFooter className="p-4 flex justify-end items-center bg-secondary/30">
+        <Button asChild>
           <Link href={`/packages/${pkg.id}`}>View Itinerary</Link>
         </Button>
       </CardFooter>
