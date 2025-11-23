@@ -1,3 +1,4 @@
+
 'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
@@ -11,7 +12,7 @@ export default function WeddingsPage() {
     const firestore = useFirestore();
     const weddingHotelsQuery = useMemoFirebase(() => {
         if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('tags', 'array-contains', 'wedding'));
+        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['wedding', 'wedding hotel', 'destination wedding']));
     }, [firestore]);
     const { data: weddingHotels, isLoading } = useCollection<Hotel>(weddingHotelsQuery);
 
