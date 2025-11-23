@@ -14,14 +14,6 @@ interface HotelCardProps {
 export default function HotelCard({ hotel }: HotelCardProps) {
   const hotelImage = hotel.images && hotel.images[0] ? hotel.images[0] : null;
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      minimumFractionDigits: 0,
-    }).format(price);
-  };
-
   const hotelId = hotel.id;
   const stateId = hotel.stateId;
   const cityId = hotel.cityId;
@@ -69,18 +61,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
             ))}
         </div>
       </CardContent>
-      <CardFooter className="p-4 flex justify-between items-center bg-secondary/30">
-        <div>
-          <p className="text-sm text-muted-foreground">Starting from</p>
-          {typeof hotel.basePrice === 'number' ? (
-            <p className="font-bold text-lg text-brand-blue">
-                {formatPrice(hotel.basePrice)}
-                <span className="text-sm font-normal text-muted-foreground">/night</span>
-            </p>
-          ) : (
-            <p className="font-bold text-lg text-brand-blue">Price not available</p>
-          )}
-        </div>
+      <CardFooter className="p-4 flex justify-end items-center bg-secondary/30">
         <Button asChild>
           <Link href={`/states/${stateId}/cities/${cityId}/hotels/${hotelId}`}>View Details</Link>
         </Button>
