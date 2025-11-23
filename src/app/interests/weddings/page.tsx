@@ -1,4 +1,3 @@
-
 'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
