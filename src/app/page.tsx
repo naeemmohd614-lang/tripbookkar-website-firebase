@@ -257,22 +257,22 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-4xl mx-auto">
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                <MapPin className="w-8 h-8 text-primary" />
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 border border-blue-200 mb-4">
+                <MapPin className="w-8 h-8 text-blue-600" />
               </div>
               <p className="text-4xl font-bold">100+</p>
               <p className="text-muted-foreground">Domestic Destinations</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                <Star className="w-8 h-8 text-primary" />
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 border border-yellow-200 mb-4">
+                <Star className="w-8 h-8 text-yellow-500" />
               </div>
               <p className="text-4xl font-bold">99%</p>
               <p className="text-muted-foreground">Customer Satisfaction</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                <Handshake className="w-8 h-8 text-primary" />
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 border border-green-200 mb-4">
+                <Handshake className="w-8 h-8 text-green-600" />
               </div>
               <p className="text-4xl font-bold">100%</p>
               <p className="text-muted-foreground">Customized Holidays</p>
