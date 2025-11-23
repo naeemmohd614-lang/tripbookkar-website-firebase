@@ -65,7 +65,7 @@
     "name": "Wellness",
     "description": "Rejuvenate your mind, body, and soul. Our collection of wellness resorts offers serene environments, world-class spas, yoga retreats, and holistic treatments for a truly restorative getaway.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1658333273368-59186680da6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMG1lZGl0YXRpbmclMjBhdCUyMHN1bnJpc2V8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "src": "https://images.unsplash.com/photo-1658333273411-9d0ed9303905?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMG1lZGl0YXRpbmclMjBhdCUyMHN1bnJpc2V8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "caption": "woman meditating at sunrise"
     },
     "tags": ["wellness", "spa", "yoga", "retreat"]
@@ -85,8 +85,8 @@
     "name": "Desert",
     "description": "Explore the magic and majesty of the desert. From luxurious desert resorts to authentic camps under the stars, discover stays that offer unforgettable experiences like camel safaris, cultural nights, and stargazing.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1656917051695-8a6d8df727f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYW1lbCUyMHNhZmFyaSUyMHN1bnNldHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "caption": "camel safari sunset"
+      "src": "https://images.unsplash.com/photo-1613998369337-effc38f185f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkZXNlcnQlMjBsYW5kc2NhcGUlMjBpbmRpYXxlbnwwfHx8fDE3NjM5MjA5NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "desert landscape india"
     },
     "tags": ["desert", "jaisalmer", "jodhpur", "fort view"]
   },
