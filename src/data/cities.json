@@ -106,6 +106,71 @@
     ]
   },
   {
+    "cityId": "kochi",
+    "stateId": "kerala",
+    "name": "Kochi",
+    "image": "",
+    "description": "A vibrant city on the southwest coast, known for its colonial past, Chinese fishing nets, and bustling spice markets.",
+    "totalHotels": 120,
+    "highlights": [
+      { "name": "Fort Kochi", "icon": "Castle", "color": "text-amber-700" },
+      { "name": "Backwaters", "icon": "Sailboat", "color": "text-blue-500" },
+      { "name": "Art Scene", "icon": "Paintbrush", "color": "text-red-500" }
+    ]
+  },
+  {
+    "cityId": "munnar",
+    "stateId": "kerala",
+    "name": "Munnar",
+    "image": "",
+    "description": "A picturesque hill station famous for its sprawling tea plantations, misty mountains, and exotic fauna.",
+    "totalHotels": 80,
+    "highlights": [
+      { "name": "Tea Gardens", "icon": "Leaf", "color": "text-green-600" },
+      { "name": "Misty Hills", "icon": "Mountain", "color": "text-gray-400" },
+      { "name": "Waterfalls", "icon": "Droplets", "color": "text-cyan-500" }
+    ]
+  },
+  {
+    "cityId": "alleppey",
+    "stateId": "kerala",
+    "name": "Alleppey",
+    "image": "",
+    "description": "Known as the 'Venice of the East', it is famous for its serene backwaters and houseboat cruises.",
+    "totalHotels": 70,
+    "highlights": [
+      { "name": "Houseboats", "icon": "Home", "color": "text-amber-800" },
+      { "name": "Backwaters", "icon": "Waves", "color": "text-blue-500" },
+      { "name": "Snake Boat Race", "icon": "Ship", "color": "text-red-600" }
+    ]
+  },
+  {
+    "cityId": "thiruvananthapuram",
+    "stateId": "kerala",
+    "name": "Thiruvananthapuram",
+    "image": "",
+    "description": "The capital city, characterized by its British colonial architecture and many art galleries.",
+    "totalHotels": 95,
+    "highlights": [
+      { "name": "Padmanabhaswamy Temple", "icon": "Landmark", "color": "text-yellow-500" },
+      { "name": "Kovalam Beach", "icon": "Waves", "color": "text-blue-500" },
+      { "name": "Museums", "icon": "BookOpen", "color": "text-amber-700" }
+    ]
+  },
+  {
+    "cityId": "kovalam",
+    "stateId": "kerala",
+    "name": "Kovalam",
+    "image": "",
+    "description": "An internationally renowned beach destination with three adjacent crescent beaches.",
+    "totalHotels": 55,
+    "highlights": [
+      { "name": "Lighthouse Beach", "icon": "Landmark", "color": "text-red-500" },
+      { "name": "Water Sports", "icon": "Zap", "color": "text-yellow-400" },
+      { "name": "Ayurveda", "icon": "HeartPulse", "color": "text-green-500" }
+    ]
+  },
+  {
     "cityId": "mumbai",
     "stateId": "maharashtra",
     "name": "Mumbai",
