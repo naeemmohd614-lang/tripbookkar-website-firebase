@@ -204,7 +204,7 @@
     "basePrice": 8000,
     "rating": 4.4,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1570206986634-afd7cccb68d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzg3MjA3MHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
+      { "src": "https://images.unsplash.com/photo-1607320895054-c5c543e9a069?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxIb3RlbCUyMGV4dGVyaW9yfGVufDB8fHx8MTc2Mzg3MjA3MHww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Hotel exterior" },
       { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/fourpoints-dehradun-2.webp", "caption": "Modern hotel lobby" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],

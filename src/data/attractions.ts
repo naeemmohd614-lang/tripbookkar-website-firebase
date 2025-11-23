@@ -1,5 +1,4 @@
 
-
 import type { Attraction } from '@/lib/types';
 
 function slugify(text: string) {
@@ -700,7 +699,7 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         city: 'Dehradun',
         cityId: 'dehradun',
         stateId: 'uttarakhand',
-        image: { src: 'https://images.unsplash.com/photo-1680161032966-dd808a947980?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2JiZXJzJTIwY2F2ZSUyMGRlaHJhZHVufGVufDB8fHx8MTc2Mzg3MjA3MHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'robbers cave dehradun' },
+        image: { src: 'https://images.unsplash.com/photo-1628152980740-5be7768c4e60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyb2JiZXJzJTIwY2F2ZSUyMGRlaHJhZHVufGVufDB8fHx8MTc2Mzg3MjA3MHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'robbers cave dehradun' },
         description: "Locally known as Guchu Pani, Robber's Cave is a river cave formation. It's a popular picnic spot where you can walk through the cold stream flowing inside the cave.",
         timing: "7:00 AM - 6:00 PM",
         fees: [ { type: "Entry", amount: "₹25" } ],
@@ -713,7 +712,7 @@ const uttarakhandAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         city: 'Dehradun',
         cityId: 'dehradun',
         stateId: 'uttarakhand',
-        image: { src: 'https://images.unsplash.com/photo-1697307157652-2b83f11cf9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmcmklMjBkZWhyYWR1bnxlbnwwfHx8fDE3NjM4NzIwNzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'fri dehradun' },
+        image: { src: 'https://images.unsplash.com/photo-1651779472865-9f4b7389b7b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmcmklMjBkZWhyYWR1bnxlbnwwfHx8fDE3NjM4NzIwNzB8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'fri dehradun' },
         description: "A premier institution in the field of forestry research, the Forest Research Institute (FRI) is also an architectural marvel. Its Greco-Roman style building and vast campus are a popular tourist attraction.",
         timing: "9:00 AM - 5:30 PM",
         fees: [ { type: "Entry", amount: "₹10" } ],
@@ -1153,7 +1152,7 @@ const madhyaPradeshAttractionsData: Omit<Attraction, 'attractionId'>[] = [
         cityId: 'bhopal',
         stateId: 'madhya-pradesh',
         image: { src: 'https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/van-vihar-bhopal.webp', caption: 'deer van vihar bhopal' },
-        description: "Located adjacent to the Upper Lake, Van Vihar is a national park and zoo. It's a green oasis in the city, home to a variety of herbivores and carnivores in near-natural habitats.",
+        description: "Located adjacent to the Upper Lake, Van Vihar is a national park and a zoo. It's a green oasis in the city, home to a variety of herbivores and carnivores in near-natural habitats.",
         timing: "7:00 AM - 7:00 PM (Closed on Fridays)",
         fees: [ { type: "Entry", amount: "₹15" } ],
         bestTimeToVisit: "October to March",
@@ -1446,9 +1445,3 @@ export const attractions: Attraction[] = [
         attractionId: slugify(attraction.name),
     })),
 ];
-
-
-
-
-
-

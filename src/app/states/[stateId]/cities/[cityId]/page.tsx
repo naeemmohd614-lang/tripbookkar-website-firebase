@@ -53,7 +53,7 @@ export default function CityPage() {
   const { data: cityHotels, isLoading } = useCollection<Hotel>(cityHotelsQuery);
   
   const heroImage = {
-      "src": `https://picsum.photos/seed/city-${cityId}/1920/600`,
+      "src": `https://images.unsplash.com/photo-1714919988045-f47e43a10aac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYW5vcmFtaWMlMjB2aWV3JTIwb2YlMjBEZWhyYWR1bnxlbnwwfHx8fDE3NjM4NzYyNjF8MA&ixlib=rb-4.1.0&q=80&w=1080`,
       "caption": `panoramic view of ${city.name}`
   };
 
