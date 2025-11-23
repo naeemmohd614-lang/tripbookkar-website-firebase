@@ -6,7 +6,7 @@ import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, ShoppingBasket, HeartPulse, Martini } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, ShoppingBasket, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Anchor as AnchorIcon, Users as UsersIcon } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
@@ -26,7 +26,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, 
   Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, 
   CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingBasket, Star,
-  HeartPulse, Music, Paintbrush
+  HeartPulse, Music, Paintbrush, HotelIcon, Sparkles, AnchorIcon, UsersIcon
 };
 
 export default function CityPage() {

@@ -6,7 +6,12 @@
     "name": "Bengaluru",
     "image": "",
     "description": "The Silicon Valley of India, a bustling metropolis with a vibrant culture and pleasant climate.",
-    "totalHotels": 90
+    "totalHotels": 90,
+    "highlights": [
+      { "name": "IT & Tech Hub", "icon": "ShieldCheck" },
+      { "name": "Lush Gardens", "icon": "Leaf" },
+      { "name": "Vibrant Pubs", "icon": "Martini" }
+    ]
   },
   {
     "cityId": "jaipur",
@@ -54,7 +59,12 @@
     "name": "Jaisalmer",
     "image": "",
     "description": "The Golden City, rising from the Thar Desert with its magnificent fort.",
-    "totalHotels": 40
+    "totalHotels": 40,
+    "highlights": [
+        { "name": "The Golden Fort", "icon": "Castle" },
+        { "name": "Desert Safari", "icon": "Sun" },
+        { "name": "Ornate Havelis", "icon": "Home" }
+    ]
   },
   {
     "cityId": "goa",
@@ -62,7 +72,12 @@
     "name": "Goa",
     "image": "",
     "description": "India's beach paradise, known for its lively nightlife, golden sands, and Portuguese heritage.",
-    "totalHotels": 250
+    "totalHotels": 250,
+     "highlights": [
+      { "name": "Beaches", "icon": "Waves" },
+      { "name": "Nightlife", "icon": "Martini" },
+      { "name": "Water Sports", "icon": "Zap" }
+    ]
   },
   {
     "cityId": "north-goa",
@@ -70,7 +85,12 @@
     "name": "North Goa",
     "image": "",
     "description": "The vibrant and energetic part of Goa, famous for parties and markets.",
-    "totalHotels": 150
+    "totalHotels": 150,
+    "highlights": [
+      { "name": "Party Hub", "icon": "Music" },
+      { "name": "Flea Markets", "icon": "ShoppingBag" },
+      { "name": "Beach Shacks", "icon": "Utensils" }
+    ]
   },
   {
     "cityId": "south-goa",
@@ -78,7 +98,12 @@
     "name": "South Goa",
     "image": "",
     "description": "The serene and peaceful part of Goa, known for luxury resorts and pristine beaches.",
-    "totalHotels": 100
+    "totalHotels": 100,
+    "highlights": [
+        { "name": "Pristine Beaches", "icon": "Waves" },
+        { "name": "Luxury Resorts", "icon": "HotelIcon" },
+        { "name": "Lush Nature", "icon": "Leaf" }
+    ]
   },
   {
     "cityId": "mumbai",
@@ -86,7 +111,12 @@
     "name": "Mumbai",
     "image": "",
     "description": "The city of dreams, a financial powerhouse and the heart of the Bollywood film industry.",
-    "totalHotels": 300
+    "totalHotels": 300,
+    "highlights": [
+      { "name": "Bollywood", "icon": "Clapperboard" },
+      { "name": "Marine Drive", "icon": "Waves" },
+      { "name": "Street Food", "icon": "Utensils" }
+    ]
   },
    {
     "cityId": "pune",
@@ -94,7 +124,12 @@
     "name": "Pune",
     "image": "",
     "description": "The cultural capital of Maharashtra, known for its educational institutions and pleasant weather.",
-    "totalHotels": 200
+    "totalHotels": 200,
+     "highlights": [
+      { "name": "Oxford of the East", "icon": "BookOpen" },
+      { "name": "Hill Forts", "icon": "Castle" },
+      { "name": "Osho Ashram", "icon": "HeartPulse" }
+    ]
   },
   {
     "cityId": "agra",
@@ -102,7 +137,12 @@
     "name": "Agra",
     "image": "",
     "description": "Home to the iconic Taj Mahal, a city steeped in Mughal history.",
-    "totalHotels": 50
+    "totalHotels": 50,
+    "highlights": [
+      { "name": "Taj Mahal", "icon": "Landmark" },
+      { "name": "Mughal History", "icon": "BookOpen" },
+      { "name": "Petha Sweet", "icon": "Cake" }
+    ]
   },
   {
     "cityId": "varanasi",
@@ -110,7 +150,12 @@
     "name": "Varanasi",
     "image": "",
     "description": "The spiritual capital of India, with its sacred ghats along the river Ganges.",
-    "totalHotels": 40
+    "totalHotels": 40,
+     "highlights": [
+      { "name": "Ganga Ghats", "icon": "Anchor" },
+      { "name": "Spiritual Hub", "icon": "Hand" },
+      { "name": "Evening Aarti", "icon": "Sparkles" }
+    ]
   },
   {
     "cityId": "lucknow",
@@ -118,7 +163,12 @@
     "name": "Lucknow",
     "image": "",
     "description": "The city of Nawabs, known for its politeness, beautiful gardens, and Mughal cuisine.",
-    "totalHotels": 30
+    "totalHotels": 30,
+    "highlights": [
+        { "name": "Nawabi Culture", "icon": "Users" },
+        { "name": "Tunday Kababi", "icon": "Utensils" },
+        { "name": "Chikankari Art", "icon": "Paintbrush" }
+    ]
   },
   {
     "cityId": "prayagraj",
@@ -126,7 +176,12 @@
     "name": "Prayagraj",
     "image": "",
     "description": "A holy city known for the Triveni Sangam, the confluence of three sacred rivers.",
-    "totalHotels": 25
+    "totalHotels": 25,
+    "highlights": [
+        { "name": "Triveni Sangam", "icon": "Droplets" },
+        { "name": "Kumbh Mela", "icon": "Users" },
+        { "name": "Historical Fort", "icon": "Castle" }
+    ]
   },
   {
     "cityId": "mathura",
@@ -134,7 +189,12 @@
     "name": "Mathura",
     "image": "",
     "description": "The birthplace of Lord Krishna, a major pilgrimage site for Hindus.",
-    "totalHotels": 35
+    "totalHotels": 35,
+    "highlights": [
+        { "name": "Krishna's Birthplace", "icon": "Landmark" },
+        { "name": "Holi Festival", "icon": "Sparkles" },
+        { "name": "Temples", "icon": "Church" }
+    ]
   },
   {
     "cityId": "shimla",
@@ -142,7 +202,12 @@
     "name": "Shimla",
     "image": "",
     "description": "The Queen of Hills, a charming colonial hill station with stunning Himalayan views.",
-    "totalHotels": 80
+    "totalHotels": 80,
+    "highlights": [
+        { "name": "Colonial Charm", "icon": "Landmark" },
+        { "name": "Himalayan Views", "icon": "Mountain" },
+        { "name": "Toy Train", "icon": "Train" }
+    ]
   },
   {
     "cityId": "manali",
@@ -150,7 +215,12 @@
     "name": "Manali",
     "image": "",
     "description": "A popular destination for adventure sports, surrounded by snow-capped peaks.",
-    "totalHotels": 120
+    "totalHotels": 120,
+    "highlights": [
+        { "name": "Adventure Sports", "icon": "Zap" },
+        { "name": "Snowy Peaks", "icon": "Mountain" },
+        { "name": "Solang Valley", "icon": "Sun" }
+    ]
   },
   {
     "cityId": "dharamshala",
@@ -158,7 +228,12 @@
     "name": "Dharamshala",
     "image": "",
     "description": "Home to the Dalai Lama, a spiritual center with a blend of Tibetan and Kangra culture.",
-    "totalHotels": 60
+    "totalHotels": 60,
+    "highlights": [
+        { "name": "Dalai Lama Temple", "icon": "Landmark" },
+        { "name": "Trekking", "icon": "Mountain" },
+        { "name": "Cricket Stadium", "icon": "ShieldCheck" }
+    ]
   },
   {
     "cityId": "dalhousie",
@@ -166,7 +241,12 @@
     "name": "Dalhousie",
     "image": "",
     "description": "A quiet hill station with colonial-era architecture and panoramic views of the Dhauladhar range.",
-    "totalHotels": 40
+    "totalHotels": 40,
+    "highlights": [
+        { "name": "Colonial Architecture", "icon": "Building" },
+        { "name": "Khajjiar Lake", "icon": "Waves" },
+        { "name": "Pine Forests", "icon": "TreePine" }
+    ]
   },
   {
     "cityId": "rishikesh",
@@ -174,7 +254,12 @@
     "name": "Rishikesh",
     "image": "",
     "description": "The 'Yoga Capital of the World', a spiritual town on the banks of the Ganges.",
-    "totalHotels": 90
+    "totalHotels": 90,
+    "highlights": [
+        { "name": "Yoga & Meditation", "icon": "HeartPulse" },
+        { "name": "River Rafting", "icon": "Zap" },
+        { "name": "Ganga Aarti", "icon": "Sparkles" }
+    ]
   },
   {
     "cityId": "nainital",
@@ -182,7 +267,12 @@
     "name": "Nainital",
     "image": "",
     "description": "A charming hill station known for its emerald-colored Naini Lake and colonial architecture.",
-    "totalHotels": 100
+    "totalHotels": 100,
+    "highlights": [
+        { "name": "Naini Lake", "icon": "Waves" },
+        { "name": "Boating", "icon": "Sailboat" },
+        { "name": "Himalayan Views", "icon": "Mountain" }
+    ]
   },
   {
     "cityId": "mussoorie",
@@ -190,7 +280,12 @@
     "name": "Mussoorie",
     "image": "",
     "description": "The 'Queen of the Hills', offering stunning views of the Himalayas and lush green valleys.",
-    "totalHotels": 110
+    "totalHotels": 110,
+    "highlights": [
+        { "name": "The Mall Road", "icon": "ShoppingBag" },
+        { "name": "Kempty Falls", "icon": "Droplets" },
+        { "name": "Cable Car", "icon": "CableCar" }
+    ]
   },
   {
     "cityId": "dehradun",
@@ -198,7 +293,12 @@
     "name": "Dehradun",
     "image": "",
     "description": "The capital of Uttarakhand, nestled in the Doon Valley, known for its pleasant climate and prestigious schools.",
-    "totalHotels": 80
+    "totalHotels": 80,
+     "highlights": [
+        { "name": "Doon Valley", "icon": "Mountain" },
+        { "name": "Forest Research Institute", "icon": "School" },
+        { "name": "Robber's Cave", "icon": "Hand" }
+    ]
   },
   {
     "cityId": "srinagar",
@@ -206,7 +306,12 @@
     "name": "Srinagar",
     "image": "",
     "description": "The summer capital of Jammu and Kashmir, famous for Dal Lake, houseboats, and Mughal gardens.",
-    "totalHotels": 150
+    "totalHotels": 150,
+     "highlights": [
+      { "name": "Dal Lake", "icon": "Sailboat" },
+      { "name": "Mughal Gardens", "icon": "Flower" },
+      { "name": "Houseboats", "icon": "Home" }
+    ]
   },
   {
     "cityId": "gulmarg",
@@ -214,7 +319,12 @@
     "name": "Gulmarg",
     "image": "",
     "description": "A popular skiing destination and home to the world's highest gondola.",
-    "totalHotels": 30
+    "totalHotels": 30,
+    "highlights": [
+        { "name": "Skiing", "icon": "Mountain" },
+        { "name": "Gondola Ride", "icon": "CableCar" },
+        { "name": "Snowy Landscapes", "icon": "Sun" }
+    ]
   },
   {
     "cityId": "pahalgam",
@@ -222,7 +332,12 @@
     "name": "Pahalgam",
     "image": "",
     "description": "Known as the 'Valley of Shepherds', famous for its pristine rivers and lush meadows.",
-    "totalHotels": 40
+    "totalHotels": 40,
+     "highlights": [
+      { "name": "Betaab Valley", "icon": "Leaf" },
+      { "name": "Lidder River", "icon": "Waves" },
+      { "name": "Trekking Base", "icon": "Mountain" }
+    ]
   },
    {
     "cityId": "gangtok",
@@ -230,7 +345,12 @@
     "name": "Gangtok",
     "image": "",
     "description": "The capital of Sikkim, a vibrant hill station with a blend of tradition and modernity.",
-    "totalHotels": 70
+    "totalHotels": 70,
+     "highlights": [
+      { "name": "MG Marg", "icon": "ShoppingBag" },
+      { "name": "Monasteries", "icon": "Landmark" },
+      { "name": "Kanchenjunga Views", "icon": "Mountain" }
+    ]
   },
   {
     "cityId": "pelling",
@@ -238,7 +358,12 @@
     "name": "Pelling",
     "image": "",
     "description": "A small town in West Sikkim, famous for its magnificent views of the Kanchenjunga.",
-    "totalHotels": 50
+    "totalHotels": 50,
+    "highlights": [
+        { "name": "Kanchenjunga Views", "icon": "Mountain" },
+        { "name": "Skywalk", "icon": "Compass" },
+        { "name": "Ancient Monasteries", "icon": "Landmark" }
+    ]
   },
   {
     "cityId": "lachung",
@@ -246,7 +371,12 @@
     "name": "Lachung",
     "image": "",
     "description": "A scenic mountain village close to the Tibetan border, known for the Yumthang Valley.",
-    "totalHotels": 30
+    "totalHotels": 30,
+    "highlights": [
+        { "name": "Yumthang Valley", "icon": "Flower" },
+        { "name": "Zero Point", "icon": "Mountain" },
+        { "name": "Lachung Monastery", "icon": "Landmark" }
+    ]
   },
   {
     "cityId": "namchi",
@@ -254,7 +384,12 @@
     "name": "Namchi",
     "image": "",
     "description": "The cultural capital of Sikkim, known for its large statues and religious sites.",
-    "totalHotels": 20
+    "totalHotels": 20,
+    "highlights": [
+        { "name": "Char Dham", "icon": "Landmark" },
+        { "name": "Samdruptse Statue", "icon": "Hand" },
+        { "name": "Tea Gardens", "icon": "Leaf" }
+    ]
   },
   {
     "cityId": "kolkata",
@@ -262,7 +397,12 @@
     "name": "Kolkata",
     "image": "",
     "description": "The cultural capital of India, known for its colonial architecture, art galleries and festivals.",
-    "totalHotels": 200
+    "totalHotels": 200,
+    "highlights": [
+        { "name": "Victoria Memorial", "icon": "Landmark" },
+        { "name": "Durga Puja", "icon": "Sparkles" },
+        { "name": "Howrah Bridge", "icon": "Ship" }
+    ]
   },
   {
     "cityId": "darjeeling",
@@ -270,7 +410,12 @@
     "name": "Darjeeling",
     "image": "",
     "description": "Famous for its tea plantations, Himalayan railway, and stunning views of Kanchenjunga.",
-    "totalHotels": 90
+    "totalHotels": 90,
+    "highlights": [
+        { "name": "Tea Gardens", "icon": "Leaf" },
+        { "name": "Toy Train", "icon": "Train" },
+        { "name": "Tiger Hill Sunrise", "icon": "Sun" }
+    ]
   },
   {
     "cityId": "siliguri",
@@ -278,7 +423,12 @@
     "name": "Siliguri",
     "image": "",
     "description": "A bustling city at the foothills of the Himalayas, serving as a gateway to Darjeeling, Sikkim, and Northeast India.",
-    "totalHotels": 60
+    "totalHotels": 60,
+    "highlights": [
+        { "name": "Gateway to Northeast", "icon": "MapPin" },
+        { "name": "Coronation Bridge", "icon": "Anchor" },
+        { "name": "Hong Kong Market", "icon": "ShoppingBag" }
+    ]
   },
   {
     "cityId": "kalimpong",
@@ -286,7 +436,12 @@
     "name": "Kalimpong",
     "image": "",
     "description": "A serene hill station known for its colonial architecture, Buddhist monasteries, and panoramic valley views.",
-    "totalHotels": 40
+    "totalHotels": 40,
+    "highlights": [
+        { "name": "Deolo Hill", "icon": "Mountain" },
+        { "name": "Flower Nurseries", "icon": "Flower" },
+        { "name": "Buddhist Monasteries", "icon": "Landmark" }
+    ]
   },
   {
     "cityId": "chennai",
@@ -294,7 +449,12 @@
     "name": "Chennai",
     "image": "",
     "description": "The vibrant capital of Tamil Nadu, known for its beaches, temples, and rich cultural heritage.",
-    "totalHotels": 250
+    "totalHotels": 250,
+     "highlights": [
+      { "name": "Marina Beach", "icon": "Waves" },
+      { "name": "Dravidian Temples", "icon": "Landmark" },
+      { "name": "South Indian Cuisine", "icon": "Utensils" }
+    ]
   },
   {
     "cityId": "madurai",
@@ -302,7 +462,12 @@
     "name": "Madurai",
     "image": "",
     "description": "An ancient city famed for its Meenakshi Amman Temple and rich Tamil culture.",
-    "totalHotels": 80
+    "totalHotels": 80,
+    "highlights": [
+      { "name": "Meenakshi Temple", "icon": "Landmark" },
+      { "name": "Jasmine Flowers", "icon": "Flower" },
+      { "name": "Ancient City", "icon": "BookOpen" }
+    ]
   },
   {
     "cityId": "kanyakumari",
@@ -310,7 +475,12 @@
     "name": "Kanyakumari",
     "image": "",
     "description": "The southernmost tip of mainland India, famous for its spectacular sunrises and sunsets.",
-    "totalHotels": 50
+    "totalHotels": 50,
+    "highlights": [
+        { "name": "Southernmost Tip", "icon": "Compass" },
+        { "name": "Vivekananda Rock", "icon": "Landmark" },
+        { "name": "Triveni Sangam", "icon": "Waves" }
+    ]
   },
   {
     "cityId": "ooty",
@@ -318,7 +488,12 @@
     "name": "Ooty",
     "image": "",
     "description": "The 'Queen of Hill Stations', known for its rolling hills, tea gardens, and colonial charm.",
-    "totalHotels": 120
+    "totalHotels": 120,
+    "highlights": [
+        { "name": "Nilgiri Hills", "icon": "Mountain" },
+        { "name": "Tea Gardens", "icon": "Leaf" },
+        { "name": "Toy Train", "icon": "Train" }
+    ]
   },
   {
     "cityId": "kodaikanal",
@@ -326,7 +501,12 @@
     "name": "Kodaikanal",
     "image": "",
     "description": "The 'Princess of Hill Stations', famous for its star-shaped lake, forests, and pleasant climate.",
-    "totalHotels": 100
+    "totalHotels": 100,
+    "highlights": [
+        { "name": "Star-shaped Lake", "icon": "Star" },
+        { "name": "Misty Forests", "icon": "TreePine" },
+        { "name": "Homemade Chocolates", "icon": "Cake" }
+    ]
   },
   {
     "cityId": "bhopal",
@@ -334,7 +514,12 @@
     "name": "Bhopal",
     "image": "",
     "description": "The 'City of Lakes', known for its two main lakes, Upper Lake and Lower Lake.",
-    "totalHotels": 80
+    "totalHotels": 80,
+    "highlights": [
+        { "name": "City of Lakes", "icon": "Waves" },
+        { "name": "Van Vihar Park", "icon": "Leaf" },
+        { "name": "Bharat Bhavan", "icon": "Paintbrush" }
+    ]
   },
   {
     "cityId": "indore",
@@ -342,7 +527,12 @@
     "name": "Indore",
     "image": "",
     "description": "The largest city in Madhya Pradesh, known for its street food, history, and vibrant bazaars.",
-    "totalHotels": 120
+    "totalHotels": 120,
+    "highlights": [
+        { "name": "Street Food Capital", "icon": "Utensils" },
+        { "name": "Rajwada Palace", "icon": "Castle" },
+        { "name": "Cleanest City", "icon": "Sparkles" }
+    ]
   },
   {
     "cityId": "gwalior",
@@ -350,7 +540,12 @@
     "name": "Gwalior",
     "image": "",
     "description": "A historic city known for the magnificent Gwalior Fort, palaces, and ancient temples.",
-    "totalHotels": 60
+    "totalHotels": 60,
+    "highlights": [
+        { "name": "Gwalior Fort", "icon": "Castle" },
+        { "name": "Jai Vilas Palace", "icon": "Landmark" },
+        { "name": "Classical Music", "icon": "Music" }
+    ]
   },
   {
     "cityId": "khajuraho",
@@ -358,7 +553,12 @@
     "name": "Khajuraho",
     "image": "",
     "description": "Famous for its stunning temples adorned with intricate and erotic sculptures, a UNESCO World Heritage site.",
-    "totalHotels": 40
+    "totalHotels": 40,
+    "highlights": [
+        { "name": "Erotic Sculptures", "icon": "HeartPulse" },
+        { "name": "UNESCO Site", "icon": "Landmark" },
+        { "name": "Dance Festival", "icon": "Drama" }
+    ]
   },
   {
     "cityId": "pachmarhi",
@@ -366,7 +566,12 @@
     "name": "Pachmarhi",
     "image": "",
     "description": "The 'Queen of Satpura', a serene hill station with waterfalls, caves, and viewpoints.",
-    "totalHotels": 50
+    "totalHotels": 50,
+     "highlights": [
+      { "name": "Satpura Queen", "icon": "Mountain" },
+      { "name": "Waterfalls", "icon": "Droplets" },
+      { "name": "Pandava Caves", "icon": "Hand" }
+    ]
   },
   {
     "cityId": "mandu",
@@ -374,7 +579,12 @@
     "name": "Mandu",
     "image": "",
     "description": "The city of joy, known for its fine Afghan architecture and historic fort.",
-    "totalHotels": 20
+    "totalHotels": 20,
+    "highlights": [
+        { "name": "Jahaz Mahal", "icon": "Ship" },
+        { "name": "Afghan Architecture", "icon": "Landmark" },
+        { "name": "Monsoon Magic", "icon": "Wind" }
+    ]
   },
   {
     "cityId": "ahmedabad",
@@ -382,7 +592,12 @@
     "name": "Ahmedabad",
     "image": "",
     "description": "A UNESCO World Heritage City, known for its rich history, architecture, and vibrant culture.",
-    "totalHotels": 150
+    "totalHotels": 150,
+    "highlights": [
+        { "name": "Heritage City", "icon": "Landmark" },
+        { "name": "Sabarmati Ashram", "icon": "BookOpen" },
+        { "name": "Kite Festival", "icon": "Wind" }
+    ]
   },
   {
     "cityId": "kutch",
@@ -390,7 +605,12 @@
     "name": "Kutch",
     "image": "",
     "description": "Famous for the white salt desert of the Rann of Kutch and its vibrant handicrafts.",
-    "totalHotels": 60
+    "totalHotels": 60,
+     "highlights": [
+      { "name": "White Rann", "icon": "Sun" },
+      { "name": "Rann Utsav", "icon": "Music" },
+      { "name": "Handicrafts", "icon": "Hand" }
+    ]
   },
   {
     "cityId": "dwarka",
@@ -398,7 +618,12 @@
     "name": "Dwarka",
     "image": "",
     "description": "An ancient city and a major Hindu pilgrimage site, home to the Dwarkadhish Temple.",
-    "totalHotels": 40
+    "totalHotels": 40,
+    "highlights": [
+        { "name": "Krishna's Kingdom", "icon": "Landmark" },
+        { "name": "Pilgrimage Site", "icon": "Hand" },
+        { "name": "Arabian Sea", "icon": "Waves" }
+    ]
   },
   {
     "cityId": "somnath",
@@ -406,7 +631,12 @@
     "name": "Somnath",
     "image": "",
     "description": "Home to the revered Somnath Temple, one of the twelve Jyotirlinga shrines of Lord Shiva.",
-    "totalHotels": 30
+    "totalHotels": 30,
+    "highlights": [
+        { "name": "Jyotirlinga Shrine", "icon": "Landmark" },
+        { "name": "Seaside Temple", "icon": "Waves" },
+        { "name": "Spiritual Aura", "icon": "Sparkles" }
+    ]
   },
   {
     "cityId": "kevadia",
@@ -414,7 +644,12 @@
     "name": "Kevadia",
     "image": "",
     "description": "Home to the Statue of Unity, the world's tallest statue.",
-    "totalHotels": 20
+    "totalHotels": 20,
+    "highlights": [
+        { "name": "Statue of Unity", "icon": "Users2" },
+        { "name": "Sardar Sarovar Dam", "icon": "Droplets" },
+        { "name": "Jungle Safari", "icon": "Cat" }
+    ]
   },
   {
     "cityId": "surat",
@@ -422,6 +657,11 @@
     "name": "Surat",
     "image": "",
     "description": "The Diamond City, a major commercial hub known for its textiles and diamond industry.",
-    "totalHotels": 120
+    "totalHotels": 120,
+    "highlights": [
+        { "name": "Diamond Hub", "icon": "Diamond" },
+        { "name": "Textile Market", "icon": "ShoppingBag" },
+        { "name": "Street Food", "icon": "Utensils" }
+    ]
   }
 ]
