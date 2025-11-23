@@ -164,11 +164,10 @@ export default function HotelDetailPage() {
                         <CardTitle>Book Your Stay</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-3xl font-bold text-brand-blue mb-4">
-                            {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(hotel.basePrice)}
-                            <span className="text-sm font-normal text-muted-foreground">/night</span>
+                        <p className="text-sm text-muted-foreground mb-4">
+                            Contact us to get the best deals and book this hotel for your travel dates.
                         </p>
-                        <Button size="lg" className="w-full h-12 text-lg">Book Now</Button>
+                        <Button size="lg" className="w-full h-12 text-lg">Enquire Now</Button>
                     </CardContent>
                     </Card>
                 </div>
