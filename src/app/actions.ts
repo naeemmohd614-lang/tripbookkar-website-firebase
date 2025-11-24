@@ -185,6 +185,7 @@ export async function bulkImportData(dataType: string): Promise<{ success: boole
       });
       await batch.commit();
       revalidatePath('/admin/interests');
+      revalidatePath('/interests');
       return { success: true, message: `${count} interests imported successfully.` };
     } else if (dataType === 'states') {
       const statesData = (await import(`@/data/states.json`)).default;
@@ -195,6 +196,7 @@ export async function bulkImportData(dataType: string): Promise<{ success: boole
       });
       await batch.commit();
       revalidatePath('/admin/dashboard'); // Or a relevant page
+      revalidatePath('/'); // Revalidate home page
       return { success: true, message: `${count} states imported successfully.` };
     } else if (dataType === 'monthlyDestinations') {
       const { monthlyDestinationsData } = await import(`@/data/monthly-destinations`);
@@ -206,6 +208,7 @@ export async function bulkImportData(dataType: string): Promise<{ success: boole
       }
       await batch.commit();
       revalidatePath('/admin/destinations');
+      revalidatePath('/');
       return { success: true, message: `${count} monthly destination sets imported successfully.` };
     } else {
       // Assuming it's a hotel brand
@@ -236,11 +239,49 @@ export async function bulkImportData(dataType: string): Promise<{ success: boole
 
       await batch.commit();
       revalidatePath('/admin/hotels');
+      revalidatePath('/hotels');
+      revalidatePath('/');
       return { success: true, message: `${count} ${dataType} hotels imported successfully.` };
     }
 
   } catch (error: any) {
     console.error(`Bulk import for ${dataType} failed:`, error);
     return { success: false, message: `Bulk import for ${dataType} failed: ${error.message}` };
+  }
+}
+
+export async function saveHotelAction(
+  existingHotelId: string | null,
+  data: Hotel
+): Promise<{ success: boolean; message: string; isNew: boolean }> {
+  try {
+    const isNew = !existingHotelId;
+    const hotelId = existingHotelId || slugify(data.name);
+
+    if (!hotelId) {
+      throw new Error("Hotel name is required to create an ID.");
+    }
+
+    const hotelData: Hotel = {
+      ...data,
+      id: hotelId,
+      hotelId: hotelId,
+      cityId: slugify(data.city),
+      stateId: slugify(data.state),
+      brandSlug: slugify(data.brand),
+    };
+
+    const hotelRef = db.collection('hotels').doc(hotelId);
+    await hotelRef.set(hotelData, { merge: true });
+
+    // Revalidate paths to show updated data on the front end
+    revalidatePath('/hotels');
+    revalidatePath(`/states/${hotelData.stateId}/cities/${hotelData.cityId}/hotels/${hotelData.hotelId}`);
+    revalidatePath(`/`);
+
+    return { success: true, message: "Hotel saved successfully.", isNew };
+  } catch (error: any) {
+    console.error("Error saving hotel:", error);
+    return { success: false, message: error.message, isNew: !existingHotelId };
   }
 }

@@ -10,27 +10,12 @@ import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
 import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater, Tag } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
-import { generateHotelDetailsAction, generateHotelDescriptionAction } from '@/app/actions';
-import { useFirestore } from '@/firebase';
-import { doc } from 'firebase/firestore';
-import { setDocumentNonBlocking } from '@/firebase';
+import { generateHotelDetailsAction, generateHotelDescriptionAction, saveHotelAction } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
 
 interface HotelEditorProps {
   hotel?: Hotel;
-}
-
-function slugify(text: string) {
-  if (!text) return '';
-  return text
-    .toString()
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w-]+/g, '')
-    .replace(/--+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
 }
 
 const newHotelDefault: Partial<Hotel> = {
@@ -54,7 +39,6 @@ const newHotelDefault: Partial<Hotel> = {
 
 export default function HotelEditor({ hotel }: HotelEditorProps) {
   const router = useRouter();
-  const firestore = useFirestore();
   const { toast } = useToast();
 
   const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<Hotel>({
@@ -146,39 +130,17 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
   };
 
   const onSubmit: SubmitHandler<Hotel> = async (data) => {
-    if (!firestore) {
-      toast({ variant: 'destructive', title: 'Error', description: 'Firestore not available.' });
-      return;
-    }
-
-    try {
-      let hotelData: Hotel;
-      if (hotel?.id) {
-        hotelData = data;
-        const hotelRef = doc(firestore, 'hotels', hotel.id);
-        await setDocumentNonBlocking(hotelRef, hotelData, { merge: true });
-        toast({ title: 'Hotel Updated', description: `"${data.name}" has been saved.` });
-      } else {
-        const generatedId = slugify(data.name);
-        hotelData = {
-          ...data,
-          id: generatedId,
-          hotelId: generatedId,
-          cityId: slugify(data.city),
-          stateId: slugify(data.state),
-          brandSlug: slugify(data.brand),
-        };
-        const hotelRef = doc(firestore, 'hotels', hotelData.id);
-        await setDocumentNonBlocking(hotelRef, hotelData, { merge: true });
-        toast({ title: 'Hotel Created', description: `"${data.name}" has been added.` });
-      }
-      
+    const result = await saveHotelAction(hotel?.id || null, data);
+    
+    if (result.success) {
+      toast({
+        title: result.isNew ? 'Hotel Created' : 'Hotel Updated',
+        description: `"${data.name}" has been saved.`
+      });
       router.push('/admin/hotels');
-      router.refresh();
-
-    } catch (error: any) {
-      console.error("Error saving hotel:", error);
-      toast({ variant: 'destructive', title: 'Save Failed', description: error.message });
+      router.refresh(); // Refresh the current view if needed
+    } else {
+      toast({ variant: 'destructive', title: 'Save Failed', description: result.message });
     }
   };
   
@@ -392,7 +354,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                 <div className="space-y-4">
                     {tagFields.map((field, index) => (
                          <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end">
-                            <Input {...register(`tags.${index}.value` as any)} placeholder="e.g., luxury" />
+                            <Input {...register(`tags.${index}` as any)} placeholder="e.g., luxury" />
                             <Button type="button" variant="destructive" size="icon" onClick={() => removeTag(index)}>
                                 <Trash2 className="h-4 w-4" />
                             </Button>
