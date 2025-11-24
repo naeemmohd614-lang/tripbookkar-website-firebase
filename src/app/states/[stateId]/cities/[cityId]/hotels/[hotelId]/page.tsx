@@ -19,9 +19,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export default function HotelDetailPage() {
-  const params = useParams();
-  const hotelId = params.hotelId as string;
+export default function HotelDetailPage({ params }: { params: { hotelId: string }}) {
+  const { hotelId } = params;
   const firestore = useFirestore();
 
   const hotelRef = useMemoFirebase(() => {

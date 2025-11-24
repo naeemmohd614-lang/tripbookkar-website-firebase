@@ -26,13 +26,13 @@ const iconMap: { [key: string]: React.ElementType } = {
   Sailboat, Building, Mountain, Users2, ShieldCheck, TreePine, Church, 
   Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, 
   Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, 
-  CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingCart, Star,
+  CookingPot, Drama, Clapperboard, ShoppingBag, ShoppingBasket, Star,
   HeartPulse, Music, Paintbrush, HotelIcon, Sparkles, Users, Package, Clock, Calendar
 };
 
 
 export default function StatePage({ params }: { params: { stateId: string } }) {
-  const { stateId } = use(Promise.resolve(params));
+  const { stateId } = params;
   
   const firestore = useFirestore();
 

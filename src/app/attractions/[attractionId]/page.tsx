@@ -18,7 +18,7 @@ import { collection, query, where } from 'firebase/firestore';
 export default function AttractionPage({ params }: { params: { attractionId: string } }) {
     const router = useRouter();
     const firestore = useFirestore();
-    const { attractionId } = use(Promise.resolve(params));
+    const { attractionId } = params;
 
     const attraction = attractions.find((a) => a.attractionId === attractionId);
 

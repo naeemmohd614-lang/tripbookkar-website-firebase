@@ -12,7 +12,7 @@ import { collection, query, where } from 'firebase/firestore';
 
 
 export default function BrandPage({ params }: { params: { brand: string }}) {
-  const { brand: brandSlug } = use(Promise.resolve(params));
+  const { brand: brandSlug } = params;
   const firestore = useFirestore();
   
   const brand = (brands as Brand[]).find((b) => b.brandSlug === brandSlug);

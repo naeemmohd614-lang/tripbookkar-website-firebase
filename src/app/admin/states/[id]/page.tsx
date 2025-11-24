@@ -8,7 +8,7 @@ import React from 'react';
 
 export default function EditStatePage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = React.use(Promise.resolve(params));
+  const { id } = params;
 
   const stateRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

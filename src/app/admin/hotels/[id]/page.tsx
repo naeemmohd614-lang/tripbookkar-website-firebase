@@ -8,7 +8,7 @@ import React from 'react';
 
 export default function EditHotelPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = React.use(Promise.resolve(params));
+  const { id } = params;
 
   const hotelRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;
