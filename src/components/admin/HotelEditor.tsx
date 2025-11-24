@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
-import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater, Tag } from 'lucide-react';
+import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater, Tag, Upload, Link as LinkIcon } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
 import { saveHotelAction, generateHotelDetailsAction, generateHotelDescriptionAction } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
@@ -382,7 +382,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
 
              <section>
                 <h3 className="text-lg font-semibold mb-4">Image Management</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                     {imageFields.map((image, index) => (
                         <div key={image.id} className="relative aspect-video">
                            {image.src && <Image src={image.src} alt={image.caption || `Image ${index + 1}`} fill className="rounded-md object-cover" />}
@@ -397,21 +397,23 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                               </Button>
                         </div>
                     ))}
-                     <div className="flex items-center justify-center p-4 border-2 border-dashed rounded-md">
-                        <Label htmlFor="image-upload" className="cursor-pointer text-center">
-                            <p>+ Add Image</p>
-                            <Input id="image-upload" type="file" className="sr-only" onChange={handleImageUpload} accept="image/*" />
-                        </Label>
-                    </div>
                 </div>
-                 <div className="mt-4 flex items-center gap-2">
-                    <Input 
-                        placeholder="Or paste image URL" 
-                        value={imageUrl}
-                        onChange={(e) => setImageUrl(e.target.value)}
-                        className="flex-grow"
-                    />
-                    <Button type="button" onClick={handleAddImageUrl}>Add by URL</Button>
+                <div className="flex flex-wrap gap-4 items-center">
+                    <Button type="button" asChild variant="outline">
+                        <Label htmlFor="image-upload" className="cursor-pointer">
+                            <Upload className="mr-2 h-4 w-4" /> Upload Image
+                        </Label>
+                    </Button>
+                    <Input id="image-upload" type="file" className="hidden" onChange={handleImageUpload} accept="image/*" />
+                    <div className="flex items-center gap-2 flex-grow">
+                        <Input 
+                            placeholder="Or paste image URL" 
+                            value={imageUrl}
+                            onChange={(e) => setImageUrl(e.target.value)}
+                            className="flex-grow"
+                        />
+                        <Button type="button" onClick={handleAddImageUrl}><LinkIcon className="mr-2 h-4 w-4"/>Add URL</Button>
+                    </div>
                 </div>
             </section>
 
