@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, useFieldArray, SubmitHandler, useWatch } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { Label } from '@/components/ui/label';
 import { Trash2, Wand2, Utensils, Zap, Mic2, GlassWater, Tag } from 'lucide-react';
 import type { Hotel } from '@/lib/types';
-import { generateHotelDetailsAction, generateHotelDescriptionAction, saveHotelAction } from '@/app/actions';
+import { saveHotelAction, generateHotelDetailsAction, generateHotelDescriptionAction } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
 
@@ -40,6 +40,8 @@ const newHotelDefault: Partial<Hotel> = {
 export default function HotelEditor({ hotel }: HotelEditorProps) {
   const router = useRouter();
   const { toast } = useToast();
+  const [imageUrl, setImageUrl] = useState('');
+
 
   const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<Hotel>({
     defaultValues: hotel || newHotelDefault
@@ -150,6 +152,19 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
 
     toast({ title: 'Simulating Upload', description: `Uploading: ${file.name}. In a real app, this would upload to cloud storage.` });
     appendImage({ src: URL.createObjectURL(file), caption: 'New upload' });
+  };
+  
+  const handleAddImageUrl = () => {
+    if (imageUrl && imageUrl.trim() !== '') {
+      appendImage({ src: imageUrl, caption: 'New image from URL' });
+      setImageUrl('');
+    } else {
+      toast({
+        variant: 'destructive',
+        title: 'Invalid URL',
+        description: 'Please enter a valid image URL.',
+      });
+    }
   };
 
 
@@ -388,6 +403,15 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
                             <Input id="image-upload" type="file" className="sr-only" onChange={handleImageUpload} accept="image/*" />
                         </Label>
                     </div>
+                </div>
+                 <div className="mt-4 flex items-center gap-2">
+                    <Input 
+                        placeholder="Or paste image URL" 
+                        value={imageUrl}
+                        onChange={(e) => setImageUrl(e.target.value)}
+                        className="flex-grow"
+                    />
+                    <Button type="button" onClick={handleAddImageUrl}>Add by URL</Button>
                 </div>
             </section>
 
