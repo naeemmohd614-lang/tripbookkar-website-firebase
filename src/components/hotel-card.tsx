@@ -56,9 +56,12 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           {hotel.city}, {hotel.state}
         </CardDescription>
         <div className="mt-3 flex flex-wrap gap-2">
-            {hotel.tags && hotel.tags.slice(0, 3).map(tag => (
-                <Badge key={tag} variant="outline" className="font-normal">{tag}</Badge>
-            ))}
+            {hotel.tags && hotel.tags.slice(0, 3).map((tag, index) => {
+              const tagValue = typeof tag === 'string' ? tag : (tag as any).value;
+              return (
+                <Badge key={`${tagValue}-${index}`} variant="outline" className="font-normal">{tagValue}</Badge>
+              )
+            })}
         </div>
       </CardContent>
       <CardFooter className="p-4 flex justify-end items-center bg-secondary/30">
