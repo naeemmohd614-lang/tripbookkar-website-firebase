@@ -236,7 +236,3 @@ export default function StatePage({ params }: { params: { stateId: string } }) {
     </div>
   );
 }
-
-
-
-

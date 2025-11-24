@@ -133,5 +133,3 @@ export default function MonthPage({ params }: { params: { month: string } }) {
         </div>
     );
 }
-
-    
