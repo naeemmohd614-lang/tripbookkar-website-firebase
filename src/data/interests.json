@@ -5,8 +5,8 @@
     "name": "Beaches",
     "description": "Sun-kissed sands and turquoise waters await. Discover our curated collection of stunning beachfront hotels and resorts. Whether you're looking for a vibrant party spot or a tranquil escape, find your perfect coastal getaway here.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?fit=crop&w=1080&q=80",
-      "caption": "tropical beach lounge"
+      "src": "https://images.unsplash.com/photo-1507525428034-b723a996f3ea?fit=crop&w=1080&q=80",
+      "caption": "tropical beach"
     },
     "tags": ["beach", "beachfront", "sea view"]
   },
@@ -15,8 +15,8 @@
     "name": "Mountains",
     "description": "Breathe in the crisp mountain air. From cozy lodges to luxury resorts, discover hotels with breathtaking views of majestic peaks and serene valleys. Your high-altitude getaway starts here.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1483728642387-6c351b4d1165?fit=crop&w=1080&q=80",
-      "caption": "mountain range sunrise"
+      "src": "https://images.unsplash.com/photo-1519681393784-d120267933ba?fit=crop&w=1080&q=80",
+      "caption": "snowy mountains"
     },
     "tags": ["mountain", "himalayas", "valley view", "mountain view"]
   },
@@ -25,8 +25,8 @@
     "name": "Heritage",
     "description": "Step back in time and live like royalty. Stay in magnificent palaces, colonial-era bungalows, and historic havelis that narrate tales of a bygone era. Experience history, luxury, and culture combined.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1534423892829-962ff053c596?fit=crop&w=1080&q=80",
-      "caption": "indian palace architecture"
+      "src": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?fit=crop&w=1080&q=80",
+      "caption": "indian palace"
     },
     "tags": ["heritage", "palace", "colonial"]
   },
@@ -36,7 +36,7 @@
     "description": "Embark on an adventure into the wild. Stay at jungle lodges and resorts on the fringes of national parks, offering a perfect blend of comfort and the thrill of spotting majestic creatures in their natural habitat.",
     "image": {
       "src": "https://images.unsplash.com/photo-1557050543-4d5f4e078aa2?fit=crop&w=1080&q=80",
-      "caption": "leopard wildlife"
+      "caption": "wildlife tiger"
     },
     "tags": ["wildlife", "jungle", "national park"]
   },
@@ -55,8 +55,8 @@
     "name": "Spiritual",
     "description": "Embark on a journey of inner peace and discovery. Find serene hotels and resorts near major pilgrimage sites and spiritual centers, perfect for contemplation, meditation, and rejuvenation.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1588614959067-aef192439a3e?fit=crop&w=1080&q=80",
-      "caption": "varanasi ghats"
+      "src": "https://images.unsplash.com/photo-1621370213854-e9185a539f93?fit=crop&w=1080&q=80",
+      "caption": "varanasi spiritual"
     },
     "tags": ["spiritual", "pilgrimage", "rishikesh"]
   },
@@ -75,8 +75,8 @@
     "name": "Weddings",
     "description": "Find the perfect venue for your dream wedding. From grand palaces and heritage forts to pristine beaches and lush gardens, explore our curated collection of hotels that make for a magical wedding destination.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1520854221256-17452cc3da25?fit=crop&w=1080&q=80",
-      "caption": "wedding ceremony decor"
+      "src": "https://images.unsplash.com/photo-1597842939106-5a4e38a2c295?fit=crop&w=1080&q=80",
+      "caption": "indian wedding"
     },
     "tags": ["wedding", "wedding hotel", "destination wedding"]
   },
@@ -85,8 +85,8 @@
     "name": "Desert",
     "description": "Explore the magic and majesty of the desert. From luxurious desert resorts to authentic camps under the stars, discover stays that offer unforgettable experiences like camel safaris, cultural nights, and stargazing.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1613680373022-793437a39e3d?fit=crop&w=1080&q=80",
-      "caption": "desert safari"
+      "src": "https://images.unsplash.com/photo-1542314831-068cd1dbb563?fit=crop&w=1080&q=80",
+      "caption": "desert landscape"
     },
     "tags": ["desert", "jaisalmer", "jodhpur", "fort view"]
   },
@@ -96,7 +96,7 @@
     "description": "Discover unique and intimate hotels with personalized service. Our collection of boutique hotels offers one-of-a-kind experiences, distinctive design, and a strong sense of place for the discerning traveler.",
     "image": {
       "src": "https://images.unsplash.com/photo-1566073771259-6a8506099945?fit=crop&w=1080&q=80",
-      "caption": "boutique hotel pool"
+      "caption": "boutique hotel"
     },
     "tags": ["boutique", "design", "unique stay"]
   },
@@ -106,7 +106,7 @@
     "description": "Experience the glamour of camping with all the comforts of a luxury hotel. Our selection of luxury tents and glamping sites offers a unique way to connect with nature without sacrificing style or comfort.",
     "image": {
       "src": "https://images.unsplash.com/photo-1588862088489-4554315c3a3a?fit=crop&w=1080&q=80",
-      "caption": "luxury tent glamping"
+      "caption": "luxury tent"
     },
     "tags": ["tent", "glamping", "luxury camping"]
   },
@@ -115,8 +115,8 @@
     "name": "Milestone Celebrations",
     "description": "Celebrate your special occasions in memorable settings. Whether it's an anniversary, a birthday, or any significant milestone, find the perfect hotel to make your celebration extraordinary.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1519979373984-d6a49c95b6a0?fit=crop&w=1080&q=80",
-      "caption": "celebration dinner"
+      "src": "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?fit=crop&w=1080&q=80",
+      "caption": "celebration fireworks"
     },
     "tags": ["romantic", "celebration", "anniversary", "honeymoon"]
   },
@@ -126,7 +126,7 @@
     "description": "Begin your new life together in a fairytale setting. Explore our curated collection of romantic hotels and resorts that offer the perfect backdrop for your honeymoon, with intimate experiences and unforgettable memories.",
     "image": {
       "src": "https://images.unsplash.com/photo-1523974443993-958a51698762?fit=crop&w=1080&q=80",
-      "caption": "honeymoon couple beach"
+      "caption": "honeymoon couple"
     },
     "tags": ["honeymoon", "romantic"]
   }
