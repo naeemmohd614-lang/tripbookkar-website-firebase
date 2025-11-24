@@ -141,21 +141,27 @@ export default function HotelDetailPage() {
 
                     {hotel.experiencesAndActivities && hotel.experiencesAndActivities.length > 0 && (
                         <SectionCard icon={Zap} title="Experiences &amp; Activities">
-                            {hotel.experiencesAndActivities.map(activity => (
-                                <ListItem key={activity}>
-                                    {activity}
-                                </ListItem>
-                            ))}
+                            {hotel.experiencesAndActivities.map((activity, index) => {
+                                const activityValue = typeof activity === 'string' ? activity : (activity as any).value;
+                                return (
+                                    <ListItem key={`${activityValue}-${index}`}>
+                                        {activityValue}
+                                    </ListItem>
+                                );
+                            })}
                         </SectionCard>
                     )}
 
                      {hotel.weddingVenues && hotel.weddingVenues.length > 0 && (
                         <SectionCard icon={Mic2} title="Wedding Venues">
-                            {hotel.weddingVenues.map(venue => (
-                                <ListItem key={venue}>
-                                    {venue}
-                                </ListItem>
-                            ))}
+                            {hotel.weddingVenues.map((venue, index) => {
+                                const venueValue = typeof venue === 'string' ? venue : (venue as any).value;
+                                return (
+                                    <ListItem key={`${venueValue}-${index}`}>
+                                        {venueValue}
+                                    </ListItem>
+                                );
+                            })}
                         </SectionCard>
                     )}
                 </div>
