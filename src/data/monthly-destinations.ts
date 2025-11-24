@@ -103,61 +103,61 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Jaisalmer, Rajasthan",
         reason: "Attend the vibrant Desert Festival, showcasing Rajasthani culture with folk dances, music, and camel races. The weather is perfect for desert safaris and exploring the golden fort.",
         hotels: (allHotels as Hotel[]).filter(h => ["Suryagarh Jaisalmer", "Jaisalmer Marriott Resort & Spa", "Hotel Rang Mahal", "Fort Rajwada", "The Gulaal"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1626955834454-7f897363a027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWlzYWxtZXIlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM3OTU5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "jaisalmer festival" }
+        image: { src: "https://images.unsplash.com/photo-1598104216839-a9134a6d713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyYWphc3RoYW5pJTIwZGVzZXJ0JTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzOTk2MTk3fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "rajasthani desert festival" }
       },
       {
         name: "Nashik, Maharashtra",
         reason: "February is the time for SulaFest, a popular gourmet world music festival. Enjoy wine tasting at various vineyards in India's wine capital with pleasant weather as your companion.",
         hotels: (allHotels as Hotel[]).filter(h => ["The Source at Sula", "Radisson Blu Hotel & Spa, Nashik", "Ginger Nashik", "Ibis Nashik", "Courtyard by Marriott Nashik"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1599948123812-701d3a51e678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aW5leWFyZCUyMG5hc2hpa3xlbnwwfHx8fDE3NjM3OTU5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "vineyard nashik" }
+        image: { src: "https://images.unsplash.com/photo-1598522333806-f1873af9e7a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3aW5lJTIwdGFzdGluZyUyMHZpbmV5YXJkfGVufDB8fHx8MTc2Mzk5NjE5N3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "wine tasting vineyard" }
       },
       {
         name: "Varanasi, Uttar Pradesh",
         reason: "Experience the spiritual fervor of Maha Shivaratri, which often falls in February. The city's ghats and temples come alive with prayers, rituals, and processions.",
         hotels: (allHotels as Hotel[]).filter(h => ["BrijRama Palace", "Taj Ganges, Varanasi", "The Clarks, Varanasi", "Hotel Madin", "Ramada Plaza by Wyndham JHV Varanasi"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1601618237569-e380f25dc289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGdoYXRzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "varanasi ghats festival" }
+        image: { src: "https://images.unsplash.com/photo-1621370213854-e9185a539f93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGdoYXRzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "varanasi spiritual festival" }
       },
       {
         name: "Kaziranga National Park, Assam",
         reason: "The dry season offers the best chances for wildlife sightings, especially the one-horned rhinoceros. The pleasant weather makes jeep safaris and elephant rides more enjoyable.",
         hotels: (allHotels as Hotel[]).filter(h => ["Diphlu River Lodge", "IORA - The Retreat", "Borgos Resort", "Landmark Woods", "Infinity Resorts Kaziranga"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1598463166168-54a8e6717548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvaG5lLWhvcm5lZCUyMHJoaW5vY2Vyb3N8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "one-horned rhinoceros" }
+        image: { src: "https://images.unsplash.com/photo-1649987820138-bff3a105f242?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHJoaW5vY2Vyb3MlMjBrYXppcmFuZ2F8ZW58MHx8fHwxNzYzOTk2MTk3fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "rhinoceros kaziranga" }
       },
       {
         name: "Agra, Uttar Pradesh",
         reason: "Visit during the Taj Mahotsav, a 10-day cultural festival celebrating arts, crafts, and cuisines of India, with the magnificent Taj Mahal as the backdrop.",
         hotels: (allHotels as Hotel[]).filter(h => ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra", "Taj Hotel & Convention Centre, Agra", "Courtyard by Marriott Agra", "Trident, Agra"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1564507592333-c60657eea523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxUYWolMjBNYWhhbHxlbnwwfHx8fDE3NjM3MTE0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "taj mahal agra" }
+        image: { src: "https://images.unsplash.com/photo-1592635196078-9fdc757f27f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YWolMjBtYWhhbCUyMGFncmF8ZW58MHx8fHwxNzYzOTk2MTk3fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "taj mahal agra" }
       },
       {
         name: "Andaman and Nicobar Islands",
         reason: "The weather remains perfect for water sports and beach exploration. It's slightly less crowded than January, offering a more serene experience.",
         hotels: (allHotels as Hotel[]).filter(h => ["Taj Exotica Resort & Spa, Andamans", "Barefoot at Havelock", "SeaShell, Havelock", "Munjoh Ocean Resort", "Silver Sand Beach Resort"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1602023805263-238493979048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhbmRhbWFuJTIwc2N1YmElMjBkaXZpbmd8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "andaman scuba diving" }
+        image: { src: "https://images.unsplash.com/photo-1579089309486-51f67f0a8235?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmRhbWFuJTIwc2N1YmElMjBkaXZpbmd8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "andaman scuba diving" }
       },
       {
         name: "Goa",
         reason: "The famous Goa Carnival usually takes place in February, filling the streets with colorful parades, music, and dancing. It's a unique cultural experience.",
         hotels: (allHotels as Hotel[]).filter(h => h.state === 'Goa').slice(0, 10),
-        image: { src: "https://images.unsplash.com/photo-1620027582539-01583562a98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2ElMjBjYXJuaXZhbHxlbnwwfHx8fDE3NjM3OTU5ODVfMA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa carnival" }
+        image: { src: "https://images.unsplash.com/photo-1631587053594-58a439294921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnb2ElMjBjYXJuaXZhbHxlbnwwfHx8fDE3NjM5OTYxOTd8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "goa carnival parade" }
       },
       {
         name: "Puri, Odisha",
         reason: "Attend the Konark Dance Festival held at the magnificent Konark Sun Temple, a short drive from Puri. The weather is pleasant for visiting the Jagannath Temple and beaches.",
         hotels: (allHotels as Hotel[]).filter(h => ["Mayfair Heritage", "Pramod Convention & Beach Resort", "The Chariot Resort & Spa", "Sterling Puri", "Toshali Sands"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1598164749320-33c978018d45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrb25hcmssJTIwc3VuJTIwdGVtcGxlfGVufDB8fHx8MTc2Mzc5NTk4Nnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "konark sun temple" }
+        image: { src: "https://images.unsplash.com/photo-1626444923306-039c32303c2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWduaWZpY2VudCUyMGtvbmFyayUyMHRlbXBsZXxlbnwwfHx8fDE3NjM5OTYxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "magnificent konark temple" }
       },
       {
         name: "Thekkady, Kerala",
         reason: "The weather is very pleasant for boating on Periyar Lake and spotting wildlife. It's a great time for trekking and exploring the spice plantations.",
         hotels: (allHotels as Hotel[]).filter(h => ["Spice Village - CGH Earth", "The Elephant Court", "Cardamom County", "Poetree Sarovar Portico", "Amritara Shalimar Spice Garden"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1623976862780-3f3246714c6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJpeWFyJTIwbGFrZSUyMHRoZWtrYWR5fGVufDB8fHx8MTc2Mzc5NTk4Nnww&ixlib=rb-4.1.0&q=80&w=1080", caption: "periyar lake thekkady" }
+        image: { src: "https://images.unsplash.com/photo-1613861810056-512c14041e6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZXJhbGElMjBzcGljZSUyMHBsYW50YXRpb258ZW58MHx8fHwxNzYzOTk2MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kerala spice plantation" }
       },
       {
         name: "Kolkata, West Bengal",
         reason: "The weather is cool and pleasant, ideal for sightseeing. It's also the time for the Kolkata International Book Fair, a paradise for literature lovers.",
         hotels: (allHotels as Hotel[]).filter(h => ["The Oberoi Grand, Kolkata", "Taj Bengal", "ITC Sonar", "Hyatt Regency Kolkata", "The Park Kolkata"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1572349911219-97c02b281b37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxWaWN0b3JpYSUyME1lbW9yaWFsJTIwS29sa2F0YXxlbnwwfHx8fDE3NjM3OTU5ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "victoria memorial kolkata" }
+        image: { src: "https://images.unsplash.com/photo-1598337589143-346c1071295c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxrb2xrYXRhJTIwYm9vayUyMGZhaXJ8ZW58MHx8fHwxNzYzOTk2MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kolkata book fair" }
       }
     ]
   },
