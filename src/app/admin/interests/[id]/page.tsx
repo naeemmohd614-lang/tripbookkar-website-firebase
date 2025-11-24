@@ -9,7 +9,7 @@ import React from 'react';
 
 export default function EditInterestPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = React.use(Promise.resolve(params));
+  const { id } = React.use(params);
 
   const interestRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

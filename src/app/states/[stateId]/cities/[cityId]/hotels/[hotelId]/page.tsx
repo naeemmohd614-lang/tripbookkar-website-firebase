@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/carousel"
 
 export default function HotelDetailPage({ params }: { params: { hotelId: string }}) {
-  const { hotelId } = React.use(Promise.resolve(params));
+  const { hotelId } = React.use(params);
   const firestore = useFirestore();
 
   const hotelRef = useMemoFirebase(() => {

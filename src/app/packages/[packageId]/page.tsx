@@ -12,7 +12,7 @@ import type { Package } from '@/lib/types';
 import React from 'react';
 
 export default function PackageDetailPage({ params }: { params: { packageId: string } }) {
-    const { packageId } = React.use(Promise.resolve(params));
+    const { packageId } = React.use(params);
     const pkg = (featuredPackages as Package[]).find((p) => p.id === packageId);
 
     if (!pkg) {

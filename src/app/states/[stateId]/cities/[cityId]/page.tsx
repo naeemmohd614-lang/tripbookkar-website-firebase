@@ -31,7 +31,7 @@ const iconMap: { [key: string]: React.ElementType } = {
 };
 
 export default function CityPage({ params }: { params: { stateId: string; cityId: string } }) {
-  const { stateId, cityId } = React.use(Promise.resolve(params));
+  const { stateId, cityId } = React.use(params);
 
   const firestore = useFirestore();
 
