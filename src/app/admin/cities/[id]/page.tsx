@@ -5,11 +5,11 @@ import type { City } from '@/lib/types';
 import { notFound } from 'next/navigation';
 import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
 import { doc } from 'firebase/firestore';
-import React, { use } from 'react';
+import React from 'react';
 
 export default function EditCityPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = use(Promise.resolve(params));
+  const { id } = React.use(Promise.resolve(params));
 
   const cityRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

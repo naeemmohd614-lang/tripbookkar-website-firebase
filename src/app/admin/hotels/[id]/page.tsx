@@ -4,10 +4,11 @@ import type { Hotel } from '@/lib/types';
 import { notFound } from 'next/navigation';
 import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
 import { doc } from 'firebase/firestore';
+import React from 'react';
 
 export default function EditHotelPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = params;
+  const { id } = React.use(Promise.resolve(params));
 
   const hotelRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;
