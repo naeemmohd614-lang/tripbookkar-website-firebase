@@ -65,8 +65,8 @@
     "name": "Wellness",
     "description": "Rejuvenate your mind, body, and soul. Our collection of wellness resorts offers serene environments, world-class spas, yoga retreats, and holistic treatments for a truly restorative getaway.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1715520212831-199dc6b4354f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMG1lZGl0YXRpbmclMjBhdCUyMHN1bnJpc2V8ZW58MHx8fHwxNzYzODg0NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "caption": "woman meditating at sunrise"
+      "src": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1220&q=80",
+      "caption": "woman doing yoga outdoors"
     },
     "tags": ["wellness", "spa", "yoga", "retreat"]
   },
@@ -101,14 +101,14 @@
     "tags": ["boutique", "design", "unique stay"]
   },
   {
-    "id": "luxury-tents",
-    "name": "Luxury Tents",
-    "description": "Experience the glamour of camping with all the comforts of a luxury hotel. Our selection of luxury tents and glamping sites offers a unique way to connect with nature without sacrificing style or comfort.",
+    "id": "honeymoon",
+    "name": "Honeymoon",
+    "description": "Begin your new life together in a fairytale setting. Explore our curated collection of romantic hotels and resorts that offer the perfect backdrop for your honeymoon, with intimate experiences and unforgettable memories.",
     "image": {
-      "src": "https://images.unsplash.com/photo-1538502029695-33c846cb1111?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjB0ZW50JTIwaW50ZXJpb3IlMjBuaWdodHxlbnwwfHx8fDE3NjM4ODQ0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "caption": "luxury tent interior night"
+      "src": "https://images.unsplash.com/photo-1594323638217-a128004f5e55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb21hbnRpYyUyMGNvdXBsZSUyMGJlYWNofGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "romantic couple beach"
     },
-    "tags": ["tent", "glamping", "luxury camping"]
+    "tags": ["honeymoon", "romantic"]
   },
   {
     "id": "milestone-celebrations",
