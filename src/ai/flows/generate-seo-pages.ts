@@ -128,10 +128,11 @@ Hotel Details:
 
 Instructions:
 1.  **About**: Write one engaging paragraph highlighting the hotel's key features and unique selling points. The tone should be sophisticated and inviting.
-2.  **Dining Experiences**: Suggest 2-3 likely dining experiences with a name and type (e.g., "The Lantern", "Chinese").
-3.  **Experiences & Activities**: Suggest 3-4 likely experiences or activities available at the hotel (e.g., "Rooftop Pool", "Spa", "Fitness Center").
-4.  **Wedding Venues**: Suggest 2-3 potential wedding venues (e.g., "Grand Ballroom", "Outdoor Lawns").
-5.  **Tags**: Provide 3-5 relevant, one-word or two-word tags (e.g., "luxury", "business", "city view", "pet friendly").
+2.  **Room Categories**: Suggest 2-3 likely room categories with a name, an estimated count, and an estimated size in sqft (e.g., "Deluxe Room", 150, "450 sqft").
+3.  **Dining Experiences**: Suggest 2-3 likely dining experiences with a name and type (e.g., "The Lantern", "Chinese").
+4.  **Experiences & Activities**: Suggest 3-4 likely experiences or activities available at the hotel (e.g., "Rooftop Pool", "Spa", "Fitness Center").
+5.  **Wedding Venues**: Suggest 2-3 potential wedding venues (e.g., "Grand Ballroom", "Outdoor Lawns").
+6.  **Tags**: Provide 3-5 relevant, one-word or two-word tags (e.g., "luxury", "business", "city view", "pet friendly").
 
 Output the result in a valid JSON object.
 `,

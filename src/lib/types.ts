@@ -313,6 +313,7 @@ export type GenerateHotelDetailsInput = z.infer<typeof GenerateHotelDetailsInput
 
 export const GenerateHotelDetailsOutputSchema = z.object({
   about: z.string().describe('A compelling, paragraph-long "about" description for the hotel.'),
+  roomCategories: z.array(z.object({ name: z.string(), count: z.number(), size: z.string() })).describe('A list of 2-3 potential room categories with name, count, and size.'),
   diningExperiences: z.array(z.object({ name: z.string(), type: z.string() })).describe('A list of 2-3 potential dining experiences.'),
   experiencesAndActivities: z.array(z.string()).describe('A list of 3-4 likely experiences and activities.'),
   weddingVenues: z.array(z.string()).describe('A list of 2-3 potential wedding venues.'),

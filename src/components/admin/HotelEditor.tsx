@@ -47,7 +47,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     defaultValues: hotel || newHotelDefault
   });
 
-  const { fields, append, remove } = useFieldArray({
+  const { fields, append, remove, replace } = useFieldArray({
     control,
     name: "roomCategories"
   });
@@ -103,7 +103,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
     }
   };
 
-  const handleGenerateDetails = async (sections: ('about' | 'dining' | 'experiences' | 'weddings' | 'tags')[]) => {
+  const handleGenerateDetails = async (sections: ('about' | 'dining' | 'experiences' | 'weddings' | 'tags' | 'rooms')[]) => {
     if (!watchedName) {
       toast({ variant: 'destructive', title: "Hotel Name Required", description: "Please enter a hotel name before generating details." });
       return;
@@ -116,6 +116,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
 
     if (result.details) {
       if (sections.includes('about')) setValue('about', result.details.about);
+      if (sections.includes('rooms')) replace(result.details.roomCategories || []);
       if (sections.includes('dining')) setValue('diningExperiences', result.details.diningExperiences || []);
       
       const formatForFieldArray = (data: string[]) => data.map(item => ({ value: item }));
@@ -177,7 +178,7 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
               <CardTitle className="text-2xl font-bold">{hotel?.id ? 'Edit Hotel' : 'Create New Hotel'}</CardTitle>
               <CardDescription>Manage hotel details, room categories, and images.</CardDescription>
             </div>
-            <Button type="button" onClick={() => handleGenerateDetails(['about', 'dining', 'experiences', 'weddings', 'tags'])} variant="outline">
+            <Button type="button" onClick={() => handleGenerateDetails(['about', 'rooms', 'dining', 'experiences', 'weddings', 'tags'])} variant="outline">
               <Wand2 className="mr-2 h-4 w-4" />
               Generate All Details with AI
             </Button>
@@ -234,9 +235,14 @@ export default function HotelEditor({ hotel }: HotelEditorProps) {
             <section>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold flex items-center gap-2"><GlassWater className="w-5 h-5"/>Room Categories</h3>
-                    <Button type="button" variant="outline" onClick={() => append({ name: '', count: 0, size: '' })}>
-                        Add Room
-                    </Button>
+                    <div className="flex items-center gap-2">
+                        <Button type="button" variant="ghost" size="sm" onClick={() => handleGenerateDetails(['rooms'])}>
+                            <Wand2 className="mr-2 h-4 w-4" /> Generate
+                        </Button>
+                        <Button type="button" variant="outline" onClick={() => append({ name: '', count: 0, size: '' })}>
+                            Add Room
+                        </Button>
+                    </div>
                 </div>
                 <div className="space-y-4">
                     {fields.map((field, index) => (
