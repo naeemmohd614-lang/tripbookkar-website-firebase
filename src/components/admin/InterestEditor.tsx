@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useEffect } from 'react';
 import { useForm, useFieldArray, SubmitHandler, useWatch } from 'react-hook-form';
@@ -9,27 +10,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Label } from '@/components/ui/label';
 import { Trash2, Wand2 } from 'lucide-react';
 import type { Interest } from '@/lib/types';
-import { useFirestore } from '@/firebase';
-import { doc } from 'firebase/firestore';
-import { setDocumentNonBlocking } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
-import Image from 'next/image';
-import { generateInterestDescriptionAction } from '@/app/actions';
+import { generateInterestDescriptionAction, saveInterestAction } from '@/app/actions';
 
 interface InterestEditorProps {
   interest?: Interest;
-}
-
-function slugify(text: string) {
-  if (!text) return '';
-  return text
-    .toString()
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w-]+/g, '')
-    .replace(/--+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
 }
 
 const newInterestDefault: Partial<Interest> = {
@@ -41,7 +26,6 @@ const newInterestDefault: Partial<Interest> = {
 
 export default function InterestEditor({ interest }: InterestEditorProps) {
   const router = useRouter();
-  const firestore = useFirestore();
   const { toast } = useToast();
 
   const { register, control, handleSubmit, reset, setValue, formState: { isSubmitting } } = useForm<Interest>({
@@ -79,39 +63,17 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
 
 
   const onSubmit: SubmitHandler<Interest> = async (data) => {
-    if (!firestore) {
-      toast({ variant: 'destructive', title: 'Error', description: 'Firestore not available.' });
-      return;
-    }
-
-    try {
-      let interestData: Interest;
-      const interestId = interest?.id || slugify(data.name);
-
-      if (!interestId) {
-        toast({ variant: 'destructive', title: 'Error', description: 'Interest name is required to create an ID.' });
-        return;
-      }
-
-      interestData = {
-        ...data,
-        id: interestId,
-      };
-
-      const interestRef = doc(firestore, 'interests', interestId);
-      await setDocumentNonBlocking(interestRef, interestData, { merge: true });
-      
+    const result = await saveInterestAction(interest?.id || null, data);
+    
+    if (result.success) {
       toast({
-        title: interest ? 'Interest Updated' : 'Interest Created',
+        title: result.isNew ? 'Interest Created' : 'Interest Updated',
         description: `"${data.name}" has been saved.`
       });
-      
       router.push('/admin/interests');
       router.refresh();
-
-    } catch (error: any) {
-      console.error("Error saving interest:", error);
-      toast({ variant: 'destructive', title: 'Save Failed', description: error.message });
+    } else {
+      toast({ variant: 'destructive', title: 'Save Failed', description: result.message });
     }
   };
 

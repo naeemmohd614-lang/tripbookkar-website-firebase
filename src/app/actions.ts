@@ -186,6 +186,7 @@ export async function bulkImportData(dataType: string): Promise<{ success: boole
       await batch.commit();
       revalidatePath('/admin/interests');
       revalidatePath('/interests');
+      revalidatePath('/');
       return { success: true, message: `${count} interests imported successfully.` };
     } else if (dataType === 'states') {
       const statesData = (await import(`@/data/states.json`)).default;
@@ -283,5 +284,36 @@ export async function saveHotelAction(
   } catch (error: any) {
     console.error("Error saving hotel:", error);
     return { success: false, message: error.message, isNew: !existingHotelId };
+  }
+}
+
+export async function saveInterestAction(
+  existingInterestId: string | null,
+  data: Interest
+): Promise<{ success: boolean; message: string; isNew: boolean }> {
+  try {
+    const isNew = !existingInterestId;
+    const interestId = existingInterestId || slugify(data.name);
+    
+    if (!interestId) {
+      throw new Error("Interest name is required to create an ID.");
+    }
+
+    const interestData: Interest = {
+      ...data,
+      id: interestId,
+    };
+    
+    const interestRef = db.collection('interests').doc(interestId);
+    await interestRef.set(interestData, { merge: true });
+
+    revalidatePath('/admin/interests');
+    revalidatePath(`/interests/${interestId}`);
+    revalidatePath('/');
+
+    return { success: true, message: "Interest saved successfully.", isNew };
+  } catch (error: any) {
+    console.error("Error saving interest:", error);
+    return { success: false, message: error.message, isNew: !existingInterestId };
   }
 }
