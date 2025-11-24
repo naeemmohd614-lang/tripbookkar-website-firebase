@@ -2,7 +2,7 @@
 
 'use client';
 import { featuredPackages } from '@/lib/data';
-import { notFound, useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -12,7 +12,7 @@ import type { Package } from '@/lib/types';
 import React from 'react';
 
 export default function PackageDetailPage({ params }: { params: { packageId: string } }) {
-    const { packageId } = params;
+    const { packageId } = React.use(Promise.resolve(params));
     const pkg = (featuredPackages as Package[]).find((p) => p.id === packageId);
 
     if (!pkg) {

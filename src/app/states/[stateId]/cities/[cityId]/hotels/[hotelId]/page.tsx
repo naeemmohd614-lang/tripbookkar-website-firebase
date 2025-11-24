@@ -1,6 +1,6 @@
 
 'use client';
-import { notFound, useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/carousel"
 
 export default function HotelDetailPage({ params }: { params: { hotelId: string }}) {
-  const { hotelId } = params;
+  const { hotelId } = React.use(Promise.resolve(params));
   const firestore = useFirestore();
 
   const hotelRef = useMemoFirebase(() => {

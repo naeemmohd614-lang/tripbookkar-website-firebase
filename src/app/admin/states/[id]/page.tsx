@@ -1,3 +1,4 @@
+
 'use client'
 import StateEditor from '@/components/admin/StateEditor';
 import type { State } from '@/lib/types';
@@ -8,7 +9,7 @@ import React from 'react';
 
 export default function EditStatePage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = params;
+  const { id } = React.use(Promise.resolve(params));
 
   const stateRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

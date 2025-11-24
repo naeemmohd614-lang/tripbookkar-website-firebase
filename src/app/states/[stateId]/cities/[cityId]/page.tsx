@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Users, ShoppingBasket } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
-import React, { use } from 'react';
+import React from 'react';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
@@ -31,7 +31,7 @@ const iconMap: { [key: string]: React.ElementType } = {
 };
 
 export default function CityPage({ params }: { params: { stateId: string; cityId: string } }) {
-  const { stateId, cityId } = params;
+  const { stateId, cityId } = React.use(Promise.resolve(params));
 
   const firestore = useFirestore();
 

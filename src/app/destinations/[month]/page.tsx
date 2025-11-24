@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { cities, states } from '@/lib/data';
 import type { Hotel, City, State } from '@/lib/types';
 import type { MonthData } from '@/data/monthly-destinations';
-import React, { use } from 'react';
+import React from 'react';
 import { useFirestore, useCollection, useDoc, useMemoFirebase } from '@/firebase';
 import { collection, query, where, doc } from 'firebase/firestore';
 
@@ -20,7 +20,7 @@ function slugify(text: string) {
 
 export default function MonthPage({ params }: { params: { month: string } }) {
     const firestore = useFirestore();
-    const { month: monthSlug } = params;
+    const { month: monthSlug } = React.use(Promise.resolve(params));
 
     const monthDocRef = useMemoFirebase(() => {
         if (!firestore || !monthSlug) return null;

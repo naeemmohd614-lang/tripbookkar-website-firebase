@@ -6,13 +6,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Building2 } from 'lucide-react';
 import type { Brand, Hotel } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
-import React, { use } from 'react';
+import React from 'react';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function BrandPage({ params }: { params: { brand: string }}) {
-  const { brand: brandSlug } = params;
+  const { brand: brandSlug } = React.use(Promise.resolve(params));
   const firestore = useFirestore();
   
   const brand = (brands as Brand[]).find((b) => b.brandSlug === brandSlug);

@@ -9,7 +9,7 @@ import React from 'react';
 
 export default function EditCityPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = params;
+  const { id } = React.use(Promise.resolve(params));
 
   const cityRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

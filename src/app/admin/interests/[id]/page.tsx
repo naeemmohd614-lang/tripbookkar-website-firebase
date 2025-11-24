@@ -1,3 +1,4 @@
+
 'use client';
 import InterestEditor from '@/components/admin/InterestEditor';
 import type { Interest } from '@/lib/types';
@@ -8,7 +9,7 @@ import React from 'react';
 
 export default function EditInterestPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = params;
+  const { id } = React.use(Promise.resolve(params));
 
   const interestRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

@@ -1,3 +1,4 @@
+
 'use client'
 import HotelEditor from '@/components/admin/HotelEditor';
 import type { Hotel } from '@/lib/types';
@@ -8,7 +9,7 @@ import React from 'react';
 
 export default function EditHotelPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = params;
+  const { id } = React.use(Promise.resolve(params));
 
   const hotelRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;

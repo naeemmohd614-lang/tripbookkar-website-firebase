@@ -1,3 +1,4 @@
+
 'use client';
 import PackageEditor from '@/components/admin/PackageEditor';
 import type { Package } from '@/lib/types';
@@ -8,7 +9,7 @@ import React from 'react';
 
 export default function EditPackagePage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = params;
+  const { id } = React.use(Promise.resolve(params));
 
   const packageRef = useMemoFirebase(() => {
     if (!firestore || !id) return null;
