@@ -215,7 +215,7 @@ export default function Hero() {
                     transition={{ repeat: Infinity, duration: 60, ease: 'linear' }}
                  />
                  {outerOrbitPartners.map((item, i) => (
-                    <OrbitingLogo key={`md-outer-${item.slug}`} item={item} index-i} total={outerOrbitPartners.length} radius={ORBIT_RADIUS_MD_OUTER} duration={80} />
+                    <OrbitingLogo key={`md-outer-${item.slug}`} item={item} index={i} total={outerOrbitPartners.length} radius={ORBIT_RADIUS_MD_OUTER} duration={80} />
                  ))}
                   {innerOrbitPartners.map((item, i) => (
                     <OrbitingLogo key={`md-inner-${item.slug}`} item={item} index={i} total={innerOrbitPartners.length} radius={ORBIT_RADIUS_MD_INNER} duration={60} />
@@ -312,3 +312,4 @@ export default function Hero() {
     </section>
   );
 }
+    
