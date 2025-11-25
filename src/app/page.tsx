@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/carousel"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Partners from "@/components/Partners";
+import Hero from "@/components/Hero";
 
 
 export default function Home() {
@@ -103,28 +104,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative w-full h-[60vh] md:h-[70vh] text-white">
-        {heroImage && (
-          <Image
-            src={heroImage.src}
-            alt="A stunning view of a tropical beach with clear blue water and palm trees, representing a dream vacation."
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroImage.caption}
-          />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
-            Find Your Next Stay
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg md:text-xl text-gray-200 drop-shadow-md">
-            Discover the best hotels and deals for your dream vacation.
-          </p>
-        </div>
-      </section>
-
+      <Hero />
       <section id="hotels" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
