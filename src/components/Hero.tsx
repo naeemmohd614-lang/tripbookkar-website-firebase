@@ -280,36 +280,8 @@ export default function Hero() {
             >
                 Exclusive luxury stays at unbeatable prices.
             </motion.p>
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1 }}
-            >
-              <motion.div
-                className="mt-8 flex justify-center"
-                animate={{
-                    scale: [1, 1.03, 1],
-                }}
-                transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-              >
-              <Button size="lg" asChild className="relative overflow-hidden group bg-gradient-to-r from-primary to-orange-400 text-primary-foreground hover:from-primary/90 hover:to-orange-400/90 transition-all duration-300 shadow-lg hover:shadow-primary/50">
-                  <Link href="/hotels">
-                      <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-32 group-hover:h-32 opacity-10"></span>
-                      <span className="relative flex items-center gap-2">
-                          <Search className="h-5 w-5" />
-                          Search Now
-                      </span>
-                  </Link>
-              </Button>
-              </motion.div>
-            </motion.div>
         </div>
       </div>
     </section>
   );
 }
-    
