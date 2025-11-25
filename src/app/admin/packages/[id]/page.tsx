@@ -3,7 +3,7 @@
 import PackageEditor from '@/components/admin/PackageEditor';
 import type { Package } from '@/lib/types';
 import { notFound } from 'next/navigation';
-import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { useFirestore, useDoc } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import React from 'react';
 
@@ -11,10 +11,7 @@ export default function EditPackagePage({ params }: { params: { id: string } }) 
   const firestore = useFirestore();
   const { id } = React.use(params);
 
-  const packageRef = useMemoFirebase(() => {
-    if (!firestore || !id) return null;
-    return doc(firestore, 'packages', id);
-  }, [firestore, id]);
+  const packageRef = firestore && id ? doc(firestore, 'packages', id) : null;
 
   const { data: pkg, isLoading } = useDoc<Package>(packageRef);
 

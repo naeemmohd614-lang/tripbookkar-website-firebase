@@ -4,16 +4,13 @@ import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function MountainsPage() {
     const firestore = useFirestore();
-    const mountainHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['mountain', 'himalayas', 'valley view']));
-    }, [firestore]);
+    const mountainHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['mountain', 'himalayas', 'valley view'])) : null;
     const { data: mountainHotels, isLoading } = useCollection<Hotel>(mountainHotelsQuery);
 
   const heroImage = {

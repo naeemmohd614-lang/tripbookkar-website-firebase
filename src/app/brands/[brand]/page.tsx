@@ -7,7 +7,7 @@ import { Building2 } from 'lucide-react';
 import type { Brand, Hotel } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
@@ -21,10 +21,7 @@ export default function BrandPage({ params }: { params: { brand: string }}) {
     notFound();
   }
 
-  const brandHotelsQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'hotels'), where('brandSlug', '==', brandSlug));
-  }, [firestore, brandSlug]);
+  const brandHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('brandSlug', '==', brandSlug)) : null;
 
   const { data: brandHotels, isLoading } = useCollection<Hotel>(brandHotelsQuery);
 

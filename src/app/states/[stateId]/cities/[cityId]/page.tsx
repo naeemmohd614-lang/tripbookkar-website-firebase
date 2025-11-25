@@ -1,5 +1,4 @@
 
-
 'use client';
 import { cities, states, attractions } from '@/lib/data';
 import { notFound }from 'next/navigation';
@@ -11,7 +10,7 @@ import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
@@ -44,10 +43,7 @@ export default function CityPage({ params }: { params: { stateId: string; cityId
   
   const cityAttractions = (attractions as Attraction[]).filter(attraction => attraction.cityId === cityId);
 
-  const cityHotelsQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'hotels'), where('cityId', '==', cityId));
-  }, [firestore, cityId]);
+  const cityHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('cityId', '==', cityId)) : null;
 
   const { data: cityHotels, isLoading } = useCollection<Hotel>(cityHotelsQuery);
   

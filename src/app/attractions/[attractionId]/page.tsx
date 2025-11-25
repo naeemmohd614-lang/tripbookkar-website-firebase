@@ -1,5 +1,4 @@
 
-
 'use client';
 
 import { notFound, useRouter } from 'next/navigation';
@@ -12,7 +11,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Clock, Ticket, CalendarCheck, MapPin, Bus, Train, Plane, Info, Hotel as HotelIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 export default function AttractionPage({ params }: { params: { attractionId: string } }) {
@@ -26,10 +25,9 @@ export default function AttractionPage({ params }: { params: { attractionId: str
         notFound();
     }
     
-    const nearbyHotelsQuery = useMemoFirebase(() => {
-        if (!firestore || !attraction.nearbyHotels || attraction.nearbyHotels.length === 0) return null;
-        return query(collection(firestore, 'hotels'), where('name', 'in', attraction.nearbyHotels));
-    }, [firestore, attraction.nearbyHotels]);
+    const nearbyHotelsQuery = (firestore && attraction.nearbyHotels && attraction.nearbyHotels.length > 0) 
+        ? query(collection(firestore, 'hotels'), where('name', 'in', attraction.nearbyHotels)) 
+        : null;
     
     const { data: nearbyHotels, isLoading } = useCollection<Hotel>(nearbyHotelsQuery);
 

@@ -4,16 +4,13 @@ import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function MilestoneCelebrationsPage() {
     const firestore = useFirestore();
-    const celebrationHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['romantic', 'palace', 'luxury']));
-    }, [firestore]);
+    const celebrationHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['romantic', 'palace', 'luxury'])) : null;
     const { data: celebrationHotels, isLoading } = useCollection<Hotel>(celebrationHotelsQuery);
 
   const heroImage = {

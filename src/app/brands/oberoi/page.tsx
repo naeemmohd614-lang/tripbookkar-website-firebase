@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import type { Hotel, Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
@@ -25,10 +25,7 @@ export default function OberoiPage() {
 
     const oberoiBrands = (brands as Brand[]).filter(b => oberoiBrandNames.includes(b.name));
     
-    const oberoiHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('brand', 'in', oberoiBrandNames));
-    }, [firestore]);
+    const oberoiHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('brand', 'in', oberoiBrandNames)) : null;
 
     const { data: oberoiHotels, isLoading } = useCollection<Hotel>(oberoiHotelsQuery);
 

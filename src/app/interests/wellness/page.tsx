@@ -4,16 +4,13 @@ import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function WellnessPage() {
     const firestore = useFirestore();
-    const wellnessHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['wellness', 'spa', 'yoga']));
-    }, [firestore]);
+    const wellnessHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['wellness', 'spa', 'yoga'])) : null;
     const { data: wellnessHotels, isLoading } = useCollection<Hotel>(wellnessHotelsQuery);
 
   const heroImage = {

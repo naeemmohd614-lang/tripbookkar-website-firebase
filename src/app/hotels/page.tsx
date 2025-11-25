@@ -2,15 +2,12 @@
 'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, orderBy } from 'firebase/firestore';
 
 export default function HotelsPage() {
   const firestore = useFirestore();
-  const hotelsQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'hotels'), orderBy('name', 'asc'));
-  }, [firestore]);
+  const hotelsQuery = firestore ? query(collection(firestore, 'hotels'), orderBy('name', 'asc')) : null;
 
   const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
 

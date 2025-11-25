@@ -3,7 +3,7 @@
 import MonthEditor from '@/components/admin/MonthEditor';
 import type { MonthData } from '@/data/monthly-destinations';
 import { notFound } from 'next/navigation';
-import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { useFirestore, useDoc } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import React from 'react';
 
@@ -11,10 +11,7 @@ export default function EditMonthPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
   const { id } = React.use(params);
 
-  const monthRef = useMemoFirebase(() => {
-    if (!firestore || !id) return null;
-    return doc(firestore, 'monthlyDestinations', id);
-  }, [firestore, id]);
+  const monthRef = firestore && id ? doc(firestore, 'monthlyDestinations', id) : null;
 
   const { data: month, isLoading } = useDoc<MonthData>(monthRef);
 

@@ -1,7 +1,7 @@
 
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, onSnapshot, doc } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -15,10 +15,7 @@ export default function AdminAffiliatesPage() {
     const { register, handleSubmit, reset, watch } = useForm();
     const { toast } = useToast();
     
-    const affiliatesQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return collection(firestore, 'affiliates');
-    }, [firestore]);
+    const affiliatesQuery = firestore ? collection(firestore, 'affiliates') : null;
 
     const { data: affiliates, isLoading } = useCollection<any>(affiliatesQuery);
 

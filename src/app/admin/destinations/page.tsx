@@ -3,7 +3,7 @@
 import React from 'react';
 import { Pencil, Trash2, Plus, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import type { MonthData } from '@/data/monthly-destinations';
 import {
@@ -49,10 +49,7 @@ function BulkImportMonthlyData() {
 export default function DestinationsPage() {
     const firestore = useFirestore();
     
-    const monthlyDestinationsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return collection(firestore, 'monthlyDestinations');
-    }, [firestore]);
+    const monthlyDestinationsQuery = firestore ? collection(firestore, 'monthlyDestinations') : null;
 
     const { data: monthlyDestinations, isLoading } = useCollection<MonthData>(monthlyDestinationsQuery);
 

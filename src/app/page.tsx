@@ -14,7 +14,7 @@ import Recommendations from "@/components/recommendations";
 import { featuredPackages } from "@/lib/data";
 import HotelCard from "@/components/hotel-card";
 import type { Hotel, Interest, State, MonthDestination, City } from "@/lib/types";
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, orderBy, limit } from 'firebase/firestore';
 import {
   Carousel,
@@ -30,38 +30,23 @@ import Partners from "@/components/Partners";
 export default function Home() {
   const firestore = useFirestore();
 
-  const hotelsQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'hotels'), orderBy('rating', 'desc'), limit(3));
-  }, [firestore]);
+  const hotelsQuery = firestore ? query(collection(firestore, 'hotels'), orderBy('rating', 'desc'), limit(3)) : null;
 
   const { data: featuredHotels, isLoading: hotelsLoading } = useCollection<Hotel>(hotelsQuery);
   
-  const interestsQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'interests'), orderBy('name'));
-  }, [firestore]);
+  const interestsQuery = firestore ? query(collection(firestore, 'interests'), orderBy('name')) : null;
 
   const { data: interests, isLoading: interestsLoading } = useCollection<Interest>(interestsQuery);
 
-  const statesQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'states'), orderBy('name', 'asc'));
-  }, [firestore]);
+  const statesQuery = firestore ? query(collection(firestore, 'states'), orderBy('name', 'asc')) : null;
 
   const { data: states, isLoading: statesLoading } = useCollection<State>(statesQuery);
   
-  const citiesQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'cities'), orderBy('name', 'asc'));
-  }, [firestore]);
+  const citiesQuery = firestore ? query(collection(firestore, 'cities'), orderBy('name', 'asc')) : null;
 
   const { data: cities, isLoading: citiesLoading } = useCollection<City>(citiesQuery);
 
-  const destinationsByMonthQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return query(collection(firestore, 'monthlyDestinations'));
-  }, [firestore]);
+  const destinationsByMonthQuery = firestore ? query(collection(firestore, 'monthlyDestinations')) : null;
 
   const { data: destinationsByMonthData, isLoading: destinationsLoading } = useCollection<MonthDestination>(destinationsByMonthQuery);
   

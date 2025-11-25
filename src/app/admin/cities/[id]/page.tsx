@@ -3,7 +3,7 @@
 import CityEditor from '@/components/admin/CityEditor';
 import type { City } from '@/lib/types';
 import { notFound } from 'next/navigation';
-import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { useFirestore, useDoc } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import React from 'react';
 
@@ -11,10 +11,7 @@ export default function EditCityPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
   const { id } = React.use(params);
 
-  const cityRef = useMemoFirebase(() => {
-    if (!firestore || !id) return null;
-    return doc(firestore, 'cities', id);
-  }, [firestore, id]);
+  const cityRef = firestore && id ? doc(firestore, 'cities', id) : null;
 
   const { data: city, isLoading } = useDoc<City>(cityRef);
 

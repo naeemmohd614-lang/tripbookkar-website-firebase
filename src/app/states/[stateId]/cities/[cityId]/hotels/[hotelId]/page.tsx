@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Check, Dumbbell, Dog, MapPin, Utensils, Zap, Mic2, GlassWater } from 'lucide-react';
 import React from 'react';
-import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { useFirestore, useDoc } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import {
   Carousel,
@@ -23,10 +23,7 @@ export default function HotelDetailPage({ params }: { params: { hotelId: string 
   const { hotelId } = React.use(params);
   const firestore = useFirestore();
 
-  const hotelRef = useMemoFirebase(() => {
-    if (!firestore || !hotelId) return null;
-    return doc(firestore, 'hotels', hotelId);
-  }, [firestore, hotelId]);
+  const hotelRef = firestore && hotelId ? doc(firestore, 'hotels', hotelId) : null;
 
   const { data: hotel, isLoading } = useDoc<Hotel>(hotelRef);
 
@@ -139,7 +136,7 @@ export default function HotelDetailPage({ params }: { params: { hotelId: string 
                     )}
 
                     {hotel.experiencesAndActivities && hotel.experiencesAndActivities.length > 0 && (
-                        <SectionCard icon={Zap} title="Experiences &amp; Activities">
+                        <SectionCard icon={Zap} title="Experiences & Activities">
                             {hotel.experiencesAndActivities.map((activity, index) => {
                                 const activityValue = typeof activity === 'string' ? activity : (activity as any).value;
                                 return (

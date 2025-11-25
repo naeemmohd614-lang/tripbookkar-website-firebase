@@ -3,7 +3,7 @@
 import React from 'react';
 import { Pencil, Trash2, Plus, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import type { Interest } from '@/lib/types';
 import {
@@ -52,10 +52,7 @@ function BulkImportInterestsData() {
 export default function InterestsPage() {
     const firestore = useFirestore();
     
-    const interestsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return collection(firestore, 'interests');
-    }, [firestore]);
+    const interestsQuery = firestore ? collection(firestore, 'interests') : null;
 
     const { data: interests, isLoading } = useCollection<Interest>(interestsQuery);
 

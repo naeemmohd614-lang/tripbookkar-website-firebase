@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import type { Hotel, Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
@@ -25,10 +25,7 @@ export default function LeelaPage() {
 
     const leelaBrands = (brands as Brand[]).filter(b => leelaBrandNames.includes(b.name));
     
-    const leelaHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('brand', 'in', leelaBrandNames));
-    }, [firestore]);
+    const leelaHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('brand', 'in', leelaBrandNames)) : null;
 
     const { data: leelaHotels, isLoading } = useCollection<Hotel>(leelaHotelsQuery);
 

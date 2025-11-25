@@ -2,7 +2,7 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
-import { useFirestore, useCollection, useMemoFirebase, deleteDocumentNonBlocking } from '@/firebase';
+import { useFirestore, useCollection, deleteDocumentNonBlocking } from '@/firebase';
 import { collection, doc } from 'firebase/firestore';
 import { Pencil, Trash2, Star, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -100,10 +100,7 @@ export default function HotelsPage(){
   const firestore = useFirestore();
   const { toast } = useToast();
 
-  const hotelsQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return collection(firestore, 'hotels');
-  }, [firestore]);
+  const hotelsQuery = firestore ? collection(firestore, 'hotels') : null;
 
   const { data: hotels, isLoading } = useCollection<Hotel>(hotelsQuery);
 

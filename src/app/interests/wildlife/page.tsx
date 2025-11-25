@@ -4,16 +4,13 @@ import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function WildlifePage() {
     const firestore = useFirestore();
-    const wildlifeHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['wildlife', 'jungle', 'corbett']));
-    }, [firestore]);
+    const wildlifeHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['wildlife', 'jungle', 'corbett'])) : null;
     const { data: wildlifeHotels, isLoading } = useCollection<Hotel>(wildlifeHotelsQuery);
 
   const heroImage = {

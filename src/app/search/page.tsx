@@ -2,7 +2,7 @@
 'use client';
 import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where, or } from 'firebase/firestore';
 import HotelCard from '@/components/hotel-card';
 import SearchForm from '@/components/search-form';
@@ -13,13 +13,7 @@ function SearchResults() {
   const q = searchParams.get('q')?.toLowerCase() || '';
 
   const firestore = useFirestore();
-  const hotelsQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    if (!q) return collection(firestore, 'hotels');
-    
-    // This is a simple client-side search. For production, consider a dedicated search service.
-    return query(collection(firestore, 'hotels'));
-  }, [firestore, q]);
+  const hotelsQuery = firestore ? collection(firestore, 'hotels') : null;
 
   const { data: allHotels, isLoading } = useCollection<Hotel>(hotelsQuery);
 

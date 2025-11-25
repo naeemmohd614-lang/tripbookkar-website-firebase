@@ -1,15 +1,13 @@
+
 'use client';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection } from 'firebase/firestore';
 
 export default function PricingPage(){
   const firestore = useFirestore();
 
-  const pricingRulesQuery = useMemoFirebase(() => {
-    if (!firestore) return null;
-    return collection(firestore, 'pricingRules');
-  }, [firestore]);
+  const pricingRulesQuery = firestore ? collection(firestore, 'pricingRules') : null;
   
   const { data: rules, isLoading } = useCollection(pricingRulesQuery);
   

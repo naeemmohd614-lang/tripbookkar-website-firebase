@@ -3,7 +3,7 @@
 import React from 'react';
 import { Pencil, Trash2, Plus, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import type { State } from '@/lib/types';
 import {
@@ -52,10 +52,7 @@ function BulkImportStatesData() {
 export default function StatesPage() {
     const firestore = useFirestore();
     
-    const statesQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return collection(firestore, 'states');
-    }, [firestore]);
+    const statesQuery = firestore ? collection(firestore, 'states') : null;
 
     const { data: states, isLoading } = useCollection<State>(statesQuery);
 

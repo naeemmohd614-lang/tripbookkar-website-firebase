@@ -1,18 +1,16 @@
+
 'use client';
 import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function WeddingsPage() {
     const firestore = useFirestore();
-    const weddingHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['wedding', 'wedding hotel', 'destination wedding']));
-    }, [firestore]);
+    const weddingHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['wedding', 'wedding hotel', 'destination wedding'])) : null;
     const { data: weddingHotels, isLoading } = useCollection<Hotel>(weddingHotelsQuery);
 
   const heroImage = {

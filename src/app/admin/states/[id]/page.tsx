@@ -3,7 +3,7 @@
 import StateEditor from '@/components/admin/StateEditor';
 import type { State } from '@/lib/types';
 import { notFound } from 'next/navigation';
-import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { useFirestore, useDoc } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import React from 'react';
 
@@ -11,10 +11,7 @@ export default function EditStatePage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
   const { id } = React.use(params);
 
-  const stateRef = useMemoFirebase(() => {
-    if (!firestore || !id) return null;
-    return doc(firestore, 'states', id);
-  }, [firestore, id]);
+  const stateRef = firestore && id ? doc(firestore, 'states', id) : null;
 
   const { data: state, isLoading } = useDoc<State>(stateRef);
 

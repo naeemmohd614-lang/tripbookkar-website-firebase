@@ -3,7 +3,7 @@
 import React from 'react';
 import { Pencil, Trash2, Plus, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, orderBy, query } from 'firebase/firestore';
 import type { City } from '@/lib/types';
 import {
@@ -19,10 +19,7 @@ import Link from 'next/link';
 export default function CitiesPage() {
     const firestore = useFirestore();
     
-    const citiesQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'cities'), orderBy('name', 'asc'));
-    }, [firestore]);
+    const citiesQuery = firestore ? query(collection(firestore, 'cities'), orderBy('name', 'asc')) : null;
 
     const { data: cities, isLoading } = useCollection<City>(citiesQuery);
 

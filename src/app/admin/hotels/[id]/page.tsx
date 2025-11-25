@@ -3,7 +3,7 @@
 import HotelEditor from '@/components/admin/HotelEditor';
 import type { Hotel } from '@/lib/types';
 import { notFound } from 'next/navigation';
-import { useFirestore, useDoc, useMemoFirebase } from '@/firebase';
+import { useFirestore, useDoc } from '@/firebase';
 import { doc } from 'firebase/firestore';
 import React from 'react';
 
@@ -11,10 +11,7 @@ export default function EditHotelPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
   const { id } = React.use(params);
 
-  const hotelRef = useMemoFirebase(() => {
-    if (!firestore || !id) return null;
-    return doc(firestore, 'hotels', id);
-  }, [firestore, id]);
+  const hotelRef = firestore && id ? doc(firestore, 'hotels', id) : null;
 
   const { data: hotel, isLoading } = useDoc<Hotel>(hotelRef);
 

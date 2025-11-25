@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import type { Hotel, Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
@@ -25,10 +25,7 @@ export default function AccorPage() {
 
     const accorBrands = (brands as Brand[]).filter(b => accorBrandNames.includes(b.name));
 
-    const accorHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('brand', 'in', accorBrandNames));
-    }, [firestore]);
+    const accorHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('brand', 'in', accorBrandNames)) : null;
 
     const { data: accorHotels, isLoading } = useCollection<Hotel>(accorHotelsQuery);
 

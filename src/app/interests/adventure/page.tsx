@@ -4,20 +4,17 @@ import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function AdventurePage() {
     const firestore = useFirestore();
 
-    const adventureHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(
+    const adventureHotelsQuery = firestore ? query(
             collection(firestore, 'hotels'), 
             where('tags', 'array-contains-any', ['adventure', 'ski resort', 'trekking', 'wildlife', 'jungle'])
-        );
-    }, [firestore]);
+        ) : null;
 
     const { data: adventureHotels, isLoading } = useCollection<Hotel>(adventureHotelsQuery);
 

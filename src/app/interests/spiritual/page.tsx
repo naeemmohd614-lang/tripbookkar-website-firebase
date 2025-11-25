@@ -4,16 +4,13 @@ import HotelCard from '@/components/hotel-card';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
-import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 export default function SpiritualPage() {
     const firestore = useFirestore();
-    const spiritualHotelsQuery = useMemoFirebase(() => {
-        if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['spiritual', 'pilgrimage', 'rishikesh']));
-    }, [firestore]);
+    const spiritualHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('tags', 'array-contains-any', ['spiritual', 'pilgrimage', 'rishikesh'])) : null;
     const { data: spiritualHotels, isLoading } = useCollection<Hotel>(spiritualHotelsQuery);
 
   const heroImage = {
