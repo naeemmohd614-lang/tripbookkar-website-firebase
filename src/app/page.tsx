@@ -24,6 +24,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Partners from "@/components/Partners";
 
 
 export default function Home() {
@@ -280,6 +281,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Partners />
 
       <section id="destinations-by-month" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">

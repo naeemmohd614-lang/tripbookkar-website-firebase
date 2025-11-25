@@ -1,3 +1,4 @@
+
 // This file is a placeholder for when data is fetched dynamically.
 // For now, we are using the JSON file.
 import type { Destination, Brand, State, City, Hotel, MonthDestination, Attraction } from './types';
@@ -74,4 +75,19 @@ export const destinationsByMonth: MonthDestination[] = [
     { name: 'October', imageId: 'month-oct', slug: 'october' },
     { name: 'November', imageId: 'month-nov', slug: 'november' },
     { name: 'December', imageId: 'month-dec', slug: 'december' },
+];
+
+export const trustedPartners = [
+    { name: "Marriott", slug: "marriott" },
+    { name: "Taj", slug: "taj" },
+    { name: "Oberoi", slug: "oberoi" },
+    { name: "The Leela", slug: "the-leela" },
+    { name: "Hyatt", slug: "hyatt" },
+    { name: "Hilton", slug: "hilton" },
+    { name: "Accor", slug: "accor" },
+    { name: "IHG", slug: "ihg" },
+    { name: "Radisson", slug: "radisson" },
+    { name: "ITC Hotels", slug: "itc" },
+    { name: "Vistara", slug: "vistara" },
+    { name: "IndiGo", slug: "indigo" },
 ];
