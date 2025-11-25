@@ -1,5 +1,4 @@
 
-
 [
   {
     "brandSlug": "the-ritz-carlton",
@@ -46,7 +45,7 @@
   {
     "brandSlug": "marriott",
     "name": "Marriott",
-    "logo": "",
+    "logo": "https://www.vectorlogo.zone/logos/marriott/marriott-ar21.svg",
     "description": "The flagship brand of Marriott International, offering consistent, high-quality service.",
     "totalHotels": 600
   },
@@ -464,5 +463,3 @@
     "totalHotels": 30
   }
 ]
-
-    

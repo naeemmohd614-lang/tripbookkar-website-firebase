@@ -32,7 +32,7 @@ export default function BrandPage({ params }: { params: { brand: string }}) {
           <div className="flex items-center gap-4">
             {brand.logo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={brand.logo} alt={`${brand.name} logo`} className="h-16 w-16 object-contain" />
+              <img src={brand.logo} alt={`${brand.name} logo`} className="h-16 object-contain" />
             ) : (
               <div className="h-16 w-16 bg-muted rounded-lg flex items-center justify-center">
                 <Building2 className="w-8 h-8 text-muted-foreground" />
