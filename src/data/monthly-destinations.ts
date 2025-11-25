@@ -59,7 +59,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Auli, Uttarakhand",
         reason: "January transforms Auli into a premier skiing destination. The snow-covered meadows, panoramic views of the Himalayas, and the crisp mountain air make it perfect for winter sports enthusiasts and nature lovers.",
-        hotels: allHotels.filter(h => ["The Royal Village", "Himalayan High, Auli", "The Tattva, Auli", "Cliff Top Club, Auli", "Blue Poppy Resort, Auli"].includes(h.name)),
+        hotels: ["The Royal Village, Auli", "Himalayan High, Auli", "The Tattva, Auli", "Cliff Top Club, Auli", "Blue Poppy Resort, Auli"],
         image: { src: "https://images.unsplash.com/photo-1708622359632-56294a8d327e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c25vd3klMjBtb3VudGFpbnMlMjBhdWxpfGVufDB8fHx8MTc2MzcxNjgzM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "snowy mountains auli" }
       },
       {
@@ -662,62 +662,62 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Kolkata, West Bengal",
         reason: "Immerse yourself in the grand festivities of Durga Puja. The city turns into a massive art gallery with beautifully crafted pandals and idols, accompanied by delicious food.",
-        hotels: allHotels.filter(h => ["The Oberoi Grand, Kolkata", "Taj Bengal", "ITC Sonar, Kolkata", "Hyatt Regency Kolkata", "The Park Kolkata"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/kolkata-oct/1200/400", caption: "durga puja kolkata" }
+        hotels: allHotels.filter(h => h.city === 'Kolkata'),
+        image: { src: "https://images.unsplash.com/photo-1728750752779-84c51771d3bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkdXJnYSUyMHB1amElMjBrb2xrYXRhfGVufDB8fHx8MTc2NDA5MDYwOXww&ixlib=rb-4.1.0&q=80&w=1080", caption: "durga puja kolkata" }
       },
       {
         name: "Mysore, Karnataka",
         reason: "Witness the royal splendor of Dasara celebrations. The Mysore Palace is magnificently illuminated, and the Jumboo Savari (elephant procession) is a grand spectacle.",
-        hotels: allHotels.filter(h => ["Radisson Blu Plaza Hotel Mysore", "Grand Mercure Mysore", "Fortune JP Palace", "The Windflower Resort & Spa", "Royal Orchid Metropole"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/mysore-oct/1200/400", caption: "mysore palace dasara" }
+        hotels: allHotels.filter(h => h.city === 'Mysuru'),
+        image: { src: "https://images.unsplash.com/photo-1719973123178-6d5cf170f4a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxteXNvcmUlMjBwYWxhY2UlMjBkYXNhcmF8ZW58MHx8fHwxNzY0MDkwNjA5fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "mysore palace dasara" }
       },
       {
         name: "Bandhavgarh National Park, Madhya Pradesh",
         reason: "The park reopens after the monsoon. The forest is lush, and the chances of spotting tigers and other wildlife are high as they come out to the waterholes.",
         hotels: allHotels.filter(h => ["Syna Tiger Resort", "Mahua Kothi, A Taj Safari", "Samode Safari Lodge", "Lemon Tree Wildlife Resort", "Nature Heritage Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/bandhavgarh-oct/1200/400", caption: "tiger in bandhavgarh" }
+        image: { src: "https://images.unsplash.com/photo-1718546254763-d99e07ec06a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0aWdlciUyMGluJTIwYmFuZGhhdmdhcmh8ZW58MHx8fHwxNzY0MDkwNjA5fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "tiger in bandhavgarh" }
       },
       {
         name: "Hampi, Karnataka",
         reason: "The weather is dry and pleasant, perfect for exploring the vast UNESCO World Heritage site on foot or by bicycle. The post-monsoon landscape is still green.",
         hotels: allHotels.filter(h => ["Evolve Back, Hampi", "Hyatt Place Hampi", "Hampi's Boulders Resort", "Heritage Resort Hampi", "Kishkinda Heritage Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/hampi-oct/1200/400", caption: "hampi stone chariot" }
+        image: { src: "https://images.unsplash.com/photo-1651073231492-169afcf84f36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYW1waSUyMHN0b25lJTIwY2hhcmlvdHxlbnwwfHx8fDE3NjQwOTA2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "hampi stone chariot" }
       },
       {
         name: "Pachmarhi, Madhya Pradesh",
         reason: "The 'Queen of Satpura' is at its scenic best with lush greenery and active waterfalls after the rains. The pleasant weather is ideal for trekking and sightseeing.",
-        hotels: allHotels.filter(h => ["Welcomheritage Golf View", "MPT Amaltas, Pachmarhi", "Pachmarhi", "Hotel Highlands", "Rock End Manor"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/pachmarhi-oct/1200/400", caption: "pachmarhi landscape" }
+        hotels: allHotels.filter(h => h.city === 'Pachmarhi'),
+        image: { src: "https://images.unsplash.com/photo-1674500547677-6a779a7faefe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYWNobWFyaGklMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY0MDkwNjEwfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "pachmarhi landscape" }
       },
        {
         name: "Jodhpur, Rajasthan",
         reason: "The weather is perfect for exploring the Blue City. The world-renowned Rajasthan International Folk Festival (RIFF) takes place at Mehrangarh Fort in October.",
-        hotels: allHotels.filter(h => ["Umaid Bhawan Palace, Jodhpur", "RAAS Jodhpur", "Taj Hari Mahal Jodhpur", "Ajit Bhawan", "The Ummed Jodhpur Palace"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/jodhpur-oct/1200/400", caption: "mehrangarh fort jodhpur night" }
+        hotels: allHotels.filter(h => h.city === 'Jodhpur'),
+        image: { src: "https://images.unsplash.com/photo-1711209199183-fbdfd859d9bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZWhyYW5nYXJoJTIwZm9ydCUyMGpvZGhwdXIlMjBuaWdodHxlbnwwfHx8fDE3NjQwOTA2MDl8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "mehrangarh fort jodhpur night" }
       },
       {
         name: "Rishikesh, Uttarakhand",
         reason: "The post-monsoon river has a great flow for white-water rafting, and the weather is ideal for yoga, meditation, and camping by the Ganges.",
-        hotels: allHotels.filter(h => ["The Westin Resort & Spa, Himalayas", "The Roseate Ganges", "Aloha on the Ganges", "Taj Rishikesh Resort & Spa, Uttarakhand", "EllBee Ganga View"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/rishikesh-oct/1200/400", caption: "rafting in rishikesh" }
+        hotels: allHotels.filter(h => h.city === 'Rishikesh'),
+        image: { src: "https://images.unsplash.com/photo-1715230656262-9410dfbead2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWZ0aW5nJTIwaW4lMjByaXNoaWtlc2h8ZW58MHx8fHwxNzY0MDkwNjEwfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "rafting in rishikesh" }
       },
       {
         name: "Darjeeling, West Bengal",
         reason: "Post-monsoon clear skies offer the best views of the Kanchenjunga range. It's also the time for the 'second flush' tea, considered one of the finest.",
-        hotels: allHotels.filter(h => ["Mayfair Darjeeling", "Windamere Hotel", "Elgin Darjeeling", "Cedar Inn", "Viceroy Hotel"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/darjeeling-oct/1200/400", caption: "kanchenjunga view darjeeling" }
+        hotels: allHotels.filter(h => h.city === 'Darjeeling'),
+        image: { src: "https://images.unsplash.com/photo-1637737118663-f1a53ee1d5a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxrYW5jaGVuanVuZ2ElMjB2aWV3JTIwZGFyamVlbGluZ3xlbnwwfHx8fDE3NjQwOTA2MDl8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kanchenjunga view darjeeling" }
       },
       {
         name: "Diu",
         reason: "The weather is dry and pleasant, perfect for enjoying the pristine beaches and Portuguese architecture without the crowds of Goa.",
-        hotels: allHotels.filter(h => ["The Azzaro Resorts & Spa", "Radhika Beach Resort", "Sugati Beach Resort", "Hotel Apaar", "Krishna Park Resort"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/diu-oct/1200/400", caption: "diu fort" }
+        hotels: [],
+        image: { src: "https://images.unsplash.com/photo-1569776186059-f26b84be14b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaXUlMjBmb3J0fGVufDB8fHx8MTc2NDA5MDYwOXww&ixlib=rb-4.1.0&q=80&w=1080", caption: "diu fort" }
       },
       {
         name: "Nainital, Uttarakhand",
         reason: "The autumn season brings a crispness to the air and clear panoramic views of the Himalayas. Enjoy boating on Naini Lake and get panoramic Himalayan views from Snow View Point.",
-        hotels: allHotels.filter(h => ["The Naini Retreat, by Leisure Hotels", "Shervani Hilltop", "The Manu Maharani", "Vikram Vintage Inn", "The Pavilion"].includes(h.name)),
-        image: { src: "https://picsum.photos/seed/nainital-oct/1200/400", caption: "nainital lake" }
+        hotels: allHotels.filter(h => h.city === 'Nainital'),
+        image: { src: "https://images.unsplash.com/photo-1616605586215-199845790f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmFpbml0YWwlMjBsYWtlfGVufDB8fHx8MTc2NDA5MDYxMHww&ixlib=rb-4.1.0&q=80&w=1080", caption: "nainital lake" }
       }
     ]
   },
@@ -856,3 +856,5 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
+
+    
