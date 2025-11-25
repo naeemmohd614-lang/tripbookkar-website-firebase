@@ -1,13 +1,17 @@
 'use client';
 
-import { Mountain } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 export default function Logo({ className }: { className?: string }) {
   return (
-    <div className={cn("flex items-center justify-center gap-2", className)}>
-      <Mountain className="h-8 w-8 text-primary" />
-      <span className="font-headline text-3xl font-bold text-primary">TripBookKar</span>
+    <div className={cn("relative w-[200px] h-[50px]", className)}>
+      <Image 
+        src="/TripBookkar.png"
+        alt="TripBookkar Logo" 
+        fill
+        className="object-contain"
+      />
     </div>
   );
 }
