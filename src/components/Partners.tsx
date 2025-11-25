@@ -2,9 +2,9 @@
 'use client';
 
 import { trustedPartners } from "@/lib/data";
-import SectionTitle from "../shared/SectionTitle";
+import SectionTitle from "@/components/shared/SectionTitle";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function Partners() {
     return (
