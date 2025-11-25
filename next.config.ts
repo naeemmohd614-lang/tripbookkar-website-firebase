@@ -70,6 +70,12 @@ const nextConfig: NextConfig = {
         hostname: 'm.ahstatic.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.hilton.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
