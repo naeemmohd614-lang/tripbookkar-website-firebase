@@ -154,16 +154,22 @@ export const useFirebaseApp = (): FirebaseApp => {
   return firebaseApp;
 };
 
-type MemoFirebase <T> = T & {__memo?: boolean};
-
-export function useMemoFirebase<T>(factory: () => T, deps: DependencyList): T | (MemoFirebase<T>) {
-  const memoized = useMemo(factory, deps);
-  
-  if(typeof memoized !== 'object' || memoized === null) return memoized;
-  (memoized as MemoFirebase<T>).__memo = true;
-  
-  return memoized;
+/**
+ * Custom hook to memoize Firestore queries and other objects.
+ * This is a wrapper around React's `useMemo` to stabilize object references
+ * across re-renders, preventing infinite loops in `useEffect` hooks that
+ * depend on these objects (e.g., in `useCollection` and `useDoc`).
+ *
+ * @template T The type of the value to be memoized.
+ * @param {() => T} factory A function that creates the value to be memoized.
+ * @param {DependencyList} deps An array of dependencies for the `useMemo` hook.
+ * @returns {T} The memoized value.
+ */
+export function useMemoFirebase<T>(factory: () => T, deps: DependencyList): T {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  return useMemo(factory, deps);
 }
+
 
 /**
  * Hook specifically for accessing the authenticated user's state.
