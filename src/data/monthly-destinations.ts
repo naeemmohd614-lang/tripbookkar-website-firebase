@@ -13,7 +13,7 @@ import ihgHotelsData from '@/data/ihg.json';
 import radissonHotelsData from '@/data/radisson.json';
 
 
-const allHotels = [
+const allHotels: Hotel[] = [
   ...marriottHotelsData,
   ...tajHotelsData,
   ...oberoiHotelsData,
@@ -24,7 +24,7 @@ const allHotels = [
   ...accorHotelsData,
   ...ihgHotelsData,
   ...radissonHotelsData
-] as Hotel[];
+];
 
 interface MonthlyDestination {
   name: string;
@@ -856,3 +856,5 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
+
+    
