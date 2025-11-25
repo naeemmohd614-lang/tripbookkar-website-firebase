@@ -1,6 +1,7 @@
+
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useFirestore } from '@/firebase';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, onSnapshot, doc } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -10,26 +11,28 @@ import { setDocumentNonBlocking } from '@/firebase';
 import { useToast } from '@/hooks/use-toast';
 
 export default function AdminAffiliatesPage() {
-    const [affiliates, setAffiliates] = useState<any[]>([]);
     const firestore = useFirestore();
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, reset, watch } = useForm();
     const { toast } = useToast();
+    
+    const affiliatesQuery = useMemoFirebase(() => {
+        if (!firestore) return null;
+        return collection(firestore, 'affiliates');
+    }, [firestore]);
+
+    const { data: affiliates, isLoading } = useCollection<any>(affiliatesQuery);
+
+    const affiliate = affiliates?.[0];
 
     useEffect(() => {
-        if (!firestore) return;
-        const unsub = onSnapshot(collection(firestore, 'affiliates'), snap => {
-            const affiliateData = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-            setAffiliates(affiliateData);
-            if (affiliateData.length > 0) {
-                reset(affiliateData[0]);
-            }
-        });
-        return () => unsub();
-    }, [firestore, reset]);
+        if (affiliate) {
+            reset(affiliate);
+        }
+    }, [affiliate, reset]);
 
     const onSubmit = (data: any) => {
-        if (!firestore || affiliates.length === 0) return;
-        const affiliateId = affiliates[0].id;
+        if (!firestore || !affiliate) return;
+        const affiliateId = affiliate.id;
         if (!affiliateId) {
             toast({
                 variant: 'destructive',
@@ -39,7 +42,6 @@ export default function AdminAffiliatesPage() {
             return;
         }
         const docRef = doc(firestore, 'affiliates', affiliateId);
-        // We are not awaiting this, just firing and forgetting
         setDocumentNonBlocking(docRef, data, { merge: true });
         
         toast({
@@ -47,6 +49,10 @@ export default function AdminAffiliatesPage() {
             description: 'Your affiliate IDs have been saved.',
         });
     };
+    
+    if (isLoading) {
+        return <p>Loading affiliate settings...</p>;
+    }
 
     return (
         <div>
@@ -56,7 +62,7 @@ export default function AdminAffiliatesPage() {
                     <CardTitle>Affiliate IDs</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    {affiliates.length > 0 ? (
+                    {affiliate ? (
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -97,7 +103,7 @@ export default function AdminAffiliatesPage() {
                             </div>
                         </form>
                     ) : (
-                        <p>Loading affiliate settings or none found...</p>
+                        <p>No affiliate settings found.</p>
                     )}
                 </CardContent>
             </Card>
