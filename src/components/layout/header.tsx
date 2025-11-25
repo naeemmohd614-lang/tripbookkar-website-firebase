@@ -64,6 +64,7 @@ import React from 'react';
 import { Separator } from '../ui/separator';
 import { ThemeToggle } from '../theme-toggle';
 import SearchForm from '../search-form';
+import Logo from '../shared/Logo';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -231,10 +232,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue">
-          <Mountain className="h-6 w-6" />
-          <span className="font-headline">TripBookKar</span>
-        </Link>
+        <Logo />
 
         <div className="hidden md:flex">
           <NavigationMenu>
@@ -302,10 +300,9 @@ export default function Header() {
               <SheetHeader>
                 <SheetTitle className="sr-only">Menu</SheetTitle>
               </SheetHeader>
-              <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue mb-6">
-                <Mountain className="h-6 w-6" />
-                <span className="font-headline">TripBookKar</span>
-              </Link>
+              <div className="p-4">
+                <Logo />
+              </div>
               <MobileNavLinks />
             </SheetContent>
           </Sheet>

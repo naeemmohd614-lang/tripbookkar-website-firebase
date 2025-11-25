@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Mountain, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Twitter, Facebook, Instagram } from 'lucide-react';
+import Logo from '../shared/Logo';
 
 export default function Footer() {
   return (
@@ -7,11 +8,8 @@ export default function Footer() {
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-             <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue mb-4">
-              <Mountain className="h-6 w-6" />
-              <span className="font-headline text-xl">TripBookKar</span>
-            </Link>
-            <p className="text-muted-foreground text-sm">
+             <Logo />
+            <p className="text-muted-foreground text-sm mt-4">
               Your ultimate travel companion. Discover, plan, and book your perfect getaway.
             </p>
           </div>
