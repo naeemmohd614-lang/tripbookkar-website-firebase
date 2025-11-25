@@ -20,7 +20,7 @@ function slugify(text: string) {
 
 export default function MonthPage({ params }: { params: { month: string } }) {
     const firestore = useFirestore();
-    const { month: monthSlug } = React.use(params);
+    const { month: monthSlug } = params;
 
     const monthDocRef = useMemoFirebase(() => {
         if (!firestore || !monthSlug) return null;
@@ -28,12 +28,13 @@ export default function MonthPage({ params }: { params: { month: string } }) {
     }, [firestore, monthSlug]);
 
     const { data: monthData, isLoading: isMonthLoading } = useDoc<MonthData>(monthDocRef);
-
+    
     const hotelNames = React.useMemo(() => {
-        return monthData?.destinations?.flatMap(d => {
+        if (!monthData?.destinations) return [];
+        return monthData.destinations.flatMap(d => {
             if (!Array.isArray(d.hotels)) return [];
-            return d.hotels.map(h => typeof h === 'string' ? h : h.name)
-        }) || [];
+            return d.hotels.map(h => (typeof h === 'string' ? h : h.name));
+        });
     }, [monthData]);
     
     const hotelsQuery = useMemoFirebase(() => {
@@ -139,3 +140,4 @@ export default function MonthPage({ params }: { params: { month: string } }) {
         </div>
     );
 }
+
