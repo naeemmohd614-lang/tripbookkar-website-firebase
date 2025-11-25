@@ -1,7 +1,7 @@
 
 'use client';
 import React from 'react';
-import { useFirestore, useCollection } from '@/firebase';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import SeoGenerator from '@/components/seo-generator';
 import { Separator } from '@/components/ui/separator';
@@ -9,7 +9,7 @@ import { Separator } from '@/components/ui/separator';
 export default function SEOPage(){
   const firestore = useFirestore();
 
-  const seoPagesQuery = firestore ? collection(firestore, 'seoPages') : null;
+  const seoPagesQuery = useMemoFirebase(() => firestore ? collection(firestore, 'seoPages') : null, [firestore]);
   
   const { data: pages, isLoading } = useCollection(seoPagesQuery);
 

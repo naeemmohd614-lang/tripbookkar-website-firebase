@@ -1,13 +1,13 @@
 
 'use client';
 import React from 'react';
-import { useFirestore, useCollection } from '@/firebase';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy } from 'firebase/firestore';
 
 export default function LeadsPage(){
   const firestore = useFirestore();
 
-  const leadsQuery = firestore ? query(collection(firestore, 'leads'), orderBy('createdAt', 'desc')) : null;
+  const leadsQuery = useMemoFirebase(() => firestore ? query(collection(firestore, 'leads'), orderBy('createdAt', 'desc')) : null, [firestore]);
   
   const { data: leads, isLoading } = useCollection(leadsQuery);
   

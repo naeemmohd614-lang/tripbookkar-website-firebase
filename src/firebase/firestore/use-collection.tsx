@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   Query,
   onSnapshot,
@@ -11,7 +12,6 @@ import {
 } from 'firebase/firestore';
 import { errorEmitter } from '@/firebase/error-emitter';
 import { FirestorePermissionError } from '@/firebase/errors';
-import { useMemoFirebase } from '../provider';
 
 /** Utility type to add an 'id' field to a given type T. */
 export type WithId<T> = T & { id: string };
@@ -42,7 +42,14 @@ function getQueryPath(query: Query<DocumentData> | CollectionReference<DocumentD
     if (query.type === 'collection') {
         return (query as CollectionReference).path;
     }
-    return (query as InternalQuery)._query.path.canonicalString();
+    // Attempt to get a stable string representation for a query
+    try {
+        const internalQuery = (query as InternalQuery);
+        return internalQuery._query.path.canonicalString() + JSON.stringify(internalQuery.toJSON());
+    } catch {
+        // Fallback for different structures or versions
+        return 'unserializable-query';
+    }
 }
 
 
@@ -65,7 +72,7 @@ export function useCollection<T = any>(
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<FirestoreError | Error | null>(null);
 
-  const queryPath = targetRefOrQuery ? getQueryPath(targetRefOrQuery) : null;
+  const queryPath = useMemo(() => targetRefOrQuery ? getQueryPath(targetRefOrQuery) : null, [targetRefOrQuery]);
 
   useEffect(() => {
     if (!targetRefOrQuery) {

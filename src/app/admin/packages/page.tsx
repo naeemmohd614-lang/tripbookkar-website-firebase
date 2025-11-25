@@ -2,7 +2,7 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
-import { useFirestore, useCollection } from '@/firebase';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { Pencil, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -19,7 +19,7 @@ import {
 export default function PackagesPage(){
   const firestore = useFirestore();
 
-  const packagesQuery = firestore ? collection(firestore,'packages') : null;
+  const packagesQuery = useMemoFirebase(() => firestore ? collection(firestore,'packages') : null, [firestore]);
 
   const { data: packagesData, isLoading } = useCollection<Package>(packagesQuery);
   

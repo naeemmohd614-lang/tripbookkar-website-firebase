@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import type { Hotel, Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection } from '@/firebase';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
@@ -25,7 +25,7 @@ export default function RadissonPage() {
 
     const radissonBrands = (brands as Brand[]).filter(b => radissonBrandNames.includes(b.name));
     
-    const radissonHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('brand', 'in', radissonBrandNames)) : null;
+    const radissonHotelsQuery = useMemoFirebase(() => firestore ? query(collection(firestore, 'hotels'), where('brand', 'in', radissonBrandNames)) : null, [firestore]);
 
     const { data: radissonHotels, isLoading } = useCollection<Hotel>(radissonHotelsQuery);
 

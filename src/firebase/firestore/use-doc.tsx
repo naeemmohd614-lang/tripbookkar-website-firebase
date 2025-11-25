@@ -1,6 +1,7 @@
+
 'use client';
     
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   DocumentReference,
   onSnapshot,
@@ -42,7 +43,7 @@ export function useDoc<T = any>(
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<FirestoreError | Error | null>(null);
 
-  const docPath = docRef?.path;
+  const docPath = useMemo(() => docRef?.path, [docRef]);
 
   useEffect(() => {
     if (!docRef) {

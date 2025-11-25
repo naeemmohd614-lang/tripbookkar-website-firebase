@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import type { Hotel, Brand } from '@/lib/types';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection } from '@/firebase';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
@@ -25,7 +25,7 @@ export default function IHGPage() {
 
     const ihgBrands = (brands as Brand[]).filter(b => ihgBrandNames.includes(b.name));
 
-    const ihgHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('brand', 'in', ihgBrandNames)) : null;
+    const ihgHotelsQuery = useMemoFirebase(() => firestore ? query(collection(firestore, 'hotels'), where('brand', 'in', ihgBrandNames)) : null, [firestore]);
 
     const { data: ihgHotels, isLoading } = useCollection<Hotel>(ihgHotelsQuery);
 
