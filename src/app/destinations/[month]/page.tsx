@@ -29,10 +29,16 @@ export default function MonthPage({ params }: { params: { month: string } }) {
 
     const { data: monthData, isLoading: isMonthLoading } = useDoc<MonthData>(monthDocRef);
 
-    const hotelNames = monthData?.destinations?.flatMap(d => d.hotels.map(h => typeof h === 'string' ? h : h.name)) || [];
+    const hotelNames = React.useMemo(() => {
+        return monthData?.destinations?.flatMap(d => {
+            if (!Array.isArray(d.hotels)) return [];
+            return d.hotels.map(h => typeof h === 'string' ? h : h.name)
+        }) || [];
+    }, [monthData]);
     
     const hotelsQuery = useMemoFirebase(() => {
         if (!firestore || hotelNames.length === 0) return null;
+        // Firestore 'in' queries are limited to 30 items.
         return query(collection(firestore, 'hotels'), where('name', 'in', hotelNames.slice(0, 30)));
     }, [firestore, hotelNames]);
 
@@ -100,7 +106,7 @@ export default function MonthPage({ params }: { params: { month: string } }) {
                                         
                                         <h3 className="font-bold text-lg mb-3">Top Hotels in {dest.name.split(',')[0]}:</h3>
                                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-sm">
-                                            {dest.hotels.map(hotelOrName => {
+                                            {(Array.isArray(dest.hotels) ? dest.hotels : []).map(hotelOrName => {
                                                 const hotelName = typeof hotelOrName === 'string' ? hotelOrName : hotelOrName.name;
                                                 const hotel = hotels?.find(h => h.name === hotelName);
                                                 return (

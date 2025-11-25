@@ -59,7 +59,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Auli, Uttarakhand",
         reason: "January transforms Auli into a premier skiing destination. The snow-covered meadows, panoramic views of the Himalayas, and the crisp mountain air make it perfect for winter sports enthusiasts and nature lovers.",
-        hotels: allHotels.filter(h => ["The Royal Village, Auli", "Himalayan High, Auli", "The Tattva, Auli", "Cliff Top Club, Auli", "Blue Poppy Resort, Auli"].includes(h.name)),
+        hotels: allHotels.filter(h => ["The Royal Village", "Himalayan High, Auli", "The Tattva, Auli", "Cliff Top Club, Auli", "Blue Poppy Resort, Auli"].includes(h.name)),
         image: { src: "https://images.unsplash.com/photo-1708622359632-56294a8d327e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c25vd3klMjBtb3VudGFpbnMlMjBhdWxpfGVufDB8fHx8MTc2MzcxNjgzM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "snowy mountains auli" }
       },
       {
@@ -230,7 +230,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Amritsar, Punjab",
         reason: "The weather is comfortable for visiting the Golden Temple and Jallianwala Bagh. The harvest festival of Baisakhi preparations begin, adding a cultural flavor.",
         hotels: allHotels.filter(h => ["Hyatt Regency Amritsar", "Taj Swarna Amritsar", "Ramada by Wyndham Amritsar", "Fairfield by Marriott Amritsar", "Holiday Inn Amritsar"].includes(h.name)),
-        image: { src: "https://images.unsplash.com/photo-1611333834498-25b3a4a90184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYm9sZGVuJTIwdGVtcGxlJTIwbW9ybmluZ3xlbnwwfHx8fDE3NjM3OTYzOTN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "golden temple morning" }
+        image: { src: "https://images.unsplash.com/photo-1611333834498-25b7a4a90184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYm9sZGVuJTIwdGVtcGxlJTIwbW9ybmluZ3xlbnwwfHx8fDE3NjM3OTYzOTN8MA&ixlib=rb-4.1.0&q=80&w=1080", caption: "golden temple morning" }
       },
       {
         name: "Tawang, Arunachal Pradesh",
@@ -856,5 +856,3 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   }
 };
-
-    
