@@ -126,19 +126,19 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Jaisalmer, Rajasthan",
         reason: "Attend the vibrant Desert Festival, showcasing Rajasthani culture with folk dances, music, and camel races. The weather is perfect for desert safaris and exploring the golden fort.",
-        hotels: allHotels.filter(h => ["Suryagarh Jaisalmer", "Jaisalmer Marriott Resort & Spa", "Hotel Rang Mahal", "Fort Rajwada", "The Gulaal"].includes(h.name)),
+        hotels: allHotels.filter(h => h.city === 'Jaisalmer'),
         image: { src: "https://images.unsplash.com/photo-1598104216839-a9134a6d713c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyYWphc3RoYW5pJTIwZGVzZXJ0JTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzOTk2MTk3fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "rajasthani desert festival" }
       },
       {
         name: "Nashik, Maharashtra",
         reason: "February is the time for SulaFest, a popular gourmet world music festival. Enjoy wine tasting at various vineyards in India's wine capital with pleasant weather as your companion.",
-        hotels: allHotels.filter(h => ["The Source at Sula", "Radisson Blu Hotel & Spa, Nashik", "Ginger Nashik", "Ibis Nashik", "Courtyard by Marriott Nashik"].includes(h.name)),
+        hotels: allHotels.filter(h => h.city === 'Nashik'),
         image: { src: "https://images.unsplash.com/photo-1598522333806-f1873af9e7a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3aW5lJTIwdGFzdGluZyUyMHZpbmV5YXJkfGVufDB8fHx8MTc2Mzk5NjE5N3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "wine tasting vineyard" }
       },
       {
         name: "Varanasi, Uttar Pradesh",
         reason: "Experience the spiritual fervor of Maha Shivaratri, which often falls in February. The city's ghats and temples come alive with prayers, rituals, and processions.",
-        hotels: allHotels.filter(h => ["BrijRama Palace, Varanasi", "Taj Ganges, Varanasi", "The Clarks, Varanasi", "Hotel Madin", "Ramada Plaza by Wyndham JHV Varanasi"].includes(h.name)),
+        hotels: allHotels.filter(h => h.city === 'Varanasi'),
         image: { src: "https://images.unsplash.com/photo-1621370213854-e9185a539f93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2YXJhbmFzaSUyMGdoYXRzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzNzk1OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "varanasi spiritual festival" }
       },
       {
@@ -150,7 +150,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Agra, Uttar Pradesh",
         reason: "Visit during the Taj Mahotsav, a 10-day cultural festival celebrating arts, crafts, and cuisines of India, with the magnificent Taj Mahal as the backdrop.",
-        hotels: allHotels.filter(h => ["The Oberoi Amarvilas, Agra", "ITC Mughal, Agra", "Taj Hotel & Convention Centre, Agra", "Courtyard by Marriott Agra", "Trident, Agra"].includes(h.name)),
+        hotels: allHotels.filter(h => h.city === 'Agra'),
         image: { src: "https://images.unsplash.com/photo-1592635196078-9fdc757f27f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YWolMjBtYWhhbCUyMGFncmF8ZW58MHx8fHwxNzYzOTk2MTk3fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "taj mahal agra" }
       },
       {
@@ -174,13 +174,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Thekkady, Kerala",
         reason: "The weather is very pleasant for boating on Periyar Lake and spotting wildlife. It's a great time for trekking and exploring the spice plantations.",
-        hotels: allHotels.filter(h => ["Spice Village - CGH Earth", "The Elephant Court", "Cardamom County", "Poetree Sarovar Portico", "Amritara Shalimar Spice Garden"].includes(h.name)),
+        hotels: allHotels.filter(h => h.city === 'Thekkady'),
         image: { src: "https://images.unsplash.com/photo-1613861810056-512c14041e6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZXJhbGElMjBzcGljZSUyMHBsYW50YXRpb258ZW58MHx8fHwxNzYzOTk2MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kerala spice plantation" }
       },
       {
         name: "Kolkata, West Bengal",
         reason: "The weather is cool and pleasant, ideal for sightseeing. It's also the time for the Kolkata International Book Fair, a paradise for literature lovers.",
-        hotels: allHotels.filter(h => ["The Oberoi Grand, Kolkata", "Taj Bengal", "ITC Sonar", "Hyatt Regency Kolkata", "The Park Kolkata"].includes(h.name)),
+        hotels: allHotels.filter(h => h.city === 'Kolkata'),
         image: { src: "https://images.unsplash.com/photo-1598337589143-346c1071295c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxrb2xrYXRhJTIwYm9vayUyMGZhaXJ8ZW58MHx8fHwxNzYzOTk2MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kolkata book fair" }
       }
     ]
@@ -456,7 +456,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
   july: {
     name: 'July',
     slug: 'july',
-    pageImage: { src: 'https://images.unsplash.com/photo-1693276206327-6f67168dc3bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb25zb29uJTIwa2VyYWxhJTIwYmFja3dhdGVyc3xlbnwwfHx8fDE3NjM5OTYwMDh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
+    pageImage: { src: 'https://images.unsplash.com/photo-1693276206327-6f67168dc3bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb29uJTIwa2VyYWxhJTIwYmFja3dhdGVyc3xlbnwwfHx8fDE3NjM5OTYwMDh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
     destinations: [
       {
         name: "Munnar, Kerala",
