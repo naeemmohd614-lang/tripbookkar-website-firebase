@@ -3,7 +3,7 @@
 import { attractions } from '@/lib/data';
 import type { Attraction, Hotel } from '@/lib/types';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, MapPin, Waves, Leaf, Hotel as HotelIcon } from 'lucide-react';
 import Link from 'next/link';
@@ -30,7 +30,7 @@ export default function SouthGoaPage() {
 
     const southGoaHotelsQuery = useMemoFirebase(() => {
         if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('cityId', 'in', ['benaulim', 'cavelossim', 'margao', 'palolem']));
+        return query(collection(firestore, 'hotels'), where('cityId', 'in', ['cavelossim', 'benaulim']));
     }, [firestore]);
 
     const { data: southGoaHotels, isLoading } = useCollection<Hotel>(southGoaHotelsQuery);
@@ -113,7 +113,7 @@ export default function SouthGoaPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in South Goa</h3>
-                    {isLoading && <p>Loading hotels...</p>}
+                    {isLoading && <p className="text-center">Loading hotels...</p>}
                      {southGoaHotels && southGoaHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {southGoaHotels.map((hotel) => (

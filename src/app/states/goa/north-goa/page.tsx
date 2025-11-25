@@ -31,7 +31,7 @@ export default function NorthGoaPage() {
 
     const northGoaHotelsQuery = useMemoFirebase(() => {
         if (!firestore) return null;
-        return query(collection(firestore, 'hotels'), where('cityId', 'in', ['baga', 'calangute', 'candolim', 'panaji', 'vagator', 'anjuna']));
+        return query(collection(firestore, 'hotels'), where('cityId', 'in', ['panaji', 'vagator', 'candolim', 'anjuna']));
     }, [firestore]);
 
     const { data: northGoaHotels, isLoading } = useCollection<Hotel>(northGoaHotelsQuery);
@@ -114,7 +114,7 @@ export default function NorthGoaPage() {
 
                  <div className="my-16">
                     <h3 className="text-2xl font-headline font-bold text-brand-blue text-center mb-8">Top Hotels in North Goa</h3>
-                     {isLoading && <p>Loading hotels...</p>}
+                     {isLoading && <p className="text-center">Loading hotels...</p>}
                      {northGoaHotels && northGoaHotels.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {northGoaHotels.map((hotel) => (
