@@ -37,7 +37,7 @@ const generateSeoPagePrompt = ai.definePrompt({
   name: 'generateSeoPagePrompt',
   input: {schema: GenerateSeoPageInputSchema},
   output: {schema: GenerateSeoPageOutputSchema},
-  prompt: `You are an SEO expert tasked with generating SEO-optimized pages for a travel website called Tripify.
+  prompt: `You are an SEO expert tasked with generating SEO-optimized pages for a travel website called TripBookKar.
 
   Based on the provided page type, location (city or state), and hotel type, generate a compelling SEO title, meta description, and page content that will attract organic traffic.
 
@@ -193,7 +193,7 @@ const generateStateDescriptionPrompt = ai.definePrompt({
   name: 'generateStateDescriptionPrompt',
   input: { schema: GenerateStateDescriptionInputSchema },
   output: { schema: GenerateStateDescriptionOutputSchema },
-  prompt: `You are a travel content writer for Tripify. Your task is to write a short, compelling "description" paragraph for an Indian state.
+  prompt: `You are a travel content writer for TripBookKar. Your task is to write a short, compelling "description" paragraph for an Indian state.
 
 State Name: {{{name}}}
 

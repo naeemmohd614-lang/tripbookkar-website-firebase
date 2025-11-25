@@ -62,7 +62,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-headline">{isSignUp ? 'Create an Account' : 'Welcome Back'}</CardTitle>
-          <CardDescription>{isSignUp ? 'Join Tripify to plan your next adventure.' : 'Sign in to continue to Tripify.'}</CardDescription>
+          <CardDescription>{isSignUp ? 'Join TripBookKar to plan your next adventure.' : 'Sign in to continue to TripBookKar.'}</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleAuth} className="space-y-4">

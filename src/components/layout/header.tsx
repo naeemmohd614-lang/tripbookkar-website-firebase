@@ -233,7 +233,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue">
           <Mountain className="h-6 w-6" />
-          <span className="font-headline">Tripify</span>
+          <span className="font-headline">TripBookKar</span>
         </Link>
 
         <div className="hidden md:flex">
@@ -304,7 +304,7 @@ export default function Header() {
               </SheetHeader>
               <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue mb-6">
                 <Mountain className="h-6 w-6" />
-                <span className="font-headline">Tripify</span>
+                <span className="font-headline">TripBookKar</span>
               </Link>
               <MobileNavLinks />
             </SheetContent>

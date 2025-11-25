@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-1">
              <Link href="/" className="flex items-center gap-2 font-bold text-lg text-brand-blue mb-4">
               <Mountain className="h-6 w-6" />
-              <span className="font-headline text-xl">Tripify</span>
+              <span className="font-headline text-xl">TripBookKar</span>
             </Link>
             <p className="text-muted-foreground text-sm">
               Your ultimate travel companion. Discover, plan, and book your perfect getaway.
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Tripify. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TripBookKar. All rights reserved.</p>
         </div>
       </div>
     </footer>
