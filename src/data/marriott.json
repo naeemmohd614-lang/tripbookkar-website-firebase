@@ -39,7 +39,7 @@
       "Outdoor event spaces"
     ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "business", "downtown"]
+    "tags": ["luxury", "business", "downtown", "wedding", "wellness"]
   },
   {
     "id": "jw-marriott-hotel-new-delhi-aerocity",
@@ -68,7 +68,7 @@
     "experiencesAndActivities": [ "Quan Spa", "Outdoor Pool", "Fitness Center" ],
     "weddingVenues": [ "Grand Crystal Ballroom", "Outdoor Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["airport hotel", "luxury", "new delhi"]
+    "tags": ["airport hotel", "luxury", "new delhi", "wedding", "wellness"]
   },
   {
     "id": "goa-marriott-resort-spa",
@@ -93,7 +93,7 @@
     "experiencesAndActivities": [ "Quan Spa", "Casino Carnival", "Water Sports" ],
     "weddingVenues": [ "Grand Ballroom", "Beachside Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "goa", "casino"]
+    "tags": ["beach resort", "goa", "casino", "beach", "beachfront", "sea view", "romantic", "honeymoon"]
   },
   {
     "id": "jw-marriott-mumbai-juhu",
@@ -119,7 +119,7 @@
     "experiencesAndActivities": [ "Quan Spa", "Juhu Beach Access", "Infinity Pool" ],
     "weddingVenues": [ "The Grand Sangam Ballroom", "The Salt Water Pool Deck" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["sea view", "luxury", "mumbai"]
+    "tags": ["sea view", "luxury", "mumbai", "beach", "beachfront", "romantic", "honeymoon", "wedding"]
   },
   {
     "id": "jaipur-marriott-hotel",
@@ -133,8 +133,7 @@
     "basePrice": 9500,
     "rating": 4.5,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1677868818231-b5e09bcfc5e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxGcm9udCUyMGZhY2FkZSUyMG9mJTIwSmFpcHVyJTIwTWFycmlvdHR8ZW58MHx8fHwxNzYzNzc0MzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Front facade of Jaipur Marriott" },
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/marriott-jaipur-2.webp", "caption": "Grand lobby interior" }
+      { "src": "https://images.unsplash.com/photo-1712488696577-c08c883f2c89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxGcm9udCUyMGZhY2FkZSUyMG9mJTIwSmFpcHVyJTIwTWFycmlvdHR8ZW58MHx8fHwxNzYzOTIwNzMyfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Front facade of Jaipur Marriott" }
     ],
     "distance": { "Jaipur International Airport": "2 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 300, "size": "452 sqft" }],
@@ -145,7 +144,7 @@
     "experiencesAndActivities": [ "Quan Spa", "Outdoor Pool" ],
     "weddingVenues": [ "Amber Ballroom", "Lush Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["jaipur", "wedding hotel", "modern"]
+    "tags": ["jaipur", "wedding hotel", "modern", "wedding", "heritage"]
   },
   {
     "id": "the-westin-pune-koregaon-park",
@@ -171,7 +170,7 @@
     "experiencesAndActivities": [ "Heavenly Spa by Westin", "Rooftop Pool" ],
     "weddingVenues": [ "Grand Ballroom", "Lush Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["wellness", "pune", "pet friendly"]
+    "tags": ["wellness", "pune", "pet friendly", "spa", "yoga"]
   },
   {
     "id": "renaissance-lucknow-hotel",
@@ -185,12 +184,11 @@
     "basePrice": 10000,
     "rating": 4.6,
     "images": [
-      { "src": "https://images.unsplash.com/photo-1588504633950-9dc518941e93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxSb29mdG9wJTIwaW5maW5pdHklMjBwb29sfGVufDB8fHx8MTc2MzY1Njg4M3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop infinity pool" },
-      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/renaissance-lucknow-2.webp", "caption": "Hotel exterior at night" }
+      { "src": "https://images.unsplash.com/photo-1588504633950-9dc518941e93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxSb29mdG9wJTIwaW5maW5pdHklMjBwb29sfGVufDB8fHx8MTc2MzY1Njg4M3ww&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Rooftop infinity pool" }
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 112, "size": "377 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "city view", "lucknow"]
+    "tags": ["luxury", "city view", "lucknow", "boutique", "design"]
   },
   {
     "id": "four-points-by-sheraton-dehradun",
@@ -209,7 +207,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 65, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "dehradun", "city hotel"]
+    "tags": ["business", "dehradun", "city hotel", "mountains", "mountain view"]
   },
   {
     "id": "jw-marriott-mussoorie-walnut-grove-resort-spa",
@@ -228,7 +226,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "valley view", "mussoorie", "resort"]
+    "tags": ["luxury", "valley view", "mussoorie", "resort", "mountains", "himalayas", "wellness", "spa", "romantic", "honeymoon"]
   },
   {
     "id": "the-westin-resort-spa-himalayas",
@@ -247,7 +245,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 145, "size": "475 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["wellness", "luxury", "mountain view", "rishikesh"]
+    "tags": ["wellness", "luxury", "mountain view", "rishikesh", "spiritual", "yoga", "spa", "mountains", "himalayas", "romantic", "honeymoon"]
   },
   {
     "id": "courtyard-by-marriott-madurai",
@@ -266,7 +264,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "323 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["modern", "business", "madurai"]
+    "tags": ["modern", "business", "madurai", "spiritual"]
   },
   {
     "id": "indore-marriott-hotel",
@@ -284,7 +282,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 218, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "resort", "indore"]
+    "tags": ["luxury", "resort", "indore", "wedding"]
   },
   {
     "id": "courtyard-by-marriott-ahmedabad",
@@ -338,7 +336,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 395, "size": "484 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "city view", "mumbai"]
+    "tags": ["luxury", "city view", "mumbai", "wedding", "honeymoon"]
   },
   {
     "id": "itc-maurya-a-luxury-collection-hotel-new-delhi",
@@ -356,7 +354,7 @@
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 437, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "diplomatic enclave", "new delhi"]
+    "tags": ["luxury", "diplomatic enclave", "new delhi", "heritage"]
   },
   {
     "id": "the-ritz-carlton-pune",
@@ -374,7 +372,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Golf View Room", "count": 198, "size": "538 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "golf view", "pune"]
+    "tags": ["luxury", "golf view", "pune", "wellness", "spa"]
   },
   {
     "id": "w-goa",
@@ -392,7 +390,7 @@
     ],
     "roomCategories": [{ "name": "Wonderful Room", "count": 121, "size": "650 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "beachfront", "party", "goa", "pet friendly"]
+    "tags": ["luxury", "beachfront", "party", "goa", "pet friendly", "beach", "honeymoon", "romantic"]
   },
   {
     "id": "sheraton-grand-bangalore-hotel-at-brigade-gateway",
@@ -428,7 +426,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 215, "size": "431 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["wellness", "business", "chennai"]
+    "tags": ["wellness", "business", "chennai", "spa", "yoga"]
   },
   {
     "id": "le-meridien-hyderabad",
@@ -446,7 +444,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 241, "size": "344 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "design", "hyderabad"]
+    "tags": ["business", "design", "hyderabad", "boutique"]
   },
   {
     "id": "fairfield-by-marriott-visakhapatnam",
@@ -482,7 +480,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 281, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "business", "kolkata"]
+    "tags": ["luxury", "business", "kolkata", "wedding"]
   },
   {
     "id": "the-westin-hyderabad-mindspace",
@@ -500,7 +498,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 427, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["wellness", "business", "hyderabad"]
+    "tags": ["wellness", "business", "hyderabad", "spa", "yoga"]
   },
   {
     "id": "itc-gardenia-a-luxury-collection-hotel-bengaluru",
@@ -518,7 +516,7 @@
     ],
     "roomCategories": [{ "name": "Tower Room", "count": 292, "size": "530 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "eco-friendly", "bengaluru"]
+    "tags": ["luxury", "eco-friendly", "bengaluru", "heritage"]
   },
   {
     "id": "jw-marriott-hotel-bengaluru",
@@ -554,7 +552,7 @@
     ],
     "roomCategories": [{ "name": "Aloft Room", "count": 253, "size": "333 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["modern", "airport hotel", "new delhi", "pet friendly"]
+    "tags": ["modern", "airport hotel", "new delhi", "pet friendly", "design", "boutique"]
   },
   {
     "id": "courtyard-by-marriott-siliguri",
@@ -590,7 +588,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 125, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beachfront", "resort", "chennai"]
+    "tags": ["beachfront", "resort", "chennai", "beach", "sea view"]
   },
   {
     "id": "four-points-by-sheraton-mahabalipuram-resort-convention-center",
@@ -608,7 +606,7 @@
     ],
     "roomCategories": [{ "name": "Chalet", "count": 90, "size": "500 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "family friendly", "mahabalipuram"]
+    "tags": ["resort", "family friendly", "mahabalipuram", "beach"]
   },
   {
     "id": "jw-marriott-hotel-chandigarh",
@@ -644,7 +642,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 108, "size": "301 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["modern", "business", "amritsar"]
+    "tags": ["modern", "business", "amritsar", "spiritual"]
   },
   {
     "id": "renaissance-ahmedabad-hotel",
@@ -662,7 +660,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 155, "size": "387 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["design", "business", "ahmedabad"]
+    "tags": ["design", "business", "ahmedabad", "boutique"]
   },
   {
     "id": "the-westin-sohna-resort-spa",
@@ -680,7 +678,7 @@
     ],
     "roomCategories": [{ "name": "Premier Villa", "count": 97, "size": "645 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "wellness", "gurugram", "pet friendly"]
+    "tags": ["resort", "wellness", "gurugram", "pet friendly", "spa", "yoga"]
   },
   {
     "id": "the-westin-pushkar-resort-spa",
@@ -698,7 +696,7 @@
     ],
     "roomCategories": [{ "name": "Luxury Villa", "count": 98, "size": "785 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "luxury", "pushkar"]
+    "tags": ["resort", "luxury", "pushkar", "spiritual", "desert", "wellness"]
   },
   {
     "id": "jw-marriott-jaipur-resort-spa",
@@ -716,7 +714,7 @@
     ],
     "roomCategories": [{ "name": "Royal Room", "count": 200, "size": "550 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "resort", "jaipur"]
+    "tags": ["luxury", "resort", "jaipur", "heritage", "palace", "wedding"]
   },
   {
     "id": "le-meridien-mahabaleshwar-resort-spa",
@@ -734,7 +732,7 @@
     ],
     "roomCategories": [{ "name": "Classic Forest King Room", "count": 122, "size": "441 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "forest", "mahabaleshwar"]
+    "tags": ["resort", "forest", "mahabaleshwar", "mountains", "wellness"]
   },
   {
     "id": "fairfield-by-marriott-goa-anjuna",
@@ -752,7 +750,7 @@
     ],
     "roomCategories": [{ "name": "Standard Room", "count": 130, "size": "280 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["modern", "goa", "anjuna"]
+    "tags": ["modern", "goa", "anjuna", "beach"]
   },
   {
     "id": "the-westin-mumbai-garden-city",
@@ -806,7 +804,7 @@
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 600, "size": "615 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "architecture", "chennai"]
+    "tags": ["luxury", "architecture", "chennai", "heritage"]
   },
   {
     "id": "the-westin-gurgaon-new-delhi",
@@ -842,7 +840,7 @@
     ],
     "roomCategories": [{ "name": "Lagoon View Room", "count": 206, "size": "600 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beachfront", "luxury", "resort", "goa"]
+    "tags": ["beachfront", "luxury", "resort", "goa", "beach", "sea view", "romantic", "honeymoon"]
   },
   {
     "id": "the-westin-goa",
@@ -860,7 +858,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 171, "size": "420 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["wellness", "modern", "goa"]
+    "tags": ["wellness", "modern", "goa", "beach", "spa"]
   },
   {
     "id": "jw-marriott-hotel-pune",
@@ -932,7 +930,7 @@
     ],
     "roomCategories": [{ "name": "Executive Club", "count": 271, "size": "474 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "lake view", "hyderabad"]
+    "tags": ["luxury", "lake view", "hyderabad", "heritage"]
   },
   {
     "id": "fairfield-by-marriott-coimbatore",
@@ -986,7 +984,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 135, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "fort view", "jaisalmer"]
+    "tags": ["resort", "fort view", "jaisalmer", "desert", "wedding"]
   },
   {
     "id": "four-points-by-sheraton-agra",
@@ -1004,6 +1002,6 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 165, "size": "301 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["modern", "taj mahal view", "agra"]
+    "tags": ["modern", "taj mahal view", "agra", "heritage"]
   }
 ]

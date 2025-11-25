@@ -168,26 +168,26 @@ export default function HotelsPage(){
                     <Table>
                       <TableHeader className="bg-gray-50">
                         <TableRow>
-                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</TableHead>
-                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</TableHead>
-                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price/Night</TableHead>
-                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</TableHead>
-                          <TableHead className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</TableHead>
+                          <TableHead>Name</TableHead>
+                          <TableHead>Location</TableHead>
+                          <TableHead>Price/Night</TableHead>
+                          <TableHead>Rating</TableHead>
+                          <TableHead>Actions</TableHead>
                         </TableRow>
                       </TableHeader>
-                      <TableBody className="bg-white divide-y divide-gray-200">
+                      <TableBody>
                         {hotelsByBrand[brand].map((h: Hotel) => (
                           <TableRow key={h.id} className="hover:bg-gray-50">
-                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{h.name}</TableCell>
-                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{h.city}, {h.state}</TableCell>
-                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatPrice(h.basePrice)}</TableCell>
-                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            <TableCell className="font-medium text-gray-900">{h.name}</TableCell>
+                            <TableCell className="text-sm text-gray-500">{h.city}, {h.state}</TableCell>
+                            <TableCell className="text-sm text-gray-500">{formatPrice(h.basePrice)}</TableCell>
+                            <TableCell className="text-sm text-gray-500">
                                 <div className="flex items-center gap-1">
                                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                                     <span>{h.rating ? h.rating.toFixed(1) : 'N/A'}</span>
                                 </div>
                             </TableCell>
-                            <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                            <TableCell>
                               <div className="flex items-center gap-4">
                                  <Link href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
                                     <Pencil size={18} />

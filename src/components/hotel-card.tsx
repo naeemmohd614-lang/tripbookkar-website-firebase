@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Star, MapPin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from './ui/badge';
 import { Button } from '@/components/ui/button';
 import type { Hotel } from '@/lib/types';
 import {
@@ -55,8 +55,8 @@ export default function HotelCard({ hotel }: HotelCardProps) {
             </CarouselContent>
             {hotel.images && hotel.images.length > 1 && (
                 <>
-                    <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-                    <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
+                    <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </>
             )}
         </Carousel>
@@ -95,4 +95,3 @@ export default function HotelCard({ hotel }: HotelCardProps) {
     </Card>
   );
 }
-

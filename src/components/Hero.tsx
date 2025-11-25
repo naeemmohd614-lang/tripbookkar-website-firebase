@@ -25,14 +25,9 @@ const heroVideos = [
 ];
 
 const hotelPartners = partners.map(p => {
-    let href;
-    if (['marriott', 'taj', 'oberoi', 'ihg', 'hyatt', 'radisson', 'the-leela'].includes(p.slug)) {
-       href = `/${p.slug}-hotels`;
-    } else {
+    let href = `/brands/${p.slug}`;
+    if (['marriott', 'taj', 'oberoi', 'ihg', 'hyatt', 'radisson', 'the-leela', 'hilton', 'accor'].includes(p.slug)) {
        href = `/brands/${p.slug}`;
-    }
-    if (p.slug === 'marriott') {
-       href = '/marriott-hotels';
     }
     return { ...p, href };
 });
