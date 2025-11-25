@@ -6,18 +6,18 @@ import type { City, Hotel, State, Attraction } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Users, Package, Clock, Calendar, ShoppingCart } from 'lucide-react';
+import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Users, Package, Clock, Calendar, ShoppingBasket } from 'lucide-react';
 import Link from 'next/link';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
-import { useFirestore, useCollection } from '@/firebase';
+import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection, query, where } from 'firebase/firestore';
 
 
 // Helper function to create a slug
 function slugify(text: string) {
-  if (!text) return '';
-  return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+    if (!text) return '';
+    return text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 }
 
 const iconMap: { [key: string]: React.ElementType } = {
@@ -41,7 +41,10 @@ export default function StatePage({ params }: { params: { stateId: string } }) {
     notFound();
   }
 
-  const stateHotelsQuery = firestore ? query(collection(firestore, 'hotels'), where('stateId', '==', stateId)) : null;
+  const stateHotelsQuery = useMemoFirebase(() => {
+      if (!firestore) return null;
+      return query(collection(firestore, 'hotels'), where('stateId', '==', stateId));
+  },[firestore, stateId]);
 
   const { data: stateHotels, isLoading } = useCollection<Hotel>(stateHotelsQuery);
 
