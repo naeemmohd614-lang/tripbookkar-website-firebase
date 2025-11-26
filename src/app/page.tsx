@@ -139,7 +139,7 @@ export default function Home() {
             playsInline
             className="absolute top-0 left-0 w-full h-full object-cover -z-10"
         >
-            <source src="https://cdn.pixabay.com/video/2023/10/29/186595-880031802_large.mp4" type="video/mp4" />
+            <source src="https://cdn.pixabay.com/video/2023/09/01/178732-860527368_tiny.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50 -z-10" />
         <div className="container mx-auto px-4 relative z-10">
