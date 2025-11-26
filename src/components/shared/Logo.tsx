@@ -7,9 +7,9 @@ import Image from 'next/image';
 
 export default function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={cn("relative flex items-center", className)}>
+    <Link href="/" className={cn("relative flex items-center h-12 w-48", className)}>
         <Image 
-            src="/TripBookar1.png" 
+            src="/generated-pages/TripBookKar1.png" 
             alt="TripBookKar Logo" 
             width={180}
             height={45}
