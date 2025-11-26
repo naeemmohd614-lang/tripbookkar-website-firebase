@@ -43,7 +43,7 @@ function OrbitingLogo({
   radius,
   duration,
 }: {
-  item: { name: string; slug: string; href: string };
+  item: { name: string; slug: string; href: string; logo?: string; };
   index: number;
   total: number;
   radius: number;
@@ -250,7 +250,14 @@ export default function Hero() {
                 animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
-            <Logo className="w-32 h-auto" />
+            <div className="relative w-32 h-32">
+                <Image 
+                    src="/generated-pages/TripBookKar1.png" 
+                    alt="TripBookKar Logo" 
+                    fill
+                    className="object-contain"
+                />
+            </div>
           </motion.div>
         </div>
         
