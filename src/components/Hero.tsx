@@ -242,7 +242,7 @@ export default function Hero() {
           </TooltipProvider>
 
           <motion.div
-            className="relative flex items-center justify-center w-48 h-48 rounded-full bg-background/80 backdrop-blur-sm shadow-2xl border"
+            className="relative flex items-center justify-center w-48 h-48"
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 200 }}
           >
@@ -256,7 +256,7 @@ export default function Hero() {
                     src="/generated-pages/TripBookKar1.png" 
                     alt="TripBookKar Logo" 
                     fill
-                    className="object-cover"
+                    className="object-contain"
                 />
             </div>
           </motion.div>
