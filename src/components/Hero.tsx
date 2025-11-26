@@ -276,7 +276,7 @@ export default function Hero() {
               ))}
             </motion.h1>
             <motion.p 
-                className="mt-4 max-w-xl mx-auto text-lg text-slate-200 drop-shadow-md"
+                className="mt-4 max-w-xl mx-auto text-lg text-white drop-shadow-md"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
