@@ -1,3 +1,4 @@
+
 'use client';
 
 import { motion, AnimatePresence, useTime, useTransform } from 'framer-motion';
@@ -76,7 +77,7 @@ function OrbitingLogo({
   return (
     <motion.div
       key={item.slug}
-      className="absolute flex items-center justify-center w-20 h-20 bg-background/80 backdrop-blur-sm rounded-lg shadow-lg border text-primary"
+      className="absolute flex items-center justify-center w-20 h-20 text-primary"
       style={{
         x,
         y,
@@ -250,12 +251,12 @@ export default function Hero() {
                 animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
-            <div className="relative w-40 h-40 p-4">
+            <div className="relative w-40 h-40">
                 <Image 
                     src="/generated-pages/TripBookKar1.png" 
                     alt="TripBookKar Logo" 
                     fill
-                    className="object-contain"
+                    className="object-cover"
                 />
             </div>
           </motion.div>
