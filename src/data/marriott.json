@@ -93,7 +93,7 @@
     "experiencesAndActivities": [ "Quan Spa", "Casino Carnival", "Water Sports" ],
     "weddingVenues": [ "Grand Ballroom", "Beachside Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "goa", "casino", "beach", "beachfront", "sea view", "romantic", "honeymoon"]
+    "tags": ["beach resort", "goa", "casino", "beach", "beachfront", "sea view", "romantic", "honeymoon", "adventure"]
   },
   {
     "id": "jw-marriott-mumbai-juhu",
@@ -226,7 +226,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Valley View Room", "count": 115, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "valley view", "mussoorie", "resort", "mountains", "himalayas", "wellness", "spa", "romantic", "honeymoon"]
+    "tags": ["luxury", "valley view", "mussoorie", "resort", "mountains", "himalayas", "wellness", "spa", "romantic", "honeymoon", "adventure"]
   },
   {
     "id": "the-westin-resort-spa-himalayas",
@@ -390,7 +390,7 @@
     ],
     "roomCategories": [{ "name": "Wonderful Room", "count": 121, "size": "650 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "beachfront", "party", "goa", "pet friendly", "beach", "honeymoon", "romantic"]
+    "tags": ["luxury", "beachfront", "party", "goa", "pet friendly", "beach", "honeymoon", "romantic", "adventure"]
   },
   {
     "id": "sheraton-grand-bangalore-hotel-at-brigade-gateway",
@@ -588,7 +588,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 125, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beachfront", "resort", "chennai", "beach", "sea view"]
+    "tags": ["beachfront", "resort", "chennai", "beach", "sea view", "adventure"]
   },
   {
     "id": "four-points-by-sheraton-mahabalipuram-resort-convention-center",
@@ -840,7 +840,7 @@
     ],
     "roomCategories": [{ "name": "Lagoon View Room", "count": 206, "size": "600 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beachfront", "luxury", "resort", "goa", "beach", "sea view", "romantic", "honeymoon"]
+    "tags": ["beachfront", "luxury", "resort", "goa", "beach", "sea view", "romantic", "honeymoon", "adventure"]
   },
   {
     "id": "the-westin-goa",
@@ -984,7 +984,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 135, "size": "452 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "fort view", "jaisalmer", "desert", "wedding"]
+    "tags": ["resort", "fort view", "jaisalmer", "desert", "wedding", "adventure"]
   },
   {
     "id": "four-points-by-sheraton-agra",

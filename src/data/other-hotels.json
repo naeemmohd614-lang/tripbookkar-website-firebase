@@ -89,7 +89,7 @@
     ],
     "roomCategories": [{ "name": "Luxury Tent", "count": 200, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:30 PM", "checkOut": "9:30 AM" },
-    "tags": ["luxury camping", "tent city", "kevadia", "unique stay"]
+    "tags": ["luxury camping", "tent city", "kevadia", "unique stay", "adventure"]
   },
   {
     "id": "itc-mughal-agra",
@@ -241,7 +241,7 @@
     ],
     "roomCategories": [{ "name": "Garden Room", "count": 55, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "mountain view", "manali"]
+    "tags": ["resort", "mountain view", "manali", "adventure", "trekking"]
   },
   {
     "id": "fortune-park-dalhousie",
@@ -336,7 +336,7 @@
     ],
     "roomCategories": [{ "name": "Premier Valley View Room", "count": 85, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["ski resort", "luxury", "mountain view", "gulmarg"]
+    "tags": ["ski resort", "luxury", "mountain view", "gulmarg", "adventure", "trekking"]
   },
   {
     "id": "mayfair-spa-resort-casino",
@@ -623,7 +623,7 @@
     ],
     "roomCategories": [{ "name": "Luxury Cottage", "count": 20, "size": "500 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
-    "tags": ["wildlife", "jungle resort", "bandhavgarh"]
+    "tags": ["wildlife", "jungle resort", "bandhavgarh", "adventure"]
   },
   {
     "id": "welcomheritage-golf-view",

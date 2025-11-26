@@ -27,7 +27,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Art Gallery", "Heritage Walk", "Poolside Relaxation" ],
     "weddingVenues": [ "The Ballroom", "The Crystal Room", "The Gateway Room" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["iconic", "heritage", "sea view", "mumbai", "luxury"]
+    "tags": ["iconic", "heritage", "sea view", "mumbai", "luxury", "wedding"]
   },
   {
     "name": "Taj Lands End, Mumbai",
@@ -55,7 +55,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Tropics Bar", "Poolside Relaxation" ],
     "weddingVenues": [ "The Ballroom", "The Garden View Room", "Seaside Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["sea view", "luxury", "mumbai", "business"]
+    "tags": ["sea view", "luxury", "mumbai", "business", "wedding"]
   },
   {
     "name": "Taj Falaknuma Palace, Hyderabad",
@@ -82,7 +82,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Heritage Walk", "Billiards Room", "Hookah Lounge" ],
     "weddingVenues": [ "The Durbar Hall", "Jade Terrace", "Main Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "heritage", "luxury", "hyderabad", "romantic"]
+    "tags": ["palace", "heritage", "luxury", "hyderabad", "romantic", "wedding", "honeymoon"]
   },
   {
     "name": "Rambagh Palace, Jaipur",
@@ -110,7 +110,7 @@
     "experiencesAndActivities": [ "Jiva Grande Spa", "Indoor & Outdoor Pools", "Polo Bar" ],
     "weddingVenues": [ "Jaigarh Hall", "Mubarak Mahal", "Panghat Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "heritage", "jaipur", "luxury"]
+    "tags": ["palace", "heritage", "jaipur", "luxury", "wedding", "honeymoon"]
   },
   {
     "name": "Taj Lake Palace, Udaipur",
@@ -137,7 +137,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Heritage Walks", "Sunset Boat Cruise" ],
     "weddingVenues": [ "Lily Pond Courtyard", "Mewar Terrace" ],
     "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "romantic", "lake view", "udaipur"]
+    "tags": ["heritage", "romantic", "lake view", "udaipur", "honeymoon", "wedding"]
   },
   {
     "name": "Taj Ganges, Varanasi",
@@ -164,7 +164,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Ganga Aarti arrangement", "City Tours" ],
     "weddingVenues": [ "Nadesar Hall", "Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "resort", "varanasi"]
+    "tags": ["luxury", "resort", "varanasi", "spiritual"]
   },
   {
     "name": "Taj Hotel & Convention Centre, Agra",
@@ -191,7 +191,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Rooftop Infinity Pool" ],
     "weddingVenues": [ "Grand Ballroom", "Outdoor Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["taj mahal view", "modern", "luxury", "agra"]
+    "tags": ["taj mahal view", "modern", "luxury", "agra", "heritage"]
   },
   {
     "name": "Taj Nadesar Palace, Varanasi",
@@ -217,7 +217,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Golf", "Yoga Sessions" ],
     "weddingVenues": [ "The Darbar Hall", "The Palace Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "palace", "luxury", "varanasi"]
+    "tags": ["heritage", "palace", "luxury", "varanasi", "spiritual", "wellness"]
   },
   {
     "name": "Taj Mahal, Lucknow",
@@ -244,7 +244,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Heritage Walk" ],
     "weddingVenues": [ "Gulistan Lawn", "Mehfil Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "resort", "lucknow"]
+    "tags": ["luxury", "resort", "lucknow", "heritage", "wedding"]
   },
   {
     "name": "Taj Theog Resort & Spa, Shimla",
@@ -270,7 +270,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Nature Trails", "Stargazing" ],
     "weddingVenues": [ "The Grand Ballroom", "The Peak Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["mountain view", "luxury", "shimla", "resort"]
+    "tags": ["mountain view", "luxury", "shimla", "resort", "himalayas", "wellness", "adventure", "trekking"]
   },
    {
     "name": "Vivanta Dal View, Srinagar",
@@ -297,7 +297,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Shikara Ride arrangement" ],
     "weddingVenues": [ "The Grand Ballroom", "Outdoor Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["lake view", "srinagar", "modern", "luxury"]
+    "tags": ["lake view", "srinagar", "modern", "luxury", "mountain view"]
   },
   {
     "name": "Taj Connemara, Chennai",
@@ -323,7 +323,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Heritage Walk" ],
     "weddingVenues": [ "The Grand Ballroom", "The Ballroom Garden" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "chennai", "luxury"]
+    "tags": ["heritage", "chennai", "luxury", "colonial", "boutique"]
   },
   {
     "name": "Taj Savoy Hotel, Ooty",
@@ -350,7 +350,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Lawn Games", "Nilgiri Mountain Railway Trip" ],
     "weddingVenues": [ "The Lawns", "The Ball Room" ],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "colonial", "ooty"]
+    "tags": ["heritage", "colonial", "ooty", "mountains", "mountain view"]
   },
    {
     "name": "Taj Usha Kiran Palace, Gwalior",
@@ -428,7 +428,7 @@
     "experiencesAndActivities": [ "Jiva Grande Spa", "Squash Courts", "Zodiac Pool" ],
     "weddingVenues": [ "The Marwar Hall", "The Palace Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "heritage", "jodhpur", "luxury"]
+    "tags": ["palace", "heritage", "jodhpur", "luxury", "desert", "wedding", "honeymoon"]
   },
   {
     "name": "Taj West End, Bengaluru",
@@ -454,7 +454,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Nature Walk", "Afternoon Tea" ],
     "weddingVenues": [ "The Prince of Wales Lawns", "The Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "luxury", "bengaluru", "gardens"]
+    "tags": ["heritage", "luxury", "bengaluru", "gardens", "colonial"]
   },
   {
     "name": "Taj Coromandel, Chennai",
@@ -532,7 +532,7 @@
     "experiencesAndActivities": [ "The Jiva Spa", "The Chambers Lounge" ],
     "weddingVenues": [ "The Durbar Hall", "The Aftab Mahtab" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["iconic", "luxury", "new delhi"]
+    "tags": ["iconic", "luxury", "new delhi", "heritage"]
   },
   {
     "name": "Taj Krishna, Hyderabad",
@@ -584,7 +584,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Water Sports", "Fort Aguada Tour" ],
     "weddingVenues": [ "Bay View Lawns", "The Grand Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beachfront", "resort", "goa", "heritage"]
+    "tags": ["beachfront", "resort", "goa", "heritage", "adventure", "beach"]
   },
   {
     "name": "Taj Exotica Resort & Spa, Goa",
@@ -610,7 +610,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Golf", "Archery", "Water Sports" ],
     "weddingVenues": [ "The Ballroom", "Beachfront Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "luxury", "south goa"]
+    "tags": ["beach resort", "luxury", "south goa", "beach", "beachfront", "adventure"]
   },
   {
     "name": "Taj Swarna, Amritsar",
@@ -636,7 +636,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "City Heritage Tour" ],
     "weddingVenues": [ "The Trinity Hall", "The Poolside" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "amritsar", "business"]
+    "tags": ["luxury", "amritsar", "business", "spiritual"]
   },
   {
     "name": "Vivanta Bengaluru, Whitefield",
@@ -662,7 +662,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Rooftop Pool" ],
     "weddingVenues": [ "Tango Ballroom", "Agenda Boardroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "it hub", "bengaluru"]
+    "tags": ["business", "it hub", "bengaluru", "boutique", "design"]
   },
   {
     "name": "Taj Madikeri Resort & Spa, Coorg",
@@ -685,10 +685,10 @@
         { "name": "Ferntree", "type": "All-day dining" },
         { "name": "The Grill", "type": "Barbecue" }
     ],
-    "experiencesAndActivities": [ "Jiva Grande Spa", "Rainforest Walk", "Pottery Studio" ],
+    "experiencesAndActivities": [ "Jiva Spa", "Rainforest Walk", "Pottery Studio" ],
     "weddingVenues": [ "The Soiree Hall", "Outdoor Amphitheater" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["rainforest", "luxury", "coorg", "resort"]
+    "tags": ["rainforest", "luxury", "coorg", "resort", "mountains", "wellness", "adventure", "trekking"]
   },
   {
     "name": "Vivanta Bhubaneswar, DN Square",
@@ -711,10 +711,10 @@
         { "name": "Mynt", "type": "All-day dining" },
         { "name": "The Orient", "type": "Pan-Asian" }
     ],
-    "experiencesAndActivities": [ "Rooftop Pool", "City Tours" ],
+    "experiencesAndActivities": [ "Rooftop Pool", "City Tours", "Jiva Spa" ],
     "weddingVenues": [ "The Grand Ballroom", "Orchid Hall" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["modern", "business", "bhubaneswar"]
+    "tags": ["modern", "business", "bhubaneswar", "wellness"]
   },
   {
     "name": "Taj Santacruz, Mumbai",
@@ -766,7 +766,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Surajkund Crafts Mela (seasonal)" ],
     "weddingVenues": [ "The Grand Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "design", "ncr", "wellness"]
+    "tags": ["resort", "design", "ncr", "wellness", "boutique"]
   },
   {
     "name": "Jai Mahal Palace, Jaipur",
@@ -792,7 +792,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Puppet Show", "Folk Dance" ],
     "weddingVenues": [ "The Palace Lawns", "The Durbar Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "heritage", "jaipur"]
+    "tags": ["palace", "heritage", "jaipur", "wedding"]
   },
   {
     "name": "Vivanta Guwahati, Assam",
@@ -818,7 +818,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "City Tours", "Kamakhya Temple Visit" ],
     "weddingVenues": [ "The Grand Ballroom", "The Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "modern", "guwahati"]
+    "tags": ["business", "modern", "guwahati", "spiritual"]
   },
   {
     "name": "The Gateway Hotel, Nashik",
@@ -844,7 +844,7 @@
     "experiencesAndActivities": [ "Wine Tasting Tours", "Temple Visits" ],
     "weddingVenues": [ "The Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "resort", "nashik"]
+    "tags": ["business", "resort", "nashik", "spiritual"]
   },
   {
     "name": "Vivanta Pune, Hinjawadi",
@@ -896,7 +896,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Golf", "Nature Trails" ],
     "weddingVenues": [ "The Grand Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "luxury", "udaipur"]
+    "tags": ["resort", "luxury", "udaipur", "mountains", "mountain view", "wedding", "adventure", "trekking"]
   },
   {
     "name": "The Gateway Hotel, Jodhpur",
@@ -922,7 +922,7 @@
     "experiencesAndActivities": [ "City Tours", "Village Safaris" ],
     "weddingVenues": [ "The Mayur Hall", "The Garden" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "jodhpur"]
+    "tags": ["business", "jodhpur", "heritage"]
   },
   {
     "name": "Taj Malabar Resort & Spa, Cochin",
@@ -948,7 +948,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Sunset Cruise", "Backwater Tours" ],
     "weddingVenues": [ "The Lawns", "The Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "harbour view", "kochi", "luxury"]
+    "tags": ["heritage", "harbour view", "kochi", "luxury", "sea view"]
   },
   {
     "name": "Vivanta Goa, Panaji",
@@ -1026,7 +1026,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Kayaking", "Scuba Diving", "Forest Treks" ],
     "weddingVenues": [ "Beachside Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beachfront", "luxury", "eco-friendly", "andaman"]
+    "tags": ["beachfront", "luxury", "eco-friendly", "andaman", "beach", "adventure", "honeymoon"]
   },
   {
     "name": "Taj Kumarakom Resort & Spa, Kerala",
@@ -1052,7 +1052,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Houseboat Cruise", "Village Tours" ],
     "weddingVenues": [ "The Lawns", "The Banquet Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["backwaters", "heritage", "kerala", "resort"]
+    "tags": ["backwaters", "heritage", "kerala", "resort", "wellness"]
   },
   {
     "name": "Taj Bekal Resort & Spa, Kerala",
@@ -1078,7 +1078,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Kayaking", "Visit to Bekal Fort" ],
     "weddingVenues": [ "The Soiree Hall", "The Beach Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "backwaters", "kerala", "wellness"]
+    "tags": ["beach resort", "backwaters", "kerala", "wellness", "beach", "spa"]
   },
   {
     "name": "Taj Corbett Resort & Spa, Uttarakhand",
@@ -1104,7 +1104,7 @@
     "experiencesAndActivities": [ "Jungle Safari", "Nature Walk", "Bird Watching" ],
     "weddingVenues": [ "The Conference Hall", "The Riverfront Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["wildlife", "jungle resort", "corbett", "uttarakhand"]
+    "tags": ["wildlife", "jungle resort", "corbett", "uttarakhand", "adventure"]
   },
   {
     "name": "Vivanta Navi Mumbai, Turbhe",
@@ -1182,7 +1182,7 @@
     "experiencesAndActivities": [ "Temple Tours", "Cooking Classes" ],
     "weddingVenues": [ "The Vista Hall", "The Garden" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "city view", "madurai"]
+    "tags": ["heritage", "city view", "madurai", "spiritual"]
   },
   {
     "name": "Vivanta Sikkim, Pakyong",
@@ -1207,7 +1207,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Monastery Tours" ],
     "weddingVenues": [ "The Summit Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["mountain view", "sikkim"]
+    "tags": ["mountain view", "sikkim", "mountains", "spiritual"]
   },
   {
     "name": "Taj Hari Mahal, Jodhpur",
@@ -1233,7 +1233,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Village Excursions" ],
     "weddingVenues": [ "The Amar Mahal Hall", "The Garden" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "jodhpur"]
+    "tags": ["palace", "jodhpur", "heritage"]
   },
   {
     "name": "The Gateway Hotel, Visakhapatnam",
@@ -1259,7 +1259,7 @@
     "experiencesAndActivities": [ "City Tours", "Beach Walks" ],
     "weddingVenues": [ "The Ballroom" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["sea view", "visakhapatnam", "business"]
+    "tags": ["sea view", "visakhapatnam", "business", "beach"]
   },
   {
     "name": "Vivanta Thiruvananthapuram",
@@ -1285,7 +1285,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "City Tours to Padmanabhaswamy Temple" ],
     "weddingVenues": [ "The Grand Ballroom", "The Agenda" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["business", "city hotel", "thiruvananthapuram"]
+    "tags": ["business", "city hotel", "thiruvananthapuram", "spiritual"]
   },
   {
     "name": "Taj Club House, Chennai",
@@ -1311,7 +1311,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Rooftop Pool & Bar" ],
     "weddingVenues": [ "The Summit", "The Madras Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["modern", "business", "chennai"]
+    "tags": ["modern", "business", "chennai", "boutique", "design"]
   },
   {
     "name": "Devi Ratn, Jaipur - IHCL SeleQtions",
@@ -1337,7 +1337,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Stargazing", "Infinity Pool" ],
     "weddingVenues": [ "The Grand Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["design", "luxury", "jaipur", "resort"]
+    "tags": ["design", "luxury", "jaipur", "resort", "boutique", "wellness", "adventure"]
   },
   {
     "name": "The Connaught, New Delhi - IHCL SeleQtions",
@@ -1363,7 +1363,7 @@
     "experiencesAndActivities": [ "Fitness Centre", "City Tours" ],
     "weddingVenues": [ "The Ballroom" ],
     "facilities": { "pool": true, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["design", "business", "new delhi"]
+    "tags": ["design", "business", "new delhi", "boutique"]
   },
   {
     "name": "President, Mumbai - IHCL SeleQtions",

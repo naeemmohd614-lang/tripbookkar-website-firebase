@@ -238,6 +238,6 @@
     "experiencesAndActivities": [ "The Spa", "Water sports", "Yoga sessions" ],
     "weddingVenues": [ "The Grand Ballroom", "The Beach Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "sea view", "kerala", "luxury"]
+    "tags": ["beach resort", "sea view", "kerala", "luxury", "adventure"]
   }
 ]
