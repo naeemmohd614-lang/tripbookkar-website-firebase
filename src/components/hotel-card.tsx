@@ -80,9 +80,8 @@ export default function HotelCard({ hotel }: HotelCardProps) {
         </CardDescription>
         <div className="mt-3 flex flex-wrap gap-2">
             {hotel.tags && hotel.tags.slice(0, 3).map((tag, index) => {
-              const tagValue = typeof tag === 'string' ? tag : (tag as any).value;
               return (
-                <Badge key={`${tagValue}-${index}`} variant="outline" className="font-normal">{tagValue}</Badge>
+                <Badge key={`${tag}-${index}`} variant="outline" className="font-normal">{tag}</Badge>
               )
             })}
         </div>

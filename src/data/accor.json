@@ -1,6 +1,8 @@
 
 [
   {
+    "id": "pullman-new-delhi-aerocity",
+    "brandSlug": "pullman",
     "name": "Pullman New Delhi Aerocity",
     "brand": "Accor",
     "city": "New Delhi",
@@ -25,6 +27,8 @@
     "tags": ["luxury", "airport hotel", "new delhi", "business"]
   },
   {
+    "id": "novotel-mumbai-juhu-beach",
+    "brandSlug": "novotel",
     "name": "Novotel Mumbai Juhu Beach",
     "brand": "Accor",
     "city": "Mumbai",
@@ -49,6 +53,8 @@
     "tags": ["sea view", "beachfront", "mumbai"]
   },
   {
+    "id": "ibis-jaipur-civil-lines",
+    "brandSlug": "ibis",
     "name": "ibis Jaipur Civil Lines",
     "brand": "Accor",
     "city": "Jaipur",
@@ -72,6 +78,8 @@
     "tags": ["budget", "business", "jaipur", "pet friendly"]
   },
   {
+    "id": "fairmont-jaipur",
+    "brandSlug": "fairmont",
     "name": "Fairmont Jaipur",
     "brand": "Accor",
     "city": "Jaipur",
@@ -94,6 +102,8 @@
     "tags": ["luxury", "palace", "jaipur", "heritage"]
   },
   {
+    "id": "sofitel-mumbai-bkc",
+    "brandSlug": "sofitel",
     "name": "Sofitel Mumbai BKC",
     "brand": "Accor",
     "city": "Mumbai",
@@ -116,6 +126,8 @@
     "tags": ["luxury", "business", "mumbai"]
   },
   {
+    "id": "novotel-kolkata-hotel-and-residences",
+    "brandSlug": "novotel",
     "name": "Novotel Kolkata Hotel and Residences",
     "brand": "Accor",
     "city": "Kolkata",
@@ -138,6 +150,8 @@
     "tags": ["business", "kolkata", "modern"]
   },
   {
+    "id": "mercure-goa-devaaya-retreat",
+    "brandSlug": "mercure",
     "name": "Mercure Goa Devaaya Retreat",
     "brand": "Accor",
     "city": "Divar Island",
@@ -159,6 +173,8 @@
     "tags": ["wellness", "ayurveda", "goa", "retreat"]
   },
   {
+    "id": "ibis-new-delhi-aerocity",
+    "brandSlug": "ibis",
     "name": "ibis New Delhi Aerocity",
     "brand": "Accor",
     "city": "New Delhi",
@@ -180,6 +196,8 @@
     "tags": ["budget", "airport hotel", "new delhi"]
   },
   {
+    "id": "novotel-ahmedabad",
+    "brandSlug": "novotel",
     "name": "Novotel Ahmedabad",
     "brand": "Accor",
     "city": "Ahmedabad",
@@ -201,6 +219,8 @@
     "tags": ["business", "ahmedabad"]
   },
   {
+    "id": "novotel-hyderabad-convention-centre",
+    "brandSlug": "novotel",
     "name": "Novotel Hyderabad Convention Centre",
     "brand": "Accor",
     "city": "Hyderabad",
@@ -223,6 +243,8 @@
     "tags": ["business", "convention", "hyderabad"]
   },
   {
+    "id": "ibis-styles-goa-calangute",
+    "brandSlug": "ibis-styles",
     "name": "ibis Styles Goa Calangute",
     "brand": "Accor",
     "city": "Calangute",
@@ -244,6 +266,8 @@
     "tags": ["family friendly", "beach", "goa"]
   },
   {
+    "id": "novotel-chennai-chamiers-road",
+    "brandSlug": "novotel",
     "name": "Novotel Chennai Chamiers Road",
     "brand": "Accor",
     "city": "Chennai",
@@ -265,6 +289,8 @@
     "tags": ["business", "chennai"]
   },
   {
+    "id": "mercure-hyderabad-kcp",
+    "brandSlug": "mercure",
     "name": "Mercure Hyderabad KCP",
     "brand": "Accor",
     "city": "Hyderabad",
@@ -286,6 +312,8 @@
     "tags": ["business", "hyderabad"]
   },
   {
+    "id": "ibis-bengaluru-city-centre",
+    "brandSlug": "ibis",
     "name": "ibis Bengaluru City Centre",
     "brand": "Accor",
     "city": "Bengaluru",
@@ -307,6 +335,8 @@
     "tags": ["budget", "business", "downtown", "bengaluru"]
   },
   {
+    "id": "novotel-visakhapatnam-varun-beach",
+    "brandSlug": "novotel",
     "name": "Novotel Visakhapatnam Varun Beach",
     "brand": "Accor",
     "city": "Visakhapatnam",
@@ -329,6 +359,8 @@
     "tags": ["sea view", "visakhapatnam", "beachfront"]
   },
   {
+    "id": "mercure-sriperumbudur",
+    "brandSlug": "mercure",
     "name": "Mercure Sriperumbudur",
     "brand": "Accor",
     "city": "Chennai",
@@ -350,6 +382,8 @@
     "tags": ["business", "industrial hub", "chennai"]
   },
   {
+    "id": "grand-mercure-bengaluru-at-gopalan-mall",
+    "brandSlug": "grand-mercure",
     "name": "Grand Mercure Bengaluru at Gopalan Mall",
     "brand": "Accor",
     "city": "Bengaluru",
@@ -371,6 +405,8 @@
     "tags": ["all-suite", "business", "bengaluru"]
   },
   {
+    "id": "novotel-pune-nagar-road",
+    "brandSlug": "novotel",
     "name": "Novotel Pune Nagar Road",
     "brand": "Accor",
     "city": "Pune",
@@ -385,6 +421,8 @@
     "tags": ["business", "pune", "airport hotel"]
   },
   {
+    "id": "ibis-pune-viman-nagar",
+    "brandSlug": "ibis",
     "name": "ibis Pune Viman Nagar",
     "brand": "Accor",
     "city": "Pune",
@@ -399,6 +437,8 @@
     "tags": ["budget", "business", "pune"]
   },
   {
+    "id": "grand-mercure-mysuru",
+    "brandSlug": "grand-mercure",
     "name": "Grand Mercure Mysuru",
     "brand": "Accor",
     "city": "Mysuru",
@@ -413,6 +453,8 @@
     "tags": ["heritage", "city hotel", "mysuru"]
   },
   {
+    "id": "novotel-chennai-omr",
+    "brandSlug": "novotel",
     "name": "Novotel Chennai OMR",
     "brand": "Accor",
     "city": "Chennai",
@@ -427,6 +469,8 @@
     "tags": ["business", "it hub", "chennai"]
   },
   {
+    "id": "mercure-kooddoo-maldives",
+    "brandSlug": "mercure",
     "name": "Mercure Kooddoo Maldives",
     "brand": "Accor",
     "city": "Kooddoo",
@@ -441,6 +485,8 @@
     "tags": ["maldives", "resort", "overwater villa", "diving"]
   },
   {
+    "id": "banyan-tree-vabbinfaru-maldives",
+    "brandSlug": "banyan-tree",
     "name": "Banyan Tree Vabbinfaru, Maldives",
     "brand": "Accor",
     "city": "Vabbinfaru",
@@ -455,6 +501,8 @@
     "tags": ["maldives", "luxury", "villa", "romantic"]
   },
   {
+    "id": "angsana-velavaru-maldives",
+    "brandSlug": "angsana",
     "name": "Angsana Velavaru, Maldives",
     "brand": "Accor",
     "city": "Velavaru",
@@ -469,6 +517,8 @@
     "tags": ["maldives", "family friendly", "overwater villa"]
   },
   {
+    "id": "raffles-udaipur",
+    "brandSlug": "raffles",
     "name": "Raffles Udaipur",
     "brand": "Accor",
     "city": "Udaipur",
@@ -483,6 +533,8 @@
     "tags": ["ultra luxury", "island", "udaipur", "romantic"]
   },
   {
+    "id": "movenpick-hotel-colombo",
+    "brandSlug": "movenpick",
     "name": "Mövenpick Hotel Colombo",
     "brand": "Accor",
     "city": "Colombo",
@@ -497,6 +549,8 @@
     "tags": ["colombo", "sri lanka", "rooftop pool", "business"]
   },
   {
+    "id": "sofitel-singapore-city-centre",
+    "brandSlug": "sofitel",
     "name": "Sofitel Singapore City Centre",
     "brand": "Accor",
     "city": "Singapore",
@@ -511,6 +565,8 @@
     "tags": ["singapore", "luxury", "business", "cbd"]
   },
   {
+    "id": "banyan-tree-bangkok",
+    "brandSlug": "banyan-tree",
     "name": "Banyan Tree Bangkok",
     "brand": "Accor",
     "city": "Bangkok",
@@ -525,6 +581,8 @@
     "tags": ["bangkok", "thailand", "rooftop bar", "luxury"]
   },
   {
+    "id": "fairmont-singapore",
+    "brandSlug": "fairmont",
     "name": "Fairmont Singapore",
     "brand": "Accor",
     "city": "Singapore",
@@ -539,6 +597,8 @@
     "tags": ["singapore", "luxury", "convention", "business"]
   },
   {
+    "id": "raffles-hotel-singapore",
+    "brandSlug": "raffles",
     "name": "Raffles Hotel Singapore",
     "brand": "Accor",
     "city": "Singapore",
@@ -553,6 +613,8 @@
     "tags": ["singapore", "heritage", "iconic", "luxury"]
   },
   {
+    "id": "swissotel-the-stamford-singapore",
+    "brandSlug": "swissotel",
     "name": "Swissôtel The Stamford, Singapore",
     "brand": "Accor",
     "city": "Singapore",

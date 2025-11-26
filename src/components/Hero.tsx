@@ -241,8 +241,8 @@ export default function Hero() {
             </div>
           </TooltipProvider>
 
-          <motion.div
-            className="relative flex items-center justify-center w-48 h-48"
+           <motion.div
+            className="relative flex items-center justify-center w-40 h-40"
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 200 }}
           >
@@ -251,12 +251,12 @@ export default function Hero() {
                 animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
-            <div className="relative w-40 h-40">
+            <div className="relative w-full h-full">
                 <Image 
                     src="/generated-pages/TripBookKar1.png" 
                     alt="TripBookKar Logo" 
                     fill
-                    className="object-contain"
+                    className="object-cover"
                 />
             </div>
           </motion.div>

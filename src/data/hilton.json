@@ -1,6 +1,8 @@
 
 [
   {
+    "id": "hilton-chennai",
+    "brandSlug": "hilton",
     "name": "Hilton Chennai",
     "brand": "Hilton",
     "city": "Chennai",
@@ -26,6 +28,8 @@
     "tags": ["luxury", "business", "chennai"]
   },
   {
+    "id": "conrad-bengaluru",
+    "brandSlug": "conrad",
     "name": "Conrad Bengaluru",
     "brand": "Conrad",
     "city": "Bengaluru",
@@ -51,6 +55,8 @@
     "tags": ["luxury", "lake view", "bengaluru"]
   },
   {
+    "id": "hilton-mumbai-international-airport",
+    "brandSlug": "hilton",
     "name": "Hilton Mumbai International Airport",
     "brand": "Hilton",
     "city": "Mumbai",
@@ -75,6 +81,8 @@
     "tags": ["airport hotel", "colonial", "mumbai"]
   },
   {
+    "id": "conrad-pune",
+    "brandSlug": "conrad",
     "name": "Conrad Pune",
     "brand": "Conrad",
     "city": "Pune",
@@ -99,6 +107,8 @@
     "tags": ["luxury", "art deco", "pune"]
   },
   {
+    "id": "doubletree-suites-by-hilton-bangalore",
+    "brandSlug": "doubletree-by-hilton",
     "name": "DoubleTree Suites by Hilton Bangalore",
     "brand": "DoubleTree by Hilton",
     "city": "Bengaluru",
@@ -122,6 +132,8 @@
     "tags": ["business", "all-suite", "bengaluru"]
   },
   {
+    "id": "hilton-jaipur",
+    "brandSlug": "hilton",
     "name": "Hilton Jaipur",
     "brand": "Hilton",
     "city": "Jaipur",
@@ -145,6 +157,8 @@
     "tags": ["city view", "jaipur", "modern"]
   },
   {
+    "id": "doubletree-by-hilton-hotel-agra",
+    "brandSlug": "doubletree-by-hilton",
     "name": "DoubleTree by Hilton Hotel Agra",
     "brand": "DoubleTree by Hilton",
     "city": "Agra",
@@ -168,6 +182,8 @@
     "tags": ["taj mahal view", "agra"]
   },
   {
+    "id": "hilton-garden-inn-new-delhi-saket",
+    "brandSlug": "hilton-garden-inn",
     "name": "Hilton Garden Inn, New Delhi/Saket",
     "brand": "Hilton Garden Inn",
     "city": "New Delhi",
@@ -190,6 +206,8 @@
     "tags": ["business", "shopping", "new delhi"]
   },
   {
+    "id": "waldorf-astoria-bengaluru",
+    "brandSlug": "waldorf-astoria",
     "name": "Waldorf Astoria Bengaluru",
     "brand": "Waldorf Astoria",
     "city": "Bengaluru",
@@ -212,6 +230,8 @@
     "tags": ["luxury", "upcoming", "bengaluru"]
   },
   {
+    "id": "doubletree-by-hilton-goa-panaji",
+    "brandSlug": "doubletree-by-hilton",
     "name": "DoubleTree by Hilton Goa - Panaji",
     "brand": "DoubleTree by Hilton",
     "city": "Panaji",
@@ -235,6 +255,8 @@
     "tags": ["river view", "goa", "resort"]
   },
   {
+    "id": "hilton-garden-inn-lucknow",
+    "brandSlug": "hilton-garden-inn",
     "name": "Hilton Garden Inn Lucknow",
     "brand": "Hilton Garden Inn",
     "city": "Lucknow",
@@ -257,6 +279,8 @@
     "tags": ["business", "lucknow"]
   },
   {
+    "id": "hilton-shillim-estate-retreat-spa",
+    "brandSlug": "hilton",
     "name": "Hilton Shillim Estate Retreat & Spa",
     "brand": "Hilton",
     "city": "Shilim",
@@ -280,6 +304,8 @@
     "tags": ["wellness", "retreat", "luxury", "nature"]
   },
   {
+    "id": "hilton-goa-resort",
+    "brandSlug": "hilton",
     "name": "Hilton Goa Resort",
     "brand": "Hilton",
     "city": "Candolim",
@@ -303,6 +329,8 @@
     "tags": ["resort", "goa", "family friendly"]
   },
   {
+    "id": "doubletree-by-hilton-jaipur-amer",
+    "brandSlug": "doubletree-by-hilton",
     "name": "DoubleTree by Hilton Jaipur Amer",
     "brand": "DoubleTree by Hilton",
     "city": "Jaipur",
@@ -326,6 +354,8 @@
     "tags": ["mountain view", "jaipur"]
   },
   {
+    "id": "hampton-by-hilton-vadodara-alkapuri",
+    "brandSlug": "hampton-by-hilton",
     "name": "Hampton by Hilton Vadodara-Alkapuri",
     "brand": "Hampton by Hilton",
     "city": "Vadodara",
@@ -346,6 +376,8 @@
     "tags": ["budget", "business", "vadodara"]
   },
   {
+    "id": "hilton-garden-inn-trivandrum",
+    "brandSlug": "hilton-garden-inn",
     "name": "Hilton Garden Inn Trivandrum",
     "brand": "Hilton Garden Inn",
     "city": "Thiruvananthapuram",
@@ -368,6 +400,8 @@
     "tags": ["city center", "business", "thiruvananthapuram"]
   },
   {
+    "id": "doubletree-by-hilton-pune-chinchwad",
+    "brandSlug": "doubletree-by-hilton",
     "name": "DoubleTree by Hilton Pune Chinchwad",
     "brand": "DoubleTree by Hilton",
     "city": "Pune",

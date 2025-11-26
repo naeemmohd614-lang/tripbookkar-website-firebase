@@ -1,6 +1,8 @@
 
 [
   {
+    "id": "radisson-blu-marina-hotel-connaught-place",
+    "brandSlug": "radisson-blu",
     "name": "Radisson Blu Marina Hotel Connaught Place",
     "brand": "Radisson Blu",
     "city": "New Delhi",
@@ -24,6 +26,8 @@
     "tags": ["heritage", "business", "downtown", "new delhi"]
   },
   {
+    "id": "radisson-gwalior",
+    "brandSlug": "radisson",
     "name": "Radisson Gwalior",
     "brand": "Radisson",
     "city": "Gwalior",
@@ -47,6 +51,8 @@
     "tags": ["business", "city hotel", "gwalior"]
   },
   {
+    "id": "radisson-jass-shimla",
+    "brandSlug": "radisson",
     "name": "Radisson Jass Shimla",
     "brand": "Radisson",
     "city": "Shimla",
@@ -69,6 +75,8 @@
     "tags": ["mountain view", "resort", "shimla"]
   },
   {
+    "id": "radisson-blu-hotel-indore",
+    "brandSlug": "radisson-blu",
     "name": "Radisson Blu Hotel Indore",
     "brand": "Radisson Blu",
     "city": "Indore",
@@ -93,6 +101,8 @@
     "tags": ["luxury", "business", "indore"]
   },
   {
+    "id": "radisson-blu-hotel-grt-chennai",
+    "brandSlug": "radisson-blu",
     "name": "Radisson Blu Hotel GRT Chennai",
     "brand": "Radisson Blu",
     "city": "Chennai",
@@ -113,6 +123,8 @@
     "tags": ["airport hotel", "business", "chennai"]
   },
   {
+    "id": "radisson-blu-resort-temple-bay-mamallapuram",
+    "brandSlug": "radisson-blu",
     "name": "Radisson Blu Resort Temple Bay Mamallapuram",
     "brand": "Radisson Blu",
     "city": "Mahabalipuram",
@@ -133,6 +145,8 @@
     "tags": ["beach resort", "luxury", "mahabalipuram"]
   },
   {
+    "id": "park-plaza-ludhiana",
+    "brandSlug": "park-plaza",
     "name": "Park Plaza Ludhiana",
     "brand": "Park Plaza",
     "city": "Ludhiana",
@@ -153,6 +167,8 @@
     "tags": ["business", "ludhiana"]
   },
   {
+    "id": "radisson-blu-hotel-guwahati",
+    "brandSlug": "radisson-blu",
     "name": "Radisson Blu Hotel, Guwahati",
     "brand": "Radisson Blu",
     "city": "Guwahati",
@@ -173,6 +189,8 @@
     "tags": ["resort", "guwahati", "business"]
   },
   {
+    "id": "radisson-blu-udaipur-palace-resort-spa",
+    "brandSlug": "radisson-blu",
     "name": "Radisson Blu Udaipur Palace Resort & Spa",
     "brand": "Radisson Blu",
     "city": "Udaipur",
@@ -193,6 +211,8 @@
     "tags": ["lake view", "resort", "udaipur"]
   },
   {
+    "id": "radisson-mumbai-andheri-midc",
+    "brandSlug": "radisson",
     "name": "Radisson Mumbai Andheri MIDC",
     "brand": "Radisson",
     "city": "Mumbai",

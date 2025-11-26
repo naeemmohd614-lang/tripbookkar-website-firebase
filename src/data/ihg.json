@@ -1,6 +1,8 @@
 
 [
   {
+    "id": "intercontinental-chennai-mahabalipuram-resort",
+    "brandSlug": "intercontinental",
     "name": "InterContinental Chennai Mahabalipuram Resort",
     "brand": "IHG",
     "city": "Chennai",
@@ -24,6 +26,8 @@
     "tags": ["beachfront", "luxury", "resort", "chennai"]
   },
   {
+    "id": "crowne-plaza-new-delhi-rohini",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza New Delhi Rohini",
     "brand": "IHG",
     "city": "New Delhi",
@@ -47,6 +51,8 @@
     "tags": ["business", "new delhi"]
   },
   {
+    "id": "holiday-inn-goa-candolim",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Goa Candolim",
     "brand": "IHG",
     "city": "Candolim",
@@ -70,6 +76,8 @@
     "tags": ["beach", "goa", "candolim"]
   },
   {
+    "id": "intercontinental-marine-drive-mumbai",
+    "brandSlug": "intercontinental",
     "name": "InterContinental Marine Drive, Mumbai",
     "brand": "IHG",
     "city": "Mumbai",
@@ -91,6 +99,8 @@
     "tags": ["sea view", "boutique", "mumbai", "luxury"]
   },
   {
+    "id": "crowne-plaza-greater-noida",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Greater Noida",
     "brand": "IHG",
     "city": "Greater Noida",
@@ -112,6 +122,8 @@
     "tags": ["business", "convention", "greater noida"]
   },
   {
+    "id": "holiday-inn-mumbai-international-airport",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Mumbai International Airport",
     "brand": "IHG",
     "city": "Mumbai",
@@ -133,6 +145,8 @@
     "tags": ["airport hotel", "business", "mumbai"]
   },
   {
+    "id": "crowne-plaza-kochi",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Kochi",
     "brand": "IHG",
     "city": "Kochi",
@@ -154,6 +168,8 @@
     "tags": ["backwaters", "kochi", "luxury"]
   },
   {
+    "id": "holiday-inn-express-suites-bengaluru-racecourse",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express & Suites Bengaluru Racecourse",
     "brand": "IHG",
     "city": "Bengaluru",
@@ -174,6 +190,8 @@
     "tags": ["budget", "business", "bengaluru"]
   },
   {
+    "id": "crowne-plaza-jaipur-tonk-road",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Jaipur Tonk Road",
     "brand": "IHG",
     "city": "Jaipur",
@@ -195,6 +213,8 @@
     "tags": ["business", "jaipur"]
   },
   {
+    "id": "holiday-inn-jaipur-city-centre",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Jaipur City Centre",
     "brand": "IHG",
     "city": "Jaipur",
@@ -216,6 +236,8 @@
     "tags": ["city center", "jaipur"]
   },
   {
+    "id": "holiday-inn-chennai-omr-it-expressway",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Chennai OMR IT Expressway",
     "brand": "IHG",
     "city": "Chennai",
@@ -237,6 +259,8 @@
     "tags": ["business", "it hub", "chennai"]
   },
   {
+    "id": "holiday-inn-express-kolkata-airport",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express Kolkata Airport",
     "brand": "IHG",
     "city": "Kolkata",
@@ -257,6 +281,8 @@
     "tags": ["airport hotel", "budget", "kolkata"]
   },
   {
+    "id": "crowne-plaza-ahmedabad-city-centre",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Ahmedabad City Centre",
     "brand": "IHG",
     "city": "Ahmedabad",
@@ -265,7 +291,7 @@
     "about": "A luxury hotel on SG Highway, offering spacious rooms, a spa, and diverse dining. Ideal for business and leisure travelers looking for an upscale experience.",
     "basePrice": 10000,
     "rating": 4.6,
-    "images": [{ "src": "https://picsum.photos/seed/cp-ahmedabad-1/1080/720", "caption": "Crowne Plaza Ahmedabad exterior" }],
+    "images": [{ "src": "https://picsum.photos/seed/cp-ahmedabad-2/1080/720", "caption": "Poolside view" }],
     "distance": { "Sardar Vallabhbhai Patel International Airport": "15 km" },
     "roomCategories": [{ "name": "Deluxe Room", "count": 200, "size": "380 sqft" }],
     "diningExperiences": [
@@ -278,6 +304,8 @@
     "tags": ["luxury", "business", "ahmedabad"]
   },
   {
+    "id": "crowne-plaza-pune-city-centre",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Pune City Centre",
     "brand": "IHG",
     "city": "Pune",
@@ -299,6 +327,8 @@
     "tags": ["city center", "business", "pune"]
   },
   {
+    "id": "holiday-inn-cochin",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Cochin",
     "brand": "IHG",
     "city": "Kochi",
@@ -320,6 +350,8 @@
     "tags": ["business", "kochi"]
   },
   {
+    "id": "crowne-plaza-chennai-adyar-park",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Chennai Adyar Park",
     "brand": "IHG",
     "city": "Chennai",
@@ -341,6 +373,8 @@
     "tags": ["heritage", "luxury", "chennai"]
   },
   {
+    "id": "holiday-inn-new-delhi-international-airport",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn New Delhi International Airport",
     "brand": "IHG",
     "city": "New Delhi",
@@ -362,6 +396,8 @@
     "tags": ["airport hotel", "new delhi"]
   },
   {
+    "id": "holiday-inn-amritsar-ranjit-avenue",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Amritsar Ranjit Avenue",
     "brand": "IHG",
     "city": "Amritsar",
@@ -383,6 +419,8 @@
     "tags": ["business", "amritsar"]
   },
   {
+    "id": "intercontinental-jaipur-tonk-road",
+    "brandSlug": "intercontinental",
     "name": "InterContinental Jaipur Tonk Road",
     "brand": "IHG",
     "city": "Jaipur",
@@ -404,6 +442,8 @@
     "tags": ["luxury", "convention", "jaipur"]
   },
   {
+    "id": "six-senses-fort-barwara",
+    "brandSlug": "six-senses",
     "name": "Six Senses Fort Barwara",
     "brand": "IHG",
     "city": "Sawai Madhopur",
@@ -425,6 +465,8 @@
     "tags": ["heritage", "luxury", "wellness", "ranthambore"]
   },
   {
+    "id": "holiday-inn-express-gurugram-sector-50",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express Gurugram Sector 50",
     "brand": "IHG",
     "city": "Gurugram",
@@ -445,6 +487,8 @@
     "tags": ["business", "budget", "gurugram"]
   },
   {
+    "id": "holiday-inn-express-ahmedabad-prahlad-nagar",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express Ahmedabad Prahlad Nagar",
     "brand": "IHG",
     "city": "Ahmedabad",
@@ -465,6 +509,8 @@
     "tags": ["business", "budget", "ahmedabad"]
   },
   {
+    "id": "crowne-plaza-ahmedabad",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Ahmedabad",
     "brand": "IHG",
     "city": "Ahmedabad",
@@ -486,6 +532,8 @@
     "tags": ["luxury", "business", "ahmedabad"]
   },
   {
+    "id": "holiday-inn-express-hyderabad-hitec-city",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express Hyderabad Hitec City",
     "brand": "IHG",
     "city": "Hyderabad",
@@ -506,6 +554,8 @@
     "tags": ["business", "budget", "hyderabad", "it hub"]
   },
   {
+    "id": "crowne-plaza-bengaluru-electronics-city",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Bengaluru Electronics City",
     "brand": "IHG",
     "city": "Bengaluru",
@@ -527,6 +577,8 @@
     "tags": ["business", "it hub", "bengaluru"]
   },
   {
+    "id": "intercontinental-dhaka",
+    "brandSlug": "intercontinental",
     "name": "InterContinental Dhaka",
     "brand": "IHG",
     "city": "Dhaka",
@@ -548,6 +600,8 @@
     "tags": ["luxury", "business", "dhaka"]
   },
   {
+    "id": "crowne-plaza-kathmandu-soaltee",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Kathmandu-Soaltee",
     "brand": "IHG",
     "city": "Kathmandu",
@@ -569,6 +623,8 @@
     "tags": ["mountain view", "casino", "kathmandu"]
   },
   {
+    "id": "holiday-inn-chandigarh-zirakpur",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Chandigarh Zirakpur",
     "brand": "IHG",
     "city": "Zirakpur",
@@ -590,6 +646,8 @@
     "tags": ["business", "chandigarh"]
   },
   {
+    "id": "holiday-inn-express-new-delhi-international-airport-t3",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express New Delhi International Airport T3",
     "brand": "IHG",
     "city": "New Delhi",
@@ -610,7 +668,9 @@
     "tags": ["transit hotel", "airport hotel", "new delhi"]
   },
   {
-    "name": "Crowne Plaza Mayur Vihar Noida",
+    "id": "crowne-plaza-new-delhi-mayur-vihar-noida",
+    "brandSlug": "crowne-plaza",
+    "name": "Crowne Plaza New Delhi Mayur Vihar Noida",
     "brand": "IHG",
     "city": "New Delhi",
     "state": "Delhi",
@@ -631,6 +691,8 @@
     "tags": ["business", "noida", "new delhi"]
   },
   {
+    "id": "holiday-inn-chandigarh-panchkula",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Chandigarh Panchkula",
     "brand": "IHG",
     "city": "Panchkula",
@@ -652,6 +714,8 @@
     "tags": ["mountain view", "chandigarh"]
   },
   {
+    "id": "crowne-plaza-new-delhi-okhla",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza New Delhi Okhla",
     "brand": "IHG",
     "city": "New Delhi",
@@ -673,6 +737,8 @@
     "tags": ["business", "new delhi"]
   },
   {
+    "id": "holiday-inn-express-bengaluru-yeshwantpur",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express Bengaluru Yeshwantpur",
     "brand": "IHG",
     "city": "Bengaluru",
@@ -693,6 +759,8 @@
     "tags": ["business", "budget", "bengaluru"]
   },
   {
+    "id": "crowne-plaza-gurgaon",
+    "brandSlug": "crowne-plaza",
     "name": "Crowne Plaza Gurgaon",
     "brand": "IHG",
     "city": "Gurugram",
@@ -714,6 +782,8 @@
     "tags": ["business", "luxury", "gurugram"]
   },
   {
+    "id": "holiday-inn-express-hyderabad-banjara-hills",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express Hyderabad Banjara Hills",
     "brand": "IHG",
     "city": "Hyderabad",
@@ -731,9 +801,11 @@
     "experiencesAndActivities": [ "Fitness Centre" ],
     "weddingVenues": [],
     "facilities": { "pool": false, "spa": false, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["budget", "business", "hyderabad"]
+    "tags": ["business", "budget", "hyderabad"]
   },
   {
+    "id": "holiday-inn-gurugram-sector-90",
+    "brandSlug": "holiday-inn",
     "name": "Holiday Inn Gurugram Sector 90",
     "brand": "IHG",
     "city": "Gurugram",
@@ -755,6 +827,8 @@
     "tags": ["business", "gurugram"]
   },
   {
+    "id": "holiday-inn-express-suites-omr-chennai",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express & Suites OMR Chennai",
     "brand": "IHG",
     "city": "Chennai",
@@ -775,6 +849,8 @@
     "tags": ["business", "budget", "it hub", "chennai"]
   },
   {
+    "id": "holiday-inn-express-pune-hinjewadi",
+    "brandSlug": "holiday-inn-express",
     "name": "Holiday Inn Express Pune Hinjewadi",
     "brand": "IHG",
     "city": "Pune",
