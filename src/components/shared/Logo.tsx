@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -11,8 +10,7 @@ export default function Logo({ className }: { className?: string }) {
         <Image 
             src="/generated-pages/TripBookKar1.png" 
             alt="TripBookKar Logo" 
-            width={180}
-            height={45}
+            fill
             className="object-contain"
         />
     </Link>
