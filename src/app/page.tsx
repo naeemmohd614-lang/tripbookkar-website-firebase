@@ -259,17 +259,27 @@ export default function Home() {
 
       <Partners />
 
-      <section id="destinations-by-month" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
+      <section id="destinations-by-month" className="py-16 md:py-24 relative overflow-hidden">
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+            <source src="https://cdn.pixabay.com/video/2024/05/08/211152_tiny.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50 -z-10" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">
               Destinations By Month
             </h2>
-            <p className="mt-2 text-lg text-muted-foreground">
+            <p className="mt-2 text-lg text-gray-200">
               Find the perfect place to travel for every month of the year.
             </p>
           </div>
-          {destinationsLoading && <p className="text-center">Loading destinations...</p>}
+          {destinationsLoading && <p className="text-center text-white">Loading destinations...</p>}
           {sortedDestinationsByMonth && (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {sortedDestinationsByMonth.map((month) => {
