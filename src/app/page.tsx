@@ -131,17 +131,27 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="travel-by-interest" className="py-16 md:py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+      <section id="travel-by-interest" className="py-16 md:py-24 relative overflow-hidden">
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+            <source src="https://cdn.pixabay.com/video/2023/10/29/186595-880031802_large.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50 -z-10" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">
               Travel by Interest
             </h2>
-            <p className="mt-2 text-lg text-muted-foreground">
+            <p className="mt-2 text-lg text-gray-200">
               Find the perfect trip based on what you love to do.
             </p>
           </div>
-          {interestsLoading && <p className="text-center">Loading interests...</p>}
+          {interestsLoading && <p className="text-center text-white">Loading interests...</p>}
           {interests && (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
               {interests.map((interest) => {
