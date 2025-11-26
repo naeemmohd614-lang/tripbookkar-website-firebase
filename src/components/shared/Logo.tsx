@@ -7,14 +7,13 @@ import Image from 'next/image';
 
 export default function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={cn("relative flex items-center h-10 w-48", className)}>
+    <Link href="/" className={cn("relative flex items-center", className)}>
         <Image 
             src="/TripBookar1.png" 
             alt="TripBookKar Logo" 
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            width={180}
+            height={45}
             className="object-contain"
-            priority 
         />
     </Link>
   );
