@@ -28,7 +28,7 @@ export default function BrandLogo({ brand }: BrandLogoProps) {
 
   return (
     <div className="flex items-center justify-center w-full h-full">
-      <span className="font-bold text-center text-sm">{brand.name}</span>
+      <span className="font-bold text-center text-sm text-white">{brand.name}</span>
     </div>
   );
 }
