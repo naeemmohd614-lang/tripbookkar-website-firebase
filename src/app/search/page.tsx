@@ -26,7 +26,7 @@ function SearchResults() {
         (hotel.city && hotel.city.toLowerCase().includes(q)) ||
         (hotel.state && hotel.state.toLowerCase().includes(q)) ||
         (hotel.brand && hotel.brand.toLowerCase().includes(q)) ||
-        (hotel.tags && hotel.tags.some(tag => tag.toLowerCase().includes(q)))
+        (hotel.tags && Array.isArray(hotel.tags) && hotel.tags.some(tag => typeof tag === 'string' && tag.toLowerCase().includes(q)))
     );
   }, [allHotels, q]);
 
