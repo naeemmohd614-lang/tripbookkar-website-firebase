@@ -157,8 +157,8 @@ export default function ServicesPage() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Hamari Services</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Aapki har zaroorat ke liye, ek perfect solution.</p>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue drop-shadow-lg">Hamari Services</h2>
+            <p className="mt-2 text-lg text-muted-foreground drop-shadow-lg">Aapki har zaroorat ke liye, ek perfect solution.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
@@ -228,15 +228,19 @@ export default function ServicesPage() {
       </section>
 
       {/* Sample Packages Section */}
-      <section id="sample-packages" className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section id="sample-packages" className="relative py-16 md:py-24">
+        <div className="absolute inset-0">
+            <Image src="https://images.unsplash.com/photo-1542037104-924169907650?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJlc29ydCUyMHBvb2x8ZW58MHx8fHwxNzY0MjA4ODk4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Mountain resort pool" layout="fill" objectFit="cover" className="z-0" />
+        </div>
+        <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20">
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Sample Packages</h2>
-                <p className="mt-2 text-lg text-muted-foreground">Har zaroorat ke liye ek khaas package.</p>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Sample Packages</h2>
+                <p className="mt-2 text-lg text-gray-200">Har zaroorat ke liye ek khaas package.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {samplePackages.map(pkg => (
-                    <Card key={pkg.title} className="text-center">
+                    <Card key={pkg.title} className="text-center bg-white/90 backdrop-blur-sm">
                         <CardHeader>
                             <CardTitle className="font-headline text-2xl text-primary">{pkg.title}</CardTitle>
                         </CardHeader>
