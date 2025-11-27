@@ -131,7 +131,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative bg-brand-blue text-white py-20 md:py-32">
           <div className="absolute inset-0">
-              <Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8c2VydmljZXN8ZW58MHx8fHwxNzY0MjA4Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Beautiful travel destination" layout="fill" objectFit="cover" className="opacity-20" data-ai-hint="beautiful travel destination"/>
+              <Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Beautiful travel destination" layout="fill" objectFit="cover" className="opacity-20" data-ai-hint="beautiful travel destination"/>
           </div>
           <div className="container mx-auto px-4 text-center relative z-10">
               <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">Aapki Har Trip Ke Liye, Hum Hain Na!</h1>
@@ -150,52 +150,52 @@ export default function ServicesPage() {
       </section>
       
       {/* Services Section */}
-      <section id="services" className="relative py-16 md:py-24">
-        <div className="absolute inset-0 z-0">
-            <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning background" layout="fill" objectFit="cover" className="opacity-30" data-ai-hint="travel planning" />
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Hamari Services</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Aapki har zaroorat ke liye, ek perfect solution.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card key={index} className="bg-white/80 backdrop-blur-sm border-gray-200 hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                            <Icon className="w-6 h-6 text-orange-400" />
-                        </div>
-                        <CardTitle className="font-headline text-xl text-gray-900">{service.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    <ul className="space-y-2 text-sm">
-                      {service.benefits.map((benefit, i) => (
-                        <li key={i} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
-                          <span className="text-gray-700">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                      <p className="text-xs font-semibold text-gray-500 flex items-center gap-2">
-                        <Shield className="w-4 h-4" /> 
-                        {service.trustLine}
-                      </p>
-                  </CardFooter>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+        <section id="services" className="relative py-16 md:py-24">
+            <div className="absolute inset-0 z-0">
+                <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning background" layout="fill" objectFit="cover" className="opacity-30" data-ai-hint="travel planning" />
+            </div>
+            <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold text-white drop-shadow-lg">Hamari Services</h2>
+                    <p className="mt-2 text-lg text-gray-200 drop-shadow-lg">Aapki har zaroorat ke liye, ek perfect solution.</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.map((service, index) => {
+                        const Icon = service.icon;
+                        return (
+                            <Card key={index} className="bg-white/80 backdrop-blur-sm border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                                <CardHeader>
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-primary/10 p-3 rounded-lg">
+                                            <Icon className="w-6 h-6 text-orange-400" />
+                                        </div>
+                                        <CardTitle className="font-headline text-xl text-gray-900">{service.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-gray-600 mb-4">{service.description}</p>
+                                    <ul className="space-y-2 text-sm">
+                                        {service.benefits.map((benefit, i) => (
+                                            <li key={i} className="flex items-center gap-2">
+                                                <CheckCircle className="w-4 h-4 text-green-500" />
+                                                <span className="text-gray-700">{benefit}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </CardContent>
+                                <CardFooter>
+                                    <p className="text-xs font-semibold text-gray-500 flex items-center gap-2">
+                                        <Shield className="w-4 h-4" /> 
+                                        {service.trustLine}
+                                    </p>
+                                </CardFooter>
+                            </Card>
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
 
       {/* Why Choose Us Section */}
       <section id="why-choose-us" className="relative py-16 md:py-24">
@@ -228,65 +228,65 @@ export default function ServicesPage() {
       </section>
 
       {/* Sample Packages Section */}
-      <section id="sample-packages" className="relative py-16 md:py-24">
-        <div className="absolute inset-0">
-            <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning" layout="fill" objectFit="cover" className="z-0" />
-        </div>
-        <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
-        <div className="container mx-auto px-4 relative z-20">
-            <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Sample Packages</h2>
-                <p className="mt-2 text-lg text-gray-200">Har zaroorat ke liye ek khaas package.</p>
+        <section id="sample-packages" className="relative py-16 md:py-24">
+            <div className="absolute inset-0">
+                <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning" layout="fill" objectFit="cover" className="z-0" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {samplePackages.map(pkg => (
-                    <Card key={pkg.title} className="text-center bg-white/90 backdrop-blur-sm">
-                        <CardHeader>
-                            <CardTitle className="font-headline text-2xl text-primary">{pkg.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <ul className="space-y-2 mb-4">
-                                {pkg.bullets.map(bullet => (
-                                    <li key={bullet}>{bullet}</li>
-                                ))}
-                            </ul>
-                        </CardContent>
-                    </Card>
-                ))}
+            <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
+            <div className="container mx-auto px-4 relative z-20">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Sample Packages</h2>
+                    <p className="mt-2 text-lg text-gray-200">Har zaroorat ke liye ek khaas package.</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {samplePackages.map(pkg => (
+                        <Card key={pkg.title} className="text-center bg-white/90 backdrop-blur-sm">
+                            <CardHeader>
+                                <CardTitle className="font-headline text-2xl text-primary">{pkg.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="space-y-2 mb-4">
+                                    {pkg.bullets.map(bullet => (
+                                        <li key={bullet}>{bullet}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
             </div>
-        </div>
-      </section>
+        </section>
 
       {/* How to Book Section */}
       <section className="relative py-16 md:py-24">
         <div className="absolute inset-0">
-            <Image src="https://images.unsplash.com/photo-1517849325420-a1c021b9b940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="happy traveller" layout="fill" objectFit="cover" className="z-0 opacity-20" />
+            <Image src="https://images.unsplash.com/photo-1517849325420-a1c021b9b940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="happy traveller" layout="fill" objectFit="cover" className="z-0" />
         </div>
-        <div className="absolute inset-0 bg-secondary/80 z-10"></div>
+        <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Booking Process: 4 Aasan Steps</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Booking Process: 4 Aasan Steps</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">1</div>
-                <h3 className="font-semibold text-lg mb-2">Search & Discover</h3>
-                <p className="text-muted-foreground">Apni destination aur dates daalein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-white">Search & Discover</h3>
+                <p className="text-gray-200">Apni destination aur dates daalein.</p>
             </div>
             <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">2</div>
-                <h3 className="font-semibold text-lg mb-2">Choose Hotel</h3>
-                <p className="text-muted-foreground">Apni pasand ka hotel select karein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-white">Choose Hotel</h3>
+                <p className="text-gray-200">Apni pasand ka hotel select karein.</p>
             </div>
             <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">3</div>
-                <h3 className="font-semibold text-lg mb-2">Get Quote</h3>
-                <p className="text-muted-foreground">Hamein call karein ya quote request karein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-white">Get Quote</h3>
+                <p className="text-gray-200">Hamein call karein ya quote request karein.</p>
             </div>
              <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">4</div>
-                <h3 className="font-semibold text-lg mb-2">Confirm & Pay</h3>
-                <p className="text-muted-foreground">Best price par booking confirm karein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-white">Confirm & Pay</h3>
+                <p className="text-gray-200">Best price par booking confirm karein.</p>
             </div>
           </div>
            <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
