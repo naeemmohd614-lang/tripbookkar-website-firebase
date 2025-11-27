@@ -93,7 +93,7 @@
     "experiencesAndActivities": [ "Quan Spa", "Casino Carnival", "Water Sports" ],
     "weddingVenues": [ "Grand Ballroom", "Beachside Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "goa", "casino", "beach", "beachfront", "sea view", "romantic", "honeymoon"]
+    "tags": ["beach resort", "goa", "casino", "beach", "beachfront", "sea view", "romantic", "honeymoon", "boutique"]
   },
   {
     "id": "jw-marriott-mumbai-juhu",
@@ -390,7 +390,7 @@
     ],
     "roomCategories": [{ "name": "Wonderful Room", "count": 121, "size": "650 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": true, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "beachfront", "party", "goa", "pet friendly", "beach", "honeymoon", "romantic"]
+    "tags": ["luxury", "beachfront", "party", "goa", "pet friendly", "beach", "honeymoon", "romantic", "boutique"]
   },
   {
     "id": "sheraton-grand-bangalore-hotel-at-brigade-gateway",
@@ -840,7 +840,7 @@
     ],
     "roomCategories": [{ "name": "Lagoon View Room", "count": 206, "size": "600 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "3:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beachfront", "luxury", "resort", "goa", "beach", "sea view", "romantic", "honeymoon"]
+    "tags": ["beachfront", "luxury", "resort", "goa", "beach", "sea view", "romantic", "honeymoon", "boutique"]
   },
   {
     "id": "the-westin-goa",

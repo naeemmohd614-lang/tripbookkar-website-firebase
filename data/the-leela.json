@@ -192,7 +192,7 @@
     "experiencesAndActivities": [ "ESPA Spa", "Cooking classes", "City tours" ],
     "weddingVenues": [ "The Vikramaditya Ballroom", "The Sheesh Mahal Lawn" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "luxury", "jaipur", "resort"]
+    "tags": ["palace", "luxury", "jaipur", "resort", "boutique"]
   },
   {
     "name": "The Leela Ashtamudi, A Raviz Hotel",
@@ -215,7 +215,7 @@
     "experiencesAndActivities": [ "The Spa", "Houseboat cruises", "Cultural performances" ],
     "weddingVenues": [ "The Lakefront Lawns", "The Banquet Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["backwaters", "wellness", "kerala", "resort"]
+    "tags": ["backwaters", "wellness", "kerala", "resort", "boutique"]
   },
   {
     "name": "The Leela Kovalam, A Raviz Hotel",
@@ -238,6 +238,6 @@
     "experiencesAndActivities": [ "The Spa", "Water sports", "Yoga sessions" ],
     "weddingVenues": [ "The Grand Ballroom", "The Beach Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "sea view", "kerala", "luxury"]
+    "tags": ["beach resort", "sea view", "kerala", "luxury", "boutique"]
   }
 ]

@@ -1,6 +1,59 @@
 
 [
   {
+    "id": "the-lalit-new-delhi",
+    "brandSlug": "the-lalit",
+    "name": "The Lalit New Delhi",
+    "brand": "The Lalit",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "address": "Barakhamba Avenue, Connaught Place, New Delhi, Delhi 110001",
+    "about": "Located in the heart of the city's business and shopping district, The Lalit New Delhi offers a luxurious stay with contemporary design, fine dining restaurants, and a world-class spa.",
+    "basePrice": 14000,
+    "rating": 4.6,
+    "images": [
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-delhi-1.webp", "caption": "The Lalit New Delhi exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-delhi-2.webp", "caption": "Luxurious hotel lobby" }
+    ],
+    "distance": { "Indira Gandhi International Airport": "15 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 461, "size": "350 sqft" }],
+    "diningExperiences": [
+        { "name": "Baluchi", "type": "Indian" },
+        { "name": "OKO", "type": "Pan-Asian" },
+        { "name": "24/7 Restaurant", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "Rejuve - The Spa", "Kitty Su Nightclub", "Art Junction" ],
+    "weddingVenues": [ "The Crystal Ballroom", "The Plaza Terrace Garden" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "business", "downtown", "new delhi"]
+  },
+  {
+    "id": "the-lalit-mumbai",
+    "brandSlug": "the-lalit",
+    "name": "The Lalit Mumbai",
+    "brand": "The Lalit",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "address": "Sahar Airport Road, Andheri East, Mumbai, Maharashtra 400059",
+    "about": "A luxury hotel located close to the Mumbai airport, offering contemporary accommodations, a grand lobby, and a range of dining and wellness facilities.",
+    "basePrice": 12000,
+    "rating": 4.5,
+    "images": [
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-mumbai-1.webp", "caption": "The Lalit Mumbai exterior" },
+      { "src": "https://storage.googleapis.com/studio-1865376664-5e932.appspot.com/images/lalit-mumbai-2.webp", "caption": "Grand atrium lobby" }
+    ],
+    "distance": { "Chhatrapati Shivaji Maharaj International Airport": "1 km" },
+    "roomCategories": [{ "name": "Deluxe Room", "count": 369, "size": "475 sqft" }],
+    "diningExperiences": [
+        { "name": "Baluchi", "type": "Indian" },
+        { "name": "24/7 Restaurant", "type": "All-day dining" }
+    ],
+    "experiencesAndActivities": [ "Rejuve - The Spa", "Kitty Su Nightclub" ],
+    "weddingVenues": [ "The Majestic Ballroom", "The Royal Gardens" ],
+    "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
+    "tags": ["luxury", "airport hotel", "mumbai"]
+  },
+  {
     "id": "ramada-encore-by-wyndham-statue-of-unity",
     "brandSlug": "ramada",
     "name": "Ramada Encore by Wyndham Statue of Unity",
@@ -74,7 +127,7 @@
     ],
     "roomCategories": [{ "name": "Varuna Burj", "count": 32, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "ghat view", "spiritual", "varanasi"]
+    "tags": ["heritage", "ghat view", "spiritual", "varanasi", "boutique"]
   },
   {
     "id": "hotel-clarks-shiraz-agra",
@@ -283,7 +336,7 @@
     ],
     "roomCategories": [{ "name": "Premier Valley View Room", "count": 85, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["ski resort", "luxury", "mountain view", "gulmarg"]
+    "tags": ["ski resort", "luxury", "mountain view", "gulmarg", "boutique"]
   },
   {
     "id": "mayfair-spa-resort-casino",
@@ -378,7 +431,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 44, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": false, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "mountain view", "darjeeling"]
+    "tags": ["heritage", "mountain view", "darjeeling", "boutique"]
   },
   {
     "id": "sinclairs-siliguri",
@@ -606,7 +659,7 @@
     ],
     "roomCategories": [{ "name": "Regal Room", "count": 100, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "palace", "bhopal"]
+    "tags": ["heritage", "palace", "bhopal", "boutique"]
   },
   {
     "id": "mpt-amaltas-pachmarhi",
