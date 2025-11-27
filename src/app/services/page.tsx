@@ -135,7 +135,7 @@ export default function ServicesPage() {
           </div>
           <div className="container mx-auto px-4 text-center relative z-10">
               <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">Aapki Har Trip Ke Liye, Hum Hain Na!</h1>
-              <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">
+              <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200 drop-shadow-lg">
                   Chahe family vacation ho ya business trip, hum aapke liye best hotels aur deals laate hain.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4 md:gap-6">
@@ -151,8 +151,8 @@ export default function ServicesPage() {
       
       {/* Services Section */}
       <section id="services" className="relative py-16 md:py-24">
-        <div className="absolute inset-0">
-            <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning background" layout="fill" objectFit="cover" className="z-0 opacity-30" data-ai-hint="travel planning" />
+        <div className="absolute inset-0 z-0">
+            <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning background" layout="fill" objectFit="cover" className="opacity-30" data-ai-hint="travel planning" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -200,7 +200,7 @@ export default function ServicesPage() {
       {/* Why Choose Us Section */}
       <section id="why-choose-us" className="relative py-16 md:py-24">
         <div className="absolute inset-0">
-            <Image src="https://images.unsplash.com/photo-1520208422220-d12a3250a3c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBob3RlbCUyMHJvb218ZW58MHx8fHwxNzY0MjA4NTEzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Luxury hotel room view" layout="fill" objectFit="cover" className="z-0" />
+            <Image src="https://images.unsplash.com/photo-1520208422220-d12a3250a3c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBob3RlbCUyMHJvb208ZW58MHx8fHwxNzY0MjA4NTEzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Luxury hotel room view" layout="fill" objectFit="cover" className="z-0" />
         </div>
         <div className="absolute inset-0 bg-brand-blue/80 z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
@@ -258,8 +258,12 @@ export default function ServicesPage() {
       </section>
 
       {/* How to Book Section */}
-      <section className="bg-secondary/40 py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="relative py-16 md:py-24">
+        <div className="absolute inset-0">
+            <Image src="https://images.unsplash.com/photo-1517849325420-a1c021b9b940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="happy traveller" layout="fill" objectFit="cover" className="z-0 opacity-20" />
+        </div>
+        <div className="absolute inset-0 bg-secondary/80 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Booking Process: 4 Aasan Steps</h2>
           </div>
