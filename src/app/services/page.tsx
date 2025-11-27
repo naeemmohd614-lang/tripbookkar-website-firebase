@@ -154,11 +154,10 @@ export default function ServicesPage() {
             <div className="absolute inset-0 z-0">
                 <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning background" layout="fill" objectFit="cover" className="opacity-30" data-ai-hint="travel planning" />
             </div>
-            <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-headline font-bold text-white drop-shadow-lg">Hamari Services</h2>
-                    <p className="mt-2 text-lg text-gray-200 drop-shadow-lg">Aapki har zaroorat ke liye, ek perfect solution.</p>
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Hamari Services</h2>
+                    <p className="mt-2 text-lg text-muted-foreground">Aapki har zaroorat ke liye, ek perfect solution.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => {
@@ -202,11 +201,10 @@ export default function ServicesPage() {
         <div className="absolute inset-0">
             <Image src="https://images.unsplash.com/photo-1520208422220-d12a3250a3c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBob3RlbCUyMHJvb208ZW58MHx8fHwxNzY0MjA4NTEzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Luxury hotel room view" layout="fill" objectFit="cover" className="z-0" />
         </div>
-        <div className="absolute inset-0 bg-brand-blue/80 z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">TripBookKar Hi Kyun?</h2>
-                <p className="mt-2 text-lg text-gray-200">Kyunki hum aapke vishvas aur comfort ko sabse upar rakhte hain.</p>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">TripBookKar Hi Kyun?</h2>
+                <p className="mt-2 text-lg text-muted-foreground">Kyunki hum aapke vishvas aur comfort ko sabse upar rakhte hain.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {whyChooseUsPoints.map((point) => {
@@ -214,11 +212,11 @@ export default function ServicesPage() {
               return (
                 <div key={point.title} className="flex items-start gap-4">
                   <div className="bg-white/10 p-3 rounded-full mt-1">
-                    <Icon className="w-6 h-6 text-white" />
+                    <Icon className="w-6 h-6 text-brand-blue" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white">{point.title}</h3>
-                    <p className="text-gray-300 text-sm">{point.description}</p>
+                    <h3 className="text-lg font-semibold text-gray-800">{point.title}</h3>
+                    <p className="text-gray-600 text-sm">{point.description}</p>
                   </div>
                 </div>
               );
@@ -232,11 +230,10 @@ export default function ServicesPage() {
             <div className="absolute inset-0">
                 <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning" layout="fill" objectFit="cover" className="z-0" />
             </div>
-            <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
             <div className="container mx-auto px-4 relative z-20">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Sample Packages</h2>
-                    <p className="mt-2 text-lg text-gray-200">Har zaroorat ke liye ek khaas package.</p>
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Sample Packages</h2>
+                    <p className="mt-2 text-lg text-muted-foreground">Har zaroorat ke liye ek khaas package.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {samplePackages.map(pkg => (
@@ -262,31 +259,30 @@ export default function ServicesPage() {
         <div className="absolute inset-0">
             <Image src="https://images.unsplash.com/photo-1517849325420-a1c021b9b940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="happy traveller" layout="fill" objectFit="cover" className="z-0" />
         </div>
-        <div className="absolute inset-0 bg-brand-blue/70 z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Booking Process: 4 Aasan Steps</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Booking Process: 4 Aasan Steps</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">1</div>
-                <h3 className="font-semibold text-lg mb-2 text-white">Search & Discover</h3>
-                <p className="text-gray-200">Apni destination aur dates daalein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-gray-800">Search & Discover</h3>
+                <p className="text-gray-600">Apni destination aur dates daalein.</p>
             </div>
             <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">2</div>
-                <h3 className="font-semibold text-lg mb-2 text-white">Choose Hotel</h3>
-                <p className="text-gray-200">Apni pasand ka hotel select karein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-gray-800">Choose Hotel</h3>
+                <p className="text-gray-600">Apni pasand ka hotel select karein.</p>
             </div>
             <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">3</div>
-                <h3 className="font-semibold text-lg mb-2 text-white">Get Quote</h3>
-                <p className="text-gray-200">Hamein call karein ya quote request karein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-gray-800">Get Quote</h3>
+                <p className="text-gray-600">Hamein call karein ya quote request karein.</p>
             </div>
              <div className="text-center">
                 <div className="flex items-center justify-center bg-primary text-primary-foreground h-16 w-16 rounded-full mx-auto mb-4 text-2xl font-bold">4</div>
-                <h3 className="font-semibold text-lg mb-2 text-white">Confirm & Pay</h3>
-                <p className="text-gray-200">Best price par booking confirm karein.</p>
+                <h3 className="font-semibold text-lg mb-2 text-gray-800">Confirm & Pay</h3>
+                <p className="text-gray-600">Best price par booking confirm karein.</p>
             </div>
           </div>
            <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
