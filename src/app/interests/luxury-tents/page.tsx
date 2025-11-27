@@ -14,8 +14,8 @@ export default function HoneymoonPage() {
     const { data: honeymoonHotels, isLoading } = useCollection<Hotel>(honeymoonHotelsQuery);
 
   const heroImage = {
-      "src": "https://images.unsplash.com/photo-1594323638217-a128004f5e55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb21hbnRpYyUyMGNvdXBsZSUyMGJlYWNofGVufDB8fHx8MTc2Mzg4NDQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "caption": "romantic couple beach"
+      "src": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyb21hbnRpYyUyMHRyYXZlbHxlbnwwfHx8fDE3NjQxMDI3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "caption": "romantic travel"
   };
 
   return (
