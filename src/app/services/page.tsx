@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -150,38 +149,42 @@ export default function ServicesPage() {
       </section>
       
       {/* Services Section */}
-      <section id="services" className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section id="services" className="relative py-16 md:py-24 text-white">
+        <div className="absolute inset-0">
+            <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning background" layout="fill" objectFit="cover" className="z-0" data-ai-hint="travel planning" />
+            <div className="absolute inset-0 bg-black/60 z-0"/>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-blue">Hamari Services</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Aapki har zaroorat ke liye, ek perfect solution.</p>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Hamari Services</h2>
+            <p className="mt-2 text-lg text-gray-200">Aapki har zaroorat ke liye, ek perfect solution.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <Card key={index} className="hover:shadow-xl transition-shadow duration-300">
+                <Card key={index} className="bg-gray-800/50 backdrop-blur-sm border-gray-700 text-white hover:shadow-xl transition-shadow duration-300">
                   <CardHeader>
                     <div className="flex items-center gap-4">
                         <div className="bg-primary/10 p-3 rounded-lg">
-                            <Icon className="w-6 h-6 text-primary" />
+                            <Icon className="w-6 h-6 text-orange-400" />
                         </div>
                         <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground mb-4">{service.description}</p>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
                     <ul className="space-y-2 text-sm">
                       {service.benefits.map((benefit, i) => (
                         <li key={i} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
+                          <CheckCircle className="w-4 h-4 text-green-400" />
                           <span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </CardContent>
                   <CardFooter>
-                      <p className="text-xs font-semibold text-gray-500 flex items-center gap-2">
+                      <p className="text-xs font-semibold text-gray-400 flex items-center gap-2">
                         <Shield className="w-4 h-4" /> 
                         {service.trustLine}
                       </p>
