@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Button } from "@/components/ui/button";
@@ -15,6 +14,11 @@ import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import React from "react";
 import Image from "next/image";
+import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+import { useFirestore } from '@/firebase';
+import { collection, serverTimestamp } from 'firebase/firestore';
+import { addDocumentNonBlocking } from '@/firebase/non-blocking-updates';
+import { useToast } from "@/hooks/use-toast";
 
 const WhatsAppIcon = () => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-2 fill-current">
@@ -22,9 +26,56 @@ const WhatsAppIcon = () => (
     </svg>
 );
 
+interface IFormInput {
+    name: string;
+    email: string;
+    phone: string;
+    travelType: string;
+    destination: string;
+    dates?: DateRange;
+    travellers: string;
+    budget?: string;
+    message: string;
+}
+
 
 export default function ContactPage() {
-    const [date, setDate] = React.useState<DateRange | undefined>(undefined);
+    const { register, handleSubmit, control, reset, formState: { isSubmitting } } = useForm<IFormInput>();
+    const firestore = useFirestore();
+    const { toast } = useToast();
+
+    const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+        if (!firestore) {
+            toast({
+                variant: "destructive",
+                title: "Error",
+                description: "Database connection not available. Please try again later.",
+            });
+            return;
+        }
+
+        try {
+            const leadsCollection = collection(firestore, 'leads');
+            const leadData = {
+                ...data,
+                dates: data.dates ? `From: ${format(data.dates.from!, "PPP")} To: ${format(data.dates.to!, "PPP")}` : 'Not specified',
+                createdAt: serverTimestamp(),
+            };
+            await addDocumentNonBlocking(leadsCollection, leadData);
+            toast({
+                title: "Enquiry Sent!",
+                description: "Thank you for your message. We will get back to you shortly.",
+            });
+            reset();
+        } catch (error) {
+            console.error("Error sending enquiry:", error);
+            toast({
+                variant: "destructive",
+                title: "Submission Failed",
+                description: "There was a problem sending your enquiry. Please try again.",
+            });
+        }
+    };
 
     return (
         <div className="relative min-h-screen text-white">
@@ -76,11 +127,11 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                    <Button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white">
-                                        <Mail className="mr-2 h-4 w-4" /> Email Us
+                                    <Button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white" asChild>
+                                        <a href="mailto:travel@tripbookkar.com"><Mail className="mr-2 h-4 w-4" /> Email Us</a>
                                     </Button>
-                                    <Button className="flex-1 bg-green-500 hover:bg-green-600 text-white">
-                                        <WhatsAppIcon /> WhatsApp
+                                    <Button className="flex-1 bg-green-500 hover:bg-green-600 text-white" asChild>
+                                         <a href="https://wa.me/918295486610" target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> WhatsApp</a>
                                     </Button>
                                 </div>
                             </CardContent>
@@ -94,99 +145,111 @@ export default function ContactPage() {
                                 <CardTitle className="text-2xl font-semibold text-white">Send us a Message</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <form className="space-y-6">
+                                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <Label htmlFor="full-name" className="text-gray-300">Full Name</Label>
-                                            <Input id="full-name" placeholder="John Doe" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
+                                            <Input id="full-name" {...register("name", { required: true })} placeholder="John Doe" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="email" className="text-gray-300">Email Address</Label>
-                                            <Input id="email" type="email" placeholder="john.doe@example.com" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
+                                            <Input id="email" type="email" {...register("email")} placeholder="john.doe@example.com" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <Label htmlFor="phone" className="text-gray-300">Phone Number</Label>
-                                            <Input id="phone" type="tel" placeholder="+91 12345 67890" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
+                                            <Input id="phone" type="tel" {...register("phone", { required: true })} placeholder="+91 12345 67890" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="travel-type" className="text-gray-300">Travel Type</Label>
-                                            <Select>
-                                                <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
-                                                    <SelectValue placeholder="Select a travel type" />
-                                                </SelectTrigger>
-                                                <SelectContent className="bg-gray-800 border-gray-700 text-white">
-                                                    <SelectItem value="honeymoon">Honeymoon</SelectItem>
-                                                    <SelectItem value="family">Family Vacation</SelectItem>
-                                                    <SelectItem value="adventure">Adventure</SelectItem>
-                                                    <SelectItem value="business">Business</SelectItem>
-                                                    <SelectItem value="other">Other</SelectItem>
-                                                </SelectContent>
-                                            </Select>
+                                            <Controller
+                                                name="travelType"
+                                                control={control}
+                                                render={({ field }) => (
+                                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                        <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
+                                                            <SelectValue placeholder="Select a travel type" />
+                                                        </SelectTrigger>
+                                                        <SelectContent className="bg-gray-800 border-gray-700 text-white">
+                                                            <SelectItem value="honeymoon">Honeymoon</SelectItem>
+                                                            <SelectItem value="family">Family Vacation</SelectItem>
+                                                            <SelectItem value="adventure">Adventure</SelectItem>
+                                                            <SelectItem value="business">Business</SelectItem>
+                                                            <SelectItem value="other">Other</SelectItem>
+                                                        </SelectContent>
+                                                    </Select>
+                                                )}
+                                            />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="destination" className="text-gray-300">Preferred Destination</Label>
-                                        <Input id="destination" placeholder="e.g., Maldives, Rajasthan" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
+                                        <Input id="destination" {...register("destination")} placeholder="e.g., Maldives, Rajasthan" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="dates" className="text-gray-300">Travel Dates (From - To)</Label>
-                                         <Popover>
-                                            <PopoverTrigger asChild>
-                                            <Button
-                                                id="dates"
-                                                variant={"outline"}
-                                                className={cn(
-                                                "w-full justify-start text-left font-normal bg-gray-700 border-gray-600 hover:bg-gray-600 text-white hover:text-white",
-                                                !date && "text-gray-400"
-                                                )}
-                                            >
-                                                <CalendarIcon className="mr-2 h-4 w-4" />
-                                                {date?.from ? (
-                                                date.to ? (
-                                                    <>
-                                                    {format(date.from, "LLL dd, y")} -{" "}
-                                                    {format(date.to, "LLL dd, y")}
-                                                    </>
-                                                ) : (
-                                                    format(date.from, "LLL dd, y")
-                                                )
-                                                ) : (
-                                                <span>Pick a date range</span>
-                                                )}
-                                            </Button>
-                                            </PopoverTrigger>
-                                            <PopoverContent className="w-auto p-0 bg-gray-800 border-gray-700" align="start">
-                                            <Calendar
-                                                initialFocus
-                                                mode="range"
-                                                defaultMonth={date?.from}
-                                                selected={date}
-                                                onSelect={setDate}
-                                                numberOfMonths={2}
-                                                className="text-white"
-                                            />
-                                            </PopoverContent>
-                                        </Popover>
+                                         <Controller
+                                            name="dates"
+                                            control={control}
+                                            render={({ field }) => (
+                                                <Popover>
+                                                    <PopoverTrigger asChild>
+                                                    <Button
+                                                        id="dates"
+                                                        variant={"outline"}
+                                                        className={cn(
+                                                        "w-full justify-start text-left font-normal bg-gray-700 border-gray-600 hover:bg-gray-600 text-white hover:text-white",
+                                                        !field.value?.from && "text-gray-400"
+                                                        )}
+                                                    >
+                                                        <CalendarIcon className="mr-2 h-4 w-4" />
+                                                        {field.value?.from ? (
+                                                            field.value.to ? (
+                                                            <>
+                                                                {format(field.value.from, "LLL dd, y")} -{" "}
+                                                                {format(field.value.to, "LLL dd, y")}
+                                                            </>
+                                                            ) : (
+                                                            format(field.value.from, "LLL dd, y")
+                                                            )
+                                                        ) : (
+                                                            <span>Pick a date range</span>
+                                                        )}
+                                                    </Button>
+                                                    </PopoverTrigger>
+                                                    <PopoverContent className="w-auto p-0 bg-gray-800 border-gray-700" align="start">
+                                                    <Calendar
+                                                        initialFocus
+                                                        mode="range"
+                                                        defaultMonth={field.value?.from}
+                                                        selected={field.value}
+                                                        onSelect={field.onChange}
+                                                        numberOfMonths={2}
+                                                        className="text-white"
+                                                    />
+                                                    </PopoverContent>
+                                                </Popover>
+                                            )}
+                                        />
                                     </div>
                                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <Label htmlFor="travellers" className="text-gray-300">Number of Travellers</Label>
-                                            <Input id="travellers" type="number" defaultValue="1" className="bg-gray-700 border-gray-600 text-white" />
+                                            <Input id="travellers" type="number" {...register("travellers")} defaultValue="1" className="bg-gray-700 border-gray-600 text-white" />
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="budget" className="text-gray-300">Budget (Optional)</Label>
-                                            <Input id="budget" placeholder="e.g., ₹50,000" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
+                                            <Input id="budget" {...register("budget")} placeholder="e.g., ₹50,000" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="message" className="text-gray-300">Message</Label>
-                                        <Textarea id="message" placeholder="Tell us more about your travel plans..." className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 min-h-[100px]" />
+                                        <Textarea id="message" {...register("message", { required: true })} placeholder="Tell us more about your travel plans..." className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 min-h-[100px]" />
                                     </div>
                                     <div className="flex justify-end pt-4">
-                                        <Button type="submit" size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
-                                            Send Enquiry <Send className="ml-2 h-4 w-4" />
+                                        <Button type="submit" size="lg" disabled={isSubmitting} className="bg-orange-500 hover:bg-orange-600 text-white px-8">
+                                            {isSubmitting ? "Sending..." : "Send Enquiry"} <Send className="ml-2 h-4 w-4" />
                                         </Button>
                                     </div>
                                 </form>
