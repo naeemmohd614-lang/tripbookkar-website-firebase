@@ -244,7 +244,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Heritage Walk" ],
     "weddingVenues": [ "Gulistan Lawn", "Mehfil Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["luxury", "resort", "lucknow", "heritage", "wedding"]
+    "tags": ["luxury", "resort", "lucknow", "heritage", "wedding", "boutique"]
   },
   {
     "name": "Taj Theog Resort & Spa, Shimla",
@@ -610,7 +610,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Golf", "Archery", "Water Sports" ],
     "weddingVenues": [ "The Ballroom", "Beachfront Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["beach resort", "luxury", "south goa", "beach", "beachfront"]
+    "tags": ["beach resort", "luxury", "south goa", "beach", "beachfront", "adventure"]
   },
   {
     "name": "Taj Swarna, Amritsar",
@@ -688,7 +688,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Rainforest Walk", "Pottery Studio" ],
     "weddingVenues": [ "The Soiree Hall", "Outdoor Amphitheater" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["rainforest", "luxury", "coorg", "resort", "mountains", "wellness"]
+    "tags": ["rainforest", "luxury", "coorg", "resort", "mountains", "wellness", "adventure", "trekking"]
   },
   {
     "name": "Vivanta Bhubaneswar, DN Square",
