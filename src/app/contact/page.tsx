@@ -13,10 +13,11 @@ import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import React from "react";
+import Image from "next/image";
 
 const WhatsAppIcon = () => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2 fill-current">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52s-.67-.149-.67-.149l-.67-1.629c-.273-.656-.546-.565-.67-.565-.125 0-.273 0-.422.025-.148.025-.371.149-.568.347-.198.198-.767.766-.767 1.852s.792 2.148.917 2.321c.125.172 1.52 2.318 3.687 3.231.596.266 1.063.425 1.422.544.56.187 1.035.162 1.422.099.434-.075 1.342-.544 1.539-1.07.198-.52.198-1.07.149-1.164-.05-.099-.198-.149-.297-.198zM12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/>
+        <path d="M12.038 23.999C18.662 23.999 24 18.661 24 12C24 5.337 18.662 0 12.038 0C5.414 0 0 5.337 0 12c0 2.113.556 4.102 1.564 5.832L0 24l4.232-1.522A11.95 11.95 0 0 0 12.038 24zM8.132 6.844c.15-.299.314-.314.479-.314.15 0 .314.015.429.015.15.014.344.074.524.373.194.314.673 1.63.733 1.769.06.134.12.299.03.479-.09.194-.149.223-.299.373-.149.149-.299.179-.429.239-.119.06-.284.089-.419.03a1.918 1.918 0 0 1-1.123-.628c-.464-.524-1.079-1.753-1.124-1.813-.045-.06-.374-1.033.224-1.618.149-.149.328-.209.433-.239.119-.03.224-.03.314-.03.104 0 .224.015.343.149z"/>
     </svg>
 );
 
@@ -25,11 +26,21 @@ export default function ContactPage() {
     const [date, setDate] = React.useState<DateRange | undefined>(undefined);
 
     return (
-        <div className="bg-gray-900 text-white py-12 md:py-24">
-            <div className="container mx-auto px-4">
+        <div className="relative min-h-screen text-white">
+            <Image
+                src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb250YWN0JTIwdXN8ZW58MHx8fHwxNzYzOTk3OTQzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Contact us background"
+                layout="fill"
+                objectFit="cover"
+                className="z-0 opacity-40"
+                data-ai-hint="call center contact"
+            />
+             <div className="absolute inset-0 bg-gray-900/60 z-10" />
+
+            <div className="relative z-20 container mx-auto px-4 py-12 md:py-24">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold font-headline">Get in Touch</h1>
-                    <p className="mt-4 text-lg text-gray-400">
+                    <p className="mt-4 text-lg text-gray-300">
                         Have questions or need help planning your trip? We&apos;re available 24/7.
                     </p>
                 </div>
@@ -37,7 +48,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Left Column: Contact Info */}
                     <div className="lg:col-span-1">
-                        <Card className="bg-gray-800 border-gray-700 h-full">
+                        <Card className="bg-gray-800/80 backdrop-blur-sm border-gray-700 h-full">
                             <CardHeader>
                                 <CardTitle className="text-2xl font-semibold">Contact Information</CardTitle>
                             </CardHeader>
@@ -77,7 +88,7 @@ export default function ContactPage() {
 
                     {/* Right Column: Enquiry Form */}
                     <div className="lg:col-span-2">
-                        <Card className="bg-gray-800 border-gray-700">
+                        <Card className="bg-gray-800/80 backdrop-blur-sm border-gray-700">
                             <CardHeader>
                                 <CardTitle className="text-2xl font-semibold">Send us a Message</CardTitle>
                             </CardHeader>
