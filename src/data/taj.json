@@ -454,7 +454,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Nature Walk", "Afternoon Tea" ],
     "weddingVenues": [ "The Prince of Wales Lawns", "The Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "luxury", "bengaluru", "gardens", "colonial"]
+    "tags": ["heritage", "luxury", "bengaluru", "gardens", "colonial", "boutique"]
   },
   {
     "name": "Taj Coromandel, Chennai",
@@ -766,7 +766,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Surajkund Crafts Mela (seasonal)" ],
     "weddingVenues": [ "The Grand Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "design", "ncr", "wellness", "boutique"]
+    "tags": ["resort", "design", "ncr", "wellness"]
   },
   {
     "name": "Jai Mahal Palace, Jaipur",
@@ -792,7 +792,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Puppet Show", "Folk Dance" ],
     "weddingVenues": [ "The Palace Lawns", "The Durbar Hall" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["palace", "heritage", "jaipur", "wedding"]
+    "tags": ["palace", "heritage", "jaipur", "wedding", "boutique"]
   },
   {
     "name": "Vivanta Guwahati, Assam",
@@ -974,7 +974,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Casino visits arrangement", "City Tours" ],
     "weddingVenues": [ "The Grand Ballroom", "The Poolside Deck" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["city hotel", "panaji", "business", "goa"]
+    "tags": ["city hotel", "panaji", "business", "goa", "boutique"]
   },
   {
     "name": "Taj Chandigarh",
@@ -1323,7 +1323,7 @@
     "basePrice": 18000,
     "rating": 4.7,
     "images": [
-      { "src": "https://picsum.photos/seed/devi-ratn-1/1080/720", "caption": "Futuristic architecture of Devi Ratn" }
+      { "src": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwYXJjaGl0ZWN0dXJlJTIwaG90ZWx8ZW58MHx8fHwxNzY0MDkyMDIzfDA&ixlib=rb-4.1.0&q=80&w=1080", "caption": "Futuristic architecture of Devi Ratn" }
     ],
     "distance": { "Jaipur International Airport": "24 km" },
     "roomCategories": [
@@ -1337,7 +1337,7 @@
     "experiencesAndActivities": [ "Jiva Spa", "Stargazing", "Infinity Pool" ],
     "weddingVenues": [ "The Grand Ballroom", "The Lawns" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["design", "luxury", "jaipur", "resort", "boutique", "wellness", "adventure"]
+    "tags": ["design", "luxury", "jaipur", "resort", "wellness", "adventure", "boutique"]
   },
   {
     "name": "The Connaught, New Delhi - IHCL SeleQtions",
