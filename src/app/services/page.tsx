@@ -156,7 +156,7 @@ export default function ServicesPage() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Hamari Services</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold drop-shadow-lg">Hamari Services</h2>
             <p className="mt-2 text-lg text-gray-200 drop-shadow-lg">Aapki har zaroorat ke liye, ek perfect solution.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
