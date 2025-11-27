@@ -27,15 +27,50 @@ import type {
 } from '@/lib/types';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
-import serviceAccount from '../../serviceAccountKey.json';
 import { revalidatePath } from 'next/cache';
 
-if (!getApps().length) {
+// --- Firebase Admin Initialization ---
+// This function initializes the Firebase Admin SDK.
+// It first tries to use environment variables for production (e.g., on Hostinger).
+// If that fails, it falls back to using the local serviceAccountKey.json for development.
+function initializeFirebaseAdmin() {
+  if (getApps().length > 0) {
+    return;
+  }
+
+  try {
+    // For Production (Hostinger): Use environment variables
+    const serviceAccountString = process.env.FIREBASE_SERVICE_ACCOUNT;
+    if (serviceAccountString) {
+      console.log('Initializing Firebase Admin with environment variable...');
+      const serviceAccount = JSON.parse(serviceAccountString);
+      initializeApp({
+        credential: cert(serviceAccount)
+      });
+      return;
+    }
+  } catch (e) {
+    console.error('Failed to initialize Firebase from environment variable:', e);
+  }
+
+  try {
+    // For Development (Local): Use the JSON file
+    console.log('Initializing Firebase Admin with local service account file...');
+    const serviceAccount = require('../../serviceAccountKey.json');
     initializeApp({
       credential: cert(serviceAccount)
     });
+  } catch (e) {
+    console.error('Fallback to local serviceAccountKey.json failed:', e);
+    console.error('Please ensure either FIREBASE_SERVICE_ACCOUNT environment variable is set or serviceAccountKey.json exists.');
+  }
 }
+
+// Initialize the app
+initializeFirebaseAdmin();
 const db = getFirestore();
+// --- End of Firebase Admin Initialization ---
+
 
 function slugify(text: string) {
     if (!text) return '';

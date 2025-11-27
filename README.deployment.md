@@ -29,6 +29,8 @@ Ab, aapko deployment ke liye zaroori files aur folders ko ek zip file mein compr
 5.  `package-lock.json` file
 6.  `next.config.ts` file
 
+**DHYAN DEIN:** `serviceAccountKey.json` file ko is zip mein **NAHI** daalna hai. Yeh ek surakshit (secure) tareeke se handle kiya jayega.
+
 In sabhi ko select karke ek `.zip` file bana lein (jaise, `tripbookkar-deploy.zip`).
 
 ---
@@ -58,15 +60,31 @@ Yeh sabse zaroori hissa hai.
     *   **Application startup file:** Ismein yeh likhein -> `node_modules/.bin/next`
 5.  **"Create"** par click karein.
 
-Application create hone ke baad, aap usi page par rahenge. Ab aapko:
+---
 
-6.  **"Run NPM Install"** button par click karna hai. Isse aapke project ke zaroori server packages install honge. Ismein thoda samay lag sakta hai.
-7.  Jab packages install ho jaayein, to **"Start App"** button par click karein.
+### Step 5: Environment Variable Set Karein (SURAKSHA KE LIYE ZAROORI)
+
+Application create hone ke baad, usi page par neeche aapko **"Environment variables"** ka section dikhega.
+
+1.  **"Add Variable"** par click karein.
+2.  Ek form khulega:
+    *   **Name:** Ismein `FIREBASE_SERVICE_ACCOUNT` likhein.
+    *   **Value:** Yahan par aapko apne `serviceAccountKey.json` file ka poora content copy karke paste karna hai. File ko text editor mein kholein, sab kuch (Ctrl+A ya Cmd+A) select karein, copy karein, aur is box mein paste kar dein.
+3.  **"Add"** par click karein.
 
 ---
 
-### Step 5: Website Check Karein
+### Step 6: Packages Install aur App Start Karein
 
-Thodi der intezaar karne ke baad, apni website ko browser mein kholein. Aapka application ab live ho jaana chahiye!
+Ab, Node.js App setup page par wapas upar jaayein:
 
-Agar koi samasya aati hai, to aap Hostinger ke support se bhi sampark kar sakte hain. Unke paas Node.js deployment ke liye specific guides bhi hoti hain.
+1.  **"Run NPM Install"** button par click karna hai. Isse aapke project ke zaroori server packages install honge. Ismein thoda samay lag sakta hai.
+2.  Jab packages install ho jaayein, to **"Start App"** button par click karein.
+
+---
+
+### Step 7: Website Check Karein
+
+Thodi der intezaar karne ke baad, apni website ko browser mein kholein. Aapka application ab live ho jaana chahiye aur database se sahi tarah se connect hona chahiye!
+
+Agar koi samasya aati hai, to aap Hostinger ke support se bhi sampark kar sakte hain.
