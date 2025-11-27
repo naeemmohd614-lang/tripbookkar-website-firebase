@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -130,7 +131,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative bg-brand-blue text-white py-20 md:py-32">
           <div className="absolute inset-0">
-              <Image src="https://picsum.photos/seed/services-hero/1920/1080" alt="Beautiful travel destination" layout="fill" objectFit="cover" className="opacity-20" data-ai-hint="beautiful travel destination"/>
+              <Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8c2VydmljZXN8ZW58MHx8fHwxNzY0MjA4Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Beautiful travel destination" layout="fill" objectFit="cover" className="opacity-20" data-ai-hint="beautiful travel destination"/>
           </div>
           <div className="container mx-auto px-4 text-center relative z-10">
               <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">Aapki Har Trip Ke Liye, Hum Hain Na!</h1>
