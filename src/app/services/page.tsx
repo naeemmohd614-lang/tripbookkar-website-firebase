@@ -153,7 +153,6 @@ export default function ServicesPage() {
       <section id="services" className="relative py-16 md:py-24 text-white">
         <div className="absolute inset-0">
             <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning background" layout="fill" objectFit="cover" className="z-0" data-ai-hint="travel planning" />
-            <div className="absolute inset-0 bg-brand-blue/70 z-0"/>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
