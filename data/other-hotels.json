@@ -89,7 +89,7 @@
     ],
     "roomCategories": [{ "name": "Luxury Tent", "count": 200, "size": "400 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "12:30 PM", "checkOut": "9:30 AM" },
-    "tags": ["luxury camping", "tent city", "kevadia", "unique stay"]
+    "tags": ["luxury camping", "tent city", "kevadia", "unique stay", "adventure", "wildlife"]
   },
   {
     "id": "itc-mughal-agra",
@@ -241,7 +241,7 @@
     ],
     "roomCategories": [{ "name": "Garden Room", "count": 55, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["resort", "mountain view", "manali"]
+    "tags": ["resort", "mountain view", "manali", "adventure", "wildlife"]
   },
   {
     "id": "fortune-park-dalhousie",
@@ -336,7 +336,7 @@
     ],
     "roomCategories": [{ "name": "Premier Valley View Room", "count": 85, "size": "450 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["ski resort", "luxury", "mountain view", "gulmarg", "boutique"]
+    "tags": ["ski resort", "luxury", "mountain view", "gulmarg", "adventure", "wildlife"]
   },
   {
     "id": "mayfair-spa-resort-casino",
@@ -393,7 +393,7 @@
     ],
     "roomCategories": [{ "name": "Super Deluxe", "count": 38, "size": "300 sqft" }],
     "facilities": { "pool": false, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["remote", "mountain view", "lachung", "valley"]
+    "tags": ["remote", "mountain view", "lachung", "valley", "adventure"]
   },
   {
     "id": "hotel-summit-sobralia",
@@ -605,7 +605,7 @@
     "experiencesAndActivities": [ "Rejuve - The Spa", "Sound and Light Show at temples", "Yoga Sessions" ],
     "weddingVenues": [ "The Garden Lawn", "The Crystal Ballroom" ],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["temple view", "luxury", "khajuraho"]
+    "tags": ["temple view", "luxury", "khajuraho", "wildlife"]
   },
   {
     "id": "syna-tiger-resort",
@@ -623,7 +623,7 @@
     ],
     "roomCategories": [{ "name": "Luxury Cottage", "count": 20, "size": "500 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "1:00 PM", "checkOut": "11:00 AM" },
-    "tags": ["wildlife", "jungle resort", "bandhavgarh"]
+    "tags": ["wildlife", "jungle resort", "bandhavgarh", "adventure"]
   },
   {
     "id": "welcomheritage-golf-view",
@@ -641,7 +641,7 @@
     ],
     "roomCategories": [{ "name": "Deluxe Room", "count": 30, "size": "320 sqft" }],
     "facilities": { "pool": true, "spa": false, "gym": false, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "hill station", "pachmarhi"]
+    "tags": ["heritage", "hill station", "pachmarhi", "wildlife"]
   },
   {
     "id": "jehan-numa-palace-hotel-bhopal",
@@ -659,7 +659,7 @@
     ],
     "roomCategories": [{ "name": "Regal Room", "count": 100, "size": "350 sqft" }],
     "facilities": { "pool": true, "spa": true, "gym": true, "wifi": true, "parking": true, "petFriendly": false, "checkIn": "2:00 PM", "checkOut": "12:00 PM" },
-    "tags": ["heritage", "palace", "bhopal", "boutique"]
+    "tags": ["heritage", "palace", "bhopal", "boutique", "wildlife"]
   },
   {
     "id": "mpt-amaltas-pachmarhi",
