@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,7 @@ export default function ContactPage() {
             <div className="relative z-20 container mx-auto px-4 py-12 md:py-24">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold font-headline">Get in Touch</h1>
-                    <p className="mt-4 text-lg text-gray-300">
+                    <p className="mt-4 text-lg text-gray-200">
                         Have questions or need help planning your trip? We&apos;re available 24/7.
                     </p>
                 </div>
@@ -50,7 +51,7 @@ export default function ContactPage() {
                     <div className="lg:col-span-1">
                         <Card className="bg-gray-800/80 backdrop-blur-sm border-gray-700 h-full">
                             <CardHeader>
-                                <CardTitle className="text-2xl font-semibold">Contact Information</CardTitle>
+                                <CardTitle className="text-2xl font-semibold text-white">Contact Information</CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-6 text-gray-300">
                                 <div className="flex items-start gap-4">
@@ -90,27 +91,27 @@ export default function ContactPage() {
                     <div className="lg:col-span-2">
                         <Card className="bg-gray-800/80 backdrop-blur-sm border-gray-700">
                             <CardHeader>
-                                <CardTitle className="text-2xl font-semibold">Send us a Message</CardTitle>
+                                <CardTitle className="text-2xl font-semibold text-white">Send us a Message</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <form className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
-                                            <Label htmlFor="full-name">Full Name</Label>
+                                            <Label htmlFor="full-name" className="text-gray-300">Full Name</Label>
                                             <Input id="full-name" placeholder="John Doe" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label htmlFor="email">Email Address</Label>
+                                            <Label htmlFor="email" className="text-gray-300">Email Address</Label>
                                             <Input id="email" type="email" placeholder="john.doe@example.com" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
-                                            <Label htmlFor="phone">Phone Number</Label>
+                                            <Label htmlFor="phone" className="text-gray-300">Phone Number</Label>
                                             <Input id="phone" type="tel" placeholder="+91 12345 67890" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label htmlFor="travel-type">Travel Type</Label>
+                                            <Label htmlFor="travel-type" className="text-gray-300">Travel Type</Label>
                                             <Select>
                                                 <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
                                                     <SelectValue placeholder="Select a travel type" />
@@ -126,11 +127,11 @@ export default function ContactPage() {
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <Label htmlFor="destination">Preferred Destination</Label>
+                                        <Label htmlFor="destination" className="text-gray-300">Preferred Destination</Label>
                                         <Input id="destination" placeholder="e.g., Maldives, Rajasthan" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                     </div>
                                     <div className="space-y-2">
-                                        <Label htmlFor="dates">Travel Dates (From - To)</Label>
+                                        <Label htmlFor="dates" className="text-gray-300">Travel Dates (From - To)</Label>
                                          <Popover>
                                             <PopoverTrigger asChild>
                                             <Button
@@ -171,16 +172,16 @@ export default function ContactPage() {
                                     </div>
                                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
-                                            <Label htmlFor="travellers">Number of Travellers</Label>
+                                            <Label htmlFor="travellers" className="text-gray-300">Number of Travellers</Label>
                                             <Input id="travellers" type="number" defaultValue="1" className="bg-gray-700 border-gray-600 text-white" />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label htmlFor="budget">Budget (Optional)</Label>
+                                            <Label htmlFor="budget" className="text-gray-300">Budget (Optional)</Label>
                                             <Input id="budget" placeholder="e.g., ₹50,000" className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400" />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <Label htmlFor="message">Message</Label>
+                                        <Label htmlFor="message" className="text-gray-300">Message</Label>
                                         <Textarea id="message" placeholder="Tell us more about your travel plans..." className="bg-gray-700 border-gray-600 text-white placeholder:text-gray-400 min-h-[100px]" />
                                     </div>
                                     <div className="flex justify-end pt-4">
