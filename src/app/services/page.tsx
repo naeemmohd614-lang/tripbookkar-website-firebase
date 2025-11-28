@@ -200,9 +200,10 @@ export default function ServicesPage() {
 
       {/* Why Choose Us Section */}
       <section id="why-choose-us" className="relative py-16 md:py-24">
-        <div className="absolute inset-0 z-0 bg-brand-blue/70">
+        <div className="absolute inset-0 z-0">
             <Image src="https://images.unsplash.com/photo-1520208422220-d12a3250a3c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBob3RlbCUyMHJvb208ZW58MHx8fHwxNzY0MjA4NTEzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Luxury hotel room view" layout="fill" objectFit="cover" className="opacity-30" />
         </div>
+         <div className="absolute inset-0 z-10 bg-black/60" />
         <div className="container mx-auto px-4 relative z-20">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">TripBookKar Hi Kyun?</h2>
@@ -229,9 +230,10 @@ export default function ServicesPage() {
 
       {/* Sample Packages Section */}
         <section id="sample-packages" className="relative py-16 md:py-24">
-            <div className="absolute inset-0 z-0 bg-brand-blue/70">
+            <div className="absolute inset-0 z-0">
                 <Image src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Travel planning" layout="fill" objectFit="cover" className="z-0 opacity-30" />
             </div>
+             <div className="absolute inset-0 z-10 bg-black/60" />
             <div className="container mx-auto px-4 relative z-20">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Sample Packages</h2>
@@ -258,9 +260,10 @@ export default function ServicesPage() {
 
       {/* How to Book Section */}
       <section className="relative py-16 md:py-24">
-        <div className="absolute inset-0 z-0 bg-brand-blue/70">
+        <div className="absolute inset-0 z-0">
             <Image src="https://images.unsplash.com/photo-1517849325420-a1c021b9b940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBwbGFubmluZ3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="happy traveller" layout="fill" objectFit="cover" className="z-0 opacity-30" />
         </div>
+         <div className="absolute inset-0 z-10 bg-black/60" />
         <div className="container mx-auto px-4 relative z-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">Booking Process: 4 Aasan Steps</h2>
