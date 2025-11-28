@@ -241,7 +241,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {samplePackages.map(pkg => (
-                        <Card key={pkg.title} className="text-center bg-white/90 backdrop-blur-sm">
+                        <Card key={pkg.title} className="text-center text-gray-800">
                             <CardHeader>
                                 <CardTitle className="font-headline text-2xl text-primary">{pkg.title}</CardTitle>
                             </CardHeader>
