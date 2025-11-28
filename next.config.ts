@@ -82,6 +82,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.hilton.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.pixabay.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
