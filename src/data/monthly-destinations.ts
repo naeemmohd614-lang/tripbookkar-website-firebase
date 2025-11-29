@@ -59,13 +59,13 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       {
         name: "Auli, Uttarakhand",
         reason: "January transforms Auli into a premier skiing destination. The snow-covered meadows, panoramic views of the Himalayas, and the crisp mountain air make it perfect for winter sports enthusiasts and nature lovers.",
-        hotels: allHotels.filter(h => ["The Royal Village, Auli", "Himalayan High, Auli", "The Tattva, Auli", "Cliff Top Club, Auli", "Blue Poppy Resort, Auli"].includes(h.name)),
+        hotels: ["The Royal Village, Auli", "Himalayan High, Auli", "The Tattva, Auli", "Cliff Top Club, Auli", "Blue Poppy Resort, Auli"],
         image: { src: "https://images.unsplash.com/photo-1708622359632-56294a8d327e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c25vd3klMjBtb3VudGFpbnMlMjBhdWxpfGVufDB8fHx8MTc2MzcxNjgzM3ww&ixlib=rb-4.1.0&q=80&w=1080", caption: "snowy mountains auli" }
       },
       {
         name: "Jaipur, Rajasthan",
         reason: "The weather in January is pleasantly cool and ideal for sightseeing. You can explore majestic forts, vibrant markets, and attend the Jaipur Literature Festival, which often takes place this month.",
-        hotels: allHotels.filter(h => h.city === 'Jaipur').slice(0, 5),
+        hotels: ["Rambagh Palace, Jaipur", "Taj Jai Mahal Palace, Jaipur", "ITC Rajputana, a Luxury Collection Hotel", "Jaipur Marriott Hotel", "Fairmont Jaipur"],
         image: { src: "https://images.unsplash.com/photo-1599661046289-e31897846e41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbWJlciUyMGZvcnQlMjBqYWlwdXJ8ZW58MHx8fHwxNzYzNzE2ODMzfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "amber fort jaipur" }
       },
       {
