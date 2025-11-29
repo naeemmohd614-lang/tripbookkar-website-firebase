@@ -12,7 +12,7 @@ import type { Package } from '@/lib/types';
 import React from 'react';
 
 export default function PackageDetailPage({ params }: { params: { packageId: string } }) {
-    const { packageId } = params;
+    const { packageId } = React.use(params);
     const pkg = (featuredPackages as Package[]).find((p) => p.id === packageId);
 
     if (!pkg) {
@@ -20,8 +20,8 @@ export default function PackageDetailPage({ params }: { params: { packageId: str
     }
     
     const packageImage = pkg.images[0] ? {
-      src: typeof pkg.images[0] === 'string' ? pkg.images[0] : (pkg.images[0] as any).src,
-      caption: typeof pkg.images[0] === 'string' ? `image for ${pkg.name}` : (pkg.images[0] as any).caption,
+      src: pkg.images[0].src,
+      caption: pkg.images[0].caption,
     } : {
       src: `https://picsum.photos/seed/${pkg.id}/1280/400`,
       caption: `image for ${pkg.name}`
