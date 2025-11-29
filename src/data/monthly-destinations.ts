@@ -815,7 +815,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
         name: "Alleppey (Alappuzha), Kerala",
         reason: "The weather is cool and pleasant, ideal for a relaxing houseboat cruise in the backwaters. Christmas celebrations in the region also have a unique local charm.",
         hotels: allHotels.filter(h => h.city === 'Alleppey'),
-        image: { src: "https://images.unsplash.com/photo-1523130923377-84727cf0c825?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxrZXJhbGElMjBob3VzZWJvYXQlMjB3aW50ZXJ8ZW58MHx8fHwxNzYzNzIyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kerala houseboat winter" }
+        image: { src: "https://images.unsplash.com/photo-1523913920232-23f24b2257d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxrZXJhbGElMjBob3VzZWJvYXQlMjB3aW50ZXJ8ZW58MHx8fHwxNzYzNzIyNTYyfDA&ixlib=rb-4.1.0&q=80&w=1080", caption: "kerala houseboat winter" }
       },
       {
         name: "Jodhpur, Rajasthan",
