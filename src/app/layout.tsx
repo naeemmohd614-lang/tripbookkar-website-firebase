@@ -46,9 +46,10 @@ export default function RootLayout({
             <Footer />
             <Toaster />
              <div className="fixed bottom-5 right-5 z-50">
-                <Button asChild size="icon" className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg">
+                <Button asChild size="icon" className="relative w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg">
                     <a href="https://wa.me/918950652665" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                         <WhatsAppIcon />
+                        <span className="absolute top-1 right-1 block h-3 w-3 rounded-full bg-red-500 ring-2 ring-white"></span>
                     </a>
                 </Button>
             </div>
