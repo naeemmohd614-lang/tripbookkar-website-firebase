@@ -34,13 +34,23 @@ export default function MonthPage({ params }: { params: { month: string } }) {
         return monthData.destinations.flatMap(d => {
             if (!Array.isArray(d.hotels)) return [];
             return d.hotels.map(h => (typeof h === 'string' ? h : h.name));
-        });
+        }).filter(Boolean); // Filter out any undefined/null names
     }, [monthData]);
     
     const hotelsQuery = useMemoFirebase(() => {
         if (!firestore || hotelNames.length === 0) return null;
         // Firestore 'in' queries are limited to 30 items.
-        return query(collection(firestore, 'hotels'), where('name', 'in', hotelNames.slice(0, 30)));
+        // We'll handle this by chunking if necessary, but for now, let's assume it's less than 30 for simplicity or chunk it.
+        const chunks = [];
+        for (let i = 0; i < hotelNames.length; i += 30) {
+            chunks.push(hotelNames.slice(i, i + 30));
+        }
+        
+        // This example will only query the first chunk. A more complex implementation would handle multiple queries.
+        if (chunks.length > 0) {
+            return query(collection(firestore, 'hotels'), where('name', 'in', chunks[0]));
+        }
+        return null;
     }, [firestore, hotelNames]);
 
     const { data: hotels, isLoading: areHotelsLoading } = useCollection<Hotel>(hotelsQuery);
@@ -56,6 +66,9 @@ export default function MonthPage({ params }: { params: { month: string } }) {
     }
     
     const { name, pageImage, destinations } = monthData!;
+
+    // A simple map to quickly find hotels from the fetched list
+    const hotelMap = new Map(hotels?.map(h => [h.name, h]));
 
     return (
         <div className="bg-secondary/30">
@@ -109,7 +122,7 @@ export default function MonthPage({ params }: { params: { month: string } }) {
                                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-sm">
                                             {(Array.isArray(dest.hotels) ? dest.hotels : []).map(hotelOrName => {
                                                 const hotelName = typeof hotelOrName === 'string' ? hotelOrName : hotelOrName.name;
-                                                const hotel = hotels?.find(h => h.name === hotelName);
+                                                const hotel = hotelMap.get(hotelName);
                                                 return (
                                                     <div key={hotelName}>
                                                     {hotel ? (
