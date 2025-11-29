@@ -9,7 +9,7 @@ import React from 'react';
 
 export default function EditCityPage({ params }: { params: { id: string } }) {
   const firestore = useFirestore();
-  const { id } = React.use(params);
+  const { id } = params;
 
   const cityRef = firestore && id ? doc(firestore, 'cities', id) : null;
 
