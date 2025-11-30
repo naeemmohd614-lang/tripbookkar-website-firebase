@@ -429,5 +429,5 @@ export interface Interest {
     src: string;
     caption: string;
   };
-  tags: string[];
+  tags: { value: string }[];
 }
