@@ -49,6 +49,7 @@ export interface MonthData {
 
 export const monthlyDestinationsData: { [key: string]: MonthData } = {
   january: {
+    id: 'january',
     name: 'January',
     slug: 'january',
     pageImage: {
@@ -119,6 +120,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   february: {
+    id: 'february',
     name: 'February',
     slug: 'february',
     pageImage: { src: 'https://images.unsplash.com/photo-1707829248856-8ec3d1ff05e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcHJpbmclMjBmbG93ZXJzJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzYzOTk2MDA4fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'spring flowers festival' },
@@ -186,6 +188,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   march: {
+    id: 'march',
     name: 'March',
     slug: 'march',
     pageImage: { src: 'https://images.unsplash.com/photo-1635792367882-a78caead9b4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxob2xpJTIwZmVzdGl2YWwlMjBjb2xvcnN8ZW58MHx8fHwxNzYzOTk2MDA4fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'holi festival colors' },
@@ -253,6 +256,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   april: {
+      id: 'april',
       name: 'April',
       slug: 'april',
       pageImage: { src: 'https://images.unsplash.com/photo-1746036677197-139291de40ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBzcHJpbmd8ZW58MHx8fHwxNzYzOTk2MDA3fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'himalayan mountains spring' },
@@ -320,6 +324,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       ]
   },
   may: {
+      id: 'may',
       name: 'May',
       slug: 'may',
       pageImage: { src: 'https://images.unsplash.com/photo-1727882931998-23f80d182553?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb29sJTIwbW91bnRhaW4lMjB2YWxsZXl8ZW58MHx8fHwxNzYzOTk2MDA4fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'cool mountain valley' },
@@ -387,6 +392,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
       ]
   },
   june: {
+    id: 'june',
     name: 'June',
     slug: 'june',
     pageImage: { src: 'https://images.unsplash.com/photo-1758468205216-ca17e22848bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsYWRha2glMjBtb3VudGFpbiUyMHBhc3N8ZW58MHx8fHwxNzYzOTk2MDA4fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'ladakh mountain pass' },
@@ -454,6 +460,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   july: {
+    id: 'july',
     name: 'July',
     slug: 'july',
     pageImage: { src: 'https://images.unsplash.com/photo-1693276206327-6f67168dc3bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb29uJTIwa2VyYWxhJTIwYmFja3dhdGVyc3xlbnwwfHx8fDE3NjM5OTYwMDh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'monsoon kerala backwaters' },
@@ -521,6 +528,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   august: {
+    id: 'august',
     name: 'August',
     slug: 'august',
     pageImage: { src: 'https://images.unsplash.com/photo-1676655781178-7a049793fa7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmbG93ZXIlMjB2YWxsZXklMjBtb25zb29ufGVufDB8fHx8MTc2Mzk5NjAwN3ww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'flower valley monsoon' },
@@ -588,6 +596,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   september: {
+    id: 'september',
     name: 'September',
     slug: 'september',
     pageImage: { src: 'https://images.unsplash.com/photo-1652120712347-6e7b037325fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3N0LW1vbnNvb24lMjBncmVlbiUyMGhpbGxzfGVufDB8fHx8MTc2Mzk5NjAwOHww&ixlib=rb-4.1.0&q=80&w=1080', caption: 'post-monsoon green hills' },
@@ -655,6 +664,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   october: {
+    id: 'october',
     name: 'October',
     slug: 'october',
     pageImage: { src: 'https://images.unsplash.com/photo-1606293927179-df3472a42720?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkdXNzZWhyYSUyMGZlc3RpdmFsJTIwY2VsZWJyYXRpb258ZW58MHx8fHwxNzYzOTk2MDA3fDA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'dussehra festival celebration' },
@@ -722,6 +732,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   november: {
+    id: 'november',
     name: 'November',
     slug: 'november',
     pageImage: { src: 'https://images.unsplash.com/photo-1666244454829-7f0889ec5783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkaXdhbGklMjBsaWdodHMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NjM5OTYwMDd8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'diwali lights festival' },
@@ -789,6 +800,7 @@ export const monthlyDestinationsData: { [key: string]: MonthData } = {
     ]
   },
   december: {
+    id: 'december',
     name: 'December',
     slug: 'december',
     pageImage: { src: 'https://images.unsplash.com/photo-1704703335952-10b90cd0312a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWFjaCUyMHBhcnR5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE3NjM5OTYwMDh8MA&ixlib=rb-4.1.0&q=80&w=1080', caption: 'beach party new year' },
