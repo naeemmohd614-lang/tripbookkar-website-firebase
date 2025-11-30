@@ -10,6 +10,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import PageLoader from "@/components/page-loader";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "TripBookKar - Your Ultimate Travel Companion",
@@ -20,9 +21,13 @@ export const metadata: Metadata = {
 };
 
 const WhatsAppIcon = () => (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 fill-current">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52s-.67-.149-.67-.149l-.67-1.629c-.273-.656-.546-.565-.67-.565-.125 0-.273 0-.422.025-.148.025-.371.149-.568.347-.198.198-.767.766-.767 1.852s.792 2.148.917 2.321c.125.172 1.52 2.318 3.687 3.231.596.266 1.063.425 1.422.544.56.187 1.035.162 1.422.099.434-.075 1.342-.544 1.539-1.07.198-.52.198-1.07.149-1.164-.05-.099-.198-.149-.297-.198zM12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/>
-    </svg>
+    <Image 
+        src="https://images.unsplash.com/photo-1704383110020-86b408af4ac2?q=80&w=1109&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        alt="WhatsApp Icon" 
+        width={40} 
+        height={40} 
+        className="rounded-full"
+    />
 );
 
 

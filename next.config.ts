@@ -94,7 +94,13 @@ const nextConfig: NextConfig = {
         hostname: 'www.oberoihotels.com',
         port: '',
         pathname: '/**',
-      }
+      },
+       {
+        protocol: 'https',
+        hostname: 'img.freepik.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
