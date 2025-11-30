@@ -9,6 +9,7 @@ import {
   FirestoreError,
   QuerySnapshot,
   CollectionReference,
+  queryEqual,
 } from 'firebase/firestore';
 import { errorEmitter } from '@/firebase/error-emitter';
 import { FirestorePermissionError } from '@/firebase/errors';
@@ -26,29 +27,49 @@ export interface UseCollectionResult<T> {
   error: FirestoreError | Error | null; // Error object, or null.
 }
 
-/* Internal implementation of Query:
-  https://github.com/firebase/firebase-js-sdk/blob/c5f08a9bc5da0d2b0207802c972d53724ccef055/packages/firestore/src/lite-api/reference.ts#L143
-*/
+// Internal private properties of a Firestore Query object.
+// This is not part of the public API and might change, but it's used
+// here to create a stable key for memoization.
 export interface InternalQuery extends Query<DocumentData> {
   _query: {
     path: {
       canonicalString(): string;
-      toString(): string;
-    }
-  }
+    };
+    filters: {
+      field: {
+        canonicalString(): string;
+      };
+      op: string;
+      value: any;
+    }[];
+    orderBy: {
+      field: {
+        canonicalString(): string;
+      };
+      dir: string;
+    }[];
+    limit: number | null;
+  };
 }
 
 function getQueryPath(query: Query<DocumentData> | CollectionReference<DocumentData>): string {
     if (query.type === 'collection') {
         return (query as CollectionReference).path;
     }
+    
     // Attempt to get a stable string representation for a query
     try {
         const internalQuery = (query as InternalQuery);
-        return internalQuery._query.path.canonicalString() + JSON.stringify(internalQuery.toJSON());
+        const path = internalQuery._query.path.canonicalString();
+
+        const filters = internalQuery._query.filters.map(f => `${f.field.canonicalString()}${f.op}${JSON.stringify(f.value)}`).join(',');
+        const orderBy = internalQuery._query.orderBy.map(o => `${o.field.canonicalString()}:${o.dir}`).join(',');
+        const limit = internalQuery._query.limit;
+
+        return `${path}|${filters}|${orderBy}|${limit || ''}`;
     } catch {
         // Fallback for different structures or versions
-        return 'unserializable-query';
+        return `unserializable-query-${Date.now()}`;
     }
 }
 
