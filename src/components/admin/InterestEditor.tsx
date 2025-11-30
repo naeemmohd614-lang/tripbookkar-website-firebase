@@ -34,7 +34,7 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
 
   const { fields: tagFields, append: appendTag, remove: removeTag } = useFieldArray({
       control,
-      name: "tags"
+      name: "tags" as any, // Use `as any` to handle string[] with useFieldArray
   });
 
   useEffect(() => {
@@ -60,7 +60,6 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
         toast({ variant: 'destructive', title: 'AI Error', description: result.error });
     }
   };
-
 
   const onSubmit: SubmitHandler<Interest> = async (data) => {
     const result = await saveInterestAction(interest?.id || null, data);
@@ -111,7 +110,7 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
             <section>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold">Hotel Tags</h3>
-                    <Button type="button" variant="outline" onClick={() => appendTag({ value: '' } as any)}>
+                    <Button type="button" variant="outline" onClick={() => appendTag('' as any)}>
                         Add Tag
                     </Button>
                 </div>
