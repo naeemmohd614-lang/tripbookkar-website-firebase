@@ -57,9 +57,9 @@ export default function InterestsPage() {
     const { data: interests, isLoading } = useCollection<Interest>(interestsQuery);
 
     return (
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-card rounded-lg shadow p-6">
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold text-gray-800">Travel Interests</h1>
+                <h1 className="text-2xl font-bold text-foreground">Travel Interests</h1>
                 <div className="flex items-center gap-4">
                      <BulkImportInterestsData />
                     <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -75,7 +75,7 @@ export default function InterestsPage() {
             {interests && (
                 <div className="overflow-x-auto border rounded-lg">
                     <Table>
-                        <TableHeader className="bg-gray-50">
+                        <TableHeader className="bg-muted/50">
                             <TableRow>
                                 <TableHead className="w-20">Image</TableHead>
                                 <TableHead>Name</TableHead>
@@ -91,20 +91,20 @@ export default function InterestsPage() {
                                         {interest.image?.src && <Image src={interest.image.src} alt={interest.name} width={64} height={64} className="rounded-md object-cover"/>}
                                     </TableCell>
                                     <TableCell className="font-semibold">{interest.name}</TableCell>
-                                    <TableCell className="text-sm text-gray-600 max-w-xs truncate">{interest.description}</TableCell>
+                                    <TableCell className="text-sm text-muted-foreground max-w-xs truncate">{interest.description}</TableCell>
                                     <TableCell>
                                         <div className="flex flex-wrap gap-1">
                                             {interest.tags.map(tag => (
-                                                <span key={tag.value} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">{tag.value}</span>
+                                                <span key={tag.value} className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">{tag.value}</span>
                                             ))}
                                         </div>
                                     </TableCell>
                                     <TableCell>
                                          <div className="flex gap-4 shrink-0">
-                                            <LoadingLink href={`/admin/interests/${interest.id}`} className="text-blue-600 hover:text-blue-800">
+                                            <LoadingLink href={`/admin/interests/${interest.id}`} className="text-primary hover:text-primary/80">
                                                 <Pencil size={18} />
                                             </LoadingLink>
-                                            <button className="text-red-500 hover:text-red-700">
+                                            <button className="text-destructive hover:text-destructive/80">
                                                 <Trash2 size={18} />
                                             </button>
                                         </div>

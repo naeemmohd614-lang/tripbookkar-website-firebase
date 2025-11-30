@@ -57,9 +57,9 @@ export default function StatesPage() {
     const { data: states, isLoading } = useCollection<State>(statesQuery);
 
     return (
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-card rounded-lg shadow p-6">
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold text-gray-800">States</h1>
+                <h1 className="text-2xl font-bold text-foreground">States</h1>
                  <div className="flex items-center gap-4">
                      <BulkImportStatesData />
                     <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -75,7 +75,7 @@ export default function StatesPage() {
             {states && (
                 <div className="overflow-x-auto border rounded-lg">
                     <Table>
-                        <TableHeader className="bg-gray-50">
+                        <TableHeader className="bg-muted/50">
                             <TableRow>
                                 <TableHead>Name</TableHead>
                                 <TableHead>Description</TableHead>
@@ -88,15 +88,15 @@ export default function StatesPage() {
                             {states.map(state => (
                                 <TableRow key={state.stateId}>
                                     <TableCell className="font-semibold">{state.name}</TableCell>
-                                    <TableCell className="text-sm text-gray-600 max-w-xs truncate">{state.description}</TableCell>
+                                    <TableCell className="text-sm text-muted-foreground max-w-xs truncate">{state.description}</TableCell>
                                     <TableCell>{state.totalCities}</TableCell>
                                     <TableCell>{state.totalHotels}</TableCell>
                                     <TableCell>
                                          <div className="flex gap-4 shrink-0">
-                                            <LoadingLink href={`/admin/states/${state.stateId}`} className="text-blue-600 hover:text-blue-800">
+                                            <LoadingLink href={`/admin/states/${state.stateId}`} className="text-primary hover:text-primary/80">
                                                 <Pencil size={18} />
                                             </LoadingLink>
-                                            <button className="text-red-500 hover:text-red-700">
+                                            <button className="text-destructive hover:text-destructive/80">
                                                 <Trash2 size={18} />
                                             </button>
                                         </div>

@@ -32,11 +32,11 @@ export default function DashboardPage(){
 
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
+      <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <Card className="bg-white shadow-sm">
+        <Card>
             <CardHeader>
-                <CardTitle className="text-lg font-semibold text-gray-700">Content Overview</CardTitle>
+                <CardTitle className="text-lg font-semibold text-foreground">Content Overview</CardTitle>
             </CardHeader>
             <CardContent>
                 <ResponsiveContainer width="100%" height={300}>
@@ -51,9 +51,9 @@ export default function DashboardPage(){
                 </ResponsiveContainer>
             </CardContent>
         </Card>
-         <Card className="bg-white shadow-sm">
+         <Card>
             <CardHeader>
-                <CardTitle className="text-lg font-semibold text-gray-700">Content Distribution</CardTitle>
+                <CardTitle className="text-lg font-semibold text-foreground">Content Distribution</CardTitle>
             </CardHeader>
             <CardContent>
                 <ResponsiveContainer width="100%" height={300}>

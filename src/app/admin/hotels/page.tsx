@@ -141,9 +141,9 @@ export default function HotelsPage(){
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
+    <div className="bg-card rounded-lg shadow-sm p-6">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">Hotel Management</h1>
+        <h1 className="text-2xl font-bold text-foreground">Hotel Management</h1>
         <div className="flex gap-4">
             <BulkImportMenu />
             <Button asChild>
@@ -166,7 +166,7 @@ export default function HotelsPage(){
                 <AccordionContent>
                   <div className="overflow-x-auto border rounded-lg">
                     <Table>
-                      <TableHeader className="bg-gray-50">
+                      <TableHeader className="bg-muted/50">
                         <TableRow>
                           <TableHead>Name</TableHead>
                           <TableHead>Location</TableHead>
@@ -177,11 +177,11 @@ export default function HotelsPage(){
                       </TableHeader>
                       <TableBody>
                         {hotelsByBrand[brand].map((h: Hotel) => (
-                          <TableRow key={h.id} className="hover:bg-gray-50">
-                            <TableCell className="font-medium text-gray-900">{h.name}</TableCell>
-                            <TableCell className="text-sm text-gray-500">{h.city}, {h.state}</TableCell>
-                            <TableCell className="text-sm text-gray-500">{formatPrice(h.basePrice)}</TableCell>
-                            <TableCell className="text-sm text-gray-500">
+                          <TableRow key={h.id} className="hover:bg-muted/50">
+                            <TableCell className="font-medium text-foreground">{h.name}</TableCell>
+                            <TableCell className="text-sm text-muted-foreground">{h.city}, {h.state}</TableCell>
+                            <TableCell className="text-sm text-muted-foreground">{formatPrice(h.basePrice)}</TableCell>
+                            <TableCell className="text-sm text-muted-foreground">
                                 <div className="flex items-center gap-1">
                                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                                     <span>{h.rating ? h.rating.toFixed(1) : 'N/A'}</span>
@@ -189,12 +189,12 @@ export default function HotelsPage(){
                             </TableCell>
                             <TableCell>
                               <div className="flex items-center gap-4">
-                                 <LoadingLink href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
+                                 <LoadingLink href={`/admin/hotels/${h.id}`} className="text-primary hover:text-primary/80">
                                     <Pencil size={18} />
                                 </LoadingLink>
                                 <AlertDialog>
                                   <AlertDialogTrigger asChild>
-                                    <Button variant="ghost" size="icon" className="text-red-500 hover:text-red-700 h-8 w-8">
+                                    <Button variant="ghost" size="icon" className="text-destructive hover:text-destructive/80 h-8 w-8">
                                       <Trash2 size={18} />
                                     </Button>
                                   </AlertDialogTrigger>

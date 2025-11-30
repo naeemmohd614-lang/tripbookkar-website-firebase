@@ -34,7 +34,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import LoadingLink from '@/components/loading-link';
-import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { href: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -85,18 +84,18 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen flex bg-gray-50 text-gray-800">
-      <aside className="w-64 bg-white border-r px-4 py-6 hidden md:flex flex-col">
+    <div className="min-h-screen flex bg-secondary/30 text-foreground">
+      <aside className="w-64 bg-background border-r px-4 py-6 hidden md:flex flex-col">
         <div className="px-4 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800">TripBookKar</h2>
-            <p className="text-sm text-gray-500">Admin Panel</p>
+            <h2 className="text-2xl font-bold text-foreground">TripBookKar</h2>
+            <p className="text-sm text-muted-foreground">Admin Panel</p>
         </div>
         <nav className="flex-grow">
           <ul className="space-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <LoadingLink href={link.href}>
-                  <div className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${pathname.startsWith(link.href) ? 'bg-blue-100 text-blue-600' : 'text-gray-600 hover:bg-gray-100'}`}>
+                  <div className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${pathname.startsWith(link.href) ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-accent'}`}>
                     <link.icon className="h-5 w-5" />
                     <span className="font-medium">{link.label}</span>
                   </div>
@@ -108,8 +107,7 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
       </aside>
 
       <div className="flex-1 flex flex-col">
-        <header className="bg-white border-b h-20 flex items-center justify-end px-8 gap-4">
-          <ThemeToggle />
+        <header className="bg-background border-b h-20 flex items-center justify-end px-8 gap-4">
           <DropdownMenu>
               <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="relative h-10 w-10 rounded-full">

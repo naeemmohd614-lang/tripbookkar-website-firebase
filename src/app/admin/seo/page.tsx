@@ -28,9 +28,9 @@ export default function SEOPage(){
         <div className="grid gap-3">
           {!isLoading && pages && pages.length > 0 ? (
             pages.map(p=> (
-              <div key={p.id} className="p-3 bg-white rounded shadow">
+              <div key={p.id} className="p-3 bg-card rounded shadow">
                 <div className="font-semibold">{p.title}</div>
-                <div className="text-sm text-gray-500">{p.slug}</div>
+                <div className="text-sm text-muted-foreground">{p.slug}</div>
               </div>
             ))
           ) : !isLoading && (

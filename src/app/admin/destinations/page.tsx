@@ -54,9 +54,9 @@ export default function DestinationsPage() {
     const { data: monthlyDestinations, isLoading } = useCollection<MonthData>(monthlyDestinationsQuery);
 
     return (
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-card rounded-lg shadow p-6">
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold text-gray-800">Monthly Destinations</h1>
+                <h1 className="text-2xl font-bold text-foreground">Monthly Destinations</h1>
                 <div className="flex items-center gap-4">
                      <BulkImportMonthlyData />
                     <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -86,10 +86,10 @@ export default function DestinationsPage() {
                             <AccordionContent>
                                <div className="space-y-4">
                                 {month.destinations?.map((dest, index) => (
-                                     <div key={index} className="p-4 border rounded-lg hover:bg-gray-50 flex justify-between items-center">
+                                     <div key={index} className="p-4 border rounded-lg hover:bg-muted/50 flex justify-between items-center">
                                          <div>
-                                            <h4 className="font-semibold text-gray-800">{dest.name}</h4>
-                                            <p className="text-sm text-gray-600 line-clamp-2">{dest.reason}</p>
+                                            <h4 className="font-semibold text-foreground">{dest.name}</h4>
+                                            <p className="text-sm text-muted-foreground line-clamp-2">{dest.reason}</p>
                                          </div>
                                      </div>
                                 ))}
