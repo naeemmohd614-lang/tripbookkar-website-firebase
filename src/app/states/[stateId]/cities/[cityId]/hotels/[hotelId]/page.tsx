@@ -3,7 +3,7 @@
 import { notFound } from 'next/navigation';
 import type { Hotel } from '@/lib/types';
 import Image from 'next/image';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -171,7 +171,7 @@ export default function HotelDetailPage({ params }: { params: { hotelId: string 
                             Contact us to get the best deals and book this hotel for your travel dates.
                         </p>
                         <Button asChild size="lg" className="w-full h-12 text-lg">
-                           <Link href="/contact">Enquire Now</Link>
+                           <LoadingLink href="/contact">Enquire Now</LoadingLink>
                         </Button>
                     </CardContent>
                     </Card>
