@@ -101,6 +101,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.vhv.rs',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
