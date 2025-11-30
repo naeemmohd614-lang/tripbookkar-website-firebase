@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               <LoadingLink href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></LoadingLink>
               <LoadingLink href="https://www.facebook.com/profile.php?id=61582685195183" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors"><Facebook /></LoadingLink>
-              <LoadingLink href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors"><Instagram /></LoadingLink>
+              <LoadingLink href="https://www.instagram.com/tripbookkar/?hl=en" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors"><Instagram /></LoadingLink>
             </div>
           </div>
         </div>
