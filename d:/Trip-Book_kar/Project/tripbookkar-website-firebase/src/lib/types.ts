@@ -267,7 +267,7 @@ export interface MonthData {
   destinations: {
     name: string;
     reason: string;
-    hotels: string[] | { name: string }[];
+    hotels: (string | Hotel)[];
     image: {
       src: string;
       caption: string;
