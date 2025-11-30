@@ -1,21 +1,30 @@
 
 'use client';
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, where, or } from 'firebase/firestore';
 import HotelCard from '@/components/hotel-card';
 import SearchForm from '@/components/search-form';
 import type { Hotel } from '@/lib/types';
+import { usePageLoaderStore } from '@/components/page-loader';
 
 function SearchResults() {
   const searchParams = useSearchParams();
   const q = searchParams.get('q')?.toLowerCase() || '';
+  const { setIsLoading } = usePageLoaderStore();
 
   const firestore = useFirestore();
   const hotelsQuery = firestore ? collection(firestore, 'hotels') : null;
 
   const { data: allHotels, isLoading } = useCollection<Hotel>(hotelsQuery);
+
+  // Turn off the loader when data fetching is complete
+  useEffect(() => {
+    if (!isLoading) {
+      setIsLoading(false);
+    }
+  }, [isLoading, setIsLoading]);
 
   const filteredHotels = React.useMemo(() => {
     if (!allHotels) return [];
@@ -26,7 +35,10 @@ function SearchResults() {
         (hotel.city && hotel.city.toLowerCase().includes(q)) ||
         (hotel.state && hotel.state.toLowerCase().includes(q)) ||
         (hotel.brand && hotel.brand.toLowerCase().includes(q)) ||
-        (hotel.tags && Array.isArray(hotel.tags) && hotel.tags.some(tag => typeof tag === 'string' && tag.toLowerCase().includes(q)))
+        (hotel.tags && Array.isArray(hotel.tags) && hotel.tags.some(tag => {
+            const tagValue = typeof tag === 'string' ? tag : (tag as any).value;
+            return typeof tagValue === 'string' && tagValue.toLowerCase().includes(q);
+        }))
     );
   }, [allHotels, q]);
 
