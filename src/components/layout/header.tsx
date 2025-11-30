@@ -65,6 +65,7 @@ import { Separator } from '../ui/separator';
 import { ThemeToggle } from '../theme-toggle';
 import SearchForm from '../search-form';
 import Logo from '../shared/Logo';
+import LoadingLink from '../loading-link';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -116,7 +117,7 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <LoadingLink
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -131,7 +132,7 @@ const ListItem = React.forwardRef<
           {children && <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>}
-        </a>
+        </LoadingLink>
       </NavigationMenuLink>
     </li>
   )
@@ -154,7 +155,7 @@ export default function Header() {
     <>
       <NavigationMenuItem>
         <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/' ? "bg-accent" : "")}>
-          <Link href="/">Home</Link>
+          <LoadingLink href="/">Home</LoadingLink>
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
@@ -175,22 +176,22 @@ export default function Header() {
       </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/services' ? "bg-accent" : "")}>
-            <Link href="/services">Services</Link>
+            <LoadingLink href="/services">Services</LoadingLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
        <NavigationMenuItem>
           <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/packages' ? "bg-accent" : "")}>
-            <Link href="/packages">Packages</Link>
+            <LoadingLink href="/packages">Packages</LoadingLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
       <NavigationMenuItem>
           <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname.startsWith('/#destinations') ? "bg-accent" : "")}>
-            <Link href="/#destinations">Destinations</Link>
+            <LoadingLink href="/#destinations">Destinations</LoadingLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
       <NavigationMenuItem>
           <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), pathname === '/contact' ? "bg-accent" : "")}>
-            <Link href="/contact">Contact</Link>
+            <LoadingLink href="/contact">Contact</LoadingLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
     </>
@@ -205,10 +206,10 @@ export default function Header() {
           asChild
           className="w-full justify-start"
         >
-          <Link href={href}>
+          <LoadingLink href={href}>
             <Icon className="mr-2 h-4 w-4" />
             {label}
-          </Link>
+          </LoadingLink>
         </Button>
       ))}
        <h3 className="px-4 text-sm font-semibold text-muted-foreground">Experiences</h3>
@@ -219,10 +220,10 @@ export default function Header() {
             asChild
             className="w-full justify-start font-normal"
           >
-            <Link href={component.href}>
+            <LoadingLink href={component.href}>
               <component.icon className="mr-2 h-4 w-4" />
               {component.title}
-            </Link>
+            </LoadingLink>
           </Button>
         ))}
     </nav>
@@ -274,7 +275,7 @@ export default function Header() {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/admin"><Shield className="mr-2 h-4 w-4"/>Admin Dashboard</Link>
+                  <LoadingLink href="/admin"><Shield className="mr-2 h-4 w-4"/>Admin Dashboard</LoadingLink>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleLogout}>
@@ -285,7 +286,7 @@ export default function Header() {
             </DropdownMenu>
           ) : (
             <Button asChild>
-              <Link href="/login"><LogIn className="mr-2 h-4 w-4"/>Login</Link>
+              <LoadingLink href="/login"><LogIn className="mr-2 h-4 w-4"/>Login</LoadingLink>
             </Button>
           )}
 

@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import LoadingLink from './loading-link';
 import Image from 'next/image';
 import { Calendar, Tag } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -52,7 +52,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
       </CardContent>
       <CardFooter className="p-4 flex justify-end items-center bg-secondary/30">
         <Button asChild>
-          <Link href={`/packages/${pkg.id}`}>View Itinerary</Link>
+          <LoadingLink href={`/packages/${pkg.id}`}>View Itinerary</LoadingLink>
         </Button>
       </CardFooter>
     </Card>

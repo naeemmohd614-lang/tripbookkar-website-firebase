@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import LoadingLink from '../loading-link';
 import { Twitter, Facebook, Instagram } from 'lucide-react';
 import Logo from '../shared/Logo';
 
@@ -16,10 +16,10 @@ export default function Footer() {
           <div>
             <h4 className="font-headline font-semibold text-brand-blue mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/hotels" className="text-sm hover:text-primary transition-colors">Hotels</Link></li>
-              <li><Link href="/packages" className="text-sm hover:text-primary transition-colors">Packages</Link></li>
-              <li><Link href="#destinations" className="text-sm hover:text-primary transition-colors">Destinations</Link></li>
-              <li><Link href="/admin" className="text-sm hover:text-primary transition-colors">Admin</Link></li>
+              <li><LoadingLink href="/hotels" className="text-sm hover:text-primary transition-colors">Hotels</LoadingLink></li>
+              <li><LoadingLink href="/packages" className="text-sm hover:text-primary transition-colors">Packages</LoadingLink></li>
+              <li><LoadingLink href="#destinations" className="text-sm hover:text-primary transition-colors">Destinations</LoadingLink></li>
+              <li><LoadingLink href="/admin" className="text-sm hover:text-primary transition-colors">Admin</LoadingLink></li>
             </ul>
           </div>
           <div>

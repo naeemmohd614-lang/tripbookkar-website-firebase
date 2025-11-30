@@ -1,14 +1,23 @@
-
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
+import { create } from 'zustand';
 
-interface PageLoaderProps {
+interface PageLoaderState {
   isLoading: boolean;
+  setIsLoading: (isLoading: boolean) => void;
 }
 
-export default function PageLoader({ isLoading }: PageLoaderProps) {
+export const usePageLoaderStore = create<PageLoaderState>((set) => ({
+  isLoading: false,
+  setIsLoading: (isLoading) => set({ isLoading }),
+}));
+
+
+export default function PageLoader() {
+  const isLoading = usePageLoaderStore((state) => state.isLoading);
+
   return (
     <AnimatePresence>
       {isLoading && (

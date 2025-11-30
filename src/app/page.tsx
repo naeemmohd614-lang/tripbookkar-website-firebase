@@ -3,7 +3,7 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import LoadingLink from "@/components/loading-link";
 import { ArrowRight, MapPin, Package, HeartPulse, Cake, Sun, Building2, Tent, Sparkles, Handshake, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -123,9 +123,9 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg">
-              <Link href="/hotels">
+              <LoadingLink href="/hotels">
                 View All Hotels <ArrowRight className="ml-2" />
-              </Link>
+              </LoadingLink>
             </Button>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Home() {
                     "caption": interest.image.caption
                 };
                 return (
-                  <Link href={`/interests/${interest.id}`} key={interest.id}>
+                  <LoadingLink href={`/interests/${interest.id}`} key={interest.id}>
                     <Card className="overflow-hidden group relative h-48 hover:shadow-xl transition-shadow duration-300">
                       <Image
                         src={interestImage.src}
@@ -173,7 +173,7 @@ export default function Home() {
                         <h3 className="font-bold text-2xl text-white font-headline tracking-wider">{interest.name}</h3>
                       </div>
                     </Card>
-                  </Link>
+                  </LoadingLink>
                 );
               })}
             </div>
@@ -197,7 +197,7 @@ export default function Home() {
               {states.map((state) => {
                 const stateImage = stateImages[state.stateId] || { src: `https://picsum.photos/seed/${state.stateId}/400/300`, caption: `landscape of ${state.name}` };
                 return (
-                  <Link href={`/states/${state.stateId}`} key={state.stateId}>
+                  <LoadingLink href={`/states/${state.stateId}`} key={state.stateId}>
                     <Card className="overflow-hidden group hover:shadow-xl transition-shadow duration-300">
                       <CardContent className="p-0">
                         <div className="relative h-40">
@@ -217,7 +217,7 @@ export default function Home() {
                         </div>
                       </CardContent>
                     </Card>
-                  </Link>
+                  </LoadingLink>
                 );
               })}
             </div>
@@ -288,7 +288,7 @@ export default function Home() {
                   caption: month.pageImage.caption,
                 };
                 return (
-                  <Link href={`/destinations/${month.slug}`} key={month.name}>
+                  <LoadingLink href={`/destinations/${month.slug}`} key={month.name}>
                     <Card className="overflow-hidden group relative h-24 hover:shadow-xl transition-shadow duration-300">
                       <Image
                         src={destImage.src}
@@ -301,7 +301,7 @@ export default function Home() {
                         <h3 className="font-bold text-xl text-white font-headline tracking-wider">{month.name}</h3>
                       </div>
                     </Card>
-                  </Link>
+                  </LoadingLink>
                 );
               })}
             </div>
@@ -377,9 +377,9 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg">
-              <Link href="/packages">
+              <LoadingLink href="/packages">
                 View All Packages <ArrowRight className="ml-2" />
-              </Link>
+              </LoadingLink>
             </Button>
           </div>
         </div>

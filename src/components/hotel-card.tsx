@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import LoadingLink from './loading-link';
 import Image from 'next/image';
 import { Star, MapPin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -89,7 +89,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
       </CardContent>
       <CardFooter className="p-4 flex justify-end items-center bg-secondary/30">
         <Button asChild>
-          <Link href={`/states/${stateId}/cities/${cityId}/hotels/${hotelId}`}>View Details</Link>
+          <LoadingLink href={`/states/${stateId}/cities/${cityId}/hotels/${hotelId}`}>View Details</LoadingLink>
         </Button>
       </CardFooter>
     </Card>
