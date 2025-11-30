@@ -41,14 +41,14 @@ export interface Hotel {
     checkOut: string;
   };
   diningExperiences?: { name: string; type: string }[];
-  experiencesAndActivities?: string[];
-  weddingVenues?: string[];
+  experiencesAndActivities?: {value: string}[];
+  weddingVenues?: {value: string}[];
   diningCount?: number;
   banquetCount?: number;
   basePrice: number;
   dynamicPrice?: number;
   rating: number;
-  tags: string[];
+  tags: {value: string}[];
   affiliate?: {
     booking: string;
     agoda: string;
@@ -86,7 +86,7 @@ export interface Package {
   price: number;
   dynamicPrice?: number;
   itinerary: Itinerary[];
-  images: string[];
+  images: { src: string; caption: string; }[];
   tags: string[];
   seo?: {
     title: string;
@@ -267,7 +267,7 @@ export interface MonthData {
   destinations: {
     name: string;
     reason: string;
-    hotels: string[] | { name: string }[];
+    hotels: (string | Hotel)[];
     image: {
       src: string;
       caption: string;
@@ -429,5 +429,5 @@ export interface Interest {
     src: string;
     caption: string;
   };
-  tags: string[];
+  tags: { value: string }[];
 }
