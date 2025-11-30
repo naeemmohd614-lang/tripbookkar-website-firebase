@@ -18,6 +18,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import HotelLoadingSkeleton from '@/components/shared/HotelLoadingSkeleton';
 
 export default function HotelDetailPage({ params }: { params: { hotelId: string }}) {
   const { hotelId } = params;
@@ -29,7 +30,7 @@ export default function HotelDetailPage({ params }: { params: { hotelId: string 
 
 
   if (isLoading) {
-    return <div className="p-6 text-center">Loading hotel details...</div>;
+    return <HotelLoadingSkeleton />;
   }
 
   if (!hotel) {
