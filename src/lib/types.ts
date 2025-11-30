@@ -48,7 +48,7 @@ export interface Hotel {
   basePrice: number;
   dynamicPrice?: number;
   rating: number;
-  tags: string[];
+  tags: (string | { value: string })[];
   affiliate?: {
     booking: string;
     agoda: string;

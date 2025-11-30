@@ -3,7 +3,7 @@
 import React, { Suspense, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useFirestore, useCollection } from '@/firebase';
-import { collection, query, where, or } from 'firebase/firestore';
+import { collection, query, orderBy } from 'firebase/firestore';
 import HotelCard from '@/components/hotel-card';
 import SearchForm from '@/components/search-form';
 import type { Hotel } from '@/lib/types';
@@ -11,11 +11,11 @@ import { usePageLoaderStore } from '@/components/page-loader';
 
 function SearchResults() {
   const searchParams = useSearchParams();
-  const q = searchParams.get('q')?.toLowerCase() || '';
+  const q = searchParams.get('q')?.toLowerCase().trim() || '';
   const { setIsLoading } = usePageLoaderStore();
 
   const firestore = useFirestore();
-  const hotelsQuery = firestore ? collection(firestore, 'hotels') : null;
+  const hotelsQuery = firestore ? query(collection(firestore, 'hotels'), orderBy('name', 'asc')) : null;
 
   const { data: allHotels, isLoading } = useCollection<Hotel>(hotelsQuery);
 
@@ -28,7 +28,7 @@ function SearchResults() {
 
   const filteredHotels = React.useMemo(() => {
     if (!allHotels) return [];
-    if (!q) return allHotels;
+    if (!q) return []; // Return empty if no search query
     
     return allHotels.filter(hotel => 
         (hotel.name && hotel.name.toLowerCase().includes(q)) ||
@@ -42,10 +42,19 @@ function SearchResults() {
     );
   }, [allHotels, q]);
 
+  if (!q) {
+      return (
+        <div className="text-center py-16">
+            <h2 className="text-xl font-semibold text-muted-foreground">Search for Hotels and Destinations</h2>
+            <p className="mt-2 text-muted-foreground">Enter a city, state, hotel name, or interest above to begin.</p>
+        </div>
+      )
+  }
+
   return (
     <>
       <h1 className="text-3xl font-headline font-bold text-brand-blue mb-2">
-        {q ? `Search results for "${q}"` : 'All Hotels'}
+        {`Search results for "${q}"`}
       </h1>
       <p className="text-muted-foreground mb-8">
         {isLoading ? 'Searching...' : `Found ${filteredHotels.length} ${filteredHotels.length === 1 ? 'hotel' : 'hotels'}.`}
@@ -76,7 +85,9 @@ export default function SearchPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto mb-8">
-        <SearchForm />
+        <Suspense fallback={<div>Loading form...</div>}>
+            <SearchForm />
+        </Suspense>
       </div>
       <Suspense fallback={<div>Loading search results...</div>}>
         <SearchResults />
@@ -84,3 +95,4 @@ export default function SearchPage() {
     </div>
   );
 }
+
