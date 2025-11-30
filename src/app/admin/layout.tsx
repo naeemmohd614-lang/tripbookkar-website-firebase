@@ -34,6 +34,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import LoadingLink from '../loading-link';
 
 const WhatsAppIcon = () => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
@@ -101,12 +102,12 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
           <ul className="space-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href}>
+                <LoadingLink href={link.href}>
                   <div className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${pathname.startsWith(link.href) ? 'bg-blue-100 text-blue-600' : 'text-gray-600 hover:bg-gray-100'}`}>
                     <link.icon className="h-5 w-5" />
                     <span className="font-medium">{link.label}</span>
                   </div>
-                </Link>
+                </LoadingLink>
               </li>
             ))}
           </ul>
