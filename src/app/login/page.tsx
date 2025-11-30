@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useAuth } from '@/firebase';
 import { 
   signInWithEmailAndPassword, 
-  createUserWithEmailAndPassword, 
   GoogleAuthProvider, 
   signInWithPopup 
 } from 'firebase/auth';
@@ -19,11 +18,10 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
-  const [isSignUp, setIsSignUp] = useState(false);
   const auth = useAuth();
   const router = useRouter();
 
-  const handleAuth = async (e: React.FormEvent) => {
+  const handleEmailSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     if (!auth) {
@@ -32,12 +30,8 @@ export default function LoginPage() {
     }
 
     try {
-      if (isSignUp) {
-        await createUserWithEmailAndPassword(auth, email, password);
-      } else {
-        await signInWithEmailAndPassword(auth, email, password);
-      }
-      router.push('/'); // Redirect to homepage on successful login/signup
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push('/'); // Redirect to homepage on successful login
     } catch (err: any) {
       setError(err.message);
     }
@@ -61,11 +55,11 @@ export default function LoginPage() {
     <div className="container mx-auto flex items-center justify-center min-h-[80vh] py-12">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-headline">{isSignUp ? 'Create an Account' : 'Welcome Back'}</CardTitle>
-          <CardDescription>{isSignUp ? 'Join TripBookKar to plan your next adventure.' : 'Sign in to continue to TripBookKar.'}</CardDescription>
+          <CardTitle className="text-2xl font-headline">Welcome Back</CardTitle>
+          <CardDescription>Sign in to continue to TripBookKar.</CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleAuth} className="space-y-4">
+          <form onSubmit={handleEmailSignIn} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -89,7 +83,7 @@ export default function LoginPage() {
             </div>
             {error && <p className="text-sm text-destructive">{error}</p>}
             <Button type="submit" className="w-full">
-              {isSignUp ? 'Sign Up' : 'Sign In'}
+              Sign In
             </Button>
           </form>
 
@@ -98,27 +92,10 @@ export default function LoginPage() {
           <div className="space-y-4">
              <Button variant="outline" className="w-full" onClick={handleGoogleSignIn}>
                 <Chrome className="mr-2 h-4 w-4" />
-                Sign in with Google
+                Continue with Google
             </Button>
           </div>
           
-          <div className="mt-6 text-center text-sm">
-            {isSignUp ? (
-              <>
-                Already have an account?{' '}
-                <Button variant="link" className="p-0 h-auto" onClick={() => setIsSignUp(false)}>
-                  Sign In
-                </Button>
-              </>
-            ) : (
-              <>
-                Don&apos;t have an account?{' '}
-                <Button variant="link" className="p-0 h-auto" onClick={() => setIsSignUp(true)}>
-                  Sign Up
-                </Button>
-              </>
-            )}
-          </div>
         </CardContent>
       </Card>
     </div>
