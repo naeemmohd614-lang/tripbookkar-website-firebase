@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import {
   Query,
   onSnapshot,
@@ -73,6 +73,19 @@ function getQueryPath(query: Query<DocumentData> | CollectionReference<DocumentD
     }
 }
 
+/**
+ * Custom hook to store the previous value of a prop or state.
+ * @param value The value to track.
+ * @returns The value from the previous render.
+ */
+function usePrevious<T>(value: T): T | undefined {
+  const ref = useRef<T>();
+  useEffect(() => {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+}
+
 
 /**
  * React hook to subscribe to a Firestore collection or query in real-time.
@@ -93,13 +106,17 @@ export function useCollection<T = any>(
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<FirestoreError | Error | null>(null);
 
-  const queryPath = useMemo(() => targetRefOrQuery ? getQueryPath(targetRefOrQuery) : null, [targetRefOrQuery]);
+  const prevQuery = usePrevious(targetRefOrQuery);
 
   useEffect(() => {
-    if (!targetRefOrQuery) {
-      setData(null);
-      setIsLoading(false);
-      setError(null);
+    // If the query is null or hasn't changed, do nothing.
+    if (!targetRefOrQuery || (prevQuery && queryEqual(targetRefOrQuery, prevQuery))) {
+      // If there's no query, set loading to false.
+      if (!targetRefOrQuery) {
+          setData(null);
+          setIsLoading(false);
+          setError(null);
+      }
       return;
     }
 
@@ -132,8 +149,7 @@ export function useCollection<T = any>(
     );
 
     return () => unsubscribe();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [queryPath]); // Re-run only when the serialized query path changes.
+  }, [targetRefOrQuery, prevQuery]);
 
   return { data, isLoading, error };
 }
