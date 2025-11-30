@@ -1,6 +1,7 @@
 
 'use client';
-import React, { Suspense, useEffect } from 'react';
+
+import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, orderBy } from 'firebase/firestore';
@@ -12,43 +13,45 @@ import { usePageLoaderStore } from '@/components/page-loader';
 function SearchResults() {
   const searchParams = useSearchParams();
   const q = searchParams.get('q')?.toLowerCase().trim() || '';
-  const { setIsLoading } = usePageLoaderStore();
+  const { setIsLoading } = usePageLoaderStore.getState();
 
   const firestore = useFirestore();
   const hotelsQuery = firestore ? query(collection(firestore, 'hotels'), orderBy('name', 'asc')) : null;
 
   const { data: allHotels, isLoading } = useCollection<Hotel>(hotelsQuery);
 
-  // Turn off the loader when data fetching is complete
-  useEffect(() => {
+  React.useEffect(() => {
     if (!isLoading) {
       setIsLoading(false);
     }
   }, [isLoading, setIsLoading]);
 
   const filteredHotels = React.useMemo(() => {
-    if (!allHotels) return [];
-    if (!q) return []; // Return empty if no search query
+    if (!allHotels || !q) return [];
     
     return allHotels.filter(hotel => 
-        (hotel.name && hotel.name.toLowerCase().includes(q)) ||
-        (hotel.city && hotel.city.toLowerCase().includes(q)) ||
-        (hotel.state && hotel.state.toLowerCase().includes(q)) ||
-        (hotel.brand && hotel.brand.toLowerCase().includes(q)) ||
-        (hotel.tags && Array.isArray(hotel.tags) && hotel.tags.some(tag => {
+        (hotel.name?.toLowerCase().includes(q)) ||
+        (hotel.city?.toLowerCase().includes(q)) ||
+        (hotel.state?.toLowerCase().includes(q)) ||
+        (hotel.brand?.toLowerCase().includes(q)) ||
+        (Array.isArray(hotel.tags) && hotel.tags.some(tag => {
             const tagValue = typeof tag === 'string' ? tag : (tag as any).value;
             return typeof tagValue === 'string' && tagValue.toLowerCase().includes(q);
         }))
     );
   }, [allHotels, q]);
-
+  
+  if (isLoading) {
+    return <div className="text-center py-16">Searching...</div>
+  }
+  
   if (!q) {
-      return (
-        <div className="text-center py-16">
-            <h2 className="text-xl font-semibold text-muted-foreground">Search for Hotels and Destinations</h2>
-            <p className="mt-2 text-muted-foreground">Enter a city, state, hotel name, or interest above to begin.</p>
-        </div>
-      )
+    return (
+      <div className="text-center py-16">
+        <h2 className="text-xl font-semibold text-muted-foreground">Search for Hotels and Destinations</h2>
+        <p className="mt-2 text-muted-foreground">Enter a city, state, hotel name, or interest above to begin.</p>
+      </div>
+    );
   }
 
   return (
@@ -57,42 +60,34 @@ function SearchResults() {
         {`Search results for "${q}"`}
       </h1>
       <p className="text-muted-foreground mb-8">
-        {isLoading ? 'Searching...' : `Found ${filteredHotels.length} ${filteredHotels.length === 1 ? 'hotel' : 'hotels'}.`}
+        {`Found ${filteredHotels.length} ${filteredHotels.length === 1 ? 'hotel' : 'hotels'}.`}
       </p>
 
-      {isLoading && <div className="text-center py-16">Loading...</div>}
-
-      {!isLoading && filteredHotels.length > 0 ? (
+      {filteredHotels.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredHotels.map((hotel) => (
             <HotelCard key={hotel.id} hotel={hotel} />
           ))}
         </div>
       ) : (
-        !isLoading && (
-          <div className="text-center py-16 border-2 border-dashed rounded-lg">
-            <h2 className="text-xl font-semibold text-muted-foreground">No hotels found</h2>
-            <p className="mt-2 text-muted-foreground">Try adjusting your search query.</p>
-          </div>
-        )
+        <div className="text-center py-16 border-2 border-dashed rounded-lg">
+          <h2 className="text-xl font-semibold text-muted-foreground">No hotels found</h2>
+          <p className="mt-2 text-muted-foreground">Try adjusting your search query.</p>
+        </div>
       )}
     </>
   );
 }
 
-
 export default function SearchPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto mb-8">
-        <Suspense fallback={<div>Loading form...</div>}>
-            <SearchForm />
-        </Suspense>
+        <SearchForm />
       </div>
-      <Suspense fallback={<div>Loading search results...</div>}>
+      <Suspense fallback={<div className="text-center py-16">Loading search results...</div>}>
         <SearchResults />
       </Suspense>
     </div>
   );
 }
-
