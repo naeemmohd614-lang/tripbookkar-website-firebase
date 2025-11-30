@@ -19,7 +19,7 @@ export interface Hotel {
   pincode?: string;
   about: string;
   distance?: {
-    [key: string]: string;
+    [key: string]: string | undefined;
   };
   images: {
     src: string;
@@ -48,7 +48,7 @@ export interface Hotel {
   basePrice: number;
   dynamicPrice?: number;
   rating: number;
-  tags: {value: string}[];
+  tags: string[];
   affiliate?: {
     booking: string;
     agoda: string;
@@ -380,7 +380,7 @@ export type GeneratePackageItineraryOutput = z.infer<typeof GeneratePackageItine
 export type RecommendationsState = {
   recommendations?: string;
   error?: string;
-}
+};
 
 // State for generateSeoPage
 export type SeoGeneratorState = {
@@ -429,5 +429,5 @@ export interface Interest {
     src: string;
     caption: string;
   };
-  tags: { value: string }[];
+  tags: string[];
 }
