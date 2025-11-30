@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -13,7 +14,7 @@ const teamMembers = [
   {
     name: "Aman Sharma",
     role: "Founder & CEO",
-    avatar: "https://picsum.photos/seed/aman/200/200",
+    avatar: "https://picsum.photos/seed/aman-sharma/200/200",
     bio: "A travel enthusiast with a vision to make luxury travel accessible and seamless for everyone.",
     social: {
       linkedin: "#",
@@ -23,7 +24,7 @@ const teamMembers = [
   {
     name: "Priya Singh",
     role: "Head of Operations",
-    avatar: "https://picsum.photos/seed/priya/200/200",
+    avatar: "https://picsum.photos/seed/priya-singh/200/200",
     bio: "Ensuring every trip is perfectly planned and executed, from booking to post-travel support.",
     social: {
       linkedin: "#",
@@ -33,7 +34,7 @@ const teamMembers = [
   {
     name: "Rahul Verma",
     role: "Lead Travel Consultant",
-    avatar: "https://picsum.photos/seed/rahul/200/200",
+    avatar: "https://picsum.photos/seed/rahul-verma/200/200",
     bio: "An expert in crafting personalized itineraries that turn dream vacations into reality.",
     social: {
       linkedin: "#",
@@ -51,8 +52,8 @@ const whyChooseUsPoints = [
 
 export default function AboutUsPage() {
   const heroImage = {
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBzZXJ2aWNlc3xlbnwwfHx8fDE3NjQyMDgzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      caption: "A happy travel group"
+      src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop",
+      caption: "beautiful landscape"
   }
 
   return (
@@ -88,7 +89,7 @@ export default function AboutUsPage() {
               </p>
             </div>
              <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-xl">
-                 <Image src="https://images.unsplash.com/photo-1542037104881-31b9f6977164?q=80&w=1170&auto=format&fit=crop" alt="Our Mission" fill className="object-cover"/>
+                 <Image src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?q=80&w=1170&auto=format&fit=crop" alt="Our Mission" fill className="object-cover" data-ai-hint="teamwork planning"/>
              </div>
           </div>
         </div>
