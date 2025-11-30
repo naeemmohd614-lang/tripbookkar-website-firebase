@@ -63,7 +63,13 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
 
 
   const onSubmit: SubmitHandler<Interest> = async (data) => {
-    const result = await saveInterestAction(interest?.id || null, data);
+    // Convert tags if they are in object format from the form
+    const processedData = {
+        ...data,
+        tags: data.tags.map(tag => typeof tag === 'object' ? (tag as any).value : tag)
+    };
+
+    const result = await saveInterestAction(interest?.id || null, processedData);
     
     if (result.success) {
       toast({
@@ -111,14 +117,14 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
             <section>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold">Hotel Tags</h3>
-                    <Button type="button" variant="outline" onClick={() => appendTag({ value: '' })}>
+                    <Button type="button" variant="outline" onClick={() => appendTag('')}>
                         Add Tag
                     </Button>
                 </div>
                 <div className="space-y-4">
                     {tagFields.map((field, index) => (
                          <div key={field.id} className="grid grid-cols-[1fr,auto] gap-4 items-end">
-                            <Input {...register(`tags.${index}.value`)} placeholder="e.g., beach" />
+                            <Input {...register(`tags.${index}` as const)} placeholder="e.g., beach" />
                             <Button type="button" variant="destructive" size="icon" onClick={() => removeTag(index)}>
                                 <Trash2 className="h-4 w-4" />
                             </Button>
