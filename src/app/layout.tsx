@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+import NavigationLoader from "@/components/navigation-loader";
 
 export const metadata: Metadata = {
   title: "TripBookKar - Your Ultimate Travel Companion",
@@ -45,6 +46,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <FirebaseClientProvider>
+            <NavigationLoader />
             <Header />
             <main className="flex-grow">{children}</main>
             <Footer />
