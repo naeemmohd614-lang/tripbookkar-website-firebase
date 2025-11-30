@@ -110,6 +110,7 @@ export default function PackageEditor({ pkg }: PackageEditorProps) {
         city: Array.isArray(data.city) ? data.city : (data.city as any).split(',').map((s:string) => s.trim()),
         state: Array.isArray(data.state) ? data.state : (data.state as any).split(',').map((s:string) => s.trim()),
         tags: Array.isArray(data.tags) ? data.tags : (data.tags as any).split(',').map((s:string) => s.trim()),
+        images: data.images || [],
       };
       
       const packageRef = doc(firestore, 'packages', packageId);
@@ -138,10 +139,6 @@ export default function PackageEditor({ pkg }: PackageEditorProps) {
               <CardTitle className="text-2xl font-bold">{pkg?.id ? 'Edit Package' : 'Create New Package'}</CardTitle>
               <CardDescription>Manage package details and itinerary.</CardDescription>
             </div>
-             <Button type="button" onClick={handleGenerateItinerary} variant="outline">
-                <Wand2 className="mr-2 h-4 w-4" />
-                Update with AI
-            </Button>
           </div>
         </CardHeader>
         <CardContent>
@@ -186,6 +183,9 @@ export default function PackageEditor({ pkg }: PackageEditorProps) {
             <div>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-lg font-semibold">Itinerary</h3>
+                    <Button type="button" variant="outline" onClick={handleGenerateItinerary}>
+                        <Wand2 className="mr-2 h-4 w-4" /> Generate with AI
+                    </Button>
                 </div>
                 <div className="space-y-4">
                 {fields.map((field, index) => (

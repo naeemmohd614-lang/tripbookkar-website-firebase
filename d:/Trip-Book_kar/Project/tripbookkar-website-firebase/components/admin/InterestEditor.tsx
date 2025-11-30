@@ -69,7 +69,7 @@ export default function InterestEditor({ interest }: InterestEditorProps) {
         tags: data.tags.map(tag => typeof tag === 'object' ? (tag as any).value : tag)
     };
 
-    const result = await saveInterestAction(interest?.id || null, processedData);
+    const result = await saveInterestAction(interest?.id || null, processedData as Interest);
     
     if (result.success) {
       toast({
