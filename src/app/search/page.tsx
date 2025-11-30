@@ -29,16 +29,21 @@ function SearchResults() {
   const filteredHotels = React.useMemo(() => {
     if (!allHotels || !q) return [];
     
-    return allHotels.filter(hotel => 
-        (hotel.name?.toLowerCase().includes(q)) ||
-        (hotel.city?.toLowerCase().includes(q)) ||
-        (hotel.state?.toLowerCase().includes(q)) ||
-        (hotel.brand?.toLowerCase().includes(q)) ||
-        (Array.isArray(hotel.tags) && hotel.tags.some(tag => {
+    return allHotels.filter(hotel => {
+        const queryLower = q.toLowerCase();
+        
+        const inName = hotel.name?.toLowerCase().includes(queryLower);
+        const inCity = hotel.city?.toLowerCase().includes(queryLower);
+        const inState = hotel.state?.toLowerCase().includes(queryLower);
+        const inBrand = hotel.brand?.toLowerCase().includes(queryLower);
+
+        const inTags = Array.isArray(hotel.tags) && hotel.tags.some(tag => {
             const tagValue = typeof tag === 'string' ? tag : (tag as any).value;
-            return typeof tagValue === 'string' && tagValue.toLowerCase().includes(q);
-        }))
-    );
+            return typeof tagValue === 'string' && tagValue.toLowerCase().includes(queryLower);
+        });
+
+        return inName || inCity || inState || inBrand || inTags;
+    });
   }, [allHotels, q]);
   
   if (isLoading) {
