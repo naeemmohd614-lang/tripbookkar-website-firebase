@@ -1,6 +1,7 @@
 
 'use client';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 interface BrandLogoProps {
   brand: {
@@ -27,8 +28,11 @@ export default function BrandLogo({ brand }: BrandLogoProps) {
   }
 
   return (
-    <div className="flex items-center justify-center w-full h-full">
-      <span className="font-bold text-center text-sm text-white">{brand.name}</span>
+    <div className={cn(
+        "flex items-center justify-center w-full h-full rounded-full",
+        "bg-gradient-to-br from-primary/20 to-primary/50"
+      )}>
+      <span className="font-bold text-center text-xs text-primary-foreground drop-shadow-lg">{brand.name}</span>
     </div>
   );
 }
