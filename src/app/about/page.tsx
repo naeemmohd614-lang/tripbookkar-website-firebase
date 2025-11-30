@@ -5,7 +5,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Award, Shield, Phone, Handshake, Linkedin, Twitter } from 'lucide-react';
+import { Award, Shield, Phone, Handshake } from 'lucide-react';
 import Image from 'next/image';
 import LoadingLink from '@/components/loading-link';
 import SectionTitle from '@/components/shared/SectionTitle';
@@ -16,30 +16,18 @@ const teamMembers = [
     role: "Founder & CEO",
     avatar: "https://picsum.photos/seed/aman-sharma/200/200",
     bio: "A travel enthusiast with a vision to make luxury travel accessible and seamless for everyone.",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-    },
   },
   {
     name: "Priya Singh",
     role: "Head of Operations",
     avatar: "https://picsum.photos/seed/priya-singh/200/200",
     bio: "Ensuring every trip is perfectly planned and executed, from booking to post-travel support.",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-    },
   },
   {
     name: "Rahul Verma",
     role: "Lead Travel Consultant",
     avatar: "https://picsum.photos/seed/rahul-verma/200/200",
     bio: "An expert in crafting personalized itineraries that turn dream vacations into reality.",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-    },
   }
 ];
 
@@ -131,10 +119,6 @@ export default function AboutUsPage() {
                   <h3 className="text-xl font-bold">{member.name}</h3>
                   <p className="text-primary font-medium">{member.role}</p>
                   <p className="text-sm text-muted-foreground mt-2">{member.bio}</p>
-                   <div className="mt-4 flex justify-center gap-4">
-                      <LoadingLink href={member.social.linkedin}><Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary"/></LoadingLink>
-                      <LoadingLink href={member.social.twitter}><Twitter className="w-5 h-5 text-muted-foreground hover:text-primary"/></LoadingLink>
-                   </div>
                 </CardContent>
               </Card>
             ))}
