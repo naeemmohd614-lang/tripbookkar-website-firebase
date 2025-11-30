@@ -13,7 +13,7 @@ import PackageCard from "@/components/package-card";
 import Recommendations from "@/components/recommendations";
 import { featuredPackages } from "@/lib/data";
 import HotelCard from "@/components/hotel-card";
-import type { Hotel, Interest, State, MonthDestination, City } from "@/lib/types";
+import type { Hotel, Interest, State, MonthData, City } from "@/lib/types";
 import { useFirestore, useCollection } from '@/firebase';
 import { collection, query, orderBy, limit } from 'firebase/firestore';
 import {
@@ -49,7 +49,7 @@ export default function Home() {
 
   const destinationsByMonthQuery = firestore ? query(collection(firestore, 'monthlyDestinations')) : null;
 
-  const { data: destinationsByMonthData, isLoading: destinationsLoading } = useCollection<MonthDestination>(destinationsByMonthQuery);
+  const { data: destinationsByMonthData, isLoading: destinationsLoading } = useCollection<MonthData>(destinationsByMonthQuery);
   
   const sortedDestinationsByMonth = React.useMemo(() => {
     if (!destinationsByMonthData) return [];
