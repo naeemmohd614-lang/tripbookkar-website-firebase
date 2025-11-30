@@ -41,8 +41,8 @@ export interface Hotel {
     checkOut: string;
   };
   diningExperiences?: { name: string; type: string }[];
-  experiencesAndActivities?: {value: string}[];
-  weddingVenues?: {value: string}[];
+  experiencesAndActivities?: {value: string}[] | string[];
+  weddingVenues?: {value: string}[] | string[];
   diningCount?: number;
   banquetCount?: number;
   basePrice: number;
@@ -429,5 +429,5 @@ export interface Interest {
     src: string;
     caption: string;
   };
-  tags: string[];
+  tags: { value: string }[];
 }
