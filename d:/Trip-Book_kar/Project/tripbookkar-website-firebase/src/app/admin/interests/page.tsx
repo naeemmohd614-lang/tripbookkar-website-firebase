@@ -95,7 +95,7 @@ export default function InterestsPage() {
                                     <TableCell>
                                         <div className="flex flex-wrap gap-1">
                                             {interest.tags.map(tag => (
-                                                <span key={tag.value} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">{tag.value}</span>
+                                                <span key={tag} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">{tag}</span>
                                             ))}
                                         </div>
                                     </TableCell>

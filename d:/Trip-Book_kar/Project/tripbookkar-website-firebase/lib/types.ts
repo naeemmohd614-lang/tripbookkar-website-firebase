@@ -1,5 +1,4 @@
 
-
 import { z } from 'zod';
 
 export interface Hotel {
@@ -268,7 +267,7 @@ export interface MonthData {
   destinations: {
     name: string;
     reason: string;
-    hotels: string[] | { name: string }[];
+    hotels: (string | Hotel)[];
     image: {
       src: string;
       caption: string;
@@ -430,5 +429,5 @@ export interface Interest {
     src: string;
     caption: string;
   };
-  tags: { value: string }[];
+  tags: string[];
 }
