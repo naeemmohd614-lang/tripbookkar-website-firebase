@@ -2,7 +2,8 @@
 
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { getRecommendations, RecommendationsState } from '@/app/actions';
+import { getRecommendations } from '@/app/actions';
+import type { RecommendationsState } from '@/lib/types';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
