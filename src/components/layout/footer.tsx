@@ -35,7 +35,7 @@ export default function Footer() {
             <h4 className="font-headline font-semibold text-brand-blue mb-4">Connect</h4>
             <div className="flex space-x-4">
               <LoadingLink href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></LoadingLink>
-              <LoadingLink href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors"><Facebook /></LoadingLink>
+              <LoadingLink href="https://www.facebook.com/profile.php?id=61582685195183" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors"><Facebook /></LoadingLink>
               <LoadingLink href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors"><Instagram /></LoadingLink>
             </div>
           </div>
