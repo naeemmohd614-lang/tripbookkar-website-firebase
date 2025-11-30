@@ -17,6 +17,7 @@ export default function Footer() {
           <div>
             <h4 className="font-headline font-semibold text-brand-blue mb-4">Quick Links</h4>
             <ul className="space-y-2">
+              <li><LoadingLink href="/about" className="text-sm hover:text-primary transition-colors">About Us</LoadingLink></li>
               <li><LoadingLink href="/hotels" className="text-sm hover:text-primary transition-colors">Hotels</LoadingLink></li>
               <li><LoadingLink href="/packages" className="text-sm hover:text-primary transition-colors">Packages</LoadingLink></li>
               <li><LoadingLink href="/#destinations" className="text-sm hover:text-primary transition-colors">Destinations</LoadingLink></li>
