@@ -21,13 +21,9 @@ export const metadata: Metadata = {
 };
 
 const WhatsAppIcon = () => (
-    <Image 
-        src="https://images.unsplash.com/photo-1704383110020-86b408af4ac2?q=80&w=1109&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-        alt="WhatsApp Icon" 
-        width={40} 
-        height={40} 
-        className="rounded-full"
-    />
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white fill-current">
+        <path d="M12.038 23.999C18.662 23.999 24 18.661 24 12C24 5.337 18.662 0 12.038 0C5.414 0 0 5.337 0 12c0 2.113.556 4.102 1.564 5.832L0 24l4.232-1.522A11.95 11.95 0 0 0 12.038 24zM8.132 6.844c.15-.299.314-.314.479-.314.15 0 .314.015.429.015.15.014.344.074.524.373.194.314.673 1.63.733 1.769.06.134.12.299.03.479-.09.194-.149.223-.299.373-.149.149-.299.179-.429.239-.119.06-.284.089-.419.03a1.918 1.918 0 0 1-1.123-.628c-.464-.524-1.079-1.753-1.124-1.813-.045-.06-.374-1.033.224-1.618.149-.149.328-.209.433-.239.119-.03.224-.03.314-.03.104 0 .224.015.343.149z"/>
+    </svg>
 );
 
 
