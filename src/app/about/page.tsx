@@ -12,9 +12,9 @@ import SectionTitle from '@/components/shared/SectionTitle';
 
 const teamMembers = [
   {
-    name: "Aman Sharma",
+    name: "Sanjida",
     role: "Founder & CEO",
-    avatar: "https://picsum.photos/seed/aman-sharma/200/200",
+    avatar: "https://picsum.photos/seed/sanjida/200/200",
     bio: "A travel enthusiast with a vision to make luxury travel accessible and seamless for everyone.",
   },
   {
