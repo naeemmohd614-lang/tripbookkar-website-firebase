@@ -1,7 +1,8 @@
 'use client';
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { generateSeoContent, SeoGeneratorState } from '@/app/actions';
+import { generateSeoContent } from '@/app/actions';
+import type { SeoGeneratorState, GenerateSeoPageInput } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
