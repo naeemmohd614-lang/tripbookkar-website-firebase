@@ -1,14 +1,18 @@
+
 'use client';
 import { useRouter } from 'next/navigation';
 import { Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { usePageLoaderStore } from './page-loader';
 
 export default function SearchForm() {
   const router = useRouter();
+  const { setIsLoading } = usePageLoaderStore();
 
   const handleSearch = (formData: FormData) => {
     const query = formData.get('query') as string;
+    setIsLoading(true);
     if (query) {
       router.push(`/search?q=${encodeURIComponent(query)}`);
     } else {
