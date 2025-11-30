@@ -1,6 +1,7 @@
+
 'use client';
 import { brands } from '@/lib/data';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -40,17 +41,17 @@ export default function BrandsPage() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {brandData.map((brand) => (
-            <Link href={`/brands/${brand.brandSlug}`} key={brand.brandSlug}>
+            <LoadingLink href={`/brands/${brand.brandSlug}`} key={brand.brandSlug}>
                 <Card className="h-full flex items-center justify-center p-4 text-center bg-card hover:bg-accent hover:shadow-lg transition-all duration-300">
                     <CardTitle className="text-base font-medium">{brand.name}</CardTitle>
                 </Card>
-            </Link>
+            </LoadingLink>
           ))}
         </div>
 
         <div className="text-center mt-12">
             <Button asChild size="lg">
-                <Link href="/hotels?q=marriott">Explore All Marriott Hotels</Link>
+                <LoadingLink href="/hotels?q=marriott">Explore All Marriott Hotels</LoadingLink>
             </Button>
         </div>
       </div>

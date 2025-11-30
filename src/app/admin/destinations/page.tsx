@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { useToast } from '@/hooks/use-toast';
 import { bulkImportData } from '@/app/actions';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 
 function BulkImportMonthlyData() {
     const { toast } = useToast();
@@ -60,9 +60,9 @@ export default function DestinationsPage() {
                 <div className="flex items-center gap-4">
                      <BulkImportMonthlyData />
                     <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-                        <Link href="/admin/destinations/new">
+                        <LoadingLink href="/admin/destinations/new">
                             <Plus size={18} className="mr-2"/> Add New Month
-                        </Link>
+                        </LoadingLink>
                     </Button>
                 </div>
             </div>
@@ -77,9 +77,9 @@ export default function DestinationsPage() {
                                 <div className="flex justify-between items-center w-full pr-4">
                                     <span className="capitalize">{month.name} ({month.destinations?.length || 0} destinations)</span>
                                     <Button asChild variant="outline" size="sm" onClick={(e) => e.stopPropagation()}>
-                                        <Link href={`/admin/destinations/${month.id}`}>
+                                        <LoadingLink href={`/admin/destinations/${month.id}`}>
                                             <Pencil size={14} className="mr-2"/> Edit Month
-                                        </Link>
+                                        </LoadingLink>
                                     </Button>
                                 </div>
                             </AccordionTrigger>

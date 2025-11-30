@@ -15,7 +15,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import Image from 'next/image';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import { useToast } from '@/hooks/use-toast';
 import { bulkImportData } from '@/app/actions';
 
@@ -63,9 +63,9 @@ export default function InterestsPage() {
                 <div className="flex items-center gap-4">
                      <BulkImportInterestsData />
                     <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-                         <Link href="/admin/interests/new">
+                         <LoadingLink href="/admin/interests/new">
                             <Plus size={18} className="mr-2"/> Add New Interest
-                        </Link>
+                        </LoadingLink>
                     </Button>
                 </div>
             </div>
@@ -95,15 +95,15 @@ export default function InterestsPage() {
                                     <TableCell>
                                         <div className="flex flex-wrap gap-1">
                                             {interest.tags.map(tag => (
-                                                <span key={tag} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">{tag}</span>
+                                                <span key={tag.value} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">{tag.value}</span>
                                             ))}
                                         </div>
                                     </TableCell>
                                     <TableCell>
                                          <div className="flex gap-4 shrink-0">
-                                            <Link href={`/admin/interests/${interest.id}`} className="text-blue-600 hover:text-blue-800">
+                                            <LoadingLink href={`/admin/interests/${interest.id}`} className="text-blue-600 hover:text-blue-800">
                                                 <Pencil size={18} />
-                                            </Link>
+                                            </LoadingLink>
                                             <button className="text-red-500 hover:text-red-700">
                                                 <Trash2 size={18} />
                                             </button>

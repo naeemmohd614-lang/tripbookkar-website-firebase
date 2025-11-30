@@ -14,7 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 
 export default function CitiesPage() {
     const firestore = useFirestore();
@@ -29,9 +29,9 @@ export default function CitiesPage() {
                 <h1 className="text-2xl font-bold text-gray-800">Cities</h1>
                  <div className="flex items-center gap-4">
                     <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-                        <Link href="/admin/cities/new">
+                        <LoadingLink href="/admin/cities/new">
                             <Plus size={18} className="mr-2"/> Add New City
-                        </Link>
+                        </LoadingLink>
                     </Button>
                 </div>
             </div>
@@ -59,9 +59,9 @@ export default function CitiesPage() {
                                     <TableCell>{city.totalHotels}</TableCell>
                                     <TableCell>
                                          <div className="flex gap-4 shrink-0">
-                                            <Link href={`/admin/cities/${city.cityId}`} className="text-blue-600 hover:text-blue-800">
+                                            <LoadingLink href={`/admin/cities/${city.cityId}`} className="text-blue-600 hover:text-blue-800">
                                                 <Pencil size={18} />
-                                            </Link>
+                                            </LoadingLink>
                                             <button className="text-red-500 hover:text-red-700">
                                                 <Trash2 size={18} />
                                             </button>

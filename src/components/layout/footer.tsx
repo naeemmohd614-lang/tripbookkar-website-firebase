@@ -1,3 +1,4 @@
+
 import LoadingLink from '../loading-link';
 import { Twitter, Facebook, Instagram } from 'lucide-react';
 import Logo from '../shared/Logo';
@@ -18,23 +19,23 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><LoadingLink href="/hotels" className="text-sm hover:text-primary transition-colors">Hotels</LoadingLink></li>
               <li><LoadingLink href="/packages" className="text-sm hover:text-primary transition-colors">Packages</LoadingLink></li>
-              <li><LoadingLink href="#destinations" className="text-sm hover:text-primary transition-colors">Destinations</LoadingLink></li>
+              <li><LoadingLink href="/#destinations" className="text-sm hover:text-primary transition-colors">Destinations</LoadingLink></li>
               <li><LoadingLink href="/admin" className="text-sm hover:text-primary transition-colors">Admin</LoadingLink></li>
             </ul>
           </div>
           <div>
             <h4 className="font-headline font-semibold text-brand-blue mb-4">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-sm hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-sm hover:text-primary transition-colors">Terms of Service</a></li>
+              <li><LoadingLink href="#" className="text-sm hover:text-primary transition-colors">Privacy Policy</LoadingLink></li>
+              <li><LoadingLink href="#" className="text-sm hover:text-primary transition-colors">Terms of Service</LoadingLink></li>
             </ul>
           </div>
           <div>
             <h4 className="font-headline font-semibold text-brand-blue mb-4">Connect</h4>
             <div className="flex space-x-4">
-              <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></a>
-              <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors"><Facebook /></a>
-              <a href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors"><Instagram /></a>
+              <LoadingLink href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></LoadingLink>
+              <LoadingLink href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors"><Facebook /></LoadingLink>
+              <LoadingLink href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors"><Instagram /></LoadingLink>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Users, ShoppingBasket } from 'lucide-react';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
 import { useFirestore, useCollection } from '@/firebase';
@@ -76,10 +76,10 @@ export default function CityPage({ params }: { params: { stateId: string; cityId
                         <CardDescription className="text-base pt-2">{city.description}</CardDescription>
                     </div>
                     <Button asChild variant="outline">
-                        <Link href={`/states/${stateId}`}>
+                        <LoadingLink href={`/states/${stateId}`}>
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Back to {state.name}
-                        </Link>
+                        </LoadingLink>
                     </Button>
                 </CardContent>
             </Card>
@@ -112,7 +112,7 @@ export default function CityPage({ params }: { params: { stateId: string; cityId
                     </h2>
                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {cityAttractions.map((attraction) => (
-                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                            <LoadingLink href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
                                 <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
                                      <CardHeader className="p-0">
                                         <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
@@ -125,7 +125,7 @@ export default function CityPage({ params }: { params: { stateId: string; cityId
                                         </div>
                                     </CardContent>
                                 </Card>
-                            </Link>
+                            </LoadingLink>
                         ))}
                     </div>
                 </div>

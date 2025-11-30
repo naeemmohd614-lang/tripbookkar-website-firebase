@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CheckCircle, Award, Shield, Phone, Users, Heart, Briefcase, GraduationCap, Gift, Building, Search, Send, Calendar, Star } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 
 const services = [
   {
@@ -292,14 +292,14 @@ export default function ServicesPage() {
           </div>
            <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
              <Button size="lg" asChild>
-                <Link href="/hotels">
+                <LoadingLink href="/hotels">
                     <Search className="mr-2 h-5 w-5" /> Book Now
-                </Link>
+                </LoadingLink>
              </Button>
-             <Button size="lg" variant="outline">
-                <Link href="/contact">
+             <Button size="lg" variant="outline" asChild>
+                <LoadingLink href="/contact">
                     <Send className="mr-2 h-5 w-5" /> Get Custom Quote
-                </Link>
+                </LoadingLink>
              </Button>
              <Button size="lg" variant="outline">
                 <a href="tel:8950652665" className="flex items-center">

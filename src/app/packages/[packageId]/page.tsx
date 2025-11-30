@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import type { Package } from '@/lib/types';
 import React from 'react';
+import LoadingLink from '@/components/loading-link';
 
 export default function PackageDetailPage({ params }: { params: { packageId: string } }) {
     const { packageId } = React.use(params);
@@ -96,7 +97,9 @@ export default function PackageDetailPage({ params }: { params: { packageId: str
                                 </p>
                             </CardContent>
                             <CardFooter>
-                                <Button size="lg" className="w-full">Enquire Now</Button>
+                                <Button asChild size="lg" className="w-full">
+                                   <LoadingLink href="/contact">Enquire Now</LoadingLink>
+                                </Button>
                             </CardFooter>
                         </Card>
                     </div>

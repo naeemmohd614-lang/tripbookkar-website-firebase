@@ -1,7 +1,7 @@
 
 'use client';
 import { brands } from '@/lib/data';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -72,7 +72,7 @@ export default function MarriottPage() {
                     <div className="flex flex-wrap justify-center gap-2">
                         {marriottBrands.map(brand => (
                             <Button asChild variant="outline" key={brand.brandSlug}>
-                                <Link href={`/brands/${brand.brandSlug}`}>{brand.name}</Link>
+                                <LoadingLink href={`/brands/${brand.brandSlug}`}>{brand.name}</LoadingLink>
                             </Button>
                         ))}
                     </div>
@@ -110,7 +110,7 @@ export default function MarriottPage() {
                             {brand.hotels.length > 4 && (
                                 <div className="text-center mt-8">
                                     <Button asChild variant="link">
-                                        <Link href={`/brands/${brand.brandSlug}`}>View all {brand.name} hotels</Link>
+                                        <LoadingLink href={`/brands/${brand.brandSlug}`}>View all {brand.name} hotels</LoadingLink>
                                     </Button>
                                 </div>
                             )}

@@ -1,7 +1,7 @@
 
 'use client'
 import React from 'react';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import { useFirestore, useCollection, deleteDocumentNonBlocking } from '@/firebase';
 import { collection, doc } from 'firebase/firestore';
 import { Pencil, Trash2, Star, Upload } from 'lucide-react';
@@ -147,7 +147,7 @@ export default function HotelsPage(){
         <div className="flex gap-4">
             <BulkImportMenu />
             <Button asChild>
-              <Link href="/admin/hotels/new">+ Add New Hotel</Link>
+              <LoadingLink href="/admin/hotels/new">+ Add New Hotel</LoadingLink>
             </Button>
         </div>
       </div>
@@ -189,9 +189,9 @@ export default function HotelsPage(){
                             </TableCell>
                             <TableCell>
                               <div className="flex items-center gap-4">
-                                 <Link href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
+                                 <LoadingLink href={`/admin/hotels/${h.id}`} className="text-blue-600 hover:text-blue-800">
                                     <Pencil size={18} />
-                                </Link>
+                                </LoadingLink>
                                 <AlertDialog>
                                   <AlertDialogTrigger asChild>
                                     <Button variant="ghost" size="icon" className="text-red-500 hover:text-red-700 h-8 w-8">

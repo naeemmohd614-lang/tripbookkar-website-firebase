@@ -1,7 +1,7 @@
 
 'use client'
 import React from 'react';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { Pencil, Trash2 } from 'lucide-react';
@@ -37,7 +37,7 @@ export default function PackagesPage(){
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Package Management</h1>
         <Button asChild>
-          <Link href="/admin/packages/new">+ Add New Package</Link>
+          <LoadingLink href="/admin/packages/new">+ Add New Package</LoadingLink>
         </Button>
       </div>
        {isLoading && (
@@ -61,9 +61,9 @@ export default function PackagesPage(){
                   <TableCell className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatPrice(p.price)}</TableCell>
                   <TableCell className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <div className="flex items-center gap-4">
-                      <Link href={`/admin/packages/${p.id}`} className="text-blue-600 hover:text-blue-800">
+                      <LoadingLink href={`/admin/packages/${p.id}`} className="text-blue-600 hover:text-blue-800">
                         <Pencil size={18} />
-                      </Link>
+                      </LoadingLink>
                       <button className="text-red-500 hover:text-red-700">
                         <Trash2 size={18} />
                       </button>

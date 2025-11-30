@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Castle, ShoppingBag, Star, Utensils, MapPin, Building, Waves, Paintbrush, Sun, Sailboat, Music, Zap, Landmark, Leaf, Mountain, Users2, ShieldCheck, TreePine, Church, Hand, Flower, Droplets, FerrisWheel, School, BookOpen, CableCar, Sprout, Cat, Train, Palmtree, Wind, Ship, Compass, Anchor, Diamond, CookingPot, Drama, Clapperboard, HeartPulse, Martini, Hotel as HotelIcon, Sparkles, Users, Package, Clock, Calendar, ShoppingBasket } from 'lucide-react';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import HotelCard from '@/components/hotel-card';
 import React from 'react';
 import { useFirestore, useCollection, useMemoFirebase } from '@/firebase';
@@ -115,14 +115,14 @@ export default function StatePage({ params }: { params: { stateId: string } }) {
                             <Package className="w-5 h-5 text-green-500"/>
                              <div>
                                 <span className="font-semibold text-foreground">Holiday Packages</span><br/>
-                                <Link href="/packages" className="hover:underline">View Packages</Link>
+                                <LoadingLink href="/packages" className="hover:underline">View Packages</LoadingLink>
                             </div>
                         </div>
                         <div className="flex items-center gap-2">
                             <HotelIcon className="w-5 h-5 text-purple-500"/>
                             <div>
                                 <span className="font-semibold text-foreground">Top Hotels</span><br/>
-                                <Link href={`/states/${state.stateId}/#state-hotels`} className="hover:underline">Find Hotels</Link>
+                                <LoadingLink href={`/states/${state.stateId}/#state-hotels`} className="hover:underline">Find Hotels</LoadingLink>
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ export default function StatePage({ params }: { params: { stateId: string } }) {
                     </h2>
                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {stateAttractions.map((attraction) => (
-                            <Link href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
+                            <LoadingLink href={`/attractions/${attraction.attractionId}`} key={attraction.attractionId}>
                                 <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow">
                                      <CardHeader className="p-0">
                                         <Image src={attraction.image.src} alt={attraction.image.caption} width={600} height={400} className="object-cover w-full h-48 group-hover:scale-105 transition-transform" data-ai-hint={attraction.image.caption} />
@@ -171,7 +171,7 @@ export default function StatePage({ params }: { params: { stateId: string } }) {
                                         </div>
                                     </CardContent>
                                 </Card>
-                            </Link>
+                            </LoadingLink>
                         ))}
                     </div>
                 </div>
@@ -187,7 +187,7 @@ export default function StatePage({ params }: { params: { stateId: string } }) {
                         {stateCities.map((city) => {
                             const cityImage = cityImages[city.cityId] || { src: `https://picsum.photos/seed/${city.cityId}/400/300`, caption: `View of ${city.name}` };
                             return (
-                                <Link href={`/states/${state.stateId}/cities/${city.cityId}`} key={city.cityId}>
+                                <LoadingLink href={`/states/${state.stateId}/cities/${city.cityId}`} key={city.cityId}>
                                     <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300">
                                         <CardContent className="p-0">
                                         <div className="relative h-40">
@@ -205,7 +205,7 @@ export default function StatePage({ params }: { params: { stateId: string } }) {
                                         </div>
                                         </CardContent>
                                     </Card>
-                                </Link>
+                                </LoadingLink>
                             );
                         })}
                     </div>

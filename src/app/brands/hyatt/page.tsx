@@ -1,7 +1,7 @@
 
 'use client';
 import { brands } from '@/lib/data';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -63,7 +63,7 @@ export default function HyattPage() {
                     <div className="flex flex-wrap justify-center gap-2">
                         {hyattBrands.map(brand => (
                             <Button asChild variant="outline" key={brand.brandSlug}>
-                                <Link href={`/brands/${brand.brandSlug}`}>{brand.name}</Link>
+                                <LoadingLink href={`/brands/${brand.brandSlug}`}>{brand.name}</LoadingLink>
                             </Button>
                         ))}
                     </div>

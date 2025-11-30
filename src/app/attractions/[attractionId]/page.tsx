@@ -3,7 +3,7 @@
 
 import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
+import LoadingLink from '@/components/loading-link';
 import { attractions } from '@/lib/data';
 import type { Attraction, Hotel } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -101,12 +101,12 @@ export default function AttractionPage({ params }: { params: { attractionId: str
                                             {nearbyHotels.map(hotel => {
                                                 if (!hotel) return null;
                                                 return (
-                                                    <Link key={hotel.id} href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.id}`}>
+                                                    <LoadingLink key={hotel.id} href={`/states/${hotel.stateId}/cities/${hotel.cityId}/hotels/${hotel.id}`}>
                                                         <div className="p-3 rounded-md border hover:bg-accent transition-colors">
                                                             <h4 className="font-semibold text-primary">{hotel.name}</h4>
                                                             <p className="text-sm text-muted-foreground">{hotel.brand}</p>
                                                         </div>
-                                                    </Link>
+                                                    </LoadingLink>
                                                 )
                                             })}
                                         </div>
