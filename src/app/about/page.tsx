@@ -136,7 +136,7 @@ export default function AboutUsPage() {
             <Button asChild variant="secondary" size="lg">
               <LoadingLink href="/hotels">Explore Hotels</LoadingLink>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="text-black">
               <LoadingLink href="/contact">Contact Us</LoadingLink>
             </Button>
           </div>
