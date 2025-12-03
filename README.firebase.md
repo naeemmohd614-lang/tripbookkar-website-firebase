@@ -30,9 +30,9 @@ Yeh aapke browser mein ek authentication page kholega. Wahan login process poora
 
 ---
 
-### Step 2: Apne Project ko Firebase se Connect Karein
+### Step 2: Apne Project ko Firebase se Connect Karein (Sabse Zaroori)
 
-Ab, aapko apne local project ko Firebase project se connect karna hoga.
+Ab, aapko apne local project ko ek naye Firebase project se connect karna hoga.
 
 1.  Apne project ke root directory mein terminal kholein.
 2.  Neeche di gayi command chalayein:
@@ -40,23 +40,23 @@ Ab, aapko apne local project ko Firebase project se connect karna hoga.
     firebase init apphosting
     ```
 3.  Command aapse kuch sawaal puchegi:
-    *   **Select a project:** Apne existing Firebase project ko chunein ya ek naya project banayein.
+    *   **Select a project:** Yahan par **"Create a new project"** chunein. Agar aapka project pehle se bana hai, to use list se select karein.
     *   **Select a backend source:** Apne project ka root folder chunein (usually, aap "Enter" daba sakte hain).
     *   **Backend name:** Apne backend ke liye ek naam dein (jaise, `tripbookkar-backend`).
     *   **Select a region:** Apne nazdeeki region ko chunein (jaise, `asia-south1`).
 
-Yeh process poora hone par, aapke project mein `.firebaserc` file ban jayegi jo aapke project ki settings save karegi.
+Yeh process poora hone par, aapke project mein `.firebaserc` aur `apphosting.yaml` files ban jayengi jo aapke naye project ki settings save karengi.
 
 ---
 
-### Step 3: Service Account Environment Variable Set Karein (ZAROORI)
+### Step 3: Service Account Environment Variable Set Karein
 
-Aapka app server-side code (jaise `src/app/actions.ts` mein) mein Firebase Admin SDK ka istemaal karta hai. Deployment ke liye, App Hosting ko aapke `serviceAccountKey.json` file ka content ek environment variable ke roop mein chahiye.
+Aapka app server-side code mein Firebase Admin SDK ka istemaal karta hai. Iske liye `serviceAccountKey.json` file ka content ek environment variable ke roop mein set karna zaroori hai.
 
 Neeche di gayi command ko apne terminal mein chalayein. **Is command ko chalane se pehle, `serviceAccountKey.json` file aapke project ke root directory mein honi chahiye.**
 
 ```bash
-firebase apphosting:backends:update --backend <YOUR_BACKEND_NAME> --update-env-vars=FIREBASE_SERVICE_ACCOUNT="$(cat serviceAccountKey.json)"
+firebase apphosting:backends:update <YOUR_BACKEND_NAME> --update-env-vars=FIREBASE_SERVICE_ACCOUNT="$(cat serviceAccountKey.json)"
 ```
 
 **DHAYAN DEIN:** `<YOUR_BACKEND_NAME>` ko Step 2 mein diye gaye backend naam se replace karein (jaise, `tripbookkar-backend`).
@@ -68,10 +68,8 @@ firebase apphosting:backends:update --backend <YOUR_BACKEND_NAME> --update-env-v
 Ab aapka project deploy hone ke liye taiyaar hai. Apne terminal mein yeh command chalayein:
 
 ```bash
-firebase apphosting:backends:deploy <YOUR_BACKEND_NAME> --source .
+firebase deploy --only apphosting
 ```
-
-Wapas, `<YOUR_BACKEND_NAME>` ko apne backend ke naam se replace karein.
 
 Yeh command aapke project ko build karegi aur saari zaroori files ko Firebase par deploy kar degi. Ismein kuch minutes lag sakte hain.
 
