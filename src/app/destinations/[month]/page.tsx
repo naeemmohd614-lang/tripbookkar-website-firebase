@@ -20,7 +20,7 @@ function slugify(text: string) {
 
 export default function MonthPage({ params }: { params: { month: string } }) {
     const firestore = useFirestore();
-    const { month: monthSlug } = React.use(params);
+    const { month: monthSlug } = params;
 
     const monthDocRef = useMemoFirebase(() => {
         if (!firestore || !monthSlug) return null;
