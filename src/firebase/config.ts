@@ -1,9 +1,10 @@
+
 export const firebaseConfig = {
   apiKey: "AIzaSyDstrka_cRhxTSEvy_ujqdG0HtnHdyQu-M",
-  authDomain: "studio-1865376664-5e932.firebaseapp.com",
-  projectId: "studio-1865376664-5e932",
-  storageBucket: "studio-1865376664-5e932.appspot.com",
+  authDomain: "tripiff.firebaseapp.com",
+  projectId: "tripiff",
+  storageBucket: "tripiff.appspot.com",
   messagingSenderId: "571956288642",
-  appId: "1:571956288642:web:6887d1119665cb2c7de89b",
-  measurementId: "G-HCDRQ0EBGS"
+  appId: "1:571956288642:web:307de5f15425a3567de89b",
+  measurementId: "G-6J53ZE10KG"
 };
